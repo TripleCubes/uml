@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>KirPow&#39;s jammer page</title>
+	<meta content="KirPow&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kirpow.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>KirPow</h1>
+		<a href="https://kirpow.itch.io">kirpow.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 994</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1591</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2336</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8198</p>
+		<p>Total ilScore: 54</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kirpow.itch.io/crated">Crated</a></td>
+				<td><span class="early">4h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-148-connections">MJ 148: Connections</a></td>
+				<td>52</td>
+				<td>5</td>
+				<td>16</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				753, 759, 761, 765, 772, 782, 793, 798, 803, 807, 811, 815, 821, 827, 835, 839, 842, 848, 854, 858,
+				858, 860, 863, 866, 874, 881, 892, 897, 901, 907, 912, 918, 927, 937, 940, 945, 956, 964, 971, 976,
+				983, 993,
+			]],
+			[ "10", [
+				1195, 1204, 1210, 1218, 1239, 1256, 1265, 1272, 1280, 1291, 1295, 1305, 1317, 1323, 1336, 1342, 1348, 1356, 1368, 1373,
+				1373, 1375, 1379, 1382, 1390, 1397, 1415, 1424, 1434, 1450, 1461, 1472, 1485, 1501, 1511, 1520, 1535, 1546, 1559, 1565,
+				1582, 1590,
+			]],
+			[ "20", [
+				1747, 1766, 1780, 1793, 1813, 1845, 1855, 1862, 1870, 1885, 1892, 1911, 1923, 1932, 1972, 1976, 1987, 1996, 2021, 2027,
+				2031, 2034, 2039, 2042, 2052, 2060, 2082, 2102, 2114, 2130, 2153, 2168, 2187, 2203, 2213, 2233, 2252, 2273, 2299, 2305,
+				2323, 2335,
+			]],
+			[ "ilscore", [
+				6027, 6136, 6230, 6281, 6302, 6459, 6487, 6540, 6582, 6652, 6657, 6734, 6793, 6805, 6914, 6927, 6962, 6969, 7137, 7151,
+				7154, 7157, 7158, 7164, 7173, 7203, 7281, 7369, 7408, 7427, 7479, 7529, 7572, 7638, 7677, 7749, 7811, 7878, 8013, 8049,
+				8147, 8197,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

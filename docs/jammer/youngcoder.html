@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>youngcoder&#39;s jammer page</title>
+	<meta content="youngcoder&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/youngcoder.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>youngcoder</h1>
+		<a href="https://youngcoder.itch.io">youngcoder.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7443</p>
+		<p>Total ilScore: 59</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://youngcoder.itch.io/rock-scissors-paper-card">Rock Scissors Paper Card</a></td>
+				<td><span class="early">1d 12h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>80</td>
+				<td>5</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2123, 2167, 2234, 2261, 2281, 2340, 2409, 2411, 2468, 2478, 2487, 2531, 2591, 2775, 2871, 2948, 2954, 3050, 3090, 3177,
+				3399, 3440, 3597, 3669, 3798, 4107, 4171, 4228, 4228, 4235, 4241, 4246, 4356, 4444, 4475, 4489, 4552, 4554, 4689, 4753,
+				4771, 4796, 4864, 4942, 4963, 5116, 5126, 5131, 5201, 5262, 5281, 5289, 5292, 5403, 5403, 5406, 5411, 5416, 5425, 5446,
+				5458, 5498, 5504, 5513, 5518, 5614, 5701, 5735, 5748, 5901, 5927, 5978, 6007, 6067, 6072, 6146, 6201, 6211, 6308, 6319,
+				6340, 6345, 6501, 6510, 6514, 6517, 6521, 6528, 6537, 6556, 6630, 6715, 6748, 6765, 6811, 6852, 6886, 6946, 6978, 7044,
+				7102, 7159, 7280, 7304, 7397, 7442,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

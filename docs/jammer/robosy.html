@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ROBOSY&#39;s jammer page</title>
+	<meta content="ROBOSY&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/robosy.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ROBOSY</h1>
+		<a href="https://robosy.itch.io">robosy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3328</p>
+		<p>Total ilScore: 89</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://robosy.itch.io/sjazd">SYMULATOR JAZDY</a></td>
+				<td><span class="early">3h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>111</td>
+				<td>3</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://robosy.itch.io/orbital-war">ORBITAL WAR</a></td>
+				<td><span class="early">16h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>125</td>
+				<td>6</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4063, 4124, 4225, 4465, 4515, 4694, 4773, 4926, 5272, 5338, 5414, 5414, 5439, 5444, 5460, 5576, 5683, 5747, 5766, 5855,
+				5864, 6015, 6086, 6120, 6156, 6234, 6323, 6360, 6530, 6548, 6559, 6647, 6719, 6751, 6758, 6759, 6889, 6890, 6895, 6909,
+				6918, 6933, 6977, 7012, 7075, 7094, 7105, 7124, 7235, 7355, 7420, 7454, 7618, 7656, 7730, 7784, 7870, 7886, 7969, 8037,
+				8054, 8179, 8196, 8242, 8252, 8433, 8456, 8456, 8470, 8472, 8495, 8502, 8543, 8626, 3068, 3081, 3097, 3116, 3131, 3141,
+				3151, 3162, 3187, 3215, 3239, 3274, 3287, 3308, 3327,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

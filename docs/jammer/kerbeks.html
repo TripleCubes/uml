@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>kerbeks&#39;s jammer page</title>
+	<meta content="kerbeks&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kerbeks.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>kerbeks</h1>
+		<a href="https://kerbeks.itch.io">kerbeks.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6514</p>
+		<p>Total ilScore: 65</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kerbeks.itch.io/time-escapade">Time Escapade</a></td>
+				<td><span class="early">5h 7m early</span></td>
+				<td>
+					<a href="../jammer/jpsaiago.html">jpsaiago</a>,
+					<a href="../jammer/code-bender.html">Code Bender</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>54</td>
+				<td>9</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				630, 634, 642, 695, 707, 716, 727, 771, 780, 817, 838, 979, 1000, 1030, 1102, 1178, 1189, 1317, 1399, 1410,
+				1418, 1465, 1564, 1676, 1711, 1797, 1827, 1891, 1911, 1922, 1981, 2040, 2042, 2084, 2092, 2099, 2134, 2184, 2363, 2452,
+				2521, 2528, 2608, 2643, 2720, 2931, 2963, 3109, 3177, 3299, 3594, 3654, 3697, 3698, 3702, 3708, 3711, 3814, 3885, 3906,
+				3915, 3969, 3971, 4096, 4157, 4168, 4194, 4251, 4317, 4335, 4477, 4486, 4490, 4546, 4600, 4615, 4623, 4626, 4730, 4730,
+				4733, 4739, 4744, 4754, 4768, 4777, 4810, 4817, 4827, 4832, 4918, 4987, 5018, 5027, 5174, 5195, 5233, 5258, 5310, 5317,
+				5384, 5434, 5443, 5531, 5544, 5561, 5565, 5712, 5720, 5723, 5726, 5730, 5735, 5744, 5758, 5813, 5900, 5924, 5936, 5975,
+				5999, 6025, 6076, 6103, 6166, 6215, 6264, 6374, 6393, 6472, 6513,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

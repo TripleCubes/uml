@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Visual_mov&#39;s jammer page</title>
+	<meta content="Visual_mov&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/visgames.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Visual_mov</h1>
+		<a href="https://visgames.itch.io">visgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3182</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8663</p>
+		<p>Total ilScore: 51</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://visgames.itch.io/robot-wrangler">Robot Wrangler</a></td>
+				<td><span class="early">35m 21s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>14</td>
+				<td>19</td>
+				<td>51</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1399, 1414, 1432, 1457, 1483, 1495, 1504, 1525, 1538, 1554, 1573, 1594, 1609, 1628, 1646, 1668, 1689, 1712, 1715, 1733,
+				1745, 1766, 1784, 1804, 1819, 1837, 1859, 1869, 1887, 1915, 1931, 1951, 1967, 1989, 2003, 2029, 2045, 2057, 2082, 2103,
+				2119, 2132, 2138, 2166, 2169, 2174, 2191, 2201, 2216, 2237, 2256, 2280, 2297, 2315, 2335, 2353, 2365, 2383, 2413, 2445,
+				2467, 2487, 2508, 2528, 2544, 2561, 2578, 2600, 2640, 2651, 2667, 2677, 2702, 2716, 2721, 2736, 2748, 2758, 2775, 2792,
+				2823, 2843, 2867, 2891, 2915, 2941, 2966, 2996, 3014, 3033, 3060, 3079, 3105, 3129, 3161, 3181,
+			]],
+			[ "ilscore", [
+				2962, 3013, 3080, 3270, 3372, 3460, 3467, 3574, 3634, 3731, 3959, 4005, 4170, 4249, 4389, 4720, 4789, 4853, 4853, 4871,
+				4876, 4884, 5000, 5104, 5153, 5164, 5238, 5242, 5385, 5454, 5475, 5506, 5586, 5673, 5705, 5866, 5880, 5887, 5972, 6036,
+				6061, 6066, 6068, 6187, 6187, 6191, 6196, 6203, 6216, 6245, 6269, 6327, 6342, 6347, 6358, 6467, 6570, 6625, 6647, 6805,
+				6841, 6903, 6950, 7025, 7037, 7118, 7179, 7196, 7313, 7324, 7361, 7370, 7546, 7565, 7567, 7571, 7572, 7578, 7583, 7613,
+				7694, 7783, 7824, 7848, 7906, 7960, 8008, 8081, 8120, 8192, 8258, 8325, 8461, 8503, 8603, 8662,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>returntosender&#39;s jammer page</title>
+	<meta content="returntosender&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/returntosender.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>returntosender</h1>
+		<a href="https://returntosender.itch.io">returntosender.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12142</p>
+		<p>Total ilScore: 27</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://returntosender.itch.io/infected-islander">Infected Islander</a></td>
+				<td><span class="early">14h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>93</td>
+				<td>1</td>
+				<td>27</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				864, 884, 950, 991, 1067, 1124, 1244, 1284, 1331, 1333, 1340, 1406, 1449, 1604, 1721, 1723, 1764, 1869, 1917, 1966,
+				2022, 2101, 2146, 2223, 2272, 2447, 2505, 2592, 2683, 2796, 2845, 3000, 3106, 3160, 3207, 3293, 3424, 3574, 3658, 3795,
+				3877, 3976, 4042, 4102, 4201, 4296, 4328, 4399, 4439, 4488, 4570, 4658, 4875, 4995, 5104, 5127, 5246, 5322, 5425, 5678,
+				5741, 5931, 6022, 6197, 6566, 6645, 6745, 6748, 6794, 6815, 6845, 6993, 7115, 7211, 7246, 7341, 7363, 7536, 7621, 7675,
+				7719, 7806, 7910, 7957, 8141, 8163, 8192, 8297, 8386, 8427, 8452, 8462, 8609, 8613, 8634, 8672, 8700, 8726, 8772, 8827,
+				8901, 8930, 8957, 8988, 9119, 9244, 9321, 9361, 9535, 9590, 9682, 9750, 9849, 9874, 9965, 10052, 10076, 10210, 10246, 10299,
+				10320, 10511, 10552, 10567, 10598, 10628, 10669, 10696, 10753, 10842, 10958, 11022, 11071, 11143, 11215, 11283, 11370, 11440, 11525, 11602,
+				11691, 11866, 11934, 12060, 12141,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

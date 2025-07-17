@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>mpeterson.dev&#39;s jammer page</title>
+	<meta content="mpeterson.dev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mpetersondev.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>mpeterson.dev</h1>
+		<a href="https://mpetersondev.itch.io">mpetersondev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1294</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1765</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3455</p>
+		<p>Total ilScore: 88</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mpetersondev.itch.io/draculad-minijam118">Draculad</a></td>
+				<td><span class="early">15m 59s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>9</td>
+				<td>8</td>
+				<td>88</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				771, 779, 787, 800, 802, 811, 829, 836, 846, 859, 868, 874, 884, 888, 891, 902, 913, 916, 917, 920,
+				934, 937, 939, 943, 944, 953, 961, 963, 968, 969, 977, 982, 991, 997, 1006, 1016, 1033, 1039, 1043, 1047,
+				1058, 1060, 1070, 1082, 1086, 1099, 1102, 1107, 1115, 1127, 1131, 1131, 1132, 1134, 1138, 1145, 1148, 1163, 1172, 1178,
+				1185, 1194, 1196, 1205, 1216, 1221, 1230, 1246, 1257, 1270, 1273, 1283, 1293,
+			]],
+			[ "20", [
+				1056, 1065, 1075, 1093, 1097, 1110, 1136, 1146, 1157, 1173, 1182, 1188, 1202, 1206, 1209, 1223, 1239, 1242, 1245, 1252,
+				1265, 1267, 1270, 1276, 1277, 1288, 1298, 1301, 1308, 1312, 1322, 1328, 1344, 1353, 1362, 1373, 1395, 1402, 1411, 1415,
+				1429, 1436, 1455, 1467, 1474, 1504, 1505, 1513, 1522, 1545, 1551, 1557, 1559, 1562, 1567, 1577, 1580, 1595, 1608, 1614,
+				1623, 1633, 1639, 1657, 1668, 1674, 1685, 1705, 1717, 1735, 1738, 1749, 1764,
+			]],
+			[ "ilscore", [
+				2093, 2109, 2122, 2145, 2153, 2231, 2255, 2273, 2291, 2309, 2337, 2351, 2443, 2455, 2458, 2478, 2500, 2516, 2522, 2526,
+				2548, 2551, 2556, 2564, 2566, 2569, 2582, 2590, 2596, 2607, 2617, 2627, 2661, 2685, 2703, 2711, 2805, 2824, 2844, 2858,
+				2872, 2880, 2896, 2920, 2929, 2965, 2972, 2988, 2993, 3076, 3083, 3088, 3095, 3098, 3105, 3112, 3124, 3142, 3185, 3198,
+				3214, 3233, 3248, 3258, 3268, 3279, 3305, 3334, 3359, 3396, 3409, 3433, 3454,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

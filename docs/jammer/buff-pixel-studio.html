@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Buff Pixel Studio&#39;s jammer page</title>
+	<meta content="Buff Pixel Studio&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/buff-pixel-studio.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Buff Pixel Studio</h1>
+		<a href="https://buff-pixel-studio.itch.io">buff-pixel-studio.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2822</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7763</p>
+		<p>Total ilScore: 57</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://buff-pixel-studio.itch.io/ice-breaker">Ice Breaker</a></td>
+				<td><span class="early">15h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>19</td>
+				<td>11</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1206, 1215, 1230, 1248, 1273, 1300, 1313, 1319, 1340, 1353, 1369, 1388, 1408, 1423, 1442, 1460, 1482, 1503, 1526, 1528,
+				1543, 1552, 1564, 1582, 1602, 1616, 1627, 1649, 1653, 1671, 1701, 1718, 1733, 1750, 1772, 1787, 1813, 1823, 1829, 1856,
+				1878, 1890, 1898, 1904, 1932, 1935, 1938, 1950, 1953, 1965, 1987, 1999, 2023, 2036, 2050, 2066, 2084, 2097, 2115, 2140,
+				2172, 2194, 2210, 2222, 2242, 2254, 2273, 2290, 2308, 2348, 2353, 2369, 2380, 2405, 2415, 2419, 2425, 2434, 2440, 2449,
+				2459, 2491, 2511, 2535, 2550, 2573, 2590, 2615, 2644, 2663, 2682, 2708, 2729, 2755, 2773, 2805, 2821,
+			]],
+			[ "ilscore", [
+				2602, 2612, 2655, 2715, 2901, 2999, 3078, 3086, 3183, 3226, 3315, 3537, 3581, 3743, 3821, 3954, 4271, 4335, 4395, 4395,
+				4410, 4415, 4421, 4530, 4620, 4654, 4666, 4731, 4734, 4871, 4935, 4953, 4979, 5052, 5133, 5155, 5311, 5321, 5326, 5402,
+				5463, 5480, 5488, 5491, 5605, 5605, 5608, 5613, 5618, 5629, 5651, 5668, 5712, 5719, 5728, 5734, 5837, 5928, 5973, 5984,
+				6140, 6166, 6218, 6256, 6324, 6329, 6405, 6462, 6474, 6575, 6586, 6615, 6621, 6784, 6795, 6799, 6802, 6804, 6811, 6820,
+				6839, 6915, 7004, 7038, 7054, 7104, 7152, 7186, 7249, 7287, 7357, 7415, 7476, 7596, 7621, 7717, 7762,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

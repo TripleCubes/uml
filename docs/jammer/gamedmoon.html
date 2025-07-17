@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>GameDMoon&#39;s jammer page</title>
+	<meta content="GameDMoon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gamedmoon.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>GameDMoon</h1>
+		<a href="https://gamedmoon.itch.io">gamedmoon.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1848</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3990</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gamedmoon.itch.io/solar-flare">Solar Flare</a></td>
+				<td><span class="early">5m 55s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>19</td>
+				<td>5</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				572, 574, 581, 603, 617, 624, 629, 644, 664, 673, 680, 699, 706, 721, 731, 739, 748, 758, 766, 777,
+				783, 790, 799, 804, 826, 855, 867, 872, 889, 901, 907, 926, 941, 954, 969, 988, 1011, 1032, 1047, 1048,
+				1053, 1061, 1072, 1089, 1106, 1115, 1125, 1143, 1147, 1163, 1189, 1200, 1211, 1229, 1239, 1245, 1259, 1263, 1266, 1285,
+				1301, 1304, 1307, 1314, 1327, 1329, 1332, 1338, 1339, 1349, 1359, 1362, 1369, 1373, 1383, 1389, 1406, 1415, 1424, 1436,
+				1459, 1466, 1475, 1480, 1494, 1501, 1520, 1532, 1539, 1574, 1575, 1583, 1592, 1618, 1624, 1628, 1630, 1633, 1638, 1648,
+				1654, 1669, 1685, 1691, 1699, 1709, 1716, 1734, 1745, 1750, 1764, 1784, 1799, 1817, 1821, 1832, 1847,
+			]],
+			[ "ilscore", [
+				593, 619, 630, 729, 777, 796, 805, 828, 879, 945, 958, 1005, 1017, 1040, 1053, 1061, 1085, 1111, 1121, 1135,
+				1145, 1152, 1167, 1193, 1342, 1417, 1445, 1455, 1497, 1517, 1547, 1720, 1734, 1836, 1877, 1978, 2234, 2246, 2262, 2263,
+				2266, 2275, 2278, 2358, 2388, 2403, 2417, 2447, 2451, 2543, 2578, 2591, 2609, 2637, 2670, 2684, 2794, 2806, 2809, 2837,
+				2864, 2879, 2885, 2889, 2935, 2939, 2944, 2952, 2955, 2961, 2974, 2982, 2988, 2998, 3008, 3018, 3061, 3091, 3110, 3115,
+				3229, 3245, 3265, 3279, 3303, 3312, 3342, 3367, 3377, 3429, 3439, 3455, 3461, 3561, 3568, 3572, 3576, 3580, 3588, 3596,
+				3609, 3630, 3679, 3691, 3705, 3724, 3739, 3750, 3761, 3773, 3802, 3828, 3851, 3927, 3940, 3968, 3989,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>h2oOtter&#39;s jammer page</title>
+	<meta content="h2oOtter&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/h2ootter.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>h2oOtter</h1>
+		<a href="https://h2ootter.itch.io">h2ootter.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12334</p>
+		<p>Total ilScore: 24</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://h2ootter.itch.io/eath-and-space-kahoots">Earth and Space Kahoots</a></td>
+				<td><span class="early">2d 10h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>205</td>
+				<td>inf</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td><a href="https://h2ootter.itch.io/fishy-fanatic-fun">Fishy Fanatic Fun</a></td>
+				<td><span class="early">2d 13h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>192</td>
+				<td>3</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<td><a href="https://h2ootter.itch.io/baking-2-heads">Baking 2 Heads plus Cooking Fun</a></td>
+				<td><span class="early">12h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>89</td>
+				<td>1</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4845, 4885, 4937, 5022, 5111, 5329, 5449, 5565, 5601, 5724, 5806, 5911, 6166, 6231, 6420, 6517, 6698, 7071, 7151, 7254,
+				7264, 7315, 7339, 7370, 7523, 7656, 7752, 7788, 7893, 7924, 8097, 8183, 8238, 8289, 8374, 8486, 8536, 8724, 8751, 8781,
+				8890, 8981, 9024, 9052, 9071, 9220, 9230, 9258, 9299, 9328, 9358, 9405, 9464, 9547, 9583, 9613, 9653, 9800, 9922, 10000,
+				10045, 9694, 9749, 9843, 9912, 10009, 10036, 10132, 10221, 10246, 10380, 10416, 10469, 10490, 10684, 10726, 10741, 10774, 10804, 10846,
+				10872, 10929, 11022, 11138, 11205, 11255, 11327, 11398, 11468, 11555, 11625, 11710, 11788, 11877, 12054, 12124, 12251, 12333,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

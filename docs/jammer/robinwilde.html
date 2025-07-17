@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RobinWilde&#39;s jammer page</title>
+	<meta content="RobinWilde&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/robinwilde.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RobinWilde</h1>
+		<a href="https://robinwilde.itch.io">robinwilde.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2803</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7681</p>
+		<p>Total ilScore: 57</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://robinwilde.itch.io/doodle-downpour-v02">Doodle Downpour</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>13</td>
+				<td>14</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				933, 955, 975, 1000, 1017, 1042, 1054, 1080, 1098, 1115, 1132, 1151, 1159, 1183, 1196, 1204, 1219, 1237, 1263, 1292,
+				1305, 1311, 1332, 1345, 1361, 1380, 1399, 1414, 1433, 1451, 1473, 1494, 1517, 1519, 1534, 1543, 1555, 1573, 1593, 1607,
+				1618, 1640, 1644, 1662, 1692, 1709, 1724, 1741, 1763, 1778, 1804, 1814, 1820, 1847, 1869, 1881, 1889, 1895, 1923, 1926,
+				1929, 1941, 1944, 1956, 1978, 1990, 2014, 2027, 2041, 2057, 2075, 2088, 2106, 2130, 2162, 2184, 2200, 2212, 2232, 2244,
+				2263, 2280, 2298, 2338, 2343, 2359, 2370, 2395, 2404, 2408, 2414, 2423, 2429, 2438, 2448, 2480, 2500, 2524, 2539, 2562,
+				2579, 2604, 2626, 2645, 2664, 2690, 2711, 2737, 2755, 2787, 2802,
+			]],
+			[ "ilscore", [
+				1751, 1817, 1930, 2049, 2093, 2194, 2242, 2312, 2340, 2362, 2417, 2487, 2489, 2547, 2558, 2568, 2612, 2672, 2858, 2957,
+				3036, 3042, 3141, 3183, 3271, 3494, 3537, 3699, 3777, 3910, 4224, 4288, 4347, 4347, 4362, 4367, 4373, 4482, 4572, 4604,
+				4616, 4680, 4682, 4818, 4881, 4899, 4924, 4995, 5074, 5096, 5253, 5263, 5268, 5342, 5403, 5420, 5428, 5431, 5544, 5544,
+				5547, 5552, 5557, 5568, 5590, 5607, 5650, 5657, 5666, 5672, 5772, 5863, 5904, 5917, 6072, 6099, 6151, 6186, 6253, 6258,
+				6334, 6388, 6401, 6502, 6513, 6542, 6547, 6708, 6718, 6722, 6725, 6727, 6734, 6743, 6762, 6837, 6926, 6960, 6976, 7026,
+				7074, 7108, 7171, 7208, 7278, 7336, 7397, 7516, 7540, 7634, 7680,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

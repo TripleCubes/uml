@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>icirasene&#39;s jammer page</title>
+	<meta content="icirasene&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/icirasene.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>icirasene</h1>
+		<a href="https://icirasene.itch.io">icirasene.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2624</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2168</p>
+		<p>Total ilScore: 115</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://icirasene.itch.io/fish-in-ufo-ufo-in-sea">Fish in ufo, ufo in sea</a></td>
+				<td><span class="early">9h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>72</td>
+				<td>8</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://icirasene.itch.io/safe-box">Safe Box</a></td>
+				<td><span class="early">10h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>11</td>
+				<td>13</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				876, 898, 918, 944, 959, 984, 994, 1020, 1037, 1054, 1072, 1091, 1099, 1120, 1132, 1138, 1152, 1170, 1196, 1225,
+				1238, 1243, 1264, 1278, 1294, 1313, 1333, 1348, 1367, 1385, 1407, 1428, 1451, 1452, 1466, 1475, 1487, 1505, 1525, 1538,
+				1547, 1569, 1573, 1591, 1621, 1637, 1653, 1670, 1692, 1707, 1733, 1740, 1743, 1771, 1793, 1801, 1807, 1811, 1839, 1842,
+				1844, 1848, 1851, 1863, 1883, 1892, 1912, 1920, 1932, 1947, 1965, 1979, 1997, 2017, 2049, 2068, 2079, 2091, 2110, 2122,
+				2141, 2159, 2175, 2215, 2219, 2229, 2240, 2265, 2272, 2276, 2280, 2289, 2292, 2300, 2308, 2337, 2357, 2370, 2385, 2409,
+				2425, 2450, 2469, 2485, 2505, 2526, 2547, 2573, 2589, 2611, 2623,
+			]],
+			[ "ilscore", [
+				1698, 1762, 1875, 1992, 2035, 2136, 2181, 2250, 2276, 2296, 573, 589, 596, 607, 616, 622, 632, 649, 695, 730,
+				746, 752, 776, 793, 814, 877, 888, 924, 951, 987, 1119, 1141, 1160, 1160, 1166, 1171, 1181, 1207, 1226, 1236,
+				1248, 1264, 1271, 1305, 1331, 1350, 1364, 1384, 1406, 1412, 1449, 1461, 1472, 1491, 1513, 1524, 1529, 1532, 1550, 1550,
+				1551, 1558, 1560, 1563, 1573, 1581, 1588, 1594, 1596, 1604, 1616, 1632, 1650, 1656, 1688, 1712, 1728, 1740, 1753, 1760,
+				1776, 1798, 1807, 1825, 1829, 1842, 1847, 1868, 1872, 1880, 1882, 1883, 1891, 1892, 1895, 1910, 1940, 1958, 1970, 1982,
+				2000, 2014, 2021, 2033, 2057, 2078, 2094, 2113, 2127, 2148, 2167,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

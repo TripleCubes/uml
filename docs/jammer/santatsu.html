@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>santatsu&#39;s jammer page</title>
+	<meta content="santatsu&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/santatsu.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>santatsu</h1>
+		<a href="https://santatsu.itch.io">santatsu.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12119</p>
+		<p>Total ilScore: 27</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://santatsu.itch.io/ninja-rush">Ninja Rush</a></td>
+				<td><span class="early">15h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>112</td>
+				<td>2</td>
+				<td>27</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3967, 4032, 4092, 4191, 4286, 4318, 4389, 4429, 4478, 4560, 4648, 4865, 4985, 5094, 5117, 5236, 5312, 5415, 5668, 5731,
+				5921, 6012, 6187, 6556, 6635, 6735, 6738, 6784, 6805, 6835, 6982, 7104, 7199, 7233, 7328, 7350, 7523, 7608, 7662, 7706,
+				7793, 7897, 7944, 8128, 8150, 8179, 8284, 8373, 8414, 8439, 8449, 8596, 8600, 8621, 8659, 8687, 8713, 8759, 8814, 8887,
+				8916, 8943, 8974, 9105, 9229, 9306, 9346, 9520, 9575, 9667, 9735, 9834, 9859, 9950, 10036, 10059, 10193, 10228, 10281, 10302,
+				10493, 10534, 10549, 10581, 10611, 10651, 10677, 10733, 10822, 10938, 11002, 11050, 11122, 11194, 11262, 11349, 11419, 11502, 11579, 11668,
+				11843, 11911, 12037, 12118,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

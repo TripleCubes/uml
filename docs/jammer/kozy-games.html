@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kozy Games&#39;s jammer page</title>
+	<meta content="Kozy Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kozy-games.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kozy Games</h1>
+		<a href="https://kozy-games.itch.io">kozy-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11104</p>
+		<p>Total ilScore: 36</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kozy-games.itch.io/drone-wars">Drone Wars</a></td>
+				<td><span class="early">50m 43s early</span></td>
+				<td>
+					<a href="../jammer/kittymyuchan.html">KittyMyuChan</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-56-sky">MJ 56: Sky</a></td>
+				<td>112</td>
+				<td>103</td>
+				<td>5</td>
+				<td>36</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				989, 1024, 1060, 1061, 1065, 1125, 1165, 1316, 1424, 1426, 1460, 1561, 1601, 1648, 1695, 1765, 1802, 1875, 1922, 2096,
+				2148, 2225, 2315, 2423, 2469, 2628, 2726, 2772, 2815, 2896, 3025, 3171, 3248, 3377, 3454, 3552, 3605, 3660, 3749, 3832,
+				3857, 3932, 3966, 4011, 4087, 4170, 4383, 4499, 4598, 4616, 4735, 4809, 4911, 5160, 5215, 5400, 5481, 5649, 6008, 6081,
+				6169, 6170, 6210, 6222, 6242, 6379, 6498, 6575, 6603, 6692, 6708, 6871, 6952, 7003, 7046, 7131, 7228, 7270, 7452, 7469,
+				7490, 7591, 7674, 7709, 7728, 7732, 7878, 7879, 7894, 7920, 7940, 7961, 8005, 8045, 8114, 8140, 8157, 8184, 8307, 8430,
+				8506, 8544, 8708, 8760, 8846, 8911, 9007, 9030, 9118, 9195, 9218, 9351, 9375, 9426, 9439, 9630, 9665, 9673, 9695, 9715,
+				9745, 9767, 9815, 9902, 10004, 10060, 10103, 10175, 10245, 10308, 10387, 10441, 10523, 10601, 10682, 10847, 10908, 11028, 11103,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

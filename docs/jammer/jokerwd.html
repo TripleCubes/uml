@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>JokerWD&#39;s jammer page</title>
+	<meta content="JokerWD&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jokerwd.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>JokerWD</h1>
+		<a href="https://jokerwd.itch.io">jokerwd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11169</p>
+		<p>Total ilScore: 35</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://jokerwd.itch.io/unusual-investigator">Unusual investigator</a></td>
+				<td><span class="early">4h 5m early</span></td>
+				<td>
+					<a href="../jammer/deom0ng.html">(de)om0ng</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>25</td>
+				<td>5</td>
+				<td>35</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				6263, 6285, 6423, 6542, 6619, 6647, 6737, 6753, 6916, 6997, 7048, 7091, 7176, 7273, 7316, 7497, 7514, 7537, 7638, 7722,
+				7757, 7777, 7781, 7927, 7928, 7943, 7970, 7990, 8012, 8056, 8096, 8165, 8192, 8209, 8236, 8359, 8482, 8559, 8597, 8764,
+				8816, 8902, 8968, 9064, 9087, 9175, 9253, 9276, 9409, 9436, 9488, 9501, 9692, 9727, 9735, 9757, 9777, 9807, 9829, 9879,
+				9966, 10069, 10125, 10168, 10240, 10309, 10372, 10451, 10505, 10587, 10665, 10746, 10911, 10972, 11092, 11168,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

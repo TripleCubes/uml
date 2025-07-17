@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Thorben&#39;s jammer page</title>
+	<meta content="Thorben&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thorben.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Thorben</h1>
+		<a href="https://thorben.itch.io">thorben.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6794</p>
+		<p>Total ilScore: 63</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://thorben.itch.io/vampire-with-ghosts">Vampire with Ghosts</a></td>
+				<td><span class="early">5h 56m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>101</td>
+				<td>2</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://thorben.itch.io/wertz">wertz</a></td>
+				<td><span class="early">8h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-47-internet">MJ 47: Internet</a></td>
+				<td>52</td>
+				<td>24</td>
+				<td>10</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				270, 275, 277, 370, 265, 268, 287, 297, 329, 355, 416, 425, 432, 440, 445, 458, 465, 585, 672, 676,
+				685, 743, 754, 767, 780, 830, 840, 887, 907, 1045, 1067, 1102, 1174, 1253, 1264, 1393, 1478, 1494, 1504, 1555,
+				1658, 1771, 1808, 1898, 1934, 1998, 2021, 2034, 2092, 2155, 2157, 2206, 2216, 2222, 2261, 2315, 2495, 2589, 2658, 2665,
+				2750, 2788, 2864, 3079, 3113, 3264, 3331, 3456, 3758, 3820, 3865, 3866, 3870, 3876, 3879, 3983, 4057, 4082, 4091, 4147,
+				4149, 4276, 4343, 4355, 4379, 4438, 4506, 4524, 4669, 4679, 4683, 4741, 4795, 4812, 4820, 4823, 4928, 4928, 4931, 4936,
+				4942, 4952, 4967, 4977, 5010, 5016, 5025, 5029, 5115, 5187, 5219, 5228, 5376, 5402, 5445, 5473, 5528, 5534, 5601, 5656,
+				5665, 5755, 5768, 5783, 5788, 5941, 5949, 5952, 5956, 5960, 5964, 5973, 5991, 6049, 6136, 6164, 6177, 6219, 6245, 6272,
+				6326, 6356, 6420, 6475, 6529, 6646, 6667, 6752, 6793,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

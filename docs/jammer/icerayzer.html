@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>IceRayZer&#39;s jammer page</title>
+	<meta content="IceRayZer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/icerayzer.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>IceRayZer</h1>
+		<a href="https://icerayzer.itch.io">icerayzer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2876</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9615</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sneakysunset.itch.io/sherlock-golms">Sherlock Golm&#39;s</a></td>
+				<td><span class="early">3m 3s early</span></td>
+				<td>
+					<a href="../jammer/sneakysunset.html">sneakysunset</a>,
+					<a href="../jammer/0nym.html">Ønym</a>,
+					<a href="../jammer/cj4y.html">CJ4y</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>18</td>
+				<td>5</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1594, 1612, 1632, 1646, 1658, 1680, 1684, 1702, 1732, 1749, 1764, 1780, 1802, 1817, 1843, 1853, 1859, 1886, 1908, 1921,
+				1929, 1936, 1964, 1967, 1970, 1982, 1986, 1998, 2020, 2035, 2059, 2073, 2086, 2103, 2121, 2134, 2152, 2177, 2209, 2232,
+				2253, 2265, 2285, 2296, 2315, 2332, 2350, 2390, 2395, 2411, 2422, 2447, 2458, 2462, 2468, 2477, 2483, 2492, 2503, 2535,
+				2555, 2580, 2599, 2623, 2642, 2666, 2695, 2714, 2733, 2760, 2781, 2807, 2827, 2859, 2875,
+			]],
+			[ "ilscore", [
+				5417, 5534, 5641, 5702, 5721, 5810, 5819, 5968, 6039, 6073, 6109, 6187, 6277, 6314, 6484, 6502, 6513, 6599, 6671, 6703,
+				6709, 6710, 6840, 6841, 6846, 6859, 6867, 6882, 6926, 6962, 7025, 7044, 7054, 7072, 7182, 7303, 7368, 7402, 7564, 7599,
+				7672, 7725, 7810, 7825, 7908, 7977, 7994, 8119, 8135, 8181, 8191, 8372, 8395, 8395, 8409, 8411, 8433, 8440, 8481, 8564,
+				8659, 8704, 8736, 8797, 8860, 8917, 8995, 9039, 9113, 9178, 9252, 9389, 9438, 9545, 9614,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

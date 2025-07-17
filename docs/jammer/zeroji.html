@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Zeroji&#39;s jammer page</title>
+	<meta content="Zeroji&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zeroji.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Zeroji</h1>
+		<a href="https://zeroji.itch.io">zeroji.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3046</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2702</p>
+		<p>Total ilScore: 100</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://zeroji.itch.io/lonely-vectors">Lonely Vectors</a></td>
+				<td><span class="early">2h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>21</td>
+				<td>12</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://zeroji.itch.io/barrel-and-melon">Barrel &amp; Melon</a></td>
+				<td><span class="early">4h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-53-oasis">MJ 53: Oasis</a></td>
+				<td>56</td>
+				<td>15</td>
+				<td>9</td>
+				<td>51</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				446, 466, 484, 507, 530, 555, 557, 564, 590, 615, 642, 671, 678, 692, 716, 732, 749, 775, 798, 810,
+				824, 841, 866, 886, 905, 922, 946, 961, 981, 994, 1008, 1024, 1046, 1066, 1091, 1111, 1136, 1155, 1181, 1198,
+				1220, 1236, 1255, 1271, 1295, 1311, 1324, 1339, 1357, 1382, 1408, 1421, 1429, 1450, 1463, 1479, 1498, 1519, 1534, 1553,
+				1571, 1593, 1614, 1637, 1640, 1656, 1665, 1686, 1704, 1724, 1738, 1752, 1774, 1782, 1800, 1830, 1847, 1867, 1883, 1905,
+				1920, 1946, 1959, 1968, 1993, 2014, 2028, 2039, 2045, 2073, 2075, 2079, 2092, 2098, 2109, 2133, 2147, 2171, 2185, 2202,
+				2219, 2237, 2249, 2267, 2293, 2325, 2348, 2369, 2388, 2408, 2423, 2440, 2457, 2478, 2518, 2526, 2542, 2553, 2578, 2592,
+				2599, 2614, 2624, 2630, 2643, 2659, 2691, 2711, 2736, 2757, 2781, 2808, 2833, 2863, 2881, 2900, 2927, 2946, 2972, 2993,
+				3025, 3045,
+			]],
+			[ "ilscore", [
+				415, 467, 510, 599, 610, 139, 140, 142, 146, 149, 170, 208, 208, 214, 223, 232, 238, 247, 261, 269,
+				283, 297, 345, 356, 367, 388, 408, 417, 463, 491, 509, 518, 538, 558, 593, 610, 634, 648, 662, 673,
+				677, 700, 717, 728, 739, 751, 755, 770, 790, 877, 922, 937, 946, 971, 991, 1013, 1140, 1156, 1206, 1234,
+				1289, 1495, 1512, 1527, 1527, 1532, 1539, 1547, 1581, 1600, 1614, 1628, 1645, 1652, 1700, 1724, 1742, 1760, 1778, 1801,
+				1810, 1869, 1881, 1888, 1904, 1928, 1942, 1942, 1947, 1965, 1966, 1969, 1976, 1979, 1983, 1992, 2000, 2006, 2016, 2022,
+				2033, 2046, 2069, 2090, 2099, 2165, 2191, 2209, 2222, 2232, 2241, 2256, 2276, 2284, 2302, 2305, 2322, 2324, 2369, 2374,
+				2382, 2389, 2392, 2400, 2407, 2414, 2432, 2462, 2476, 2487, 2503, 2517, 2529, 2536, 2549, 2575, 2601, 2624, 2646, 2659,
+				2681, 2701,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

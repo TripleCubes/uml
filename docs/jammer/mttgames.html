@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Matt&#39;s jammer page</title>
+	<meta content="Matt&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mttgames.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Matt</h1>
+		<a href="https://mttgames.itch.io">mttgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3089</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1966</p>
+		<p>Total ilScore: 122</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mttgames.itch.io/little-boat">Little Boat</a></td>
+				<td><span class="early">2h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-93-vacation">MJ 93: Vacation</a></td>
+				<td>45</td>
+				<td>16</td>
+				<td>13</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://mttgames.itch.io/space-war">Space Battle</a></td>
+				<td><span class="early">33m 41s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>77</td>
+				<td>11</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1296, 1320, 1336, 1349, 1364, 1382, 1407, 1433, 1446, 1454, 1475, 1488, 1504, 1523, 1544, 1559, 1578, 1596, 1618, 1639,
+				1662, 1665, 1681, 1690, 1711, 1729, 1749, 1764, 1778, 1800, 1808, 1826, 1856, 1872, 1892, 1908, 1930, 1945, 1971, 1985,
+				1995, 2020, 2041, 2056, 2067, 2073, 2101, 2104, 2109, 2125, 2131, 2142, 2166, 2180, 2204, 2220, 2237, 2257, 2275, 2287,
+				2305, 2333, 2365, 2388, 2409, 2428, 2448, 2463, 2480, 2497, 2518, 2558, 2567, 2583, 2594, 2619, 2634, 2640, 2655, 2665,
+				2671, 2687, 2703, 2735, 2755, 2779, 2799, 2823, 2850, 2875, 2905, 2923, 2942, 2969, 2988, 3014, 3036, 3068, 3088,
+			]],
+			[ "ilscore", [
+				654, 669, 685, 732, 777, 786, 903, 972, 981, 990, 1021, 1096, 1187, 1208, 1272, 1286, 1319, 1332, 1339, 1378,
+				1408, 542, 555, 564, 569, 575, 589, 625, 659, 675, 678, 698, 715, 735, 789, 802, 838, 865, 899, 1003,
+				1026, 1045, 1045, 1051, 1055, 1064, 1089, 1108, 1117, 1125, 1139, 1149, 1179, 1205, 1222, 1239, 1254, 1276, 1284, 1320,
+				1332, 1343, 1360, 1379, 1391, 1397, 1399, 1415, 1415, 1416, 1422, 1424, 1426, 1436, 1444, 1451, 1455, 1457, 1463, 1474,
+				1490, 1506, 1510, 1540, 1561, 1575, 1582, 1593, 1597, 1617, 1638, 1646, 1663, 1666, 1677, 1682, 1703, 1705, 1711, 1713,
+				1714, 1722, 1723, 1726, 1737, 1764, 1777, 1787, 1798, 1811, 1827, 1832, 1844, 1867, 1884, 1900, 1919, 1929, 1948, 1965,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

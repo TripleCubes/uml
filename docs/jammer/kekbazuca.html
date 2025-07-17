@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>kekbazuca&#39;s jammer page</title>
+	<meta content="kekbazuca&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kekbazuca.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>kekbazuca</h1>
+		<a href="https://kekbazuca.itch.io">kekbazuca.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2490</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5201</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kekbazuca.itch.io/goblimpics">Goblimpics</a></td>
+				<td><span class="early">2h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-86-sports">MJ 86: Sports</a></td>
+				<td>104</td>
+				<td>12</td>
+				<td>9</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				912, 937, 945, 966, 982, 999, 1014, 1029, 1038, 1057, 1068, 1074, 1087, 1103, 1129, 1158, 1171, 1176, 1197, 1211,
+				1227, 1246, 1265, 1280, 1299, 1318, 1340, 1361, 1384, 1385, 1399, 1408, 1420, 1438, 1458, 1471, 1479, 1501, 1506, 1524,
+				1554, 1566, 1578, 1595, 1613, 1628, 1654, 1659, 1662, 1690, 1712, 1720, 1726, 1730, 1758, 1761, 1763, 1768, 1771, 1782,
+				1800, 1809, 1828, 1837, 1849, 1862, 1880, 1894, 1909, 1929, 1961, 1976, 1984, 1993, 2012, 2023, 2042, 2054, 2063, 2103,
+				2107, 2118, 2129, 2154, 2160, 2164, 2167, 2176, 2179, 2187, 2195, 2219, 2239, 2252, 2267, 2290, 2306, 2329, 2347, 2357,
+				2377, 2398, 2419, 2445, 2454, 2474, 2489,
+			]],
+			[ "ilscore", [
+				1335, 1405, 1417, 1459, 1473, 1480, 1527, 1565, 1572, 1598, 1607, 1613, 1640, 1677, 1850, 1935, 1990, 1997, 2055, 2084,
+				2133, 2328, 2349, 2472, 2524, 2637, 2912, 2936, 2964, 2965, 2969, 2977, 2982, 3070, 3127, 3148, 3160, 3196, 3198, 3310,
+				3359, 3370, 3390, 3430, 3484, 3500, 3634, 3645, 3649, 3693, 3732, 3747, 3754, 3756, 3838, 3841, 3844, 3851, 3855, 3864,
+				3875, 3885, 3893, 3905, 3915, 3923, 3990, 4034, 4054, 4061, 4192, 4206, 4234, 4253, 4294, 4304, 4352, 4390, 4401, 4465,
+				4477, 4492, 4498, 4626, 4632, 4634, 4637, 4640, 4645, 4655, 4668, 4699, 4768, 4777, 4789, 4810, 4830, 4840, 4865, 4878,
+				4935, 4973, 5004, 5105, 5119, 5176, 5200,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

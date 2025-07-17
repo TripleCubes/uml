@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Munro&#39;s jammer page</title>
+	<meta content="Munro&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/munro.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Munro</h1>
+		<a href="https://munro.itch.io">munro.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 801</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1139</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1523</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7858</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://munro.itch.io/ufo-pyramid">UFO: Scorpion&#39;s Curse</a></td>
+				<td><span class="early">7h 12m early</span></td>
+				<td>
+					<a href="../jammer/onygox.html">Onygox</a>,
+					<a href="../jammer/jmmusic.html">jmmusic</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-61">MJ 61: Ancient Egypt</a></td>
+				<td>49</td>
+				<td>2</td>
+				<td>16</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				168, 176, 184, 193, 197, 203, 208, 213, 218, 224, 225, 230, 234, 242, 245, 249, 254, 256, 261, 269,
+				271, 272, 273, 279, 283, 285, 291, 297, 301, 308, 315, 318, 321, 327, 333, 336, 345, 345, 352, 356,
+				362, 373, 376, 378, 383, 386, 391, 398, 407, 411, 414, 418, 424, 433, 437, 438, 444, 449, 457, 461,
+				469, 474, 479, 487, 488, 494, 504, 508, 516, 519, 526, 531, 534, 536, 536, 541, 547, 549, 549, 550,
+				559, 563, 568, 575, 576, 585, 591, 591, 596, 597, 599, 603, 609, 611, 616, 623, 633, 640, 644, 648,
+				652, 653, 658, 664, 664, 672, 674, 677, 682, 688, 692, 692, 693, 694, 697, 701, 703, 714, 719, 722,
+				725, 730, 732, 735, 744, 747, 752, 764, 772, 782, 784, 790, 800,
+			]],
+			[ "10", [
+				224, 237, 251, 259, 265, 277, 282, 287, 300, 314, 315, 320, 325, 339, 344, 348, 357, 359, 365, 378,
+				385, 387, 387, 396, 406, 408, 414, 426, 430, 438, 447, 451, 455, 461, 467, 470, 480, 480, 487, 492,
+				503, 518, 525, 528, 538, 547, 555, 564, 574, 581, 590, 600, 612, 625, 636, 637, 642, 647, 655, 663,
+				677, 682, 688, 701, 704, 714, 732, 739, 748, 761, 769, 774, 778, 781, 782, 793, 804, 805, 805, 806,
+				818, 822, 826, 833, 834, 843, 851, 852, 856, 857, 859, 864, 873, 880, 888, 898, 915, 918, 922, 926,
+				936, 937, 948, 958, 959, 972, 975, 980, 988, 1000, 1004, 1006, 1007, 1009, 1012, 1016, 1019, 1032, 1041, 1045,
+				1048, 1054, 1056, 1058, 1069, 1073, 1082, 1096, 1107, 1120, 1122, 1128, 1138,
+			]],
+			[ "20", [
+				300, 325, 339, 349, 358, 370, 378, 384, 399, 413, 415, 421, 427, 452, 457, 463, 476, 478, 484, 506,
+				517, 523, 526, 537, 549, 554, 561, 575, 581, 589, 602, 606, 611, 618, 625, 628, 635, 641, 648, 652,
+				664, 693, 703, 709, 722, 732, 740, 759, 767, 777, 788, 802, 825, 840, 852, 853, 858, 867, 878, 886,
+				906, 913, 922, 941, 946, 957, 981, 991, 1002, 1017, 1026, 1032, 1037, 1040, 1041, 1055, 1069, 1071, 1073, 1078,
+				1089, 1091, 1096, 1105, 1106, 1117, 1128, 1131, 1138, 1143, 1150, 1157, 1171, 1179, 1187, 1198, 1216, 1220, 1229, 1233,
+				1243, 1249, 1265, 1275, 1279, 1300, 1302, 1310, 1320, 1337, 1343, 1352, 1354, 1357, 1361, 1368, 1371, 1384, 1395, 1400,
+				1406, 1414, 1421, 1432, 1441, 1447, 1456, 1471, 1482, 1498, 1500, 1507, 1522,
+			]],
+			[ "ilscore", [
+				603, 727, 829, 831, 842, 923, 942, 957, 985, 1045, 1057, 1116, 1138, 1283, 1313, 1364, 1441, 1533, 1549, 1690,
+				1776, 1796, 1813, 1880, 1994, 2119, 2163, 2264, 2315, 2386, 2417, 2441, 2498, 2568, 2571, 2628, 2642, 2652, 2698, 2757,
+				2942, 3040, 3120, 3128, 3225, 3269, 3357, 3580, 3623, 3785, 3864, 3998, 4319, 4384, 4443, 4443, 4458, 4462, 4469, 4578,
+				4668, 4705, 4717, 4784, 4787, 4923, 4989, 5009, 5037, 5110, 5193, 5216, 5372, 5381, 5386, 5464, 5525, 5542, 5550, 5553,
+				5667, 5667, 5670, 5675, 5681, 5691, 5714, 5731, 5775, 5782, 5791, 5797, 5902, 5993, 6037, 6049, 6206, 6234, 6287, 6326,
+				6395, 6400, 6477, 6534, 6546, 6655, 6664, 6693, 6700, 6862, 6874, 6878, 6881, 6883, 6890, 6899, 6922, 6997, 7085, 7119,
+				7135, 7185, 7234, 7270, 7333, 7371, 7441, 7501, 7562, 7688, 7713, 7810, 7857,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

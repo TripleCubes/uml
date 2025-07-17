@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PhilippTheProgrammer&#39;s jammer page</title>
+	<meta content="PhilippTheProgrammer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/philipptheprogrammer.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PhilippTheProgrammer</h1>
+		<a href="https://philipptheprogrammer.itch.io">philipptheprogrammer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1846</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2915</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9463</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://philipptheprogrammer.itch.io/inventory-dungeon">Inventory Dungeon</a></td>
+				<td><span class="early">7h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-45-dungeons">MJ 45: Dungeons</a></td>
+				<td>44</td>
+				<td>9</td>
+				<td>16</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				257, 263, 272, 278, 278, 289, 308, 318, 327, 336, 347, 357, 368, 379, 390, 390, 394, 408, 426, 439,
+				455, 462, 469, 482, 490, 498, 511, 524, 534, 542, 551, 564, 573, 583, 592, 601, 610, 622, 629, 646,
+				656, 667, 677, 689, 701, 713, 721, 732, 742, 760, 768, 777, 794, 807, 817, 830, 838, 844, 855, 867,
+				874, 880, 887, 896, 903, 912, 929, 936, 945, 955, 967, 980, 993, 996, 1011, 1020, 1028, 1037, 1054, 1068,
+				1080, 1093, 1098, 1107, 1125, 1134, 1145, 1158, 1171, 1181, 1191, 1199, 1205, 1220, 1231, 1239, 1247, 1254, 1268, 1270,
+				1274, 1290, 1296, 1307, 1323, 1336, 1347, 1361, 1373, 1388, 1396, 1401, 1409, 1430, 1447, 1461, 1469, 1478, 1489, 1501,
+				1511, 1523, 1539, 1552, 1559, 1565, 1575, 1587, 1592, 1593, 1601, 1612, 1620, 1628, 1639, 1657, 1665, 1675, 1691, 1702,
+				1714, 1729, 1747, 1756, 1765, 1780, 1791, 1804, 1815, 1832, 1845,
+			]],
+			[ "20", [
+				300, 309, 323, 328, 328, 350, 380, 390, 408, 418, 438, 456, 479, 491, 513, 519, 526, 552, 571, 598,
+				627, 635, 649, 673, 689, 703, 729, 752, 763, 777, 793, 818, 838, 857, 874, 898, 911, 931, 944, 955,
+				969, 991, 1011, 1036, 1056, 1081, 1100, 1126, 1144, 1163, 1179, 1198, 1212, 1236, 1252, 1263, 1278, 1296, 1321, 1347,
+				1360, 1365, 1386, 1399, 1415, 1434, 1455, 1470, 1489, 1507, 1529, 1550, 1573, 1576, 1591, 1600, 1617, 1635, 1655, 1669,
+				1682, 1704, 1708, 1726, 1756, 1773, 1789, 1805, 1827, 1842, 1868, 1878, 1884, 1911, 1933, 1946, 1956, 1963, 1991, 1992,
+				1995, 2007, 2012, 2024, 2046, 2061, 2085, 2099, 2112, 2129, 2147, 2160, 2178, 2203, 2235, 2258, 2279, 2293, 2313, 2324,
+				2343, 2360, 2377, 2417, 2423, 2441, 2453, 2478, 2489, 2493, 2502, 2512, 2518, 2527, 2538, 2570, 2590, 2615, 2636, 2660,
+				2678, 2702, 2731, 2750, 2769, 2796, 2817, 2843, 2863, 2895, 2914,
+			]],
+			[ "ilscore", [
+				222, 234, 258, 263, 265, 358, 434, 438, 491, 512, 574, 619, 716, 738, 767, 770, 775, 818, 848, 987,
+				1088, 1090, 1112, 1205, 1232, 1262, 1300, 1361, 1394, 1461, 1491, 1655, 1699, 1766, 1840, 1940, 1971, 2126, 2222, 2263,
+				2293, 2369, 2493, 2630, 2693, 2805, 2871, 2956, 2999, 3044, 3117, 3197, 3211, 3275, 3296, 3323, 3384, 3455, 3651, 3761,
+				3851, 3858, 3964, 4025, 4125, 4364, 4413, 4592, 4671, 4820, 5162, 5228, 5301, 5301, 5325, 5330, 5343, 5459, 5565, 5624,
+				5642, 5731, 5740, 5884, 5954, 5985, 6021, 6099, 6191, 6228, 6397, 6415, 6425, 6513, 6586, 6616, 6622, 6623, 6753, 6753,
+				6758, 6765, 6773, 6786, 6826, 6861, 6923, 6940, 6950, 6965, 7074, 7185, 7248, 7276, 7438, 7474, 7543, 7597, 7681, 7697,
+				7781, 7849, 7866, 7990, 8006, 8052, 8061, 8243, 8265, 8265, 8273, 8276, 8298, 8305, 8342, 8424, 8517, 8563, 8594, 8654,
+				8715, 8773, 8851, 8894, 8963, 9027, 9101, 9238, 9285, 9393, 9462,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

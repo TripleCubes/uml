@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PeaQueueAre&#39;s jammer page</title>
+	<meta content="PeaQueueAre&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/peaqueueare.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PeaQueueAre</h1>
+		<a href="https://peaqueueare.itch.io">peaqueueare.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1754</p>
+		<div class="boxes">
+			<span class="box_majorjam">11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7861</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://peaqueueare.itch.io/serendipity">Serendipity</a></td>
+				<td><span class="early">23m 58s early</span></td>
+				<td>
+					<a href="../jammer/anthony-c.html">Anthony</a>,
+					<a href="../jammer/dresdenblack.html">DresdenBlack</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>11</td>
+				<td>8</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				315, 322, 327, 339, 344, 370, 392, 402, 411, 426, 435, 442, 458, 471, 474, 481, 487, 513, 521, 527,
+				543, 545, 550, 572, 586, 593, 598, 613, 631, 639, 645, 660, 667, 677, 688, 696, 702, 711, 718, 729,
+				735, 742, 751, 756, 777, 806, 818, 823, 841, 853, 859, 878, 887, 899, 913, 932, 955, 975, 990, 991,
+				996, 1004, 1015, 1030, 1046, 1055, 1065, 1083, 1087, 1100, 1126, 1136, 1147, 1163, 1172, 1178, 1192, 1196, 1199, 1213,
+				1229, 1232, 1235, 1242, 1255, 1257, 1260, 1266, 1267, 1278, 1288, 1291, 1298, 1302, 1312, 1318, 1334, 1343, 1352, 1363,
+				1385, 1392, 1401, 1405, 1419, 1426, 1445, 1457, 1464, 1494, 1495, 1503, 1512, 1535, 1541, 1547, 1549, 1552, 1557, 1567,
+				1570, 1585, 1598, 1604, 1613, 1623, 1629, 1647, 1658, 1664, 1674, 1694, 1706, 1724, 1727, 1738, 1753,
+			]],
+			[ "ilscore", [
+				555, 562, 567, 597, 606, 730, 832, 834, 845, 926, 945, 960, 988, 1048, 1060, 1119, 1141, 1286, 1316, 1367,
+				1444, 1536, 1552, 1693, 1779, 1799, 1816, 1883, 1997, 2122, 2166, 2267, 2318, 2389, 2420, 2444, 2501, 2571, 2574, 2631,
+				2645, 2655, 2701, 2760, 2945, 3043, 3123, 3131, 3228, 3272, 3360, 3583, 3626, 3788, 3867, 4001, 4322, 4387, 4446, 4446,
+				4461, 4465, 4472, 4581, 4671, 4708, 4720, 4787, 4790, 4926, 4992, 5012, 5040, 5113, 5196, 5219, 5375, 5384, 5389, 5468,
+				5529, 5546, 5554, 5557, 5671, 5671, 5674, 5679, 5685, 5695, 5718, 5735, 5779, 5786, 5795, 5801, 5906, 5997, 6041, 6053,
+				6210, 6238, 6291, 6330, 6399, 6404, 6481, 6538, 6550, 6659, 6668, 6697, 6704, 6866, 6878, 6882, 6885, 6886, 6893, 6902,
+				6925, 7000, 7088, 7122, 7138, 7188, 7237, 7273, 7336, 7374, 7444, 7504, 7565, 7691, 7716, 7813, 7860,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

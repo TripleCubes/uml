@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>taterbase&#39;s jammer page</title>
+	<meta content="taterbase&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/taterbase.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>taterbase</h1>
+		<a href="https://taterbase.itch.io">taterbase.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12190</p>
+		<p>Total ilScore: 26</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://taterbase.itch.io/snow-shovel">Snow Shovel</a></td>
+				<td><span class="early">2h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-42-snow">MJ 42: Snow</a></td>
+				<td>28</td>
+				<td>22</td>
+				<td>8</td>
+				<td>26</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				522, 522, 536, 575, 607, 647, 665, 666, 781, 878, 898, 964, 1006, 1083, 1141, 1261, 1301, 1348, 1351, 1358,
+				1425, 1468, 1623, 1741, 1743, 1784, 1889, 1937, 1986, 2042, 2122, 2167, 2244, 2294, 2469, 2529, 2616, 2707, 2820, 2870,
+				3025, 3132, 3186, 3233, 3319, 3450, 3601, 3687, 3824, 3906, 4005, 4071, 4131, 4232, 4327, 4359, 4430, 4470, 4519, 4601,
+				4689, 4906, 5026, 5135, 5158, 5278, 5355, 5457, 5711, 5773, 5963, 6054, 6229, 6598, 6677, 6777, 6780, 6826, 6848, 6878,
+				7026, 7149, 7245, 7280, 7375, 7398, 7570, 7655, 7709, 7753, 7840, 7944, 7991, 8175, 8197, 8226, 8331, 8420, 8462, 8487,
+				8497, 8644, 8648, 8670, 8708, 8736, 8762, 8808, 8863, 8937, 8966, 8993, 9026, 9157, 9282, 9360, 9400, 9574, 9628, 9720,
+				9788, 9887, 9912, 10005, 10093, 10117, 10251, 10287, 10341, 10362, 10553, 10594, 10609, 10640, 10670, 10711, 10738, 10795, 10885, 11001,
+				11066, 11115, 11187, 11258, 11327, 11414, 11485, 11570, 11648, 11737, 11913, 11981, 12108, 12189,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

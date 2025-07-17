@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>billy&#39;s jammer page</title>
+	<meta content="billy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dairydog.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>billy</h1>
+		<a href="https://dairydog.itch.io">dairydog.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3156</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8792</p>
+		<p>Total ilScore: 50</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dairydog.itch.io/dragon-oasis">Dragon Oasis</a></td>
+				<td><span class="early">13m 26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-53-oasis">MJ 53: Oasis</a></td>
+				<td>56</td>
+				<td>19</td>
+				<td>10</td>
+				<td>50</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				480, 500, 518, 541, 564, 589, 591, 598, 623, 648, 675, 704, 711, 726, 750, 765, 782, 808, 831, 850,
+				864, 883, 908, 928, 947, 964, 988, 1009, 1029, 1042, 1062, 1079, 1101, 1121, 1146, 1166, 1191, 1210, 1236, 1252,
+				1275, 1291, 1310, 1331, 1355, 1371, 1386, 1401, 1419, 1444, 1470, 1482, 1491, 1512, 1525, 1541, 1560, 1581, 1596, 1615,
+				1633, 1655, 1676, 1699, 1702, 1720, 1732, 1753, 1771, 1791, 1806, 1821, 1843, 1853, 1871, 1901, 1917, 1937, 1953, 1975,
+				1990, 2016, 2032, 2044, 2069, 2090, 2104, 2117, 2123, 2151, 2154, 2159, 2176, 2186, 2200, 2221, 2238, 2262, 2278, 2296,
+				2315, 2333, 2345, 2363, 2392, 2424, 2446, 2466, 2487, 2507, 2523, 2540, 2557, 2579, 2619, 2629, 2645, 2656, 2681, 2695,
+				2701, 2716, 2727, 2734, 2751, 2767, 2799, 2819, 2843, 2865, 2889, 2915, 2940, 2970, 2988, 3007, 3034, 3053, 3079, 3103,
+				3135, 3155,
+			]],
+			[ "ilscore", [
+				431, 484, 527, 619, 630, 653, 657, 663, 702, 725, 855, 954, 956, 969, 1056, 1078, 1104, 1139, 1197, 1222,
+				1289, 1319, 1479, 1520, 1578, 1652, 1751, 1780, 1924, 2017, 2049, 2071, 2139, 2259, 2390, 2444, 2557, 2612, 2687, 2726,
+				2766, 2833, 2907, 2912, 2973, 2988, 3013, 3067, 3135, 3324, 3425, 3512, 3518, 3624, 3684, 3781, 4011, 4059, 4224, 4301,
+				4444, 4775, 4844, 4909, 4909, 4927, 4932, 4942, 5058, 5162, 5213, 5224, 5300, 5304, 5447, 5517, 5541, 5572, 5652, 5740,
+				5773, 5935, 5951, 5958, 6043, 6108, 6134, 6139, 6141, 6261, 6261, 6265, 6270, 6278, 6291, 6321, 6346, 6407, 6422, 6427,
+				6439, 6548, 6652, 6708, 6729, 6888, 6923, 6990, 7039, 7115, 7130, 7214, 7276, 7296, 7413, 7423, 7470, 7479, 7654, 7674,
+				7676, 7681, 7682, 7689, 7694, 7725, 7805, 7895, 7939, 7963, 8023, 8082, 8135, 8208, 8249, 8319, 8384, 8454, 8590, 8632,
+				8732, 8791,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

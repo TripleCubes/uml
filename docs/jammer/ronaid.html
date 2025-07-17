@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RonaId&#39;s jammer page</title>
+	<meta content="RonaId&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ronaid.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RonaId</h1>
+		<a href="https://ronaid.itch.io">ronaid.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11957</p>
+		<p>Total ilScore: 29</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ronaid.itch.io/inertia">Inertia</a></td>
+				<td><span class="early">13h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-67-void">MJ 67: Void</a></td>
+				<td>61</td>
+				<td>55</td>
+				<td>3</td>
+				<td>29</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1855, 1904, 1958, 2036, 2081, 2158, 2206, 2381, 2439, 2525, 2616, 2727, 2775, 2931, 3038, 3091, 3137, 3222, 3352, 3503,
+				3586, 3723, 3805, 3903, 3965, 4025, 4121, 4213, 4244, 4315, 4352, 4401, 4482, 4570, 4787, 4906, 5014, 5037, 5155, 5232,
+				5335, 5587, 5650, 5840, 5929, 6100, 6468, 6546, 6645, 6648, 6694, 6715, 6744, 6889, 7012, 7106, 7140, 7234, 7253, 7424,
+				7509, 7561, 7604, 7692, 7796, 7843, 8028, 8049, 8079, 8182, 8269, 8309, 8333, 8342, 8490, 8494, 8514, 8552, 8580, 8605,
+				8651, 8706, 8779, 8807, 8833, 8864, 8992, 9116, 9193, 9233, 9407, 9461, 9552, 9620, 9719, 9745, 9837, 9920, 9943, 10077,
+				10111, 10163, 10182, 10373, 10413, 10427, 10453, 10483, 10519, 10544, 10600, 10688, 10800, 10863, 10911, 10980, 11051, 11115, 11197, 11265,
+				11349, 11425, 11513, 11683, 11749, 11876, 11956,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

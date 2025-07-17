@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>bromelina&#39;s jammer page</title>
+	<meta content="bromelina&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bromelina.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>bromelina</h1>
+		<a href="https://bromelina.itch.io">bromelina.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3277</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2369</p>
+		<p>Total ilScore: 108</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bromelina.itch.io/regularfishing">Regular Fishing</a></td>
+				<td><span class="early">1m 53s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>140</td>
+				<td>7</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://bromelina.itch.io/dungeon-cycle">Dungeon Cycle</a></td>
+				<td><span class="early">2m 49s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>17</td>
+				<td>12</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://bromelina.itch.io/cant-drive">can&#39;t drive</a></td>
+				<td><span class="late">17m 46s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-87-break">MJ 87: Break</a></td>
+				<td>104</td>
+				<td>103</td>
+				<td>1</td>
+				<td>6</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2199, 2206, 2234, 2238, 2247, 2266, 2279, 2294, 2315, 2335, 2359, 2376, 2394, 2415, 2433, 2445, 2463, 2492, 2524, 2546,
+				2566, 2587, 2607, 2623, 2639, 2656, 2678, 2718, 2729, 2745, 2756, 2781, 2795, 2801, 2816, 2832, 2849, 2868, 2885, 2916,
+				2936, 2960, 2986, 3010, 3036, 3060, 3090, 3108, 3127, 3154, 3173, 3199, 3224, 3256, 3276,
+			]],
+			[ "ilscore", [
+				4306, 4403, 4470, 4534, 4644, 4738, 4772, 4843, 4883, 4935, 5020, 5109, 5327, 5447, 5563, 5598, 5721, 5803, 5908, 6163,
+				6228, 6417, 6514, 6695, 7068, 7148, 7251, 7261, 7312, 7336, 7367, 7520, 7653, 7749, 7785, 7890, 7921, 8094, 8180, 8235,
+				8286, 8371, 8483, 8533, 8721, 8748, 8778, 8887, 8978, 9021, 6272, 6273, 6394, 6394, 6398, 6403, 6411, 6423, 6455, 6485,
+				6549, 6564, 6572, 6587, 6697, 6803, 6859, 6884, 1862, 1889, 1907, 1918, 1927, 1936, 1953, 1976, 1983, 2001, 2003, 2018,
+				2022, 2051, 2057, 2065, 2070, 2071, 2077, 2079, 2084, 2100, 2132, 2149, 2160, 2174, 2190, 2202, 2209, 2221, 2245, 2268,
+				2290, 2312, 2327, 2349, 2368,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>HectorTL&#39;s jammer page</title>
+	<meta content="HectorTL&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hectortl.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>HectorTL</h1>
+		<a href="https://hectortl.itch.io">hectortl.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2116</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1414</p>
+		<p>Total ilScore: 145</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://hectortl.itch.io/falling-farm">Falling Farm</a></td>
+				<td><span class="early">6h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>19</td>
+				<td>13</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://hectortl.itch.io/the-way-back-home">The Way Back Home</a></td>
+				<td><span class="early">8h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>44</td>
+				<td>16</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1011, 1018, 1037, 1054, 1070, 1089, 1108, 1130, 1151, 1170, 1171, 1182, 1192, 1203, 1221, 1237, 1247, 1256, 1274, 1279,
+				1295, 1324, 1335, 1347, 1364, 1378, 1390, 1416, 1419, 1422, 1446, 1468, 1472, 1475, 1480, 1502, 1504, 1506, 1511, 1513,
+				1523, 1539, 1545, 1555, 1560, 1572, 1578, 1597, 1608, 1619, 1640, 1673, 1681, 1688, 1695, 1709, 1716, 1736, 1747, 1755,
+				1795, 1797, 1807, 1816, 1841, 1847, 1851, 1854, 1859, 1863, 1873, 1880, 1898, 1918, 1928, 1938, 1955, 1969, 1985, 1996,
+				2003, 2017, 2036, 2058, 2083, 2088, 2100, 2115,
+			]],
+			[ "ilscore", [
+				998, 1007, 1129, 1209, 1217, 1225, 1264, 1352, 1461, 1491, 1572, 1592, 1643, 1661, 1668, 1724, 1768, 1773, 1799, 1807,
+				1814, 1845, 1883, 2059, 2148, 2208, 2214, 2288, 513, 523, 557, 569, 601, 624, 648, 688, 706, 720, 720, 722,
+				726, 732, 748, 765, 767, 776, 784, 788, 809, 829, 843, 852, 872, 888, 897, 924, 932, 939, 957, 972,
+				982, 988, 988, 1002, 1002, 1002, 1005, 1005, 1010, 1013, 1021, 1028, 1031, 1033, 1037, 1046, 1060, 1068, 1071, 1101,
+				1114, 1121, 1124, 1136, 1139, 1160, 1172, 1177, 1194, 1197, 1207, 1213, 1234, 1235, 1239, 1241, 1242, 1245, 1245, 1247,
+				1257, 1271, 1282, 1287, 1293, 1299, 1311, 1320, 1326, 1342, 1352, 1367, 1386, 1391, 1403, 1413,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

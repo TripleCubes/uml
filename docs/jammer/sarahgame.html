@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>sarahgame&#39;s jammer page</title>
+	<meta content="sarahgame&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sarahgame.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>sarahgame</h1>
+		<a href="https://sarahgame.itch.io">sarahgame.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12674</p>
+		<p>Total ilScore: 19</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://sarahgame.itch.io/raising-sarah">Raising Sarah</a></td>
+				<td><span class="early">1m 10s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>50</td>
+				<td>3</td>
+				<td>19</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1519, 1527, 1539, 1609, 1657, 1815, 1931, 1936, 1980, 2087, 2134, 2183, 2239, 2323, 2371, 2449, 2503, 2677, 2737, 2827,
+				2919, 3038, 3089, 3243, 3352, 3410, 3458, 3546, 3679, 3830, 3918, 4057, 4141, 4238, 4305, 4366, 4473, 4567, 4601, 4672,
+				4712, 4763, 4848, 4937, 5155, 5275, 5387, 5415, 5537, 5619, 5722, 5976, 6040, 6230, 6323, 6503, 6874, 6954, 7054, 7060,
+				7111, 7135, 7166, 7316, 7444, 7541, 7577, 7680, 7711, 7883, 7969, 8022, 8071, 8157, 8268, 8318, 8505, 8529, 8557, 8663,
+				8752, 8795, 8823, 8839, 8987, 8993, 9020, 9059, 9089, 9118, 9164, 9223, 9303, 9337, 9366, 9403, 9545, 9668, 9744, 9786,
+				9966, 10025, 10123, 10191, 10288, 10320, 10422, 10510, 10538, 10674, 10710, 10764, 10786, 10981, 11027, 11044, 11082, 11114, 11163, 11192,
+				11248, 11345, 11464, 11534, 11584, 11654, 11725, 11797, 11883, 11955, 12039, 12119, 12209, 12390, 12465, 12592, 12673,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

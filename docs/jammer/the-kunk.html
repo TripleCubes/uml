@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>The Kunk&#39;s jammer page</title>
+	<meta content="The Kunk&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/the-kunk.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>The Kunk</h1>
+		<a href="https://the-kunk.itch.io">the-kunk.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6565</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://the-kunk.itch.io/sheep-golf">Sheep Golf</a></td>
+				<td><span class="early">5h 9m early</span></td>
+				<td>
+					<a href="../jammer/yogpoz.html">YogPoz</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>35</td>
+				<td>13</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				837, 858, 998, 1020, 1052, 1124, 1200, 1211, 1339, 1422, 1433, 1441, 1488, 1587, 1698, 1733, 1819, 1850, 1912, 1932,
+				1943, 2002, 2061, 2063, 2106, 2115, 2122, 2159, 2209, 2388, 2477, 2546, 2553, 2633, 2669, 2747, 2958, 2991, 3137, 3205,
+				3327, 3621, 3682, 3726, 3727, 3731, 3737, 3740, 3842, 3915, 3936, 3945, 4001, 4003, 4127, 4188, 4199, 4225, 4283, 4349,
+				4367, 4512, 4522, 4526, 4582, 4636, 4652, 4660, 4663, 4767, 4767, 4770, 4775, 4780, 4790, 4806, 4815, 4848, 4855, 4865,
+				4869, 4955, 5024, 5056, 5065, 5213, 5238, 5278, 5302, 5355, 5362, 5429, 5482, 5491, 5579, 5592, 5607, 5611, 5762, 5770,
+				5773, 5776, 5780, 5785, 5794, 5808, 5863, 5950, 5974, 5986, 6025, 6049, 6075, 6125, 6152, 6215, 6267, 6316, 6426, 6446,
+				6525, 6564,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

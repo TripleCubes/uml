@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chumzy&#39;s jammer page</title>
+	<meta content="Chumzy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chumzy.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chumzy</h1>
+		<a href="https://chumzy.itch.io">chumzy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2122</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6588</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chumzy.itch.io/robot-magnets">Robots don&#39;t like magnets</a></td>
+				<td><span class="early">3h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>15</td>
+				<td>12</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				321, 332, 344, 360, 367, 373, 389, 394, 422, 446, 456, 467, 489, 498, 505, 531, 548, 553, 567, 576,
+				601, 611, 626, 645, 650, 657, 679, 693, 700, 706, 722, 742, 752, 765, 790, 797, 814, 827, 836, 844,
+				854, 862, 876, 883, 890, 901, 908, 934, 963, 976, 981, 1001, 1016, 1023, 1042, 1059, 1075, 1094, 1113, 1135,
+				1156, 1175, 1176, 1187, 1197, 1208, 1226, 1242, 1252, 1261, 1279, 1284, 1300, 1329, 1340, 1352, 1369, 1383, 1395, 1421,
+				1424, 1427, 1451, 1473, 1477, 1480, 1485, 1507, 1509, 1511, 1516, 1518, 1528, 1544, 1550, 1560, 1565, 1577, 1583, 1602,
+				1613, 1625, 1646, 1679, 1687, 1694, 1701, 1715, 1722, 1742, 1753, 1761, 1801, 1803, 1813, 1822, 1847, 1853, 1857, 1860,
+				1865, 1869, 1879, 1886, 1904, 1924, 1934, 1944, 1961, 1975, 1991, 2002, 2009, 2023, 2042, 2064, 2089, 2094, 2106, 2121,
+			]],
+			[ "ilscore", [
+				338, 396, 407, 411, 419, 424, 433, 440, 557, 646, 650, 658, 712, 723, 735, 746, 792, 801, 841, 862,
+				1002, 1024, 1056, 1128, 1204, 1215, 1343, 1426, 1437, 1447, 1494, 1594, 1705, 1740, 1826, 1857, 1919, 1940, 1951, 2010,
+				2070, 2072, 2115, 2124, 2131, 2168, 2218, 2398, 2489, 2558, 2565, 2645, 2681, 2757, 2968, 3001, 3148, 3216, 3338, 3635,
+				3696, 3740, 3741, 3745, 3751, 3754, 3857, 3930, 3951, 3960, 4016, 4018, 4142, 4203, 4214, 4240, 4298, 4364, 4382, 4527,
+				4537, 4541, 4597, 4651, 4667, 4675, 4678, 4782, 4782, 4785, 4790, 4796, 4806, 4821, 4829, 4862, 4869, 4879, 4883, 4969,
+				5038, 5070, 5079, 5227, 5252, 5292, 5316, 5369, 5376, 5443, 5497, 5506, 5594, 5607, 5622, 5626, 5777, 5785, 5788, 5791,
+				5795, 5800, 5809, 5823, 5878, 5966, 5990, 6002, 6041, 6065, 6091, 6143, 6170, 6233, 6285, 6335, 6446, 6466, 6548, 6587,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

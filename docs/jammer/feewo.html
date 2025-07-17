@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Feewo&#39;s jammer page</title>
+	<meta content="Feewo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/feewo.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Feewo</h1>
+		<a href="https://feewo.itch.io">feewo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1529</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3212</p>
+		<p>Total ilScore: 91</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://feewo.itch.io/the-ring-of-rotation">The Ring of Rotation</a></td>
+				<td><span class="early">14h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>13</td>
+				<td>27</td>
+				<td>91</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				710, 716, 729, 739, 747, 766, 774, 784, 795, 809, 832, 847, 859, 860, 865, 874, 885, 893, 913, 920,
+				929, 948, 953, 964, 987, 997, 1008, 1023, 1032, 1038, 1044, 1047, 1048, 1062, 1076, 1078, 1080, 1085, 1096, 1098,
+				1103, 1112, 1113, 1124, 1134, 1137, 1144, 1149, 1156, 1163, 1177, 1185, 1193, 1204, 1222, 1226, 1235, 1239, 1249, 1255,
+				1271, 1281, 1285, 1306, 1308, 1316, 1326, 1343, 1349, 1358, 1360, 1363, 1367, 1374, 1377, 1390, 1401, 1406, 1412, 1420,
+				1427, 1438, 1447, 1453, 1462, 1477, 1488, 1504, 1506, 1513, 1528,
+			]],
+			[ "ilscore", [
+				1143, 1152, 1188, 1208, 1226, 1382, 1396, 1467, 1499, 1578, 1814, 1828, 1841, 1841, 1844, 1851, 1856, 1909, 1936, 1952,
+				1964, 1982, 1990, 2063, 2087, 2104, 2122, 2139, 2163, 2177, 2250, 2260, 2267, 2285, 2309, 2325, 2330, 2335, 2353, 2356,
+				2361, 2368, 2371, 2374, 2387, 2394, 2400, 2410, 2418, 2428, 2452, 2476, 2494, 2503, 2592, 2612, 2632, 2646, 2658, 2667,
+				2684, 2705, 2714, 2746, 2753, 2768, 2773, 2849, 2855, 2863, 2870, 2873, 2880, 2886, 2898, 2917, 2951, 2965, 2980, 3000,
+				3015, 3025, 3035, 3046, 3072, 3100, 3124, 3157, 3171, 3192, 3211,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

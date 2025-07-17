@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>cat2x&#39;s jammer page</title>
+	<meta content="cat2x&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cat2x.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>cat2x</h1>
+		<a href="https://cat2x.itch.io">cat2x.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 997</p>
+		<div class="boxes">
+			<span class="box_majorjam">6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1354</p>
+		<div class="boxes">
+			<span class="box_majorjam">6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3222</p>
+		<p>Total ilScore: 91</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://cat2x.itch.io/unwind">UNWIND</a></td>
+				<td><span class="early">12h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>6</td>
+				<td>11</td>
+				<td>91</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				724, 728, 732, 739, 740, 747, 753, 754, 759, 759, 761, 764, 773, 780, 787, 797, 811, 812, 816, 820,
+				829, 830, 839, 847, 850, 863, 866, 872, 879, 891, 894, 897, 897, 899, 902, 904, 907, 919, 926, 929,
+				931, 936, 938, 938, 944, 948, 954, 966, 974, 987, 988, 989, 996,
+			]],
+			[ "20", [
+				965, 967, 972, 981, 984, 994, 1004, 1007, 1014, 1019, 1026, 1031, 1040, 1047, 1054, 1066, 1081, 1085, 1096, 1099,
+				1108, 1114, 1129, 1139, 1143, 1164, 1167, 1174, 1184, 1197, 1202, 1212, 1213, 1216, 1221, 1226, 1230, 1243, 1252, 1256,
+				1261, 1268, 1275, 1284, 1289, 1295, 1300, 1313, 1321, 1337, 1339, 1341, 1353,
+			]],
+			[ "ilscore", [
+				2362, 2365, 2370, 2377, 2380, 2383, 2396, 2404, 2410, 2420, 2428, 2438, 2463, 2487, 2505, 2513, 2602, 2622, 2642, 2656,
+				2668, 2677, 2694, 2715, 2724, 2756, 2763, 2778, 2783, 2859, 2865, 2873, 2880, 2883, 2890, 2896, 2908, 2927, 2961, 2975,
+				2990, 3010, 3025, 3035, 3045, 3056, 3082, 3110, 3134, 3167, 3181, 3202, 3221,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

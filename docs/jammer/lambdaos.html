@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LambdaOS&#39;s jammer page</title>
+	<meta content="LambdaOS&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lambdaos.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LambdaOS</h1>
+		<a href="https://lambdaos.itch.io">lambdaos.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9512</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lambdaos.itch.io/words-of-wisdom">Words of Wizards</a></td>
+				<td><span class="late">7m 12s late</span></td>
+				<td>
+					<a href="../jammer/celiohogane.html">CelioHogane</a>,
+					<a href="../jammer/musicbycamo.html">musicbycamo</a>,
+					<a href="../jammer/hochani.html">Hochani</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>72</td>
+				<td>13</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1778, 1852, 1952, 1983, 2138, 2234, 2275, 2305, 2381, 2505, 2644, 2706, 2818, 2884, 2971, 3014, 3061, 3134, 3214, 3229,
+				3293, 3315, 3343, 3404, 3475, 3671, 3781, 3871, 3878, 3984, 4045, 4145, 4384, 4434, 4613, 4692, 4841, 5184, 5250, 5323,
+				5323, 5347, 5352, 5365, 5482, 5589, 5649, 5668, 5757, 5766, 5910, 5981, 6013, 6049, 6127, 6218, 6255, 6425, 6443, 6454,
+				6542, 6614, 6646, 6652, 6653, 6783, 6783, 6788, 6795, 6802, 6816, 6860, 6895, 6958, 6977, 6987, 7003, 7113, 7224, 7289,
+				7317, 7480, 7516, 7589, 7642, 7726, 7742, 7825, 7894, 7911, 8036, 8052, 8098, 8107, 8289, 8311, 8311, 8319, 8322, 8344,
+				8351, 8387, 8472, 8566, 8611, 8642, 8702, 8763, 8821, 8900, 8943, 9012, 9076, 9150, 9287, 9334, 9442, 9511,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>rodrigopetunio&#39;s jammer page</title>
+	<meta content="rodrigopetunio&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rodrigopetunio.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>rodrigopetunio</h1>
+		<a href="https://rodrigopetunio.itch.io">rodrigopetunio.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2012</p>
+		<div class="boxes">
+			<span class="box_majorjam">17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3677</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://ii3the0.itch.io/cosmic-corp-llc">Cosmic Corp. LLC</a></td>
+				<td><span class="early">19m 40s early</span></td>
+				<td>
+					<a href="../jammer/ii3the0.html">ii3the0</a>,
+					<a href="../jammer/dis-da-mor.html">dis_da_moe</a>,
+					<a href="../jammer/jan-seidel.html">Jan Seidel</a>,
+					<a href="../jammer/lazycatdev.html">lazycatdev</a>,
+					<a href="../jammer/sachin-kishan.html">Sachin Kishan</a>,
+					<a href="../jammer/robindepaepe.html">Robin De Paepe</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>17</td>
+				<td>26</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				748, 755, 772, 782, 790, 799, 809, 817, 830, 837, 843, 853, 860, 886, 915, 927, 932, 952, 964, 970,
+				989, 1005, 1021, 1039, 1058, 1080, 1101, 1120, 1121, 1127, 1135, 1146, 1163, 1180, 1189, 1199, 1217, 1221, 1238, 1267,
+				1279, 1290, 1307, 1317, 1327, 1349, 1353, 1356, 1378, 1396, 1400, 1403, 1409, 1431, 1433, 1435, 1441, 1443, 1453, 1463,
+				1468, 1479, 1483, 1493, 1499, 1518, 1529, 1539, 1559, 1590, 1597, 1604, 1610, 1624, 1631, 1651, 1662, 1670, 1710, 1711,
+				1719, 1729, 1754, 1759, 1763, 1766, 1771, 1776, 1787, 1794, 1812, 1830, 1838, 1848, 1863, 1873, 1891, 1902, 1909, 1923,
+				1942, 1959, 1979, 1984, 1996, 2011,
+			]],
+			[ "ilscore", [
+				920, 933, 955, 968, 976, 997, 1020, 1030, 1045, 1056, 1063, 1078, 1104, 1236, 1303, 1327, 1337, 1376, 1395, 1415,
+				1583, 1596, 1683, 1720, 1815, 2070, 2084, 2095, 2096, 2098, 2106, 2109, 2183, 2211, 2226, 2239, 2266, 2273, 2357, 2391,
+				2405, 2423, 2449, 2478, 2492, 2591, 2606, 2609, 2633, 2655, 2670, 2676, 2680, 2710, 2714, 2719, 2727, 2730, 2734, 2747,
+				2755, 2761, 2772, 2782, 2792, 2831, 2856, 2874, 2880, 2977, 2995, 3015, 3028, 3048, 3057, 3078, 3104, 3115, 3159, 3166,
+				3182, 3187, 3272, 3279, 3284, 3289, 3293, 3301, 3309, 3322, 3343, 3390, 3402, 3416, 3436, 3452, 3462, 3473, 3484, 3510,
+				3539, 3564, 3618, 3631, 3655, 3676,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

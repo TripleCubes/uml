@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Wizard Shark&#39;s jammer page</title>
+	<meta content="Wizard Shark&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/wizardshark.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Wizard Shark</h1>
+		<a href="https://wizardshark.itch.io">wizardshark.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5184</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://eyeofstormcat.itch.io/chronocide">Chronocide</a></td>
+				<td><span class="early">1m 56s early</span></td>
+				<td>
+					<a href="../jammer/eyeofstormcat.html">StormCat</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>28</td>
+				<td>7</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				461, 464, 472, 502, 514, 523, 531, 562, 574, 595, 613, 736, 751, 774, 829, 880, 888, 1009, 1081, 1089,
+				1098, 1132, 1209, 1310, 1332, 1402, 1414, 1456, 1470, 1477, 1524, 1562, 1569, 1595, 1604, 1610, 1637, 1674, 1847, 1932,
+				1986, 1993, 2051, 2080, 2129, 2324, 2344, 2467, 2519, 2631, 2906, 2930, 2958, 2959, 2963, 2971, 2976, 3063, 3120, 3141,
+				3153, 3189, 3191, 3302, 3351, 3362, 3382, 3422, 3476, 3492, 3626, 3637, 3641, 3685, 3724, 3739, 3746, 3748, 3829, 3832,
+				3835, 3842, 3846, 3855, 3866, 3876, 3883, 3895, 3905, 3913, 3979, 4023, 4043, 4050, 4181, 4195, 4222, 4241, 4281, 4291,
+				4337, 4375, 4386, 4450, 4462, 4477, 4483, 4611, 4617, 4619, 4622, 4625, 4630, 4640, 4653, 4683, 4752, 4761, 4773, 4793,
+				4813, 4823, 4848, 4861, 4918, 4957, 4988, 5089, 5102, 5159, 5183,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

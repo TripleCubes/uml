@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>reOiL&#39;s jammer page</title>
+	<meta content="reOiL&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/reoil.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>reOiL</h1>
+		<a href="https://reoil.itch.io">reoil.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8428</p>
+		<p>Total ilScore: 53</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://reoil.itch.io/final-tentacles">Final Tentacles</a></td>
+				<td><span class="early">3h 41m early</span></td>
+				<td>
+					<a href="../jammer/lehandesigns.html">Lehan Botha</a>,
+					<a href="../jammer/kashdanmusic.html">Kashdan Music</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>57</td>
+				<td>7</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4722, 4722, 4738, 4742, 4749, 4860, 4960, 5004, 5014, 5088, 5092, 5232, 5301, 5322, 5351, 5429, 5514, 5544, 5703, 5717,
+				5723, 5808, 5872, 5895, 5901, 5903, 6021, 6021, 6026, 6031, 6038, 6049, 6076, 6098, 6150, 6164, 6170, 6181, 6289, 6392,
+				6445, 6466, 6624, 6654, 6708, 6755, 6827, 6839, 6917, 6977, 6993, 7107, 7119, 7156, 7164, 7333, 7348, 7351, 7355, 7356,
+				7362, 7368, 7398, 7478, 7569, 7612, 7634, 7691, 7744, 7789, 7857, 7896, 7969, 8031, 8097, 8234, 8274, 8373, 8427,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

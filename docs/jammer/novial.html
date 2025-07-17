@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>novial&#39;s jammer page</title>
+	<meta content="novial&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/novial.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>novial</h1>
+		<a href="https://novial.itch.io">novial.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6589</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://novial.itch.io/biomeswitch">BiomeSwitch</a></td>
+				<td><span class="early">2h 52m early</span></td>
+				<td>
+					<a href="../jammer/cyber-squib.html">Cyber Squib</a>,
+					<a href="../jammer/arix-furette.html">Arix</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>38</td>
+				<td>33</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2169, 2219, 2399, 2490, 2559, 2566, 2646, 2682, 2758, 2969, 3002, 3149, 3217, 3339, 3636, 3697, 3741, 3742, 3746, 3752,
+				3755, 3858, 3931, 3952, 3961, 4017, 4019, 4143, 4204, 4215, 4241, 4299, 4365, 4383, 4528, 4538, 4542, 4598, 4652, 4668,
+				4676, 4679, 4783, 4783, 4786, 4791, 4797, 4807, 4822, 4830, 4863, 4870, 4880, 4884, 4970, 5039, 5071, 5080, 5228, 5253,
+				5293, 5317, 5370, 5377, 5444, 5498, 5507, 5595, 5608, 5623, 5627, 5778, 5786, 5789, 5792, 5796, 5801, 5810, 5824, 5879,
+				5967, 5991, 6003, 6042, 6066, 6092, 6144, 6171, 6234, 6286, 6336, 6447, 6467, 6549, 6588,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

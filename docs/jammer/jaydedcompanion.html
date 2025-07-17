@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>JaydedCompanion&#39;s jammer page</title>
+	<meta content="JaydedCompanion&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jaydedcompanion.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>JaydedCompanion</h1>
+		<a href="https://jaydedcompanion.itch.io">jaydedcompanion.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7167</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://jaydedcompanion.itch.io/sandcastle-defense">[No Builds Available (Yet)] Sandcastle Defence</a></td>
+				<td><span class="early">8m 12s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>207</td>
+				<td>3</td>
+				<td>27</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://jaydedcompanion.itch.io/stranded">Stranded</a></td>
+				<td><span class="early">5m 33s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>51</td>
+				<td>6</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1783, 1855, 1895, 1970, 2021, 2194, 2247, 2327, 2416, 2526, 2574, 2733, 2833, 2877, 2922, 3005, 3135, 3283, 3364, 3493,
+				3572, 3669, 3727, 3782, 3875, 3962, 3991, 4065, 4099, 4144, 4221, 4306, 4520, 4638, 4737, 4755, 4876, 4952, 5054, 5304,
+				5362, 3465, 3536, 3662, 3968, 4032, 4083, 4083, 4091, 4097, 4101, 4208, 4294, 4320, 4332, 4391, 4392, 4524, 4585, 4601,
+				4622, 4688, 4762, 4783, 4930, 4940, 4944, 5010, 5067, 5086, 5094, 5097, 5205, 5205, 5208, 5213, 5218, 5227, 5242, 5254,
+				5293, 5299, 5308, 5311, 5402, 5484, 5517, 5528, 5679, 5705, 5750, 5779, 5836, 5842, 5914, 5968, 5978, 6071, 6082, 6101,
+				6106, 6259, 6268, 6272, 6275, 6279, 6284, 6293, 6312, 6372, 6461, 6490, 6504, 6551, 6589, 6623, 6684, 6715, 6781, 6838,
+				6895, 7010, 7033, 7122, 7166,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

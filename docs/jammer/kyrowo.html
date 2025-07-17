@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kyrowo&#39;s jammer page</title>
+	<meta content="Kyrowo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kyrowo.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kyrowo</h1>
+		<a href="https://kyrowo.itch.io">kyrowo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3387</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7192</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://devwilliamhardy.itch.io/eggmaggedon">Eggmaggedon</a></td>
+				<td><span class="early">10m 24s early</span></td>
+				<td>
+					<a href="../jammer/devwilliamhardy.html">William Hardy</a>,
+					<a href="../jammer/lazanja.html">Lazanja</a>,
+					<a href="../jammer/denjil.html">Denjil404</a>,
+					<a href="../jammer/quexlaw.html">Herr Edgy</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>97</td>
+				<td>19</td>
+				<td>11</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1925, 1948, 1970, 1982, 2000, 2027, 2043, 2063, 2078, 2100, 2114, 2140, 2160, 2179, 2204, 2225, 2244, 2261, 2269, 2297,
+				2301, 2313, 2336, 2352, 2370, 2391, 2415, 2438, 2458, 2474, 2496, 2514, 2526, 2544, 2573, 2605, 2627, 2647, 2668, 2688,
+				2708, 2723, 2740, 2762, 2802, 2816, 2831, 2845, 2870, 2884, 2889, 2912, 2933, 2955, 2975, 2992, 3023, 3043, 3067, 3096,
+				3120, 3146, 3170, 3200, 3218, 3237, 3264, 3283, 3309, 3334, 3366, 3386,
+			]],
+			[ "ilscore", [
+				4330, 4342, 4401, 4402, 4534, 4595, 4611, 4632, 4698, 4774, 4795, 4942, 4952, 4956, 5022, 5081, 5100, 5108, 5111, 5219,
+				5219, 5222, 5228, 5233, 5242, 5257, 5269, 5308, 5314, 5323, 5326, 5417, 5499, 5532, 5543, 5694, 5720, 5767, 5796, 5853,
+				5859, 5931, 5985, 5995, 6088, 6099, 6118, 6123, 6276, 6285, 6289, 6292, 6296, 6301, 6310, 6329, 6389, 6478, 6507, 6524,
+				6571, 6610, 6644, 6705, 6736, 6802, 6859, 6916, 7031, 7056, 7147, 7191,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

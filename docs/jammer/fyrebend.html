@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Fyrebend&#39;s jammer page</title>
+	<meta content="Fyrebend&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/fyrebend.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Fyrebend</h1>
+		<a href="https://fyrebend.itch.io">fyrebend.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2550</p>
+		<p>Total ilScore: 103</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fyrebend.itch.io/the-mage">The Mage</a></td>
+				<td><span class="early">6h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>26</td>
+				<td>7</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://fyrebend.itch.io/shotgun-smack">Shotgun Smack</a></td>
+				<td><span class="early">26m 12s early</span></td>
+				<td>
+					<a href="../jammer/cake111.html">Cake111</a>,
+					<a href="../jammer/stridmon.html">Kacper Garbacz</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>145</td>
+				<td>4</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				5605, 5713, 5777, 5797, 5887, 5897, 6048, 6121, 6158, 1646, 1664, 1687, 1696, 1745, 1759, 1766, 1782, 1809, 1823, 1823,
+				1828, 1847, 1847, 1850, 1858, 1861, 1866, 1876, 1884, 1890, 1898, 1903, 1915, 1927, 1948, 1969, 1978, 2026, 2052, 2071,
+				2084, 2094, 2103, 2118, 2141, 2148, 2165, 2167, 2183, 2185, 2225, 2231, 2239, 2246, 2249, 2257, 2261, 2268, 2286, 2316,
+				2331, 2342, 2357, 2372, 2383, 2390, 2403, 2427, 2449, 2471, 2492, 2506, 2529, 2549,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

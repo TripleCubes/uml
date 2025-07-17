@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Exudias&#39;s jammer page</title>
+	<meta content="Exudias&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/exudias.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Exudias</h1>
+		<a href="https://exudias.itch.io">exudias.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 980</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1336</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3661</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://exudias.itch.io/sidewalk-helsing">Sidewalk Helsing</a></td>
+				<td><span class="early">9h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>8</td>
+				<td>15</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				604, 606, 612, 633, 637, 646, 659, 665, 673, 675, 678, 679, 690, 698, 700, 700, 700, 709, 713, 717,
+				724, 725, 732, 738, 739, 744, 744, 746, 749, 758, 765, 772, 782, 796, 797, 801, 805, 814, 815, 822,
+				830, 833, 846, 849, 855, 862, 874, 877, 880, 880, 882, 885, 887, 890, 901, 909, 912, 914, 919, 921,
+				921, 927, 931, 937, 949, 957, 970, 971, 972, 979,
+			]],
+			[ "20", [
+				817, 821, 829, 850, 858, 870, 885, 893, 902, 905, 908, 909, 923, 932, 935, 937, 941, 949, 951, 956,
+				965, 968, 978, 988, 991, 998, 1003, 1010, 1015, 1024, 1031, 1038, 1050, 1065, 1069, 1080, 1083, 1092, 1098, 1111,
+				1121, 1125, 1146, 1149, 1156, 1166, 1179, 1184, 1194, 1195, 1198, 1203, 1208, 1212, 1224, 1234, 1238, 1243, 1250, 1257,
+				1266, 1271, 1277, 1282, 1295, 1303, 1319, 1321, 1323, 1335,
+			]],
+			[ "ilscore", [
+				2257, 2264, 2348, 2382, 2396, 2414, 2440, 2469, 2483, 2582, 2597, 2600, 2621, 2643, 2658, 2664, 2668, 2698, 2702, 2707,
+				2715, 2718, 2722, 2735, 2743, 2749, 2760, 2770, 2780, 2817, 2842, 2860, 2866, 2963, 2981, 3001, 3014, 3034, 3043, 3064,
+				3090, 3101, 3145, 3152, 3168, 3173, 3258, 3265, 3270, 3275, 3279, 3287, 3295, 3308, 3329, 3376, 3388, 3402, 3422, 3438,
+				3448, 3459, 3470, 3496, 3525, 3550, 3602, 3615, 3639, 3660,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

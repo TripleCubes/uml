@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kvemon&#39;s jammer page</title>
+	<meta content="Kvemon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/quemone.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kvemon</h1>
+		<a href="https://quemone.itch.io">quemone.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 230</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 695</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 954</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1312</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1740</p>
+		<p>Total ilScore: 131</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://quemone.itch.io/frog-feast">Frog feast</a></td>
+				<td><span class="early">1h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-182-horror">MJ 182: Horror</a></td>
+				<td>93</td>
+				<td>1</td>
+				<td>23</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://quemone.itch.io/toxic-blob-platformer">Toxic Blob Platformer</a></td>
+				<td><span class="early">9h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>39</td>
+				<td>15</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				212, 213, 214, 216, 217, 218, 224, 229,
+			]],
+			[ "5", [
+				650, 655, 667, 675, 685, 686, 687, 694,
+			]],
+			[ "10", [
+				905, 911, 923, 931, 944, 945, 946, 953,
+			]],
+			[ "20", [
+				1253, 1258, 1271, 1279, 1295, 1297, 1299, 1311,
+			]],
+			[ "ilscore", [
+				5465, 5622, 5635, 5640, 5724, 5788, 5807, 5813, 5815, 5932, 5932, 5936, 5942, 5949, 5960, 5987, 6009, 6059, 6074, 6080,
+				6089, 6197, 6291, 6342, 6363, 6520, 6548, 6602, 6645, 6719, 6727, 6804, 6863, 6875, 6986, 6999, 7035, 7043, 7210, 7224,
+				7227, 7230, 7231, 7238, 7244, 7274, 7352, 7442, 7482, 7501, 7555, 7606, 7649, 7716, 1628, 1648, 1664, 1679, 1700, 1707,
+				1724, 1739,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

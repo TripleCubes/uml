@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RandomVideos&#39;s jammer page</title>
+	<meta content="RandomVideos&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/randomvideos.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RandomVideos</h1>
+		<a href="https://randomvideos.itch.io">randomvideos.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1769</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2715</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 148</p>
+		<p>Total ilScore: 439</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/256-tiles">256 tiles</a></td>
+				<td><span class="early">8h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>8</td>
+				<td>12</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/the-third-dimension">The Third Dimension</a></td>
+				<td><span class="early">6h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>64</td>
+				<td>5</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/where-is-up">Where is up?</a></td>
+				<td><span class="early">12h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>80</td>
+				<td>12</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/dash-caos">Dash Caos</a></td>
+				<td><span class="early">9h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>96</td>
+				<td>5</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/small-islands">Small Islands</a></td>
+				<td><span class="early">5h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>46</td>
+				<td>8</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://fcolor04.itch.io/boss-beat">Boss Beat</a></td>
+				<td><span class="early">17m 48s early</span></td>
+				<td>
+					<a href="../jammer/fcolor04.html">Marcin Smoła (FColor04)</a>,
+					<a href="../jammer/lifesteal.html">Lifesteal</a>,
+					<a href="../jammer/falcons-downfall.html">Falcon&#39;s_Downfall</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>78</td>
+				<td>10</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/knockback-is-not-enough">Knockback Is Not Enough</a></td>
+				<td><span class="early">5h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>45</td>
+				<td>10</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/just-a-colored-room">Just a Colored Room</a></td>
+				<td><span class="early">7h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>37</td>
+				<td>8</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://randomvideos.itch.io/adjump">ADJump</a></td>
+				<td><span class="early">6h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>88</td>
+				<td>4</td>
+				<td>31</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1203, 1207, 1221, 1225, 1228, 1242, 1245, 1256, 1272, 1279, 1290, 1298, 1310, 1325, 1333, 1339, 1347, 1368, 1385, 1399,
+				1407, 1416, 1427, 1439, 1449, 1461, 1477, 1490, 1497, 1503, 1512, 1524, 1529, 1529, 1533, 1541, 1546, 1553, 1561, 1579,
+				1587, 1597, 1613, 1624, 1636, 1651, 1669, 1679, 1688, 1703, 1714, 1727, 1738, 1755, 1768,
+			]],
+			[ "20", [
+				1856, 1860, 1888, 1891, 1893, 1904, 1907, 1919, 1939, 1948, 1971, 1980, 1991, 2006, 2024, 2038, 2056, 2076, 2108, 2129,
+				2145, 2157, 2177, 2189, 2208, 2226, 2242, 2282, 2287, 2297, 2308, 2333, 2341, 2345, 2350, 2358, 2361, 2369, 2377, 2409,
+				2429, 2444, 2459, 2484, 2500, 2525, 2544, 2563, 2583, 2604, 2625, 2651, 2669, 2700, 2714,
+			]],
+			[ "ilscore", [
+				6395, 1657, 1657, 1661, 1667, 1675, 1713, 1734, 1748, 1026, 1039, 1048, 346, 355, 360, 249, 180, 136, 119, 124,
+				124, 126, 128, 131, 131, 111, 111, 113, 113, 113, 114, 114, 114, 114, 114, 114, 114, 114, 114, 114,
+				116, 116, 116, 117, 117, 117, 117, 117, 117, 118, 120, 120, 121, 122, 123, 123, 126, 126, 126, 126,
+				126, 127, 127, 129, 129, 134, 135, 135, 136, 137, 137, 138, 138, 138, 141, 143, 147, 147, 147, 147,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

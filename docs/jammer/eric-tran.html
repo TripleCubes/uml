@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Eric Tran&#39;s jammer page</title>
+	<meta content="Eric Tran&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/eric-tran.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Eric Tran</h1>
+		<a href="https://eric-tran.itch.io">eric-tran.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12263</p>
+		<p>Total ilScore: 25</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://eric-tran.itch.io/gthoi-get-the-hell-out-of-my-island">GTHOI (Get the hell out of my island)</a></td>
+				<td><span class="early">9h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>122</td>
+				<td>2</td>
+				<td>25</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				802, 900, 921, 987, 1029, 1109, 1167, 1286, 1326, 1373, 1376, 1386, 1453, 1497, 1652, 1770, 1774, 1815, 1921, 1969,
+				2018, 2074, 2155, 2200, 2277, 2328, 2503, 2563, 2651, 2742, 2855, 2905, 3061, 3168, 3223, 3270, 3357, 3488, 3639, 3725,
+				3864, 3947, 4046, 4112, 4173, 4276, 4369, 4402, 4473, 4513, 4562, 4644, 4733, 4950, 5070, 5180, 5203, 5323, 5401, 5503,
+				5757, 5820, 6010, 6102, 6279, 6648, 6728, 6828, 6831, 6877, 6900, 6930, 7078, 7201, 7297, 7332, 7428, 7452, 7626, 7711,
+				7765, 7809, 7895, 8000, 8049, 8235, 8257, 8286, 8391, 8480, 8522, 8547, 8557, 8705, 8709, 8733, 8771, 8800, 8828, 8872,
+				8927, 9002, 9031, 9058, 9093, 9224, 9350, 9427, 9467, 9642, 9697, 9791, 9859, 9957, 9982, 10075, 10164, 10189, 10323, 10359,
+				10412, 10433, 10624, 10665, 10680, 10712, 10742, 10783, 10810, 10867, 10957, 11073, 11140, 11189, 11261, 11332, 11402, 11489, 11559, 11644,
+				11721, 11810, 11986, 12054, 12181, 12262,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

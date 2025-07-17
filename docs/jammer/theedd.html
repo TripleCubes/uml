@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TheEdd&#39;s jammer page</title>
+	<meta content="TheEdd&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/theedd.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TheEdd</h1>
+		<a href="https://theedd.itch.io">theedd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3011</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7707</p>
+		<p>Total ilScore: 57</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://theedd.itch.io/all-of-me">All Of Me</a></td>
+				<td><span class="early">3h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>18</td>
+				<td>8</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1202, 1218, 1237, 1252, 1276, 1292, 1305, 1320, 1338, 1363, 1389, 1402, 1408, 1429, 1442, 1458, 1477, 1498, 1513, 1532,
+				1550, 1572, 1593, 1616, 1619, 1634, 1643, 1664, 1682, 1702, 1716, 1730, 1752, 1759, 1777, 1807, 1824, 1844, 1860, 1882,
+				1897, 1923, 1935, 1944, 1969, 1990, 2003, 2015, 2022, 2050, 2052, 2056, 2069, 2075, 2086, 2110, 2123, 2147, 2161, 2177,
+				2194, 2212, 2224, 2242, 2268, 2300, 2323, 2344, 2361, 2381, 2397, 2414, 2431, 2452, 2492, 2498, 2516, 2526, 2551, 2562,
+				2566, 2581, 2591, 2597, 2610, 2625, 2657, 2677, 2702, 2723, 2747, 2771, 2796, 2826, 2844, 2863, 2890, 2911, 2937, 2958,
+				2990, 3010,
+			]],
+			[ "ilscore", [
+				2374, 2430, 2500, 2502, 2560, 2571, 2581, 2624, 2684, 2870, 2969, 3048, 3054, 3153, 3196, 3285, 3508, 3552, 3714, 3792,
+				3925, 4239, 4303, 4363, 4363, 4378, 4383, 4389, 4497, 4587, 4621, 4633, 4698, 4701, 4838, 4902, 4920, 4945, 5016, 5095,
+				5116, 5273, 5283, 5288, 5363, 5424, 5441, 5449, 5452, 5565, 5565, 5568, 5573, 5578, 5589, 5611, 5628, 5671, 5678, 5687,
+				5693, 5792, 5883, 5924, 5937, 6093, 6120, 6172, 6207, 6275, 6280, 6356, 6410, 6423, 6524, 6535, 6564, 6569, 6732, 6742,
+				6746, 6749, 6751, 6758, 6767, 6786, 6862, 6951, 6985, 7001, 7051, 7099, 7133, 7196, 7234, 7304, 7362, 7423, 7542, 7567,
+				7661, 7706,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

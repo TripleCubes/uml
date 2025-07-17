@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nocity&#39;s jammer page</title>
+	<meta content="Nocity&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nocity.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nocity</h1>
+		<a href="https://nocity.itch.io">nocity.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2745</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4575</p>
+		<p>Total ilScore: 78</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nocity.itch.io/turtle-island-defense">Turtle Island Defense</a></td>
+				<td><span class="late">5h 51m late</span></td>
+				<td>
+					<a href="../jammer/quweert.html">quweert</a>,
+					<a href="../jammer/farbeyond-studio.html">FarBeyond Studio</a>,
+					<a href="../jammer/haiyoooo.html">Haiyoooo | Artist</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>17</td>
+				<td>9</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				324, 355, 363, 376, 384, 401, 419, 441, 453, 474, 481, 488, 515, 534, 562, 591, 597, 610, 634, 649,
+				658, 684, 707, 718, 732, 748, 773, 792, 811, 829, 845, 854, 875, 888, 904, 915, 937, 957, 982, 999,
+				1024, 1036, 1062, 1080, 1096, 1113, 1132, 1140, 1164, 1177, 1185, 1199, 1217, 1243, 1272, 1285, 1291, 1312, 1325, 1341,
+				1360, 1379, 1394, 1413, 1431, 1453, 1474, 1497, 1499, 1513, 1522, 1534, 1552, 1572, 1585, 1596, 1618, 1622, 1640, 1670,
+				1687, 1702, 1719, 1741, 1756, 1782, 1792, 1796, 1823, 1845, 1855, 1863, 1867, 1895, 1898, 1901, 1913, 1916, 1928, 1950,
+				1961, 1985, 1994, 2006, 2021, 2039, 2053, 2071, 2091, 2123, 2144, 2161, 2173, 2193, 2205, 2224, 2241, 2259, 2299, 2304,
+				2316, 2327, 2352, 2360, 2364, 2370, 2378, 2384, 2392, 2400, 2432, 2452, 2473, 2488, 2512, 2528, 2553, 2573, 2592, 2611,
+				2632, 2653, 2679, 2697, 2729, 2744,
+			]],
+			[ "ilscore", [
+				121, 160, 161, 169, 179, 194, 209, 224, 242, 249, 251, 255, 259, 265, 342, 391, 392, 401, 422, 434,
+				443, 451, 479, 491, 510, 526, 636, 651, 666, 712, 754, 764, 877, 942, 952, 960, 990, 1065, 1147, 1163,
+				1223, 1237, 1269, 1282, 1289, 1325, 1356, 1364, 1378, 1389, 1396, 1417, 1447, 1612, 1689, 1733, 1740, 1787, 1812, 1851,
+				2039, 2050, 2165, 2215, 2322, 2583, 2602, 2622, 2623, 2627, 2635, 2640, 2724, 2774, 2794, 2805, 2837, 2840, 2951, 2991,
+				3000, 3017, 3047, 3090, 3104, 3226, 3238, 3241, 3278, 3309, 3321, 3327, 3330, 3390, 3394, 3399, 3406, 3410, 3419, 3427,
+				3436, 3443, 3454, 3466, 3473, 3529, 3564, 3588, 3594, 3719, 3732, 3751, 3765, 3793, 3802, 3838, 3872, 3884, 3942, 3953,
+				3967, 3973, 4085, 4092, 4096, 4099, 4103, 4109, 4119, 4132, 4159, 4215, 4224, 4238, 4254, 4271, 4282, 4301, 4313, 4355,
+				4391, 4415, 4496, 4510, 4552, 4574,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

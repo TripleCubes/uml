@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Happy Havok&#39;s jammer page</title>
+	<meta content="Happy Havok&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/happyhavok.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Happy Havok</h1>
+		<a href="https://happyhavok.itch.io">happyhavok.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2901</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7570</p>
+		<p>Total ilScore: 58</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://happyhavok.itch.io/bright">BRIGHT</a></td>
+				<td><span class="late">18m 17s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>15</td>
+				<td>11</td>
+				<td>58</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1159, 1175, 1194, 1208, 1232, 1248, 1259, 1274, 1292, 1317, 1343, 1356, 1361, 1382, 1395, 1411, 1430, 1451, 1466, 1485,
+				1503, 1525, 1546, 1569, 1571, 1586, 1595, 1612, 1630, 1650, 1664, 1676, 1698, 1701, 1719, 1749, 1766, 1781, 1797, 1819,
+				1834, 1860, 1870, 1876, 1903, 1925, 1938, 1948, 1955, 1983, 1984, 1987, 1999, 2004, 2016, 2038, 2053, 2077, 2091, 2104,
+				2121, 2139, 2152, 2170, 2195, 2227, 2250, 2271, 2285, 2305, 2316, 2335, 2352, 2369, 2409, 2415, 2431, 2443, 2468, 2479,
+				2483, 2492, 2501, 2507, 2516, 2527, 2559, 2579, 2604, 2623, 2647, 2666, 2690, 2719, 2738, 2757, 2784, 2805, 2831, 2851,
+				2883, 2900,
+			]],
+			[ "ilscore", [
+				2325, 2382, 2452, 2454, 2512, 2523, 2533, 2577, 2637, 2821, 2917, 2994, 3000, 3096, 3137, 3224, 3448, 3491, 3651, 3725,
+				3856, 4169, 4234, 4292, 4292, 4305, 4311, 4316, 4425, 4515, 4547, 4560, 4623, 4625, 4760, 4823, 4841, 4866, 4935, 5012,
+				5034, 5189, 5199, 5204, 5275, 5335, 5353, 5361, 5364, 5475, 5475, 5478, 5483, 5488, 5497, 5519, 5533, 5575, 5581, 5590,
+				5597, 5696, 5786, 5823, 5836, 5988, 6015, 6067, 6102, 6164, 6169, 6243, 6298, 6308, 6409, 6420, 6445, 6450, 6608, 6617,
+				6621, 6624, 6626, 6632, 6641, 6661, 6736, 6824, 6857, 6873, 6920, 6962, 6995, 7057, 7094, 7163, 7220, 7280, 7403, 7427,
+				7523, 7569,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

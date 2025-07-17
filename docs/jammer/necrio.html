@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>necrio&#39;s jammer page</title>
+	<meta content="necrio&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/necrio.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>necrio</h1>
+		<a href="https://necrio.itch.io">necrio.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 13022</p>
+		<p>Total ilScore: 0</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://necrio.itch.io/hiro-nashi">Hiro Nashi!</a></td>
+				<td><span class="late">12h 27m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-13-villains-">MJ 13: Villains</a></td>
+				<td>23</td>
+				<td>&#x1F984;</td>
+				<td>5</td>
+				<td>&#x1F959;</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				158, 183, 200, 206, 210, 238, 257, 274, 282, 288, 350, 391, 431, 446, 463, 492, 511, 534, 549, 573,
+				618, 634, 643, 674, 679, 697, 717, 741, 763, 782, 795, 817, 860, 892, 932, 955, 964, 1080, 1182, 1207,
+				1272, 1313, 1397, 1456, 1576, 1616, 1665, 1677, 1688, 1758, 1807, 1969, 2086, 2092, 2136, 2242, 2289, 2338, 2394, 2486,
+				2537, 2613, 2671, 2846, 2909, 3002, 3094, 3219, 3269, 3424, 3533, 3591, 3639, 3729, 3862, 4013, 4101, 4240, 4327, 4424,
+				4491, 4555, 4665, 4759, 4793, 4865, 4905, 4957, 5041, 5130, 5347, 5467, 5583, 5619, 5742, 5824, 5929, 6184, 6249, 6438,
+				6535, 6716, 7089, 7169, 7272, 7282, 7333, 7357, 7388, 7541, 7674, 7770, 7806, 7911, 7942, 8115, 8201, 8256, 8307, 8392,
+				8504, 8554, 8742, 8769, 8799, 8908, 8999, 9042, 9070, 9089, 9238, 9249, 9277, 9318, 9347, 9377, 9424, 9483, 9566, 9602,
+				9632, 9673, 9820, 9942, 10020, 10066, 10249, 10311, 10411, 10480, 10577, 10612, 10716, 10806, 10838, 10975, 11011, 11065, 11091, 11287,
+				11335, 11357, 11398, 11430, 11482, 11511, 11568, 11668, 11787, 11859, 11911, 11983, 12053, 12128, 12219, 12290, 12376, 12456, 12548, 12731,
+				12808, 12936, 13021,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

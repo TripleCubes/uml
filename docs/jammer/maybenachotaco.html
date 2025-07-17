@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nacho&#39;s jammer page</title>
+	<meta content="Nacho&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/maybenachotaco.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nacho</h1>
+		<a href="https://maybenachotaco.itch.io">maybenachotaco.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4187</p>
+		<p>Total ilScore: 81</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://maybenachotaco.itch.io/lava-fisher">Lava Fisher</a></td>
+				<td><span class="early">1h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>147</td>
+				<td>8</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://maybenachotaco.itch.io/dont-let-it-die">Don&#39;t Let It Die</a></td>
+				<td><span class="early">1d 0h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>97</td>
+				<td>97</td>
+				<td>5</td>
+				<td>24</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				7339, 7374, 7470, 7494, 7669, 7754, 7808, 7853, 7939, 8044, 8093, 8279, 8301, 8331, 8436, 8525, 8567, 8593, 8603, 8751,
+				8756, 8780, 8818, 8848, 8877, 8921, 8977, 9052, 9083, 9110, 9146, 9278, 9404, 9480, 9520, 3394, 3410, 3428, 3442, 3470,
+				3480, 3511, 3537, 3548, 3600, 3610, 3626, 3632, 3735, 3741, 3745, 3749, 3753, 3761, 3770, 3783, 3809, 3860, 3871, 3885,
+				3903, 3918, 3930, 3947, 3960, 3989, 4015, 4040, 4118, 4131, 4165, 4186,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

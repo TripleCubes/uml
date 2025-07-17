@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SunshineTurtle&#39;s jammer page</title>
+	<meta content="SunshineTurtle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sunshineturtle.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SunshineTurtle</h1>
+		<a href="https://sunshineturtle.itch.io">sunshineturtle.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9927</p>
+		<p>Total ilScore: 43</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sunshineturtle.itch.io/happy-faces">happy faces</a></td>
+				<td><span class="early">1h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-57-underground">MJ 57: Underground</a></td>
+				<td>49</td>
+				<td>25</td>
+				<td>6</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				798, 831, 833, 837, 885, 913, 1057, 1161, 1163, 1189, 1281, 1313, 1346, 1389, 1455, 1488, 1558, 1595, 1766, 1809,
+				1879, 1956, 2058, 2091, 2251, 2348, 2387, 2422, 2501, 2623, 2764, 2830, 2947, 3019, 3109, 3153, 3202, 3278, 3360, 3375,
+				3441, 3467, 3497, 3564, 3639, 3836, 3949, 4042, 4050, 4159, 4223, 4327, 4569, 4621, 4800, 4880, 5035, 5384, 5452, 5529,
+				5529, 5557, 5562, 5582, 5704, 5813, 5877, 5898, 5987, 5998, 6151, 6226, 6265, 6298, 6377, 6466, 6503, 6677, 6694, 6707,
+				6796, 6869, 6901, 6908, 6909, 7043, 7044, 7050, 7066, 7082, 7094, 7137, 7173, 7236, 7260, 7274, 7294, 7407, 7526, 7592,
+				7627, 7790, 7829, 7910, 7966, 8056, 8072, 8155, 8225, 8241, 8366, 8388, 8434, 8445, 8629, 8655, 8655, 8669, 8675, 8699,
+				8708, 8751, 8835, 8932, 8978, 9014, 9081, 9145, 9205, 9284, 9331, 9406, 9476, 9550, 9694, 9746, 9856, 9926,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

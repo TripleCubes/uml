@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>elysium.music&#39;s jammer page</title>
+	<meta content="elysium.music&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/elysiummusic.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>elysium.music</h1>
+		<a href="https://elysiummusic.itch.io">elysiummusic.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12468</p>
+		<p>Total ilScore: 22</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yusyus.itch.io/shattered-mind">Shattered Mind</a></td>
+				<td><span class="early">1h early</span></td>
+				<td>
+					<a href="../jammer/yusyus.html">yusyus</a>,
+					<a href="../jammer/signo.html">Signo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-18-dreams">MJ 18: Dreams</a></td>
+				<td>30</td>
+				<td>26</td>
+				<td>6</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				158, 170, 182, 184, 187, 245, 286, 322, 331, 339, 356, 370, 396, 402, 423, 460, 474, 477, 503, 503,
+				515, 529, 553, 568, 586, 591, 608, 651, 683, 722, 741, 747, 862, 962, 984, 1051, 1092, 1174, 1233, 1353,
+				1393, 1440, 1447, 1458, 1527, 1574, 1730, 1847, 1851, 1894, 2000, 2047, 2096, 2152, 2235, 2281, 2358, 2410, 2585, 2645,
+				2732, 2824, 2939, 2990, 3145, 3253, 3309, 3356, 3443, 3575, 3726, 3812, 3951, 4035, 4132, 4198, 4258, 4363, 4458, 4491,
+				4562, 4602, 4653, 4736, 4825, 5043, 5163, 5274, 5299, 5419, 5499, 5602, 5857, 5921, 6110, 6203, 6383, 6753, 6833, 6933,
+				6938, 6984, 7007, 7037, 7186, 7310, 7407, 7443, 7542, 7569, 7742, 7828, 7882, 7930, 8016, 8124, 8173, 8360, 8383, 8413,
+				8518, 8606, 8648, 8675, 8689, 8837, 8842, 8867, 8905, 8935, 8964, 9008, 9064, 9144, 9177, 9205, 9243, 9378, 9504, 9582,
+				9622, 9801, 9857, 9952, 10021, 10118, 10146, 10246, 10334, 10359, 10493, 10530, 10583, 10605, 10799, 10842, 10859, 10894, 10925, 10970,
+				10995, 11052, 11147, 11264, 11333, 11383, 11455, 11526, 11596, 11683, 11754, 11839, 11918, 12008, 12187, 12260, 12386, 12467,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

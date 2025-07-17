@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Adam&#39;s jammer page</title>
+	<meta content="Adam&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/adamhdev.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Adam</h1>
+		<a href="https://adamhdev.itch.io">adamhdev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10137</p>
+		<p>Total ilScore: 42</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://adamhdev.itch.io/my-game-for-retro-jam">my game for retro jam :D</a></td>
+				<td><span class="early">2d 8h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>40</td>
+				<td>11</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://adamhdev.itch.io/easy-pizi">The most easiest game ever :/</a></td>
+				<td><span class="early">2d 12h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-57-underground">MJ 57: Underground</a></td>
+				<td>49</td>
+				<td>inf</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1641, 1690, 1702, 1713, 1783, 1832, 1994, 2111, 2117, 2161, 2267, 2314, 2363, 1445, 1514, 1547, 1617, 1655, 1827, 1873,
+				1944, 2021, 2124, 2162, 2322, 2419, 2460, 2496, 2576, 2699, 2843, 2910, 3028, 3102, 3194, 3238, 3289, 3366, 3450, 3465,
+				3536, 3563, 3594, 3663, 3740, 3941, 4056, 4152, 4160, 4270, 4336, 4440, 4684, 4736, 4914, 4994, 5154, 5501, 5570, 5648,
+				5648, 5678, 5683, 5703, 5828, 5939, 6008, 6033, 6124, 6136, 6290, 6366, 6405, 6440, 6521, 6612, 6651, 6825, 6838, 6853,
+				6947, 7023, 7055, 7061, 7062, 7196, 7197, 7204, 7221, 7236, 7251, 7294, 7330, 7393, 7418, 7433, 7454, 7570, 7690, 7757,
+				7793, 7959, 7998, 8081, 8138, 8232, 8251, 8334, 8406, 8423, 8548, 8570, 8621, 8632, 8815, 8846, 8846, 8860, 8867, 8892,
+				8902, 8946, 9032, 9131, 9179, 9214, 9281, 9346, 9406, 9485, 9534, 9612, 9683, 9759, 9904, 9956, 10066, 10136,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Clickan Seventh&#39;s jammer page</title>
+	<meta content="Clickan Seventh&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/clickyseventh.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Clickan Seventh</h1>
+		<a href="https://clickyseventh.itch.io">clickyseventh.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2306</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4734</p>
+		<p>Total ilScore: 77</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://clickyseventh.itch.io/what-remains-of-kyle">What Remains of Kyle</a></td>
+				<td><span class="late">1d 9h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>14</td>
+				<td>10</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				928, 937, 952, 961, 969, 981, 992, 1018, 1047, 1060, 1065, 1086, 1100, 1114, 1133, 1149, 1165, 1184, 1203, 1225,
+				1246, 1266, 1267, 1281, 1290, 1302, 1320, 1338, 1351, 1359, 1382, 1387, 1406, 1436, 1447, 1459, 1476, 1492, 1506, 1532,
+				1536, 1539, 1564, 1586, 1592, 1596, 1601, 1629, 1631, 1633, 1638, 1641, 1652, 1668, 1676, 1693, 1699, 1711, 1722, 1741,
+				1754, 1767, 1787, 1820, 1830, 1837, 1845, 1860, 1867, 1887, 1899, 1908, 1948, 1952, 1963, 1972, 1997, 2003, 2007, 2010,
+				2015, 2018, 2028, 2036, 2058, 2078, 2090, 2106, 2129, 2144, 2163, 2174, 2184, 2204, 2223, 2244, 2270, 2276, 2294, 2305,
+			]],
+			[ "ilscore", [
+				1414, 1421, 1437, 1448, 1454, 1476, 1508, 1672, 1748, 1794, 1801, 1850, 1875, 1916, 2103, 2116, 2231, 2280, 2391, 2657,
+				2677, 2697, 2698, 2701, 2709, 2713, 2800, 2852, 2872, 2883, 2917, 2920, 3031, 3075, 3086, 3106, 3143, 3188, 3201, 3328,
+				3340, 3343, 3381, 3417, 3433, 3439, 3440, 3503, 3507, 3512, 3519, 3524, 3533, 3541, 3550, 3555, 3566, 3578, 3585, 3642,
+				3677, 3700, 3706, 3835, 3848, 3867, 3883, 3914, 3924, 3962, 3998, 4010, 4067, 4079, 4093, 4099, 4217, 4224, 4228, 4232,
+				4235, 4240, 4250, 4264, 4291, 4354, 4364, 4377, 4393, 4410, 4421, 4445, 4457, 4501, 4539, 4568, 4648, 4661, 4709, 4733,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

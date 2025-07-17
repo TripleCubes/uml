@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DoogleGames&#39;s jammer page</title>
+	<meta content="DoogleGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dooglegames.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DoogleGames</h1>
+		<a href="https://dooglegames.itch.io">dooglegames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7933</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://shinyadmiral.itch.io/beatbox-bur">Beatbox Burglar</a></td>
+				<td><span class="early">33m 23s early</span></td>
+				<td>
+					<a href="../jammer/shinyadmiral.html">shinyadmiral</a>,
+					<a href="../jammer/msl-music.html">MSL_Music</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>34</td>
+				<td>6</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				457, 535, 548, 564, 571, 576, 608, 617, 740, 842, 844, 855, 936, 955, 971, 999, 1059, 1071, 1130, 1154,
+				1299, 1331, 1382, 1460, 1553, 1569, 1710, 1798, 1818, 1835, 1901, 2015, 2140, 2184, 2288, 2339, 2411, 2442, 2473, 2531,
+				2602, 2605, 2661, 2675, 2685, 2732, 2792, 2977, 3078, 3159, 3167, 3264, 3309, 3400, 3623, 3667, 3830, 3909, 4043, 4364,
+				4429, 4489, 4489, 4504, 4508, 4515, 4624, 4714, 4754, 4766, 4833, 4836, 4973, 5039, 5060, 5088, 5163, 5246, 5269, 5424,
+				5434, 5439, 5518, 5577, 5594, 5602, 5605, 5720, 5720, 5723, 5728, 5734, 5744, 5767, 5784, 5828, 5837, 5844, 5850, 5957,
+				6047, 6093, 6105, 6262, 6291, 6345, 6384, 6453, 6458, 6535, 6593, 6605, 6714, 6724, 6753, 6760, 6924, 6936, 6940, 6943,
+				6944, 6951, 6960, 6985, 7061, 7149, 7184, 7201, 7252, 7301, 7336, 7399, 7438, 7508, 7568, 7630, 7756, 7785, 7885, 7932,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

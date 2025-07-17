@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ran d&#39;Reille&#39;s jammer page</title>
+	<meta content="Ran d&#39;Reille&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ran-dreille.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ran d&#39;Reille</h1>
+		<a href="https://ran-dreille.itch.io">ran-dreille.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2942</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7972</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ran-dreille.itch.io/catastrophe-in-wonderful-heaven">Catastrophe in Wonderful Heaven</a></td>
+				<td><span class="early">16h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>14</td>
+				<td>13</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				776, 790, 806, 831, 851, 870, 887, 911, 924, 944, 957, 968, 982, 1004, 1024, 1049, 1069, 1094, 1113, 1139,
+				1157, 1176, 1192, 1211, 1226, 1250, 1266, 1278, 1293, 1311, 1336, 1362, 1375, 1380, 1401, 1414, 1430, 1449, 1470, 1485,
+				1504, 1522, 1544, 1565, 1588, 1591, 1606, 1615, 1632, 1650, 1670, 1684, 1697, 1719, 1726, 1744, 1774, 1791, 1807, 1823,
+				1845, 1860, 1886, 1898, 1904, 1931, 1952, 1965, 1975, 1982, 2010, 2011, 2015, 2027, 2032, 2044, 2065, 2080, 2104, 2118,
+				2133, 2150, 2168, 2181, 2199, 2224, 2256, 2279, 2300, 2314, 2334, 2348, 2367, 2384, 2401, 2441, 2447, 2465, 2476, 2501,
+				2512, 2516, 2526, 2536, 2542, 2552, 2563, 2595, 2615, 2640, 2661, 2685, 2703, 2728, 2758, 2776, 2795, 2822, 2843, 2869,
+				2889, 2921, 2941,
+			]],
+			[ "ilscore", [
+				1076, 1137, 1161, 1309, 1342, 1393, 1471, 1566, 1583, 1725, 1812, 1832, 1849, 1915, 2029, 2154, 2198, 2302, 2353, 2425,
+				2456, 2487, 2546, 2617, 2620, 2676, 2690, 2700, 2749, 2809, 2994, 3095, 3176, 3184, 3281, 3326, 3417, 3640, 3684, 3847,
+				3926, 4060, 4381, 4446, 4507, 4507, 4522, 4526, 4533, 4642, 4731, 4771, 4783, 4850, 4853, 4990, 5056, 5077, 5105, 5180,
+				5264, 5287, 5443, 5453, 5458, 5537, 5596, 5613, 5621, 5624, 5739, 5739, 5742, 5747, 5753, 5763, 5786, 5804, 5849, 5858,
+				5866, 5872, 5979, 6070, 6118, 6138, 6295, 6324, 6378, 6417, 6486, 6491, 6568, 6626, 6638, 6747, 6757, 6786, 6793, 6957,
+				6969, 6973, 6976, 6977, 6984, 6993, 7018, 7094, 7182, 7220, 7237, 7288, 7338, 7374, 7438, 7477, 7548, 7608, 7670, 7796,
+				7824, 7924, 7971,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

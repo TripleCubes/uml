@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LellyLL&#39;s jammer page</title>
+	<meta content="LellyLL&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lellyll.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LellyLL</h1>
+		<a href="https://lellyll.itch.io">lellyll.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7703</p>
+		<p>Total ilScore: 57</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lellyll.itch.io/wateroo">Wateroo</a></td>
+				<td><span class="late">10h 22m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>48</td>
+				<td>10</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3194, 3283, 3506, 3550, 3712, 3790, 3923, 4237, 4301, 4361, 4361, 4376, 4381, 4387, 4495, 4585, 4619, 4631, 4696, 4699,
+				4836, 4900, 4918, 4943, 5014, 5093, 5114, 5271, 5281, 5286, 5361, 5422, 5439, 5447, 5450, 5563, 5563, 5566, 5571, 5576,
+				5587, 5609, 5626, 5669, 5676, 5685, 5691, 5790, 5881, 5922, 5935, 6090, 6117, 6169, 6204, 6272, 6277, 6353, 6407, 6420,
+				6521, 6532, 6561, 6566, 6729, 6739, 6743, 6746, 6748, 6755, 6764, 6783, 6859, 6948, 6982, 6998, 7048, 7096, 7130, 7193,
+				7230, 7300, 7358, 7419, 7538, 7563, 7657, 7702,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

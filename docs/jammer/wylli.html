@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Wylli&#39;s jammer page</title>
+	<meta content="Wylli&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/wylli.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Wylli</h1>
+		<a href="https://wylli.itch.io">wylli.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2546</p>
+		<p>Total ilScore: 103</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://wylli.itch.io/stingy-jack">Stingy Jack</a></td>
+				<td><span class="early">11m 20s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>46</td>
+				<td>8</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://inkandamaranth.itch.io/pareidolia">Pareidolia</a></td>
+				<td><span class="early">3h 16m early</span></td>
+				<td>
+					<a href="../jammer/inkandamaranth.html">InkAndAmaranth</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>72</td>
+				<td>12</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2045, 2161, 2290, 2337, 2446, 2498, 2569, 634, 638, 661, 678, 687, 698, 708, 713, 727, 747, 826, 863, 877,
+				883, 908, 929, 952, 1061, 1077, 1116, 1145, 1196, 1386, 1404, 1420, 1420, 1424, 1431, 1440, 1471, 1488, 1504, 1519,
+				1535, 1542, 1584, 1608, 1626, 1642, 1660, 1683, 1692, 1741, 1755, 1762, 1778, 1805, 1819, 1819, 1824, 1843, 1843, 1846,
+				1854, 1857, 1862, 1872, 1880, 1886, 1894, 1899, 1911, 1923, 1944, 1965, 1974, 2022, 2048, 2067, 2080, 2090, 2099, 2114,
+				2137, 2144, 2161, 2163, 2179, 2181, 2221, 2227, 2235, 2242, 2245, 2253, 2257, 2264, 2282, 2312, 2327, 2338, 2353, 2368,
+				2379, 2386, 2399, 2423, 2445, 2467, 2488, 2502, 2525, 2545,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

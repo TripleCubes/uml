@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Jano Manzali&#39;s jammer page</title>
+	<meta content="Jano Manzali&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jano-manzali.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Jano Manzali</h1>
+		<a href="https://jano-manzali.itch.io">jano-manzali.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3451</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9984</p>
+		<p>Total ilScore: 43</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cheekhoove.itch.io/auspicium">Auspicium</a></td>
+				<td><span class="late">13h 32m late</span></td>
+				<td>
+					<a href="../jammer/cheekhoove.html">Chance</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>19</td>
+				<td>10</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2022, 2040, 2067, 2083, 2103, 2118, 2140, 2154, 2180, 2200, 2219, 2244, 2265, 2284, 2307, 2315, 2343, 2347, 2361, 2386,
+				2404, 2426, 2447, 2471, 2494, 2514, 2530, 2552, 2570, 2582, 2600, 2629, 2661, 2683, 2703, 2724, 2744, 2765, 2780, 2797,
+				2820, 2860, 2874, 2889, 2903, 2928, 2942, 2950, 2974, 2996, 3018, 3040, 3057, 3088, 3108, 3132, 3161, 3185, 3211, 3235,
+				3265, 3283, 3302, 3329, 3348, 3374, 3399, 3431, 3450,
+			]],
+			[ "ilscore", [
+				6039, 6192, 6267, 6306, 6341, 6421, 6510, 6547, 6721, 6735, 6748, 6840, 6914, 6946, 6953, 6954, 7089, 7090, 7096, 7113,
+				7129, 7141, 7184, 7220, 7283, 7307, 7321, 7341, 7456, 7575, 7641, 7676, 7839, 7878, 7959, 8015, 8105, 8124, 8207, 8277,
+				8293, 8418, 8440, 8486, 8498, 8681, 8707, 8707, 8721, 8727, 8751, 8760, 8803, 8887, 8984, 9030, 9067, 9134, 9198, 9258,
+				9338, 9385, 9463, 9533, 9607, 9751, 9803, 9913, 9983,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

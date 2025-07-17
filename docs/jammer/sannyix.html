@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Sannyix&#39;s jammer page</title>
+	<meta content="Sannyix&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sannyix.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Sannyix</h1>
+		<a href="https://sannyix.itch.io">sannyix.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2476</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4708</p>
+		<p>Total ilScore: 77</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sannyix.itch.io/dangerous-cave-of-danger">Dangerous Cave of Danger</a></td>
+				<td><span class="early">2m 5s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>17</td>
+				<td>11</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1088, 1114, 1143, 1156, 1161, 1182, 1196, 1212, 1231, 1250, 1265, 1284, 1303, 1325, 1346, 1369, 1370, 1384, 1393, 1405,
+				1423, 1443, 1456, 1464, 1487, 1492, 1510, 1540, 1553, 1565, 1582, 1600, 1615, 1641, 1646, 1649, 1677, 1699, 1707, 1713,
+				1717, 1745, 1747, 1749, 1754, 1757, 1768, 1786, 1795, 1814, 1823, 1835, 1848, 1866, 1880, 1895, 1915, 1947, 1962, 1970,
+				1979, 1998, 2009, 2028, 2040, 2049, 2089, 2093, 2104, 2115, 2140, 2146, 2150, 2153, 2162, 2165, 2173, 2181, 2205, 2225,
+				2238, 2253, 2276, 2292, 2315, 2333, 2343, 2363, 2384, 2405, 2431, 2440, 2460, 2475,
+			]],
+			[ "ilscore", [
+				1495, 1660, 1736, 1781, 1788, 1837, 1862, 1903, 2091, 2104, 2219, 2268, 2379, 2642, 2662, 2682, 2683, 2686, 2694, 2699,
+				2785, 2838, 2858, 2869, 2903, 2906, 3017, 3061, 3072, 3092, 3127, 3172, 3185, 3312, 3324, 3327, 3364, 3398, 3410, 3416,
+				3417, 3479, 3483, 3488, 3495, 3500, 3509, 3517, 3526, 3531, 3542, 3554, 3561, 3618, 3652, 3676, 3682, 3811, 3824, 3843,
+				3859, 3889, 3899, 3937, 3972, 3984, 4044, 4055, 4069, 4075, 4193, 4200, 4204, 4208, 4211, 4216, 4226, 4240, 4267, 4330,
+				4340, 4353, 4369, 4386, 4397, 4421, 4433, 4475, 4513, 4542, 4622, 4635, 4683, 4707,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Some French Devs&#39;s jammer page</title>
+	<meta content="Some French Devs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/some-french-devs.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Some French Devs</h1>
+		<a href="https://some-french-devs.itch.io">some-french-devs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3427</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10396</p>
+		<p>Total ilScore: 40</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://some-french-devs.itch.io/another-tower-defense">Another Tower Defense</a></td>
+				<td><span class="early">4h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>20</td>
+				<td>8</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2292, 2300, 2328, 2332, 2344, 2369, 2387, 2407, 2428, 2452, 2475, 2495, 2511, 2533, 2551, 2563, 2581, 2610, 2642, 2664,
+				2684, 2705, 2725, 2745, 2760, 2777, 2800, 2840, 2854, 2869, 2883, 2908, 2922, 2929, 2952, 2974, 2996, 3016, 3033, 3064,
+				3084, 3108, 3137, 3161, 3187, 3211, 3241, 3259, 3278, 3305, 3324, 3350, 3375, 3407, 3426,
+			]],
+			[ "ilscore", [
+				7233, 7237, 7377, 7378, 7385, 7402, 7420, 7435, 7478, 7515, 7579, 7604, 7619, 7642, 7760, 7886, 7955, 7991, 8157, 8200,
+				8282, 8340, 8434, 8454, 8539, 8611, 8632, 8760, 8783, 8833, 8846, 9030, 9063, 9064, 9085, 9093, 9121, 9139, 9180, 9265,
+				9365, 9418, 9458, 9526, 9592, 9653, 9734, 9788, 9867, 9937, 10014, 10162, 10214, 10326, 10395,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

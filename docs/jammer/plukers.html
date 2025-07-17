@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Plukers&#39;s jammer page</title>
+	<meta content="Plukers&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/plukers.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Plukers</h1>
+		<a href="https://plukers.itch.io">plukers.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11107</p>
+		<p>Total ilScore: 36</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://plukers.itch.io/fishfists">Fishfists</a></td>
+				<td><span class="early">4h 57m early</span></td>
+				<td>
+					<a href="../jammer/joschi1212.html">Joschi</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-33-underwater">MJ 33: Underwater</a></td>
+				<td>46</td>
+				<td>24</td>
+				<td>13</td>
+				<td>36</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				284, 286, 286, 305, 306, 309, 317, 332, 337, 344, 345, 348, 375, 398, 435, 446, 446, 554, 642, 649,
+				712, 754, 823, 875, 991, 1026, 1062, 1063, 1067, 1127, 1167, 1318, 1426, 1428, 1462, 1563, 1603, 1650, 1697, 1767,
+				1804, 1877, 1924, 2098, 2150, 2227, 2317, 2425, 2471, 2630, 2728, 2774, 2817, 2898, 3027, 3173, 3250, 3379, 3456, 3554,
+				3607, 3662, 3751, 3834, 3859, 3934, 3968, 4013, 4089, 4172, 4385, 4501, 4600, 4618, 4737, 4811, 4913, 5162, 5217, 5402,
+				5483, 5651, 6010, 6083, 6171, 6172, 6212, 6224, 6244, 6381, 6500, 6577, 6605, 6694, 6710, 6873, 6954, 7005, 7048, 7133,
+				7230, 7272, 7454, 7471, 7492, 7593, 7676, 7711, 7730, 7734, 7880, 7881, 7896, 7923, 7943, 7964, 8008, 8048, 8117, 8143,
+				8160, 8187, 8310, 8433, 8509, 8547, 8711, 8763, 8849, 8914, 9010, 9033, 9121, 9198, 9221, 9354, 9378, 9429, 9442, 9633,
+				9668, 9676, 9698, 9718, 9748, 9770, 9818, 9905, 10007, 10063, 10106, 10178, 10248, 10311, 10390, 10444, 10526, 10604, 10685, 10850,
+				10911, 11031, 11106,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

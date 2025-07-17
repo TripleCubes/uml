@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>foxmoss&#39;s jammer page</title>
+	<meta content="foxmoss&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/foxmoss.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>foxmoss</h1>
+		<a href="https://foxmoss.itch.io">foxmoss.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8914</p>
+		<p>Total ilScore: 49</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://foxmoss.itch.io/face-game-thingy">Face game thingy</a></td>
+				<td><span class="early">9h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>51</td>
+				<td>12</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				426, 446, 501, 545, 640, 651, 677, 679, 685, 724, 747, 882, 982, 984, 1000, 1089, 1111, 1136, 1172, 1229,
+				1257, 1325, 1357, 1516, 1558, 1617, 1691, 1790, 1819, 1970, 2064, 2098, 2122, 2191, 2311, 2441, 2498, 2610, 2666, 2745,
+				2785, 2825, 2896, 2968, 2974, 3037, 3052, 3077, 3134, 3201, 3393, 3495, 3582, 3588, 3694, 3754, 3851, 4083, 4131, 4296,
+				4373, 4516, 4851, 4918, 4986, 4986, 5006, 5011, 5022, 5137, 5241, 5294, 5306, 5382, 5390, 5531, 5602, 5627, 5658, 5738,
+				5826, 5860, 6022, 6038, 6045, 6130, 6197, 6227, 6231, 6232, 6353, 6353, 6357, 6362, 6370, 6383, 6414, 6443, 6505, 6521,
+				6529, 6541, 6650, 6756, 6811, 6833, 6993, 7029, 7096, 7146, 7223, 7238, 7322, 7385, 7405, 7522, 7532, 7580, 7588, 7766,
+				7785, 7787, 7792, 7793, 7804, 7809, 7843, 7921, 8009, 8054, 8078, 8138, 8198, 8251, 8324, 8365, 8436, 8501, 8571, 8708,
+				8750, 8853, 8913,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

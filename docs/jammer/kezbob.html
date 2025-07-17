@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>kezbob&#39;s jammer page</title>
+	<meta content="kezbob&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kezbob.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>kezbob</h1>
+		<a href="https://kezbob.itch.io">kezbob.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8874</p>
+		<p>Total ilScore: 50</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kezbob.itch.io/cloudy-bois">Cloudy Bois</a></td>
+				<td><span class="early">10h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>28</td>
+				<td>17</td>
+				<td>50</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1247, 1316, 1347, 1506, 1547, 1606, 1680, 1779, 1807, 1954, 2048, 2082, 2106, 2175, 2295, 2426, 2483, 2595, 2650, 2725,
+				2765, 2805, 2876, 2948, 2954, 3016, 3031, 3056, 3111, 3179, 3371, 3473, 3560, 3566, 3672, 3732, 3829, 4061, 4109, 4274,
+				4351, 4494, 4828, 4894, 4962, 4962, 4982, 4987, 4998, 5113, 5217, 5268, 5279, 5355, 5359, 5501, 5572, 5596, 5627, 5707,
+				5795, 5829, 5991, 6007, 6014, 6099, 6166, 6196, 6200, 6201, 6322, 6322, 6326, 6331, 6339, 6352, 6383, 6411, 6472, 6487,
+				6496, 6508, 6617, 6721, 6777, 6799, 6958, 6994, 7061, 7111, 7187, 7202, 7286, 7349, 7369, 7486, 7496, 7543, 7552, 7727,
+				7747, 7749, 7754, 7755, 7766, 7771, 7805, 7883, 7971, 8016, 8039, 8099, 8158, 8211, 8284, 8325, 8395, 8461, 8531, 8668,
+				8710, 8813, 8873,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

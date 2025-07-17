@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chimplement&#39;s jammer page</title>
+	<meta content="Chimplement&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chimplement.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chimplement</h1>
+		<a href="https://chimplement.itch.io">chimplement.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1502</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2446</p>
+		<p>Total ilScore: 106</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chimplement.itch.io/sacrifailure">SacriFailure</a></td>
+				<td><span class="early">5h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>14</td>
+				<td>33</td>
+				<td>106</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				795, 818, 833, 845, 846, 850, 858, 869, 877, 897, 904, 913, 931, 936, 947, 970, 980, 992, 1007, 1015,
+				1021, 1025, 1028, 1029, 1043, 1055, 1057, 1059, 1063, 1074, 1076, 1081, 1090, 1091, 1102, 1113, 1116, 1123, 1128, 1135,
+				1142, 1156, 1164, 1172, 1183, 1200, 1204, 1213, 1216, 1226, 1232, 1247, 1257, 1261, 1282, 1284, 1292, 1303, 1320, 1325,
+				1335, 1337, 1340, 1344, 1351, 1355, 1368, 1378, 1383, 1388, 1396, 1403, 1414, 1423, 1429, 1438, 1453, 1463, 1479, 1482,
+				1489, 1501,
+			]],
+			[ "ilscore", [
+				1142, 1323, 1342, 1358, 1358, 1363, 1370, 1379, 1409, 1426, 1441, 1456, 1472, 1479, 1519, 1543, 1561, 1577, 1594, 1616,
+				1625, 1666, 1679, 1688, 1707, 1733, 1747, 1747, 1752, 1771, 1771, 1773, 1780, 1783, 1788, 1798, 1806, 1812, 1820, 1823,
+				1835, 1846, 1865, 1884, 1893, 1938, 1964, 1983, 1994, 2004, 2014, 2031, 2054, 2061, 2078, 2081, 2096, 2100, 2129, 2135,
+				2143, 2149, 2150, 2157, 2160, 2166, 2182, 2213, 2229, 2239, 2253, 2269, 2280, 2287, 2299, 2324, 2346, 2368, 2389, 2403,
+				2425, 2445,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

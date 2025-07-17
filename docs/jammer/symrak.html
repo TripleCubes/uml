@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SYMRAK&#39;s jammer page</title>
+	<meta content="SYMRAK&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/symrak.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SYMRAK</h1>
+		<a href="https://symrak.itch.io">symrak.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12620</p>
+		<p>Total ilScore: 20</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://symrak.itch.io/growing-fish">Growing fish</a></td>
+				<td><span class="early">8h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-36-nature">MJ 36: Nature</a></td>
+				<td>37</td>
+				<td>31</td>
+				<td>3</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				543, 543, 557, 571, 596, 614, 632, 640, 660, 704, 735, 774, 795, 803, 918, 1020, 1043, 1109, 1150, 1232,
+				1291, 1410, 1450, 1497, 1505, 1517, 1587, 1635, 1793, 1909, 1914, 1958, 2065, 2112, 2161, 2217, 2301, 2348, 2425, 2479,
+				2654, 2714, 2802, 2894, 3010, 3061, 3216, 3325, 3382, 3430, 3518, 3651, 3802, 3889, 4029, 4113, 4210, 4276, 4337, 4444,
+				4538, 4572, 4643, 4683, 4734, 4819, 4908, 5125, 5245, 5357, 5385, 5507, 5588, 5691, 5946, 6010, 6199, 6292, 6472, 6843,
+				6923, 7023, 7029, 7077, 7101, 7132, 7282, 7410, 7507, 7543, 7645, 7675, 7847, 7933, 7986, 8035, 8121, 8231, 8280, 8467,
+				8491, 8519, 8625, 8713, 8756, 8784, 8798, 8946, 8952, 8979, 9018, 9048, 9077, 9123, 9180, 9260, 9294, 9323, 9360, 9502,
+				9625, 9701, 9741, 9922, 9980, 10077, 10145, 10242, 10274, 10375, 10463, 10490, 10625, 10661, 10715, 10737, 10932, 10978, 10995, 11033,
+				11065, 11112, 11140, 11196, 11292, 11411, 11481, 11530, 11600, 11671, 11743, 11829, 11901, 11985, 12065, 12155, 12337, 12411, 12538, 12619,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

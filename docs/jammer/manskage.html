@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>manskage&#39;s jammer page</title>
+	<meta content="manskage&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/manskage.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>manskage</h1>
+		<a href="https://manskage.itch.io">manskage.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2318</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4193</p>
+		<p>Total ilScore: 81</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://manskage.itch.io/the-lost-ufo">The lost UFO</a></td>
+				<td><span class="early">7h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>14</td>
+				<td>12</td>
+				<td>81</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				921, 935, 944, 959, 968, 976, 988, 999, 1025, 1054, 1067, 1072, 1093, 1107, 1121, 1140, 1156, 1172, 1191, 1210,
+				1232, 1253, 1273, 1274, 1288, 1297, 1309, 1327, 1345, 1358, 1366, 1389, 1394, 1413, 1443, 1454, 1466, 1483, 1499, 1514,
+				1540, 1544, 1547, 1572, 1594, 1600, 1604, 1609, 1637, 1639, 1641, 1646, 1649, 1660, 1676, 1684, 1701, 1707, 1719, 1730,
+				1749, 1762, 1775, 1795, 1828, 1838, 1845, 1853, 1868, 1875, 1894, 1906, 1915, 1955, 1959, 1970, 1979, 2004, 2010, 2014,
+				2017, 2022, 2025, 2035, 2043, 2065, 2085, 2097, 2113, 2136, 2151, 2170, 2186, 2196, 2216, 2235, 2256, 2282, 2288, 2306,
+				2317,
+			]],
+			[ "ilscore", [
+				1178, 1205, 1215, 1228, 1239, 1246, 1266, 1291, 1442, 1516, 1547, 1557, 1599, 1620, 1651, 1826, 1839, 1949, 1992, 2098,
+				2357, 2372, 2388, 2389, 2392, 2401, 2405, 2485, 2523, 2539, 2550, 2579, 2583, 2688, 2726, 2737, 2756, 2786, 2819, 2833,
+				2948, 2960, 2963, 2993, 3023, 3037, 3043, 3046, 3095, 3099, 3104, 3111, 3114, 3120, 3132, 3141, 3148, 3159, 3170, 3179,
+				3224, 3255, 3274, 3280, 3399, 3415, 3433, 3447, 3475, 3485, 3516, 3542, 3553, 3605, 3615, 3631, 3637, 3740, 3746, 3750,
+				3754, 3758, 3766, 3775, 3788, 3814, 3865, 3876, 3890, 3908, 3923, 3935, 3952, 3965, 3994, 4020, 4046, 4124, 4137, 4171,
+				4192,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

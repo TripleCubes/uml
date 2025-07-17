@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>syne3&#39;s jammer page</title>
+	<meta content="syne3&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/syne3.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>syne3</h1>
+		<a href="https://syne3.itch.io">syne3.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7134</p>
+		<p>Total ilScore: 61</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://syne3.itch.io/beat-the-yokai">Beat The Yokai</a></td>
+				<td><span class="early">5h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>64</td>
+				<td>5</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				721, 724, 733, 798, 812, 824, 839, 893, 905, 958, 983, 1121, 1144, 1186, 1260, 1342, 1354, 1488, 1573, 1588,
+				1599, 1658, 1764, 1881, 1921, 2011, 2052, 2117, 2143, 2162, 2221, 2286, 2288, 2344, 2354, 2361, 2403, 2461, 2642, 2738,
+				2811, 2817, 2904, 2945, 3026, 3247, 3285, 3440, 3511, 3637, 3942, 4006, 4057, 4058, 4066, 4072, 4076, 4182, 4263, 4289,
+				4301, 4361, 4362, 4495, 4556, 4570, 4591, 4657, 4731, 4752, 4899, 4909, 4913, 4979, 5036, 5055, 5063, 5066, 5174, 5174,
+				5177, 5182, 5187, 5196, 5211, 5224, 5263, 5269, 5278, 5281, 5370, 5452, 5485, 5496, 5648, 5674, 5720, 5749, 5806, 5812,
+				5884, 5938, 5948, 6041, 6052, 6071, 6076, 6229, 6238, 6241, 6244, 6248, 6253, 6262, 6281, 6340, 6430, 6459, 6473, 6519,
+				6557, 6591, 6652, 6682, 6748, 6804, 6861, 6977, 7000, 7089, 7133,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

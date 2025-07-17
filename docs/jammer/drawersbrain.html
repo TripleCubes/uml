@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DrawersBrain&#39;s jammer page</title>
+	<meta content="DrawersBrain&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/drawersbrain.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DrawersBrain</h1>
+		<a href="https://drawersbrain.itch.io">drawersbrain.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1714</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2574</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5003</p>
+		<p>Total ilScore: 74</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://drawersbrain.itch.io/rat-dead-redemption-v10">Rat Dead Redemption V1.0</a></td>
+				<td><span class="early">1d 12h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>10</td>
+				<td>25</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1356, 1365, 1376, 1388, 1398, 1410, 1425, 1438, 1444, 1450, 1459, 1471, 1476, 1476, 1478, 1487, 1492, 1498, 1506, 1524,
+				1532, 1542, 1558, 1569, 1581, 1596, 1614, 1624, 1633, 1648, 1659, 1672, 1683, 1700, 1713,
+			]],
+			[ "20", [
+				2035, 2045, 2064, 2076, 2095, 2113, 2129, 2169, 2173, 2184, 2195, 2220, 2227, 2231, 2234, 2243, 2246, 2254, 2262, 2290,
+				2310, 2323, 2338, 2361, 2377, 2402, 2421, 2435, 2455, 2476, 2497, 2523, 2538, 2559, 2573,
+			]],
+			[ "ilscore", [
+				4088, 4105, 4139, 4149, 4193, 4229, 4241, 4301, 4313, 4329, 4335, 4455, 4462, 4466, 4469, 4472, 4477, 4487, 4500, 4532,
+				4599, 4606, 4618, 4638, 4657, 4667, 4693, 4704, 4754, 4791, 4822, 4910, 4923, 4978, 5002,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

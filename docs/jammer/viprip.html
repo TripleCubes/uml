@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>VipRip&#39;s jammer page</title>
+	<meta content="VipRip&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/viprip.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>VipRip</h1>
+		<a href="https://viprip.itch.io">viprip.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9562</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fetis.itch.io/necromancer-army">Necromancer&#39;s army</a></td>
+				<td><span class="late">7h 30m late</span></td>
+				<td>
+					<a href="../jammer/fetis.html">Fetis</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>166</td>
+				<td>3</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4871, 5217, 5283, 5356, 5356, 5380, 5385, 5397, 5514, 5620, 5680, 5699, 5788, 5797, 5941, 6012, 6045, 6081, 6159, 6250,
+				6287, 6457, 6475, 6486, 6573, 6645, 6677, 6683, 6684, 6814, 6815, 6820, 6827, 6835, 6849, 6893, 6928, 6991, 7010, 7020,
+				7038, 7148, 7268, 7333, 7361, 7523, 7559, 7632, 7685, 7770, 7786, 7869, 7938, 7955, 8080, 8096, 8142, 8151, 8333, 8355,
+				8355, 8366, 8368, 8390, 8397, 8433, 8519, 8614, 8659, 8690, 8750, 8810, 8868, 8947, 8991, 9062, 9126, 9200, 9337, 9384,
+				9492, 9561,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

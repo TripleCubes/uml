@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>MustBeAtomic&#39;s jammer page</title>
+	<meta content="MustBeAtomic&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mustbeatomic.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>MustBeAtomic</h1>
+		<a href="https://mustbeatomic.itch.io">mustbeatomic.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2164</p>
+		<p>Total ilScore: 115</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mustbeatomic.itch.io/cool-pool">Cool Pool</a></td>
+				<td><span class="early">3h 12m early</span></td>
+				<td>
+					<a href="../jammer/totallyjuicy.html">TotallyJuicy</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-183-calculations">MJ 183: Calculations</a></td>
+				<td>119</td>
+				<td>75</td>
+				<td>9</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://mustbeatomic.itch.io/choco-let-me-speak">Choco-Let Me Speak!</a></td>
+				<td><span class="early">3h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>66</td>
+				<td>4</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				907, 922, 937, 965, 1024, 1040, 1100, 1122, 1267, 1296, 1344, 1421, 1514, 1528, 1670, 1755, 1775, 1792, 1858, 1972,
+				2094, 2138, 2239, 2290, 2361, 2390, 2415, 2471, 2540, 2542, 2600, 2613, 2623, 2667, 2727, 2913, 3011, 3090, 3098, 3195,
+				3238, 3327, 3550, 3594, 3756, 3835, 3968, 4285, 4349, 4409, 4409, 4424, 4428, 4435, 4544, 4634, 4668, 4680, 4745, 4748,
+				4885, 4951, 4969, 4995, 5068, 5149, 5171, 5327, 5337, 5342, 5418, 5479, 5496, 5504, 5507, 5621, 5621, 5624, 5629, 5634,
+				5645, 5667, 5684, 5728, 5735, 5744, 5750, 5853, 5944, 5989, 6001, 6157, 6183, 6235, 6273, 6341, 6346, 6422, 6479, 6491,
+				6593, 6604, 6633, 6640, 6803, 6814, 6818, 6821, 6823, 6830, 6839, 6858, 6934, 7022, 7056, 7072, 7122, 7170, 7204, 7267,
+				7305, 2053, 2074, 2090, 2109, 2123, 2144, 2163,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

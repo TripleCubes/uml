@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>soxyo&#39;s jammer page</title>
+	<meta content="soxyo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/soxyo.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>soxyo</h1>
+		<a href="https://soxyo.itch.io">soxyo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1702</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2563</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8009</p>
+		<p>Total ilScore: 55</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://soxyo.itch.io/garden-exe">GARDEN_EXE || Mini Jam 146: Windows</a></td>
+				<td><span class="early">8h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>6</td>
+				<td>20</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1246, 1258, 1272, 1280, 1286, 1294, 1315, 1332, 1346, 1355, 1364, 1375, 1383, 1393, 1405, 1414, 1427, 1433, 1439, 1448,
+				1460, 1465, 1465, 1467, 1476, 1481, 1487, 1494, 1512, 1520, 1530, 1546, 1557, 1569, 1584, 1602, 1612, 1621, 1636, 1647,
+				1660, 1671, 1688, 1701,
+			]],
+			[ "20", [
+				1885, 1897, 1911, 1929, 1943, 1959, 1979, 2011, 2026, 2034, 2044, 2063, 2072, 2091, 2109, 2120, 2160, 2164, 2175, 2186,
+				2211, 2218, 2222, 2225, 2234, 2237, 2245, 2253, 2281, 2301, 2314, 2329, 2352, 2368, 2391, 2410, 2424, 2444, 2465, 2486,
+				2512, 2527, 2548, 2562,
+			]],
+			[ "ilscore", [
+				5881, 5889, 5895, 6002, 6094, 6142, 6163, 6321, 6350, 6404, 6444, 6514, 6519, 6596, 6654, 6666, 6775, 6785, 6815, 6822,
+				6989, 7001, 7004, 7007, 7008, 7014, 7023, 7048, 7124, 7212, 7250, 7269, 7320, 7370, 7406, 7470, 7510, 7581, 7642, 7704,
+				7835, 7863, 7961, 8008,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

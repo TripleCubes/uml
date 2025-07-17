@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>shour&#39;s jammer page</title>
+	<meta content="shour&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/shour.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>shour</h1>
+		<a href="https://shour.itch.io">shour.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11988</p>
+		<p>Total ilScore: 28</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://shour.itch.io/dark-parkour">Dark-Parkour</a></td>
+				<td><span class="early">2d 17h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>143</td>
+				<td>4</td>
+				<td>28</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				5176, 5253, 5356, 5609, 5672, 5862, 5951, 6122, 6490, 6569, 6668, 6671, 6717, 6738, 6767, 6913, 7036, 7131, 7165, 7259,
+				7278, 7450, 7535, 7587, 7630, 7718, 7822, 7869, 8053, 8074, 8104, 8207, 8294, 8334, 8359, 8368, 8515, 8519, 8539, 8576,
+				8604, 8630, 8676, 8731, 8804, 8832, 8858, 8889, 9017, 9141, 9218, 9258, 9432, 9486, 9577, 9645, 9744, 9770, 9862, 9945,
+				9968, 10102, 10136, 10188, 10207, 10398, 10438, 10452, 10478, 10508, 10544, 10569, 10625, 10713, 10825, 10888, 10936, 11006, 11077, 11143,
+				11225, 11294, 11378, 11454, 11542, 11712, 11779, 11906, 11987,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Oliveta&#39;s jammer page</title>
+	<meta content="Oliveta&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/oliveta.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Oliveta</h1>
+		<a href="https://oliveta.itch.io">oliveta.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4801</p>
+		<p>Total ilScore: 76</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://oliveta.itch.io/frogism">Frog.ism</a></td>
+				<td><span class="early">1h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>101</td>
+				<td>10</td>
+				<td>76</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				921, 991, 999, 1008, 1039, 1114, 1206, 1226, 1292, 1305, 1340, 1353, 1360, 1400, 1431, 1438, 1454, 1465, 1471, 1494,
+				1528, 1696, 1773, 1819, 1826, 1876, 1903, 1947, 2136, 2150, 2266, 2315, 2426, 2693, 2713, 2739, 2740, 2743, 2751, 2755,
+				2842, 2895, 2914, 2925, 2960, 2962, 3072, 3116, 3127, 3147, 3185, 3230, 3245, 3373, 3385, 3388, 3430, 3466, 3482, 3489,
+				3490, 3556, 3560, 3563, 3571, 3575, 3584, 3593, 3602, 3608, 3619, 3632, 3639, 3697, 3732, 3754, 3760, 3892, 3907, 3926,
+				3942, 3974, 3984, 4022, 4059, 4071, 4128, 4140, 4154, 4160, 4279, 4286, 4290, 4293, 4296, 4301, 4311, 4324, 4352, 4415,
+				4425, 4439, 4456, 4472, 4483, 4507, 4519, 4563, 4600, 4630, 4713, 4726, 4776, 4800,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

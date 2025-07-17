@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Carthum&#39;s jammer page</title>
+	<meta content="Carthum&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/carthum.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Carthum</h1>
+		<a href="https://carthum.itch.io">carthum.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12368</p>
+		<p>Total ilScore: 24</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://carthum.itch.io/cubetapper">CubeTapper</a></td>
+				<td><span class="early">7h 23m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>135</td>
+				<td>4</td>
+				<td>24</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				5557, 5812, 5875, 6064, 6156, 6334, 6704, 6784, 6883, 6886, 6932, 6955, 6985, 7134, 7257, 7354, 7390, 7486, 7510, 7685,
+				7771, 7825, 7871, 7957, 8063, 8112, 8298, 8320, 8350, 8455, 8544, 8586, 8612, 8622, 8770, 8775, 8799, 8837, 8867, 8896,
+				8940, 8996, 9075, 9108, 9135, 9173, 9306, 9432, 9509, 9549, 9726, 9781, 9875, 9944, 10041, 10068, 10164, 10253, 10278, 10412,
+				10448, 10501, 10522, 10716, 10759, 10774, 10807, 10837, 10879, 10905, 10962, 11055, 11171, 11239, 11289, 11361, 11432, 11502, 11589, 11659,
+				11744, 11822, 11911, 12088, 12158, 12285, 12367,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

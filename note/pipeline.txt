@@ -1,0 +1,78 @@
+PROCESS: GETTING THE MINIJAM LIST (and their entries.json links)
+(this process does not cover majorjams, as majorjams's process is done manually,
+by hands)
+
+minijamofficial.com api (returns json):
+list of jam id, link, name
+      |
+      v
+jam main page (returns html):
+to get link to entries.json
+      |
+      v
+printed to the screen to get manually copied to input/jam_list.txt
+
+===============================================================================
+
+PROCESS: SCRAPING
+for each every jam:
+
+input/jam_list.txt:
+list of all jam links and their entries.json link
+(also their mj_id and jam name)
+      |
+      v
+if a the cache file for the jam is found -> INCREMENTAL
+                                  if not -> NON-INCREMENTAL
+
+
+
+
+NON-INCREMENTAL:
+                           input/jam_list.txt:
+                                    |
+                     _______________________________
+                     |                             |
+                     v                             v
+jam results pages (returns html):           entries.json (returns json):
+the jam's info and rated game's             all games, including unrated games.
+scores. games's link is                     altho game infos can be gathered
+took to later match with the                from results page side, all game's
+entries.json side                           infos except for score is collected
+                     |                      from this side instead. the game's
+                     |                      id is also collected from this side
+                     |                             |
+                     _______________________________
+                                    |
+                                    v
+                 the data combined into a single `Jam` object
+                                    |
+                                    v
+         the `Jam` object then saved to a file in the cache/ folder
+
+
+
+
+INCREMENTAL:
+                           input/jam_list.txt
+                                    |
+                ________________________________________
+                |                                      |
+                v                                      v
+the jam's cache file in cache/              entries.json (returns json)
+                |                                      |
+                v                                      |
+recreate the `Jam` object                              |
+                |                                      |
+                ________________________________________
+                                    |
+                                    v
+               compared to check for removed/privated games or
+               games that change their name, link, or author
+               list
+                                    |
+                                    v
+               a new `Jam` object that is updated, is created
+                                    |
+                                    v
+               the `Jam` object then override the jam's cache file in cache/

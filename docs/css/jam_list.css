@@ -1,0 +1,123 @@
+h3, h3 + span, h3 + span + span, h3 + span + span + span {
+	display: inline-block;
+	margin-right: 6px;
+}
+
+h3 {
+	margin-top: 25px;
+}
+
+h3 + span:after {
+	content: " games";
+}
+
+h3 + span + span:after {
+	content: " jammers";
+}
+
+h3 + span + span + span:after {
+	content: " new minijammers";
+}
+h3 + span + span + span.num_new_majorjammers:after {
+	content: " new majorjammers";
+}
+
+#minijam_majorjam {
+	> a {
+		margin-right: 10px;
+		display: inline-block;
+	}
+}
+
+table {
+	> thead, > tbody {
+		> tr {
+			> td:nth-child(1) {
+				width: 40px;
+				max-width: 40px;
+			}
+			> td:nth-child(2) {
+				width: 275px;
+				max-width: 275px;
+			}
+			> td:nth-child(3) {
+				width: 90px;
+				max-width: 90px;
+			}
+			> td:nth-child(4) {
+				width: unset;
+				max-width: unset;
+			}
+
+			> td:nth-child(3) {
+				> span {
+					color: var(--secondary-text-color);
+
+					border-radius: 2px;
+					font-size: small;
+					padding: 2px 2px;
+
+					display: inline-block;
+					width: inherit;
+
+					vertical-align: top;
+					text-align: center;
+				}
+				> span.early {
+					background-color: var(--early-tag-color);
+				}
+				> span.late {
+					background-color: var(--late-tag-color);
+				}
+			}
+		}
+	}
+
+	> thead {
+		> tr {
+			> td:nth-child(1):after {
+				content: "(i)";
+			}
+			> td:nth-child(4):after {
+				content: "";
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 990px) {
+	h3, h3 + span, h3 + span + span, h3 + span + span + span {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	h3 + span + span + span {
+		margin-bottom: 10px;
+	}
+
+	table > tbody {
+		> tr {
+			> td:nth-child(1), > td:nth-child(2) {
+				display: inline-block;
+				font-weight: bold;
+				max-width: unset;
+				width: auto;
+			}
+			> td:nth-child(1):after {
+				content: ". ";
+			}
+			> td:nth-child(3):not(:empty):before {
+				content: "";
+			}
+			> td:nth-child(4):before {
+				content: "by ";
+			}
+			> td:nth-child(5):before {
+				content: "Rt: ";
+			}
+			> td:nth-child(6):before {
+				content: "ilScore: ";
+			}
+		}
+	}
+}

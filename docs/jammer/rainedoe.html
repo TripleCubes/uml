@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>rainedoe&#39;s jammer page</title>
+	<meta content="rainedoe&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rainedoe.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>rainedoe</h1>
+		<a href="https://rainedoe.itch.io">rainedoe.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3346</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10700</p>
+		<p>Total ilScore: 39</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rainedoe.itch.io/leaf-noir">leaf noir (prototype)</a></td>
+				<td><span class="early">2m 23s early</span></td>
+				<td>
+					<a href="../jammer/thedawdle.html">Craig Alan Carroll</a>,
+					<a href="../jammer/bakenshake09.html">Bakenshake</a>,
+					<a href="../jammer/veratti.html">tVeratti</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>19</td>
+				<td>7</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1827, 1848, 1866, 1886, 1908, 1931, 1953, 1964, 1982, 2009, 2025, 2045, 2060, 2082, 2096, 2122, 2142, 2159, 2184, 2205,
+				2225, 2242, 2249, 2277, 2281, 2293, 2313, 2327, 2342, 2363, 2387, 2410, 2428, 2445, 2467, 2485, 2497, 2515, 2544, 2576,
+				2598, 2618, 2639, 2659, 2678, 2693, 2710, 2731, 2771, 2785, 2800, 2813, 2838, 2852, 2857, 2873, 2893, 2915, 2934, 2951,
+				2982, 3002, 3026, 3055, 3079, 3105, 3129, 3159, 3177, 3196, 3223, 3242, 3268, 3293, 3325, 3345,
+			]],
+			[ "ilscore", [
+				6001, 6022, 6155, 6274, 6348, 6377, 6466, 6479, 6639, 6718, 6765, 6802, 6885, 6978, 7018, 7196, 7213, 7231, 7327, 7408,
+				7440, 7453, 7456, 7600, 7601, 7613, 7635, 7653, 7671, 7714, 7754, 7819, 7844, 7860, 7884, 8003, 8126, 8198, 8237, 8401,
+				8447, 8531, 8593, 8686, 8707, 8793, 8866, 8888, 9019, 9042, 9093, 9106, 9292, 9326, 9329, 9351, 9365, 9395, 9415, 9463,
+				9549, 9651, 9706, 9747, 9814, 9882, 9943, 10020, 10075, 10156, 10230, 10308, 10459, 10515, 10628, 10699,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>hydrokyu&#39;s jammer page</title>
+	<meta content="hydrokyu&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hydrokyu.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>hydrokyu</h1>
+		<a href="https://hydrokyu.itch.io">hydrokyu.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6200</p>
+		<p>Total ilScore: 67</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://hydrokyu.itch.io/chafi">chafi</a></td>
+				<td><span class="early">15m 53s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>111</td>
+				<td>6</td>
+				<td>67</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2332, 2399, 2406, 2483, 2520, 2593, 2800, 2827, 2970, 3033, 3153, 3440, 3497, 3539, 3540, 3544, 3550, 3554, 3652, 3722,
+				3743, 3752, 3803, 3805, 3929, 3987, 3998, 4020, 4073, 4135, 4153, 4295, 4306, 4310, 4360, 4406, 4420, 4428, 4431, 4531,
+				4532, 4534, 4540, 4545, 4554, 4568, 4578, 4603, 4613, 4623, 4628, 4712, 4770, 4799, 4807, 4946, 4964, 5004, 5028, 5079,
+				5088, 5154, 5201, 5212, 5291, 5304, 5319, 5325, 5469, 5477, 5480, 5483, 5487, 5492, 5501, 5515, 5565, 5647, 5669, 5680,
+				5711, 5734, 5757, 5798, 5822, 5883, 5928, 5977, 6087, 6098, 6168, 6199,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

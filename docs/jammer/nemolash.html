@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>nemolash&#39;s jammer page</title>
+	<meta content="nemolash&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nemolash.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>nemolash</h1>
+		<a href="https://nemolash.itch.io">nemolash.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12869</p>
+		<p>Total ilScore: 14</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nemolash.itch.io/pong">Pong</a></td>
+				<td><span class="early">1d 10h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-9-back-to-school-">MJ 9: Back To School</a></td>
+				<td>25</td>
+				<td>21</td>
+				<td>6</td>
+				<td>14</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				86, 106, 115, 123, 123, 149, 166, 172, 174, 202, 218, 231, 237, 243, 306, 347, 385, 399, 414, 435,
+				454, 478, 492, 514, 559, 574, 581, 610, 614, 631, 650, 675, 695, 713, 723, 746, 789, 821, 861, 884,
+				893, 1009, 1111, 1135, 1200, 1241, 1324, 1383, 1503, 1543, 1592, 1603, 1615, 1685, 1733, 1894, 2011, 2017, 2061, 2168,
+				2216, 2265, 2321, 2410, 2461, 2537, 2594, 2768, 2831, 2924, 3016, 3136, 3186, 3340, 3450, 3508, 3556, 3645, 3778, 3929,
+				4016, 4155, 4242, 4339, 4406, 4469, 4578, 4672, 4706, 4777, 4817, 4869, 4954, 5043, 5261, 5381, 5495, 5527, 5649, 5732,
+				5837, 6091, 6155, 6345, 6441, 6622, 6995, 7075, 7177, 7186, 7238, 7262, 7293, 7445, 7578, 7674, 7710, 7813, 7844, 8016,
+				8102, 8155, 8205, 8290, 8400, 8450, 8637, 8663, 8692, 8801, 8891, 8934, 8963, 8980, 9128, 9138, 9166, 9206, 9235, 9264,
+				9311, 9370, 9451, 9485, 9515, 9555, 9700, 9822, 9900, 9945, 10128, 10188, 10287, 10354, 10451, 10485, 10588, 10677, 10707, 10844,
+				10881, 10935, 10957, 11153, 11201, 11220, 11260, 11292, 11342, 11371, 11428, 11526, 11645, 11716, 11767, 11838, 11908, 11981, 12071, 12143,
+				12227, 12307, 12399, 12580, 12656, 12783, 12868,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

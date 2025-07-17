@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Xenotropic&#39;s jammer page</title>
+	<meta content="Xenotropic&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/xenotropic.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Xenotropic</h1>
+		<a href="https://xenotropic.itch.io">xenotropic.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1915</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6928</p>
+		<p>Total ilScore: 62</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://xenotropic.itch.io/illegal-enlightenment">Illegal Enlightenment</a></td>
+				<td><span class="early">11m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-60">MJ 60: Crime</a></td>
+				<td>64</td>
+				<td>13</td>
+				<td>31</td>
+				<td>62</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				364, 369, 397, 418, 428, 438, 455, 464, 471, 488, 502, 506, 518, 524, 550, 560, 572, 591, 593, 600,
+				622, 636, 643, 648, 664, 684, 693, 704, 724, 731, 746, 756, 764, 773, 783, 791, 804, 811, 817, 827,
+				832, 858, 887, 899, 904, 921, 933, 939, 958, 974, 990, 1008, 1027, 1050, 1070, 1089, 1090, 1095, 1103, 1114,
+				1131, 1149, 1158, 1168, 1186, 1190, 1206, 1233, 1244, 1256, 1273, 1283, 1289, 1303, 1307, 1310, 1331, 1347, 1350, 1353,
+				1359, 1373, 1375, 1377, 1383, 1384, 1394, 1404, 1409, 1419, 1423, 1432, 1438, 1457, 1468, 1478, 1490, 1514, 1521, 1529,
+				1534, 1548, 1555, 1575, 1587, 1595, 1630, 1630, 1637, 1647, 1673, 1679, 1683, 1685, 1690, 1694, 1705, 1712, 1727, 1743,
+				1749, 1758, 1770, 1777, 1795, 1806, 1813, 1827, 1847, 1864, 1882, 1887, 1899, 1914,
+			]],
+			[ "ilscore", [
+				477, 484, 603, 692, 696, 705, 766, 778, 790, 804, 856, 867, 915, 939, 1076, 1100, 1137, 1211, 1290, 1303,
+				1433, 1518, 1534, 1545, 1597, 1702, 1816, 1853, 1944, 1980, 2043, 2068, 2086, 2146, 2211, 2213, 2265, 2275, 2281, 2320,
+				2377, 2557, 2651, 2724, 2730, 2817, 2857, 2936, 3157, 3193, 3346, 3417, 3542, 3845, 3909, 3954, 3955, 3960, 3966, 3969,
+				4075, 4151, 4176, 4184, 4240, 4242, 4372, 4434, 4446, 4469, 4528, 4596, 4614, 4760, 4770, 4774, 4834, 4890, 4907, 4915,
+				4918, 5027, 5027, 5030, 5035, 5041, 5050, 5065, 5076, 5109, 5115, 5124, 5127, 5215, 5296, 5328, 5337, 5482, 5509, 5554,
+				5582, 5639, 5645, 5714, 5769, 5778, 5868, 5881, 5895, 5900, 6053, 6061, 6064, 6068, 6072, 6076, 6085, 6103, 6163, 6253,
+				6281, 6295, 6337, 6368, 6400, 6454, 6484, 6550, 6605, 6661, 6778, 6799, 6885, 6927,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

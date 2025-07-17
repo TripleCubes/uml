@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>kooostia16&#39;s jammer page</title>
+	<meta content="kooostia16&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kooostia16.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>kooostia16</h1>
+		<a href="https://kooostia16.itch.io">kooostia16.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3565</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12230</p>
+		<p>Total ilScore: 26</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kooostia16.itch.io/elmntlarkd">Elemental Arkanoid</a></td>
+				<td><span class="early">6h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-14-elements-">MJ 14: Elements</a></td>
+				<td>24</td>
+				<td>19</td>
+				<td>7</td>
+				<td>26</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				121, 135, 140, 144, 161, 172, 183, 187, 195, 224, 245, 269, 278, 281, 294, 308, 325, 334, 347, 367,
+				378, 383, 400, 404, 415, 428, 444, 457, 471, 480, 490, 509, 519, 535, 550, 558, 580, 610, 633, 652,
+				668, 687, 703, 726, 752, 777, 783, 794, 819, 848, 875, 904, 915, 930, 953, 968, 985, 1011, 1034, 1053,
+				1067, 1086, 1111, 1131, 1149, 1166, 1190, 1211, 1229, 1242, 1264, 1281, 1303, 1322, 1346, 1366, 1391, 1410, 1436, 1452,
+				1475, 1491, 1510, 1532, 1556, 1571, 1595, 1610, 1628, 1653, 1679, 1691, 1711, 1732, 1744, 1760, 1779, 1799, 1814, 1833,
+				1851, 1873, 1894, 1917, 1922, 1946, 1963, 1984, 2002, 2022, 2051, 2074, 2096, 2112, 2130, 2157, 2173, 2193, 2208, 2230,
+				2244, 2270, 2290, 2309, 2334, 2355, 2374, 2397, 2410, 2438, 2446, 2465, 2490, 2508, 2530, 2551, 2575, 2598, 2618, 2634,
+				2656, 2674, 2686, 2704, 2733, 2765, 2787, 2807, 2828, 2848, 2869, 2884, 2901, 2924, 2964, 2978, 2993, 3006, 3031, 3045,
+				3060, 3085, 3109, 3131, 3154, 3171, 3202, 3222, 3246, 3275, 3299, 3325, 3349, 3379, 3397, 3416, 3443, 3462, 3488, 3513,
+				3545, 3564,
+			]],
+			[ "ilscore", [
+				99, 111, 113, 113, 136, 147, 157, 158, 161, 221, 258, 293, 301, 304, 320, 336, 363, 368, 385, 421,
+				434, 434, 460, 460, 467, 478, 498, 512, 529, 529, 544, 583, 615, 655, 673, 675, 789, 887, 908, 974,
+				1016, 1094, 1153, 1273, 1312, 1359, 1362, 1372, 1439, 1483, 1638, 1756, 1760, 1801, 1907, 1955, 2004, 2060, 2140, 2185,
+				2262, 2312, 2487, 2547, 2635, 2726, 2839, 2889, 3045, 3152, 3206, 3253, 3340, 3471, 3622, 3708, 3846, 3929, 4028, 4094,
+				4154, 4257, 4350, 4383, 4454, 4494, 4543, 4625, 4714, 4931, 5051, 5160, 5183, 5303, 5380, 5482, 5736, 5799, 5989, 6081,
+				6256, 6625, 6705, 6805, 6808, 6854, 6876, 6906, 7054, 7177, 7273, 7308, 7403, 7426, 7600, 7685, 7739, 7783, 7869, 7973,
+				8020, 8206, 8228, 8257, 8362, 8451, 8493, 8518, 8528, 8676, 8680, 8704, 8742, 8770, 8796, 8842, 8897, 8972, 9001, 9028,
+				9062, 9193, 9318, 9396, 9436, 9610, 9664, 9756, 9826, 9923, 9948, 10041, 10130, 10154, 10288, 10324, 10378, 10399, 10590, 10631,
+				10646, 10677, 10707, 10748, 10775, 10832, 10922, 11038, 11105, 11154, 11226, 11297, 11367, 11454, 11525, 11610, 11688, 11777, 11953, 12021,
+				12148, 12229,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>BlueEagle421&#39;s jammer page</title>
+	<meta content="BlueEagle421&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blueeagle421.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>BlueEagle421</h1>
+		<a href="https://blueeagle421.itch.io">blueeagle421.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1934</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3224</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10462</p>
+		<p>Total ilScore: 40</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blueeagle421.itch.io/tooth-fairy">Tooth Fairy</a></td>
+				<td><span class="early">10h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>9</td>
+				<td>17</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1337, 1353, 1361, 1373, 1389, 1402, 1413, 1427, 1439, 1454, 1462, 1466, 1474, 1495, 1512, 1526, 1534, 1543, 1554, 1569,
+				1579, 1591, 1607, 1620, 1627, 1633, 1642, 1654, 1659, 1667, 1681, 1692, 1700, 1718, 1729, 1747, 1755, 1764, 1780, 1791,
+				1803, 1818, 1836, 1845, 1853, 1868, 1879, 1892, 1903, 1920, 1933,
+			]],
+			[ "20", [
+				2203, 2222, 2235, 2250, 2271, 2290, 2314, 2330, 2348, 2368, 2386, 2398, 2416, 2446, 2478, 2500, 2520, 2541, 2561, 2577,
+				2594, 2611, 2633, 2673, 2684, 2700, 2711, 2736, 2750, 2756, 2771, 2787, 2798, 2816, 2833, 2864, 2884, 2908, 2933, 2957,
+				2983, 3008, 3038, 3056, 3075, 3102, 3121, 3147, 3171, 3203, 3223,
+			]],
+			[ "ilscore", [
+				7437, 7455, 7473, 7488, 7531, 7567, 7631, 7656, 7671, 7694, 7812, 7937, 8006, 8044, 8210, 8253, 8336, 8395, 8488, 8508,
+				8592, 8664, 8685, 8814, 8836, 8887, 8900, 9085, 9118, 9120, 9142, 9151, 9180, 9199, 9240, 9326, 9426, 9479, 9519, 9587,
+				9653, 9714, 9795, 9849, 9930, 10001, 10079, 10227, 10280, 10392, 10461,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

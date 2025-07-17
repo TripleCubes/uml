@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ZiadGamez&#39;s jammer page</title>
+	<meta content="ZiadGamez&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ziadgamez.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ZiadGamez</h1>
+		<a href="https://ziadgamez.itch.io">ziadgamez.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9768</p>
+		<p>Total ilScore: 45</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ziadgamez.itch.io/bob-the-fish">Bob the fish</a></td>
+				<td><span class="early">11h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>103</td>
+				<td>3</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4805, 4959, 5305, 5374, 5450, 5450, 5475, 5480, 5500, 5621, 5729, 5793, 5813, 5903, 5913, 6066, 6139, 6176, 6210, 6288,
+				6375, 6412, 6583, 6601, 6613, 6701, 6773, 6805, 6812, 6813, 6943, 6944, 6949, 6963, 6973, 6988, 7032, 7067, 7130, 7151,
+				7164, 7183, 7297, 7415, 7480, 7515, 7677, 7715, 7791, 7846, 7933, 7948, 8031, 8099, 8116, 8241, 8263, 8309, 8319, 8501,
+				8525, 8525, 8539, 8541, 8565, 8572, 8615, 8699, 8793, 8838, 8873, 8936, 8999, 9057, 9135, 9181, 9255, 9322, 9396, 9539,
+				9589, 9697, 9767,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

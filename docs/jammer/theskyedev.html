@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TheSkyeDev&#39;s jammer page</title>
+	<meta content="TheSkyeDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/theskyedev.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TheSkyeDev</h1>
+		<a href="https://theskyedev.itch.io">theskyedev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9913</p>
+		<p>Total ilScore: 43</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://theskyedev.itch.io/insertgenericname">insert generic name</a></td>
+				<td><span class="early">2h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>73</td>
+				<td>1</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td><a href="https://theskyedev.itch.io/4-the-p4a4i4n4-minijam71">4 The P4A4I4N4</a></td>
+				<td><span class="early">1h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>81</td>
+				<td>3</td>
+				<td>34</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1925, 1593, 1764, 1807, 1877, 1954, 2056, 2089, 2249, 2346, 2385, 2420, 2499, 2621, 2761, 2827, 2944, 3016, 3106, 3150,
+				3199, 3275, 3357, 3372, 3438, 3464, 3494, 3561, 3636, 3833, 3946, 4039, 4047, 4155, 4217, 4321, 4563, 4615, 4794, 4874,
+				5030, 5379, 5447, 5524, 5524, 5552, 5557, 5577, 5699, 5808, 5872, 5893, 5982, 5993, 6146, 6221, 6260, 6293, 6372, 6461,
+				6498, 6672, 6689, 6702, 6791, 6864, 6896, 6903, 6904, 7036, 7037, 7043, 7058, 7073, 7085, 7128, 7164, 7227, 7251, 7265,
+				7285, 7398, 7517, 7583, 7618, 7781, 7820, 7901, 7957, 8046, 8062, 8145, 8215, 8230, 8355, 8377, 8423, 8434, 8618, 8643,
+				8643, 8657, 8663, 8687, 8695, 8738, 8822, 8918, 8964, 9000, 9067, 9131, 9191, 9270, 9317, 9392, 9462, 9536, 9680, 9732,
+				9842, 9912,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

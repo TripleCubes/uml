@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>John Vermintide&#39;s jammer page</title>
+	<meta content="John Vermintide&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kodesuper.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>John Vermintide</h1>
+		<a href="https://kodesuper.itch.io">kodesuper.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3555</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12198</p>
+		<p>Total ilScore: 26</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kodesuper.itch.io/pac-man-standard">P.A.C. MAN Standard</a></td>
+				<td><span class="early">1d 15h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-14-elements-">MJ 14: Elements</a></td>
+				<td>24</td>
+				<td>18</td>
+				<td>7</td>
+				<td>26</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				118, 132, 137, 141, 158, 169, 180, 184, 192, 221, 242, 266, 275, 278, 290, 303, 320, 328, 341, 361,
+				372, 377, 394, 398, 409, 421, 438, 449, 463, 473, 483, 502, 512, 528, 542, 549, 571, 601, 624, 643,
+				659, 679, 695, 718, 744, 769, 775, 783, 808, 837, 864, 893, 904, 919, 942, 957, 974, 1000, 1023, 1042,
+				1056, 1075, 1100, 1120, 1138, 1155, 1179, 1200, 1219, 1232, 1254, 1271, 1293, 1312, 1336, 1356, 1381, 1400, 1426, 1442,
+				1465, 1481, 1500, 1522, 1546, 1561, 1585, 1600, 1618, 1643, 1669, 1681, 1701, 1722, 1734, 1750, 1769, 1789, 1804, 1823,
+				1841, 1863, 1884, 1907, 1912, 1936, 1953, 1974, 1992, 2012, 2041, 2064, 2086, 2102, 2120, 2147, 2163, 2183, 2198, 2220,
+				2234, 2260, 2280, 2299, 2324, 2345, 2364, 2387, 2400, 2428, 2436, 2455, 2480, 2498, 2520, 2541, 2565, 2588, 2608, 2624,
+				2646, 2664, 2676, 2694, 2723, 2755, 2777, 2797, 2818, 2838, 2859, 2874, 2891, 2914, 2954, 2968, 2983, 2996, 3021, 3035,
+				3050, 3075, 3099, 3121, 3144, 3161, 3192, 3212, 3236, 3265, 3289, 3315, 3339, 3369, 3387, 3406, 3433, 3452, 3478, 3503,
+				3535, 3554,
+			]],
+			[ "ilscore", [
+				95, 107, 109, 109, 132, 143, 153, 154, 157, 217, 254, 289, 296, 299, 315, 331, 358, 363, 380, 416,
+				428, 428, 454, 454, 461, 472, 491, 506, 523, 523, 538, 577, 609, 649, 667, 668, 783, 881, 901, 967,
+				1009, 1086, 1144, 1264, 1304, 1351, 1354, 1361, 1428, 1471, 1626, 1744, 1746, 1787, 1892, 1940, 1989, 2045, 2125, 2170,
+				2247, 2297, 2472, 2532, 2620, 2711, 2824, 2874, 3029, 3136, 3190, 3237, 3323, 3454, 3605, 3691, 3828, 3910, 4009, 4075,
+				4135, 4238, 4331, 4363, 4434, 4474, 4523, 4605, 4693, 4910, 5030, 5139, 5162, 5282, 5359, 5461, 5715, 5777, 5967, 6058,
+				6233, 6602, 6681, 6781, 6784, 6830, 6852, 6882, 7030, 7153, 7249, 7284, 7379, 7402, 7574, 7659, 7713, 7757, 7844, 7948,
+				7995, 8179, 8201, 8230, 8335, 8424, 8466, 8491, 8501, 8648, 8652, 8674, 8712, 8740, 8766, 8812, 8867, 8942, 8971, 8998,
+				9032, 9162, 9287, 9365, 9405, 9579, 9633, 9725, 9795, 9892, 9917, 10010, 10099, 10123, 10257, 10293, 10347, 10368, 10559, 10600,
+				10615, 10646, 10676, 10717, 10744, 10801, 10891, 11007, 11074, 11123, 11195, 11266, 11335, 11422, 11493, 11578, 11656, 11745, 11921, 11989,
+				12116, 12197,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

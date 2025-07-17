@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Dippy0615&#39;s jammer page</title>
+	<meta content="Dippy0615&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dippy0615.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Dippy0615</h1>
+		<a href="https://dippy0615.itch.io">dippy0615.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 966</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1503</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2158</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7642</p>
+		<p>Total ilScore: 58</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dippy0615.itch.io/window-hopper">Window Hopper</a></td>
+				<td><span class="late">9h 57m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>3</td>
+				<td>10</td>
+				<td>58</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				712, 720, 728, 734, 736, 740, 747, 757, 768, 773, 778, 782, 784, 788, 794, 799, 807, 811, 814, 820,
+				826, 830, 830, 832, 835, 838, 846, 852, 863, 868, 872, 878, 883, 889, 899, 909, 912, 917, 928, 936,
+				943, 948, 955, 965,
+			]],
+			[ "10", [
+				1115, 1126, 1135, 1144, 1150, 1158, 1179, 1196, 1203, 1210, 1217, 1228, 1230, 1240, 1252, 1257, 1270, 1274, 1280, 1288,
+				1300, 1305, 1305, 1307, 1311, 1314, 1322, 1328, 1346, 1355, 1365, 1380, 1391, 1401, 1410, 1421, 1428, 1437, 1452, 1463,
+				1476, 1481, 1492, 1502,
+			]],
+			[ "20", [
+				1591, 1603, 1613, 1632, 1644, 1656, 1677, 1710, 1718, 1725, 1732, 1746, 1753, 1773, 1784, 1792, 1832, 1834, 1844, 1853,
+				1878, 1884, 1888, 1891, 1896, 1900, 1910, 1917, 1935, 1955, 1965, 1981, 1998, 2012, 2028, 2039, 2046, 2060, 2079, 2101,
+				2126, 2131, 2142, 2157,
+			]],
+			[ "ilscore", [
+				5626, 5635, 5642, 5741, 5832, 5873, 5886, 6041, 6068, 6120, 6155, 6219, 6224, 6298, 6352, 6362, 6463, 6474, 6503, 6508,
+				6669, 6679, 6683, 6686, 6688, 6695, 6704, 6723, 6798, 6887, 6920, 6936, 6985, 7033, 7067, 7130, 7166, 7236, 7294, 7355,
+				7477, 7501, 7595, 7641,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

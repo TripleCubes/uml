@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SabifiedSab&#39;s jammer page</title>
+	<meta content="SabifiedSab&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sabified.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SabifiedSab</h1>
+		<a href="https://sabified.itch.io">sabified.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 978</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1539</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2236</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 712</p>
+		<p>Total ilScore: 204</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://phoque.itch.io/moms-credit-card">Mom&#39;s credit card</a></td>
+				<td><span class="early">7h 20m early</span></td>
+				<td>
+					<a href="../jammer/phoque.html">Phoque</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-158-shopping">MJ 158: Shopping</a></td>
+				<td>52</td>
+				<td>4</td>
+				<td>24</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://sabified.itch.io/rtf">Rescue the frogs!</a></td>
+				<td><span class="early">17h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>136</td>
+				<td>12</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://sabified.itch.io/gateopener">Gateopener</a></td>
+				<td><span class="early">6h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>77</td>
+				<td>7</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				795, 799, 805, 811, 819, 823, 826, 832, 838, 842, 842, 844, 847, 850, 858, 864, 875, 880, 884, 890,
+				895, 901, 911, 921, 924, 929, 940, 948, 955, 960, 967, 977,
+			]],
+			[ "10", [
+				1259, 1269, 1281, 1286, 1299, 1305, 1311, 1319, 1331, 1336, 1336, 1338, 1342, 1345, 1353, 1359, 1377, 1386, 1396, 1412,
+				1423, 1433, 1443, 1454, 1464, 1473, 1488, 1499, 1512, 1518, 1529, 1538,
+			]],
+			[ "20", [
+				1808, 1828, 1840, 1848, 1888, 1892, 1903, 1912, 1937, 1943, 1947, 1950, 1955, 1959, 1969, 1976, 1995, 2015, 2027, 2043,
+				2066, 2080, 2097, 2108, 2118, 2138, 2157, 2178, 2204, 2210, 2221, 2235,
+			]],
+			[ "ilscore", [
+				2497, 2504, 2583, 2619, 2695, 524, 535, 565, 586, 611, 654, 671, 686, 686, 689, 693, 698, 714, 732, 734,
+				742, 749, 752, 772, 791, 805, 814, 833, 849, 858, 884, 892, 900, 918, 933, 944, 949, 950, 965, 965,
+				965, 968, 968, 973, 977, 984, 990, 992, 994, 996, 1005, 1019, 1027, 1030, 1058, 1070, 1076, 1079, 1089, 554,
+				564, 577, 580, 592, 598, 603, 605, 616, 621, 623, 625, 626, 628, 630, 633, 638, 641, 647, 653, 655,
+				658, 661, 669, 673, 676, 683, 691, 698, 698, 707, 711,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

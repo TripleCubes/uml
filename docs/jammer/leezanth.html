@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Leezanth&#39;s jammer page</title>
+	<meta content="Leezanth&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/leezanth.html" property="og:url">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Leezanth</h1>
+		<a href="https://leezanth.itch.io">leezanth.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10294</p>
+		<p>Total ilScore: 41</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://leezanth.itch.io/cosmic-chase">Cosmic Chase</a></td>
+				<td><span class="late">18h 10m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>109</td>
+				<td>3</td>
+				<td>41</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3072, 3146, 3240, 3287, 3338, 3419, 3503, 3519, 3591, 3618, 3654, 3723, 3802, 4006, 4121, 4217, 4227, 4342, 4410, 4513,
+				4755, 4808, 4988, 5067, 5232, 5582, 5651, 5729, 5729, 5760, 5766, 5787, 5914, 6029, 6097, 6122, 6214, 6226, 6381, 6458,
+				6501, 6537, 6619, 6709, 6749, 6923, 6938, 6954, 7048, 7124, 7156, 7162, 7163, 7298, 7299, 7306, 7325, 7342, 7357, 7400,
+				7436, 7499, 7524, 7539, 7561, 7679, 7804, 7873, 7909, 8075, 8115, 8196, 8254, 8348, 8367, 8451, 8523, 8543, 8672, 8695,
+				8745, 8758, 8942, 8975, 8976, 8996, 9004, 9030, 9048, 9090, 9175, 9274, 9323, 9361, 9429, 9495, 9555, 9636, 9686, 9765,
+				9835, 9912, 10060, 10112, 10224, 10293,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>
