@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CyberToasty&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CyberToasty&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cybertoasty.html" property="og:url">
+	<meta content="Rank by game in top 20: 1545&#10;Rank by ilScore: 2498&#10;&#10;1 games&#10;&bull; Seaside Duels | MJ 108: Seaside | rank: 14 | ilscore: 105&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CyberToasty</h1>
+		<a href="https://cybertoasty.itch.io">cybertoasty.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1545</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2498</p>
+		<p>Total ilScore: 105</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cybertoasty.itch.io/seaside-duels">Seaside Duels</a></td>
+				<td><span class="early">4h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>14</td>
+				<td>22</td>
+				<td>105</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				789, 800, 814, 837, 853, 865, 866, 871, 880, 891, 899, 919, 926, 935, 954, 959, 970, 993, 1003, 1014, 1029, 1038, 1044, 1050, 1053, 1054, 1068, 1082, 1084, 1086, 1091, 1102, 1104, 1109, 1118, 1119, 1130, 1140, 1143, 1150,
+				1155, 1162, 1169, 1183, 1191, 1199, 1210, 1228, 1232, 1241, 1245, 1256, 1262, 1278, 1288, 1292, 1313, 1315, 1323, 1333, 1350, 1356, 1365, 1367, 1370, 1374, 1381, 1384, 1397, 1408, 1413, 1419, 1428, 1434, 1445, 1454, 1460, 1469, 1484, 1495,
+				1511, 1513, 1520, 1535, 1544,
+			]],
+			[ "ilscore", [
+				1084, 1112, 1159, 1340, 1359, 1376, 1376, 1380, 1387, 1396, 1427, 1444, 1459, 1474, 1490, 1497, 1539, 1563, 1581, 1598, 1615, 1638, 1647, 1696, 1708, 1716, 1733, 1759, 1773, 1773, 1778, 1797, 1797, 1800, 1808, 1811, 1816, 1826, 1833, 1839,
+				1848, 1851, 1863, 1874, 1893, 1914, 1923, 1968, 1994, 2013, 2026, 2036, 2046, 2061, 2084, 2091, 2108, 2111, 2126, 2128, 2162, 2168, 2176, 2182, 2183, 2190, 2193, 2200, 2216, 2247, 2262, 2273, 2287, 2302, 2313, 2320, 2332, 2357, 2379, 2401,
+				2422, 2436, 2458, 2479, 2497,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

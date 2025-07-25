@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PraiseTSun&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="PraiseTSun&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/praisetsun.html" property="og:url">
+	<meta content="Rank by game in top 20: 3381&#10;Rank by ilScore: 313&#10;&#10;5 games&#10;&bull; Rap Mage Battle | MJ 155: Wind | rank: 43 | ilscore: 61&#10;&bull; Game Bugs | MJ+ 6: Life | rank: 35 | ilscore: 77&#10;&bull; Dice beLIEveR | MJ 135: Deception | rank: 31 | ilscore: 51&#10;&bull; All you need is HP | MJ 128: Health | rank: 42 | ilscore: 73&#10;&bull; 5 Min Until Salvation | MJ 122: Intermission | rank: 17 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PraiseTSun</h1>
+		<a href="https://praisetsun.itch.io">praisetsun.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3381</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 313</p>
+		<p>Total ilScore: 306</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://praisetsun.itch.io/rap-mage-battle">Rap Mage Battle</a></td>
+				<td><span class="early">2h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>43</td>
+				<td>19</td>
+				<td>61</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://praisetsun.itch.io/game-bugs">Game Bugs</a></td>
+				<td><span class="early">11h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>35</td>
+				<td>12</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://praisetsun.itch.io/dice-believer">Dice beLIEveR</a></td>
+				<td><span class="early">14h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>31</td>
+				<td>7</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://praisetsun.itch.io/all-you-need-is-hp">All you need is HP</a></td>
+				<td><span class="early">10h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>42</td>
+				<td>13</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://praisetsun.itch.io/5-min-until-salvation">5 Min Until Salvation</a></td>
+				<td><span class="early">11h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>17</td>
+				<td>14</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1975, 1993, 2020, 2036, 2056, 2071, 2093, 2107, 2133, 2153, 2170, 2195, 2216, 2236, 2253, 2261, 2289, 2293, 2305, 2325, 2339, 2354, 2375, 2399, 2422, 2442, 2458, 2480, 2498, 2510, 2528, 2557, 2589, 2611, 2631, 2652, 2672, 2691, 2706, 2723,
+				2745, 2785, 2799, 2814, 2827, 2852, 2866, 2871, 2890, 2910, 2932, 2952, 2969, 3000, 3020, 3044, 3073, 3097, 3123, 3147, 3177, 3195, 3214, 3241, 3260, 3286, 3311, 3343, 3363, 3380,
+			]],
+			[ "ilscore", [
+				5897, 6048, 6121, 6158, 6193, 6271, 1361, 1368, 1405, 1417, 1428, 1447, 1469, 737, 738, 741, 338, 339, 339, 339, 341, 341, 342, 344, 345, 347, 348, 348, 355, 360, 363, 367, 372, 375, 225, 228, 235, 235, 238, 242,
+				242, 246, 252, 252, 252, 255, 255, 256, 257, 258, 259, 259, 263, 265, 271, 276, 278, 281, 282, 282, 291, 294, 297, 297, 299, 302, 302, 305, 309, 312,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

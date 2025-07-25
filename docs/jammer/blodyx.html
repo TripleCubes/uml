@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>&lt;B/odyx&gt;&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="&lt;B/odyx&gt;&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blodyx.html" property="og:url">
+	<meta content="Rank by game in top 10: 270&#10;Rank by game in top 20: 188&#10;Rank by ilScore: 66&#10;&#10;9 games&#10;&bull; Amphibian Galaxy | MJ 182: Horror | rank: 8 | ilscore: 73&#10;&bull; UN-PLUGGED | MJ 157: Electric | rank: 14 | ilscore: 81&#10;&bull; Solar Sorcerer | MJ 150: Magic | rank: 59 | ilscore: 63&#10;&bull; Potion Rush | MJ 146: Windows | rank: 45 | ilscore: 34&#10;&bull; Sunny Moon Farm | MJ 130: Lunar | rank: 161 | ilscore: 58&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>&lt;B/odyx&gt;</h1>
+		<a href="https://blodyx.itch.io">blodyx.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 270</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 188</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>14</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 66</p>
+		<p>Total ilScore: 598</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blodyx.itch.io/amphibian-galaxy">Amphibian Galaxy</a></td>
+				<td><span class="early">5h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-182-horror">MJ 182: Horror</a></td>
+				<td>93</td>
+				<td>8</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/un-plugged">UN-PLUGGED</a></td>
+				<td><span class="early">8h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>14</td>
+				<td>33</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/solar-sorcerer">Solar Sorcerer</a></td>
+				<td><span class="early">5h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>59</td>
+				<td>13</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/potion-rush">Potion Rush</a></td>
+				<td><span class="early">6h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>45</td>
+				<td>2</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/sunny-moon-farm">Sunny Moon Farm</a></td>
+				<td><span class="early">6h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>161</td>
+				<td>4</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/electrical-ground">Electrical Ground</a></td>
+				<td><span class="early">5h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>33</td>
+				<td>18</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/xp-attack">XP Attack</a></td>
+				<td><span class="early">8h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>7</td>
+				<td>11</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/pockets-are-handy">Pockets Are Handy!</a></td>
+				<td><span class="early">7h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>23</td>
+				<td>4</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://blodyx.itch.io/just-as-plannet">Just as Plannet</a></td>
+				<td><span class="early">10h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>22</td>
+				<td>20</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				591, 593, 598, 619, 623, 632, 645, 647, 655, 656, 659, 660, 672, 681, 683, 683, 683, 692, 696, 700, 707, 708, 715, 721, 722, 727, 727, 729, 732, 740, 746, 754, 764, 778, 779, 783, 787, 796, 797, 804,
+				812, 816, 829, 832, 838, 845, 857, 860, 863, 863, 865, 867, 869, 872, 883, 889, 892, 894, 899, 901, 901, 907, 246, 246, 249, 256, 260, 260, 263, 266, 269,
+			]],
+			[ "20", [
+				802, 806, 813, 834, 842, 854, 869, 873, 882, 884, 887, 888, 903, 913, 916, 918, 922, 930, 932, 937, 946, 949, 959, 969, 972, 979, 984, 991, 996, 1004, 1010, 1018, 1031, 1046, 1050, 1061, 1064, 312, 312, 316,
+				322, 327, 328, 335, 339, 343, 348, 349, 352, 353, 354, 357, 359, 361, 363, 364, 367, 369, 373, 373, 376, 377, 177, 177, 178, 180, 182, 182, 185, 185, 187,
+			]],
+			[ "ilscore", [
+				2862, 3005, 3072, 3194, 3483, 3542, 3584, 3585, 3589, 3595, 1299, 1327, 1345, 1358, 1371, 414, 415, 184, 185, 186, 190, 197, 197, 198, 151, 152, 152, 155, 157, 158, 159, 159, 160, 160, 161, 161, 161, 162, 164, 166,
+				166, 143, 143, 143, 144, 115, 115, 115, 116, 116, 116, 116, 78, 79, 79, 80, 80, 80, 80, 81, 82, 82, 83, 83, 84, 84, 84, 84, 84, 84, 85, 85, 85, 85, 85, 86, 86, 63, 63, 65,
+				65, 65, 65, 65, 65, 65,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

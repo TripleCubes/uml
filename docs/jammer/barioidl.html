@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>BIDL&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="BIDL&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/barioidl.html" property="og:url">
+	<meta content="Rank by ilScore: 122&#10;&#10;8 games&#10;&bull; train | MJ 114: Anime | rank: 53 | ilscore: 19&#10;&bull; Mortal | MJ 107: Music | rank: 25 | ilscore: 64&#10;&bull; prototype | MJ 103: Darkness | rank: 95 | ilscore: 59&#10;&bull; space invaders | MJ 100: Overload | rank: 130 | ilscore: 58&#10;&bull; annoyed birds | MJ 99: Birds | rank: 102 | ilscore: 87&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>BIDL</h1>
+		<a href="https://barioidl.itch.io">barioidl.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 122</p>
+		<p>Total ilScore: 472</p>
+
+		<h3 id="games_header">8 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://barioidl.itch.io/train">train</a></td>
+				<td><span class="early">1d 0h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>53</td>
+				<td>5</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/mortal">Mortal</a></td>
+				<td><span class="early">1d 7h early</span></td>
+				<td>
+					<a href="../jammer/azemazer.html">azemazer</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>25</td>
+				<td>13</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/voidborneold">prototype</a></td>
+				<td><span class="early">1h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>95</td>
+				<td>7</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/space-invaders">space invaders</a></td>
+				<td><span class="early">10h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>130</td>
+				<td>7</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/notangrybirds">annoyed birds</a></td>
+				<td><span class="early">5h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>102</td>
+				<td>44</td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/chains">Unrelated</a></td>
+				<td><span class="early">6h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>66</td>
+				<td>19</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/golden-wind">golden wind</a></td>
+				<td><span class="early">7h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>145</td>
+				<td>8</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://barioidl.itch.io/bubble">Fart of pain</a></td>
+				<td><span class="early">17h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>59</td>
+				<td>12</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1033, 413, 426, 441, 455, 462, 469, 476, 500, 202, 206, 209, 215, 217, 221, 227, 104, 76, 83, 85, 59, 63, 64, 71, 50, 55, 57, 57, 63, 64, 66, 66, 55, 55, 57, 60, 61, 62, 63, 63,
+				63, 65, 66, 66, 67, 69, 72, 74, 79, 80, 80, 83, 85, 89, 90, 91, 94, 94, 95, 95, 95, 96, 96, 96, 96, 96, 96, 96, 96, 98, 98, 98, 98, 99, 99, 99, 100, 100, 101, 101,
+				101, 101, 101, 104, 104, 105, 105, 105, 105, 105, 105, 105, 106, 107, 110, 111, 111, 111, 112, 112, 112, 113, 113, 115, 117, 120, 120, 120, 120, 121,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

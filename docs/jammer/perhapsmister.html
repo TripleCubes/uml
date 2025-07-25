@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PerhapsMister&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="PerhapsMister&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/perhapsmister.html" property="og:url">
+	<meta content="Rank by ilScore: 1422&#10;&#10;3 games&#10;&bull; Cupid&#39;s Couple Colony | MJ+ 2: Love | rank: 22 | ilscore: 48&#10;&bull; Rope Rush | MJ 52: Summit | rank: 60 | ilscore: 45&#10;&bull; StrafeBomber Rearmed | MJ 50: Islands | rank: 71 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PerhapsMister</h1>
+		<a href="https://perhapsmister.itch.io">perhapsmister.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1422</p>
+		<p>Total ilScore: 146</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://perhapsmister.itch.io/cupids-couple-colony">Cupid&#39;s Couple Colony</a></td>
+				<td><span class="early">11h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>22</td>
+				<td>10</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://perhapsmister.itch.io/minijam-summit-project">Rope Rush</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>60</td>
+				<td>7</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://perhapsmister.itch.io/strafebomber-rearmed">StrafeBomber Rearmed</a></td>
+				<td><span class="early">12h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>71</td>
+				<td>7</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				269, 340, 342, 87, 98, 107, 116, 122, 138, 52, 53, 54, 56, 58, 66, 77, 81, 89, 92, 97, 99, 102, 110, 114, 125, 128, 147, 151, 161, 173, 182, 185, 211, 239, 242, 245, 260, 275, 293, 304,
+				318, 329, 331, 336, 342, 360, 371, 372, 379, 384, 391, 395, 404, 433, 466, 485, 485, 499, 509, 520, 554, 566, 598, 620, 644, 684, 701, 715, 715, 717, 721, 727, 743, 760, 762, 771, 779, 783, 804, 825,
+				839, 848, 868, 884, 893, 920, 928, 935, 953, 968, 978, 984, 984, 998, 998, 998, 1001, 1001, 1006, 1009, 1017, 1024, 1027, 1029, 1033, 1042, 1056, 1064, 1067, 1097, 1110, 1117, 1120, 1132, 1135, 1156, 1168, 1173, 1190, 1193,
+				1203, 1209, 1230, 1231, 1235, 1237, 1238, 1241, 1241, 1243, 1253, 1266, 1277, 1283, 1289, 1295, 1307, 1316, 1322, 1338, 1348, 1363, 1382, 1387, 1399, 1409, 1421,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

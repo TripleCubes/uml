@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Isomorphic&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Isomorphic&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/isomorphic.html" property="og:url">
+	<meta content="Rank by ilScore: 1588&#10;&#10;2 games&#10;&bull; Blood nights | MJ 118: Vampires | rank: 49 | ilscore: 73&#10;&bull; Shadow on the Sands | MJ 103: Darkness | rank: 72 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Isomorphic</h1>
+		<a href="https://isomorphic.itch.io">isomorphic.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1588</p>
+		<p>Total ilScore: 139</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://isomorphic.itch.io/blood-nights">Blood nights</a></td>
+				<td><span class="early">6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>49</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://isomorphic.itch.io/shadow-on-the-sands">Shadow on the Sands</a></td>
+				<td><span class="early">57m 44s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>72</td>
+				<td>10</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2541, 2577, 2652, 2863, 2893, 3038, 3105, 3227, 3516, 3575, 3619, 3620, 3624, 3630, 3633, 3733, 865, 870, 878, 887, 892, 915, 936, 953, 966, 984, 1003, 1012, 1043, 1051, 1063, 1082, 1097, 1105, 1111, 1111, 1126, 1126, 1126, 1129,
+				1129, 1132, 1136, 1144, 1151, 1154, 1156, 1160, 1170, 1183, 1192, 1196, 1228, 1245, 1252, 1256, 1268, 1271, 1292, 1307, 1313, 1330, 1334, 1344, 1351, 1373, 1374, 1376, 1378, 1380, 1385, 1385, 1388, 1401, 1418, 1432, 1437, 1445, 1454, 1466,
+				1475, 1483, 1498, 1512, 1528, 1547, 1552, 1564, 1575, 1587,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

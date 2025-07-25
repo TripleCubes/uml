@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ReddBear&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ReddBear&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/reddbear.html" property="og:url">
+	<meta content="Rank by game in top 20: 3269&#10;Rank by ilScore: 9047&#10;&#10;1 games&#10;&bull; Damian&#39;s Space Adventure | MJ 24: Space | rank: 16 | ilscore: 49&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ReddBear</h1>
+		<a href="https://reddbear.itch.io">reddbear.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3269</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9047</p>
+		<p>Total ilScore: 49</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://reddbear.itch.io/damians-space-adventure">Damian&#39;s Space Adventure</a></td>
+				<td><span class="early">10m 26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-24-space">MJ 24: Space</a></td>
+				<td>56</td>
+				<td>16</td>
+				<td>5</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				190, 213, 222, 223, 229, 241, 254, 258, 271, 286, 292, 295, 307, 309, 316, 323, 336, 343, 350, 358, 360, 373, 384, 401, 410, 411, 433, 463, 478, 497, 513, 533, 550, 573, 600, 625, 626, 632, 657, 685,
+				712, 741, 749, 764, 788, 803, 820, 846, 869, 888, 902, 921, 946, 966, 985, 1002, 1026, 1047, 1067, 1080, 1100, 1117, 1139, 1159, 1184, 1204, 1229, 1248, 1274, 1290, 1313, 1329, 1348, 1370, 1394, 1409, 1429, 1444, 1462, 1487,
+				1513, 1525, 1534, 1555, 1568, 1584, 1603, 1624, 1639, 1658, 1676, 1698, 1720, 1743, 1747, 1768, 1781, 1802, 1820, 1840, 1855, 1877, 1899, 1909, 1927, 1954, 1970, 1990, 2006, 2028, 2042, 2068, 2087, 2100, 2125, 2146, 2162, 2178, 2185, 2213,
+				2216, 2225, 2244, 2257, 2272, 2293, 2313, 2337, 2354, 2372, 2393, 2411, 2423, 2441, 2470, 2502, 2524, 2544, 2565, 2585, 2601, 2617, 2634, 2656, 2696, 2707, 2723, 2734, 2759, 2773, 2779, 2794, 2810, 2827, 2845, 2862, 2893, 2913, 2937, 2962,
+				2986, 3012, 3036, 3066, 3084, 3103, 3130, 3149, 3175, 3199, 3231, 3251, 3268,
+			]],
+			[ "ilscore", [
+				69, 83, 86, 89, 93, 97, 105, 106, 115, 129, 133, 134, 140, 143, 144, 149, 159, 162, 166, 169, 170, 177, 188, 211, 215, 218, 304, 377, 379, 430, 451, 506, 549, 644, 655, 681, 684, 690, 729, 752,
+				887, 987, 989, 1005, 1094, 1118, 1142, 1178, 1235, 1264, 1332, 1364, 1524, 1567, 1627, 1701, 1801, 1831, 1982, 2076, 2110, 2134, 2205, 2326, 2462, 2519, 2631, 2688, 2770, 2810, 2850, 2923, 2995, 3002, 3065, 3083, 3109, 3167, 3235, 3426,
+				3529, 3616, 3622, 3727, 3787, 3884, 4120, 4168, 4334, 4411, 4554, 4889, 4957, 5025, 5025, 5045, 5050, 5062, 5177, 5281, 5336, 5348, 5425, 5433, 5577, 5648, 5674, 5705, 5785, 5873, 5907, 6071, 6088, 6096, 6181, 6254, 6283, 6288, 6289, 6411,
+				6411, 6415, 6420, 6428, 6440, 6473, 6502, 6566, 6582, 6590, 6605, 6715, 6821, 6877, 6902, 7061, 7097, 7165, 7216, 7293, 7308, 7392, 7455, 7474, 7592, 7604, 7650, 7660, 7837, 7857, 7859, 7864, 7865, 7882, 7886, 7918, 7997, 8086, 8131, 8155,
+				8215, 8275, 8329, 8403, 8444, 8514, 8579, 8649, 8787, 8830, 8935, 8996, 9046,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

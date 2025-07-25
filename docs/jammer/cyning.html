@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Holmgang&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Holmgang&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cyning.html" property="og:url">
+	<meta content="Rank by game in top 20: 266&#10;Rank by ilScore: 1948&#10;&#10;3 games&#10;&bull; Zoo Crew: The Great Hike | MJ 48: Teamwork | rank: 17 | ilscore: 31&#10;&bull; Trending | MJ 47: Internet | rank: 19 | ilscore: 50&#10;&bull; The Tribunalist | MJ 46: Justice | rank: 19 | ilscore: 43&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Holmgang</h1>
+		<a href="https://cyning.itch.io">cyning.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 266</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>19</span>
+			<span>19</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1948</p>
+		<p>Total ilScore: 123</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cyning.itch.io/zoo-crew">Zoo Crew: The Great Hike</a></td>
+				<td><span class="early">7h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-48-teamwork">MJ 48: Teamwork</a></td>
+				<td>31</td>
+				<td>17</td>
+				<td>5</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><a href="https://cyning.itch.io/trending">Trending</a></td>
+				<td><span class="early">12h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-47-internet">MJ 47: Internet</a></td>
+				<td>52</td>
+				<td>19</td>
+				<td>12</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://cyning.itch.io/the-tribunalist">The Tribunalist</a></td>
+				<td><span class="early">9h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-46-justice">MJ 46: Justice</a></td>
+				<td>43</td>
+				<td>19</td>
+				<td>9</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				394, 88, 41, 41, 41, 43, 43, 43, 43, 47, 47, 49, 50, 51, 51, 54, 57, 57, 57, 57, 57, 64, 64, 65, 65, 65, 66, 66, 68, 68, 68, 70, 73, 74, 75, 75, 75, 81, 85, 85,
+				86, 86, 86, 86, 89, 91, 91, 91, 92, 93, 95, 97, 99, 103, 104, 107, 107, 108, 112, 114, 114, 116, 116, 117, 119, 122, 122, 123, 123, 123, 124, 125, 126, 127, 128, 129, 132, 132, 132, 134,
+				135, 137, 138, 140, 140, 142, 147, 148, 154, 156, 156, 157, 158, 160, 160, 162, 165, 168, 171, 171, 173, 174, 176, 176, 177, 178, 179, 180, 182, 182, 183, 185, 185, 186, 190, 190, 191, 192, 194, 196,
+				200, 202, 202, 207, 210, 212, 214, 218, 219, 220, 222, 225, 226, 229, 230, 230, 233, 235, 237, 237, 240, 242, 244, 246, 251, 255, 257, 257, 261, 262, 265,
+			]],
+			[ "ilscore", [
+				276, 55, 30, 31, 43, 54, 54, 56, 62, 68, 72, 80, 86, 87, 90, 92, 94, 97, 107, 137, 137, 143, 150, 155, 157, 161, 174, 178, 191, 197, 222, 230, 240, 261, 275, 280, 310, 340, 358, 364,
+				382, 399, 428, 441, 458, 472, 480, 487, 493, 517, 528, 532, 546, 555, 560, 566, 580, 616, 649, 666, 669, 688, 703, 722, 776, 788, 825, 852, 887, 991, 1014, 1033, 1033, 1039, 1043, 1052, 1077, 1096, 1105, 1113,
+				1127, 1136, 1165, 1191, 1207, 1221, 1236, 1257, 1265, 1301, 1313, 1324, 1342, 1360, 1372, 1378, 1380, 1396, 1396, 1397, 1403, 1405, 1407, 1417, 1425, 1432, 1436, 1438, 1444, 1455, 1471, 1486, 1490, 1521, 1542, 1556, 1563, 1574, 1578, 1598,
+				1619, 1626, 1644, 1647, 1658, 1663, 1684, 1685, 1689, 1692, 1693, 1701, 1702, 1704, 1715, 1742, 1755, 1764, 1774, 1787, 1803, 1808, 1818, 1840, 1857, 1873, 1892, 1901, 1918, 1935, 1947,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Alambik ⚗&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Alambik ⚗&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/alambik.html" property="og:url">
+	<meta content="Rank by game in top 1: 20&#10;Rank by game in top 5: 76&#10;Rank by game in top 10: 149&#10;Rank by game in top 20: 157&#10;Rank by ilScore: 417&#10;&#10;3 games&#10;&bull; BRUTAL RECOIL | MJ+ 6: Life | rank: 20 | ilscore: 84&#10;&bull; THE LAST WALL | MJ 122: Intermission | rank: 1 | ilscore: 60&#10;&bull; ☢ LITTLE FAT BOY ² | MJ 99: Birds | rank: 1 | ilscore: 121&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Alambik ⚗</h1>
+		<a href="https://alambik.itch.io">alambik.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 20</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 76</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 149</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 157</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span class="box_majorjam">20</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 417</p>
+		<p>Total ilScore: 264</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://alambik.itch.io/brutal-recoil">BRUTAL RECOIL</a></td>
+				<td><span class="early">22m 8s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>20</td>
+				<td>28</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://alambik.itch.io/the-last-wall">THE LAST WALL</a></td>
+				<td><span class="early">1h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>1</td>
+				<td>22</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://alambik.itch.io/little-fat-boy-2">☢ LITTLE FAT BOY ²</a></td>
+				<td><span class="early">1h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>1</td>
+				<td>43</td>
+				<td>121</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				94, 95, 96, 96, 96, 98, 99, 102, 102, 103, 105, 106, 107, 108, 109, 111, 111, 112, 115, 115, 116, 116, 116, 117, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
+				15, 16, 16, 16, 17, 17, 17, 18, 18, 18, 18, 18, 18, 19,
+			]],
+			[ "5", [
+				184, 195, 199, 199, 202, 205, 206, 213, 213, 214, 216, 219, 225, 231, 235, 235, 236, 241, 248, 249, 253, 253, 253, 254, 43, 43, 43, 45, 45, 46, 46, 48, 48, 48, 48, 48, 48, 49, 49, 49,
+				50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 51, 51, 52, 52, 53, 54, 54, 54, 55, 55, 57, 59, 59, 59, 59, 61, 61, 61, 62, 62, 63, 63, 63, 63, 63, 64, 64, 64,
+				65, 66, 66, 66, 66, 66, 66, 67, 68, 68, 68, 74, 74, 75,
+			]],
+			[ "10", [
+				265, 277, 280, 281, 286, 289, 293, 303, 303, 306, 309, 312, 319, 325, 331, 331, 331, 336, 345, 346, 350, 350, 353, 354, 84, 84, 84, 85, 85, 86, 86, 88, 89, 89, 90, 91, 93, 94, 97, 97,
+				99, 100, 100, 101, 101, 102, 102, 102, 102, 102, 103, 103, 104, 104, 107, 107, 108, 110, 110, 110, 111, 111, 113, 115, 115, 116, 117, 119, 119, 120, 123, 124, 126, 128, 128, 128, 128, 129, 130, 132,
+				133, 135, 136, 136, 136, 137, 137, 138, 139, 140, 140, 146, 146, 148,
+			]],
+			[ "20", [
+				423, 434, 438, 442, 445, 450, 457, 466, 470, 475, 481, 485, 492, 501, 511, 511, 512, 520, 533, 535, 547, 549, 556, 560, 156, 157, 159, 160, 162, 168, 169, 174, 176, 176, 177, 178, 180, 181, 183, 185,
+				101, 103, 105, 105, 106, 107, 109, 109, 109, 109, 109, 109, 110, 110, 111, 111, 111, 114, 114, 114, 114, 116, 118, 119, 120, 122, 124, 125, 125, 127, 128, 128, 130, 131, 133, 134, 137, 137, 137, 138,
+				139, 141, 143, 145, 147, 148, 148, 149, 150, 152, 152, 155, 155, 156,
+			]],
+			[ "ilscore", [
+				642, 676, 693, 697, 719, 736, 757, 815, 828, 864, 891, 925, 1034, 1057, 1076, 1076, 1082, 1086, 1096, 1121, 1140, 1149, 1157, 1171, 494, 510, 525, 535, 541, 559, 567, 574, 590, 592, 595, 610, 617, 626, 627, 631,
+				273, 273, 273, 274, 275, 276, 278, 278, 279, 282, 283, 283, 288, 292, 296, 299, 301, 306, 311, 317, 320, 320, 321, 328, 333, 343, 346, 348, 348, 360, 360, 362, 362, 364, 364, 365, 370, 370, 373, 377,
+				377, 380, 380, 386, 392, 395, 397, 398, 400, 403, 405, 407, 411, 416,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

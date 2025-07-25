@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Namlit&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Namlit&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/namlit.html" property="og:url">
+	<meta content="Rank by game in top 20: 1219&#10;Rank by ilScore: 1684&#10;&#10;1 games&#10;&bull; Achromatopsia | MJ 111: Colors | rank: 18 | ilscore: 135&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Namlit</h1>
+		<a href="https://namlit.itch.io">namlit.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1219</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1684</p>
+		<p>Total ilScore: 135</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nouhidev.itch.io/achromatopsia">Achromatopsia</a></td>
+				<td><span class="early">2h 30m early</span></td>
+				<td>
+					<a href="../jammer/nouhidev.html">nouhidev</a>,
+					<a href="../jammer/nouhidev2.html">nouhideV2</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>18</td>
+				<td>22</td>
+				<td>135</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				634, 646, 659, 659, 659, 667, 678, 682, 699, 701, 711, 722, 726, 733, 755, 763, 774, 788, 792, 801, 803, 805, 807, 822, 829, 832, 836, 840, 844, 846, 851, 860, 863, 873, 881, 884, 889, 894, 901, 906,
+				912, 916, 924, 935, 950, 954, 965, 967, 977, 983, 996, 1004, 1010, 1031, 1035, 1043, 1053, 1066, 1071, 1081, 1082, 1084, 1088, 1093, 1095, 1107, 1115, 1119, 1124, 1131, 1138, 1147, 1153, 1158, 1163, 1168, 1181, 1193, 1194, 1199,
+				1211, 1218,
+			]],
+			[ "ilscore", [
+				830, 849, 865, 865, 871, 875, 883, 906, 925, 931, 939, 951, 956, 981, 1000, 1017, 1030, 1044, 1064, 1071, 1103, 1112, 1123, 1143, 1159, 1167, 1173, 1173, 1189, 1189, 1190, 1194, 1194, 1197, 1205, 1213, 1220, 1223, 1225, 1229,
+				1240, 1252, 1263, 1267, 1299, 1316, 1325, 1330, 1342, 1345, 1366, 1382, 1388, 1406, 1410, 1420, 1427, 1450, 1451, 1453, 1455, 1457, 1462, 1462, 1465, 1478, 1499, 1513, 1519, 1527, 1537, 1548, 1553, 1563, 1585, 1601, 1616, 1637, 1643, 1660,
+				1673, 1683,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

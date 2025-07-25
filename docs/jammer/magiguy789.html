@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Magi&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Magi&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/magiguy789.html" property="og:url">
+	<meta content="Rank by game in top 5: 253&#10;Rank by game in top 10: 233&#10;Rank by game in top 20: 182&#10;Rank by ilScore: 572&#10;&#10;3 games&#10;&bull; Mama&#39;s Pieria | MJ 163: Dessert | rank: 9 | ilscore: 52&#10;&bull; E.V.I.L. | MJ+ 6: Life | rank: 2 | ilscore: 100&#10;&bull; ELECTROHERO | MJ 134: Islands | rank: 19 | ilscore: 77&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Magi</h1>
+		<a href="https://magiguy789.itch.io">magiguy789.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 253</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 233</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>9</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 182</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>9</span>
+			<span>19</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 572</p>
+		<p>Total ilScore: 229</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cecixp.itch.io/mamas-pieria">Mama&#39;s Pieria</a></td>
+				<td><span class="early">4h 6m early</span></td>
+				<td>
+					<a href="../jammer/cecixp.html">cecilia</a>,
+					<a href="../jammer/creeperbob16.html">Creeperbob16</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-163-dessert">MJ 163: Dessert</a></td>
+				<td>51</td>
+				<td>9</td>
+				<td>16</td>
+				<td>52</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://creeperbob16.itch.io/evil">E.V.I.L.</a></td>
+				<td><span class="early">47m 17s early</span></td>
+				<td>
+					<a href="../jammer/creeperbob16.html">Creeperbob16</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>2</td>
+				<td>19</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td><a href="https://magiguy789.itch.io/electrohero">ELECTROHERO</a></td>
+				<td><span class="late">11h 7m late</span></td>
+				<td>
+					<a href="../jammer/creeperbob16.html">Creeperbob16</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>19</td>
+				<td>11</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				165, 170, 174, 176, 178, 185, 186, 186, 186, 186, 188, 188, 189, 189, 191, 195, 195, 195, 195, 195, 197, 198, 201, 203, 204, 208, 212, 217, 218, 221, 221, 224, 225, 226, 228, 230, 230, 231, 231, 231,
+				232, 234, 234, 235, 235, 237, 237, 241, 242, 246, 246, 252, 252, 252,
+			]],
+			[ "10", [
+				302, 307, 311, 315, 316, 322, 323, 324, 326, 326, 328, 329, 331, 335, 337, 341, 341, 345, 347, 348, 350, 353, 354, 357, 361, 365, 192, 196, 198, 200, 201, 204, 204, 205, 205, 205, 205, 206, 207, 209,
+				210, 212, 213, 213, 213, 213, 213, 215, 222, 226, 226, 229, 229, 232,
+			]],
+			[ "20", [
+				1425, 1429, 1432, 1438, 208, 211, 211, 214, 214, 217, 218, 219, 220, 221, 222, 225, 225, 227, 230, 231, 233, 235, 235, 236, 239, 240, 243, 248, 251, 252, 148, 149, 149, 151, 153, 153, 156, 157, 159, 160,
+				162, 162, 162, 163, 164, 165, 167, 168, 171, 172, 172, 173, 174, 176, 176, 179, 179, 181,
+			]],
+			[ "ilscore", [
+				3348, 3360, 3366, 3368, 663, 665, 669, 671, 674, 678, 682, 685, 690, 693, 694, 694, 702, 712, 717, 718, 739, 742, 748, 753, 765, 770, 788, 800, 802, 816, 476, 480, 482, 496, 499, 504, 505, 505, 505, 506,
+				509, 511, 512, 517, 519, 520, 522, 526, 531, 533, 535, 540, 547, 552, 555, 561, 563, 571,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

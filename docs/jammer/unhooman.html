@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>unhooman&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="unhooman&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/unhooman.html" property="og:url">
+	<meta content="Rank by game in top 20: 1952&#10;Rank by ilScore: 8083&#10;&#10;1 games&#10;&bull; Ebb and Flow | MJ+ 2: Love | rank: 12 | ilscore: 55&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>unhooman</h1>
+		<a href="https://unhooman.itch.io">unhooman.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1952</p>
+		<div class="boxes">
+			<span class="box_majorjam">12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8083</p>
+		<p>Total ilScore: 55</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://unhooman.itch.io/ebb-and-flow">Ebb and Flow</a></td>
+				<td><span class="early">56s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>12</td>
+				<td>8</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				341, 348, 354, 370, 375, 403, 425, 435, 445, 462, 471, 478, 496, 510, 514, 526, 532, 558, 568, 580, 599, 601, 608, 630, 644, 651, 656, 672, 692, 701, 712, 732, 739, 754, 764, 772, 781, 791, 799, 812,
+				819, 825, 835, 841, 867, 896, 908, 913, 930, 942, 948, 967, 983, 999, 1017, 1036, 1059, 1080, 1099, 1100, 1105, 1113, 1124, 1141, 1159, 1168, 1178, 1196, 1200, 1216, 1243, 1254, 1266, 1283, 1293, 1299, 1314, 1318, 1321, 1342,
+				1360, 1363, 1366, 1372, 1386, 1388, 1390, 1395, 1397, 1407, 1417, 1422, 1432, 1436, 1445, 1451, 1470, 1481, 1491, 1503, 1531, 1538, 1546, 1551, 1565, 1572, 1592, 1604, 1612, 1647, 1647, 1654, 1664, 1690, 1696, 1700, 1702, 1707, 1711, 1722,
+				1729, 1744, 1761, 1767, 1776, 1793, 1800, 1818, 1829, 1836, 1850, 1870, 1887, 1906, 1911, 1923, 1938, 1951,
+			]],
+			[ "ilscore", [
+				572, 579, 584, 616, 625, 749, 851, 853, 865, 946, 969, 987, 1015, 1073, 1086, 1148, 1172, 1320, 1354, 1406, 1484, 1579, 1596, 1738, 1825, 1845, 1864, 1930, 2043, 2165, 2209, 2313, 2365, 2437, 2469, 2501, 2561, 2632, 2635, 2691,
+				2705, 2716, 2765, 2826, 3016, 3117, 3199, 3206, 3304, 3356, 3448, 3672, 3716, 3879, 3958, 4092, 4414, 4480, 4541, 4541, 4556, 4560, 4567, 4676, 4766, 4806, 4818, 4888, 4891, 5028, 5094, 5115, 5143, 5219, 5302, 5326, 5482, 5492, 5497, 5578,
+				5637, 5656, 5664, 5666, 5782, 5782, 5785, 5790, 5796, 5805, 5828, 5846, 5893, 5903, 5911, 5917, 6024, 6116, 6164, 6185, 6343, 6372, 6426, 6466, 6536, 6541, 6618, 6676, 6688, 6797, 6807, 6838, 6845, 7012, 7024, 7027, 7030, 7031, 7037, 7046,
+				7071, 7149, 7237, 7275, 7294, 7345, 7395, 7431, 7495, 7535, 7606, 7666, 7729, 7862, 7890, 7988, 8037, 8082,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

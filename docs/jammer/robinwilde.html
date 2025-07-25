@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RobinWilde&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="RobinWilde&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/robinwilde.html" property="og:url">
+	<meta content="Rank by game in top 20: 2821&#10;Rank by ilScore: 7730&#10;&#10;1 games&#10;&bull; Doodle Downpour | MJ 82: Doodle | rank: 13 | ilscore: 57&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RobinWilde</h1>
+		<a href="https://robinwilde.itch.io">robinwilde.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2821</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7730</p>
+		<p>Total ilScore: 57</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://robinwilde.itch.io/doodle-downpour-v02">Doodle Downpour</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>13</td>
+				<td>14</td>
+				<td>57</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				933, 955, 975, 1000, 1017, 1042, 1054, 1080, 1098, 1115, 1132, 1151, 1159, 1183, 1196, 1204, 1219, 1237, 1263, 1292, 1305, 1311, 1332, 1345, 1361, 1380, 1399, 1414, 1433, 1451, 1473, 1495, 1518, 1520, 1535, 1544, 1556, 1574, 1594, 1608,
+				1619, 1641, 1645, 1663, 1693, 1710, 1725, 1742, 1764, 1779, 1805, 1815, 1821, 1848, 1870, 1882, 1890, 1896, 1924, 1927, 1930, 1942, 1945, 1957, 1979, 1991, 2015, 2028, 2042, 2058, 2076, 2089, 2107, 2131, 2163, 2185, 2201, 2213, 2233, 2245,
+				2264, 2281, 2299, 2339, 2344, 2360, 2371, 2396, 2405, 2409, 2415, 2424, 2430, 2439, 2449, 2481, 2501, 2525, 2540, 2563, 2580, 2605, 2627, 2646, 2665, 2691, 2712, 2738, 2756, 2788, 2803, 2820,
+			]],
+			[ "ilscore", [
+				1751, 1817, 1930, 2049, 2093, 2194, 2242, 2312, 2340, 2362, 2417, 2487, 2489, 2547, 2558, 2568, 2612, 2672, 2858, 2957, 3036, 3042, 3141, 3183, 3271, 3494, 3537, 3699, 3777, 3910, 4224, 4289, 4348, 4348, 4363, 4368, 4374, 4483, 4573, 4605,
+				4617, 4681, 4683, 4819, 4882, 4900, 4925, 4996, 5075, 5097, 5254, 5264, 5269, 5343, 5404, 5421, 5429, 5432, 5545, 5545, 5548, 5553, 5558, 5569, 5591, 5608, 5651, 5658, 5667, 5673, 5773, 5864, 5905, 5918, 6073, 6100, 6152, 6187, 6254, 6259,
+				6335, 6389, 6402, 6503, 6514, 6543, 6548, 6709, 6719, 6723, 6726, 6728, 6735, 6744, 6763, 6838, 6927, 6961, 6977, 7027, 7075, 7109, 7172, 7209, 7279, 7337, 7398, 7518, 7542, 7636, 7683, 7729,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Rufflesworth&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Rufflesworth&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rufflesworth.html" property="og:url">
+	<meta content="Rank by game in top 5: 92&#10;Rank by game in top 10: 163&#10;Rank by game in top 20: 309&#10;Rank by ilScore: 466&#10;&#10;4 games&#10;&bull; MrTwoItems | MJ 152: Heroes | rank: 3 | ilscore: 62&#10;&bull; The Shield of Mouston | MJ 127: Cats | rank: 42 | ilscore: 69&#10;&bull; Time For Speed (Jam Version) | MJ 126: Lost | rank: 3 | ilscore: 73&#10;&bull; Sabre The Sword-Fish | MJ 108: Seaside | rank: 179 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Rufflesworth</h1>
+		<a href="https://rufflesworth.itch.io">rufflesworth.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 92</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>3</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 163</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>3</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 309</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>3</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 466</p>
+		<p>Total ilScore: 255</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rufflesworth.itch.io/mrtwoitems">MrTwoItems</a></td>
+				<td><span class="early">7m 37s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-152-heroes">MJ 152: Heroes</a></td>
+				<td>52</td>
+				<td>3</td>
+				<td>9</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://rufflesworth.itch.io/the-shield-of-mouston">The Shield of Mouston</a></td>
+				<td><span class="early">1h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>42</td>
+				<td>11</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://rufflesworth.itch.io/timeforspeedjamversion">Time For Speed (Jam Version)</a></td>
+				<td><span class="early">2h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>3</td>
+				<td>17</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://rufflesworth.itch.io/sabre-the-sword-fish">Sabre The Sword-Fish</a></td>
+				<td><span class="early">53s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>179</td>
+				<td>4</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				418, 422, 424, 429, 430, 432, 432, 438, 444, 446, 446, 446, 451, 455, 460, 467, 468, 475, 479, 479, 481, 481, 483, 485, 491, 493, 499, 65, 66, 66, 66, 66, 67, 68, 71, 73, 74, 74, 75, 77,
+				78, 78, 78, 78, 78, 78, 78, 78, 78, 79, 79, 79, 80, 82, 82, 82, 82, 82, 82, 83, 84, 84, 84, 90, 90, 91,
+			]],
+			[ "10", [
+				562, 576, 579, 587, 588, 591, 593, 605, 612, 614, 615, 617, 622, 626, 630, 637, 638, 645, 649, 650, 653, 653, 655, 658, 664, 668, 676, 120, 121, 122, 122, 122, 123, 124, 127, 129, 130, 131, 133, 134,
+				135, 136, 138, 139, 140, 142, 142, 142, 142, 143, 144, 146, 147, 149, 150, 150, 150, 151, 151, 152, 153, 154, 154, 160, 160, 162,
+			]],
+			[ "20", [
+				785, 799, 803, 812, 814, 817, 819, 834, 842, 845, 849, 853, 857, 859, 864, 874, 877, 887, 895, 898, 903, 908, 915, 920, 926, 930, 938, 221, 223, 225, 225, 226, 229, 230, 233, 238, 241, 242, 246, 249,
+				252, 255, 258, 259, 260, 262, 264, 266, 268, 270, 270, 273, 275, 278, 278, 281, 282, 284, 286, 291, 296, 297, 297, 304, 305, 308,
+			]],
+			[ "ilscore", [
+				4110, 4189, 4328, 4658, 4728, 4791, 4791, 4807, 4812, 4820, 4932, 5033, 5078, 5089, 5163, 5167, 5309, 5378, 5399, 1195, 464, 474, 479, 492, 494, 496, 506, 514, 521, 522, 524, 534, 535, 541, 542, 545, 547, 551, 553, 556,
+				562, 563, 563, 573, 582, 587, 338, 342, 346, 351, 356, 359, 360, 361, 370, 374, 383, 384, 386, 387, 400, 401, 404, 404, 405, 405, 405, 410, 411, 414, 418, 418, 421, 423, 428, 433, 436, 438, 441, 446,
+				450, 453, 458, 461, 465,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

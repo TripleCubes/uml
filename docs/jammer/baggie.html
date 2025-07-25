@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Baggie&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Baggie&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/baggie.html" property="og:url">
+	<meta content="Rank by game in top 5: 45&#10;Rank by game in top 10: 16&#10;Rank by game in top 20: 23&#10;Rank by ilScore: 286&#10;&#10;9 games&#10;&bull; Harry the bunny and the magic wands | MJ 41: Magic | rank: 4 | ilscore: 36&#10;&bull; Super Menu Maker | MJ 37: Engineering | rank: 4 | ilscore: 17&#10;&bull; Amazon | MJ 36: Nature | rank: 9 | ilscore: 42&#10;&bull; Abbey street | MJ 34: Balance | rank: 4 | ilscore: 35&#10;&bull; THE DOLPHIN NIGHT demo | MJ 33: Underwater | rank: 10 | ilscore: 47&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Baggie</h1>
+		<a href="https://baggie.itch.io">baggie.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 45</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>4</span>
+			<span>4</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 16</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>4</span>
+			<span>4</span>
+			<span>6</span>
+			<span>6</span>
+			<span>9</span>
+			<span>10</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 23</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>4</span>
+			<span>4</span>
+			<span>6</span>
+			<span>6</span>
+			<span>9</span>
+			<span>10</span>
+			<span>17</span>
+			<span>8</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 286</p>
+		<p>Total ilScore: 320</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://baggie.itch.io/htbatmw">Harry the bunny and the magic wands</a></td>
+				<td><span class="early">7s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-41-magic">MJ 41: Magic</a></td>
+				<td>28</td>
+				<td>4</td>
+				<td>11</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/super-menu-maker">Super Menu Maker</a></td>
+				<td><span class="early">22h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-37-engineering">MJ 37: Engineering</a></td>
+				<td>11</td>
+				<td>4</td>
+				<td>5</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/amazon">Amazon</a></td>
+				<td><span class="early">8h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-36-nature">MJ 36: Nature</a></td>
+				<td>37</td>
+				<td>9</td>
+				<td>4</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/abbey-street">Abbey street</a></td>
+				<td><span class="early">7h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-34-balance">MJ 34: Balance</a></td>
+				<td>25</td>
+				<td>4</td>
+				<td>15</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/the-dolphin-night-demo">THE DOLPHIN NIGHT demo</a></td>
+				<td><span class="early">5h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-33-underwater">MJ 33: Underwater</a></td>
+				<td>46</td>
+				<td>10</td>
+				<td>14</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/explosiors">EXPLOSIORS (demo)</a></td>
+				<td><span class="early">2m 47s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-32-explosions">MJ 32: Explosions</a></td>
+				<td>36</td>
+				<td>29</td>
+				<td>7</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/ghost">Ghost</a></td>
+				<td><span class="early">4h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-30-gameboy">MJ 30: GBStudio</a></td>
+				<td>34</td>
+				<td>6</td>
+				<td>15</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/no-combat">NO COMBAT, the red ninja odyssey</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>6</td>
+				<td>12</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://baggie.itch.io/unnamed-pirate">Unnamed pirate</a></td>
+				<td><span class="early">4h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-28-pirates">MJ 28: Pirates</a></td>
+				<td>38</td>
+				<td>17</td>
+				<td>9</td>
+				<td>35</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				121, 125, 129, 22, 22, 23, 24, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13,
+				14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 21, 21, 21, 21, 23, 24,
+				24, 24, 24, 24, 24, 24, 25, 26, 27, 27, 27, 27, 27, 27, 27, 27, 28, 28, 28, 28, 29, 29, 29, 29, 29, 29, 30, 30, 31, 31, 31, 31, 32, 32, 32, 32, 32, 32, 32, 32,
+				32, 33, 33, 33, 33, 33, 34, 34, 34, 34, 34, 34, 34, 35, 35, 36, 37, 37, 37, 38, 38, 39, 39, 39, 39, 40, 40, 40, 40, 41, 42, 42, 42, 42, 42, 42, 42, 42, 42, 42,
+				42, 43, 44,
+			]],
+			[ "10", [
+				122, 25, 26, 27, 13, 7, 7, 5, 4, 4, 4, 4, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9,
+				9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11,
+				11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14,
+				15, 15, 15, 15, 15, 15, 15, 15,
+			]],
+			[ "20", [
+				276, 41, 21, 22, 23, 12, 6, 6, 4, 3, 3, 3, 3, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7,
+				7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11,
+				11, 12, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 18, 19, 19, 19,
+				19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+				21, 21, 21, 21, 22, 22, 22, 22, 22,
+			]],
+			[ "ilscore", [
+				214, 41, 18, 18, 12, 5, 4, 4, 3, 3, 3, 3, 3, 2, 2, 2, 2, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9,
+				9, 10, 12, 12, 15, 15, 17, 18, 18, 19, 22, 25, 27, 29, 32, 35, 36, 37, 37, 43, 43, 45, 47, 48, 49, 50, 52, 55, 59, 60, 62, 63, 64, 65, 70, 74, 80, 88, 89, 94,
+				94, 98, 104, 106, 113, 117, 121, 128, 133, 136, 136, 136, 136, 137, 142, 144, 145, 146, 147, 148, 152, 154, 155, 157, 163, 166, 168, 176, 176, 176, 178, 180, 180, 181, 181, 184, 184, 184, 185, 186,
+				186, 188, 189, 189, 189, 192, 194, 197, 200, 204, 204, 206, 208, 208, 211, 218, 219, 221, 224, 225, 229, 234, 235, 235, 237, 238, 239, 240, 240, 240, 241, 244, 248, 254, 258, 260, 261, 262, 262, 270,
+				272, 274, 276, 277, 280, 280, 282, 284, 285,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

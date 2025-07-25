@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SporkWizard&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SporkWizard&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sporkwizard.html" property="og:url">
+	<meta content="Rank by game in top 20: 3196&#10;Rank by ilScore: 9463&#10;&#10;1 games&#10;&bull; Geode Station | MJ 57: Underground | rank: 19 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SporkWizard</h1>
+		<a href="https://sporkwizard.itch.io">sporkwizard.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3196</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9463</p>
+		<p>Total ilScore: 47</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sporkwizard.itch.io/geode-station">Geode Station</a></td>
+				<td><span class="late">37m 59s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-57-underground">MJ 57: Underground</a></td>
+				<td>49</td>
+				<td>19</td>
+				<td>5</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				574, 599, 601, 607, 632, 659, 686, 715, 722, 737, 761, 776, 793, 819, 842, 861, 875, 894, 919, 939, 958, 975, 999, 1020, 1040, 1053, 1073, 1090, 1112, 1132, 1157, 1177, 1202, 1221, 1247, 1263, 1286, 1302, 1321, 1342,
+				1366, 1382, 1397, 1412, 1430, 1455, 1481, 1493, 1502, 1523, 1536, 1552, 1571, 1592, 1607, 1626, 1644, 1666, 1688, 1711, 1714, 1732, 1744, 1765, 1783, 1803, 1818, 1836, 1858, 1868, 1886, 1914, 1930, 1950, 1966, 1988, 2002, 2028, 2044, 2056,
+				2081, 2102, 2118, 2131, 2137, 2165, 2168, 2173, 2190, 2200, 2215, 2236, 2253, 2277, 2294, 2312, 2332, 2350, 2362, 2380, 2410, 2442, 2464, 2484, 2505, 2525, 2541, 2558, 2575, 2597, 2637, 2648, 2664, 2674, 2699, 2713, 2718, 2733, 2745, 2755,
+				2772, 2789, 2820, 2840, 2864, 2888, 2912, 2938, 2963, 2993, 3011, 3030, 3057, 3076, 3102, 3126, 3158, 3178, 3195,
+			]],
+			[ "ilscore", [
+				735, 761, 764, 769, 812, 841, 980, 1081, 1083, 1105, 1198, 1224, 1253, 1290, 1351, 1384, 1450, 1480, 1644, 1687, 1754, 1828, 1928, 1959, 2113, 2209, 2247, 2277, 2353, 2477, 2613, 2676, 2789, 2855, 2940, 2982, 3027, 3100, 3180, 3193,
+				3258, 3279, 3306, 3367, 3438, 3634, 3743, 3833, 3840, 3946, 4007, 4107, 4346, 4394, 4572, 4651, 4799, 5141, 5208, 5278, 5278, 5298, 5302, 5314, 5431, 5537, 5594, 5611, 5693, 5702, 5845, 5916, 5948, 5983, 6062, 6153, 6190, 6359, 6375, 6386,
+				6473, 6546, 6576, 6582, 6583, 6709, 6709, 6714, 6720, 6728, 6741, 6779, 6814, 6876, 6893, 6903, 6918, 7027, 7138, 7200, 7228, 7390, 7426, 7495, 7548, 7632, 7648, 7732, 7800, 7817, 7941, 7956, 8002, 8011, 8190, 8212, 8212, 8220, 8223, 8243,
+				8250, 8286, 8368, 8459, 8505, 8536, 8595, 8656, 8714, 8791, 8834, 8903, 8967, 9041, 9179, 9226, 9333, 9403, 9462,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

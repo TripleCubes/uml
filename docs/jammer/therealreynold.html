@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TheRealReynold&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TheRealReynold&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/therealreynold.html" property="og:url">
+	<meta content="Rank by game in top 10: 1105&#10;Rank by game in top 20: 667&#10;Rank by ilScore: 873&#10;&#10;3 games&#10;&bull; Divine Tactics | MJ 157: Electric | rank: 70 | ilscore: 58&#10;&bull; Take Over | MJ 141: Stories | rank: 20 | ilscore: 40&#10;&bull; Blood(loss) is lethal | MJ 118: Vampires | rank: 8 | ilscore: 90&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TheRealReynold</h1>
+		<a href="https://therealreynold.itch.io">therealreynold.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1105</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 667</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 873</p>
+		<p>Total ilScore: 188</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://loddisjourney.itch.io/divine-tactics">Divine Tactics</a></td>
+				<td><span class="early">54m 46s early</span></td>
+				<td>
+					<a href="../jammer/loddisjourney.html">loddisjourney</a>,
+					<a href="../jammer/darkdragonart.html">Dark</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>70</td>
+				<td>7</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://therealreynold.itch.io/take-over">Take Over</a></td>
+				<td><span class="early">4h 47m early</span></td>
+				<td>
+					<a href="../jammer/loddisjourney.html">loddisjourney</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-141-stories">MJ 141: Stories</a></td>
+				<td>43</td>
+				<td>20</td>
+				<td>13</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://loddisjourney.itch.io/bloodloss-is-lethal">Blood(loss) is lethal</a></td>
+				<td><span class="early">6h 6m early</span></td>
+				<td>
+					<a href="../jammer/loddisjourney.html">loddisjourney</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>8</td>
+				<td>14</td>
+				<td>90</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				653, 658, 664, 677, 680, 689, 707, 714, 723, 736, 743, 751, 754, 757, 758, 769, 780, 781, 781, 781, 792, 796, 800, 807, 808, 817, 825, 826, 831, 831, 833, 836, 845, 852, 860, 870, 886, 889, 893, 897,
+				907, 908, 917, 925, 928, 941, 944, 949, 957, 969, 972, 975, 976, 978, 981, 983, 986, 999, 1007, 1011, 1013, 1019, 1021, 1022, 1033, 1037, 1046, 1060, 1070, 1083, 1085, 1091, 1098, 1104,
+			]],
+			[ "20", [
+				878, 885, 894, 912, 917, 928, 951, 961, 973, 988, 996, 1005, 1009, 1012, 1013, 1027, 1039, 1041, 1043, 1047, 1057, 1059, 1064, 1073, 447, 451, 454, 455, 460, 462, 471, 474, 475, 478, 480, 485, 488, 495, 504, 504,
+				507, 511, 521, 529, 534, 535, 544, 552, 559, 563, 564, 573, 576, 577, 582, 587, 588, 591, 595, 598, 602, 608, 609, 613, 616, 621, 623, 628, 639, 645, 646, 650, 658, 666,
+			]],
+			[ "ilscore", [
+				1977, 1992, 2005, 2022, 2030, 2105, 2128, 2145, 2163, 2180, 2206, 2220, 2303, 2313, 2319, 2339, 2363, 2379, 2384, 2389, 2409, 2412, 2417, 2423, 1281, 1284, 1294, 1302, 1309, 1313, 1315, 1321, 1332, 1344, 1359, 1363, 1394, 1414, 1424, 1431,
+				674, 680, 697, 710, 714, 726, 731, 736, 738, 752, 757, 759, 761, 762, 766, 767, 771, 775, 778, 786, 793, 796, 798, 802, 813, 819, 827, 832, 839, 847, 849, 860, 865, 872,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

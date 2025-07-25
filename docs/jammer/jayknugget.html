@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>jayknugget&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="jayknugget&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jayknugget.html" property="og:url">
+	<meta content="Rank by game in top 20: 2442&#10;Rank by ilScore: 5774&#10;&#10;1 games&#10;&bull; Monke Make Money | MJ 94: Baking | rank: 15 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>jayknugget</h1>
+		<a href="https://jayknugget.itch.io">jayknugget.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2442</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5774</p>
+		<p>Total ilScore: 69</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blastlad.itch.io/baeking">Monke Make Money</a></td>
+				<td><span class="early">22s early</span></td>
+				<td>
+					<a href="../jammer/blastlad.html">BlastLad</a>,
+					<a href="../jammer/dashofdashi.html">dashi</a>,
+					<a href="../jammer/hexxagon.html">hexxagon</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>15</td>
+				<td>16</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1015, 1026, 1032, 1046, 1060, 1086, 1115, 1128, 1133, 1154, 1168, 1184, 1203, 1222, 1237, 1256, 1275, 1297, 1319, 1342, 1343, 1357, 1366, 1378, 1396, 1416, 1429, 1437, 1460, 1465, 1483, 1513, 1524, 1537, 1554, 1572, 1587, 1613, 1617, 1620,
+				1648, 1670, 1678, 1682, 1686, 1714, 1716, 1718, 1723, 1726, 1737, 1755, 1764, 1782, 1789, 1801, 1815, 1833, 1847, 1862, 1882, 1914, 1929, 1936, 1945, 1961, 1971, 1990, 2002, 2011, 2051, 2055, 2066, 2075, 2100, 2106, 2110, 2113, 2122, 2125,
+				2133, 2141, 2165, 2185, 2197, 2212, 2235, 2250, 2270, 2287, 2297, 2317, 2339, 2360, 2386, 2393, 2413, 2428, 2441,
+			]],
+			[ "ilscore", [
+				1809, 1817, 1824, 1855, 1893, 2069, 2158, 2219, 2225, 2298, 2336, 2399, 2605, 2631, 2762, 2818, 2932, 3217, 3271, 3302, 3303, 3307, 3314, 3319, 3414, 3477, 3499, 3508, 3551, 3553, 3666, 3722, 3733, 3754, 3807, 3865, 3880, 4019, 4030, 4034,
+				4078, 4119, 4134, 4142, 4144, 4235, 4237, 4239, 4245, 4249, 4258, 4270, 4280, 4301, 4312, 4322, 4327, 4403, 4458, 4487, 4493, 4627, 4644, 4679, 4701, 4751, 4760, 4822, 4866, 4877, 4951, 4963, 4976, 4982, 5117, 5125, 5128, 5131, 5135, 5140,
+				5148, 5161, 5201, 5276, 5288, 5298, 5320, 5336, 5353, 5384, 5403, 5460, 5501, 5544, 5650, 5662, 5722, 5750, 5773,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

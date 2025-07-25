@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>EarlyBirdGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="EarlyBirdGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/earlybirdgames.html" property="og:url">
+	<meta content="Rank by ilScore: 6481&#10;&#10;1 games&#10;&bull; Orange Fella | MJ 63: Future | rank: 52 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>EarlyBirdGames</h1>
+		<a href="https://earlybirdgames.itch.io">earlybirdgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6481</p>
+		<p>Total ilScore: 65</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://earlybirdgames.itch.io/orange-fella">Orange Fella</a></td>
+				<td><span class="early">1d 4h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>52</td>
+				<td>11</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				625, 629, 636, 689, 701, 710, 721, 765, 774, 811, 832, 972, 991, 1021, 1093, 1168, 1179, 1306, 1388, 1397, 1405, 1452, 1549, 1661, 1696, 1782, 1809, 1873, 1893, 1904, 1963, 2022, 2024, 2066, 2074, 2081, 2114, 2162, 2340, 2430,
+				2499, 2506, 2585, 2620, 2696, 2907, 2938, 3085, 3153, 3275, 3565, 3624, 3669, 3670, 3674, 3680, 3683, 3786, 3857, 3878, 3887, 3941, 3943, 4068, 4127, 4137, 4160, 4217, 4280, 4298, 4440, 4449, 4453, 4507, 4559, 4574, 4582, 4585, 4689, 4689,
+				4692, 4698, 4703, 4713, 4728, 4737, 4767, 4775, 4785, 4790, 4876, 4943, 4974, 4983, 5129, 5152, 5189, 5214, 5265, 5274, 5341, 5390, 5399, 5485, 5498, 5514, 5518, 5664, 5672, 5675, 5678, 5682, 5687, 5696, 5710, 5762, 5849, 5873, 5885, 5924,
+				5948, 5974, 6025, 6050, 6112, 6160, 6208, 6318, 6337, 6412, 6454, 6480,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

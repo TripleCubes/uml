@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ramjing&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ramjing&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ramjing.html" property="og:url">
+	<meta content="Rank by ilScore: 402&#10;&#10;4 games&#10;&bull; Hop | MJ 181: Rabbits | rank: 21 | ilscore: 67&#10;&bull; Fox | MJ 176: Foxes | rank: 56 | ilscore: 47&#10;&bull; Ghost Hunter | MJ 117: Ghosts | rank: 67 | ilscore: 84&#10;&bull; Stasis | MJ 112: Chrono | rank: 31 | ilscore: 70&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ramjing</h1>
+		<a href="https://ramjing.itch.io">ramjing.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 402</p>
+		<p>Total ilScore: 268</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ramjing.itch.io/hop">Hop</a></td>
+				<td><span class="early">9h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-181-rabbits">MJ 181: Rabbits</a></td>
+				<td>96</td>
+				<td>21</td>
+				<td>12</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://ramjing.itch.io/fox">Fox</a></td>
+				<td><span class="early">11h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>56</td>
+				<td>12</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://ramjing.itch.io/ghosthunter">Ghost Hunter</a></td>
+				<td><span class="early">5m 51s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>67</td>
+				<td>14</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://ramjing.itch.io/stasis">Stasis</a></td>
+				<td><span class="late">11h 56m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>31</td>
+				<td>11</td>
+				<td>70</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3215, 3247, 3248, 3252, 3259, 3264, 659, 676, 680, 687, 693, 695, 712, 731, 745, 753, 771, 786, 794, 817, 826, 833, 849, 862, 872, 876, 878, 893, 893, 893, 896, 896, 901, 905, 910, 914, 916, 918, 920, 928,
+				940, 945, 948, 977, 988, 994, 998, 1009, 1015, 1034, 1048, 1053, 1072, 1075, 1083, 1087, 1107, 1109, 1112, 1114, 1115, 1119, 1119, 1122, 1129, 1139, 664, 670, 672, 675, 678, 378, 380, 383, 384, 386, 389, 391, 393, 397,
+				401,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

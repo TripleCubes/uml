@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>aerial301&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="aerial301&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/aerial301.html" property="og:url">
+	<meta content="Rank by game in top 5: 138&#10;Rank by game in top 10: 9&#10;Rank by game in top 20: 10&#10;Rank by ilScore: 11&#10;&#10;21 games&#10;&bull; Spilled | MJ 143: Ink | rank: 8 | ilscore: 60&#10;&bull; Unfortunate Fate | MJ 142: Fortune | rank: 12 | ilscore: 42&#10;&bull; Combustum | MJ 141: Stories | rank: 5 | ilscore: 49&#10;&bull; Chronic Looter | MJ 140: Dungeons | rank: 11 | ilscore: 44&#10;&bull; Fae Hunter | MJ 139: Fae | rank: 2 | ilscore: 52&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>aerial301</h1>
+		<a href="https://aerial301.itch.io">aerial301.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 138</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 9</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>5</span>
+			<span>6</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>9</span>
+			<span>8</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 10</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>5</span>
+			<span>6</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>9</span>
+			<span>11</span>
+			<span class="box_majorjam">12</span>
+			<span>12</span>
+			<span>14</span>
+			<span>12</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11</p>
+		<p>Total ilScore: 1319</p>
+
+		<h3 id="games_header">21 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://aerial301.itch.io/spilled">Spilled</a></td>
+				<td><span class="early">10h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-143-ink">MJ 143: Ink</a></td>
+				<td>62</td>
+				<td>8</td>
+				<td>12</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/unfortunate-fate">Unfortunate Fate</a></td>
+				<td><span class="early">2d 9h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>12</td>
+				<td>10</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/combustum">Combustum</a></td>
+				<td><span class="early">10h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-141-stories">MJ 141: Stories</a></td>
+				<td>43</td>
+				<td>5</td>
+				<td>11</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/chronic-looter">Chronic Looter</a></td>
+				<td><span class="early">10h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-140-dungeons">MJ 140: Dungeons</a></td>
+				<td>40</td>
+				<td>11</td>
+				<td>10</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/fae-hunter">Fae Hunter</a></td>
+				<td><span class="early">9h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>2</td>
+				<td>11</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/three-clicks">Three Clicks</a></td>
+				<td><span class="early">10h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>6</td>
+				<td>10</td>
+				<td>30</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://aerial301.itch.io/into-oblivion">Into Oblivion</a></td>
+				<td><span class="early">9h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>12</td>
+				<td>15</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/common-sense">Common Sense</a></td>
+				<td><span class="early">9h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-137-judgement">MJ 137: Judgement</a></td>
+				<td>27</td>
+				<td>8</td>
+				<td>15</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/some-kind-of-slay-darkest-the-spire-dungeon">Some Kind of Slay The Darkest Spire Dungeon Card Game</a></td>
+				<td><span class="early">9h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>9</td>
+				<td>14</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/saving-uncle-jones">Saving Uncle Jones</a></td>
+				<td><span class="early">8h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>29</td>
+				<td>10</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/sky-power-lines">Sky Power Grids</a></td>
+				<td><span class="early">7h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>14</td>
+				<td>15</td>
+				<td>79</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/maze-runner">Maze Runner</a></td>
+				<td><span class="early">7h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>8</td>
+				<td>30</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/data-leak">Data Leak</a></td>
+				<td><span class="early">52m 2s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>23</td>
+				<td>7</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/just-a-janitor">Just A Janitor</a></td>
+				<td><span class="early">5h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>21</td>
+				<td>16</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/invaders-of-space">Invaders of Space</a></td>
+				<td><span class="early">7h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>31</td>
+				<td>17</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/empty-pallete">Empty Pallete</a></td>
+				<td><span class="early">10h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>9</td>
+				<td>24</td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/wrong">Wrong Neighborhood</a></td>
+				<td><span class="early">8h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>33</td>
+				<td>16</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/praestrictus">Praestrictus</a></td>
+				<td><span class="early">8h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>24</td>
+				<td>15</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/web-master">Web Master</a></td>
+				<td><span class="early">8h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>45</td>
+				<td>28</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/less-mass">Losing Mass</a></td>
+				<td><span class="early">7h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>21</td>
+				<td>7</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://aerial301.itch.io/test">Simple Game</a></td>
+				<td><span class="early">9h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>44</td>
+				<td>15</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				280, 282, 83, 87, 88, 88, 88, 88, 90, 90, 90, 90, 92, 93, 94, 94, 94, 94, 95, 96, 99, 101, 103, 103, 107, 112, 113, 113, 113, 115, 116, 117, 119, 119, 119, 120, 120, 120, 121, 123,
+				123, 123, 123, 124, 124, 127, 128, 131, 131, 137, 137, 137,
+			]],
+			[ "10", [
+				516, 519, 527, 528, 531, 534, 142, 145, 148, 62, 35, 35, 20, 15, 15, 8, 8, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8,
+			]],
+			[ "20", [
+				739, 743, 752, 754, 757, 759, 232, 109, 109, 63, 37, 28, 20, 12, 12, 10, 10, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+				9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+			]],
+			[ "ilscore", [
+				3838, 1398, 393, 198, 201, 149, 101, 62, 44, 31, 32, 32, 24, 19, 17, 15, 15, 10, 10, 10, 10, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7,
+				7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 10, 10, 10, 10, 10,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

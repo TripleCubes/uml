@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Tiago Gazzola&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Tiago Gazzola&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gazzola.html" property="og:url">
+	<meta content="Rank by game in top 20: 3231&#10;Rank by ilScore: 4778&#10;&#10;2 games&#10;&bull; Thrust Control | MJ 154: Travel | rank: 61 | ilscore: 33&#10;&bull; Knife Runner | MJ 141: Stories | rank: 13 | ilscore: 43&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Tiago Gazzola</h1>
+		<a href="https://gazzola.itch.io">gazzola.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3231</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4778</p>
+		<p>Total ilScore: 76</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gazzola.itch.io/thrustcontrol">Thrust Control</a></td>
+				<td><span class="early">9h 2m early</span></td>
+				<td>
+					<a href="../jammer/igorflores.html">Igor Flores</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-154-travel">MJ 154: Travel</a></td>
+				<td>79</td>
+				<td>61</td>
+				<td>4</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td><a href="https://gazzola.itch.io/knife-runner">Knife Runner</a></td>
+				<td><span class="early">7m 7s early</span></td>
+				<td>
+					<a href="../jammer/igorflores.html">Igor Flores</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-141-stories">MJ 141: Stories</a></td>
+				<td>43</td>
+				<td>13</td>
+				<td>10</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2225, 2240, 2261, 2280, 2304, 2321, 2339, 2359, 2377, 2389, 2407, 2437, 2469, 2491, 2511, 2532, 2552, 2568, 2585, 2602, 2624, 2664, 2675, 2691, 2702, 2727, 2741, 2747, 2762, 2778, 2789, 2806, 2823, 2854, 2874, 2898, 2923, 2947, 2973, 2998,
+				3028, 3046, 3065, 3092, 3111, 3137, 3161, 3193, 3213, 3230,
+			]],
+			[ "ilscore", [
+				7070, 7082, 7125, 7161, 7224, 7248, 7262, 7282, 7395, 7514, 7580, 7615, 7777, 3868, 3887, 3903, 3935, 3945, 3983, 4019, 4031, 4091, 4103, 4117, 4123, 4241, 4248, 4252, 4255, 4258, 4263, 4273, 4286, 4314, 4377, 4387, 4401, 4418, 4434, 4445,
+				4469, 4481, 4525, 4562, 4592, 4674, 4687, 4736, 4760, 4777,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

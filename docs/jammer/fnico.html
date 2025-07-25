@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>FNicon&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="FNicon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/fnico.html" property="og:url">
+	<meta content="Rank by ilScore: 9699&#10;&#10;1 games&#10;&bull; Memories of Love | MJ+ 2: Love | rank: 28 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>FNicon</h1>
+		<a href="https://fnico.itch.io">fnico.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9699</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://fnico.itch.io/memories-of-love">Memories of Love</a></td>
+				<td><span class="early">24m 23s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>28</td>
+				<td>11</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				794, 796, 801, 845, 874, 1014, 1116, 1118, 1142, 1234, 1262, 1292, 1329, 1392, 1425, 1493, 1523, 1691, 1736, 1807, 1883, 1983, 2015, 2171, 2268, 2309, 2340, 2415, 2539, 2678, 2742, 2858, 2925, 3013, 3057, 3104, 3178, 3260, 3276, 3339,
+				3363, 3392, 3456, 3526, 3722, 3832, 3924, 3931, 4038, 4099, 4199, 4439, 4490, 4669, 4748, 4898, 5244, 5311, 5384, 5384, 5408, 5413, 5429, 5546, 5653, 5714, 5733, 5822, 5831, 5982, 6053, 6087, 6123, 6201, 6291, 6328, 6498, 6516, 6527, 6613,
+				6685, 6717, 6723, 6724, 6854, 6855, 6860, 6874, 6882, 6897, 6941, 6977, 7040, 7059, 7070, 7088, 7198, 7319, 7384, 7418, 7580, 7615, 7689, 7743, 7827, 7842, 7925, 7993, 8010, 8135, 8151, 8197, 8207, 8387, 8410, 8410, 8424, 8426, 8448, 8455,
+				8496, 8579, 8674, 8719, 8751, 8815, 8878, 8935, 9013, 9057, 9131, 9196, 9270, 9413, 9462, 9569, 9639, 9698,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

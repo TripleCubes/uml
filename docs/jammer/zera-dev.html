@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Zera&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Zera&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zera-dev.html" property="og:url">
+	<meta content="Rank by game in top 1: 150&#10;Rank by game in top 5: 341&#10;Rank by game in top 10: 513&#10;Rank by game in top 20: 288&#10;Rank by ilScore: 341&#10;&#10;3 games&#10;&bull; Curse of The Nekomancer | MJ 111: Colors | rank: 12 | ilscore: 136&#10;&bull; Night Defender | MJ 105: Dreamy | rank: 71 | ilscore: 69&#10;&bull; HellBreak | MJ 92: Death | rank: 1 | ilscore: 89&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Zera</h1>
+		<a href="https://zera-dev.itch.io">zera-dev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 150</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 341</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 513</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 288</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>12</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 341</p>
+		<p>Total ilScore: 294</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://zera-dev.itch.io/curse-of-the-nekomancer">Curse of The Nekomancer</a></td>
+				<td><span class="early">1h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>12</td>
+				<td>30</td>
+				<td>136</td>
+			</tr>
+			<tr>
+				<td><a href="https://zera-dev.itch.io/night-defender">Night Defender</a></td>
+				<td><span class="late">18h 18m late</span></td>
+				<td>
+					<a href="../jammer/sorax2.html">Sorax2</a>,
+					<a href="../jammer/snil4.html">snil4</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>71</td>
+				<td>4</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixelin.itch.io/hellbreakjamversion">HellBreak</a></td>
+				<td><span class="early">2h 52m early</span></td>
+				<td>
+					<a href="../jammer/pixelin.html">XELiNiUM</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>1</td>
+				<td>21</td>
+				<td>89</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				73, 73, 73, 73, 73, 73, 73, 73, 74, 74, 74, 74, 76, 77, 80, 80, 81, 83, 84, 85, 86, 87, 87, 87, 87, 90, 90, 91, 91, 91, 91, 92, 94, 97, 100, 104, 104, 104, 106, 106,
+				106, 106, 107, 107, 108, 108, 108, 109, 109, 110, 110, 110, 113, 113, 113, 114, 114, 115, 115, 116, 118, 119, 121, 123, 123, 123, 123, 124, 124, 125, 126, 127, 128, 128, 130, 131, 132, 133, 133, 133,
+				133, 133, 133, 133, 137, 138, 138, 138, 139, 139, 139, 139, 139, 140, 140, 142, 143, 143, 149, 149, 149,
+			]],
+			[ "5", [
+				137, 137, 140, 140, 140, 141, 142, 142, 153, 157, 157, 160, 163, 164, 170, 170, 172, 174, 176, 181, 183, 186, 186, 187, 189, 193, 193, 194, 194, 194, 194, 195, 198, 201, 204, 210, 212, 212, 215, 216,
+				217, 218, 220, 221, 223, 224, 224, 229, 234, 238, 240, 242, 248, 249, 249, 250, 250, 253, 253, 254, 255, 258, 262, 265, 265, 265, 265, 269, 270, 277, 279, 280, 288, 292, 297, 299, 303, 306, 308, 308,
+				308, 310, 312, 312, 317, 318, 318, 319, 321, 321, 322, 322, 323, 325, 328, 330, 334, 334, 340, 340, 340,
+			]],
+			[ "10", [
+				213, 213, 216, 218, 218, 221, 223, 223, 234, 237, 238, 243, 246, 250, 257, 257, 261, 264, 266, 271, 273, 278, 278, 278, 280, 287, 287, 288, 288, 291, 291, 294, 297, 304, 311, 319, 321, 322, 329, 330,
+				332, 336, 340, 343, 346, 347, 349, 354, 359, 363, 367, 368, 373, 374, 375, 377, 377, 380, 381, 383, 387, 390, 394, 397, 401, 403, 404, 408, 410, 415, 418, 422, 430, 435, 439, 444, 450, 453, 458, 460,
+				461, 463, 465, 466, 471, 474, 476, 477, 479, 479, 479, 481, 485, 488, 491, 499, 503, 503, 506, 509, 512,
+			]],
+			[ "20", [
+				368, 372, 373, 377, 383, 384, 385, 386, 396, 401, 405, 408, 413, 420, 426, 430, 436, 442, 445, 137, 139, 141, 142, 143, 144, 146, 148, 148, 148, 150, 151, 153, 154, 156, 157, 159, 164, 165, 170, 172,
+				172, 173, 174, 176, 176, 178, 181, 184, 187, 187, 189, 189, 191, 191, 192, 193, 194, 195, 198, 198, 199, 202, 202, 204, 207, 207, 208, 210, 212, 213, 219, 221, 222, 225, 229, 231, 233, 237, 238, 240,
+				242, 244, 246, 248, 249, 249, 252, 254, 256, 256, 259, 261, 263, 265, 270, 275, 276, 276, 283, 284, 287,
+			]],
+			[ "ilscore", [
+				907, 917, 931, 945, 951, 966, 989, 1116, 1171, 1193, 1202, 1238, 1257, 421, 451, 463, 491, 513, 535, 154, 158, 161, 162, 162, 163, 163, 169, 171, 171, 171, 172, 173, 177, 178, 179, 183, 190, 190, 191, 200,
+				201, 201, 206, 209, 210, 211, 211, 214, 215, 215, 217, 219, 219, 221, 221, 221, 223, 226, 228, 232, 235, 239, 240, 243, 246, 248, 252, 257, 257, 259, 264, 265, 271, 275, 275, 275, 281, 281, 282, 282,
+				283, 284, 285, 289, 290, 296, 299, 301, 305, 306, 307, 314, 319, 324, 324, 327, 331, 331, 334, 337, 340,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

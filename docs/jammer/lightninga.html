@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Lightning_A&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Lightning_A&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lightninga.html" property="og:url">
+	<meta content="Rank by game in top 10: 862&#10;Rank by game in top 20: 1227&#10;Rank by ilScore: 468&#10;&#10;4 games&#10;&bull; Fish Racin&#39; | MJ 94: Baking | rank: 58 | ilscore: 52&#10;&bull; Sandwich Stacker | MJ 85: Gold | rank: 38 | ilscore: 82&#10;&bull; Snakes | MJ 71: Puzzles | rank: 48 | ilscore: 59&#10;&bull; Yeet the Robots | MJ+ 3: Retro | rank: 8 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Lightning_A</h1>
+		<a href="https://lightninga.itch.io">lightninga.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 862</p>
+		<div class="boxes">
+			<span class="box_majorjam">8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1227</p>
+		<div class="boxes">
+			<span class="box_majorjam">8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 468</p>
+		<p>Total ilScore: 255</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lightninga.itch.io/fish-racin">Fish Racin&#39;</a></td>
+				<td><span class="late">2d 10h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>58</td>
+				<td>5</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://lightninga.itch.io/sandwich-stacker">Sandwich Stacker</a></td>
+				<td><span class="early">2m 22s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>38</td>
+				<td>10</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://lightninga.itch.io/snakes">Snakes</a></td>
+				<td><span class="early">8m 44s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>48</td>
+				<td>6</td>
+				<td>59</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://lightninga.itch.io/destroy-the-robots">Yeet the Robots</a></td>
+				<td><span class="early">2m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>8</td>
+				<td>26</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				230, 238, 238, 244, 246, 261, 264, 268, 275, 277, 283, 296, 301, 303, 303, 309, 314, 316, 321, 328, 331, 338, 342, 346, 347, 352, 356, 357, 362, 362, 365, 369, 371, 386, 391, 392, 400, 404, 408, 417,
+				417, 426, 434, 442, 454, 466, 476, 476, 476, 480, 487, 490, 499, 499, 505, 513, 515, 520, 542, 545, 553, 567, 570, 578, 579, 582, 585, 597, 604, 606, 607, 609, 614, 618, 622, 628, 629, 636, 640, 641,
+				644, 644, 646, 649, 655, 659, 667, 675, 688, 689, 692, 695, 704, 705, 711, 716, 720, 734, 737, 742, 749, 762, 765, 768, 768, 769, 771, 773, 774, 785, 791, 794, 796, 801, 803, 803, 809, 813, 819, 823,
+				836, 846, 846, 850, 857, 861,
+			]],
+			[ "20", [
+				325, 333, 334, 341, 345, 361, 364, 370, 378, 380, 386, 401, 406, 416, 419, 427, 434, 439, 445, 453, 458, 465, 473, 478, 485, 492, 497, 498, 505, 511, 513, 516, 519, 545, 551, 555, 561, 566, 571, 584,
+				588, 598, 608, 616, 637, 649, 662, 662, 662, 670, 681, 685, 702, 704, 714, 725, 729, 736, 758, 766, 777, 791, 795, 804, 806, 809, 811, 826, 834, 837, 841, 845, 849, 851, 856, 865, 868, 878, 886, 889,
+				894, 899, 906, 911, 917, 921, 929, 940, 955, 959, 970, 972, 982, 988, 1001, 1009, 1015, 1036, 1040, 1048, 1058, 1071, 1076, 1086, 1087, 1089, 1093, 1098, 1100, 1112, 1120, 1124, 1129, 1136, 1143, 1152, 1158, 1163, 1168, 1173,
+				1186, 1199, 1200, 1205, 1217, 1226,
+			]],
+			[ "ilscore", [
+				824, 878, 889, 198, 205, 231, 239, 250, 274, 290, 296, 327, 359, 377, 383, 401, 419, 131, 134, 137, 139, 148, 155, 157, 159, 166, 168, 100, 101, 103, 106, 108, 117, 129, 133, 134, 141, 146, 149, 156,
+				160, 171, 177, 183, 195, 200, 204, 204, 205, 205, 205, 216, 221, 222, 223, 227, 229, 237, 244, 247, 252, 260, 263, 270, 278, 281, 283, 291, 296, 300, 302, 303, 309, 309, 309, 310, 311, 312, 313, 315,
+				316, 319, 320, 320, 328, 331, 336, 340, 344, 348, 353, 358, 361, 362, 363, 372, 376, 385, 386, 388, 389, 402, 403, 406, 406, 407, 407, 407, 412, 413, 416, 420, 420, 423, 425, 430, 435, 438, 440, 443,
+				448, 452, 455, 460, 463, 467,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>1scGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="1scGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/1scgames.html" property="og:url">
+	<meta content="Rank by ilScore: 7454&#10;&#10;2 games&#10;&bull; Earth Colonizers | MJ 77: Courage | rank: 119 | ilscore: 30&#10;&bull; COVID-19 Isolation | MJ+ 1: Isolation | rank: 91 | ilscore: 29&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>1scGames</h1>
+		<a href="https://1scgames.itch.io">1scgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7454</p>
+		<p>Total ilScore: 59</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://1scgames.itch.io/earth-colonizers">Earth Colonizers</a></td>
+				<td><span class="early">10h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>119</td>
+				<td>3</td>
+				<td>30</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://1scgames.itch.io/covid-19-isolation">COVID-19 Isolation</a></td>
+				<td><span class="early">4d 16h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>91</td>
+				<td>1</td>
+				<td>29</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				803, 819, 886, 927, 1002, 1058, 1177, 1218, 1264, 1265, 1272, 1334, 1376, 1530, 1646, 1647, 1687, 1792, 1838, 1886, 1940, 2017, 2061, 2138, 2185, 2360, 2417, 2503, 2594, 1417, 1429, 1568, 1652, 1667, 1680, 1744, 1854, 1972, 2015, 2108,
+				2152, 2217, 2245, 2265, 2324, 2394, 2396, 2453, 2463, 2471, 2515, 2575, 2759, 2855, 2931, 2937, 3033, 3074, 3161, 3383, 3424, 3581, 3652, 3780, 4089, 4154, 4210, 4210, 4217, 4223, 4228, 4337, 4425, 4456, 4468, 4531, 4533, 4668, 4732, 4750,
+				4775, 4842, 4920, 4941, 5094, 5104, 5109, 5177, 5238, 5257, 5265, 5268, 5377, 5377, 5380, 5385, 5390, 5399, 5419, 5431, 5471, 5477, 5486, 5491, 5586, 5673, 5707, 5720, 5873, 5898, 5948, 5977, 6037, 6042, 6115, 6170, 6180, 6276, 6287, 6308,
+				6313, 6469, 6478, 6482, 6485, 6489, 6496, 6505, 6524, 6597, 6683, 6716, 6733, 6779, 6819, 6853, 6914, 6946, 7012, 7070, 7126, 7247, 7271, 7362, 7408, 7453,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

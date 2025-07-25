@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>JordiAlbaDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="JordiAlbaDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jordialbadev.html" property="og:url">
+	<meta content="Rank by game in top 10: 717&#10;Rank by game in top 20: 1079&#10;Rank by ilScore: 3961&#10;&#10;1 games&#10;&bull; Serpent Blade | MJ 113: Final Boss | rank: 7 | ilscore: 83&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>JordiAlbaDev</h1>
+		<a href="https://jordialbadev.itch.io">jordialbadev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 717</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1079</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3961</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://andrew-raya.itch.io/serpent-blade">Serpent Blade</a></td>
+				<td><span class="early">19m 34s early</span></td>
+				<td>
+					<a href="../jammer/andrew-raya.html">Andrew Raya</a>,
+					<a href="../jammer/sergigs-artist.html">Sergi Gómez Segura</a>,
+					<a href="../jammer/martamontesserra.html">Belmontes</a>,
+					<a href="../jammer/guillem-llovera-castillo.html">Guillem Llovera Castillo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>7</td>
+				<td>10</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				394, 394, 394, 399, 408, 411, 417, 417, 420, 427, 429, 433, 446, 452, 460, 464, 466, 474, 474, 477, 481, 487, 492, 494, 495, 497, 501, 506, 510, 515, 516, 523, 526, 527, 530, 530, 532, 533, 538, 542,
+				547, 555, 559, 563, 565, 566, 571, 573, 578, 583, 587, 599, 603, 608, 616, 627, 630, 633, 635, 636, 638, 640, 641, 652, 658, 661, 663, 668, 670, 670, 675, 679, 683, 687, 698, 705, 705, 709, 715, 716,
+			]],
+			[ "20", [
+				570, 570, 571, 579, 592, 596, 610, 612, 619, 629, 633, 639, 654, 665, 679, 684, 687, 698, 699, 702, 705, 714, 720, 723, 727, 731, 734, 736, 741, 750, 753, 763, 770, 773, 778, 783, 792, 795, 800, 804,
+				809, 820, 826, 833, 843, 843, 849, 856, 869, 878, 884, 896, 904, 912, 923, 934, 939, 949, 952, 954, 958, 963, 965, 977, 985, 989, 994, 1001, 1008, 1017, 1022, 1027, 1030, 1035, 1045, 1055, 1056, 1061, 1072, 1078,
+			]],
+			[ "ilscore", [
+				2249, 2250, 2253, 2262, 2265, 2345, 2375, 2390, 2404, 2434, 2438, 2530, 2565, 2578, 2596, 2623, 2656, 2670, 2777, 2789, 2792, 2820, 2845, 2860, 2866, 2870, 2906, 2910, 2915, 2923, 2926, 2932, 2945, 2953, 2959, 2969, 2979, 2989, 3030, 3060,
+				3079, 3084, 3196, 3212, 3232, 3246, 3269, 3278, 3304, 3330, 3340, 3392, 3402, 3418, 3423, 3522, 3529, 3533, 3537, 3541, 3549, 3557, 3570, 3591, 3639, 3651, 3665, 3684, 3700, 3711, 3722, 3734, 3761, 3788, 3811, 3883, 3896, 3924, 3945, 3960,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

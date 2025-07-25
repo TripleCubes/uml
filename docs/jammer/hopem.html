@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>hopem&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="hopem&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hopem.html" property="og:url">
+	<meta content="Rank by ilScore: 484&#10;&#10;4 games&#10;&bull; Vampire Defense | MJ 174: Defense | rank: 61 | ilscore: 55&#10;&bull; ElectronicFishin | MJ 159: Ocean | rank: 26 | ilscore: 80&#10;&bull; Hell Cards | MJ 69: Hell | rank: 48 | ilscore: 59&#10;&bull; Chambers of Light | MJ 55: Stealth | rank: 30 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>hopem</h1>
+		<a href="https://hopem.itch.io">hopem.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 484</p>
+		<p>Total ilScore: 251</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://hopem.itch.io/vampire-defense">Vampire Defense</a></td>
+				<td><span class="early">6h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-174-defense">MJ 174: Defense</a></td>
+				<td>98</td>
+				<td>61</td>
+				<td>9</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://jvmv.itch.io/electronicfishin">ElectronicFishin</a></td>
+				<td><span class="late">7h 48m late</span></td>
+				<td>
+					<a href="../jammer/jvmv.html">JVMV</a>,
+					<a href="../jammer/dotmouse.html">DotMouse</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-159-ocean">MJ 159: Ocean</a></td>
+				<td>123</td>
+				<td>26</td>
+				<td>15</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://hopem.itch.io/hell-cards">Hell Cards</a></td>
+				<td><span class="early">8h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>48</td>
+				<td>7</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://hopem.itch.io/chambers-of-light">Chambers of Light</a></td>
+				<td><span class="early">9h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>30</td>
+				<td>8</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				447, 525, 537, 551, 558, 563, 591, 597, 721, 821, 824, 835, 916, 931, 946, 974, 193, 196, 210, 220, 250, 258, 269, 294, 309, 317, 348, 379, 396, 403, 421, 440, 471, 485, 502, 516, 526, 536, 542, 565,
+				581, 587, 599, 608, 614, 624, 641, 684, 718, 734, 738, 762, 780, 801, 864, 875, 911, 938, 974, 1101, 1123, 1142, 1142, 1148, 1153, 1164, 1190, 1209, 1219, 1231, 1247, 1254, 1288, 1314, 1333, 1347, 1366, 1388, 1395, 1432,
+				1444, 1455, 1474, 1496, 1507, 1513, 1516, 1534, 1534, 1535, 1542, 1544, 1547, 1557, 1565, 1572, 1578, 1580, 1588, 1600, 1616, 1634, 1640, 1671, 1695, 1711, 1723, 1736, 1743, 626, 637, 641, 651, 657, 662, 663, 675, 680, 683, 685,
+				686, 688, 690, 693, 427, 430, 434, 434, 437, 439, 444, 449, 452, 454, 457, 463, 467, 470, 475, 479, 483,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PAPERMOON_SO&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="PAPERMOON_SO&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/papermoon-so.html" property="og:url">
+	<meta content="Rank by game in top 5: 396&#10;Rank by game in top 10: 571&#10;Rank by game in top 20: 947&#10;Rank by ilScore: 456&#10;&#10;3 games&#10;&bull; Faulty Overdrive | MJ 175: Gravity | rank: 3 | ilscore: 96&#10;&bull; The Immortal | MJ 108: Seaside | rank: 31 | ilscore: 97&#10;&bull; Gravity Blob | MJ 107: Music | rank: 24 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PAPERMOON_SO</h1>
+		<a href="https://papermoon-so.itch.io">papermoon-so.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 396</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 571</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 947</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 456</p>
+		<p>Total ilScore: 258</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://papermoon-so.itch.io/faulty-overdrive">Faulty Overdrive</a></td>
+				<td><span class="early">2h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>3</td>
+				<td>16</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://papermoon-so.itch.io/the-immortal">The Immortal</a></td>
+				<td><span class="early">1h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>31</td>
+				<td>22</td>
+				<td>97</td>
+			</tr>
+			<tr>
+				<td><a href="https://papermoon-so.itch.io/gravity-blob">Gravity Blob</a></td>
+				<td><span class="early">9h 14m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>24</td>
+				<td>17</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				367, 367, 368, 370, 371, 372, 372, 373, 376, 380, 385, 389, 389, 395, 395, 395,
+			]],
+			[ "10", [
+				526, 528, 529, 531, 532, 532, 534, 538, 542, 546, 557, 561, 561, 564, 567, 570,
+			]],
+			[ "20", [
+				865, 868, 872, 877, 883, 892, 895, 900, 903, 908, 918, 925, 926, 930, 938, 946,
+			]],
+			[ "ilscore", [
+				2954, 471, 492, 513, 555, 570, 582, 582, 586, 589, 593, 608, 619, 624, 631, 637, 638, 653, 672, 683, 690, 708, 720, 728, 750, 757, 764, 778, 790, 801, 802, 805, 819, 820, 820, 823, 823, 827, 831, 836,
+				840, 842, 844, 845, 852, 862, 866, 868, 894, 904, 907, 910, 921, 927, 947, 959, 963, 980, 983, 988, 992, 1007, 1011, 1014, 1016, 1016, 1020, 1021, 1024, 1031, 405, 409, 409, 412, 414, 419, 424, 427, 429, 432,
+				436, 440, 443, 448, 451, 455,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>maougame&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="maougame&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/maougame.html" property="og:url">
+	<meta content="Rank by game in top 10: 957&#10;Rank by game in top 20: 1319&#10;Rank by ilScore: 1268&#10;&#10;2 games&#10;&bull; Grilling fish | MJ 91: UFO | rank: 37 | ilscore: 74&#10;&bull; Sit Down, Please | MJ 87: Break | rank: 6 | ilscore: 81&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>maougame</h1>
+		<a href="https://maougame.itch.io">maougame.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 957</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1319</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1268</p>
+		<p>Total ilScore: 155</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://maougame.itch.io/grilling-fish">Grilling fish</a></td>
+				<td><span class="early">23h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>37</td>
+				<td>14</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://maougame.itch.io/sit-down-please">Sit Down, Please</a></td>
+				<td><span class="early">2d 11h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-87-break">MJ 87: Break</a></td>
+				<td>104</td>
+				<td>6</td>
+				<td>12</td>
+				<td>81</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				367, 374, 379, 383, 387, 393, 399, 402, 407, 407, 415, 419, 424, 439, 444, 445, 456, 460, 465, 474, 477, 485, 494, 504, 516, 527, 537, 538, 538, 542, 548, 554, 566, 566, 572, 581, 583, 588, 609, 613,
+				622, 635, 637, 645, 646, 649, 650, 662, 671, 673, 673, 675, 684, 688, 692, 699, 700, 707, 713, 714, 719, 719, 721, 724, 732, 738, 746, 756, 770, 771, 775, 779, 788, 789, 796, 804, 808, 821, 824, 830,
+				837, 849, 852, 855, 855, 857, 859, 861, 864, 875, 881, 884, 886, 891, 893, 893, 899, 903, 909, 921, 929, 942, 943, 944, 951, 956,
+			]],
+			[ "20", [
+				498, 505, 514, 519, 527, 534, 541, 544, 551, 557, 564, 567, 573, 601, 608, 612, 620, 625, 631, 645, 652, 662, 672, 682, 705, 716, 729, 730, 730, 738, 748, 754, 774, 776, 785, 797, 801, 808, 829, 837,
+				849, 864, 868, 877, 879, 882, 883, 898, 908, 911, 913, 917, 925, 927, 932, 941, 944, 954, 964, 967, 974, 979, 986, 991, 999, 1005, 1013, 1026, 1041, 1045, 1056, 1059, 1069, 1075, 1088, 1098, 1103, 1123, 1126, 1133,
+				1143, 1156, 1161, 1171, 1172, 1175, 1179, 1184, 1188, 1200, 1208, 1212, 1217, 1224, 1231, 1240, 1246, 1251, 1256, 1269, 1277, 1293, 1295, 1297, 1309, 1318,
+			]],
+			[ "ilscore", [
+				1090, 1116, 1129, 1137, 314, 320, 323, 329, 333, 338, 340, 347, 370, 402, 421, 421, 427, 433, 441, 472, 481, 511, 532, 554, 597, 613, 626, 626, 631, 635, 639, 654, 669, 673, 680, 686, 687, 704, 725, 739,
+				747, 765, 780, 788, 811, 819, 826, 842, 855, 865, 869, 871, 885, 885, 885, 888, 888, 893, 897, 903, 907, 909, 911, 913, 921, 933, 937, 940, 969, 980, 986, 990, 1001, 1007, 1026, 1040, 1045, 1064, 1067, 1075,
+				1079, 1099, 1102, 1105, 1107, 1108, 1112, 1112, 1115, 1122, 1132, 1141, 1147, 1151, 1156, 1167, 1177, 1184, 1196, 1204, 1217, 1233, 1238, 1250, 1258, 1267,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

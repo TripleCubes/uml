@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dezhango&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dezhango&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dezhango.html" property="og:url">
+	<meta content="Rank by game in top 20: 2508&#10;Rank by ilScore: 353&#10;&#10;5 games&#10;&bull; Angler Attack | MJ 160: Light | rank: 59 | ilscore: 63&#10;&bull; Sailwinds | MJ 155: Wind | rank: 41 | ilscore: 62&#10;&bull; Super Jambo: The Thousand Degree Dream | MJ 144: Nightmare | rank: 63 | ilscore: 28&#10;&bull; Spla-Tactics! | MJ 143: Ink | rank: 12 | ilscore: 58&#10;&bull; Bloody Mary | MJ 118: Vampires | rank: 35 | ilscore: 78&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dezhango</h1>
+		<a href="https://dezhango.itch.io">dezhango.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2508</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 353</p>
+		<p>Total ilScore: 288</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dezhango.itch.io/angler-attack">Angler Attack</a></td>
+				<td><span class="early">38m 12s early</span></td>
+				<td>
+					<a href="../jammer/stripedpants.html">stripedpants</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-160-light">MJ 160: Light</a></td>
+				<td>123</td>
+				<td>59</td>
+				<td>9</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://dezhango.itch.io/sailwinds">Sailwinds</a></td>
+				<td><span class="early">13s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>41</td>
+				<td>8</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://dezhango.itch.io/super-jambo-the-thousand-degree-dream">Super Jambo: The Thousand Degree Dream</a></td>
+				<td><span class="late">3d 19h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-144-nightmare">MJ 144: Nightmare</a></td>
+				<td>66</td>
+				<td>63</td>
+				<td>1</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td><a href="https://dezhango.itch.io/spla-tactics">Spla-Tactics!</a></td>
+				<td><span class="late">1d 12h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-143-ink">MJ 143: Ink</a></td>
+				<td>62</td>
+				<td>12</td>
+				<td>6</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://dezhango.itch.io/bloody-mary">Bloody Mary</a></td>
+				<td><span class="early">59m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>35</td>
+				<td>12</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1806, 1815, 1834, 1843, 1855, 1868, 1886, 1900, 1915, 1935, 1967, 1982, 1990, 1999, 2018, 2029, 2048, 2060, 2069, 2109, 2113, 2124, 2135, 2160, 2166, 2170, 2173, 2182, 2185, 2193, 2201, 2225, 2245, 2258, 2273, 2296, 2312, 2335, 2353, 2363,
+				2383, 2404, 2425, 2451, 2460, 2480, 2495, 2507,
+			]],
+			[ "ilscore", [
+				2745, 2761, 2772, 2804, 2807, 2918, 2958, 2967, 2984, 3016, 3059, 3073, 3195, 3207, 3210, 3247, 3278, 3290, 3296, 3299, 3358, 3362, 3367, 3374, 3378, 3387, 1178, 815, 820, 823, 825, 826, 833, 843, 847, 849, 874, 882, 445, 447,
+				452, 454, 461, 273, 274, 282, 286, 287, 287, 294, 294, 295, 295, 297, 298, 299, 303, 304, 310, 312, 313, 317, 318, 320, 326, 330, 335, 335, 337, 341, 341, 344, 347, 352,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

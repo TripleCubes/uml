@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ilPrinni&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ilPrinni&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ilprinni.html" property="og:url">
+	<meta content="Rank by game in top 1: 6&#10;Rank by game in top 5: 3&#10;Rank by game in top 10: 4&#10;Rank by game in top 20: 4&#10;Rank by ilScore: 4&#10;&#10;25 games&#10;&bull; Vs Redfox | MJ 181: Rabbits | rank: 13 | ilscore: 70&#10;&bull; TT Slime Hunters | MJ 176: Foxes | rank: 10 | ilscore: 73&#10;&bull; Midnight Duel | MJ 171: Mystic | rank: 5 | ilscore: 57&#10;&bull; Penultimate | MJ 164: Destruction | rank: 14 | ilscore: 64&#10;&bull; There is fish in these Halls | MJ 153: Fishing | rank: 32 | ilscore: 98&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ilPrinni</h1>
+		<a href="https://ilprinni.itch.io">ilprinni.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 6</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 3</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>11</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 4</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>6</span>
+			<span>10</span>
+			<span>13</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 4</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>5</span>
+			<span>6</span>
+			<span>10</span>
+			<span>12</span>
+			<span>13</span>
+			<span>14</span>
+			<span>14</span>
+			<span>16</span>
+			<span>18</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4</p>
+		<p>Total ilScore: 1953</p>
+
+		<h3 id="games_header">25 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/vs-redfox">Vs Redfox</a></td>
+				<td><span class="early">4h 14m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-181-rabbits">MJ 181: Rabbits</a></td>
+				<td>96</td>
+				<td>13</td>
+				<td>16</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tt-slime-hunters">TT Slime Hunters</a></td>
+				<td><span class="late">16h 39m late</span></td>
+				<td>
+					<a href="../jammer/vvulpes0.html">Pineberry Fox</a>,
+					<a href="../jammer/triplecubes.html">TripleCubes</a>,
+					<a href="../jammer/readymajor.html">ReadyMajor</a>,
+					<a href="../jammer/30fps.html">30fps</a>,
+					<a href="../jammer/murgn.html">Murgn</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>,
+					<a href="../jammer/tlalice.html">TLAlice</a>,
+					<a href="../jammer/cat-jug.html">Cat Jug</a>,
+					<a href="../jammer/hotnoggin.html">Hot Noggin Studios</a>,
+					<a href="../jammer/blankedslate.html">Blank Slate</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>10</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/midnight-duel">Midnight Duel</a></td>
+				<td><span class="early">5h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-171-mystic">MJ 171: Mystic</a></td>
+				<td>56</td>
+				<td>5</td>
+				<td>16</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/penultimate">Penultimate</a></td>
+				<td><span class="early">22h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-164-destruction">MJ 164: Destruction</a></td>
+				<td>73</td>
+				<td>14</td>
+				<td>15</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/there-is-fish-in-these-halls">There is fish in these Halls</a></td>
+				<td><span class="late">19h 9m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>32</td>
+				<td>19</td>
+				<td>98</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/dungeon-of-cats">Dungeon of Cats</a></td>
+				<td><span class="early">4m 43s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>1</td>
+				<td>33</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/orb-jam-version">Orb: Jam Version</a></td>
+				<td><span class="late">22h 54m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>96</td>
+				<td>1</td>
+				<td>9</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/su-ccess-and-fai-lure">Su&#39;ccess and Fai&#39;Lure</a></td>
+				<td><span class="late">19h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>3</td>
+				<td>11</td>
+				<td>115</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/the-dreams-of-machines">Dream of the Machine</a></td>
+				<td><span class="early">5m 30s early</span></td>
+				<td>
+					<a href="../jammer/savestatecorrupted.html">SavestateCorrupted</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>5</td>
+				<td>15</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/froglins">Froglins</a></td>
+				<td><span class="early">5h 33m early</span></td>
+				<td>
+					<a href="../jammer/zomare.html">Zomare</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>5</td>
+				<td>42</td>
+				<td>126</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/hydra-fruit">Hydra Fruit Hunting</a></td>
+				<td><span class="early">42m 46s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>12</td>
+				<td>18</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://ohdamnitsjam.itch.io/birds-with-bats-mini-jam99">Birds With Bats (Mini Jam99)</a></td>
+				<td><span class="early">4h 43m early</span></td>
+				<td>
+					<a href="../jammer/ohdamnitsjam.html">OhDamnItsJam</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>221</td>
+				<td>5</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/king-and-death">King and Death</a></td>
+				<td><span class="early">3m 47s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>6</td>
+				<td>24</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/the-day-fish-flew">The day Fish Fly</a></td>
+				<td><span class="early">4h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>26</td>
+				<td>17</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/the-spell-of-joining">The Spell of Joining</a></td>
+				<td><span class="early">16h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>1</td>
+				<td>16</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tower-tech-incident-no-33">Tower Tech. Incident no 33</a></td>
+				<td><span class="early">4h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>29</td>
+				<td>9</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/dancing-at-cattail-pub">Dancing at Cattail Pub</a></td>
+				<td><span class="early">20m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>22</td>
+				<td>25</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/rad-hero">Rad Hero</a></td>
+				<td><span class="early">3h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>14</td>
+				<td>11</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/power-defence">Power Defense</a></td>
+				<td><span class="early">2h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>21</td>
+				<td>26</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tile-knight-minijam71">Tile Knight</a></td>
+				<td><span class="early">4h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>3</td>
+				<td>12</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/demons-game">Demons Game</a></td>
+				<td><span class="early">19h 38m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>4</td>
+				<td>43</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/justice-blue">Justice B.L.U.E</a></td>
+				<td><span class="early">41m 24s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>23</td>
+				<td>14</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/pause-thief">Pause Thief</a></td>
+				<td><span class="early">5h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-60">MJ 60: Crime</a></td>
+				<td>64</td>
+				<td>5</td>
+				<td>29</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/last-sacrifice-oasis">Last Sacrifice</a></td>
+				<td><span class="early">19h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-53-oasis">MJ 53: Oasis</a></td>
+				<td>56</td>
+				<td>1</td>
+				<td>20</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/cat-island">Cat Island</a></td>
+				<td><span class="early">5h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>16</td>
+				<td>13</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				46, 49, 51, 51, 52, 55, 55, 55, 56, 58, 61, 61, 61, 62, 63, 64, 65, 66, 70, 70, 71, 71, 72, 73, 74, 75, 76, 78, 80, 80, 80, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1,
+				1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3,
+				3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+			]],
+			[ "5", [
+				96, 101, 106, 106, 112, 119, 119, 121, 16, 18, 19, 19, 19, 20, 21, 22, 22, 23, 6, 6, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+			]],
+			[ "10", [
+				137, 143, 150, 150, 159, 167, 167, 172, 31, 33, 35, 35, 35, 36, 38, 40, 41, 42, 19, 19, 9, 10, 10, 10, 10, 10, 12, 12, 12, 12, 12, 8, 8, 8, 8, 8, 9, 9, 9, 9,
+				9, 9, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 8, 8, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3,
+				3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+			]],
+			[ "20", [
+				310, 341, 349, 362, 65, 68, 68, 70, 72, 74, 75, 81, 30, 33, 33, 33, 33, 35, 36, 37, 39, 39, 18, 18, 11, 12, 12, 12, 12, 9, 9, 9, 9, 10, 10, 7, 7, 8, 8, 8,
+				8, 8, 8, 8, 8, 8, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 5, 5, 5, 5, 5, 5,
+				5, 5, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+				3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+			]],
+			[ "ilscore", [
+				119, 157, 158, 166, 41, 45, 47, 54, 56, 58, 59, 61, 20, 21, 25, 12, 12, 13, 14, 16, 18, 18, 7, 7, 6, 7, 4, 4, 4, 4, 4, 4, 4, 3, 3, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 3, 3, 4, 3, 4, 5, 5, 3, 3, 4, 4, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 3, 3, 3, 3, 3, 4,
+				4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4,
+				3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

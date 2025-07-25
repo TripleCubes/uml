@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Bambo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Bambo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bambo1.html" property="og:url">
+	<meta content="Rank by game in top 20: 1999&#10;Rank by ilScore: 3727&#10;&#10;1 games&#10;&bull; Sausage Drift | MJ 162: Heat | rank: 20 | ilscore: 85&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Bambo</h1>
+		<a href="https://bambo1.itch.io">bambo1.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1999</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3727</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://exotreus.itch.io/sausage-drift">Sausage Drift</a></td>
+				<td><span class="early">17h 49m early</span></td>
+				<td>
+					<a href="../jammer/exotreus.html">Exotreus</a>,
+					<a href="../jammer/bappe.html">Bappe</a>,
+					<a href="../jammer/ciuras.html">ciuras</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-162-heat">MJ 162: Heat</a></td>
+				<td>134</td>
+				<td>20</td>
+				<td>23</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1696, 1696, 1703, 1713, 1738, 1744, 1748, 1750, 1755, 1759, 1770, 1777, 1792, 1809, 1815, 1825, 1840, 1847, 1865, 1876, 1883, 1897, 1917, 1934, 1953, 1958, 1970, 1985, 1998,
+			]],
+			[ "ilscore", [
+				3192, 3199, 3215, 3220, 3306, 3313, 3317, 3322, 3326, 3334, 3342, 3355, 3376, 3423, 3435, 3449, 3467, 3483, 3493, 3504, 3515, 3542, 3571, 3596, 3652, 3665, 3689, 3710, 3726,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

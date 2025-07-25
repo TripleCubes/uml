@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>2CCs&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="2CCs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/2ccs.html" property="og:url">
+	<meta content="Rank by game in top 5: 859&#10;Rank by game in top 10: 1241&#10;Rank by game in top 20: 1669&#10;Rank by ilScore: 6405&#10;&#10;1 games&#10;&bull; The Door of Illusions | MJ 90: Illusion | rank: 3 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>2CCs</h1>
+		<a href="https://2ccs.itch.io">2ccs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 859</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1241</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1669</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6405</p>
+		<p>Total ilScore: 65</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://2ccs.itch.io/door-of-illusions">The Door of Illusions</a></td>
+				<td><span class="late">2d 9h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>3</td>
+				<td>9</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				346, 349, 356, 363, 366, 375, 375, 382, 386, 392, 403, 406, 408, 413, 416, 421, 428, 437, 441, 444, 448, 454, 463, 467, 468, 473, 478, 486, 490, 498, 504, 512, 520, 521, 526, 536, 540, 549, 552, 559,
+				564, 567, 569, 572, 577, 583, 587, 588, 591, 600, 603, 605, 610, 611, 620, 626, 627, 632, 633, 635, 639, 645, 647, 652, 659, 669, 676, 680, 684, 688, 690, 694, 700, 700, 708, 710, 713, 718, 724, 728,
+				728, 729, 730, 734, 741, 743, 754, 759, 763, 769, 774, 776, 785, 794, 798, 803, 815, 823, 833, 836, 843, 853, 858,
+			]],
+			[ "10", [
+				497, 501, 508, 515, 518, 529, 529, 539, 544, 555, 570, 577, 580, 590, 599, 607, 616, 627, 634, 643, 653, 665, 679, 692, 693, 698, 703, 711, 720, 734, 740, 748, 761, 764, 773, 791, 798, 808, 821, 829,
+				834, 844, 847, 851, 862, 873, 876, 877, 880, 894, 897, 898, 903, 904, 913, 921, 923, 927, 928, 930, 935, 944, 951, 959, 969, 986, 989, 993, 997, 1008, 1010, 1020, 1030, 1030, 1043, 1046, 1051, 1059, 1071, 1075,
+				1075, 1076, 1078, 1082, 1089, 1092, 1105, 1114, 1120, 1126, 1132, 1134, 1142, 1153, 1159, 1168, 1184, 1195, 1211, 1214, 1221, 1231, 1240,
+			]],
+			[ "20", [
+				666, 671, 679, 686, 689, 697, 703, 712, 717, 732, 761, 773, 779, 796, 807, 813, 832, 841, 852, 864, 879, 902, 923, 938, 939, 944, 952, 961, 971, 988, 995, 1005, 1023, 1028, 1039, 1062, 1072, 1083, 1099, 1108,
+				1114, 1128, 1131, 1135, 1149, 1165, 1168, 1171, 1178, 1191, 1193, 1195, 1201, 1202, 1213, 1223, 1226, 1232, 1236, 1242, 1248, 1264, 1272, 1280, 1291, 1313, 1317, 1326, 1330, 1344, 1351, 1369, 1379, 1383, 1409, 1411, 1419, 1428, 1450, 1456,
+				1462, 1464, 1467, 1472, 1482, 1485, 1498, 1512, 1518, 1526, 1535, 1541, 1558, 1567, 1574, 1583, 1600, 1612, 1631, 1634, 1642, 1657, 1668,
+			]],
+			[ "ilscore", [
+				1873, 1930, 1989, 1991, 2032, 2040, 2047, 2080, 2127, 2304, 2394, 2462, 2469, 2548, 2584, 2659, 2871, 2901, 3046, 3113, 3234, 3523, 3582, 3626, 3627, 3631, 3637, 3640, 3740, 3809, 3830, 3839, 3892, 3893, 4018, 4077, 4087, 4110, 4165, 4229,
+				4247, 4389, 4398, 4402, 4455, 4507, 4521, 4529, 4532, 4635, 4635, 4637, 4643, 4648, 4657, 4672, 4682, 4712, 4720, 4730, 4735, 4820, 4879, 4914, 4923, 5070, 5089, 5129, 5152, 5203, 5212, 5278, 5326, 5335, 5420, 5433, 5448, 5453, 5598, 5606,
+				5609, 5612, 5616, 5621, 5631, 5645, 5697, 5784, 5808, 5820, 5859, 5883, 5909, 5957, 5982, 6045, 6092, 6140, 6250, 6264, 6337, 6377, 6404,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

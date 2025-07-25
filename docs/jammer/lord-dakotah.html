@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Dakotah&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Dakotah&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lord-dakotah.html" property="og:url">
+	<meta content="Rank by game in top 10: 344&#10;Rank by game in top 20: 627&#10;Rank by ilScore: 3130&#10;&#10;2 games&#10;&bull; Paint Roller | MJ 165: Paint | rank: 6 | ilscore: 50&#10;&bull; Crystal Defender | MJ 139: Fae | rank: 6 | ilscore: 42&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Dakotah</h1>
+		<a href="https://lord-dakotah.itch.io">lord-dakotah.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 344</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 627</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3130</p>
+		<p>Total ilScore: 92</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lord-dakotah.itch.io/paint-roller">Paint Roller</a></td>
+				<td><span class="early">2h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-165-paint">MJ 165: Paint</a></td>
+				<td>44</td>
+				<td>6</td>
+				<td>15</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://lord-dakotah.itch.io/crystal-defender">Crystal Defender</a></td>
+				<td><span class="early">33m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>6</td>
+				<td>12</td>
+				<td>42</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1280, 1296, 1302, 1313, 1329, 1342, 1353, 1367, 1379, 1394, 1402, 1407, 1415, 1436, 1453, 1467, 1475, 1484, 1495, 1510, 1520, 1532, 1548, 1561, 1568, 1574, 291, 293, 293, 298, 300, 300, 302, 304, 305, 306, 308, 310, 311, 314,
+				314, 314, 316, 320, 321, 324, 331, 334, 334, 337, 340, 343,
+			]],
+			[ "20", [
+				2006, 2018, 2023, 2035, 2056, 2071, 2095, 2109, 2122, 2139, 2157, 2170, 2188, 2213, 2245, 2268, 2289, 2303, 2323, 2337, 2356, 2373, 2390, 2430, 2436, 2454, 525, 529, 530, 536, 539, 539, 543, 547, 548, 552, 556, 559, 563, 569,
+				570, 572, 576, 581, 583, 588, 599, 605, 606, 610, 618, 626,
+			]],
+			[ "ilscore", [
+				7167, 7184, 7200, 7215, 7258, 7294, 7357, 7382, 7397, 7417, 7533, 7653, 7720, 7756, 7922, 7961, 8044, 8100, 8191, 8210, 8293, 8365, 8382, 8507, 8529, 8577, 2684, 2753, 2759, 2767, 2774, 2777, 2784, 2790, 2801, 2821, 2855, 2869, 2884, 2904,
+				2920, 2930, 2939, 2950, 2975, 3002, 3026, 3057, 3071, 3092, 3111, 3129,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

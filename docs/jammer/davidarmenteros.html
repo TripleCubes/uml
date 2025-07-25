@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>David&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="David&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/davidarmenteros.html" property="og:url">
+	<meta content="Rank by game in top 10: 1879&#10;Rank by game in top 20: 2990&#10;Rank by ilScore: 8581&#10;&#10;1 games&#10;&bull; Prophetic Paths | MJ 132: Severed | rank: 6 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>David</h1>
+		<a href="https://davidarmenteros.itch.io">davidarmenteros.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1879</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2990</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8581</p>
+		<p>Total ilScore: 52</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ernani.itch.io/propheticpaths">Prophetic Paths</a></td>
+				<td><span class="early">1h 42m early</span></td>
+				<td>
+					<a href="../jammer/ernani.html">ernani</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>6</td>
+				<td>14</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1216, 1231, 1242, 1250, 1258, 1265, 1279, 1281, 1286, 1302, 1308, 1319, 1335, 1348, 1359, 1373, 1385, 1400, 1408, 1413, 1421, 1442, 1459, 1473, 1481, 1490, 1501, 1516, 1526, 1538, 1554, 1567, 1574, 1580, 1589, 1601, 1606, 1607, 1621, 1632,
+				1640, 1649, 1660, 1678, 1686, 1696, 1712, 1723, 1735, 1750, 1768, 1777, 1786, 1801, 1812, 1825, 1836, 1853, 1866, 1878,
+			]],
+			[ "20", [
+				1927, 1954, 1975, 1988, 1998, 2005, 2033, 2034, 2038, 2051, 2056, 2067, 2088, 2103, 2127, 2141, 2156, 2173, 2191, 2204, 2222, 2247, 2279, 2302, 2323, 2338, 2358, 2373, 2392, 2409, 2426, 2466, 2472, 2490, 2501, 2526, 2537, 2541, 2556, 2566,
+				2572, 2582, 2593, 2625, 2645, 2670, 2691, 2715, 2733, 2759, 2789, 2807, 2826, 2853, 2874, 2900, 2920, 2952, 2972, 2989,
+			]],
+			[ "ilscore", [
+				5799, 5884, 5948, 5972, 5977, 5979, 6098, 6098, 6102, 6107, 6114, 6125, 6152, 6174, 6230, 6244, 6249, 6260, 6368, 6471, 6524, 6545, 6703, 6735, 6791, 6839, 6913, 6925, 7005, 7066, 7083, 7200, 7212, 7250, 7258, 7429, 7447, 7449, 7453, 7454,
+				7460, 7465, 7495, 7575, 7665, 7708, 7730, 7787, 7840, 7885, 7958, 7997, 8069, 8133, 8200, 8337, 8378, 8477, 8532, 8580,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

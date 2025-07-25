@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Rezi&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Rezi&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rezirae.html" property="og:url">
+	<meta content="Rank by game in top 1: 50&#10;Rank by game in top 5: 196&#10;Rank by game in top 10: 389&#10;Rank by game in top 20: 308&#10;Rank by ilScore: 697&#10;&#10;3 games&#10;&bull; Food for Demons | MJ 189: Cooking | rank: 90 | ilscore: 24&#10;&bull; Gambler&#39;s Paradise | MJ 83: Dread | rank: 18 | ilscore: 76&#10;&bull; Smock&#39;s Block | MJ 62: Colors | rank: 1 | ilscore: 106&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Rezi</h1>
+		<a href="https://rezirae.itch.io">rezirae.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 50</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 196</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 389</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 308</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>18</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 697</p>
+		<p>Total ilScore: 207</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rezirae.itch.io/food-for-demons">Food for Demons</a></td>
+				<td><span class="early">16m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-189-cooking">MJ 189: Cooking</a></td>
+				<td>92</td>
+				<td>90</td>
+				<td>4</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://rezirae.itch.io/gamblers-paradise">Gambler&#39;s Paradise</a></td>
+				<td><span class="early">4m 36s early</span></td>
+				<td>
+					<a href="../jammer/sturmdesign.html">Bryan Sturm</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>18</td>
+				<td>7</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://dianesparks.itch.io/smocks-block">Smock&#39;s Block</a></td>
+				<td><span class="early">29m 14s early</span></td>
+				<td>
+					<a href="../jammer/dianesparks.html">Diane Sparks</a>,
+					<a href="../jammer/niborious.html">Niborious</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>1</td>
+				<td>10</td>
+				<td>106</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 22, 23, 23, 24, 24, 24, 24, 24, 24, 24, 28, 28, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29,
+				29, 29, 29, 29, 31, 32, 32, 32, 32, 34, 34, 34, 34, 34, 34, 34, 34, 37, 37, 37, 37, 37, 37, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 38, 39,
+				39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 39, 41, 41, 43, 43, 43, 43, 43, 43, 43, 43, 43, 44, 44, 44, 45, 45, 45, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46,
+				47, 47, 47, 47, 47, 47, 48, 48, 48, 48, 48, 48, 49,
+			]],
+			[ "5", [
+				49, 49, 50, 51, 53, 54, 54, 55, 55, 55, 55, 55, 56, 57, 58, 58, 58, 58, 58, 62, 63, 65, 65, 66, 66, 68, 69, 69, 74, 74, 74, 75, 75, 75, 79, 79, 79, 80, 81, 81,
+				81, 85, 85, 88, 91, 92, 94, 94, 95, 97, 97, 98, 99, 100, 100, 101, 103, 106, 106, 106, 106, 106, 106, 107, 108, 108, 109, 111, 113, 113, 114, 115, 116, 117, 118, 119, 120, 121, 121, 123,
+				128, 131, 133, 135, 139, 140, 140, 140, 140, 142, 142, 142, 142, 144, 147, 148, 148, 148, 148, 149, 150, 153, 154, 155, 155, 159, 164, 165, 165, 165, 168, 169, 170, 172, 174, 174, 175, 175, 175, 176,
+				178, 178, 179, 179, 181, 181, 185, 186, 189, 189, 195, 195, 195,
+			]],
+			[ "10", [
+				102, 102, 107, 108, 110, 112, 113, 114, 115, 115, 119, 121, 123, 123, 125, 126, 126, 129, 130, 136, 139, 140, 140, 142, 142, 146, 147, 148, 153, 155, 157, 157, 158, 158, 162, 164, 164, 167, 169, 169,
+				172, 175, 176, 181, 184, 188, 191, 191, 196, 199, 199, 200, 201, 204, 204, 204, 208, 214, 214, 214, 214, 218, 218, 221, 222, 226, 231, 235, 237, 238, 243, 244, 246, 250, 253, 256, 259, 260, 262, 265,
+				270, 273, 277, 278, 281, 282, 283, 285, 285, 287, 288, 289, 293, 295, 298, 299, 303, 305, 306, 307, 310, 311, 313, 317, 318, 325, 329, 334, 336, 336, 342, 344, 345, 347, 349, 350, 351, 353, 355, 356,
+				359, 359, 359, 361, 365, 366, 369, 376, 379, 379, 382, 385, 388,
+			]],
+			[ "20", [
+				189, 191, 199, 203, 207, 213, 216, 219, 221, 222, 228, 232, 236, 236, 240, 243, 243, 247, 252, 258, 268, 272, 102, 103, 103, 103, 106, 108, 108, 109, 110, 111, 113, 115, 119, 123, 124, 127, 127, 127,
+				130, 134, 134, 136, 137, 138, 142, 145, 147, 149, 149, 150, 151, 154, 155, 156, 157, 159, 161, 161, 161, 163, 164, 167, 169, 171, 172, 174, 180, 181, 186, 188, 189, 190, 191, 192, 193, 195, 197, 200,
+				203, 203, 206, 206, 208, 208, 209, 210, 211, 212, 215, 215, 216, 219, 219, 221, 224, 224, 225, 228, 229, 232, 237, 240, 241, 245, 248, 251, 254, 257, 258, 259, 261, 263, 265, 267, 269, 269, 272, 274,
+				277, 277, 280, 281, 283, 285, 290, 295, 296, 296, 303, 304, 307,
+			]],
+			[ "ilscore", [
+				148, 182, 182, 188, 197, 207, 211, 217, 232, 239, 251, 266, 295, 306, 318, 342, 362, 371, 406, 436, 453, 462, 152, 162, 170, 174, 177, 181, 190, 196, 197, 204, 210, 214, 218, 224, 225, 229, 235, 247,
+				272, 283, 284, 287, 290, 296, 319, 328, 349, 361, 371, 406, 415, 425, 425, 429, 434, 437, 449, 458, 467, 473, 478, 479, 494, 509, 518, 525, 541, 549, 556, 571, 573, 576, 591, 597, 607, 608, 612, 624,
+				626, 630, 632, 635, 638, 642, 645, 650, 654, 655, 655, 664, 674, 679, 682, 701, 704, 710, 714, 724, 730, 748, 761, 765, 777, 781, 786, 789, 802, 807, 810, 811, 812, 816, 817, 821, 825, 828, 837, 843,
+				845, 848, 851, 862, 868, 877, 883, 891, 900, 903, 913, 919, 696,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>R4T&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="R4T&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/r4at.html" property="og:url">
+	<meta content="Rank by ilScore: 564&#10;&#10;5 games&#10;&bull; Where is my arm? | MJ 133: Fusion | rank: 98 | ilscore: 52&#10;&bull; Rythm lab | MJ 132: Severed | rank: 33 | ilscore: 40&#10;&bull; Get a job | MJ 131: Solar | rank: 43 | ilscore: 32&#10;&bull; Protect the Moon from Anything | MJ 130: Lunar | rank: 114 | ilscore: 75&#10;&bull; How to make a potion of mass destruction | MJ 129: Poison | rank: 68 | ilscore: 31&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>R4T</h1>
+		<a href="https://r4at.itch.io">r4at.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 564</p>
+		<p>Total ilScore: 231</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://r4at.itch.io/where-is-my-arm">Where is my arm?</a></td>
+				<td><span class="late">2d 3h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>98</td>
+				<td>9</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://r4at.itch.io/rythm-lab">Rythm lab</a></td>
+				<td><span class="late">15h 31m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>33</td>
+				<td>6</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://r4at.itch.io/get-a-job">Get a job</a></td>
+				<td><span class="early">2h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>43</td>
+				<td>9</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td><a href="https://r4at.itch.io/protect-the-moon-from-anything">Protect the Moon from Anything</a></td>
+				<td><span class="early">5h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>114</td>
+				<td>6</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://r4at.itch.io/how-to-make-a-potion-of-mass-destruction">How to make a potion of mass destruction</a></td>
+				<td><span class="late">3d 6h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>68</td>
+				<td>3</td>
+				<td>31</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				7659, 1676, 1061, 605, 356, 360, 367, 367, 369, 379, 380, 380, 380, 382, 382, 383, 385, 387, 389, 390, 391, 399, 404, 408, 411, 417, 420, 427, 432, 435, 438, 440, 452, 455, 469, 472, 476, 478, 492, 494,
+				499, 500, 500, 500, 501, 504, 506, 507, 512, 514, 515, 517, 521, 526, 528, 530, 535, 540, 545, 548, 554, 556, 563,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>theEZRA23&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="theEZRA23&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/theezra23.html" property="og:url">
+	<meta content="Rank by game in top 1: 131&#10;Rank by game in top 5: 304&#10;Rank by game in top 10: 479&#10;Rank by game in top 20: 455&#10;Rank by ilScore: 1469&#10;&#10;2 games&#10;&bull; Alien Invasion | MJ 185: Aliens | rank: 1 | ilscore: 89&#10;&bull; Mutually Assured Destruction | MJ 167: Cyber | rank: 19 | ilscore: 55&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>theEZRA23</h1>
+		<a href="https://theezra23.itch.io">theezra23.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 131</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 304</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 479</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 455</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1469</p>
+		<p>Total ilScore: 144</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://honkmeister.itch.io/alien-anarchy">Alien Invasion</a></td>
+				<td><span class="early">1h 43m early</span></td>
+				<td>
+					<a href="../jammer/honkmeister.html">honkmeister</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-185-aliens">MJ 185: Aliens</a></td>
+				<td>109</td>
+				<td>1</td>
+				<td>8</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://honkmeister.itch.io/mutually-assured-destruction">Mutually Assured Destruction</a></td>
+				<td><span class="early">1h early</span></td>
+				<td>
+					<a href="../jammer/honkmeister.html">honkmeister</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-167-cyber">MJ 167: Cyber</a></td>
+				<td>63</td>
+				<td>19</td>
+				<td>16</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				123, 124, 124, 130, 130, 130,
+			]],
+			[ "5", [
+				293, 297, 297, 303, 303, 303,
+			]],
+			[ "10", [
+				465, 469, 469, 472, 475, 478,
+			]],
+			[ "20", [
+				2584, 2591, 2606, 2616, 2622, 2635, 2650, 2682, 2702, 2727, 2748, 2772, 2799, 2824, 2854, 2872, 2891, 2918, 440, 444, 444, 447, 451, 454,
+			]],
+			[ "ilscore", [
+				7101, 7104, 7107, 7108, 7114, 7123, 7149, 7226, 7314, 7352, 7371, 7422, 7472, 7511, 7577, 7616, 7686, 7746, 1411, 1430, 1435, 1446, 1456, 1468,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

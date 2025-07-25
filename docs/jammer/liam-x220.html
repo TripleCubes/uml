@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Liam_x220&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Liam_x220&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/liam-x220.html" property="og:url">
+	<meta content="Rank by ilScore: 444&#10;&#10;4 games&#10;&bull; Sunblock! (Mini Jam 76) | MJ 76: Radiation | rank: 34 | ilscore: 78&#10;&bull; Weight Watchers (Mini jam 75) | MJ 75: Wisdom | rank: 50 | ilscore: 56&#10;&bull; The Last Outpost (Mini Jam 74) | MJ 74: Chaos | rank: 22 | ilscore: 62&#10;&bull; Power Button Collector (Mini Jam 73) | MJ 73: Power | rank: 117 | ilscore: 63&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Liam_x220</h1>
+		<a href="https://liam-x220.itch.io">liam-x220.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 444</p>
+		<p>Total ilScore: 260</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://liam-x220.itch.io/sunblock-minijam-76">Sunblock! (Mini Jam 76)</a></td>
+				<td><span class="early">6h early</span></td>
+				<td>
+					<a href="../jammer/soeyzandiego.html">soeyzandiego</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>34</td>
+				<td>14</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://muggy672.itch.io/minijam75">Weight Watchers (Mini jam 75)</a></td>
+				<td><span class="early">7h 11m early</span></td>
+				<td>
+					<a href="../jammer/muggy672.html">muggy672</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>50</td>
+				<td>20</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://liam-x220.itch.io/the-last-outpost">The Last Outpost (Mini Jam 74)</a></td>
+				<td><span class="early">7h 31m early</span></td>
+				<td>
+					<a href="../jammer/valholl-studios.html">Valholl Studios</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>22</td>
+				<td>21</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://liam-x220.itch.io/power-button-collector">Power Button Collector (Mini Jam 73)</a></td>
+				<td><span class="early">12h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>117</td>
+				<td>14</td>
+				<td>63</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1020, 220, 97, 42, 46, 47, 49, 57, 63, 63, 65, 69, 73, 77, 78, 79, 84, 85, 87, 89, 92, 93, 95, 96, 98, 101, 103, 113, 125, 129, 130, 137, 140, 144, 149, 152, 162, 168, 174, 186,
+				192, 196, 196, 197, 197, 197, 207, 212, 213, 214, 218, 220, 228, 235, 238, 242, 249, 251, 258, 266, 270, 271, 279, 283, 286, 288, 289, 295, 295, 295, 296, 297, 298, 300, 302, 303, 305, 306, 306, 312,
+				316, 320, 323, 326, 330, 335, 341, 344, 344, 345, 354, 359, 368, 369, 371, 372, 384, 385, 387, 387, 389, 389, 389, 393, 393, 396, 400, 400, 403, 404, 409, 415, 418, 420, 421, 424, 428, 431, 436, 439,
+				443,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

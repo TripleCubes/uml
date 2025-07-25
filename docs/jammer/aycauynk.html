@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>aycauynk&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="aycauynk&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/aycauynk.html" property="og:url">
+	<meta content="Rank by ilScore: 2008&#10;&#10;2 games&#10;&bull; HellCape | MJ 69: Hell | rank: 45 | ilscore: 61&#10;&bull; Solo Square | MJ+ 1: Isolation | rank: 47 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>aycauynk</h1>
+		<a href="https://aycauynk.itch.io">aycauynk.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2008</p>
+		<p>Total ilScore: 121</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ensareray.itch.io/hellcape">HellCape</a></td>
+				<td><span class="early">8h 16m early</span></td>
+				<td>
+					<a href="../jammer/ensareray.html">ensareray</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>45</td>
+				<td>8</td>
+				<td>61</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://aycauynk.itch.io/solo-square">Solo Square</a></td>
+				<td><span class="early">1d 9h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>47</td>
+				<td>12</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				280, 283, 312, 321, 361, 389, 457, 467, 476, 482, 488, 505, 512, 632, 724, 727, 736, 801, 815, 827, 842, 179, 183, 196, 203, 229, 237, 248, 272, 288, 294, 324, 356, 374, 380, 398, 416, 447, 460, 477,
+				491, 501, 508, 514, 537, 550, 555, 568, 577, 583, 589, 603, 639, 673, 690, 693, 715, 732, 752, 807, 820, 856, 883, 917, 1023, 1046, 1065, 1065, 1071, 1075, 1085, 1110, 1129, 1138, 1146, 1160, 1169, 1199, 1225, 1243,
+				1260, 1276, 1297, 1305, 1340, 1352, 1363, 1380, 1399, 1411, 1417, 1419, 1436, 1436, 1437, 1443, 1445, 1447, 1457, 1465, 1472, 1476, 1478, 1484, 1496, 1512, 1529, 1534, 1564, 1585, 1599, 1606, 1617, 1622, 1642, 1663, 1670, 1687, 1690, 1701,
+				1706, 1727, 1729, 1735, 1737, 1738, 1746, 1747, 1750, 1762, 1790, 1803, 1813, 1824, 1837, 1853, 1859, 1871, 1894, 1911, 1927, 1947, 1957, 1976, 1994, 2007,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

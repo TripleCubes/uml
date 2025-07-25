@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Evanator&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Evanator&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/evanator.html" property="og:url">
+	<meta content="Rank by ilScore: 6879&#10;&#10;3 games&#10;&bull; Golem Puzzle | MJ 52: Summit | rank: 65 | ilscore: 42&#10;&bull; Birthday Bashup: Mini jam 27 | MJ 27: Celebration | rank: 24 | ilscore: 7&#10;&bull; Birthday Bashup Web | MJ 27: Celebration | rank: 21 | ilscore: 13&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Evanator</h1>
+		<a href="https://evanator.itch.io">evanator.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6879</p>
+		<p>Total ilScore: 62</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://evanator.itch.io/golem-puzzle">Golem Puzzle</a></td>
+				<td><span class="early">5h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>65</td>
+				<td>4</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://evanator.itch.io/birthday-bashup-game">Birthday Bashup: Mini jam 27</a></td>
+				<td><span class="early">2h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-27-celebration">MJ 27: Celebration</a></td>
+				<td>24</td>
+				<td>24</td>
+				<td>1</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td><a href="https://evanator.itch.io/birthday-bashup-web">Birthday Bashup Web</a></td>
+				<td><span class="early">1h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-27-celebration">MJ 27: Celebration</a></td>
+				<td>24</td>
+				<td>21</td>
+				<td>5</td>
+				<td>13</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				370, 389, 406, 430, 440, 459, 498, 511, 514, 539, 539, 553, 567, 592, 610, 628, 635, 655, 699, 730, 769, 790, 798, 913, 1015, 1038, 292, 302, 334, 360, 421, 430, 437, 445, 450, 463, 470, 590, 678, 682,
+				691, 751, 762, 775, 788, 838, 849, 897, 921, 1058, 1080, 1117, 1190, 1269, 1280, 1409, 1494, 1510, 1520, 1572, 1676, 1789, 1826, 1916, 1952, 2014, 2037, 2051, 2109, 2173, 2175, 2227, 2237, 2243, 2282, 2337, 2516, 2610, 2679, 2686,
+				2771, 2809, 2885, 3104, 3140, 3292, 3360, 3484, 3786, 3851, 3896, 3897, 3902, 3908, 3911, 4015, 4089, 4114, 4123, 4178, 4180, 4311, 4374, 4385, 4409, 4468, 4536, 4554, 4700, 4710, 4714, 4772, 4826, 4843, 4851, 4854, 4960, 4960, 4963, 4968,
+				4974, 4984, 4999, 5009, 5042, 5048, 5057, 5060, 5146, 5228, 5260, 5269, 5413, 5440, 5483, 5511, 5566, 5572, 5641, 5697, 5706, 5796, 5809, 5824, 5829, 5982, 5990, 5993, 5997, 6001, 6005, 6014, 6032, 6091, 6178, 6206, 6220, 6262, 6288, 6318,
+				6372, 6402, 6468, 6523, 6577, 6695, 6716, 6801, 6843, 6878,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

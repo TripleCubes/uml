@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>MegaMelone&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="MegaMelone&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/megamelone.html" property="og:url">
+	<meta content="Rank by game in top 1: 215&#10;Rank by game in top 5: 618&#10;Rank by game in top 10: 808&#10;Rank by game in top 20: 1171&#10;Rank by ilScore: 7259&#10;&#10;1 games&#10;&bull; ROCKBOTTOM HERO | MJ 148: Connections | rank: 1 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>MegaMelone</h1>
+		<a href="https://megamelone.itch.io">megamelone.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 215</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 618</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 808</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1171</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7259</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://megamelone.itch.io/rockbottom-hero">ROCKBOTTOM HERO</a></td>
+				<td><span class="early">7m 0s early</span></td>
+				<td>
+					<a href="../jammer/redsmiley.html">RedSmiley</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-148-connections">MJ 148: Connections</a></td>
+				<td>52</td>
+				<td>1</td>
+				<td>16</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				160, 161, 163, 164, 166, 168, 169, 171, 172, 173, 174, 175, 176, 177, 178, 183, 184, 185, 186, 187, 187, 187, 187, 189, 189, 189, 193, 194, 194, 197, 197, 198, 198, 198, 198, 199, 200, 202, 203, 203,
+				209, 214, 214,
+			]],
+			[ "5", [
+				460, 466, 468, 474, 482, 492, 493, 496, 498, 502, 503, 508, 512, 513, 521, 522, 527, 531, 537, 540, 540, 540, 540, 542, 544, 544, 555, 560, 561, 563, 567, 569, 570, 574, 575, 580, 584, 592, 602, 602,
+				609, 616, 617,
+			]],
+			[ "10", [
+				607, 613, 617, 622, 630, 640, 645, 648, 651, 656, 657, 663, 667, 671, 685, 687, 692, 699, 712, 715, 718, 718, 719, 721, 723, 724, 735, 741, 744, 746, 751, 753, 753, 759, 763, 768, 772, 785, 794, 794,
+				798, 805, 807,
+			]],
+			[ "20", [
+				872, 878, 882, 887, 898, 910, 917, 928, 930, 936, 942, 955, 963, 969, 983, 988, 996, 1006, 1019, 1024, 1034, 1035, 1037, 1041, 1046, 1048, 1060, 1068, 1072, 1077, 1084, 1091, 1100, 1106, 1111, 1115, 1120, 1133, 1145, 1146,
+				1151, 1163, 1170,
+			]],
+			[ "ilscore", [
+				5343, 5434, 5518, 5551, 5562, 5713, 5740, 5787, 5816, 5873, 5877, 5949, 6003, 6013, 6107, 6118, 6137, 6142, 6295, 6304, 6308, 6311, 6315, 6320, 6329, 6348, 6408, 6497, 6526, 6543, 6590, 6630, 6664, 6725, 6756, 6822, 6879, 6936, 7053, 7078,
+				7169, 7214, 7258,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

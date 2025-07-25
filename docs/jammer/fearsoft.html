@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>FearSoft&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="FearSoft&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/fearsoft.html" property="og:url">
+	<meta content="Rank by game in top 5: 365&#10;Rank by game in top 10: 536&#10;Rank by game in top 20: 918&#10;Rank by ilScore: 3139&#10;&#10;1 games&#10;&bull; Another Day At The Office | MJ 76: Radiation | rank: 4 | ilscore: 92&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>FearSoft</h1>
+		<a href="https://fearsoft.itch.io">fearsoft.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 365</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 536</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 918</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3139</p>
+		<p>Total ilScore: 92</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fearsoft.itch.io/another-day-at-the-office">Another Day At The Office</a></td>
+				<td><span class="early">3h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>4</td>
+				<td>13</td>
+				<td>92</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				117, 117, 119, 127, 129, 130, 131, 133, 136, 136, 138, 139, 139, 144, 146, 146, 147, 149, 149, 152, 152, 152, 153, 154, 154, 165, 169, 169, 172, 175, 176, 182, 182, 184, 186, 189, 195, 197, 201, 201,
+				202, 204, 210, 210, 211, 211, 211, 211, 212, 215, 218, 221, 227, 229, 229, 232, 233, 234, 235, 237, 238, 240, 241, 241, 246, 251, 255, 257, 259, 265, 266, 266, 268, 268, 271, 271, 273, 274, 277, 281,
+				284, 284, 284, 284, 288, 289, 296, 298, 299, 307, 311, 316, 318, 322, 325, 327, 327, 327, 329, 331, 331, 338, 340, 340, 341, 343, 343, 344, 344, 345, 348, 352, 354, 358, 358, 364, 364, 364,
+			]],
+			[ "10", [
+				179, 179, 184, 192, 196, 199, 199, 201, 205, 205, 209, 210, 211, 216, 219, 221, 221, 224, 224, 227, 229, 229, 232, 234, 234, 245, 248, 249, 254, 257, 261, 268, 268, 272, 275, 278, 284, 286, 292, 292,
+				292, 294, 303, 303, 304, 304, 307, 307, 310, 313, 320, 327, 335, 337, 338, 345, 346, 348, 352, 356, 359, 362, 363, 365, 370, 375, 379, 383, 384, 389, 390, 391, 394, 394, 397, 398, 401, 405, 408, 412,
+				415, 419, 421, 422, 426, 428, 433, 436, 440, 448, 453, 457, 462, 468, 471, 476, 478, 479, 481, 483, 484, 491, 495, 497, 498, 500, 500, 500, 502, 506, 510, 514, 522, 526, 526, 529, 532, 535,
+			]],
+			[ "20", [
+				289, 289, 295, 306, 311, 321, 324, 328, 334, 338, 343, 347, 351, 356, 363, 368, 374, 378, 382, 383, 387, 393, 394, 395, 396, 406, 411, 415, 418, 423, 430, 436, 440, 446, 452, 456, 462, 467, 477, 477,
+				478, 483, 496, 497, 506, 508, 515, 519, 524, 530, 539, 551, 565, 570, 572, 580, 582, 584, 587, 594, 598, 603, 607, 611, 614, 616, 621, 630, 633, 641, 647, 650, 655, 660, 671, 674, 677, 680, 683, 692,
+				697, 704, 714, 714, 719, 725, 738, 745, 751, 760, 769, 777, 785, 791, 796, 808, 811, 813, 817, 822, 824, 833, 839, 842, 846, 851, 856, 865, 868, 873, 876, 881, 889, 896, 897, 901, 909, 917,
+			]],
+			[ "ilscore", [
+				455, 476, 486, 555, 583, 602, 611, 630, 657, 696, 713, 742, 756, 776, 788, 796, 815, 834, 843, 857, 871, 875, 891, 913, 1032, 1085, 1104, 1113, 1142, 1162, 1180, 1333, 1347, 1412, 1444, 1517, 1749, 1763, 1776, 1776,
+				1779, 1786, 1794, 1844, 1869, 1884, 1896, 1914, 1922, 1993, 2018, 2035, 2054, 2071, 2095, 2108, 2180, 2190, 2197, 2216, 2240, 2256, 2261, 2266, 2283, 2286, 2291, 2298, 2301, 2305, 2318, 2325, 2331, 2341, 2350, 2360, 2384, 2408, 2426, 2435,
+				2521, 2542, 2562, 2575, 2586, 2595, 2613, 2634, 2642, 2668, 2673, 2688, 2693, 2762, 2768, 2776, 2783, 2786, 2793, 2799, 2810, 2830, 2864, 2878, 2893, 2913, 2929, 2939, 2948, 2959, 2984, 3011, 3035, 3066, 3080, 3101, 3120, 3138,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

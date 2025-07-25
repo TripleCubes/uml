@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>KaaSnake&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="KaaSnake&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kaasnake.html" property="og:url">
+	<meta content="Rank by game in top 10: 18&#10;Rank by game in top 20: 22&#10;Rank by ilScore: 51&#10;&#10;9 games&#10;&bull; Castle Defenders | MJ 116: Pocket Sized | rank: 7 | ilscore: 52&#10;&bull; Will Of The Spiders | MJ+ 5: Legends | rank: 6 | ilscore: 27&#10;&bull; Underworld | MJ 110: Sacrifice | rank: 23 | ilscore: 101&#10;&bull; Dungeon Battlefield | MJ 109: Depths | rank: 8 | ilscore: 92&#10;&bull; Fire Canyon | MJ 101: Limit | rank: 6 | ilscore: 95&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>KaaSnake</h1>
+		<a href="https://kaasnake.itch.io">kaasnake.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 18</p>
+		<div class="boxes">
+			<span>6</span>
+			<span class="box_majorjam">6</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>6</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 22</p>
+		<div class="boxes">
+			<span>6</span>
+			<span class="box_majorjam">6</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>14</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 51</p>
+		<p>Total ilScore: 668</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/castle-defenders">Castle Defenders</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>7</td>
+				<td>11</td>
+				<td>52</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://kaasnake.itch.io/will-of-the-spiders">Will Of The Spiders</a></td>
+				<td><span class="early">5h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-5">MJ+ 5: Legends</a></td>
+				<td>21</td>
+				<td>6</td>
+				<td>9</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/underworld">Underworld</a></td>
+				<td><span class="early">4h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>23</td>
+				<td>19</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/dungeon-battlefield">Dungeon Battlefield</a></td>
+				<td><span class="early">2h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>8</td>
+				<td>16</td>
+				<td>92</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/fire-canyon">Fire Canyon</a></td>
+				<td><span class="early">3h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>6</td>
+				<td>12</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/dungeon-of-anxiety">Dungeon of Anxiety</a></td>
+				<td><span class="early">4h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>14</td>
+				<td>22</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/for-the-queen">For The Queen!</a></td>
+				<td><span class="early">3h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>7</td>
+				<td>11</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/hopeful-alien">Hopeful Alien</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>42</td>
+				<td>6</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaasnake.itch.io/climb-to-the-peak">Climb to the Peak</a></td>
+				<td><span class="early">5h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>8</td>
+				<td>12</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				240, 249, 258, 268, 279, 291, 302, 302, 305, 319, 336, 349, 365, 369, 376, 389, 397, 405, 418, 431, 436, 444, 76, 78, 78, 80, 81, 82, 85, 86, 92, 94, 95, 95, 97, 97, 101, 102, 103, 104,
+				106, 107, 108, 109, 109, 113, 115, 115, 118, 120, 120, 123, 41, 41, 41, 42, 42, 43, 43, 45, 21, 21, 21, 21, 21, 16, 16, 16, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14,
+				14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+				16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17,
+			]],
+			[ "20", [
+				305, 315, 325, 343, 355, 368, 384, 391, 397, 413, 431, 459, 484, 490, 499, 521, 530, 538, 565, 583, 588, 602, 125, 129, 130, 133, 135, 136, 140, 143, 153, 155, 156, 158, 161, 163, 167, 172, 174, 175,
+				178, 182, 188, 189, 193, 196, 200, 200, 203, 204, 204, 74, 36, 36, 36, 39, 39, 40, 41, 42, 23, 23, 23, 23, 23, 21, 21, 21, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15,
+				15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19,
+				19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21,
+			]],
+			[ "ilscore", [
+				256, 266, 293, 313, 368, 379, 385, 393, 398, 403, 410, 518, 107, 111, 118, 122, 128, 130, 133, 146, 147, 162, 59, 66, 73, 78, 83, 85, 85, 98, 113, 118, 118, 123, 130, 136, 140, 143, 146, 156,
+				162, 164, 167, 174, 176, 178, 185, 187, 192, 196, 211, 92, 47, 49, 54, 57, 58, 67, 68, 73, 46, 23, 25, 26, 26, 27, 27, 27, 23, 25, 25, 25, 25, 25, 25, 25, 27, 28, 29, 29,
+				29, 29, 29, 30, 30, 33, 36, 37, 37, 37, 37, 38, 38, 38, 38, 38, 38, 38, 39, 39, 39, 40, 40, 40, 42, 42, 43, 43, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 45,
+				46, 46, 46, 46, 46, 46, 47, 47, 47, 47, 47, 47, 47, 47, 47, 47, 48, 48, 48, 50, 50, 50, 50, 50,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

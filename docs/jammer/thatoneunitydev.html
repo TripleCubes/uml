@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ThatOneUnityDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ThatOneUnityDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thatoneunitydev.html" property="og:url">
+	<meta content="Rank by game in top 10: 812&#10;Rank by game in top 20: 1175&#10;Rank by ilScore: 2956&#10;&#10;1 games&#10;&bull; MonoDungeon | MJ 62: Colors | rank: 8 | ilscore: 95&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ThatOneUnityDev</h1>
+		<a href="https://thatoneunitydev.itch.io">thatoneunitydev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 812</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1175</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2956</p>
+		<p>Total ilScore: 95</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://thatoneunitydev.itch.io/monodungeon">MonoDungeon</a></td>
+				<td><span class="early">11h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>8</td>
+				<td>11</td>
+				<td>95</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				187, 194, 201, 205, 213, 215, 217, 225, 232, 232, 238, 240, 250, 253, 256, 263, 265, 271, 284, 288, 290, 290, 296, 301, 303, 308, 315, 317, 324, 329, 333, 334, 339, 343, 344, 349, 349, 352, 356, 357,
+				372, 376, 377, 385, 388, 392, 401, 401, 410, 415, 421, 433, 444, 454, 454, 454, 458, 465, 468, 476, 476, 478, 486, 488, 493, 515, 518, 525, 538, 541, 549, 550, 552, 555, 560, 566, 568, 569, 571, 575,
+				579, 583, 589, 591, 598, 602, 603, 606, 606, 608, 611, 617, 621, 626, 634, 644, 649, 652, 655, 660, 661, 667, 671, 675, 689, 691, 696, 703, 716, 719, 722, 722, 723, 725, 727, 728, 739, 745, 748, 750,
+				755, 757, 757, 763, 767, 772, 776, 789, 798, 798, 802, 809, 811,
+			]],
+			[ "20", [
+				266, 275, 285, 292, 301, 307, 310, 320, 327, 328, 335, 339, 350, 353, 358, 366, 368, 374, 389, 393, 403, 406, 414, 421, 426, 432, 440, 444, 451, 460, 465, 472, 479, 484, 485, 492, 498, 500, 503, 505,
+				530, 535, 539, 545, 549, 554, 566, 570, 580, 588, 595, 613, 625, 638, 638, 638, 646, 657, 661, 677, 679, 685, 696, 700, 707, 729, 737, 750, 763, 767, 776, 778, 780, 782, 790, 797, 800, 804, 808, 811,
+				813, 818, 827, 831, 841, 849, 852, 857, 862, 871, 876, 882, 886, 891, 902, 914, 921, 932, 934, 940, 946, 959, 967, 973, 987, 992, 1000, 1010, 1023, 1028, 1038, 1039, 1041, 1045, 1050, 1052, 1064, 1072, 1076, 1081,
+				1088, 1095, 1104, 1110, 1115, 1119, 1124, 1137, 1149, 1150, 1155, 1167, 1174,
+			]],
+			[ "ilscore", [
+				187, 225, 226, 232, 242, 252, 259, 268, 282, 291, 306, 322, 377, 387, 399, 423, 444, 455, 513, 542, 561, 570, 589, 609, 644, 661, 687, 702, 722, 733, 741, 760, 779, 789, 804, 817, 822, 837, 859, 961,
+				1012, 1030, 1039, 1066, 1085, 1105, 1246, 1262, 1320, 1348, 1420, 1646, 1660, 1675, 1675, 1678, 1684, 1692, 1733, 1755, 1769, 1782, 1800, 1808, 1866, 1889, 1907, 1926, 1942, 1966, 1976, 2043, 2053, 2059, 2076, 2102, 2117, 2121, 2126, 2144,
+				2146, 2150, 2157, 2160, 2164, 2176, 2183, 2189, 2199, 2206, 2217, 2235, 2260, 2278, 2287, 2363, 2390, 2410, 2423, 2432, 2441, 2457, 2477, 2485, 2508, 2513, 2527, 2530, 2591, 2597, 2605, 2612, 2615, 2622, 2628, 2639, 2660, 2694, 2708, 2721,
+				2740, 2756, 2766, 2774, 2785, 2809, 2836, 2859, 2885, 2898, 2918, 2937, 2955,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>tVeratti&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="tVeratti&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/veratti.html" property="og:url">
+	<meta content="Rank by game in top 20: 3367&#10;Rank by ilScore: 10778&#10;&#10;1 games&#10;&bull; leaf noir (prototype) | MJ 115: Noir | rank: 19 | ilscore: 39&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>tVeratti</h1>
+		<a href="https://veratti.itch.io">veratti.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3367</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10778</p>
+		<p>Total ilScore: 39</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rainedoe.itch.io/leaf-noir">leaf noir (prototype)</a></td>
+				<td><span class="early">2m 23s early</span></td>
+				<td>
+					<a href="../jammer/rainedoe.html">rainedoe</a>,
+					<a href="../jammer/thedawdle.html">Craig Alan Carroll</a>,
+					<a href="../jammer/bakenshake09.html">Bakenshake</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>19</td>
+				<td>7</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1831, 1852, 1870, 1890, 1912, 1935, 1957, 1968, 1986, 2013, 2029, 2049, 2064, 2086, 2100, 2126, 2146, 2163, 2188, 2209, 2229, 2246, 2253, 2281, 2285, 2297, 2317, 2331, 2346, 2367, 2391, 2414, 2432, 2449, 2471, 2489, 2501, 2519, 2548, 2580,
+				2602, 2622, 2643, 2663, 2682, 2697, 2714, 2735, 2775, 2789, 2804, 2817, 2842, 2856, 2861, 2877, 2897, 2919, 2938, 2955, 2986, 3006, 3030, 3059, 3083, 3109, 3133, 3163, 3181, 3200, 3227, 3246, 3272, 3297, 3329, 3349, 3366,
+			]],
+			[ "ilscore", [
+				6005, 6026, 6159, 6278, 6351, 6380, 6469, 6482, 6642, 6721, 6768, 6805, 6888, 6981, 7021, 7199, 7216, 7234, 7330, 7411, 7443, 7456, 7459, 7603, 7604, 7616, 7638, 7656, 7674, 7717, 7757, 7822, 7847, 7863, 7887, 8006, 8129, 8201, 8240, 8404,
+				8450, 8534, 8596, 8689, 8710, 8796, 8869, 8891, 9022, 9045, 9096, 9109, 9294, 9328, 9331, 9353, 9367, 9397, 9417, 9465, 9551, 9653, 9708, 9749, 9816, 9884, 9945, 10022, 10077, 10158, 10232, 10310, 10462, 10518, 10631, 10703, 10777,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dw3nt&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dw3nt&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dw3nt.html" property="og:url">
+	<meta content="Rank by game in top 20: 471&#10;Rank by ilScore: 1159&#10;&#10;2 games&#10;&bull; Albie&#39;s Adventure | MJ+ 4: Cosmic | rank: 11 | ilscore: 89&#10;&bull; Gravitron | MJ 75: Wisdom | rank: 15 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dw3nt</h1>
+		<a href="https://dw3nt.itch.io">dw3nt.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 471</p>
+		<div class="boxes">
+			<span class="box_majorjam">11</span>
+			<span>15</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1159</p>
+		<p>Total ilScore: 163</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://dw3nt.itch.io/albies-adventure">Albie&#39;s Adventure</a></td>
+				<td><span class="early">28m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>11</td>
+				<td>16</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://dw3nt.itch.io/gravitron">Gravitron</a></td>
+				<td><span class="early">3h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>15</td>
+				<td>11</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				668, 687, 693, 700, 722, 735, 745, 751, 770, 790, 802, 816, 154, 156, 157, 160, 164, 166, 168, 172, 175, 182, 183, 185, 186, 186, 191, 198, 198, 203, 206, 212, 214, 218, 223, 229, 230, 232, 236, 242,
+				242, 242, 244, 249, 250, 255, 255, 259, 261, 263, 266, 270, 276, 278, 282, 283, 291, 293, 294, 295, 299, 302, 305, 307, 309, 312, 315, 318, 322, 323, 327, 329, 330, 333, 333, 337, 338, 339, 341, 344,
+				347, 350, 354, 357, 358, 362, 363, 368, 377, 381, 382, 389, 394, 398, 403, 403, 406, 407, 408, 411, 413, 414, 417, 421, 423, 425, 432, 432, 432, 434, 436, 439, 444, 455, 458, 458, 461, 465, 470,
+			]],
+			[ "ilscore", [
+				755, 809, 858, 867, 987, 1059, 1067, 1076, 1110, 1187, 1286, 1308, 250, 257, 264, 269, 274, 287, 292, 296, 301, 305, 309, 311, 317, 338, 369, 385, 386, 392, 397, 404, 434, 443, 468, 489, 510, 551, 566, 578,
+				578, 582, 585, 588, 603, 614, 619, 626, 632, 633, 648, 667, 678, 685, 703, 715, 723, 744, 751, 758, 772, 784, 795, 796, 799, 813, 814, 814, 817, 817, 821, 825, 830, 834, 836, 838, 839, 846, 856, 860,
+				862, 887, 896, 899, 902, 913, 919, 939, 951, 955, 972, 975, 981, 985, 1000, 1004, 1007, 1008, 1008, 1013, 1014, 1017, 1024, 1032, 1041, 1048, 1050, 1057, 1067, 1075, 1082, 1093, 1100, 1112, 1126, 1131, 1142, 1149, 1158,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

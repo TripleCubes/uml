@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RGeeK&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="RGeeK&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rgeek.html" property="og:url">
+	<meta content="Rank by ilScore: 1554&#10;&#10;2 games&#10;&bull; Pyromane | MJ 162: Heat | rank: 83 | ilscore: 61&#10;&bull; Bubble Skull: Rise of Crow Beard | MJ 84: Bubbles | rank: 58 | ilscore: 79&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RGeeK</h1>
+		<a href="https://rgeek.itch.io">rgeek.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1554</p>
+		<p>Total ilScore: 140</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rgeek.itch.io/pyromane">Pyromane</a></td>
+				<td><span class="early">4h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-162-heat">MJ 162: Heat</a></td>
+				<td>134</td>
+				<td>83</td>
+				<td>7</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://vortex-of-purple.itch.io/bubble-skull">Bubble Skull: Rise of Crow Beard</a></td>
+				<td><span class="early">4h 33m early</span></td>
+				<td>
+					<a href="../jammer/vortex-of-purple.html">VORTEX_OF_PURPLE</a>,
+					<a href="../jammer/prasadpdc.html">Prasad</a>,
+					<a href="../jammer/saadmemon.html">Saad Memon</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>58</td>
+				<td>15</td>
+				<td>79</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1028, 1108, 1122, 1179, 1194, 1226, 1240, 1248, 1284, 1313, 1321, 1334, 1345, 1352, 1373, 1400, 1563, 1641, 1682, 1691, 1736, 1760, 1793, 1974, 1986, 2100, 2150, 2257, 2515, 2533, 2550, 2551, 2554, 2563, 2568, 2652, 2698, 2714, 2725, 2758,
+				2761, 2869, 2909, 2918, 2936, 2967, 3010, 3024, 3146, 3158, 3161, 3195, 3225, 3237, 3243, 3246, 3303, 3307, 3312, 3320, 3324, 3333, 3342, 3351, 3359, 3369, 3380, 3389, 3441, 3476, 3499, 3505, 3627, 3643, 3660, 3674, 3702, 3711, 3744, 3772,
+				3783, 1299, 1303, 1312, 1319, 1340, 1341, 1344, 1346, 1347, 1352, 1352, 1355, 1368, 1384, 1399, 1404, 1412, 1420, 1432, 1441, 1448, 1465, 1476, 1493, 1513, 1518, 1530, 1541, 1553,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

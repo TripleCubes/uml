@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chirpy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Chirpy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chirpyz.html" property="og:url">
+	<meta content="Rank by game in top 5: 88&#10;Rank by game in top 10: 37&#10;Rank by game in top 20: 75&#10;Rank by ilScore: 215&#10;&#10;5 games&#10;&bull; Consino | MJ 95: Chance | rank: 24 | ilscore: 53&#10;&bull; To Heaven And Back | MJ 84: Bubbles | rank: 6 | ilscore: 96&#10;&bull; Demon Chicken | MJ 65: Abandoned | rank: 3 | ilscore: 64&#10;&bull; Protego | MJ 62: Colors | rank: 9 | ilscore: 94&#10;&bull; Antiamor | MJ+ 2: Love | rank: 5 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chirpy</h1>
+		<a href="https://chirpyz.itch.io">chirpyz.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 88</p>
+		<div class="boxes">
+			<span>3</span>
+			<span class="box_majorjam">5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 37</p>
+		<div class="boxes">
+			<span>3</span>
+			<span class="box_majorjam">5</span>
+			<span>6</span>
+			<span>9</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 75</p>
+		<div class="boxes">
+			<span>3</span>
+			<span class="box_majorjam">5</span>
+			<span>6</span>
+			<span>9</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 215</p>
+		<p>Total ilScore: 366</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chirpyz.itch.io/consino">Consino</a></td>
+				<td><span class="early">1h 21m early</span></td>
+				<td>
+					<a href="../jammer/quevdev.html">QuevDev</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>24</td>
+				<td>10</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://chirpyz.itch.io/to-heaven-and-back">To Heaven And Back</a></td>
+				<td><span class="early">3h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>6</td>
+				<td>11</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://chirpyz.itch.io/demon-chicken">Demon Chicken</a></td>
+				<td><span class="early">30m 43s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>3</td>
+				<td>10</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://chirpyz.itch.io/protego">Protego</a></td>
+				<td><span class="early">23h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>9</td>
+				<td>36</td>
+				<td>94</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://chirpyz.itch.io/antiamor">Antiamor</a></td>
+				<td><span class="early">1d 0h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>5</td>
+				<td>12</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				114, 114, 116, 123, 123, 131, 138, 141, 18, 19, 19, 19, 20, 21, 21, 22, 22, 22, 23, 24, 24, 24, 24, 24, 28, 28, 28, 28, 28, 28, 28, 28, 30, 30, 30, 30, 31, 31, 31, 35,
+				35, 35, 35, 35, 35, 36, 40, 40, 40, 42, 42, 43, 43, 44, 45, 45, 45, 46, 47, 47, 47, 49, 50, 50, 50, 50, 50, 50, 51, 52, 52, 54, 54, 55, 55, 57, 57, 58, 58, 58,
+				58, 59, 59, 59, 60, 60, 60, 60, 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 62, 62, 63, 64, 64, 64, 65, 66, 68, 70, 71, 71, 71, 74, 75, 75, 75, 75, 75, 75, 75, 75,
+				75, 76, 76, 76, 77, 78, 78, 78, 78, 78, 78, 79, 80, 80, 80, 86, 86, 87,
+			]],
+			[ "10", [
+				161, 161, 166, 172, 172, 34, 34, 34, 16, 16, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 19, 19, 19, 19, 20, 20, 20, 20, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14,
+				14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 19, 19, 19, 20, 20, 20, 21, 21, 21, 21, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23,
+				23, 23, 23, 24, 24, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 26, 27, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 30, 31, 31, 31, 32, 32, 32, 32, 32, 32,
+				32, 32, 32, 34, 34, 34, 34, 35, 36, 36, 36, 36, 36, 36, 36, 36, 36, 36,
+			]],
+			[ "20", [
+				229, 236, 243, 248, 250, 67, 67, 67, 30, 31, 31, 34, 34, 36, 36, 36, 36, 36, 36, 36, 37, 37, 37, 37, 39, 43, 44, 44, 21, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23,
+				24, 24, 25, 26, 28, 29, 29, 29, 29, 32, 32, 32, 32, 34, 36, 37, 38, 38, 38, 40, 40, 40, 42, 42, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 46, 47, 47, 47, 48, 49,
+				49, 49, 49, 50, 50, 50, 50, 53, 53, 53, 54, 55, 55, 55, 55, 55, 57, 59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 60, 60, 60, 62, 63, 63, 63, 63, 63, 63, 63, 63, 63,
+				65, 65, 66, 67, 67, 67, 68, 69, 70, 70, 70, 73, 73, 73, 73, 74, 74, 74,
+			]],
+			[ "ilscore", [
+				492, 498, 503, 524, 531, 57, 65, 67, 24, 28, 31, 32, 32, 34, 36, 38, 39, 45, 51, 57, 62, 65, 65, 71, 87, 92, 92, 96, 46, 46, 48, 50, 51, 52, 53, 56, 59, 61, 63, 64,
+				40, 41, 44, 47, 53, 57, 64, 65, 70, 73, 75, 83, 84, 87, 90, 94, 100, 103, 104, 104, 104, 104, 105, 109, 112, 113, 116, 117, 118, 121, 121, 123, 123, 126, 129, 134, 138, 139, 140, 143,
+				144, 144, 144, 144, 144, 144, 145, 145, 145, 146, 148, 151, 151, 152, 152, 152, 154, 155, 156, 156, 157, 158, 158, 158, 158, 160, 162, 164, 165, 167, 170, 173, 173, 176, 178, 178, 178, 178, 178, 178,
+				179, 183, 185, 190, 190, 190, 192, 192, 196, 198, 200, 204, 205, 209, 210, 211, 213, 214,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

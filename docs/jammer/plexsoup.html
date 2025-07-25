@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>plexsoup&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="plexsoup&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/plexsoup.html" property="og:url">
+	<meta content="Rank by game in top 10: 1745&#10;Rank by game in top 20: 2652&#10;Rank by ilScore: 8190&#10;&#10;1 games&#10;&bull; Planetary Rush | MJ 24: Space | rank: 10 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>plexsoup</h1>
+		<a href="https://plexsoup.itch.io">plexsoup.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1745</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2652</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8190</p>
+		<p>Total ilScore: 54</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://plexsoup.itch.io/planetary-rush">Planetary Rush</a></td>
+				<td><span class="early">15h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-24-space">MJ 24: Space</a></td>
+				<td>56</td>
+				<td>10</td>
+				<td>16</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				105, 115, 121, 122, 126, 131, 139, 143, 150, 159, 162, 166, 175, 176, 181, 189, 200, 203, 207, 210, 211, 218, 225, 235, 242, 243, 254, 273, 281, 290, 300, 311, 321, 332, 344, 355, 355, 359, 373, 391,
+				404, 420, 424, 431, 444, 452, 460, 473, 486, 496, 504, 513, 526, 535, 545, 554, 563, 571, 583, 590, 607, 617, 628, 638, 650, 662, 674, 682, 693, 703, 721, 729, 738, 749, 762, 772, 776, 786, 792, 803,
+				818, 825, 831, 838, 847, 854, 863, 880, 887, 896, 906, 918, 932, 945, 946, 960, 969, 977, 986, 1003, 1015, 1024, 1037, 1039, 1048, 1066, 1075, 1086, 1099, 1112, 1122, 1132, 1140, 1143, 1158, 1169, 1177, 1181, 1185, 1199,
+				1203, 1206, 1212, 1215, 1224, 1240, 1247, 1258, 1265, 1277, 1292, 1300, 1306, 1314, 1335, 1352, 1366, 1374, 1383, 1394, 1406, 1416, 1428, 1443, 1456, 1462, 1468, 1477, 1489, 1494, 1494, 1497, 1506, 1511, 1517, 1525, 1543, 1551, 1561, 1577,
+				1588, 1600, 1615, 1633, 1643, 1652, 1667, 1678, 1691, 1702, 1719, 1732, 1744,
+			]],
+			[ "20", [
+				126, 136, 143, 144, 148, 154, 166, 170, 180, 192, 195, 199, 209, 211, 216, 225, 238, 242, 246, 251, 253, 262, 272, 285, 290, 291, 305, 336, 344, 355, 365, 380, 398, 419, 431, 452, 459, 466, 492, 511,
+				539, 568, 574, 587, 611, 622, 631, 657, 679, 688, 702, 717, 742, 758, 777, 795, 809, 817, 838, 851, 867, 879, 901, 921, 947, 963, 988, 999, 1025, 1042, 1060, 1078, 1097, 1105, 1127, 1139, 1145, 1159, 1177, 1203,
+				1232, 1245, 1250, 1271, 1285, 1301, 1320, 1340, 1355, 1374, 1392, 1414, 1436, 1459, 1460, 1474, 1483, 1495, 1513, 1533, 1546, 1555, 1577, 1581, 1599, 1629, 1645, 1661, 1678, 1700, 1715, 1741, 1748, 1751, 1779, 1801, 1809, 1815, 1819, 1847,
+				1850, 1852, 1856, 1859, 1871, 1891, 1900, 1920, 1928, 1940, 1955, 1973, 1987, 2005, 2025, 2057, 2077, 2088, 2100, 2119, 2131, 2150, 2168, 2184, 2224, 2228, 2238, 2249, 2274, 2282, 2286, 2290, 2299, 2302, 2310, 2318, 2348, 2368, 2381, 2396,
+				2421, 2437, 2462, 2481, 2497, 2517, 2538, 2559, 2585, 2601, 2623, 2635, 2651,
+			]],
+			[ "ilscore", [
+				53, 62, 67, 71, 75, 79, 86, 88, 97, 111, 113, 114, 119, 120, 121, 126, 133, 135, 139, 142, 142, 148, 159, 171, 176, 180, 261, 331, 333, 377, 387, 432, 473, 555, 569, 587, 594, 599, 633, 642,
+				766, 869, 872, 884, 967, 990, 1010, 1038, 1095, 1109, 1170, 1195, 1346, 1384, 1436, 1514, 1610, 1629, 1772, 1859, 1880, 1900, 1964, 2077, 2200, 2245, 2350, 2404, 2475, 2508, 2545, 2605, 2676, 2681, 2737, 2750, 2761, 2810, 2872, 3061,
+				3162, 3244, 3251, 3350, 3404, 3495, 3719, 3763, 3927, 4005, 4141, 4463, 4532, 4592, 4592, 4608, 4612, 4619, 4729, 4819, 4859, 4871, 4942, 4945, 5082, 5149, 5170, 5199, 5275, 5359, 5385, 5542, 5554, 5559, 5640, 5699, 5719, 5725, 5727, 5844,
+				5844, 5848, 5853, 5860, 5871, 5896, 5916, 5963, 5974, 5980, 5987, 6096, 6190, 6241, 6262, 6420, 6449, 6503, 6544, 6615, 6620, 6697, 6756, 6768, 6877, 6888, 6923, 6930, 7098, 7112, 7115, 7118, 7119, 7125, 7134, 7160, 7238, 7326, 7364, 7383,
+				7435, 7485, 7528, 7594, 7633, 7703, 7763, 7827, 7960, 7996, 8094, 8144, 8189,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

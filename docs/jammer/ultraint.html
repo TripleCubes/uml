@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>+UltraInt&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="+UltraInt&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ultraint.html" property="og:url">
+	<meta content="Rank by ilScore: 508&#10;&#10;4 games&#10;&bull; LunarRescue | MJ 130: Lunar | rank: 164 | ilscore: 58&#10;&bull; OnePunchSailor | MJ 108: Seaside | rank: 144 | ilscore: 66&#10;&bull; BefriendYourShadow | MJ 103: Darkness | rank: 41 | ilscore: 76&#10;&bull; HollowWeeb | MJ 92: Death | rank: 83 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>+UltraInt</h1>
+		<a href="https://ultraint.itch.io">ultraint.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 508</p>
+		<p>Total ilScore: 246</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ultraint.itch.io/lunar-rescue">LunarRescue</a></td>
+				<td><span class="early">9m 15s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>164</td>
+				<td>5</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://ultraint.itch.io/onepunchsailor">OnePunchSailor</a></td>
+				<td><span class="early">3h 14m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>144</td>
+				<td>10</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://ultraint.itch.io/befriendyourshadow">BefriendYourShadow</a></td>
+				<td><span class="late">1h 39m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>41</td>
+				<td>10</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://ultraint.itch.io/hollowweeb">HollowWeeb</a></td>
+				<td><span class="late">1d 13h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>83</td>
+				<td>10</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3145, 3152, 3217, 3237, 3263, 3323, 3393, 3588, 3693, 3782, 3789, 692, 708, 727, 782, 794, 326, 336, 343, 377, 385, 391, 392, 396, 400, 403, 413, 422, 431, 434, 440, 441, 455, 469, 478, 484, 499, 508, 514, 305,
+				307, 309, 316, 321, 327, 329, 330, 337, 338, 338, 338, 340, 340, 341, 343, 344, 346, 347, 347, 354, 359, 362, 366, 371, 374, 379, 385, 388, 390, 392, 403, 407, 417, 420, 423, 424, 438, 439, 443, 443,
+				443, 443, 444, 447, 449, 452, 456, 457, 459, 461, 466, 472, 475, 477, 481, 487, 491, 494, 500, 503, 507,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

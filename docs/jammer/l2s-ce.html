@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>L2S-CE&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="L2S-CE&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/l2s-ce.html" property="og:url">
+	<meta content="Rank by game in top 5: 1082&#10;Rank by game in top 10: 1896&#10;Rank by game in top 20: 3033&#10;Rank by ilScore: 10223&#10;&#10;1 games&#10;&bull; Invaders Mayhem | MJ 168: Retro | rank: 5 | ilscore: 42&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>L2S-CE</h1>
+		<a href="https://l2s-ce.itch.io">l2s-ce.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1082</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1896</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3033</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10223</p>
+		<p>Total ilScore: 42</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://youle.itch.io/invaders-mayhem">Invaders Mayhem</a></td>
+				<td><span class="early">6h 3m early</span></td>
+				<td>
+					<a href="../jammer/youle.html">Youle</a>,
+					<a href="../jammer/laloney.html">Laloney</a>,
+					<a href="../jammer/botling.html">Botling</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-168-retro">MJ 168: Retro</a></td>
+				<td>37</td>
+				<td>5</td>
+				<td>14</td>
+				<td>42</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				936, 939, 947, 950, 957, 964, 975, 980, 984, 990, 995, 1001, 1010, 1020, 1023, 1028, 1039, 1047, 1054, 1059, 1066, 1076, 1081,
+			]],
+			[ "10", [
+				1621, 1635, 1646, 1654, 1666, 1677, 1695, 1703, 1713, 1729, 1740, 1752, 1767, 1785, 1794, 1803, 1818, 1829, 1842, 1853, 1870, 1883, 1895,
+			]],
+			[ "20", [
+				2571, 2586, 2596, 2602, 2615, 2630, 2662, 2682, 2707, 2728, 2752, 2776, 2801, 2831, 2849, 2868, 2895, 2916, 2942, 2963, 2995, 3015, 3032,
+			]],
+			[ "ilscore", [
+				8861, 8875, 8882, 8907, 8920, 8964, 9050, 9149, 9197, 9232, 9299, 9364, 9424, 9505, 9554, 9632, 9701, 9777, 9924, 9976, 10086, 10157, 10222,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>maniospas&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="maniospas&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/maniospas.html" property="og:url">
+	<meta content="Rank by game in top 20: 3487&#10;Rank by ilScore: 11101&#10;&#10;1 games&#10;&bull; Coins of Destiny | MJ 139: Fae | rank: 15 | ilscore: 36&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>maniospas</h1>
+		<a href="https://maniospas.itch.io">maniospas.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3487</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11101</p>
+		<p>Total ilScore: 36</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://maniospas.itch.io/coins-of-destiny">Coins of Destiny</a></td>
+				<td><span class="early">10h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>15</td>
+				<td>9</td>
+				<td>36</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2379, 2404, 2422, 2444, 2465, 2489, 2512, 2532, 2548, 2570, 2588, 2600, 2618, 2647, 2679, 2701, 2721, 2742, 2762, 2783, 2798, 2815, 2838, 2878, 2892, 2907, 2921, 2946, 2960, 2969, 2993, 3015, 3037, 3059, 3076, 3107, 3127, 3151, 3180, 3204,
+				3230, 3254, 3284, 3302, 3321, 3348, 3367, 3393, 3418, 3450, 3469, 3486,
+			]],
+			[ "ilscore", [
+				7838, 7863, 7882, 7902, 7947, 7987, 8054, 8080, 8097, 8124, 8247, 8370, 8446, 8484, 8649, 8698, 8782, 8845, 8941, 8964, 9052, 9127, 9150, 9283, 9307, 9358, 9370, 9560, 9595, 9602, 9624, 9644, 9674, 9697, 9745, 9831, 9933, 9988, 10031, 10101,
+				10169, 10232, 10311, 10365, 10446, 10521, 10602, 10763, 10824, 10943, 11019, 11100,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

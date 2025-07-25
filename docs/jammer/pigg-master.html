@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Pig Master&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Pig Master&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pigg-master.html" property="og:url">
+	<meta content="Rank by game in top 20: 2848&#10;Rank by ilScore: 90&#10;&#10;8 games&#10;&bull; Time Soup | MJ 189: Cooking | rank: 33 | ilscore: 61&#10;&bull; Lawless Luck | MJ+ 7: Wild | rank: 35 | ilscore: 81&#10;&bull; B.I.R.D | MJ 184: Birds | rank: 24 | ilscore: 69&#10;&bull; Beam Blitz: Colors | MJ 179: Energy | rank: 57 | ilscore: 48&#10;&bull; A Foxy Game of Chance | MJ 176: Foxes | rank: 20 | ilscore: 67&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Pig Master</h1>
+		<a href="https://pigg-master.itch.io">pigg-master.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2848</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 90</p>
+		<p>Total ilScore: 530</p>
+
+		<h3 id="games_header">8 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/time-soup">Time Soup</a></td>
+				<td><span class="early">5h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-189-cooking">MJ 189: Cooking</a></td>
+				<td>92</td>
+				<td>33</td>
+				<td>33</td>
+				<td>61</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://pigg-master.itch.io/lawless-luck">Lawless Luck</a></td>
+				<td><span class="early">2h 37m early</span></td>
+				<td>
+					<a href="../jammer/daph0dil.html">DAPHODIL</a>,
+					<a href="../jammer/aria-dis.html">Aria Dis</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-7-wild">MJ+ 7: Wild</a></td>
+				<td>147</td>
+				<td>35</td>
+				<td>22</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/bird">B.I.R.D</a></td>
+				<td><span class="early">6h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-184-birds">MJ 184: Birds</a></td>
+				<td>101</td>
+				<td>24</td>
+				<td>24</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/beam-blitz-colors">Beam Blitz: Colors</a></td>
+				<td><span class="early">1h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-179-energy">MJ 179: Energy</a></td>
+				<td>82</td>
+				<td>57</td>
+				<td>12</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/a-foxy-game-of-chance">A Foxy Game of Chance</a></td>
+				<td><span class="early">14s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>20</td>
+				<td>23</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/destroy-the-earth-by-buying-stuff">Destroy The Earth By Buying Stuff</a></td>
+				<td><span class="early">4h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>204</td>
+				<td>102</td>
+				<td>10</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/ocean-escape">Ocean Escape</a></td>
+				<td><span class="early">1d 2h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-159-ocean">MJ 159: Ocean</a></td>
+				<td>123</td>
+				<td>59</td>
+				<td>33</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://pigg-master.itch.io/beam-blitz">Beam Blitz</a></td>
+				<td><span class="early">12h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>67</td>
+				<td>18</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2544, 2559, 2582, 2599, 2624, 2653, 2672, 2691, 2717, 2738, 2764, 2782, 2814, 2830, 2847,
+			]],
+			[ "ilscore", [
+				6091, 6096, 1512, 1532, 1539, 1557, 1560, 1571, 1576, 625, 630, 632, 634, 635, 637, 639, 641, 646, 649, 357, 357, 360, 264, 264, 272, 274, 276, 178, 179, 123, 123, 123, 123, 89,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

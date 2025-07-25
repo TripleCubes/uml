@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NiaEnot&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NiaEnot&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/niaenot.html" property="og:url">
+	<meta content="Rank by ilScore: 4866&#10;&#10;2 games&#10;&bull; Forest Healer | MJ 94: Baking | rank: 68 | ilscore: 47&#10;&bull; Into the memories | MJ+ 4: Cosmic | rank: 125 | ilscore: 29&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NiaEnot</h1>
+		<a href="https://niaenot.itch.io">niaenot.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4866</p>
+		<p>Total ilScore: 76</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mr-doctorr.itch.io/forest-healer">Forest Healer</a></td>
+				<td><span class="early">6h 2m early</span></td>
+				<td>
+					<a href="../jammer/mr-doctorr.html">mr_doctorr</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>68</td>
+				<td>5</td>
+				<td>47</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://mr-doctorr.itch.io/into-the-memories">Into the memories</a></td>
+				<td><span class="early">14h 25m early</span></td>
+				<td>
+					<a href="../jammer/mr-doctorr.html">mr_doctorr</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>125</td>
+				<td>2</td>
+				<td>29</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3702, 3783, 3881, 3943, 4001, 4097, 4189, 4220, 1467, 1478, 1484, 1508, 1543, 1711, 1789, 1837, 1844, 1894, 1921, 1966, 2156, 2170, 2286, 2335, 2446, 2714, 2735, 2761, 2762, 2765, 2773, 2777, 2864, 2917, 2936, 2947, 2982, 2984, 3094, 3138,
+				3150, 3170, 3209, 3254, 3269, 3397, 3409, 3412, 3455, 3491, 3507, 3514, 3516, 3591, 3595, 3598, 3606, 3610, 3619, 3628, 3637, 3644, 3655, 3668, 3675, 3738, 3775, 3797, 3804, 3935, 3949, 3968, 3985, 4016, 4026, 4065, 4102, 4114, 4172, 4184,
+				4198, 4204, 4323, 4330, 4334, 4337, 4340, 4345, 4355, 4368, 4397, 4460, 4470, 4484, 4501, 4518, 4529, 4553, 4565, 4609, 4646, 4676, 4761, 4774, 4824, 4848, 4865,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

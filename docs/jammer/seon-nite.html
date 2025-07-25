@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Seon_Nite&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Seon_Nite&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/seon-nite.html" property="og:url">
+	<meta content="Rank by game in top 20: 3358&#10;Rank by ilScore: 913&#10;&#10;3 games&#10;&bull; Radio Inactive | MJ 133: Fusion | rank: 40 | ilscore: 76&#10;&bull; Beat the Stick | MJ 115: Noir | rank: 18 | ilscore: 39&#10;&bull; Soup&#39;s Beachy Adventure | MJ 108: Seaside | rank: 133 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Seon_Nite</h1>
+		<a href="https://seon-nite.itch.io">seon-nite.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3358</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 913</p>
+		<p>Total ilScore: 184</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://seon-nite.itch.io/radio-inactive">Radio Inactive</a></td>
+				<td><span class="early">9h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>40</td>
+				<td>19</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://seon-nite.itch.io/beat-the-stick">Beat the Stick</a></td>
+				<td><span class="early">9m 30s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>18</td>
+				<td>11</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://seon-nite.itch.io/soups-beachy-adventure">Soup&#39;s Beachy Adventure</a></td>
+				<td><span class="late">7h 59m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>133</td>
+				<td>6</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1827, 1848, 1866, 1886, 1908, 1931, 1953, 1964, 1982, 2009, 2025, 2045, 2060, 2082, 2096, 2122, 2142, 2159, 2184, 2205, 2225, 2242, 2249, 2277, 2281, 2293, 2313, 2327, 2341, 2362, 2386, 2409, 2427, 2444, 2466, 2484, 2496, 2514, 2543, 2575,
+				2597, 2617, 2638, 2658, 2677, 2692, 2709, 2730, 2770, 2784, 2799, 2812, 2837, 2851, 2856, 2872, 2892, 2910, 2929, 2946, 2977, 2997, 3021, 3050, 3074, 3100, 3124, 3154, 3172, 3191, 3218, 3237, 3263, 3288, 3320, 3340, 3357,
+			]],
+			[ "ilscore", [
+				2768, 2825, 2940, 3225, 3279, 3310, 3311, 3315, 1325, 1334, 1363, 1381, 1395, 1409, 1424, 1431, 1469, 1493, 1511, 1525, 1543, 1567, 1575, 1614, 1627, 1637, 575, 581, 591, 592, 596, 608, 610, 615, 617, 620, 623, 627, 630, 634,
+				638, 639, 639, 648, 658, 663, 666, 685, 688, 694, 698, 707, 713, 731, 744, 748, 760, 764, 769, 772, 785, 790, 793, 795, 796, 800, 801, 805, 809, 812, 821, 827, 829, 832, 835, 846, 852, 861, 866, 874,
+				883, 886, 897, 903, 912,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

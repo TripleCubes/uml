@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>BugsGameDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="BugsGameDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bugsgamedev.html" property="og:url">
+	<meta content="Rank by game in top 20: 3653&#10;Rank by ilScore: 12666&#10;&#10;1 games&#10;&bull; Arena Of Time | MJ 138: Rewind | rank: 16 | ilscore: 21&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>BugsGameDev</h1>
+		<a href="https://bugsgamedev.itch.io">bugsgamedev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3653</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12666</p>
+		<p>Total ilScore: 21</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bugsgamedev.itch.io/arena-of-time">Arena Of Time</a></td>
+				<td><span class="early">1m 47s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>16</td>
+				<td>6</td>
+				<td>21</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2517, 2537, 2562, 2580, 2601, 2622, 2646, 2669, 2689, 2705, 2727, 2745, 2757, 2775, 2804, 2836, 2858, 2878, 2899, 2919, 2940, 2955, 2972, 2995, 3035, 3049, 3064, 3077, 3102, 3116, 3131, 3156, 3180, 3202, 3225, 3242, 3273, 3293, 3317, 3346,
+				3370, 3396, 3420, 3450, 3468, 3487, 3514, 3533, 3559, 3584, 3616, 3635, 3652,
+			]],
+			[ "ilscore", [
+				8922, 8949, 8988, 9018, 9047, 9092, 9148, 9228, 9262, 9291, 9328, 9467, 9592, 9668, 9708, 9888, 9944, 10041, 10109, 10206, 10236, 10336, 10424, 10449, 10584, 10620, 10674, 10696, 10889, 10934, 10951, 10988, 11020, 11067, 11095, 11151, 11247, 11365, 11435, 11484,
+				11554, 11625, 11697, 11783, 11855, 11939, 12018, 12108, 12291, 12365, 12491, 12573, 12665,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

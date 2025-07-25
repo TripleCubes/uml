@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>xtrarare&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="xtrarare&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/xtrarare.html" property="og:url">
+	<meta content="Rank by game in top 20: 2502&#10;Rank by ilScore: 4932&#10;&#10;1 games&#10;&bull; Cave Adventure | MJ 83: Dread | rank: 20 | ilscore: 75&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>xtrarare</h1>
+		<a href="https://xtrarare.itch.io">xtrarare.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2502</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4932</p>
+		<p>Total ilScore: 75</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://xtrarare.itch.io/cave-adventure">Cave Adventure</a></td>
+				<td><span class="early">7m 58s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>20</td>
+				<td>12</td>
+				<td>75</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				854, 874, 899, 911, 936, 944, 965, 981, 998, 1013, 1028, 1037, 1056, 1067, 1073, 1086, 1102, 1128, 1157, 1170, 1175, 1196, 1210, 1226, 1245, 1264, 1279, 1298, 1317, 1339, 1361, 1384, 1385, 1399, 1408, 1420, 1438, 1458, 1471, 1479,
+				1501, 1506, 1524, 1554, 1566, 1578, 1595, 1613, 1628, 1654, 1659, 1662, 1690, 1712, 1720, 1726, 1730, 1758, 1761, 1763, 1768, 1771, 1782, 1800, 1809, 1828, 1837, 1849, 1862, 1880, 1894, 1909, 1929, 1961, 1976, 1984, 1993, 2012, 2023, 2042,
+				2054, 2063, 2103, 2107, 2118, 2129, 2154, 2160, 2164, 2167, 2176, 2179, 2187, 2195, 2219, 2239, 2252, 2267, 2290, 2306, 2329, 2347, 2357, 2377, 2398, 2419, 2445, 2454, 2474, 2489, 2501,
+			]],
+			[ "ilscore", [
+				1065, 1140, 1238, 1259, 1327, 1339, 1377, 1390, 1397, 1440, 1472, 1479, 1497, 1508, 1514, 1538, 1573, 1741, 1820, 1869, 1876, 1927, 1954, 1999, 2189, 2203, 2321, 2371, 2484, 2756, 2781, 2807, 2808, 2811, 2819, 2824, 2911, 2965, 2986, 2997,
+				3033, 3035, 3146, 3189, 3201, 3221, 3260, 3304, 3318, 3446, 3458, 3461, 3504, 3540, 3556, 3563, 3565, 3642, 3645, 3648, 3656, 3660, 3669, 3678, 3688, 3695, 3706, 3719, 3726, 3790, 3828, 3850, 3857, 3988, 4002, 4021, 4038, 4070, 4080, 4122,
+				4159, 4171, 4229, 4241, 4256, 4262, 4382, 4389, 4393, 4396, 4399, 4404, 4414, 4427, 4456, 4523, 4531, 4544, 4564, 4581, 4592, 4618, 4628, 4673, 4710, 4741, 4826, 4839, 4890, 4914, 4931,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

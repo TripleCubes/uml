@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>enderswype&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="enderswype&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/enderswype.html" property="og:url">
+	<meta content="Rank by game in top 20: 3498&#10;Rank by ilScore: 10279&#10;&#10;1 games&#10;&bull; Styx West | MJ 102: Steam | rank: 16 | ilscore: 42&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>enderswype</h1>
+		<a href="https://enderswype.itch.io">enderswype.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3498</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10279</p>
+		<p>Total ilScore: 42</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://enderswype.itch.io/styx-west">Styx West</a></td>
+				<td><span class="early">1h 36m early</span></td>
+				<td>
+					<a href="../jammer/pepnou.html">pepnou</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>16</td>
+				<td>15</td>
+				<td>42</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1638, 1659, 1672, 1688, 1707, 1727, 1742, 1761, 1779, 1801, 1823, 1846, 1850, 1874, 1893, 1914, 1932, 1952, 1981, 2004, 2026, 2042, 2060, 2087, 2103, 2123, 2138, 2160, 2174, 2200, 2220, 2239, 2264, 2285, 2304, 2327, 2338, 2366, 2371, 2387,
+				2412, 2430, 2452, 2473, 2497, 2520, 2540, 2556, 2578, 2596, 2608, 2626, 2655, 2687, 2709, 2729, 2750, 2770, 2791, 2806, 2823, 2846, 2886, 2900, 2915, 2929, 2954, 2968, 2978, 3002, 3026, 3048, 3070, 3087, 3118, 3138, 3162, 3191, 3215, 3241,
+				3265, 3295, 3313, 3332, 3359, 3378, 3404, 3429, 3461, 3480, 3497,
+			]],
+			[ "ilscore", [
+				4191, 4305, 4372, 4475, 4717, 4770, 4950, 5028, 5193, 5542, 5612, 5690, 5690, 5721, 5726, 5746, 5871, 5982, 6051, 6076, 6167, 6179, 6333, 6410, 6451, 6487, 6568, 6658, 6697, 6870, 6884, 6899, 6993, 7069, 7101, 7107, 7108, 7244, 7245, 7252,
+				7271, 7287, 7302, 7345, 7381, 7444, 7469, 7484, 7505, 7622, 7743, 7811, 7847, 8013, 8053, 8135, 8192, 8286, 8305, 8389, 8461, 8479, 8607, 8629, 8680, 8693, 8875, 8907, 8908, 8923, 8930, 8956, 8970, 9014, 9100, 9199, 9248, 9283, 9350, 9415,
+				9475, 9556, 9606, 9684, 9754, 9830, 9978, 10030, 10141, 10212, 10278,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Omosurode&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Omosurode&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/omosurode.html" property="og:url">
+	<meta content="Rank by game in top 10: 1550&#10;Rank by game in top 20: 2247&#10;Rank by ilScore: 8238&#10;&#10;1 games&#10;&bull; Do&#39;nut stop | MJ 163: Dessert | rank: 7 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Omosurode</h1>
+		<a href="https://omosurode.itch.io">omosurode.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1550</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2247</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8238</p>
+		<p>Total ilScore: 54</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://omosurode.itch.io/donut-stop">Do&#39;nut stop</a></td>
+				<td><span class="early">1s early</span></td>
+				<td>
+					<a href="../jammer/eddbeatmusic.html">Eduardo Hincapie</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-163-dessert">MJ 163: Dessert</a></td>
+				<td>51</td>
+				<td>7</td>
+				<td>14</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1304, 1310, 1318, 1330, 1335, 1335, 1337, 1341, 1344, 1352, 1358, 1376, 1385, 1395, 1411, 1422, 1432, 1442, 1453, 1463, 1472, 1487, 1498, 1511, 1517, 1528, 1537, 1549,
+			]],
+			[ "20", [
+				1891, 1902, 1911, 1936, 1942, 1946, 1949, 1954, 1958, 1968, 1975, 1994, 2014, 2026, 2042, 2063, 2077, 2094, 2105, 2115, 2135, 2154, 2176, 2202, 2208, 2219, 2233, 2246,
+			]],
+			[ "ilscore", [
+				6920, 6955, 6962, 7130, 7144, 7147, 7150, 7151, 7157, 7166, 7196, 7274, 7362, 7401, 7420, 7472, 7522, 7565, 7631, 7670, 7742, 7804, 7871, 8006, 8042, 8140, 8191, 8237,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

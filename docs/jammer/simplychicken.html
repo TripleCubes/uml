@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SimplyChicken&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SimplyChicken&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/simplychicken.html" property="og:url">
+	<meta content="Rank by ilScore: 1248&#10;&#10;2 games&#10;&bull; Grow Grow Galien! | MJ 185: Aliens | rank: 24 | ilscore: 73&#10;&bull; OverSized Load! | MJ 100: Overload | rank: 63 | ilscore: 83&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SimplyChicken</h1>
+		<a href="https://simplychicken.itch.io">simplychicken.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1248</p>
+		<p>Total ilScore: 156</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://simplychicken.itch.io/grow-grow-galien">Grow Grow Galien!</a></td>
+				<td><span class="early">3m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-185-aliens">MJ 185: Aliens</a></td>
+				<td>109</td>
+				<td>24</td>
+				<td>22</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://simplychicken.itch.io/oversized-load">OverSized Load!</a></td>
+				<td><span class="late">34m 17s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>63</td>
+				<td>15</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1398, 1426, 1436, 1477, 1497, 1525, 1697, 1711, 1812, 1853, 1952, 2207, 2220, 2232, 2233, 2236, 2243, 2246, 2326, 2354, 2369, 2383, 2412, 2417, 2508, 2543, 2556, 2574, 2601, 2632, 2646, 2752, 2764, 2767, 2794, 2819, 2834, 2840, 2844, 2879,
+				2883, 2888, 2896, 2899, 2905, 2918, 2926, 2932, 2942, 2952, 2962, 3003, 3033, 3052, 3057, 3168, 3184, 3204, 3218, 3241, 3250, 3275, 3301, 3311, 3363, 3370, 3386, 3391, 3490, 3497, 3501, 3505, 3509, 3517, 3525, 3538, 3561, 3609, 3621, 3635,
+				3654, 3670, 3681, 3692, 3704, 3731, 3758, 1199, 1212, 1217, 1230, 1238, 1247,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

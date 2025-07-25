@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>grey&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="grey&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/greytdepression.html" property="og:url">
+	<meta content="Rank by game in top 10: 1150&#10;Rank by game in top 20: 1536&#10;Rank by ilScore: 2448&#10;&#10;1 games&#10;&bull; Lunar Rivals | MJ 130: Lunar | rank: 8 | ilscore: 106&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>grey</h1>
+		<a href="https://greytdepression.itch.io">greytdepression.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1150</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1536</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2448</p>
+		<p>Total ilScore: 106</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://greytdepression.itch.io/lunar-rivals">Lunar Rivals</a></td>
+				<td><span class="early">12m 53s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>8</td>
+				<td>16</td>
+				<td>106</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				783, 786, 787, 798, 809, 810, 810, 811, 823, 827, 831, 838, 839, 848, 856, 857, 861, 862, 864, 869, 878, 885, 893, 903, 920, 923, 927, 931, 941, 942, 953, 963, 964, 977, 980, 985, 993, 1005, 1009, 1011,
+				1012, 1014, 1017, 1021, 1024, 1037, 1046, 1050, 1053, 1059, 1061, 1063, 1074, 1078, 1087, 1101, 1112, 1125, 1127, 1133, 1143, 1149,
+			]],
+			[ "20", [
+				1042, 1045, 1046, 1060, 1074, 1076, 1078, 1083, 1094, 1096, 1101, 1110, 1111, 1122, 1132, 1135, 1142, 1147, 1154, 1161, 1175, 1183, 1191, 1202, 1220, 1224, 1233, 1237, 1247, 1253, 1269, 1279, 1283, 1304, 1306, 1314, 1324, 1341, 1347, 1356,
+				1358, 1361, 1365, 1372, 1375, 1388, 1399, 1404, 1410, 1418, 1425, 1436, 1445, 1451, 1460, 1475, 1486, 1502, 1504, 1511, 1526, 1535,
+			]],
+			[ "ilscore", [
+				1651, 1664, 1673, 1692, 1718, 1733, 1733, 1738, 1757, 1757, 1759, 1766, 1769, 1774, 1784, 1792, 1798, 1806, 1809, 1821, 1832, 1851, 1870, 1879, 1922, 1949, 1968, 1979, 1989, 1999, 2016, 2038, 2045, 2062, 2065, 2081, 2085, 2114, 2120, 2128,
+				2134, 2135, 2142, 2145, 2151, 2167, 2198, 2214, 2224, 2238, 2254, 2265, 2272, 2284, 2308, 2330, 2352, 2373, 2388, 2410, 2430, 2447,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

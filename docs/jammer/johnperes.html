@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>John Peres&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="John Peres&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/johnperes.html" property="og:url">
+	<meta content="Rank by game in top 5: 592&#10;Rank by game in top 10: 313&#10;Rank by game in top 20: 524&#10;Rank by ilScore: 507&#10;&#10;4 games&#10;&bull; Life.exe | MJ+ 6: Life | rank: 87 | ilscore: 57&#10;&bull; Dodge Ball | MJ 108: Seaside | rank: 35 | ilscore: 96&#10;&bull; Castle Invaders | MJ 59: Fortress | rank: 8 | ilscore: 33&#10;&bull; Love Bowling | MJ+ 2: Love | rank: 4 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>John Peres</h1>
+		<a href="https://johnperes.itch.io">johnperes.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 592</p>
+		<div class="boxes">
+			<span class="box_majorjam">4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 313</p>
+		<div class="boxes">
+			<span class="box_majorjam">4</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 524</p>
+		<div class="boxes">
+			<span class="box_majorjam">4</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 507</p>
+		<p>Total ilScore: 246</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://johnperes.itch.io/lifeexe">Life.exe</a></td>
+				<td><span class="early">9s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>87</td>
+				<td>3</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://johnperes.itch.io/dodge-ball">Dodge Ball</a></td>
+				<td><span class="early">1h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>35</td>
+				<td>12</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://johnperes.itch.io/castle-invaders">Castle Invaders</a></td>
+				<td><span class="early">2h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-59">MJ 59: Fortress</a></td>
+				<td>24</td>
+				<td>8</td>
+				<td>11</td>
+				<td>33</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://johnperes.itch.io/love-bowling">Love Bowling</a></td>
+				<td><span class="early">2h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>4</td>
+				<td>10</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				112, 112, 114, 121, 121, 129, 136, 139, 144, 151, 153, 154, 159, 165, 165, 169, 169, 177, 181, 184, 189, 191, 196, 204, 207, 208, 209, 214, 219, 220, 225, 232, 232, 239, 242, 245, 246, 251, 255, 256,
+				259, 259, 259, 263, 264, 275, 280, 280, 286, 289, 290, 297, 297, 300, 304, 308, 314, 324, 328, 328, 329, 333, 341, 344, 352, 352, 352, 359, 359, 363, 373, 376, 382, 386, 388, 393, 394, 396, 397, 402,
+				408, 409, 409, 409, 413, 418, 423, 426, 427, 435, 439, 439, 441, 441, 443, 443, 449, 451, 457, 465, 471, 471, 474, 475, 479, 480, 485, 489, 490, 498, 502, 507, 511, 517, 520, 520, 520, 520, 522, 524,
+				524, 535, 539, 540, 542, 547, 549, 550, 553, 554, 559, 563, 568, 578, 578, 585, 590, 591,
+			]],
+			[ "10", [
+				157, 157, 51, 54, 55, 57, 57, 61, 62, 63, 65, 67, 68, 69, 70, 74, 75, 77, 77, 79, 80, 81, 84, 85, 91, 93, 94, 94, 96, 96, 100, 101, 102, 103, 105, 106, 107, 108, 108, 112,
+				114, 114, 117, 119, 119, 122, 126, 126, 131, 132, 135, 138, 138, 143, 145, 145, 146, 147, 150, 150, 150, 154, 158, 158, 158, 158, 161, 161, 162, 163, 167, 172, 175, 177, 178, 183, 184, 185, 187, 190,
+				193, 196, 198, 200, 202, 205, 208, 212, 213, 216, 217, 217, 218, 218, 220, 220, 221, 224, 227, 228, 229, 233, 235, 236, 237, 240, 241, 244, 249, 250, 256, 260, 262, 264, 264, 268, 270, 270, 272, 274,
+				274, 275, 277, 279, 280, 283, 283, 283, 285, 289, 289, 292, 299, 303, 303, 306, 309, 312,
+			]],
+			[ "20", [
+				225, 232, 88, 91, 91, 95, 97, 101, 102, 105, 108, 111, 112, 114, 114, 120, 122, 126, 127, 131, 133, 134, 138, 141, 151, 153, 154, 155, 158, 160, 164, 169, 171, 172, 175, 179, 185, 186, 190, 193,
+				197, 197, 200, 201, 201, 207, 213, 214, 218, 221, 227, 229, 233, 239, 245, 246, 248, 252, 259, 259, 260, 262, 271, 272, 278, 278, 282, 286, 288, 291, 295, 301, 307, 312, 313, 321, 323, 325, 326, 329,
+				332, 336, 338, 340, 343, 346, 350, 353, 354, 357, 360, 361, 365, 365, 370, 371, 372, 374, 377, 380, 383, 390, 394, 395, 399, 400, 406, 415, 419, 420, 427, 432, 436, 440, 440, 444, 447, 447, 450, 454,
+				455, 458, 462, 465, 469, 475, 475, 475, 479, 482, 485, 491, 502, 508, 509, 512, 516, 523,
+			]],
+			[ "ilscore", [
+				489, 495, 166, 170, 173, 205, 242, 243, 249, 260, 270, 278, 287, 301, 310, 325, 341, 405, 415, 427, 453, 474, 484, 553, 580, 599, 608, 627, 653, 692, 709, 738, 752, 772, 784, 792, 811, 830, 839, 853,
+				867, 871, 886, 907, 1025, 1075, 1094, 1103, 1132, 1152, 1170, 1319, 1335, 324, 334, 341, 374, 382, 388, 389, 393, 397, 400, 410, 419, 428, 431, 437, 438, 452, 466, 475, 481, 496, 505, 511, 525, 527, 529, 541,
+				549, 556, 557, 559, 336, 337, 337, 337, 339, 339, 340, 342, 343, 345, 346, 346, 353, 358, 361, 365, 370, 373, 378, 384, 387, 389, 391, 402, 406, 416, 419, 422, 423, 437, 438, 442, 442, 442, 442, 443,
+				446, 448, 451, 455, 456, 458, 460, 465, 471, 474, 476, 480, 486, 490, 493, 499, 502, 506,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

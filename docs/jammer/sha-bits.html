@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>sha-bits&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="sha-bits&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sha-bits.html" property="og:url">
+	<meta content="Rank by game in top 1: 127&#10;Rank by game in top 5: 299&#10;Rank by game in top 10: 474&#10;Rank by game in top 20: 867&#10;Rank by ilScore: 4798&#10;&#10;1 games&#10;&bull; &gt;immutable | MJ 129: Poison | rank: 1 | ilscore: 76&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>sha-bits</h1>
+		<a href="https://sha-bits.itch.io">sha-bits.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 127</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 299</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 474</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 867</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4798</p>
+		<p>Total ilScore: 76</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sha-bits.itch.io/immutable">&gt;immutable</a></td>
+				<td><span class="early">15m 6s early</span></td>
+				<td>
+					<a href="../jammer/aureoreo.html">aureoreo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>1</td>
+				<td>14</td>
+				<td>76</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				87, 87, 87, 87, 87, 87, 88, 88, 88, 89, 89, 90, 90, 90, 93, 93, 93, 93, 93, 93, 93, 94, 96, 97, 99, 101, 101, 101, 101, 102, 102, 103, 104, 105, 106, 106, 108, 109, 110, 111,
+				111, 111, 111, 111, 111, 111, 115, 115, 115, 115, 116, 116, 116, 116, 116, 117, 118, 118, 119, 119, 125, 125, 126,
+			]],
+			[ "5", [
+				182, 183, 184, 185, 186, 187, 189, 190, 190, 195, 200, 204, 206, 208, 215, 216, 216, 216, 216, 218, 218, 219, 219, 222, 226, 229, 229, 229, 229, 233, 234, 238, 240, 241, 248, 252, 257, 259, 262, 264,
+				267, 267, 267, 269, 271, 271, 276, 276, 276, 277, 279, 279, 280, 280, 282, 283, 287, 288, 292, 292, 298, 298, 298,
+			]],
+			[ "10", [
+				299, 300, 302, 306, 309, 312, 315, 316, 318, 323, 328, 332, 336, 337, 343, 344, 345, 347, 347, 349, 350, 352, 356, 359, 363, 366, 370, 372, 373, 377, 379, 381, 384, 388, 395, 400, 404, 409, 414, 416,
+				421, 423, 424, 426, 428, 429, 434, 436, 438, 439, 442, 442, 442, 444, 448, 450, 453, 460, 464, 464, 467, 470, 473,
+			]],
+			[ "20", [
+				541, 543, 545, 548, 554, 558, 563, 567, 571, 574, 576, 581, 590, 593, 602, 608, 611, 616, 621, 631, 634, 636, 639, 642, 651, 656, 663, 673, 673, 678, 684, 694, 701, 707, 715, 724, 732, 740, 745, 749,
+				761, 764, 766, 770, 775, 777, 784, 788, 791, 795, 801, 806, 815, 818, 823, 825, 829, 838, 845, 846, 850, 858, 866,
+			]],
+			[ "ilscore", [
+				3235, 3362, 3374, 3377, 3415, 3451, 3467, 3474, 3475, 3539, 3543, 3546, 3554, 3558, 3567, 3576, 3585, 3591, 3602, 3615, 3622, 3679, 3714, 3737, 3743, 3873, 3888, 3907, 3923, 3955, 3965, 4003, 4039, 4051, 4108, 4120, 4134, 4140, 4259, 4266,
+				4270, 4273, 4276, 4281, 4291, 4304, 4332, 4395, 4405, 4419, 4436, 4452, 4463, 4487, 4499, 4543, 4580, 4610, 4693, 4706, 4756, 4780, 4797,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

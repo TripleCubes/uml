@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>GoatHG&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="GoatHG&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/goathg.html" property="og:url">
+	<meta content="Rank by ilScore: 2615&#10;&#10;2 games&#10;&bull; Shaman Fusion | MJ 133: Fusion | rank: 90 | ilscore: 56&#10;&bull; Overheat | MJ 97: Simulation | rank: 76 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>GoatHG</h1>
+		<a href="https://goathg.itch.io">goathg.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2615</p>
+		<p>Total ilScore: 102</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://goathg.itch.io/shaman-fusion">Shaman Fusion</a></td>
+				<td><span class="early">2h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>90</td>
+				<td>10</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://goathg.itch.io/overheat">Overheat</a></td>
+				<td><span class="early">26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>76</td>
+				<td>9</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3417, 3488, 3683, 3793, 3883, 3890, 3997, 4058, 4158, 4399, 4449, 4628, 4707, 4856, 5200, 5267, 5340, 5340, 5364, 5369, 5382, 5499, 5605, 5664, 5683, 5772, 5781, 5925, 5996, 6029, 6066, 6144, 6235, 6272, 6442, 6460, 6471, 1822, 1849, 1863,
+				1863, 1868, 1886, 1887, 1891, 1899, 1902, 1906, 1915, 1923, 1929, 1937, 1942, 1954, 1966, 1987, 2008, 2017, 2070, 2096, 2115, 2128, 2138, 2147, 2161, 2182, 2189, 2206, 2208, 2225, 2227, 2270, 2275, 2283, 2290, 2293, 2300, 2306, 2313, 2331,
+				2361, 2376, 2388, 2404, 2418, 2428, 2435, 2448, 2474, 2496, 2518, 2541, 2555, 2577, 2597, 2614,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

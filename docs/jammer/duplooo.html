@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>duplo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="duplo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/duplooo.html" property="og:url">
+	<meta content="Rank by game in top 20: 2736&#10;Rank by ilScore: 2190&#10;&#10;2 games&#10;&bull; Paper Wind | MJ 155: Wind | rank: 44 | ilscore: 60&#10;&bull; SUNSHAMAN | MJ 131: Solar | rank: 11 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>duplo</h1>
+		<a href="https://duplooo.itch.io">duplooo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2736</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2190</p>
+		<p>Total ilScore: 115</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://duplooo.itch.io/paper-wind">Paper Wind</a></td>
+				<td><span class="early">28m 22s early</span></td>
+				<td>
+					<a href="../jammer/umi-02.html">Umi_02</a>,
+					<a href="../jammer/tuymuo.html">Tuymuo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>44</td>
+				<td>18</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://cyanv.itch.io/sunshaman">SUNSHAMAN</a></td>
+				<td><span class="early">1h 17m early</span></td>
+				<td>
+					<a href="../jammer/cyanv.html">CyanV</a>,
+					<a href="../jammer/drdeadlock.html">DrDeadlock</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>11</td>
+				<td>15</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1790, 1793, 1820, 1842, 1852, 1860, 1864, 1892, 1895, 1897, 1908, 1911, 1923, 1943, 1952, 1975, 1984, 1995, 2010, 2028, 2042, 2060, 2080, 2112, 2133, 2149, 2161, 2181, 2193, 2212, 2230, 2247, 2287, 2292, 2302, 2313, 2338, 2346, 2350, 2355,
+				2363, 2366, 2374, 2382, 2414, 2434, 2449, 2464, 2489, 2505, 2530, 2549, 2568, 2588, 2609, 2630, 2656, 2674, 2705, 2719, 2735,
+			]],
+			[ "ilscore", [
+				5556, 5561, 5642, 5701, 5721, 5727, 5729, 5846, 5846, 5850, 5855, 5862, 5873, 5898, 5918, 5965, 5976, 5982, 5989, 6098, 6192, 6243, 6264, 6422, 6451, 1733, 1745, 1758, 1766, 1782, 1804, 1813, 1831, 1835, 1848, 1853, 1874, 1878, 1886, 1888,
+				1889, 1897, 1898, 1901, 1916, 1946, 1964, 1976, 1988, 2006, 2020, 2027, 2039, 2063, 2085, 2101, 2120, 2134, 2155, 2174, 2189,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

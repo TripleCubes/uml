@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SnappyPath&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SnappyPath&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/snappypath.html" property="og:url">
+	<meta content="Rank by ilScore: 1454&#10;&#10;2 games&#10;&bull; Eraser | MJ 110: Sacrifice | rank: 41 | ilscore: 96&#10;&bull; Sleeping Circus | MJ 68: Sleep | rank: 29 | ilscore: 49&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SnappyPath</h1>
+		<a href="https://snappypath.itch.io">snappypath.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1454</p>
+		<p>Total ilScore: 144</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://snappypath.itch.io/eraser">Eraser</a></td>
+				<td><span class="early">7h 45m early</span></td>
+				<td>
+					<a href="../jammer/cleerax.html">cleerax</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>41</td>
+				<td>26</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://snappypath.itch.io/sleeping-circus">Sleeping Circus</a></td>
+				<td><span class="early">5h 48m early</span></td>
+				<td>
+					<a href="../jammer/cleerax.html">cleerax</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-68-sleep">MJ 68: Sleep</a></td>
+				<td>62</td>
+				<td>29</td>
+				<td>7</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1177, 1213, 1271, 1300, 1367, 1399, 1561, 1604, 1666, 1738, 1838, 1869, 2022, 2116, 2150, 2177, 2248, 2369, 2505, 2562, 2674, 2733, 2818, 2858, 2897, 2970, 3042, 3049, 3112, 3130, 3156, 3214, 3281, 3472, 3577, 3665, 3671, 3776, 3836, 3933,
+				4169, 4218, 4384, 4462, 664, 705, 724, 738, 738, 740, 744, 750, 768, 786, 787, 796, 803, 807, 830, 850, 864, 874, 894, 910, 919, 947, 955, 963, 981, 996, 1006, 1012, 1012, 1026, 1026, 1026, 1029, 1029, 1033, 1036,
+				1044, 1053, 1057, 1058, 1062, 1072, 1085, 1093, 1096, 1126, 1139, 1145, 1148, 1160, 1163, 1184, 1197, 1202, 1219, 1222, 1232, 1238, 1259, 1260, 1264, 1266, 1267, 1270, 1270, 1272, 1283, 1297, 1310, 1315, 1321, 1328, 1340, 1349, 1355, 1371,
+				1381, 1396, 1415, 1420, 1431, 1441, 1453,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

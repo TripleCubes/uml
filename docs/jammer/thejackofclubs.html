@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TheJackOfClubs&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TheJackOfClubs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thejackofclubs.html" property="og:url">
+	<meta content="Rank by game in top 1: 195&#10;Rank by game in top 5: 82&#10;Rank by game in top 10: 33&#10;Rank by game in top 20: 74&#10;Rank by ilScore: 50&#10;&#10;8 games&#10;&bull; Regener8 | MJ 166: Earth | rank: 23 | ilscore: 99&#10;&bull; Grimoire | MJ 164: Destruction | rank: 3 | ilscore: 71&#10;&bull; Boggling Isles | MJ 134: Islands | rank: 1 | ilscore: 86&#10;&bull; Seeds | MJ 133: Fusion | rank: 33 | ilscore: 78&#10;&bull; Cloud Factory | MJ 123: Web | rank: 102 | ilscore: 72&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TheJackOfClubs</h1>
+		<a href="https://thejackofclubs.itch.io">thejackofclubs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 195</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 82</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>3</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 33</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>3</span>
+			<span>6</span>
+			<span>6</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 74</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>3</span>
+			<span>6</span>
+			<span>6</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 50</p>
+		<p>Total ilScore: 671</p>
+
+		<h3 id="games_header">8 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/regener8">Regener8</a></td>
+				<td><span class="early">4h 38m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>204</td>
+				<td>23</td>
+				<td>7</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/grimoire">Grimoire</a></td>
+				<td><span class="early">4h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-164-destruction">MJ 164: Destruction</a></td>
+				<td>73</td>
+				<td>3</td>
+				<td>13</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/boggling-isles">Boggling Isles</a></td>
+				<td><span class="early">6h 4m early</span></td>
+				<td>
+					<a href="../jammer/kelpgames.html">Kelp Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>1</td>
+				<td>12</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/seeds">Seeds</a></td>
+				<td><span class="early">5h 34m early</span></td>
+				<td>
+					<a href="../jammer/kelpgames.html">Kelp Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>33</td>
+				<td>11</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/cloud-factory">Cloud Factory</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>102</td>
+				<td>8</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/combobulate">Combobulate</a></td>
+				<td><span class="early">5h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>6</td>
+				<td>13</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/timewinder">Timewinder</a></td>
+				<td><span class="early">8h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>6</td>
+				<td>11</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejackofclubs.itch.io/production-line">Production Line</a></td>
+				<td><span class="early">5h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>29</td>
+				<td>13</td>
+				<td>100</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				140, 141, 141, 141, 142, 142, 143, 144, 144, 147, 149, 149, 151, 151, 152, 152, 153, 155, 156, 158, 160, 160, 162, 162, 163, 164, 165, 166, 167, 168, 168, 169, 170, 171, 172, 172, 172, 172, 172, 172,
+				172, 176, 177, 177, 177, 177, 178, 178, 178, 178, 179, 180, 182, 183, 183, 189, 194, 194,
+			]],
+			[ "5", [
+				316, 317, 317, 317, 321, 326, 331, 334, 335, 343, 346, 346, 348, 348, 349, 349, 353, 355, 360, 364, 368, 368, 370, 370, 375, 377, 383, 385, 386, 394, 397, 69, 70, 70, 70, 70, 70, 70, 70, 70,
+				70, 71, 71, 71, 71, 72, 72, 72, 72, 72, 72, 73, 74, 74, 74, 80, 80, 81,
+			]],
+			[ "10", [
+				427, 79, 79, 80, 81, 83, 83, 83, 84, 84, 84, 85, 85, 85, 86, 86, 87, 87, 89, 90, 90, 91, 92, 39, 40, 40, 41, 41, 42, 42, 43, 43, 43, 43, 43, 43, 43, 43, 43, 45,
+				46, 46, 46, 46, 47, 47, 47, 47, 47, 48, 49, 49, 49, 51, 28, 28, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 30, 30, 30, 30, 31, 32, 32, 32, 32, 32, 32, 32, 32, 32,
+				32,
+			]],
+			[ "20", [
+				604, 144, 145, 146, 147, 149, 151, 151, 151, 153, 154, 157, 158, 160, 161, 163, 169, 170, 175, 177, 177, 178, 179, 90, 91, 92, 92, 92, 94, 96, 96, 97, 98, 100, 100, 100, 100, 100, 100, 101,
+				102, 103, 103, 103, 104, 104, 104, 104, 106, 108, 109, 110, 112, 114, 60, 60, 60, 60, 60, 60, 60, 60, 60, 62, 62, 64, 66, 66, 66, 67, 68, 69, 69, 69, 72, 72, 72, 72, 73, 73,
+				73,
+			]],
+			[ "ilscore", [
+				1293, 1499, 435, 187, 187, 188, 189, 189, 199, 204, 205, 206, 209, 211, 139, 140, 141, 141, 148, 151, 153, 160, 161, 161, 114, 70, 72, 73, 74, 76, 76, 76, 78, 78, 79, 79, 79, 81, 82, 82,
+				82, 82, 83, 83, 83, 83, 84, 85, 85, 86, 86, 87, 87, 87, 87, 87, 61, 62, 44, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 47, 47, 47, 49, 49,
+				49, 49, 49,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

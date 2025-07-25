@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TETRABYTE&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TETRABYTE&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tetrabyte.html" property="og:url">
+	<meta content="Rank by game in top 20: 1395&#10;Rank by ilScore: 2665&#10;&#10;1 games&#10;&bull; Frog Loops | MJ 79: Frogs | rank: 17 | ilscore: 101&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TETRABYTE</h1>
+		<a href="https://tetrabyte.itch.io">tetrabyte.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1395</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2665</p>
+		<p>Total ilScore: 101</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tetrabyte.itch.io/frog-loops">Frog Loops</a></td>
+				<td><span class="early">5h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>17</td>
+				<td>14</td>
+				<td>101</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				456, 466, 473, 476, 487, 494, 499, 505, 518, 524, 531, 543, 548, 556, 563, 570, 573, 580, 586, 593, 596, 602, 631, 639, 643, 652, 661, 668, 683, 690, 699, 712, 722, 745, 760, 772, 773, 774, 782, 792,
+				798, 817, 824, 833, 849, 853, 862, 884, 895, 907, 922, 930, 939, 943, 946, 947, 961, 970, 973, 975, 979, 988, 990, 995, 1004, 1007, 1019, 1029, 1032, 1039, 1044, 1051, 1056, 1065, 1072, 1079, 1091, 1106, 1110, 1121,
+				1124, 1133, 1139, 1154, 1164, 1168, 1189, 1192, 1198, 1209, 1221, 1226, 1236, 1238, 1241, 1245, 1250, 1254, 1267, 1277, 1282, 1287, 1295, 1302, 1312, 1316, 1322, 1328, 1341, 1350, 1366, 1368, 1373, 1385, 1394,
+			]],
+			[ "ilscore", [
+				452, 481, 499, 508, 528, 548, 583, 600, 624, 637, 651, 662, 666, 689, 706, 716, 727, 738, 742, 757, 777, 860, 897, 912, 920, 946, 966, 988, 1115, 1130, 1176, 1204, 1258, 1457, 1475, 1490, 1490, 1494, 1501, 1509,
+				1542, 1560, 1573, 1587, 1604, 1611, 1658, 1682, 1699, 1717, 1735, 1757, 1766, 1824, 1837, 1844, 1861, 1885, 1899, 1899, 1904, 1923, 1924, 1928, 1936, 1939, 1943, 1952, 1960, 1966, 1974, 1979, 1991, 2005, 2027, 2048, 2057, 2117, 2143, 2162,
+				2174, 2184, 2193, 2207, 2226, 2233, 2251, 2253, 2270, 2272, 2317, 2322, 2330, 2337, 2340, 2347, 2353, 2360, 2378, 2408, 2422, 2434, 2450, 2464, 2475, 2482, 2495, 2521, 2546, 2569, 2592, 2605, 2627, 2647, 2664,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

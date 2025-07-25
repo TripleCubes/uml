@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ecaroh.games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ecaroh.games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ecaroh.html" property="og:url">
+	<meta content="Rank by game in top 10: 551&#10;Rank by game in top 20: 97&#10;Rank by ilScore: 280&#10;&#10;4 games&#10;&bull; Ecaroh&#39;s Elementals | MJ 162: Heat | rank: 6 | ilscore: 96&#10;&bull; Ecaroh&#39;s Electric Escape | MJ 157: Electric | rank: 13 | ilscore: 82&#10;&bull; Propeller Plunge | MJ 155: Wind | rank: 17 | ilscore: 72&#10;&bull; Ecaroh&#39;s Dragon | MJ 151: Dragons | rank: 12 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ecaroh.games</h1>
+		<a href="https://ecaroh.itch.io">ecaroh.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 551</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 97</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>12</span>
+			<span>13</span>
+			<span>17</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 280</p>
+		<p>Total ilScore: 324</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ecaroh.itch.io/ecarohs-elementals">Ecaroh&#39;s Elementals</a></td>
+				<td><span class="early">1h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-162-heat">MJ 162: Heat</a></td>
+				<td>134</td>
+				<td>6</td>
+				<td>32</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://ecaroh.itch.io/ecarohs-electric-escape">Ecaroh&#39;s Electric Escape</a></td>
+				<td><span class="early">3m 19s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>13</td>
+				<td>30</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://ecaroh.itch.io/propeller-plunge">Propeller Plunge</a></td>
+				<td><span class="early">1h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>17</td>
+				<td>20</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://ecaroh.itch.io/ecaroh-dragon">Ecaroh&#39;s Dragon</a></td>
+				<td><span class="early">20m 29s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>12</td>
+				<td>27</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				461, 466, 471, 476, 484, 487, 490, 492, 493, 495, 497, 498, 505, 509, 511, 512, 514, 515, 515, 517, 521, 525, 529, 537, 541, 541, 544, 547, 550,
+			]],
+			[ "20", [
+				1429, 1441, 1464, 1471, 448, 449, 156, 159, 161, 164, 166, 74, 75, 77, 77, 78, 78, 78, 78, 78, 78, 78, 81, 81, 82, 83, 83, 85, 86, 88, 90, 90, 90, 93, 93, 93, 93, 94, 96, 96,
+			]],
+			[ "ilscore", [
+				3943, 3950, 4080, 4094, 1107, 1110, 441, 444, 447, 460, 463, 224, 228, 230, 230, 231, 232, 233, 234, 234, 234, 235, 237, 241, 246, 251, 253, 254, 255, 255, 263, 265, 267, 269, 270, 273, 273, 275, 278, 279,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

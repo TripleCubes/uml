@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ralh&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ralh&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ralh.html" property="og:url">
+	<meta content="Rank by game in top 1: 118&#10;Rank by game in top 5: 22&#10;Rank by game in top 10: 63&#10;Rank by game in top 20: 87&#10;Rank by ilScore: 790&#10;&#10;4 games&#10;&bull; The Labyrinth | MJ+ 1: Isolation | rank: 2 | ilscore: 88&#10;&bull; The Labyrinth | MJ 48: Teamwork | rank: 3 | ilscore: 46&#10;&bull; Ragnarok Fishing | MJ 35: Vikings | rank: 1 | ilscore: 25&#10;&bull; Ronja | MJ 29: Ninjas | rank: 12 | ilscore: 37&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ralh</h1>
+		<a href="https://ralh.itch.io">ralh.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 118</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 22</p>
+		<div class="boxes">
+			<span>1</span>
+			<span class="box_majorjam">2</span>
+			<span>3</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 63</p>
+		<div class="boxes">
+			<span>1</span>
+			<span class="box_majorjam">2</span>
+			<span>3</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 87</p>
+		<div class="boxes">
+			<span>1</span>
+			<span class="box_majorjam">2</span>
+			<span>3</span>
+			<span>12</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 790</p>
+		<p>Total ilScore: 195</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://ralh.itch.io/the-labyrinth">The Labyrinth</a></td>
+				<td><span class="early">5h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>2</td>
+				<td>18</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://ralh.itch.io/the-labyrinth">The Labyrinth</a></td>
+				<td><span class="early">53m 52s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-48-teamwork">MJ 48: Teamwork</a></td>
+				<td>31</td>
+				<td>3</td>
+				<td>15</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://ralh.itch.io/ragnarok-fishing">Ragnarok Fishing</a></td>
+				<td><span class="early">5h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-35-vikings">MJ 35: Vikings</a></td>
+				<td>11</td>
+				<td>1</td>
+				<td>11</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://ralh.itch.io/ronja">Ronja</a></td>
+				<td><span class="early">5h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>12</td>
+				<td>14</td>
+				<td>37</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				15, 15, 15, 15, 15, 16, 17, 17, 17, 19, 20, 20, 20, 20, 20, 23, 24, 26, 26, 26, 26, 28, 28, 29, 29, 29, 29, 29, 30, 33, 33, 33, 33, 33, 33, 33, 34, 34, 34, 35,
+				35, 36, 37, 38, 39, 39, 41, 43, 43, 43, 44, 44, 46, 46, 46, 46, 48, 52, 54, 54, 55, 55, 55, 55, 55, 55, 55, 55, 55, 56, 56, 56, 56, 58, 59, 62, 62, 63, 65, 66,
+				67, 68, 69, 69, 69, 69, 72, 72, 73, 73, 73, 73, 74, 76, 79, 82, 82, 82, 82, 82, 82, 82, 82, 82, 82, 83, 83, 83, 84, 84, 85, 85, 85, 88, 88, 88, 88, 88, 88, 88,
+				89, 91, 92, 94, 96, 96, 96, 96, 97, 97, 98, 99, 100, 101, 101, 103, 104, 105, 106, 106, 106, 106, 106, 106, 106, 106, 106, 106, 106, 107, 107, 107, 107, 107, 108, 109, 109, 110, 110, 116,
+				116, 117,
+			]],
+			[ "5", [
+				34, 37, 38, 38, 39, 41, 42, 42, 43, 45, 46, 47, 47, 12, 13, 13, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6,
+				6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11,
+				11, 11, 11, 13, 13, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17,
+				17, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21,
+				21, 21,
+			]],
+			[ "10", [
+				52, 56, 58, 58, 63, 65, 66, 69, 71, 71, 73, 77, 78, 22, 22, 23, 10, 10, 10, 10, 10, 10, 10, 11, 11, 12, 12, 12, 14, 14, 14, 15, 15, 15, 16, 16, 16, 16, 16, 17,
+				17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 22, 23, 23, 23, 24, 24, 24, 25, 27, 29, 29, 29, 29, 29, 29, 30, 30, 30, 31, 31,
+				31, 31, 31, 33, 33, 34, 36, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 37, 38, 38, 38, 40, 40, 41, 41, 42, 42, 42, 42, 42, 42, 42, 42, 42,
+				44, 45, 45, 45, 45, 46, 46, 46, 46, 46, 46, 47, 47, 47, 49, 52, 52, 52, 53, 53, 53, 53, 54, 55, 55, 55, 55, 57, 57, 58, 58, 59, 59, 59, 59, 59, 59, 59, 59, 60,
+				62, 62,
+			]],
+			[ "20", [
+				208, 222, 226, 237, 251, 256, 37, 39, 39, 39, 40, 43, 44, 45, 45, 46, 47, 53, 54, 22, 25, 26, 11, 11, 11, 11, 11, 11, 11, 12, 12, 14, 14, 14, 14, 14, 14, 15, 15, 15,
+				16, 17, 17, 17, 17, 18, 19, 19, 19, 19, 19, 21, 21, 21, 22, 22, 23, 23, 24, 25, 25, 25, 25, 25, 25, 25, 28, 28, 28, 28, 28, 28, 29, 30, 32, 33, 33, 33, 33, 36,
+				36, 37, 38, 39, 41, 42, 43, 43, 43, 44, 44, 44, 46, 46, 47, 47, 47, 47, 48, 48, 48, 48, 48, 49, 51, 52, 52, 52, 53, 54, 54, 54, 54, 55, 55, 55, 55, 58, 58, 59,
+				60, 61, 61, 61, 61, 61, 62, 64, 64, 64, 64, 64, 64, 64, 64, 64, 64, 65, 65, 65, 67, 69, 69, 69, 69, 69, 69, 69, 69, 69, 72, 72, 73, 75, 75, 76, 77, 78, 80, 80,
+				80, 83, 83, 83, 83, 84, 86, 86,
+			]],
+			[ "ilscore", [
+				207, 227, 227, 245, 270, 272, 90, 95, 95, 96, 99, 106, 107, 112, 113, 115, 120, 129, 135, 43, 44, 57, 13, 13, 15, 18, 19, 19, 19, 21, 22, 23, 23, 25, 25, 30, 31, 31, 39, 42,
+				47, 50, 50, 53, 57, 61, 63, 70, 77, 83, 88, 90, 90, 107, 121, 125, 125, 129, 138, 145, 149, 153, 156, 165, 171, 172, 176, 183, 185, 187, 195, 197, 202, 206, 221, 241, 252, 253, 257, 260,
+				264, 279, 287, 307, 316, 322, 350, 358, 364, 365, 368, 371, 375, 383, 391, 398, 401, 405, 406, 417, 428, 434, 440, 450, 460, 466, 481, 483, 485, 495, 504, 511, 512, 514, 524, 524, 530, 531, 534, 536,
+				540, 542, 545, 551, 551, 551, 561, 570, 575, 579, 595, 596, 602, 607, 614, 618, 631, 642, 646, 656, 662, 667, 668, 680, 685, 688, 690, 691, 693, 695, 698, 702, 705, 712, 719, 722, 724, 727, 733, 738,
+				744, 750, 757, 765, 766, 777, 782, 789,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

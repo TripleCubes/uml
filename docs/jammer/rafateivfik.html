@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ruffles Teiv&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Ruffles Teiv&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rafateivfik.html" property="og:url">
+	<meta content="Rank by game in top 20: 1666&#10;Rank by ilScore: 2797&#10;&#10;2 games&#10;&bull; Eye Will Know | MJ 142: Fortune | rank: 39 | ilscore: 16&#10;&bull; Junk Beetle | MJ 63: Future | rank: 11 | ilscore: 82&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ruffles Teiv</h1>
+		<a href="https://rafateivfik.itch.io">rafateivfik.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1666</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2797</p>
+		<p>Total ilScore: 98</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rafateivfik.itch.io/eye-will-know">Eye Will Know</a></td>
+				<td><span class="early">1h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>39</td>
+				<td>6</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td><a href="https://jota-silverio.itch.io/junkbeetle">Junk Beetle</a></td>
+				<td><span class="early">1m 10s early</span></td>
+				<td>
+					<a href="../jammer/jota-silverio.html">Jota Silvério</a>,
+					<a href="../jammer/annyuzori.html">Annyu</a>,
+					<a href="../jammer/thagiat.html">thagiat</a>,
+					<a href="../jammer/wesvie.html">wesvie</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>11</td>
+				<td>8</td>
+				<td>82</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				371, 381, 390, 403, 412, 419, 435, 449, 451, 458, 464, 489, 495, 502, 515, 517, 522, 544, 556, 563, 568, 581, 597, 606, 611, 626, 634, 644, 656, 663, 668, 676, 683, 686, 694, 700, 709, 714, 729, 758,
+				770, 776, 793, 804, 810, 829, 838, 849, 861, 876, 899, 920, 935, 936, 941, 949, 958, 968, 985, 992, 1002, 1020, 1025, 1036, 1059, 1069, 1080, 1096, 1105, 1111, 1125, 1128, 1132, 1146, 1162, 1165, 1168, 1175, 1188, 1190,
+				1192, 1198, 1199, 1210, 1220, 1223, 1229, 1233, 1239, 1245, 1261, 1269, 1277, 1288, 1310, 1314, 1323, 1327, 1341, 1348, 1366, 1376, 1380, 1406, 1408, 1416, 1425, 1447, 1453, 1459, 1461, 1464, 1469, 1479, 1482, 1495, 1509, 1515, 1523, 1532,
+				1538, 1555, 1564, 1571, 1580, 1597, 1609, 1628, 1631, 1639, 1654, 1665,
+			]],
+			[ "ilscore", [
+				335, 337, 345, 361, 372, 382, 389, 410, 422, 438, 453, 548, 560, 574, 608, 638, 649, 755, 808, 827, 835, 859, 911, 980, 994, 1046, 1059, 1084, 1097, 1105, 1132, 1158, 1168, 1182, 1192, 1199, 1214, 1240, 1390, 1465,
+				1494, 1504, 1546, 1567, 1598, 1772, 1786, 1891, 1933, 2037, 2293, 2309, 2325, 2326, 2329, 2339, 2342, 2422, 2453, 2469, 2482, 2511, 2515, 2612, 2647, 2660, 2679, 2707, 2741, 2755, 2869, 2881, 2884, 2911, 2938, 2953, 2959, 2963, 3010, 3014,
+				3019, 3027, 3030, 2047, 2056, 2066, 2073, 2083, 2089, 2100, 2115, 2138, 2156, 2165, 2236, 2262, 2282, 2295, 2304, 2313, 2329, 2349, 2356, 2377, 2381, 2397, 2399, 2445, 2451, 2459, 2466, 2469, 2477, 2483, 2492, 2510, 2542, 2556, 2568, 2584,
+				2599, 2610, 2616, 2627, 2653, 2679, 2702, 2725, 2738, 2759, 2778, 2796,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

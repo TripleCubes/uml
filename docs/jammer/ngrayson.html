@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>technowizard&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="technowizard&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ngrayson.html" property="og:url">
+	<meta content="Rank by game in top 5: 529&#10;Rank by game in top 10: 698&#10;Rank by game in top 20: 1063&#10;Rank by ilScore: 4102&#10;&#10;1 games&#10;&bull; The Queen and The Dragonfly | MJ 174: Defense | rank: 4 | ilscore: 82&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>technowizard</h1>
+		<a href="https://ngrayson.itch.io">ngrayson.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 529</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 698</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1063</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4102</p>
+		<p>Total ilScore: 82</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ngrayson.itch.io/the-queen-and-the-dragonfly">The Queen and The Dragonfly</a></td>
+				<td><span class="early">1h 20m early</span></td>
+				<td>
+					<a href="../jammer/accipiterchalybs.html">AccipiterChalybs</a>,
+					<a href="../jammer/madsgray.html">madsgray</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-174-defense">MJ 174: Defense</a></td>
+				<td>98</td>
+				<td>4</td>
+				<td>16</td>
+				<td>82</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				478, 482, 482, 484, 490, 492, 493, 496, 497, 500, 504, 509, 516, 516, 523, 528, 528,
+			]],
+			[ "10", [
+				633, 639, 641, 643, 649, 651, 651, 656, 660, 664, 668, 679, 686, 686, 690, 696, 697,
+			]],
+			[ "20", [
+				961, 969, 972, 977, 985, 992, 1001, 1006, 1011, 1014, 1019, 1029, 1039, 1040, 1045, 1056, 1062,
+			]],
+			[ "ilscore", [
+				3719, 3770, 3782, 3796, 3813, 3828, 3839, 3855, 3867, 3896, 3922, 3946, 4023, 4035, 4066, 4088, 4101,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

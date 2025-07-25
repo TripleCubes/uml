@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>FortyVsZero&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="FortyVsZero&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/fortyvszero.html" property="og:url">
+	<meta content="Rank by game in top 5: 925&#10;Rank by game in top 10: 1395&#10;Rank by game in top 20: 1934&#10;Rank by ilScore: 8762&#10;&#10;1 games&#10;&bull; Overtoasted | MJ 141: Stories | rank: 2 | ilscore: 51&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>FortyVsZero</h1>
+		<a href="https://fortyvszero.itch.io">fortyvszero.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 925</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1395</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1934</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8762</p>
+		<p>Total ilScore: 51</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fortyvszero.itch.io/overtoasted">Overtoasted</a></td>
+				<td><span class="early">8h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-141-stories">MJ 141: Stories</a></td>
+				<td>43</td>
+				<td>2</td>
+				<td>19</td>
+				<td>51</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				655, 662, 668, 671, 676, 677, 685, 689, 695, 697, 702, 709, 719, 729, 733, 738, 742, 744, 748, 754, 759, 767, 769, 772, 778, 784, 788, 788, 789, 792, 794, 802, 808, 819, 824, 828, 834, 839, 842, 852,
+				862, 865, 870, 882, 890, 897, 902, 909, 919, 924,
+			]],
+			[ "10", [
+				1016, 1023, 1032, 1035, 1043, 1044, 1052, 1057, 1066, 1072, 1081, 1092, 1109, 1115, 1119, 1124, 1135, 1137, 1147, 1159, 1164, 1177, 1179, 1184, 1193, 1205, 1209, 1209, 1210, 1214, 1216, 1224, 1230, 1245, 1254, 1260, 1268, 1279, 1282, 1291,
+				1302, 1308, 1317, 1333, 1344, 1357, 1362, 1373, 1383, 1394,
+			]],
+			[ "20", [
+				1389, 1399, 1409, 1414, 1424, 1428, 1437, 1443, 1462, 1473, 1483, 1495, 1519, 1526, 1534, 1539, 1553, 1560, 1580, 1592, 1600, 1635, 1635, 1642, 1652, 1678, 1684, 1688, 1690, 1695, 1699, 1710, 1717, 1732, 1748, 1754, 1763, 1775, 1782, 1800,
+				1811, 1818, 1832, 1852, 1869, 1888, 1893, 1905, 1920, 1933,
+			]],
+			[ "ilscore", [
+				6230, 6243, 6273, 6297, 6356, 6371, 6376, 6388, 6497, 6601, 6657, 6678, 6836, 6871, 6935, 6983, 7057, 7069, 7151, 7212, 7229, 7346, 7357, 7397, 7406, 7582, 7602, 7604, 7608, 7609, 7615, 7620, 7650, 7731, 7820, 7862, 7886, 7945, 8002, 8054,
+				8127, 8168, 8238, 8303, 8373, 8510, 8552, 8652, 8712, 8761,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Toaster_on_mass&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Toaster_on_mass&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/toaster-on-mass.html" property="og:url">
+	<meta content="Rank by game in top 5: 695&#10;Rank by game in top 10: 956&#10;Rank by game in top 20: 1318&#10;Rank by ilScore: 4838&#10;&#10;1 games&#10;&bull; Begone Candles | MJ 145: Frozen | rank: 4 | ilscore: 76&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Toaster_on_mass</h1>
+		<a href="https://toaster-on-mass.itch.io">toaster-on-mass.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 695</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 956</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1318</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4838</p>
+		<p>Total ilScore: 76</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://toaster-on-mass.itch.io/begone-candles">Begone Candles</a></td>
+				<td><span class="early">12h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-145-frozen">MJ 145: Frozen</a></td>
+				<td>89</td>
+				<td>4</td>
+				<td>13</td>
+				<td>76</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				519, 519, 521, 523, 529, 531, 537, 544, 554, 555, 559, 562, 566, 567, 572, 578, 579, 587, 589, 594, 598, 604, 607, 607, 607, 608, 610, 612, 614, 625, 630, 632, 634, 638, 640, 641, 645, 646, 651, 663,
+				671, 681, 682, 683, 690, 694,
+			]],
+			[ "10", [
+				718, 718, 720, 723, 731, 737, 745, 755, 769, 770, 774, 778, 787, 788, 794, 802, 806, 820, 823, 828, 835, 848, 851, 854, 854, 856, 858, 860, 863, 874, 880, 883, 885, 890, 892, 892, 898, 902, 908, 920,
+				928, 941, 942, 943, 950, 955,
+			]],
+			[ "20", [
+				973, 978, 985, 990, 998, 1004, 1012, 1025, 1040, 1044, 1055, 1058, 1068, 1074, 1086, 1096, 1101, 1122, 1125, 1132, 1142, 1155, 1160, 1170, 1171, 1174, 1178, 1183, 1187, 1199, 1207, 1211, 1216, 1223, 1230, 1239, 1245, 1250, 1255, 1268,
+				1276, 1292, 1294, 1296, 1308, 1317,
+			]],
+			[ "ilscore", [
+				3623, 3634, 3647, 3654, 3713, 3751, 3773, 3779, 3910, 3925, 3944, 3960, 3992, 4002, 4040, 4077, 4089, 4146, 4158, 4172, 4178, 4297, 4304, 4308, 4311, 4314, 4319, 4329, 4342, 4371, 4434, 4444, 4458, 4475, 4492, 4503, 4527, 4539, 4583, 4620,
+				4650, 4733, 4746, 4796, 4820, 4837,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

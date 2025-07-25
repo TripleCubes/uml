@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>A bored cube&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="A bored cube&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bored-cube.html" property="og:url">
+	<meta content="Rank by game in top 20: 1136&#10;Rank by ilScore: 969&#10;&#10;2 games&#10;&bull; Cat Army | MJ 127: Cats | rank: 104 | ilscore: 41&#10;&bull; Ghost Colors | MJ 111: Colors | rank: 11 | ilscore: 136&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>A bored cube</h1>
+		<a href="https://bored-cube.itch.io">bored-cube.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1136</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 969</p>
+		<p>Total ilScore: 178</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bored-cube.itch.io/cat-army">Cat Army</a></td>
+				<td><span class="early">3h 22m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>104</td>
+				<td>4</td>
+				<td>41</td>
+			</tr>
+			<tr>
+				<td><a href="https://bored-cube.itch.io/ghost-colors">Ghost Colors</a></td>
+				<td><span class="early">1d 8h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>11</td>
+				<td>7</td>
+				<td>136</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				585, 597, 611, 611, 611, 619, 630, 634, 650, 652, 658, 668, 672, 678, 700, 708, 721, 733, 737, 746, 748, 751, 754, 763, 771, 774, 778, 782, 785, 787, 792, 801, 804, 814, 822, 825, 830, 835, 844, 847,
+				853, 857, 862, 873, 881, 888, 899, 900, 906, 913, 926, 934, 940, 953, 961, 969, 979, 991, 996, 1006, 1007, 1009, 1013, 1018, 1020, 1032, 1040, 1044, 1048, 1055, 1062, 1071, 1076, 1081, 1085, 1090, 1100, 1112, 1113, 1118,
+				1129, 1135,
+			]],
+			[ "ilscore", [
+				798, 816, 831, 831, 837, 840, 849, 872, 891, 896, 905, 915, 920, 946, 967, 984, 997, 575, 583, 590, 606, 608, 612, 626, 633, 643, 644, 648, 660, 662, 666, 668, 671, 675, 679, 682, 687, 690, 691, 691,
+				699, 709, 714, 715, 735, 738, 744, 749, 761, 766, 784, 796, 799, 812, 816, 820, 823, 835, 840, 844, 845, 846, 850, 850, 854, 860, 863, 873, 880, 882, 885, 892, 902, 907, 917, 923, 931, 940, 943, 953,
+				959, 968,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

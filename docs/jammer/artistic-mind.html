@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Artistic Mind&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Artistic Mind&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/artistic-mind.html" property="og:url">
+	<meta content="Rank by game in top 5: 951&#10;Rank by game in top 10: 1458&#10;Rank by game in top 20: 2057&#10;Rank by ilScore: 1306&#10;&#10;2 games&#10;&bull; SQUAREBALL | MJ 85: Gold | rank: 90 | ilscore: 67&#10;&bull; Whonghorn (Jam Edition) | MJ 77: Courage | rank: 5 | ilscore: 86&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Artistic Mind</h1>
+		<a href="https://artistic-mind.itch.io">artistic-mind.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 951</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1458</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2057</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1306</p>
+		<p>Total ilScore: 153</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://artistic-mind.itch.io/squareball">SQUAREBALL</a></td>
+				<td><span class="early">3h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>90</td>
+				<td>7</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://artistic-mind.itch.io/whonghornjamediton">Whonghorn (Jam Edition)</a></td>
+				<td><span class="early">2h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>5</td>
+				<td>11</td>
+				<td>86</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				315, 322, 330, 332, 334, 340, 346, 350, 356, 361, 367, 371, 378, 385, 392, 395, 402, 409, 417, 426, 428, 435, 439, 445, 456, 459, 461, 466, 469, 474, 481, 490, 494, 497, 501, 507, 516, 520, 521, 526,
+				531, 539, 543, 551, 559, 568, 576, 577, 582, 592, 596, 604, 607, 614, 619, 622, 626, 629, 634, 640, 645, 646, 650, 659, 660, 663, 669, 671, 678, 684, 688, 693, 695, 703, 707, 713, 715, 720, 727, 737,
+				748, 753, 758, 762, 764, 768, 774, 779, 787, 791, 794, 800, 806, 810, 810, 812, 815, 818, 826, 832, 843, 848, 852, 858, 863, 869, 879, 889, 892, 897, 908, 916, 923, 928, 935, 945, 950,
+			]],
+			[ "10", [
+				463, 470, 483, 490, 493, 498, 509, 519, 528, 539, 551, 557, 569, 579, 587, 595, 604, 612, 625, 635, 637, 647, 653, 664, 679, 686, 689, 698, 707, 714, 723, 740, 747, 756, 766, 778, 792, 805, 806, 812,
+				818, 826, 835, 852, 860, 869, 882, 883, 892, 910, 919, 929, 942, 955, 965, 975, 979, 982, 998, 1009, 1013, 1014, 1018, 1032, 1035, 1037, 1042, 1044, 1051, 1060, 1064, 1075, 1077, 1086, 1091, 1100, 1106, 1115, 1136, 1153,
+				1160, 1165, 1172, 1183, 1185, 1195, 1207, 1212, 1225, 1228, 1234, 1243, 1255, 1260, 1260, 1262, 1266, 1269, 1277, 1283, 1301, 1310, 1320, 1329, 1340, 1346, 1355, 1366, 1372, 1381, 1396, 1407, 1420, 1425, 1436, 1446, 1457,
+			]],
+			[ "20", [
+				619, 626, 648, 662, 669, 676, 692, 712, 721, 732, 759, 766, 783, 795, 803, 812, 822, 830, 843, 850, 857, 868, 875, 901, 930, 942, 947, 967, 981, 987, 1006, 1023, 1039, 1057, 1076, 1098, 1120, 1139, 1140, 1146,
+				1154, 1165, 1183, 1199, 1208, 1218, 1236, 1240, 1257, 1286, 1298, 1310, 1327, 1340, 1352, 1374, 1377, 1380, 1404, 1423, 1427, 1430, 1436, 1458, 1460, 1462, 1467, 1469, 1479, 1489, 1495, 1505, 1510, 1520, 1526, 1545, 1556, 1566, 1587, 1618,
+				1626, 1633, 1640, 1654, 1661, 1681, 1692, 1700, 1740, 1741, 1749, 1759, 1784, 1790, 1794, 1797, 1802, 1806, 1817, 1824, 1842, 1860, 1869, 1879, 1896, 1906, 1924, 1935, 1942, 1956, 1975, 1992, 2012, 2017, 2029, 2044, 2056,
+			]],
+			[ "ilscore", [
+				555, 566, 656, 694, 713, 722, 742, 790, 256, 265, 278, 286, 290, 295, 302, 317, 324, 327, 333, 337, 342, 344, 351, 376, 409, 428, 428, 437, 443, 452, 483, 494, 524, 544, 567, 609, 625, 638, 638, 643,
+				647, 651, 667, 684, 688, 695, 701, 704, 721, 740, 754, 763, 782, 797, 806, 829, 838, 846, 863, 877, 887, 892, 893, 907, 907, 907, 910, 910, 914, 918, 925, 930, 932, 934, 936, 944, 957, 964, 967, 996,
+				1008, 1014, 1017, 1028, 1034, 1053, 1068, 1073, 1091, 1094, 1102, 1107, 1127, 1129, 1133, 1135, 1136, 1140, 1140, 1143, 1152, 1163, 1171, 1177, 1183, 1188, 1200, 1210, 1217, 1229, 1237, 1253, 1269, 1275, 1287, 1296, 1305,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

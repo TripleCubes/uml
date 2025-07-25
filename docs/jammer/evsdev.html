@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Evs&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Evs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/evsdev.html" property="og:url">
+	<meta content="Rank by ilScore: 9480&#10;&#10;1 games&#10;&bull; Doughnut Delivery | MJ 56: Sky | rank: 83 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Evs</h1>
+		<a href="https://evsdev.itch.io">evsdev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9480</p>
+		<p>Total ilScore: 47</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://evsdev.itch.io/doughnut-delivery">Doughnut Delivery</a></td>
+				<td><span class="early">6h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-56-sky">MJ 56: Sky</a></td>
+				<td>112</td>
+				<td>83</td>
+				<td>9</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				714, 736, 765, 768, 773, 816, 846, 985, 1086, 1088, 1110, 1203, 1229, 1258, 1296, 1357, 1390, 1456, 1486, 1650, 1693, 1760, 1834, 1934, 1965, 2119, 2215, 2253, 2283, 2359, 2483, 2619, 2682, 2795, 2861, 2946, 2988, 3033, 3106, 3186,
+				3199, 3264, 3285, 3312, 3373, 3444, 3640, 3749, 3839, 3846, 3952, 4013, 4113, 4352, 4400, 4578, 4657, 4806, 5148, 5215, 5286, 5286, 5306, 5310, 5323, 5440, 5546, 5603, 5621, 5703, 5712, 5856, 5926, 5958, 5993, 6071, 6162, 6199, 6368, 6384,
+				6395, 6482, 6555, 6585, 6591, 6592, 6722, 6722, 6727, 6733, 6741, 6754, 6792, 6827, 6889, 6906, 6916, 6931, 7040, 7151, 7213, 7241, 7403, 7439, 7508, 7561, 7645, 7661, 7745, 7813, 7830, 7954, 7969, 8015, 8024, 8204, 8226, 8226, 8234, 8237,
+				8257, 8264, 8300, 8382, 8473, 8519, 8551, 8610, 8671, 8729, 8807, 8850, 8919, 8983, 9057, 9195, 9242, 9350, 9420, 9479,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

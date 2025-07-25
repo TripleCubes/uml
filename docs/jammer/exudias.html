@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Exudias&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Exudias&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/exudias.html" property="og:url">
+	<meta content="Rank by game in top 10: 986&#10;Rank by game in top 20: 1345&#10;Rank by ilScore: 3676&#10;&#10;1 games&#10;&bull; Sidewalk Helsing | MJ 121: Reflection | rank: 8 | ilscore: 85&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Exudias</h1>
+		<a href="https://exudias.itch.io">exudias.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 986</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1345</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3676</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://exudias.itch.io/sidewalk-helsing">Sidewalk Helsing</a></td>
+				<td><span class="early">9h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>8</td>
+				<td>15</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				605, 607, 613, 634, 638, 647, 660, 666, 674, 676, 679, 680, 691, 699, 701, 701, 701, 710, 714, 718, 725, 726, 733, 739, 740, 745, 745, 747, 750, 759, 766, 773, 783, 797, 798, 802, 806, 815, 816, 823,
+				831, 834, 847, 850, 856, 863, 875, 878, 881, 881, 883, 886, 888, 891, 902, 910, 913, 915, 920, 922, 922, 928, 932, 938, 950, 958, 971, 972, 973, 980, 985,
+			]],
+			[ "20", [
+				818, 822, 830, 851, 859, 871, 886, 894, 903, 906, 909, 910, 924, 933, 936, 938, 942, 950, 952, 957, 966, 969, 979, 989, 992, 999, 1004, 1011, 1016, 1025, 1032, 1039, 1051, 1066, 1070, 1081, 1084, 1093, 1099, 1112,
+				1122, 1126, 1147, 1150, 1157, 1167, 1180, 1185, 1195, 1196, 1199, 1204, 1209, 1213, 1225, 1235, 1239, 1244, 1251, 1258, 1267, 1272, 1278, 1283, 1296, 1304, 1320, 1322, 1324, 1336, 1344,
+			]],
+			[ "ilscore", [
+				2257, 2264, 2348, 2382, 2396, 2414, 2440, 2469, 2483, 2582, 2597, 2600, 2621, 2642, 2657, 2663, 2667, 2697, 2701, 2706, 2714, 2717, 2721, 2734, 2742, 2748, 2759, 2769, 2779, 2816, 2841, 2859, 2865, 2962, 2980, 3000, 3013, 3033, 3042, 3063,
+				3089, 3100, 3144, 3151, 3167, 3172, 3257, 3264, 3269, 3274, 3278, 3286, 3294, 3307, 3328, 3375, 3387, 3401, 3421, 3437, 3447, 3458, 3469, 3495, 3524, 3549, 3601, 3614, 3638, 3659, 3675,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

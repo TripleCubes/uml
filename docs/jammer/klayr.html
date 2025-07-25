@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Klayr&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Klayr&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/klayr.html" property="og:url">
+	<meta content="Rank by ilScore: 2220&#10;&#10;2 games&#10;&bull; Void Contract | MJ 67: Void | rank: 38 | ilscore: 43&#10;&bull; Confuture | MJ 63: Future | rank: 35 | ilscore: 71&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Klayr</h1>
+		<a href="https://klayr.itch.io">klayr.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2220</p>
+		<p>Total ilScore: 114</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lugrim.itch.io/void-contract">Void Contract</a></td>
+				<td><span class="early">4h 18m early</span></td>
+				<td>
+					<a href="../jammer/lugrim.html">Lugrim</a>,
+					<a href="../jammer/kiminako.html">Kimi</a>,
+					<a href="../jammer/doctortee6.html">doctortee6</a>,
+					<a href="../jammer/metatheria.html">metatheria</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-67-void">MJ 67: Void</a></td>
+				<td>61</td>
+				<td>38</td>
+				<td>5</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://rileran.itch.io/confuture">Confuture</a></td>
+				<td><span class="early">4h 16m early</span></td>
+				<td>
+					<a href="../jammer/rileran.html">Rileran</a>,
+					<a href="../jammer/doctortee6.html">doctortee6</a>,
+					<a href="../jammer/lugrim.html">Lugrim</a>,
+					<a href="../jammer/kiminako.html">Kimi</a>,
+					<a href="../jammer/catlaiya.html">Catlaiya</a>,
+					<a href="../jammer/trino.html">Trino</a>,
+					<a href="../jammer/pookitoki.html">Pookitoki</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>35</td>
+				<td>13</td>
+				<td>71</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				511, 514, 522, 561, 179, 181, 187, 201, 205, 219, 232, 262, 270, 282, 307, 324, 333, 364, 393, 410, 417, 435, 454, 486, 500, 518, 531, 541, 551, 557, 581, 597, 604, 615, 624, 630, 642, 660, 706, 742,
+				758, 764, 788, 807, 828, 893, 905, 940, 967, 1004, 1144, 1165, 1184, 1184, 1190, 1195, 1205, 1231, 1250, 1261, 1272, 1288, 1295, 1330, 1356, 1375, 1389, 1409, 1432, 1440, 1477, 1490, 1501, 1520, 1542, 1553, 1558, 1561, 1579, 1579,
+				1580, 1587, 1589, 1593, 1603, 1611, 1618, 1624, 1626, 1635, 1646, 1662, 1680, 1685, 1718, 1742, 1759, 1771, 1784, 1792, 1808, 1830, 1838, 1856, 1860, 1873, 1878, 1900, 1906, 1914, 1917, 1918, 1926, 1927, 1930, 1945, 1976, 1993, 2005, 2017,
+				2034, 2048, 2055, 2067, 2091, 2113, 2130, 2149, 2164, 2185, 2204, 2219,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

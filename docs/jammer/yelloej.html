@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>YelloeJ&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="YelloeJ&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/yelloej.html" property="og:url">
+	<meta content="Rank by ilScore: 7067&#10;&#10;1 games&#10;&bull; No! They Are My Candies! | MJ 66: Sweets | rank: 55 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>YelloeJ</h1>
+		<a href="https://yelloej.itch.io">yelloej.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7067</p>
+		<p>Total ilScore: 61</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yelloej.itch.io/no-they-are-my-candies">No! They Are My Candies!</a></td>
+				<td><span class="early">2h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>55</td>
+				<td>8</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				788, 801, 813, 828, 882, 893, 946, 970, 1105, 1128, 1169, 1242, 1323, 1336, 1467, 1552, 1567, 1578, 1631, 1737, 1851, 1887, 1979, 2017, 2080, 2106, 2125, 2184, 2249, 2251, 2305, 2315, 2321, 2362, 2420, 2601, 2695, 2768, 2774, 2862,
+				2902, 2982, 3203, 3240, 3394, 3465, 3590, 3895, 3960, 4005, 4006, 4012, 4018, 4021, 4127, 4204, 4230, 4238, 4297, 4298, 4429, 4491, 4504, 4528, 4588, 4661, 4681, 4828, 4838, 4842, 4902, 4959, 4978, 4986, 4989, 5097, 5097, 5100, 5105, 5111,
+				5120, 5134, 5147, 5182, 5189, 5198, 5201, 5290, 5373, 5405, 5414, 5561, 5588, 5633, 5662, 5718, 5724, 5795, 5848, 5858, 5950, 5961, 5975, 5980, 6133, 6141, 6144, 6147, 6151, 6155, 6164, 6183, 6243, 6333, 6361, 6375, 6418, 6457, 6490, 6547,
+				6577, 6643, 6698, 6755, 6873, 6895, 6982, 7026, 7066,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

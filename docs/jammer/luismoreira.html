@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Luís Moreira&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Luís Moreira&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/luismoreira.html" property="og:url">
+	<meta content="Rank by game in top 5: 222&#10;Rank by game in top 10: 410&#10;Rank by game in top 20: 806&#10;Rank by ilScore: 6379&#10;&#10;1 games&#10;&bull; Knight Diana and the Dungeon of the Fire Spewing Skeletons | MJ 152: Heroes | rank: 2 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Luís Moreira</h1>
+		<a href="https://luismoreira.itch.io">luismoreira.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 222</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 410</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 806</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6379</p>
+		<p>Total ilScore: 66</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://luismoreira.itch.io/knight-diana-and-the-dungeon-of-the-fire-spewing-skeletons">Knight Diana and the Dungeon of the Fire Spewing Skeletons</a></td>
+				<td><span class="early">11h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-152-heroes">MJ 152: Heroes</a></td>
+				<td>52</td>
+				<td>2</td>
+				<td>32</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				169, 170, 170, 170, 170, 172, 173, 176, 177, 178, 179, 183, 188, 189, 191, 191, 194, 195, 196, 198, 200, 200, 201, 201, 201, 202, 204, 204, 205, 205, 207, 207, 211, 212, 215, 215, 221, 221, 221,
+			]],
+			[ "10", [
+				316, 317, 321, 323, 324, 326, 329, 330, 332, 336, 337, 344, 348, 353, 357, 357, 363, 365, 366, 368, 370, 371, 372, 374, 376, 377, 380, 380, 380, 382, 386, 387, 390, 397, 400, 400, 403, 406, 409,
+			]],
+			[ "20", [
+				608, 611, 618, 628, 628, 632, 638, 648, 654, 660, 662, 671, 679, 687, 691, 693, 706, 709, 711, 715, 720, 722, 725, 729, 732, 736, 742, 747, 756, 759, 764, 765, 769, 778, 784, 785, 789, 797, 805,
+			]],
+			[ "ilscore", [
+				4899, 5046, 5065, 5105, 5128, 5179, 5188, 5255, 5303, 5312, 5396, 5409, 5423, 5428, 5572, 5580, 5583, 5586, 5590, 5595, 5605, 5619, 5671, 5758, 5782, 5794, 5833, 5857, 5883, 5931, 5956, 6019, 6066, 6114, 6224, 6238, 6311, 6351, 6378,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

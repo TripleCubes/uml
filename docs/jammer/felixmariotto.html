@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Felix Mariotto&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Felix Mariotto&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/felixmariotto.html" property="og:url">
+	<meta content="Rank by game in top 10: 1201&#10;Rank by game in top 20: 1597&#10;Rank by ilScore: 4036&#10;&#10;1 games&#10;&bull; Dimensional Bug | MJ 63: Future | rank: 9 | ilscore: 82&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Felix Mariotto</h1>
+		<a href="https://felixmariotto.itch.io">felixmariotto.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1201</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1597</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4036</p>
+		<p>Total ilScore: 82</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://felixmariotto.itch.io/dimensional-bug">Dimensional Bug</a></td>
+				<td><span class="early">5h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>9</td>
+				<td>25</td>
+				<td>82</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				266, 274, 280, 293, 299, 306, 319, 333, 334, 339, 344, 358, 364, 369, 378, 380, 385, 398, 405, 407, 407, 417, 427, 430, 436, 448, 452, 461, 470, 477, 481, 488, 494, 497, 508, 508, 517, 523, 534, 549,
+				556, 559, 569, 578, 586, 595, 605, 612, 621, 631, 643, 657, 670, 671, 676, 681, 689, 697, 711, 716, 724, 737, 740, 750, 768, 775, 785, 798, 806, 811, 821, 824, 828, 839, 850, 853, 853, 856, 870, 873,
+				874, 879, 880, 889, 897, 898, 902, 903, 905, 910, 919, 926, 934, 944, 961, 964, 968, 972, 983, 984, 995, 1005, 1005, 1018, 1021, 1026, 1034, 1046, 1050, 1050, 1051, 1053, 1057, 1064, 1067, 1080, 1089, 1095, 1098, 1105,
+				1107, 1109, 1120, 1125, 1134, 1149, 1160, 1176, 1178, 1184, 1194, 1200,
+			]],
+			[ "20", [
+				354, 364, 373, 386, 395, 402, 417, 431, 433, 439, 445, 470, 476, 483, 496, 498, 503, 525, 536, 542, 545, 557, 571, 577, 584, 598, 604, 613, 626, 633, 638, 646, 653, 656, 664, 670, 678, 683, 697, 726,
+				737, 743, 760, 771, 779, 798, 806, 817, 830, 845, 868, 885, 899, 900, 905, 914, 922, 930, 948, 955, 965, 982, 987, 998, 1021, 1031, 1042, 1058, 1067, 1073, 1084, 1087, 1091, 1105, 1118, 1121, 1123, 1130, 1143, 1145,
+				1147, 1153, 1154, 1165, 1175, 1178, 1185, 1189, 1195, 1202, 1218, 1226, 1234, 1245, 1263, 1267, 1276, 1280, 1293, 1299, 1316, 1326, 1330, 1356, 1358, 1366, 1375, 1394, 1400, 1406, 1408, 1411, 1416, 1426, 1429, 1442, 1456, 1462, 1468, 1477,
+				1483, 1494, 1503, 1509, 1518, 1533, 1545, 1564, 1566, 1573, 1588, 1596,
+			]],
+			[ "ilscore", [
+				327, 329, 337, 352, 363, 373, 380, 401, 413, 429, 444, 539, 551, 565, 599, 626, 637, 743, 792, 811, 819, 842, 894, 963, 976, 1023, 1036, 1059, 1072, 1080, 1104, 1130, 1140, 1154, 1164, 1171, 1186, 1212, 1362, 1437,
+				1465, 1475, 1517, 1537, 1567, 1740, 1754, 1857, 1899, 2000, 2256, 2272, 2288, 2289, 2292, 2301, 2304, 2381, 2411, 2426, 2440, 2470, 2474, 2569, 2604, 2617, 2635, 2663, 2696, 2710, 2820, 2832, 2835, 2863, 2890, 2905, 2911, 2915, 2961, 2965,
+				2970, 2978, 2981, 2987, 3000, 3008, 3014, 3024, 3034, 3044, 3087, 3117, 3136, 3141, 3255, 3272, 3291, 3305, 3331, 3340, 3371, 3396, 3406, 3457, 3467, 3483, 3489, 3589, 3596, 3600, 3604, 3608, 3616, 3624, 3637, 3658, 3707, 3719, 3733, 3752,
+				3767, 3778, 3792, 3804, 3833, 3859, 3882, 3958, 3971, 3999, 4020, 4035,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

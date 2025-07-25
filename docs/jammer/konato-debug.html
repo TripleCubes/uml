@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>konato-debug&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="konato-debug&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/konato-debug.html" property="og:url">
+	<meta content="Rank by ilScore: 12128&#10;&#10;1 games&#10;&bull; Sky hunter | MJ 40: Hunters | rank: 25 | ilscore: 28&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>konato-debug</h1>
+		<a href="https://konato-debug.itch.io">konato-debug.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12128</p>
+		<p>Total ilScore: 28</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://konato-debug.itch.io/sky-hunter">Sky hunter</a></td>
+				<td><span class="early">4h 38m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-40-hunters">MJ 40: Hunters</a></td>
+				<td>35</td>
+				<td>25</td>
+				<td>5</td>
+				<td>28</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				462, 475, 491, 491, 503, 541, 572, 611, 628, 628, 743, 838, 857, 923, 964, 1039, 1095, 1214, 1255, 1301, 1303, 1310, 1376, 1418, 1573, 1690, 1692, 1733, 1838, 1886, 1935, 1991, 2069, 2114, 2191, 2240, 2414, 2472, 2559, 2650,
+				2761, 2810, 2965, 3071, 3124, 3171, 3257, 3387, 3538, 3622, 3759, 3842, 3940, 4003, 4063, 4159, 4254, 4286, 4357, 4396, 4445, 4527, 4615, 4832, 4952, 5060, 5083, 5202, 5278, 5381, 5634, 5697, 5887, 5977, 6149, 6517, 6597, 6696, 6699, 6745,
+				6766, 6796, 6942, 7064, 7158, 7192, 7286, 7306, 7478, 7563, 7616, 7660, 7747, 7851, 7898, 8082, 8104, 8133, 8236, 8322, 8363, 8388, 8398, 8544, 8548, 8568, 8605, 8633, 8659, 8705, 8760, 8833, 8861, 8887, 8918, 9046, 9170, 9247, 9287, 9461,
+				9515, 9606, 9674, 9773, 9799, 9891, 9974, 9997, 10131, 10165, 10218, 10237, 10428, 10469, 10483, 10509, 10539, 10578, 10603, 10659, 10748, 10864, 10927, 10975, 11047, 11119, 11187, 11269, 11338, 11423, 11499, 11587, 11763, 11830, 11956, 12038, 12127,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

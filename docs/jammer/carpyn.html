@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Carpyn&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Carpyn&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/carpyn.html" property="og:url">
+	<meta content="Rank by game in top 20: 2169&#10;Rank by ilScore: 4475&#10;&#10;1 games&#10;&bull; Lone Recorder | MJ+ 1: Isolation | rank: 16 | ilscore: 79&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Carpyn</h1>
+		<a href="https://carpyn.itch.io">carpyn.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2169</p>
+		<div class="boxes">
+			<span class="box_majorjam">16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4475</p>
+		<p>Total ilScore: 79</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://carpyn.itch.io/lone-recorder">Lone Recorder</a></td>
+				<td><span class="early">9h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>16</td>
+				<td>15</td>
+				<td>79</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				280, 286, 291, 301, 311, 327, 338, 350, 366, 373, 379, 395, 400, 428, 453, 463, 474, 496, 505, 513, 539, 557, 562, 576, 585, 610, 620, 635, 654, 659, 666, 688, 702, 709, 715, 734, 754, 764, 777, 802,
+				809, 826, 840, 849, 860, 871, 879, 893, 900, 907, 918, 925, 951, 980, 993, 996, 1017, 1032, 1040, 1059, 1075, 1091, 1110, 1129, 1151, 1173, 1192, 1193, 1204, 1214, 1225, 1243, 1259, 1269, 1278, 1298, 1303, 1319, 1348, 1359,
+				1371, 1387, 1401, 1414, 1440, 1443, 1446, 1470, 1492, 1496, 1499, 1504, 1530, 1532, 1534, 1539, 1541, 1551, 1567, 1574, 1584, 1589, 1601, 1611, 1630, 1642, 1654, 1675, 1708, 1716, 1723, 1730, 1744, 1751, 1771, 1782, 1790, 1830, 1832, 1842,
+				1851, 1876, 1882, 1886, 1889, 1894, 1898, 1908, 1915, 1933, 1953, 1963, 1979, 1996, 2010, 2026, 2037, 2044, 2058, 2077, 2099, 2124, 2129, 2140, 2155, 2168,
+			]],
+			[ "ilscore", [
+				154, 155, 163, 173, 188, 200, 216, 234, 241, 243, 247, 251, 256, 330, 377, 379, 388, 407, 419, 428, 436, 464, 476, 494, 509, 619, 633, 647, 693, 733, 743, 855, 918, 928, 936, 963, 1025, 1105, 1119, 1176,
+				1191, 1223, 1237, 1245, 1282, 1311, 1319, 1332, 1343, 1350, 1371, 1398, 1561, 1639, 1680, 1689, 1734, 1758, 1791, 1972, 1984, 2098, 2148, 2255, 2513, 2531, 2548, 2549, 2552, 2561, 2566, 2650, 2696, 2712, 2723, 2756, 2759, 2867, 2907, 2916,
+				2934, 2965, 3008, 3022, 3144, 3156, 3159, 3193, 3223, 3235, 3241, 3244, 3301, 3305, 3310, 3318, 3322, 3331, 3340, 3349, 3357, 3367, 3378, 3387, 3439, 3474, 3497, 3503, 3625, 3641, 3658, 3672, 3700, 3709, 3742, 3770, 3781, 3840, 3851, 3866,
+				3872, 3983, 3990, 3994, 3997, 4001, 4007, 4016, 4030, 4056, 4113, 4122, 4136, 4152, 4168, 4180, 4199, 4212, 4252, 4288, 4312, 4389, 4403, 4437, 4459, 4474,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

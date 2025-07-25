@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kouvei&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kouvei&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kouvei.html" property="og:url">
+	<meta content="Rank by ilScore: 1290&#10;&#10;3 games&#10;&bull; Intermission of Time | MJ 122: Intermission | rank: 31 | ilscore: 33&#10;&bull; Frog Forest | MJ 106: Frogs | rank: 80 | ilscore: 102&#10;&bull; Lost in the Cosmos | MJ 70: Heaven | rank: 59 | ilscore: 19&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kouvei</h1>
+		<a href="https://kouvei.itch.io">kouvei.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1290</p>
+		<p>Total ilScore: 154</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kouvei.itch.io/intermission-of-time">Intermission of Time</a></td>
+				<td><span class="early">22m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>31</td>
+				<td>7</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td><a href="https://kouvei.itch.io/frog-forest">Frog Forest</a></td>
+				<td><span class="early">3h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>80</td>
+				<td>6</td>
+				<td>102</td>
+			</tr>
+			<tr>
+				<td><a href="https://kouvei.itch.io/lost-in-the-cosmos">Lost in the Cosmos</a></td>
+				<td><span class="early">5h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>59</td>
+				<td>3</td>
+				<td>19</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2364, 2442, 2496, 2670, 2730, 2818, 2910, 3028, 3079, 3233, 3342, 3399, 3447, 3535, 3668, 3819, 3907, 4046, 4130, 4227, 4294, 4355, 4462, 4556, 4590, 4661, 4701, 4752, 4837, 4926, 5144, 5264, 5376, 5404, 5526, 5608, 5711, 809, 822, 858,
+				885, 919, 1025, 1048, 1067, 1067, 1073, 1077, 1087, 1112, 1131, 1140, 1148, 1162, 698, 715, 734, 748, 757, 776, 791, 799, 822, 831, 838, 855, 868, 878, 883, 885, 899, 899, 899, 902, 902, 907, 911, 916, 920, 922,
+				924, 926, 934, 947, 954, 957, 986, 997, 1003, 1006, 1017, 1023, 1042, 1057, 1062, 1080, 1083, 1091, 1096, 1116, 1118, 1122, 1124, 1125, 1129, 1129, 1132, 1141, 1151, 1159, 1165, 1169, 1174, 1186, 1196, 1203, 1215, 1223, 1238, 1254,
+				1260, 1272, 1280, 1289,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

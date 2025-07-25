@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Herr Edgy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Herr Edgy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/quexlaw.html" property="og:url">
+	<meta content="Rank by game in top 20: 3407&#10;Rank by ilScore: 7282&#10;&#10;1 games&#10;&bull; Eggmaggedon | MJ 119: Heaven | rank: 19 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Herr Edgy</h1>
+		<a href="https://quexlaw.itch.io">quexlaw.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3407</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7282</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://devwilliamhardy.itch.io/eggmaggedon">Eggmaggedon</a></td>
+				<td><span class="early">10m 24s early</span></td>
+				<td>
+					<a href="../jammer/devwilliamhardy.html">William Hardy</a>,
+					<a href="../jammer/lazanja.html">Lazanja</a>,
+					<a href="../jammer/kyrowo.html">Kyrowo</a>,
+					<a href="../jammer/denjil.html">Denjil404</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>96</td>
+				<td>19</td>
+				<td>11</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1928, 1951, 1973, 1985, 2003, 2030, 2046, 2066, 2081, 2103, 2117, 2143, 2163, 2182, 2207, 2228, 2247, 2264, 2272, 2300, 2304, 2316, 2339, 2355, 2373, 2394, 2418, 2441, 2461, 2477, 2499, 2517, 2529, 2547, 2576, 2608, 2630, 2650, 2671, 2691,
+				2711, 2726, 2743, 2765, 2805, 2819, 2834, 2848, 2873, 2887, 2892, 2915, 2936, 2958, 2978, 2995, 3026, 3046, 3070, 3099, 3123, 3149, 3173, 3203, 3221, 3240, 3267, 3286, 3312, 3337, 3369, 3389, 3406,
+			]],
+			[ "ilscore", [
+				4357, 4369, 4428, 4429, 4562, 4626, 4642, 4663, 4728, 4804, 4825, 4973, 4983, 4987, 5053, 5112, 5131, 5139, 5142, 5250, 5250, 5253, 5259, 5264, 5273, 5293, 5305, 5344, 5350, 5359, 5364, 5455, 5539, 5572, 5583, 5734, 5761, 5810, 5838, 5895,
+				5899, 5971, 6025, 6035, 6129, 6140, 6159, 6164, 6317, 6326, 6330, 6333, 6337, 6342, 6351, 6370, 6430, 6519, 6548, 6565, 6611, 6651, 6685, 6746, 6777, 6843, 6900, 6957, 7075, 7100, 7191, 7237, 7281,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

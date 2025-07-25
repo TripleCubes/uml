@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>KringlePrinkles&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="KringlePrinkles&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kringleprinkles.html" property="og:url">
+	<meta content="Rank by game in top 20: 750&#10;Rank by ilScore: 7053&#10;&#10;2 games&#10;&bull; Flute of the OohWu (one room) | MJ 20: Music | rank: 14 | ilscore: 22&#10;&bull; Dream Game... Thing... | MJ 18: Dreams | rank: 12 | ilscore: 39&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>KringlePrinkles</h1>
+		<a href="https://kringleprinkles.itch.io">kringleprinkles.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 750</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>14</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7053</p>
+		<p>Total ilScore: 61</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kringleprinkles.itch.io/flute-of-the-oohwu">Flute of the OohWu (one room)</a></td>
+				<td><span class="late">40m 27s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-20-music">MJ 20: Music</a></td>
+				<td>23</td>
+				<td>14</td>
+				<td>6</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://kringleprinkles.itch.io/dream-game-thing-huh">Dream Game... Thing...</a></td>
+				<td><span class="late">1d 18h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-18-dreams">MJ 18: Dreams</a></td>
+				<td>30</td>
+				<td>12</td>
+				<td>8</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				96, 101, 31, 32, 34, 36, 40, 41, 46, 48, 49, 50, 54, 55, 58, 62, 65, 66, 71, 72, 72, 77, 80, 81, 84, 87, 87, 90, 102, 106, 109, 112, 115, 117, 117, 118, 125, 127, 131, 133,
+				138, 139, 145, 151, 153, 154, 158, 160, 168, 172, 176, 182, 185, 188, 190, 191, 197, 201, 205, 205, 209, 212, 212, 216, 221, 228, 238, 242, 245, 249, 253, 258, 262, 266, 267, 273, 278, 284, 286, 290,
+				293, 297, 302, 303, 304, 305, 308, 314, 318, 321, 325, 331, 333, 337, 343, 349, 350, 352, 356, 363, 363, 364, 371, 380, 381, 389, 391, 399, 403, 408, 412, 418, 428, 438, 443, 444, 450, 452, 454, 457,
+				463, 467, 473, 477, 482, 484, 486, 490, 499, 502, 508, 514, 517, 522, 526, 536, 540, 541, 544, 546, 552, 555, 562, 572, 572, 575, 581, 591, 598, 605, 607, 616, 624, 632, 635, 637, 649, 652, 654, 658,
+				664, 666, 669, 673, 676, 680, 686, 691, 700, 703, 708, 709, 713, 722, 728, 729, 733, 741, 749,
+			]],
+			[ "ilscore", [
+				43, 49, 23, 24, 24, 28, 43, 50, 54, 57, 60, 62, 69, 70, 76, 88, 90, 91, 96, 96, 97, 100, 107, 108, 113, 114, 116, 121, 131, 137, 142, 147, 218, 273, 276, 300, 310, 349, 376, 443,
+				455, 463, 470, 475, 492, 499, 619, 710, 714, 723, 785, 798, 810, 825, 879, 890, 943, 967, 1102, 1125, 1166, 1239, 1320, 1333, 1464, 1549, 1564, 1575, 1628, 1734, 1848, 1884, 1976, 2014, 2077, 2103, 2121, 2180, 2245, 2247,
+				2301, 2311, 2317, 2357, 2415, 2597, 2691, 2764, 2770, 2858, 2898, 2978, 3199, 3236, 3390, 3461, 3586, 3891, 3956, 4001, 4002, 4008, 4014, 4017, 4123, 4200, 4225, 4233, 4292, 4293, 4424, 4486, 4499, 4523, 4582, 4655, 4675, 4822, 4832, 4836,
+				4896, 4953, 4972, 4980, 4983, 5091, 5091, 5094, 5099, 5105, 5114, 5128, 5141, 5175, 5182, 5191, 5194, 5283, 5366, 5398, 5407, 5552, 5579, 5624, 5653, 5709, 5715, 5786, 5839, 5849, 5941, 5952, 5966, 5971, 6124, 6132, 6135, 6139, 6143, 6147,
+				6156, 6175, 6235, 6325, 6353, 6367, 6409, 6443, 6476, 6533, 6563, 6629, 6684, 6741, 6859, 6881, 6968, 7012, 7052,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

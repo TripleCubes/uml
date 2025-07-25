@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dotPixel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dotPixel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dotpixelx.html" property="og:url">
+	<meta content="Rank by game in top 20: 1573&#10;Rank by ilScore: 157&#10;&#10;5 games&#10;&bull; Ghost Hunter | MJ 117: Ghosts | rank: 44 | ilscore: 89&#10;&bull; ExploRobots | MJ 109: Depths | rank: 14 | ilscore: 89&#10;&bull; Don&#39;t Get Hooked! | MJ 108: Seaside | rank: 65 | ilscore: 88&#10;&bull; Maximum Groove | MJ 107: Music | rank: 46 | ilscore: 56&#10;&bull; Jump Frog | MJ 106: Frogs | rank: 68 | ilscore: 104&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dotPixel</h1>
+		<a href="https://dotpixelx.itch.io">dotpixelx.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1573</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 157</p>
+		<p>Total ilScore: 426</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dotpixelx.itch.io/ghost-hunter">Ghost Hunter</a></td>
+				<td><span class="early">1h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>44</td>
+				<td>8</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://dotpixelx.itch.io/explorobots">ExploRobots</a></td>
+				<td><span class="early">12h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>14</td>
+				<td>18</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://dotpixelx.itch.io/dont-get-hooked">Don&#39;t Get Hooked!</a></td>
+				<td><span class="early">8h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>65</td>
+				<td>11</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://dotpixelx.itch.io/maximum-groove">Maximum Groove</a></td>
+				<td><span class="early">16h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>46</td>
+				<td>12</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://dotpixelx.itch.io/jump-frog">Jump Frog</a></td>
+				<td><span class="early">49m 32s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>68</td>
+				<td>10</td>
+				<td>104</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				828, 842, 865, 882, 894, 895, 900, 909, 917, 925, 943, 950, 960, 977, 982, 993, 1016, 1026, 1037, 1053, 1062, 1068, 1075, 1078, 1079, 1093, 1106, 1109, 1111, 1116, 1127, 1129, 1134, 1142, 1143, 1154, 1164, 1167, 1174, 1178,
+				1184, 1191, 1205, 1213, 1221, 1232, 1250, 1254, 1263, 1267, 1278, 1284, 1300, 1310, 1314, 1335, 1337, 1345, 1355, 1372, 1378, 1387, 1389, 1392, 1396, 1406, 1409, 1422, 1436, 1441, 1447, 1456, 1462, 1473, 1482, 1488, 1497, 1512, 1524, 1540,
+				1542, 1549, 1564, 1572,
+			]],
+			[ "ilscore", [
+				1046, 455, 179, 105, 109, 116, 119, 122, 123, 123, 123, 124, 82, 83, 85, 86, 88, 89, 91, 92, 92, 94, 97, 99, 99, 104, 105, 106, 106, 109, 113, 115, 115, 117, 117, 117, 118, 118, 118, 118,
+				118, 119, 119, 119, 119, 120, 121, 121, 121, 122, 122, 122, 122, 122, 122, 123, 125, 126, 127, 128, 130, 130, 132, 132, 132, 132, 132, 134, 134, 135, 135, 139, 141, 141, 142, 142, 142, 144, 145, 147,
+				149, 151, 156, 156, 156, 156, 156,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Blejert&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Blejert&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blejert.html" property="og:url">
+	<meta content="Rank by game in top 20: 3204&#10;Rank by ilScore: 2798&#10;&#10;3 games&#10;&bull; Coin Jump | MJ 139: Fae | rank: 34 | ilscore: 22&#10;&bull; Laser hide | MJ 136: Cycles | rank: 14 | ilscore: 44&#10;&bull; Solar Panel Fixin&#39; | MJ 131: Solar | rank: 42 | ilscore: 33&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Blejert</h1>
+		<a href="https://blejert.itch.io">blejert.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3204</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2798</p>
+		<p>Total ilScore: 98</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blejert.itch.io/coin-jump">Coin Jump</a></td>
+				<td><span class="early">6h 21m early</span></td>
+				<td>
+					<a href="../jammer/frodotimbaku.html">frodoTimBaku</a>,
+					<a href="../jammer/theboredkid.html">TheBoredKid</a>,
+					<a href="../jammer/randomtrexx.html">Randomtrexx</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>34</td>
+				<td>3</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://blejert.itch.io/laser-hide">Laser hide</a></td>
+				<td><span class="early">8h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>14</td>
+				<td>16</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://blejert.itch.io/solar-panel-fixin">Solar Panel Fixin&#39;</a></td>
+				<td><span class="early">6h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>42</td>
+				<td>7</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2136, 2142, 2170, 2173, 2178, 2195, 2205, 2220, 2241, 2260, 2284, 2301, 2319, 2339, 2357, 2369, 2387, 2417, 2449, 2471, 2491, 2512, 2532, 2548, 2565, 2582, 2604, 2644, 2655, 2671, 2681, 2706, 2720, 2725, 2740, 2752, 2762, 2779, 2796, 2827,
+				2847, 2871, 2896, 2920, 2946, 2971, 3001, 3019, 3038, 3065, 3084, 3110, 3134, 3166, 3186, 3203,
+			]],
+			[ "ilscore", [
+				7712, 7737, 7839, 7923, 7959, 3445, 3446, 3510, 3514, 2034, 2041, 2044, 2048, 2057, 2067, 2074, 2084, 2090, 2101, 2116, 2139, 2157, 2166, 2237, 2263, 2283, 2296, 2305, 2314, 2330, 2350, 2357, 2378, 2382, 2398, 2400, 2446, 2452, 2460, 2467,
+				2470, 2478, 2484, 2493, 2511, 2543, 2557, 2569, 2585, 2600, 2611, 2617, 2628, 2654, 2680, 2703, 2726, 2739, 2760, 2779, 2797,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

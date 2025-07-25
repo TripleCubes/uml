@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kami&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kami&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kami14.html" property="og:url">
+	<meta content="Rank by game in top 20: 1979&#10;Rank by ilScore: 3628&#10;&#10;1 games&#10;&bull; Lithium + Ferrum | MJ+ 6: Life | rank: 12 | ilscore: 86&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kami</h1>
+		<a href="https://kami14.itch.io">kami14.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1979</p>
+		<div class="boxes">
+			<span class="box_majorjam">12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3628</p>
+		<p>Total ilScore: 86</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://kami14.itch.io/lithium-ferrum">Lithium + Ferrum</a></td>
+				<td><span class="early">5h 55m early</span></td>
+				<td>
+					<a href="../jammer/deinol.html">Deinol</a>,
+					<a href="../jammer/picodaddy.html">Picodaddy</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>12</td>
+				<td>9</td>
+				<td>86</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1415, 1417, 1419, 1424, 1426, 1436, 1446, 1451, 1459, 1463, 1472, 1478, 1497, 1508, 1518, 1530, 1558, 1565, 1572, 1577, 1591, 1598, 1618, 1630, 1638, 1674, 1674, 1681, 1691, 1716, 1722, 1726, 1728, 1733, 1737, 1748, 1755, 1770, 1787, 1793,
+				1803, 1820, 1827, 1845, 1856, 1863, 1877, 1897, 1914, 1933, 1938, 1950, 1965, 1978,
+			]],
+			[ "ilscore", [
+				2662, 2665, 2670, 2678, 2680, 2684, 2697, 2705, 2711, 2722, 2732, 2742, 2779, 2804, 2823, 2829, 2925, 2943, 2963, 2976, 2991, 3001, 3021, 3045, 3057, 3101, 3108, 3124, 3129, 3214, 3221, 3227, 3232, 3235, 3243, 3251, 3264, 3282, 3328, 3340,
+				3354, 3374, 3390, 3400, 3411, 3422, 3448, 3476, 3501, 3553, 3566, 3590, 3611, 3627,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

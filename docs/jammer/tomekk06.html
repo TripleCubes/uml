@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>tomekk06&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="tomekk06&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tomekk06.html" property="og:url">
+	<meta content="Rank by game in top 20: 3161&#10;Rank by ilScore: 629&#10;&#10;4 games&#10;&bull; The Alt | MJ 121: Reflection | rank: 86 | ilscore: 44&#10;&bull; Fox Ambush (Full Release) | MJ 75: Wisdom | rank: 33 | ilscore: 63&#10;&bull; Key Chaos | MJ 74: Chaos | rank: 31 | ilscore: 57&#10;&bull; Still with Wings | MJ 70: Heaven | rank: 18 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>tomekk06</h1>
+		<a href="https://tomekk06.itch.io">tomekk06.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3161</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 629</p>
+		<p>Total ilScore: 218</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tomekk06.itch.io/the-alt">The Alt</a></td>
+				<td><span class="early">4h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>86</td>
+				<td>9</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://tomekk06.itch.io/fox-ambush">Fox Ambush (Full Release)</a></td>
+				<td><span class="early">3h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>33</td>
+				<td>12</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://tomekk06.itch.io/key-chaos">Key Chaos</a></td>
+				<td><span class="early">4h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>31</td>
+				<td>18</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://tomekk06.itch.io/still-with-wings">Still with Wings</a></td>
+				<td><span class="early">1h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>18</td>
+				<td>12</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				842, 856, 875, 900, 920, 939, 956, 980, 1001, 1021, 1034, 1054, 1071, 1093, 1113, 1138, 1158, 1183, 1202, 1228, 1244, 1267, 1283, 1302, 1323, 1347, 1363, 1377, 1392, 1410, 1435, 1461, 1473, 1482, 1503, 1516, 1532, 1551, 1572, 1587,
+				1606, 1624, 1646, 1668, 1691, 1694, 1712, 1723, 1744, 1762, 1782, 1797, 1812, 1834, 1844, 1862, 1892, 1908, 1928, 1944, 1966, 1981, 2007, 2023, 2034, 2059, 2080, 2094, 2107, 2113, 2141, 2144, 2149, 2166, 2176, 2190, 2211, 2228, 2252, 2268,
+				2286, 2305, 2323, 2335, 2353, 2382, 2414, 2436, 2456, 2477, 2497, 2513, 2530, 2547, 2568, 2608, 2618, 2634, 2645, 2670, 2684, 2690, 2705, 2716, 2723, 2740, 2756, 2788, 2808, 2832, 2853, 2877, 2903, 2928, 2958, 2976, 2995, 3022, 3041, 3067,
+				3091, 3123, 3143, 3160,
+			]],
+			[ "ilscore", [
+				1131, 1192, 1217, 1369, 287, 108, 116, 119, 119, 136, 157, 159, 159, 169, 182, 191, 195, 199, 204, 213, 219, 223, 234, 240, 244, 249, 253, 257, 258, 263, 280, 312, 326, 327, 330, 333, 338, 361, 371, 395,
+				412, 428, 464, 473, 483, 483, 487, 492, 495, 512, 521, 529, 535, 313, 314, 321, 331, 336, 343, 350, 360, 367, 379, 380, 382, 391, 397, 402, 402, 403, 414, 414, 414, 414, 416, 416, 417, 419, 422, 428,
+				429, 430, 438, 444, 449, 454, 466, 467, 475, 479, 484, 488, 497, 508, 511, 523, 528, 532, 535, 546, 550, 553, 554, 554, 555, 557, 559, 562, 565, 571, 574, 574, 578, 581, 586, 589, 591, 596, 603, 608,
+				611, 616, 621, 628,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

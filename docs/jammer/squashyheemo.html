@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SquashyHeemo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SquashyHeemo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/squashyheemo.html" property="og:url">
+	<meta content="Rank by game in top 20: 2184&#10;Rank by ilScore: 658&#10;&#10;4 games&#10;&bull; Crops and Chaos | MJ 160: Light | rank: 56 | ilscore: 64&#10;&bull; For a few snowballs more | MJ 145: Frozen | rank: 13 | ilscore: 71&#10;&bull; Feed Angry Customers | MJ 94: Baking | rank: 65 | ilscore: 48&#10;&bull; Pumpkins Can&#39;t Fly | MJ 89: Pumpkin | rank: 75 | ilscore: 30&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SquashyHeemo</h1>
+		<a href="https://squashyheemo.itch.io">squashyheemo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2184</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 658</p>
+		<p>Total ilScore: 213</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://squashyheemo.itch.io/crops-and-chaos">Crops and Chaos</a></td>
+				<td><span class="early">1h 39m early</span></td>
+				<td>
+					<a href="../jammer/bizzybeecreator.html">Magus</a>,
+					<a href="../jammer/loveos.html">loveOS by @cookiielove_</a>,
+					<a href="../jammer/mesio-saki.html">Mesio Saki</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-160-light">MJ 160: Light</a></td>
+				<td>123</td>
+				<td>56</td>
+				<td>18</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://squashyheemo.itch.io/for-a-few-snowballs-more">For a few snowballs more</a></td>
+				<td><span class="early">20m 23s early</span></td>
+				<td>
+					<a href="../jammer/totolikid.html">totolikid</a>,
+					<a href="../jammer/funnr.html">FunnR</a>,
+					<a href="../jammer/zobzi.html">zobzi</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-145-frozen">MJ 145: Frozen</a></td>
+				<td>89</td>
+				<td>13</td>
+				<td>9</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://squashyheemo.itch.io/feed-angry-customers">Feed Angry Customers</a></td>
+				<td><span class="early">9h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>65</td>
+				<td>8</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://squashyheemo.itch.io/pumpkins-cant-fly">Pumpkins Can&#39;t Fly</a></td>
+				<td><span class="early">57m 57s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>75</td>
+				<td>3</td>
+				<td>30</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1589, 1595, 1607, 1617, 1636, 1648, 1661, 1682, 1715, 1723, 1730, 1737, 1751, 1758, 1778, 1789, 1797, 1837, 1839, 1850, 1859, 1884, 1890, 1894, 1897, 1902, 1906, 1916, 1923, 1941, 1961, 1971, 1987, 2008, 2022, 2039, 2050, 2057, 2072, 2091,
+				2113, 2139, 2144, 2155, 2170, 2183,
+			]],
+			[ "ilscore", [
+				3875, 3932, 4028, 4117, 4148, 1339, 1350, 1357, 1378, 1405, 1569, 1647, 1689, 1698, 1743, 1767, 1801, 1982, 1994, 2108, 2158, 2265, 2524, 2542, 2561, 2562, 2565, 2574, 2579, 2663, 2709, 2725, 2736, 2768, 2771, 2879, 2919, 2928, 2946, 2977,
+				3020, 3034, 3156, 3168, 3171, 3206, 3236, 3248, 3254, 3257, 3314, 3318, 3323, 3331, 3335, 3344, 3353, 3362, 994, 996, 998, 1000, 1009, 1023, 1031, 1034, 1063, 1075, 1082, 1085, 1095, 1099, 1120, 531, 535, 547, 554, 557, 559, 569,
+				574, 576, 577, 577, 579, 581, 583, 588, 591, 597, 601, 602, 605, 607, 614, 617, 619, 625, 633, 639, 640, 645, 650, 657,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

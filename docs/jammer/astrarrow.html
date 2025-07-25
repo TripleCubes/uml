@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>astrarrow&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="astrarrow&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/astrarrow.html" property="og:url">
+	<meta content="Rank by game in top 20: 3142&#10;Rank by ilScore: 8932&#10;&#10;1 games&#10;&bull; SoulFlame | MJ 120: Hell | rank: 15 | ilscore: 50&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>astrarrow</h1>
+		<a href="https://astrarrow.itch.io">astrarrow.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3142</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8932</p>
+		<p>Total ilScore: 50</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://astrarrow.itch.io/soulflame">SoulFlame</a></td>
+				<td><span class="early">9h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>15</td>
+				<td>8</td>
+				<td>50</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1797, 1819, 1829, 1847, 1877, 1893, 1913, 1929, 1951, 1966, 1992, 2007, 2018, 2043, 2064, 2078, 2088, 2094, 2122, 2125, 2130, 2146, 2156, 2170, 2191, 2207, 2231, 2247, 2265, 2285, 2303, 2315, 2333, 2361, 2393, 2415, 2436, 2457, 2477, 2493,
+				2510, 2527, 2548, 2588, 2598, 2614, 2625, 2650, 2665, 2671, 2686, 2697, 2704, 2721, 2737, 2769, 2789, 2813, 2833, 2857, 2884, 2909, 2939, 2957, 2976, 3003, 3022, 3048, 3072, 3104, 3124, 3141,
+			]],
+			[ "ilscore", [
+				5284, 5360, 5364, 5506, 5577, 5601, 5632, 5712, 5800, 5834, 5996, 6012, 6019, 6104, 6171, 6201, 6205, 6206, 6327, 6327, 6331, 6336, 6344, 6357, 6388, 6416, 6477, 6492, 6501, 6513, 6622, 6726, 6781, 6803, 6962, 6998, 7065, 7115, 7191, 7206,
+				7290, 7353, 7373, 7490, 7500, 7547, 7556, 7731, 7751, 7753, 7758, 7759, 7770, 7775, 7809, 7887, 7975, 8020, 8044, 8104, 8164, 8217, 8290, 8331, 8402, 8467, 8537, 8675, 8717, 8820, 8881, 8931,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

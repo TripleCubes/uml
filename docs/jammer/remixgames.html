@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Remix Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Remix Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/remixgames.html" property="og:url">
+	<meta content="Rank by ilScore: 11514&#10;&#10;1 games&#10;&bull; Flappy! | MJ 123: Web | rank: 191 | ilscore: 33&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Remix Games</h1>
+		<a href="https://remixgames.itch.io">remixgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11514</p>
+		<p>Total ilScore: 33</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://remixgames.itch.io/flappy">Flappy!</a></td>
+				<td><span class="early">2d 3h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>191</td>
+				<td>5</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				7079, 7162, 7213, 7256, 7342, 7442, 7485, 7672, 7689, 7714, 7816, 7900, 7936, 7959, 7965, 8112, 8113, 8129, 8163, 8189, 8212, 8255, 8302, 8372, 8399, 8416, 8443, 8570, 8693, 8770, 8809, 8979, 9031, 9119, 9184, 9280, 9303, 9392, 9471, 9494,
+				9627, 9657, 9709, 9723, 9912, 9949, 9959, 9983, 10007, 10039, 10062, 10116, 10204, 10311, 10367, 10412, 10481, 10551, 10613, 10694, 10755, 10838, 10915, 11000, 11166, 11229, 11349, 11429, 11513,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

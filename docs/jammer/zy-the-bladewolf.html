@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Zy the Bladewolf&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Zy the Bladewolf&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zy-the-bladewolf.html" property="og:url">
+	<meta content="Rank by ilScore: 12782&#10;&#10;2 games&#10;&bull; Game of Ninjas | MJ 29: Ninjas | rank: 30 | ilscore: 8&#10;&bull; I Dream of Adventure | MJ 28: Pirates | rank: 37 | ilscore: 10&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Zy the Bladewolf</h1>
+		<a href="https://zy-the-bladewolf.itch.io">zy-the-bladewolf.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12782</p>
+		<p>Total ilScore: 19</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://zy-the-bladewolf.itch.io/game-of-ninjas">Game of Ninjas</a></td>
+				<td><span class="early">8m 26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>30</td>
+				<td>3</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td><a href="https://zy-the-bladewolf.itch.io/i-dream-of-adventure">I Dream of Adventure</a></td>
+				<td><span class="early">34m 49s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-28-pirates">MJ 28: Pirates</a></td>
+				<td>38</td>
+				<td>37</td>
+				<td>1</td>
+				<td>10</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				467, 421, 445, 458, 478, 518, 533, 536, 563, 563, 577, 593, 618, 636, 654, 663, 683, 727, 759, 798, 819, 827, 943, 1045, 1068, 1134, 1175, 1257, 1316, 1435, 1475, 1523, 1532, 1544, 1614, 1662, 1820, 1936, 1941, 1985,
+				2092, 2139, 2188, 2244, 2328, 2376, 2454, 2508, 2682, 2742, 2832, 2924, 3043, 3093, 3247, 3357, 3415, 3464, 3552, 3685, 3836, 3924, 4063, 4147, 4244, 4311, 4372, 4479, 4573, 4607, 4678, 4718, 4769, 4854, 4943, 5161, 5281, 5393, 5423, 5545,
+				5628, 5731, 5985, 6049, 6239, 6334, 6514, 6885, 6966, 7066, 7072, 7123, 7147, 7178, 7328, 7456, 7552, 7588, 7691, 7722, 7894, 7980, 8033, 8082, 8168, 8279, 8329, 8516, 8540, 8568, 8674, 8762, 8805, 8833, 8849, 8997, 9004, 9031, 9070, 9100,
+				9129, 9175, 9234, 9314, 9348, 9377, 9415, 9557, 9680, 9756, 9799, 9979, 10038, 10136, 10204, 10301, 10333, 10435, 10523, 10551, 10687, 10724, 10778, 10800, 10994, 11040, 11057, 11096, 11128, 11177, 11206, 11262, 11359, 11478, 11548, 11598, 11668, 11739, 11811, 11897,
+				11969, 12053, 12133, 12223, 12405, 12480, 12607, 12689, 12781,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

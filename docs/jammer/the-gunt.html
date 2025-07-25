@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>The Gunt&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="The Gunt&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/the-gunt.html" property="og:url">
+	<meta content="Rank by ilScore: 7318&#10;&#10;2 games&#10;&bull; Farm fury | MJ+ 6: Life | rank: 129 | ilscore: 32&#10;&bull; Fish invaders | MJ 91: UFO | rank: 114 | ilscore: 28&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>The Gunt</h1>
+		<a href="https://the-gunt.itch.io">the-gunt.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7318</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://the-gunt.itch.io/farm-fury">Farm fury</a></td>
+				<td><span class="late">7h 53m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>129</td>
+				<td>2</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td><a href="https://the-gunt.itch.io/fish-invaders">Fish invaders</a></td>
+				<td><span class="early">13h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>114</td>
+				<td>3</td>
+				<td>28</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4127, 4219, 4250, 4321, 4360, 4409, 4490, 4578, 4795, 4914, 5022, 5045, 5163, 5240, 5343, 5595, 5658, 5848, 5937, 6108, 6476, 6556, 6655, 6658, 6703, 6724, 6753, 6899, 7022, 7116, 7150, 7244, 7263, 7434, 7519, 7571, 7614, 7702, 7806, 7853,
+				8037, 8058, 8088, 8191, 8277, 8317, 8342, 8351, 5278, 5278, 5281, 5287, 5292, 5301, 5321, 5333, 5372, 5378, 5387, 5392, 5483, 5567, 5600, 5611, 5762, 5789, 5838, 5866, 5925, 5929, 6001, 6055, 6065, 6159, 6170, 6189, 6194, 6347, 6356, 6360,
+				6363, 6367, 6373, 6382, 6401, 6462, 6551, 6584, 6601, 6647, 6687, 6721, 6782, 6813, 6879, 6936, 6993, 7111, 7136, 7227, 7273, 7317,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

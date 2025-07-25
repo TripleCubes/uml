@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CursedPopcorn&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CursedPopcorn&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cursedpopcorn.html" property="og:url">
+	<meta content="Rank by game in top 20: 1357&#10;Rank by ilScore: 4647&#10;&#10;1 games&#10;&bull; Age Muddle | MJ 112: Chrono | rank: 11 | ilscore: 77&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CursedPopcorn</h1>
+		<a href="https://cursedpopcorn.itch.io">cursedpopcorn.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1357</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4647</p>
+		<p>Total ilScore: 77</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cursedpopcorn.itch.io/age-muddle">Age Muddle</a></td>
+				<td><span class="early">26m 17s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>11</td>
+				<td>18</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				740, 754, 755, 756, 764, 774, 780, 799, 801, 810, 825, 829, 837, 858, 869, 881, 896, 904, 913, 916, 919, 920, 934, 943, 946, 948, 952, 960, 962, 967, 976, 979, 989, 999, 1002, 1009, 1014, 1021, 1026, 1035,
+				1042, 1049, 1061, 1076, 1080, 1091, 1094, 1103, 1109, 1124, 1134, 1138, 1159, 1162, 1169, 1179, 1192, 1197, 1207, 1208, 1211, 1216, 1221, 1225, 1238, 1247, 1251, 1256, 1263, 1270, 1279, 1284, 1290, 1295, 1308, 1316, 1332, 1334, 1336, 1348,
+				1356,
+			]],
+			[ "ilscore", [
+				2628, 2648, 2649, 2653, 2661, 2666, 2750, 2802, 2822, 2833, 2865, 2868, 2979, 3020, 3029, 3049, 3079, 3123, 3137, 3260, 3272, 3275, 3312, 3342, 3354, 3360, 3363, 3424, 3428, 3433, 3440, 3445, 3454, 3462, 3471, 3476, 3487, 3499, 3506, 3563,
+				3598, 3622, 3628, 3754, 3767, 3786, 3801, 3830, 3839, 3875, 3909, 3921, 3979, 3990, 4004, 4010, 4123, 4130, 4134, 4138, 4142, 4147, 4157, 4171, 4198, 4260, 4271, 4285, 4301, 4318, 4329, 4353, 4365, 4407, 4443, 4472, 4552, 4565, 4607, 4629,
+				4646,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Lcoh&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Lcoh&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lcoh-thenerd.html" property="og:url">
+	<meta content="Rank by game in top 20: 3592&#10;Rank by ilScore: 12849&#10;&#10;1 games&#10;&bull; Sofaboy, and the search for superglue | MJ 64: Nintendo 64 | rank: 13 | ilscore: 17&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Lcoh</h1>
+		<a href="https://lcoh-thenerd.itch.io">lcoh-thenerd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3592</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12849</p>
+		<p>Total ilScore: 17</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lcoh-thenerd.itch.io/sofaboy">Sofaboy, and the search for superglue</a></td>
+				<td><span class="early">5h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-64">MJ 64: Nintendo 64</a></td>
+				<td>13</td>
+				<td>13</td>
+				<td>4</td>
+				<td>17</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				923, 938, 961, 976, 993, 1019, 1042, 1061, 1075, 1094, 1119, 1139, 1157, 1174, 1198, 1219, 1237, 1250, 1272, 1289, 1311, 1330, 1354, 1374, 1399, 1418, 1444, 1460, 1483, 1499, 1518, 1540, 1564, 1579, 1603, 1618, 1636, 1661, 1687, 1699,
+				1719, 1740, 1752, 1768, 1787, 1807, 1822, 1841, 1859, 1881, 1903, 1926, 1931, 1955, 1972, 1993, 2011, 2031, 2060, 2083, 2105, 2121, 2139, 2166, 2182, 2202, 2217, 2239, 2253, 2279, 2299, 2318, 2343, 2364, 2383, 2406, 2419, 2447, 2455, 2475,
+				2500, 2518, 2540, 2561, 2585, 2608, 2628, 2644, 2666, 2684, 2696, 2714, 2743, 2775, 2797, 2817, 2838, 2858, 2879, 2894, 2911, 2934, 2974, 2988, 3003, 3016, 3041, 3055, 3070, 3095, 3119, 3141, 3164, 3181, 3212, 3232, 3256, 3285, 3309, 3335,
+				3359, 3389, 3407, 3426, 3453, 3472, 3498, 3523, 3555, 3574, 3591,
+			]],
+			[ "ilscore", [
+				1968, 2012, 2119, 2167, 2216, 2272, 2359, 2408, 2486, 2540, 2714, 2776, 2866, 2958, 3078, 3128, 3282, 3392, 3450, 3498, 3586, 3719, 3870, 3957, 4096, 4180, 4277, 4344, 4405, 4513, 4607, 4641, 4712, 4752, 4803, 4888, 4977, 5195, 5315, 5427,
+				5458, 5580, 5663, 5766, 6020, 6084, 6274, 6369, 6550, 6922, 7003, 7103, 7111, 7162, 7186, 7217, 7367, 7500, 7596, 7632, 7735, 7766, 7938, 8024, 8077, 8126, 8212, 8323, 8373, 8559, 8585, 8613, 8721, 8809, 8852, 8881, 8897, 9045, 9053, 9080,
+				9120, 9149, 9178, 9223, 9282, 9362, 9396, 9425, 9464, 9608, 9730, 9808, 9852, 10033, 10093, 10191, 10258, 10355, 10387, 10490, 10579, 10607, 10744, 10781, 10835, 10857, 11052, 11100, 11117, 11157, 11189, 11238, 11267, 11323, 11420, 11539, 11609, 11659, 11730, 11800,
+				11873, 11961, 12033, 12117, 12197, 12288, 12470, 12546, 12673, 12756, 12848,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

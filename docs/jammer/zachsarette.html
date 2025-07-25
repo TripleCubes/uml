@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Zach&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Zach&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zachsarette.html" property="og:url">
+	<meta content="Rank by game in top 10: 2044&#10;Rank by game in top 20: 768&#10;Rank by ilScore: 1350&#10;&#10;4 games&#10;&bull; Fate Of The Tree Folk | MJ 96: Fate | rank: 31 | ilscore: 42&#10;&bull; Cat Box | MJ 80: Cats | rank: 81 | ilscore: 70&#10;&bull; Crab Attack Korean Extreme | MJ 9: Back To School | rank: 12 | ilscore: 26&#10;&bull; Rage Against The Chimera | MJ 7: Greek Mythology | rank: 8 | ilscore: 13&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Zach</h1>
+		<a href="https://zachsarette.itch.io">zachsarette.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2044</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 768</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>12</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1350</p>
+		<p>Total ilScore: 151</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://zachsarette.itch.io/fate-of-the-treefolk">Fate Of The Tree Folk</a></td>
+				<td><span class="early">2h 6m early</span></td>
+				<td>
+					<a href="../jammer/dbgamerstarz.html">Dbgamerstarz</a>,
+					<a href="../jammer/themooseman.html">TheMooseman</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>31</td>
+				<td>13</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://zachsarette.itch.io/cat-box">Cat Box</a></td>
+				<td><span class="early">11h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>81</td>
+				<td>16</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://zachsarette.itch.io/crab-attack-korean-extreme">Crab Attack Korean Extreme</a></td>
+				<td><span class="early">2h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-9-back-to-school-">MJ 9: Back To School</a></td>
+				<td>25</td>
+				<td>12</td>
+				<td>7</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://zachsarette.itch.io/rage-against-the-chimera">Rage Against The Chimera</a></td>
+				<td><span class="early">2h 28m early</span></td>
+				<td>
+					<a href="../jammer/raulritagoneindie.html">raul.rita.gone.indie</a>,
+					<a href="../jammer/yagich.html">Yagich</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-7-greek-mythology-">MJ 7: Greek Mythology</a></td>
+				<td>10</td>
+				<td>8</td>
+				<td>5</td>
+				<td>13</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				34, 46, 58, 69, 76, 83, 83, 95, 104, 108, 112, 121, 129, 140, 146, 152, 169, 178, 190, 199, 206, 214, 221, 230, 240, 247, 260, 266, 275, 284, 290, 301, 309, 320, 330, 337, 347, 355, 365, 371,
+				380, 387, 394, 405, 424, 438, 447, 455, 466, 476, 487, 497, 508, 519, 524, 537, 555, 568, 584, 596, 603, 615, 623, 631, 644, 657, 667, 675, 684, 697, 706, 716, 725, 734, 743, 755, 762, 779, 789, 800,
+				810, 822, 834, 846, 854, 865, 875, 892, 900, 909, 926, 939, 949, 963, 971, 977, 988, 1000, 1007, 1017, 1024, 1033, 1040, 1049, 1066, 1073, 1082, 1092, 1103, 1117, 1130, 1137, 1152, 1161, 1169, 1178, 1195, 1210, 1222, 1235,
+				1243, 1252, 1270, 1279, 1290, 1303, 1316, 1326, 1336, 1344, 1354, 1369, 1379, 1387, 1395, 1405, 1419, 1425, 1436, 1452, 1460, 1472, 1488, 1501, 1511, 1525, 1537, 1552, 1560, 1564, 1572, 1593, 1610, 1624, 1632, 1641, 1652, 1667, 1677, 1689,
+				1705, 1718, 1725, 1731, 1739, 1751, 1756, 1765, 1779, 1790, 1798, 1816, 1827, 1845, 1853, 1862, 1878, 1889, 1901, 1916, 1934, 1943, 1951, 1966, 1977, 1990, 2001, 2018, 2031, 2043,
+			]],
+			[ "20", [
+				39, 58, 6, 6, 10, 15, 15, 15, 20, 24, 24, 26, 30, 36, 37, 38, 41, 45, 46, 51, 53, 55, 57, 62, 63, 69, 72, 75, 76, 81, 84, 84, 89, 93, 94, 97, 100, 100, 104, 116,
+				120, 123, 126, 129, 130, 130, 131, 138, 140, 144, 146, 151, 152, 158, 165, 167, 169, 173, 175, 183, 187, 191, 197, 200, 203, 205, 206, 212, 216, 220, 220, 224, 227, 227, 232, 237, 243, 253, 257, 260,
+				264, 268, 273, 277, 281, 282, 288, 293, 299, 301, 305, 308, 312, 318, 319, 320, 321, 324, 330, 334, 337, 341, 347, 349, 353, 359, 365, 366, 368, 372, 379, 379, 380, 387, 396, 397, 405, 407, 415, 419,
+				424, 428, 434, 444, 454, 459, 461, 467, 469, 471, 474, 480, 484, 490, 494, 499, 501, 503, 507, 516, 519, 526, 532, 535, 540, 545, 555, 558, 559, 562, 564, 570, 573, 580, 590, 590, 593, 599, 609, 616,
+				623, 625, 634, 642, 650, 653, 655, 668, 671, 673, 677, 682, 684, 687, 691, 694, 698, 704, 709, 718, 721, 726, 727, 731, 740, 746, 747, 751, 759, 767,
+			]],
+			[ "ilscore", [
+				45, 67, 11, 11, 14, 19, 19, 23, 27, 31, 31, 42, 48, 52, 54, 55, 94, 130, 156, 158, 160, 168, 179, 194, 194, 210, 234, 236, 237, 254, 256, 257, 262, 277, 281, 285, 287, 290, 314, 334,
+				368, 374, 374, 473, 559, 566, 626, 659, 725, 776, 884, 917, 952, 953, 957, 1016, 1054, 1204, 1314, 1316, 1348, 1446, 1483, 1526, 1571, 1640, 1676, 1747, 1786, 1959, 2006, 2080, 2163, 2272, 2313, 2472, 416, 434, 443, 461,
+				479, 512, 528, 548, 563, 573, 584, 591, 616, 633, 640, 652, 662, 364, 367, 374, 400, 434, 455, 455, 467, 474, 482, 513, 524, 554, 574, 598, 640, 656, 671, 671, 674, 678, 683, 699, 717, 719, 726, 731,
+				734, 753, 772, 786, 795, 814, 830, 839, 864, 873, 881, 899, 913, 924, 929, 930, 945, 945, 945, 948, 948, 953, 956, 963, 969, 971, 973, 975, 984, 998, 1006, 1009, 1037, 1049, 1055, 1058, 1068, 1073, 1092, 1107,
+				1113, 1131, 1134, 1142, 1147, 1167, 1169, 1173, 1175, 1176, 1181, 1181, 1184, 1193, 1204, 1213, 1219, 1225, 1230, 1243, 1253, 1261, 1274, 1281, 1297, 1314, 1319, 1331, 1341, 1349,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

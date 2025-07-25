@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NEMblCH&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NEMblCH&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nemblch.html" property="og:url">
+	<meta content="Rank by ilScore: 601&#10;&#10;3 games&#10;&bull; Electrified | MJ 100: Overload | rank: 65 | ilscore: 83&#10;&bull; BubbleGum | MJ 84: Bubbles | rank: 74 | ilscore: 71&#10;&bull; Unlucky Seven | MJ 83: Dread | rank: 36 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NEMblCH</h1>
+		<a href="https://nemblch.itch.io">nemblch.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 601</p>
+		<p>Total ilScore: 223</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nemblch.itch.io/electrified">Electrified</a></td>
+				<td><span class="early">3h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>65</td>
+				<td>7</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://nemblch.itch.io/bubblegum">BubbleGum</a></td>
+				<td><span class="early">5h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>74</td>
+				<td>11</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://nemblch.itch.io/unlucky-seven">Unlucky Seven</a></td>
+				<td><span class="early">3h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>36</td>
+				<td>11</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1295, 312, 333, 344, 358, 369, 370, 373, 379, 399, 409, 412, 421, 428, 436, 440, 450, 482, 173, 180, 182, 186, 189, 193, 203, 210, 226, 232, 238, 258, 264, 269, 269, 269, 270, 273, 283, 288, 292, 293,
+				296, 298, 305, 315, 320, 328, 335, 344, 352, 364, 365, 368, 377, 383, 390, 390, 391, 402, 402, 402, 402, 403, 403, 404, 406, 408, 413, 414, 415, 423, 429, 434, 437, 447, 449, 457, 459, 464, 467, 474,
+				486, 489, 500, 505, 509, 512, 524, 527, 530, 531, 531, 531, 532, 535, 537, 538, 543, 546, 546, 549, 555, 560, 562, 564, 569, 576, 581, 584, 590, 593, 600,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

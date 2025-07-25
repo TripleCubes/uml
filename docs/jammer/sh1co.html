@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Sh1co&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Sh1co&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sh1co.html" property="og:url">
+	<meta content="Rank by game in top 20: 2145&#10;Rank by ilScore: 4324&#10;&#10;1 games&#10;&bull; Escape the Mirror | MJ 121: Reflection | rank: 15 | ilscore: 80&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Sh1co</h1>
+		<a href="https://sh1co.itch.io">sh1co.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2145</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4324</p>
+		<p>Total ilScore: 80</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sh1co.itch.io/escape-the-mirror">Escape the Mirror</a></td>
+				<td><span class="early">6h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>15</td>
+				<td>12</td>
+				<td>80</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1286, 1291, 1307, 1336, 1347, 1359, 1376, 1390, 1402, 1428, 1431, 1434, 1458, 1480, 1484, 1487, 1492, 1514, 1516, 1518, 1523, 1525, 1535, 1551, 1557, 1567, 1572, 1584, 1594, 1613, 1624, 1636, 1657, 1690, 1698, 1705, 1712, 1726, 1733, 1753,
+				1764, 1772, 1812, 1814, 1824, 1833, 1858, 1864, 1868, 1871, 1876, 1880, 1890, 1897, 1915, 1935, 1945, 1955, 1972, 1986, 2002, 2013, 2020, 2034, 2053, 2075, 2100, 2105, 2117, 2132, 2144,
+			]],
+			[ "ilscore", [
+				2659, 2663, 2769, 2807, 2818, 2837, 2867, 2905, 2919, 3036, 3048, 3051, 3081, 3110, 3124, 3130, 3132, 3182, 3186, 3191, 3199, 3203, 3212, 3221, 3230, 3238, 3249, 3260, 3269, 3316, 3351, 3370, 3376, 3497, 3513, 3531, 3545, 3573, 3583, 3616,
+				3643, 3654, 3711, 3721, 3736, 3742, 3849, 3856, 3860, 3864, 3868, 3876, 3885, 3898, 3923, 3980, 3990, 4004, 4020, 4035, 4047, 4065, 4078, 4108, 4144, 4164, 4242, 4256, 4288, 4310, 4323,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

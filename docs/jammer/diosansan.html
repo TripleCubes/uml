@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DioSanSan&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DioSanSan&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/diosansan.html" property="og:url">
+	<meta content="Rank by game in top 20: 1328&#10;Rank by ilScore: 2641&#10;&#10;1 games&#10;&bull; Ultimate Ninja Dad | MJ 79: Frogs | rank: 15 | ilscore: 102&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DioSanSan</h1>
+		<a href="https://diosansan.itch.io">diosansan.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1328</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2641</p>
+		<p>Total ilScore: 102</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://diosansan.itch.io/ultimate-ninja-dad">Ultimate Ninja Dad</a></td>
+				<td><span class="early">2h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>15</td>
+				<td>10</td>
+				<td>102</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				437, 445, 452, 455, 466, 473, 478, 484, 497, 503, 510, 519, 524, 532, 539, 546, 549, 556, 562, 569, 572, 578, 606, 613, 617, 625, 630, 636, 650, 658, 667, 677, 687, 710, 722, 735, 736, 737, 745, 755,
+				761, 780, 782, 791, 804, 808, 815, 836, 844, 856, 871, 876, 885, 887, 890, 891, 906, 915, 918, 920, 924, 932, 934, 939, 948, 951, 961, 971, 974, 981, 986, 993, 998, 1006, 1013, 1021, 1034, 1049, 1053, 1064,
+				1067, 1076, 1082, 1095, 1105, 1110, 1131, 1134, 1141, 1151, 1164, 1169, 1179, 1180, 1183, 1187, 1192, 1196, 1208, 1216, 1220, 1225, 1232, 1239, 1248, 1254, 1260, 1265, 1278, 1286, 1302, 1304, 1306, 1318, 1327,
+			]],
+			[ "ilscore", [
+				445, 475, 493, 502, 521, 541, 576, 592, 616, 629, 642, 654, 658, 681, 698, 708, 719, 730, 734, 749, 769, 850, 887, 902, 908, 933, 956, 978, 1100, 1116, 1161, 1189, 1243, 1441, 1459, 1474, 1474, 1478, 1485, 1494,
+				1526, 1544, 1557, 1571, 1588, 1595, 1642, 1666, 1683, 1700, 1719, 1741, 1750, 1808, 1821, 1828, 1845, 1869, 1883, 1883, 1888, 1907, 1908, 1912, 1920, 1923, 1927, 1936, 1944, 1950, 1958, 1963, 1975, 1987, 2008, 2029, 2038, 2095, 2121, 2140,
+				2152, 2162, 2171, 2185, 2206, 2213, 2230, 2232, 2249, 2251, 2294, 2299, 2307, 2314, 2317, 2324, 2330, 2337, 2355, 2385, 2400, 2412, 2428, 2442, 2453, 2460, 2473, 2499, 2523, 2545, 2568, 2581, 2603, 2623, 2640,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

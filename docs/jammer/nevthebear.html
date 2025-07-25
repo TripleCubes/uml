@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Nev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nevthebear.html" property="og:url">
+	<meta content="Rank by game in top 20: 2887&#10;Rank by ilScore: 859&#10;&#10;4 games&#10;&bull; Light Block | MJ 135: Deception | rank: 14 | ilscore: 60&#10;&bull; Block Slide | MJ 97: Simulation | rank: 26 | ilscore: 68&#10;&bull; Fate | MJ 96: Fate | rank: 53 | ilscore: 30&#10;&bull; UFO:Mini Jam | MJ 91: UFO | rank: 113 | ilscore: 30&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nev</h1>
+		<a href="https://nevthebear.itch.io">nevthebear.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2887</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 859</p>
+		<p>Total ilScore: 189</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nevthebear.itch.io/light-block">Light Block</a></td>
+				<td><span class="early">7h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>14</td>
+				<td>20</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://nevthebear.itch.io/block-slide">Block Slide</a></td>
+				<td><span class="early">7h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>26</td>
+				<td>21</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://nevthebear.itch.io/fate">Fate</a></td>
+				<td><span class="early">5h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>53</td>
+				<td>17</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td><a href="https://nevthebear.itch.io/ufomini-jam">UFO:Mini Jam</a></td>
+				<td><span class="early">11h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>113</td>
+				<td>3</td>
+				<td>30</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1916, 1924, 1931, 1959, 1962, 1965, 1977, 1981, 1993, 2015, 2030, 2054, 2068, 2082, 2099, 2117, 2130, 2148, 2173, 2205, 2228, 2249, 2261, 2281, 2292, 2311, 2328, 2346, 2386, 2391, 2407, 2418, 2443, 2454, 2458, 2464, 2473, 2479, 2488, 2499,
+				2531, 2551, 2576, 2591, 2615, 2636, 2660, 2689, 2708, 2727, 2754, 2775, 2801, 2821, 2853, 2869, 2886,
+			]],
+			[ "ilscore", [
+				4022, 4111, 4142, 4216, 4251, 2346, 533, 546, 579, 611, 629, 629, 647, 660, 678, 723, 739, 776, 803, 835, 912, 932, 950, 950, 956, 961, 969, 993, 1011, 1018, 1025, 1038, 1047, 1078, 1101, 1114, 1127, 1141, 1163, 1172,
+				1203, 1214, 1226, 1245, 1263, 560, 561, 564, 573, 574, 580, 581, 584, 586, 590, 593, 597, 601, 602, 602, 611, 622, 626, 628, 646, 647, 653, 657, 664, 670, 684, 697, 701, 712, 718, 723, 724, 737, 742, 744,
+				746, 747, 751, 752, 754, 759, 762, 770, 777, 780, 782, 786, 797, 803, 811, 818, 825, 833, 835, 846, 851, 858,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

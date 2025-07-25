@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>EDRO&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="EDRO&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/edroz.html" property="og:url">
+	<meta content="Rank by game in top 10: 1498&#10;Rank by game in top 20: 503&#10;Rank by ilScore: 60&#10;&#10;10 games&#10;&bull; Fungal Quest | MJ 156: Mushroom | rank: 37 | ilscore: 54&#10;&bull; Autumn Clean | MJ 155: Wind | rank: 7 | ilscore: 78&#10;&bull; Digital Diffusal | MJ+ 6: Life | rank: 12 | ilscore: 86&#10;&bull; Kings and Dungeons | MJ 114: Anime | rank: 21 | ilscore: 48&#10;&bull; ChronoDeath | MJ 112: Chrono | rank: 44 | ilscore: 65&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>EDRO</h1>
+		<a href="https://edroz.itch.io">edroz.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1498</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 503</p>
+		<div class="boxes">
+			<span>7</span>
+			<span class="box_majorjam">12</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 60</p>
+		<p>Total ilScore: 631</p>
+
+		<h3 id="games_header">10 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://edroz.itch.io/fungal-quest">Fungal Quest</a></td>
+				<td><span class="late">19m 58s late</span></td>
+				<td>
+					<a href="../jammer/maldron0309.html">Maldron</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-156-mushroom">MJ 156: Mushroom</a></td>
+				<td>88</td>
+				<td>37</td>
+				<td>12</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/autumn-clean">Autumn Clean</a></td>
+				<td><span class="early">4h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>7</td>
+				<td>18</td>
+				<td>78</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://edroz.itch.io/digital-diffusal">Digital Diffusal</a></td>
+				<td><span class="early">3h 13m early</span></td>
+				<td>
+					<a href="../jammer/phoenix99125.html">Nix99125</a>,
+					<a href="../jammer/social-illusion.html">Social Illusion</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>12</td>
+				<td>13</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/dungeons-and-kings">Kings and Dungeons</a></td>
+				<td><span class="early">4h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>21</td>
+				<td>13</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/chronodeath">ChronoDeath</a></td>
+				<td><span class="early">1h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>44</td>
+				<td>16</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/line-withouth-a-hook-1-day">Line WIthouth a HOOK [1 Day]</a></td>
+				<td><span class="early">2d 4h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>64</td>
+				<td>18</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/pirate-battle">Pirate Battle</a></td>
+				<td><span class="early">2h 19m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>75</td>
+				<td>30</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/hide">HIDE</a></td>
+				<td><span class="early">3h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>120</td>
+				<td>6</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/haunted-mansion">Haunted Mansion</a></td>
+				<td><span class="early">4h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>134</td>
+				<td>2</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://edroz.itch.io/mail-run">Mail Run</a></td>
+				<td><span class="early">3h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>169</td>
+				<td>5</td>
+				<td>72</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1201, 1208, 1219, 1221, 1231, 1243, 1248, 1261, 1265, 1271, 1279, 1291, 1296, 1296, 1298, 1302, 1305, 1313, 1319, 1337, 1346, 1356, 1365, 1376, 1386, 1395, 1406, 1412, 1421, 1436, 1447, 1460, 1465, 1476, 1486, 1497,
+			]],
+			[ "20", [
+				1393, 1395, 1397, 1402, 1404, 1414, 1424, 1429, 1439, 1443, 1452, 1458, 1477, 1488, 1498, 1510, 1538, 1545, 380, 381, 385, 386, 392, 401, 405, 406, 413, 418, 422, 426, 426, 430, 433, 433, 436, 440, 441, 444, 448, 451,
+				455, 461, 461, 461, 464, 466, 469, 475, 486, 489, 489, 492, 496, 502,
+			]],
+			[ "ilscore", [
+				1910, 1998, 966, 975, 486, 495, 506, 538, 550, 211, 135, 138, 149, 102, 103, 103, 85, 88, 88, 90, 92, 93, 94, 96, 97, 100, 101, 101, 102, 105, 107, 107, 111, 112, 113, 115, 118, 119, 120, 120,
+				77, 77, 77, 79, 79, 80, 80, 80, 82, 83, 83, 83, 83, 84, 84, 84, 84, 85, 55, 48, 48, 48, 48, 48, 48, 48, 49, 49, 49, 51, 52, 52, 53, 53, 53, 53, 54, 54, 54, 56,
+				56, 56, 56, 57, 57, 57, 57, 59, 59, 59, 59, 59, 59, 59,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

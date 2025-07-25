@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Gogibahp&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Gogibahp&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gogibahp.html" property="og:url">
+	<meta content="Rank by game in top 20: 2972&#10;Rank by ilScore: 9763&#10;&#10;1 games&#10;&bull; Carrot Catcher | MJ 116: Pocket Sized | rank: 20 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Gogibahp</h1>
+		<a href="https://gogibahp.itch.io">gogibahp.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2972</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9763</p>
+		<p>Total ilScore: 45</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ohhnate.itch.io/carrot-catcher">Carrot Catcher</a></td>
+				<td><span class="early">6m 38s early</span></td>
+				<td>
+					<a href="../jammer/ohhnate.html">Nate</a>,
+					<a href="../jammer/poppysicle.html">Poppysicle</a>,
+					<a href="../jammer/saitooo.html">Saitooo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>20</td>
+				<td>5</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1639, 1657, 1677, 1691, 1704, 1726, 1733, 1751, 1781, 1798, 1814, 1830, 1852, 1867, 1893, 1905, 1911, 1938, 1959, 1972, 1982, 1989, 2017, 2018, 2022, 2034, 2039, 2051, 2072, 2087, 2111, 2125, 2140, 2157, 2175, 2188, 2206, 2231, 2263, 2286,
+				2307, 2321, 2341, 2355, 2374, 2391, 2408, 2448, 2454, 2472, 2483, 2508, 2519, 2523, 2538, 2548, 2554, 2564, 2575, 2607, 2627, 2652, 2673, 2697, 2715, 2741, 2771, 2789, 2808, 2835, 2856, 2882, 2902, 2934, 2954, 2971,
+			]],
+			[ "ilscore", [
+				5466, 5582, 5690, 5753, 5772, 5861, 5870, 6022, 6095, 6132, 6166, 6244, 6332, 6369, 6539, 6557, 6568, 6656, 6728, 6760, 6767, 6768, 6898, 6899, 6904, 6918, 6927, 6942, 6986, 7021, 7084, 7103, 7116, 7135, 7246, 7366, 7431, 7465, 7629, 7667,
+				7741, 7795, 7881, 7897, 7980, 8048, 8065, 8190, 8208, 8254, 8264, 8444, 8467, 8467, 8481, 8483, 8506, 8513, 8554, 8637, 8731, 8776, 8811, 8874, 8937, 8994, 9072, 9117, 9191, 9258, 9332, 9475, 9524, 9632, 9703, 9762,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

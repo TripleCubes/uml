@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>BlueEagle421&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="BlueEagle421&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blueeagle421.html" property="og:url">
+	<meta content="Rank by game in top 10: 1947&#10;Rank by game in top 20: 3242&#10;Rank by ilScore: 10532&#10;&#10;1 games&#10;&bull; Tooth Fairy | MJ 139: Fae | rank: 9 | ilscore: 40&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>BlueEagle421</h1>
+		<a href="https://blueeagle421.itch.io">blueeagle421.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1947</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3242</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10532</p>
+		<p>Total ilScore: 40</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blueeagle421.itch.io/tooth-fairy">Tooth Fairy</a></td>
+				<td><span class="early">10h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>9</td>
+				<td>17</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1338, 1354, 1362, 1374, 1390, 1403, 1414, 1428, 1440, 1455, 1463, 1467, 1475, 1496, 1513, 1527, 1535, 1544, 1555, 1570, 1580, 1592, 1608, 1621, 1628, 1634, 1643, 1655, 1660, 1668, 1682, 1693, 1701, 1719, 1730, 1748, 1756, 1765, 1781, 1792,
+				1804, 1819, 1837, 1846, 1854, 1869, 1880, 1893, 1904, 1921, 1934, 1946,
+			]],
+			[ "20", [
+				2204, 2223, 2236, 2251, 2272, 2291, 2315, 2331, 2349, 2369, 2387, 2399, 2417, 2447, 2479, 2501, 2521, 2542, 2562, 2578, 2595, 2612, 2634, 2674, 2685, 2701, 2712, 2737, 2751, 2757, 2772, 2788, 2799, 2817, 2834, 2865, 2885, 2909, 2934, 2958,
+				2984, 3009, 3039, 3057, 3076, 3103, 3122, 3148, 3172, 3204, 3224, 3241,
+			]],
+			[ "ilscore", [
+				7438, 7456, 7474, 7489, 7532, 7568, 7632, 7657, 7672, 7695, 7813, 7938, 8007, 8045, 8211, 8254, 8337, 8396, 8489, 8509, 8593, 8665, 8686, 8815, 8837, 8888, 8901, 9085, 9118, 9120, 9142, 9151, 9180, 9199, 9240, 9326, 9426, 9479, 9519, 9587,
+				9653, 9714, 9795, 9849, 9930, 10001, 10079, 10228, 10281, 10393, 10463, 10531,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Tiny Face Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Tiny Face Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tinyfacegames.html" property="og:url">
+	<meta content="Rank by game in top 10: 583&#10;Rank by game in top 20: 959&#10;Rank by ilScore: 1889&#10;&#10;1 games&#10;&bull; Chrono Froggo | MJ 106: Frogs | rank: 6 | ilscore: 126&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Tiny Face Games</h1>
+		<a href="https://tinyfacegames.itch.io">tinyfacegames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 583</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 959</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1889</p>
+		<p>Total ilScore: 126</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tinyfacegames.itch.io/chrono-froggo">Chrono Froggo</a></td>
+				<td><span class="early">40s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>6</td>
+				<td>50</td>
+				<td>126</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				297, 297, 300, 303, 306, 312, 318, 324, 324, 324, 328, 338, 339, 340, 340, 343, 344, 347, 350, 357, 364, 372, 374, 375, 382, 383, 385, 389, 393, 396, 399, 400, 402, 406, 411, 415, 419, 420, 427, 428,
+				429, 432, 432, 433, 434, 437, 442, 445, 449, 452, 456, 458, 459, 463, 465, 470, 473, 477, 486, 491, 496, 501, 509, 512, 515, 517, 518, 520, 522, 523, 530, 535, 537, 538, 543, 544, 544, 546, 550, 554,
+				558, 569, 573, 573, 576, 579, 582,
+			]],
+			[ "20", [
+				462, 466, 471, 477, 481, 487, 496, 506, 506, 507, 514, 528, 530, 539, 541, 548, 552, 557, 563, 572, 584, 598, 603, 605, 613, 615, 617, 620, 627, 631, 636, 640, 644, 647, 649, 654, 663, 666, 676, 682,
+				685, 690, 695, 704, 707, 710, 714, 717, 726, 731, 738, 748, 748, 753, 759, 772, 779, 785, 794, 803, 811, 819, 827, 832, 842, 845, 847, 851, 856, 858, 867, 874, 877, 881, 889, 895, 904, 907, 912, 915,
+				920, 930, 937, 938, 942, 950, 958,
+			]],
+			[ "ilscore", [
+				745, 761, 798, 825, 860, 956, 976, 993, 993, 999, 1003, 1011, 1035, 1053, 1061, 1068, 1082, 1091, 1121, 1146, 1162, 1175, 1189, 1209, 1218, 1252, 1265, 1276, 1295, 1313, 1325, 1331, 1332, 1348, 1348, 1349, 1354, 1356, 1358, 1368,
+				1376, 1383, 1386, 1389, 1396, 1408, 1423, 1438, 1442, 1475, 1495, 1505, 1512, 1523, 1528, 1547, 1567, 1574, 1592, 1595, 1606, 1611, 1632, 1633, 1637, 1641, 1642, 1648, 1649, 1651, 1663, 1684, 1698, 1707, 1717, 1730, 1745, 1750, 1760, 1780,
+				1797, 1814, 1834, 1842, 1859, 1876, 1888,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

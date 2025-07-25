@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Grigorii Pika&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Grigorii Pika&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lockd.html" property="og:url">
+	<meta content="Rank by game in top 5: 811&#10;Rank by game in top 10: 1160&#10;Rank by game in top 20: 497&#10;Rank by ilScore: 731&#10;&#10;3 games&#10;&bull; Stay Choppy | MJ 124: Warmth | rank: 55 | ilscore: 66&#10;&bull; Windows Defense | MJ 121: Reflection | rank: 20 | ilscore: 77&#10;&bull; Dino&#39;s Nightmare | MJ 120: Hell | rank: 3 | ilscore: 59&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Grigorii Pika</h1>
+		<a href="https://lockd.itch.io">lockd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 811</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1160</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 497</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 731</p>
+		<p>Total ilScore: 203</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://valdevelopment.itch.io/stay-choppy">Stay Choppy</a></td>
+				<td><span class="early">3h 42m early</span></td>
+				<td>
+					<a href="../jammer/valdevelopment.html">Vladislav Fedorov</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>55</td>
+				<td>6</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://lockd.itch.io/windows-defense">Windows Defense</a></td>
+				<td><span class="early">4h 9m early</span></td>
+				<td>
+					<a href="../jammer/valdevelopment.html">Vladislav Fedorov</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>20</td>
+				<td>21</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://lockd.itch.io/dinos-nightmare">Dino&#39;s Nightmare</a></td>
+				<td><span class="early">10h 2m early</span></td>
+				<td>
+					<a href="../jammer/valdevelopment.html">Vladislav Fedorov</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>3</td>
+				<td>11</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				484, 492, 493, 499, 509, 513, 521, 524, 531, 536, 539, 541, 541, 546, 552, 554, 554, 555, 564, 568, 573, 580, 581, 590, 596, 596, 601, 602, 604, 608, 614, 616, 621, 628, 638, 645, 649, 653, 657, 658,
+				663, 669, 669, 677, 679, 682, 687, 693, 697, 697, 698, 699, 702, 706, 708, 719, 724, 727, 730, 735, 737, 740, 749, 752, 757, 769, 777, 787, 789, 795, 805, 810,
+			]],
+			[ "10", [
+				699, 712, 715, 725, 743, 750, 759, 772, 780, 785, 790, 793, 794, 805, 816, 817, 817, 818, 830, 834, 838, 845, 846, 855, 863, 864, 868, 869, 871, 876, 885, 892, 900, 910, 927, 930, 934, 938, 949, 950,
+				961, 971, 972, 985, 988, 993, 1001, 1013, 1017, 1019, 1020, 1022, 1025, 1029, 1032, 1045, 1054, 1058, 1061, 1068, 1070, 1072, 1083, 1087, 1096, 1111, 1122, 1135, 1137, 1143, 1153, 1159,
+			]],
+			[ "20", [
+				936, 273, 275, 278, 282, 288, 291, 296, 297, 305, 308, 309, 310, 313, 316, 319, 321, 323, 326, 329, 332, 336, 337, 341, 344, 345, 348, 348, 353, 354, 355, 356, 359, 362, 365, 372, 375, 376, 380, 381,
+				387, 396, 400, 401, 408, 412, 416, 420, 420, 423, 426, 427, 430, 434, 435, 438, 442, 445, 449, 455, 455, 455, 458, 460, 463, 469, 480, 483, 483, 486, 490, 496,
+			]],
+			[ "ilscore", [
+				4488, 916, 921, 947, 393, 400, 405, 413, 423, 428, 442, 443, 445, 455, 462, 469, 470, 471, 482, 482, 486, 487, 491, 493, 494, 496, 498, 504, 504, 505, 514, 520, 525, 529, 543, 544, 551, 556, 561, 566,
+				577, 589, 593, 604, 611, 616, 618, 630, 635, 637, 639, 640, 642, 644, 646, 651, 654, 659, 665, 667, 670, 673, 680, 684, 687, 694, 702, 709, 709, 718, 722, 730,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

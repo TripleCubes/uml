@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Minor Seven&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Minor Seven&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/minor-seven.html" property="og:url">
+	<meta content="Rank by game in top 20: 3319&#10;Rank by ilScore: 1586&#10;&#10;4 games&#10;&bull; Islander | MJ 50: Islands | rank: 63 | ilscore: 57&#10;&bull; Justice For Zero | MJ 46: Justice | rank: 37 | ilscore: 29&#10;&bull; Leviathan | MJ 34: Balance | rank: 12 | ilscore: 31&#10;&bull; The No-Combat-Ninja | MJ 29: Ninjas | rank: 22 | ilscore: 22&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Minor Seven</h1>
+		<a href="https://minor-seven.itch.io">minor-seven.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3319</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1586</p>
+		<p>Total ilScore: 139</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://minor-seven.itch.io/islander">Islander</a></td>
+				<td><span class="early">7h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>63</td>
+				<td>3</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://minor-seven.itch.io/justice-for-zero">Justice For Zero</a></td>
+				<td><span class="early">16h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-46-justice">MJ 46: Justice</a></td>
+				<td>43</td>
+				<td>37</td>
+				<td>3</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td><a href="https://minor-seven.itch.io/leviathan">Leviathan</a></td>
+				<td><span class="early">7h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-34-balance">MJ 34: Balance</a></td>
+				<td>25</td>
+				<td>12</td>
+				<td>12</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><a href="https://minor-seven.itch.io/the-no-combat-ninja-jam-complete">The No-Combat-Ninja</a></td>
+				<td><span class="early">5h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>22</td>
+				<td>6</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				305, 308, 320, 323, 330, 337, 350, 357, 365, 373, 375, 388, 401, 417, 427, 429, 451, 481, 497, 516, 532, 552, 569, 592, 619, 644, 645, 652, 677, 705, 732, 761, 769, 784, 807, 822, 839, 865, 888, 907,
+				921, 940, 965, 985, 1004, 1021, 1045, 1066, 1086, 1099, 1119, 1136, 1158, 1178, 1203, 1223, 1248, 1267, 1293, 1309, 1332, 1348, 1367, 1389, 1413, 1428, 1450, 1465, 1483, 1508, 1534, 1546, 1556, 1577, 1590, 1606, 1625, 1645, 1660, 1679,
+				1697, 1719, 1741, 1764, 1768, 1792, 1805, 1826, 1844, 1864, 1885, 1908, 1930, 1941, 1959, 1986, 2002, 2022, 2037, 2059, 2073, 2099, 2119, 2135, 2160, 2181, 2201, 2218, 2225, 2253, 2257, 2267, 2286, 2299, 2314, 2335, 2356, 2379, 2397, 2414,
+				2435, 2453, 2465, 2483, 2512, 2544, 2566, 2586, 2607, 2627, 2643, 2659, 2676, 2698, 2738, 2750, 2766, 2778, 2803, 2817, 2823, 2838, 2854, 2871, 2890, 2907, 2938, 2958, 2982, 3011, 3035, 3061, 3085, 3115, 3133, 3152, 3179, 3198, 3224, 3249,
+				3281, 3301, 3318,
+			]],
+			[ "ilscore", [
+				376, 401, 408, 429, 467, 116, 117, 122, 124, 125, 130, 137, 140, 144, 146, 146, 152, 76, 79, 85, 86, 33, 41, 41, 42, 47, 51, 53, 61, 63, 65, 66, 68, 69, 71, 77, 93, 97, 104, 108,
+				113, 114, 117, 126, 127, 140, 144, 165, 171, 179, 193, 204, 208, 238, 266, 276, 283, 300, 316, 338, 351, 364, 375, 378, 382, 388, 409, 419, 422, 431, 438, 446, 450, 460, 491, 526, 545, 545, 561, 573,
+				588, 624, 636, 671, 696, 724, 770, 789, 804, 804, 809, 813, 823, 845, 862, 867, 875, 884, 889, 912, 933, 950, 963, 981, 1000, 1009, 1041, 1049, 1061, 1080, 1095, 1103, 1109, 1109, 1124, 1124, 1124, 1127, 1127, 1130,
+				1134, 1142, 1149, 1152, 1154, 1158, 1168, 1181, 1190, 1194, 1226, 1243, 1250, 1254, 1266, 1269, 1290, 1305, 1311, 1328, 1332, 1341, 1348, 1370, 1371, 1373, 1375, 1377, 1382, 1382, 1385, 1398, 1415, 1429, 1434, 1442, 1451, 1463, 1472, 1480,
+				1495, 1509, 1525, 1545, 1550, 1562, 1573, 1585,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

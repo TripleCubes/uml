@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RobbieGoldberg&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="RobbieGoldberg&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/robbiegoldberg.html" property="og:url">
+	<meta content="Rank by game in top 20: 1691&#10;Rank by ilScore: 3406&#10;&#10;1 games&#10;&bull; Bazooka Caverns | MJ 109: Depths | rank: 16 | ilscore: 88&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RobbieGoldberg</h1>
+		<a href="https://robbiegoldberg.itch.io">robbiegoldberg.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1691</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3406</p>
+		<p>Total ilScore: 88</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rjones0421.itch.io/bazooka-caverns">Bazooka Caverns</a></td>
+				<td><span class="early">11m 35s early</span></td>
+				<td>
+					<a href="../jammer/rjones0421.html">Robert Jones</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>16</td>
+				<td>14</td>
+				<td>88</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				876, 893, 916, 937, 952, 953, 958, 966, 975, 986, 1003, 1010, 1020, 1038, 1043, 1054, 1077, 1087, 1098, 1114, 1122, 1128, 1142, 1146, 1149, 1163, 1179, 1182, 1185, 1192, 1205, 1207, 1209, 1215, 1216, 1227, 1237, 1240, 1246, 1250,
+				1260, 1266, 1282, 1290, 1298, 1309, 1331, 1335, 1344, 1348, 1362, 1369, 1387, 1397, 1401, 1427, 1429, 1437, 1446, 1469, 1475, 1481, 1483, 1486, 1491, 1501, 1504, 1518, 1532, 1538, 1546, 1555, 1561, 1579, 1588, 1595, 1605, 1622, 1634, 1653,
+				1656, 1664, 1679, 1690,
+			]],
+			[ "ilscore", [
+				1592, 1679, 1923, 1937, 1948, 1948, 1951, 1959, 1962, 2021, 2047, 2063, 2076, 2098, 2106, 2183, 2206, 2224, 2242, 2260, 2288, 2302, 2390, 2402, 2406, 2426, 2450, 2466, 2472, 2477, 2499, 2502, 2507, 2515, 2517, 2520, 2533, 2541, 2547, 2558,
+				2567, 2577, 2611, 2635, 2653, 2661, 2754, 2772, 2792, 2806, 2819, 2827, 2843, 2866, 2875, 2907, 2914, 2929, 2934, 3016, 3023, 3029, 3036, 3039, 3046, 3053, 3065, 3083, 3125, 3138, 3154, 3173, 3188, 3198, 3208, 3219, 3245, 3274, 3297, 3333,
+				3346, 3367, 3387, 3405,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

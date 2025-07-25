@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RBD Prototypes&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="RBD Prototypes&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rbd-prototypes.html" property="og:url">
+	<meta content="Rank by ilScore: 1719&#10;&#10;2 games&#10;&bull; Tiny Bakery | MJ 94: Baking | rank: 37 | ilscore: 62&#10;&bull; Ice Creamery | MJ 66: Sweets | rank: 28 | ilscore: 71&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RBD Prototypes</h1>
+		<a href="https://rbd-prototypes.itch.io">rbd-prototypes.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1719</p>
+		<p>Total ilScore: 133</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://amiradom.itch.io/tiny-bakery">Tiny Bakery</a></td>
+				<td><span class="late">9h 7m late</span></td>
+				<td>
+					<a href="../jammer/amiradom.html">AmiRadoM</a>,
+					<a href="../jammer/loxohighscore.html">LoxoHighScore</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>37</td>
+				<td>7</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://rbdinteractive.itch.io/ice-creamery">Ice Creamery</a></td>
+				<td><span class="early">4h 15m early</span></td>
+				<td>
+					<a href="../jammer/rbdinteractive.html">RBD Interactive</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>28</td>
+				<td>17</td>
+				<td>71</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				566, 577, 586, 594, 628, 638, 667, 684, 812, 830, 855, 915, 976, 985, 1105, 1184, 1192, 1200, 1238, 1324, 1434, 1459, 1536, 1551, 1600, 1618, 1625, 1680, 1723, 1728, 479, 487, 495, 499, 511, 543, 576, 594, 594, 611,
+				623, 640, 680, 695, 731, 757, 788, 848, 869, 885, 885, 891, 895, 903, 928, 947, 953, 961, 973, 981, 1007, 1026, 1044, 1057, 1071, 1091, 1099, 1129, 1139, 1151, 1170, 1187, 1195, 1201, 1201, 1217, 1217, 1218, 1222, 1223,
+				1226, 1234, 1242, 1249, 1253, 1255, 1259, 1269, 1282, 1293, 1297, 1329, 1348, 1357, 1362, 1373, 1376, 1396, 1412, 1418, 1436, 1440, 1451, 1458, 1481, 1482, 1484, 1488, 1489, 1495, 1495, 1498, 1512, 1531, 1545, 1551, 1559, 1570, 1582, 1586,
+				1595, 1617, 1633, 1648, 1669, 1676, 1693, 1708, 1718,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

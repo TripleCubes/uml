@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SizzulReal&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SizzulReal&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/maakole.html" property="og:url">
+	<meta content="Rank by game in top 10: 2028&#10;Rank by game in top 20: 3571&#10;Rank by ilScore: 12920&#10;&#10;1 games&#10;&bull; Elysian Rings Prototype Version | MJ 22: Anime | rank: 7 | ilscore: 16&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SizzulReal</h1>
+		<a href="https://maakole.itch.io">maakole.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2028</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3571</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12920</p>
+		<p>Total ilScore: 16</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://maakole.itch.io/elysian-rings">Elysian Rings Prototype Version</a></td>
+				<td><span class="early">6m 36s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-22-anime">MJ 22: Anime</a></td>
+				<td>11</td>
+				<td>7</td>
+				<td>12</td>
+				<td>16</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				146, 163, 172, 184, 193, 197, 205, 212, 221, 229, 236, 249, 255, 261, 270, 276, 287, 295, 306, 316, 323, 333, 341, 351, 357, 366, 373, 380, 391, 410, 424, 433, 441, 452, 462, 473, 483, 494, 505, 510,
+				523, 541, 554, 570, 582, 589, 601, 609, 617, 630, 643, 653, 661, 670, 683, 692, 702, 711, 720, 729, 741, 748, 765, 775, 786, 796, 808, 820, 832, 840, 851, 861, 878, 886, 895, 912, 925, 935, 949, 957,
+				963, 974, 986, 993, 1003, 1010, 1019, 1026, 1035, 1052, 1059, 1068, 1078, 1089, 1103, 1116, 1121, 1136, 1145, 1153, 1162, 1179, 1194, 1206, 1219, 1227, 1236, 1254, 1263, 1274, 1287, 1300, 1310, 1320, 1328, 1338, 1353, 1363, 1371, 1379,
+				1389, 1403, 1409, 1420, 1436, 1444, 1456, 1472, 1485, 1495, 1509, 1521, 1536, 1544, 1548, 1556, 1577, 1594, 1608, 1616, 1625, 1636, 1651, 1661, 1673, 1689, 1702, 1709, 1715, 1723, 1735, 1740, 1749, 1763, 1774, 1782, 1800, 1811, 1829, 1837,
+				1846, 1862, 1873, 1885, 1900, 1918, 1927, 1935, 1950, 1961, 1974, 1985, 2002, 2015, 2027,
+			]],
+			[ "20", [
+				191, 220, 241, 265, 274, 277, 289, 302, 319, 327, 340, 360, 371, 376, 393, 397, 408, 420, 437, 448, 462, 472, 482, 501, 511, 527, 541, 548, 570, 600, 622, 641, 657, 677, 693, 716, 742, 767, 773, 781,
+				806, 835, 862, 891, 902, 917, 940, 955, 972, 998, 1021, 1040, 1054, 1073, 1098, 1118, 1136, 1153, 1177, 1198, 1217, 1230, 1252, 1269, 1291, 1310, 1334, 1354, 1379, 1398, 1424, 1440, 1463, 1479, 1498, 1520, 1544, 1559, 1583, 1598,
+				1616, 1641, 1667, 1679, 1699, 1720, 1732, 1748, 1767, 1787, 1802, 1821, 1839, 1861, 1883, 1906, 1911, 1935, 1952, 1973, 1991, 2011, 2040, 2063, 2085, 2101, 2119, 2146, 2162, 2182, 2197, 2219, 2233, 2259, 2279, 2298, 2323, 2344, 2363, 2386,
+				2399, 2427, 2435, 2454, 2479, 2497, 2519, 2540, 2564, 2587, 2607, 2623, 2645, 2663, 2675, 2693, 2722, 2754, 2776, 2796, 2817, 2837, 2858, 2873, 2890, 2913, 2953, 2967, 2982, 2995, 3020, 3034, 3049, 3074, 3098, 3120, 3143, 3160, 3191, 3211,
+				3235, 3264, 3288, 3314, 3338, 3368, 3386, 3405, 3432, 3451, 3477, 3502, 3534, 3553, 3570,
+			]],
+			[ "ilscore", [
+				235, 298, 339, 377, 391, 405, 425, 444, 468, 481, 503, 544, 559, 564, 592, 596, 613, 632, 657, 677, 695, 705, 728, 772, 804, 844, 867, 876, 992, 1094, 1118, 1183, 1224, 1307, 1366, 1486, 1526, 1575, 1585, 1598,
+				1668, 1716, 1875, 1992, 1998, 2042, 2149, 2197, 2246, 2302, 2389, 2440, 2518, 2574, 2748, 2811, 2902, 2994, 3114, 3164, 3318, 3428, 3486, 3534, 3622, 3755, 3906, 3993, 4132, 4218, 4315, 4382, 4443, 4552, 4646, 4680, 4751, 4791, 4843, 4928,
+				5017, 5236, 5356, 5469, 5500, 5622, 5705, 5809, 6063, 6127, 6317, 6413, 6594, 6967, 7048, 7150, 7159, 7210, 7234, 7265, 7416, 7549, 7644, 7680, 7783, 7814, 7985, 8071, 8124, 8174, 8259, 8369, 8419, 8605, 8631, 8660, 8769, 8857, 8900, 8929,
+				8945, 9093, 9103, 9131, 9171, 9200, 9229, 9275, 9334, 9415, 9449, 9479, 9518, 9663, 9785, 9863, 9908, 10091, 10151, 10250, 10317, 10414, 10448, 10551, 10640, 10668, 10805, 10842, 10896, 10918, 11113, 11161, 11180, 11220, 11252, 11302, 11331, 11387, 11485, 11604,
+				11675, 11725, 11796, 11866, 11939, 12028, 12100, 12184, 12264, 12356, 12538, 12614, 12741, 12827, 12919,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

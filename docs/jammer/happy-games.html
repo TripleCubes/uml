@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Happy_Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Happy_Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/happy-games.html" property="og:url">
+	<meta content="Rank by ilScore: 965&#10;&#10;3 games&#10;&bull; O&#39;Fishal Fishing | MJ 108: Seaside | rank: 165 | ilscore: 60&#10;&bull; Dual Wielding | MJ 100: Overload | rank: 151 | ilscore: 42&#10;&bull; The Lost Boys | MJ 79: Frogs | rank: 95 | ilscore: 77&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Happy_Games</h1>
+		<a href="https://happy-games.itch.io">happy-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 965</p>
+		<p>Total ilScore: 179</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://happy-games.itch.io/ofishal-fishing">O&#39;Fishal Fishing</a></td>
+				<td><span class="early">35m 33s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>165</td>
+				<td>13</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://happy-games.itch.io/dual-wiedling">Dual Wielding</a></td>
+				<td><span class="late">10m 4s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>151</td>
+				<td>3</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://happy-games.itch.io/the-lost-boys">The Lost Boys</a></td>
+				<td><span class="early">40m 36s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>95</td>
+				<td>15</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				894, 960, 969, 977, 1007, 1082, 1171, 1192, 1254, 1268, 1300, 1313, 1320, 1358, 1389, 1397, 1411, 1422, 1429, 1450, 1480, 1644, 692, 709, 713, 736, 753, 774, 834, 846, 370, 385, 397, 434, 443, 452, 452, 456, 461, 463,
+				476, 485, 494, 500, 505, 506, 522, 537, 546, 552, 570, 578, 585, 601, 603, 607, 621, 628, 638, 639, 643, 655, 657, 661, 663, 666, 669, 674, 677, 682, 685, 686, 686, 695, 705, 710, 711, 731, 734, 740,
+				745, 756, 761, 779, 792, 795, 808, 812, 816, 819, 831, 836, 840, 841, 842, 846, 846, 850, 856, 859, 869, 875, 877, 880, 886, 897, 902, 912, 918, 927, 936, 939, 949, 955, 964,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

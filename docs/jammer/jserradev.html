@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>JSerraDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="JSerraDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jserradev.html" property="og:url">
+	<meta content="Rank by ilScore: 988&#10;&#10;2 games&#10;&bull; Nekodatchi | MJ 80: Cats | rank: 24 | ilscore: 86&#10;&bull; Coloroid | MJ 73: Power | rank: 32 | ilscore: 90&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>JSerraDev</h1>
+		<a href="https://jserradev.itch.io">jserradev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 988</p>
+		<p>Total ilScore: 176</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lindryn.itch.io/nekodatchi">Nekodatchi</a></td>
+				<td><span class="early">2h 55m early</span></td>
+				<td>
+					<a href="../jammer/lindryn.html">Raúl &quot;Lindryn&quot; López Martín</a>,
+					<a href="../jammer/goonie19.html">GoonieDev</a>,
+					<a href="../jammer/asdehielo.html">Raul Moreno Tamayo</a>,
+					<a href="../jammer/christianvillanueva.html">Christian Villanueva</a>,
+					<a href="../jammer/jobadev.html">joba.dev</a>,
+					<a href="../jammer/juan-galan.html">Juan Galan</a>,
+					<a href="../jammer/drakairo.html">Drakairo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>24</td>
+				<td>30</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://lindryn.itch.io/coloroid">Coloroid</a></td>
+				<td><span class="early">9h early</span></td>
+				<td>
+					<a href="../jammer/lindryn.html">Raúl &quot;Lindryn&quot; López Martín</a>,
+					<a href="../jammer/a-master-group.html">A Master Group</a>,
+					<a href="../jammer/asdehielo.html">Raul Moreno Tamayo</a>,
+					<a href="../jammer/christianvillanueva.html">Christian Villanueva</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>32</td>
+				<td>20</td>
+				<td>90</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				428, 439, 451, 479, 500, 510, 588, 152, 154, 154, 164, 178, 187, 191, 195, 200, 209, 214, 218, 228, 234, 238, 243, 247, 250, 251, 257, 269, 295, 309, 311, 314, 317, 323, 346, 356, 381, 398, 412, 448,
+				457, 467, 467, 471, 476, 479, 493, 502, 511, 517, 523, 524, 540, 555, 564, 570, 590, 599, 606, 621, 623, 627, 639, 646, 656, 657, 661, 674, 676, 680, 683, 685, 689, 694, 697, 702, 705, 706, 706, 712,
+				722, 727, 728, 749, 752, 758, 763, 775, 780, 799, 810, 812, 826, 829, 833, 836, 849, 854, 858, 859, 860, 864, 864, 868, 874, 877, 887, 894, 896, 900, 907, 918, 923, 933, 939, 947, 957, 960, 973, 978,
+				987,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CCeriseGD&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CCeriseGD&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ccerisegd.html" property="og:url">
+	<meta content="Rank by game in top 20: 661&#10;Rank by ilScore: 744&#10;&#10;3 games&#10;&bull; Lunar Defender | MJ 130: Lunar | rank: 109 | ilscore: 77&#10;&bull; Slime Time | MJ 126: Lost | rank: 20 | ilscore: 60&#10;&bull; File Transfer Protocol | MJ 125: Signal | rank: 15 | ilscore: 64&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CCeriseGD</h1>
+		<a href="https://ccerisegd.itch.io">ccerisegd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 661</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 744</p>
+		<p>Total ilScore: 201</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ccerisegd.itch.io/lunardefender">Lunar Defender</a></td>
+				<td><span class="early">1d 11h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>109</td>
+				<td>7</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://ccerisegd.itch.io/slimetime">Slime Time</a></td>
+				<td><span class="early">14h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>20</td>
+				<td>14</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://ccerisegd.itch.io/ftp">File Transfer Protocol</a></td>
+				<td><span class="early">8h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>15</td>
+				<td>13</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1552, 390, 395, 396, 402, 404, 406, 409, 415, 419, 424, 426, 428, 431, 431, 435, 444, 445, 449, 452, 453, 458, 460, 469, 472, 473, 476, 478, 483, 486, 493, 502, 502, 505, 508, 517, 525, 529, 530, 539,
+				547, 554, 558, 559, 568, 571, 571, 576, 581, 582, 585, 589, 592, 596, 602, 603, 607, 610, 615, 617, 622, 633, 639, 640, 644, 652, 660,
+			]],
+			[ "ilscore", [
+				4269, 1212, 1227, 1247, 1256, 452, 453, 455, 465, 473, 480, 481, 482, 493, 493, 498, 499, 503, 505, 506, 507, 509, 515, 515, 516, 525, 533, 538, 542, 556, 557, 564, 568, 573, 578, 590, 601, 605, 616, 623,
+				629, 630, 642, 646, 649, 651, 652, 654, 656, 658, 663, 666, 672, 678, 680, 683, 686, 692, 696, 699, 706, 714, 721, 722, 731, 735, 743,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

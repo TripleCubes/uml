@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>AwsApps&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="AwsApps&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/awsapps.html" property="og:url">
+	<meta content="Rank by ilScore: 2393&#10;&#10;2 games&#10;&bull; Don&#39;t throw the boomerang if you don&#39;t know how to catch it | MJ 103: Darkness | rank: 54 | ilscore: 72&#10;&bull; The Mirror Castle | MJ 90: Illusion | rank: 59 | ilscore: 36&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>AwsApps</h1>
+		<a href="https://awsapps.itch.io">awsapps.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2393</p>
+		<p>Total ilScore: 108</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://awsapps.itch.io/dont-throw-the-boomerang-if-you-dont-know-how-to-catch-it">Don&#39;t throw the boomerang if you don&#39;t know how to catch it</a></td>
+				<td><span class="early">52s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>54</td>
+				<td>16</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://awsapps.itch.io/the-mirror-castle">The Mirror Castle</a></td>
+				<td><span class="early">1h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>59</td>
+				<td>6</td>
+				<td>36</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3636, 3724, 3808, 3833, 3908, 3942, 3987, 4063, 4146, 4358, 4474, 4573, 4591, 854, 875, 895, 982, 996, 1033, 1061, 1102, 1270, 1288, 1304, 1304, 1309, 1314, 1323, 1352, 1370, 1383, 1396, 1411, 1419, 1457, 1481, 1499, 1513, 1532, 1556,
+				1564, 1603, 1616, 1626, 1647, 1672, 1686, 1687, 1691, 1710, 1710, 1711, 1719, 1722, 1727, 1737, 1744, 1750, 1758, 1761, 1771, 1782, 1798, 1818, 1827, 1869, 1896, 1914, 1925, 1934, 1943, 1960, 1983, 1990, 2008, 2010, 2025, 2029, 2058, 2064,
+				2072, 2077, 2078, 2084, 2086, 2091, 2107, 2139, 2156, 2167, 2181, 2197, 2209, 2216, 2228, 2252, 2275, 2297, 2319, 2334, 2356, 2375, 2392,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

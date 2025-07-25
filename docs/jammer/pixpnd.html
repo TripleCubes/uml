@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PixelPanda&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="PixelPanda&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pixpnd.html" property="og:url">
+	<meta content="Rank by game in top 5: 803&#10;Rank by game in top 10: 1141&#10;Rank by game in top 20: 588&#10;Rank by ilScore: 2881&#10;&#10;2 games&#10;&bull; Minecart Downhill | MJ 173: Action | rank: 16 | ilscore: 56&#10;&bull; No Brakez | MJ 137: Judgement | rank: 2 | ilscore: 41&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PixelPanda</h1>
+		<a href="https://pixpnd.itch.io">pixpnd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 803</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1141</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 588</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>16</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2881</p>
+		<p>Total ilScore: 96</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pixpnd.itch.io/minecart-downhill">Minecart Downhill</a></td>
+				<td><span class="early">1h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-173-action">MJ 173: Action</a></td>
+				<td>67</td>
+				<td>16</td>
+				<td>20</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixpnd.itch.io/no-brakez">No Brakez</a></td>
+				<td><span class="early">1h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-137-judgement">MJ 137: Judgement</a></td>
+				<td>27</td>
+				<td>2</td>
+				<td>12</td>
+				<td>41</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				548, 557, 561, 566, 573, 574, 583, 589, 589, 594, 595, 597, 601, 607, 609, 614, 621, 631, 638, 642, 645, 649, 650, 655, 661, 661, 669, 671, 674, 679, 685, 689, 689, 690, 691, 694, 698, 700, 711, 716,
+				719, 722, 727, 729, 732, 741, 744, 749, 761, 769, 779, 781, 787, 797, 802,
+			]],
+			[ "10", [
+				803, 815, 819, 823, 830, 831, 840, 848, 849, 854, 855, 857, 862, 871, 878, 886, 896, 913, 916, 920, 923, 933, 934, 945, 955, 956, 969, 972, 977, 985, 997, 1001, 1003, 1004, 1006, 1009, 1013, 1016, 1029, 1037,
+				1041, 1044, 1050, 1052, 1054, 1065, 1069, 1078, 1092, 1103, 1116, 1118, 1124, 1134, 1140,
+			]],
+			[ "20", [
+				1075, 1086, 1088, 1093, 1102, 1103, 1114, 1125, 1128, 1135, 1140, 1147, 1154, 1168, 1176, 1184, 1195, 1213, 1217, 1226, 1229, 1239, 1245, 1261, 1272, 1276, 1297, 1299, 1307, 1317, 1334, 1340, 1349, 1351, 1354, 1358, 1365, 513, 516, 520,
+				523, 527, 533, 534, 536, 540, 544, 546, 552, 563, 569, 570, 574, 579, 587,
+			]],
+			[ "ilscore", [
+				7203, 7339, 7340, 7347, 7366, 7383, 7398, 7441, 7478, 7541, 7566, 7581, 7603, 7721, 7847, 7916, 7952, 8118, 8159, 8241, 8299, 8393, 8413, 8497, 8569, 8589, 8717, 8740, 8790, 8803, 8986, 9019, 9020, 9041, 9049, 9077, 9095, 2571, 2589, 2623,
+				2637, 2649, 2668, 2684, 2694, 2702, 2713, 2738, 2763, 2786, 2809, 2822, 2843, 2862, 2880,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

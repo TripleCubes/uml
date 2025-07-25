@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Atrium Garden&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Atrium Garden&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/atriumgarden.html" property="og:url">
+	<meta content="Rank by ilScore: 323&#10;&#10;4 games&#10;&bull; Pengruper | MJ 166: Earth | rank: 82 | ilscore: 80&#10;&bull; Fish Fight: Toxic | MJ 153: Fishing | rank: 133 | ilscore: 61&#10;&bull; Lunchbox | MJ 153: Fishing | rank: 26 | ilscore: 99&#10;&bull; Follow the Spark | MJ 150: Magic | rank: 66 | ilscore: 62&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Atrium Garden</h1>
+		<a href="https://atriumgarden.itch.io">atriumgarden.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 323</p>
+		<p>Total ilScore: 303</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sealnf.itch.io/pengruper">Pengruper</a></td>
+				<td><span class="early">2h 2m early</span></td>
+				<td>
+					<a href="../jammer/sealnf.html">Seals And Faces</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>204</td>
+				<td>82</td>
+				<td>13</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://maruchun.itch.io/fish-fight-toxic">Fish Fight: Toxic</a></td>
+				<td><span class="early">8h 1m early</span></td>
+				<td>
+					<a href="../jammer/maruchun.html">MaruChun</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>133</td>
+				<td>3</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://sealnf.itch.io/lunchbox">Lunchbox</a></td>
+				<td><span class="early">4h 15m early</span></td>
+				<td>
+					<a href="../jammer/sealnf.html">Seals And Faces</a>,
+					<a href="../jammer/shaer-maer.html">Shaer_Maer</a>,
+					<a href="../jammer/kiririn39m.html">kiririn39m</a>,
+					<a href="../jammer/3diletant.html">3diletant</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>26</td>
+				<td>15</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td><a href="https://sealnf.itch.io/followthespark">Follow the Spark</a></td>
+				<td><span class="early">7h 3m early</span></td>
+				<td>
+					<a href="../jammer/sealnf.html">Seals And Faces</a>,
+					<a href="../jammer/shaer-maer.html">Shaer_Maer</a>,
+					<a href="../jammer/vunria.html">vunria</a>,
+					<a href="../jammer/bullwafka.html">Bullwafka</a>,
+					<a href="../jammer/kiririn39m.html">kiririn39m</a>,
+					<a href="../jammer/3diletant.html">3diletant</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>66</td>
+				<td>8</td>
+				<td>62</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				5209, 5241, 5250, 444, 446, 454, 456, 461, 463, 470, 482, 485, 496, 501, 505, 508, 265, 265, 266, 267, 268, 269, 269, 273, 275, 281, 285, 287, 291, 292, 293, 301, 304, 307, 307, 309, 312, 312, 315, 319,
+				322,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

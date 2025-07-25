@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>wormgirlie&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="wormgirlie&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/wormgirlie.html" property="og:url">
+	<meta content="Rank by game in top 10: 1364&#10;Rank by game in top 20: 196&#10;Rank by ilScore: 306&#10;&#10;4 games&#10;&bull; Spindigo Bones and The Escape From The Golden City | MJ 85: Gold | rank: 53 | ilscore: 78&#10;&bull; Sacridice | MJ 83: Dread | rank: 11 | ilscore: 81&#10;&bull; Tower Defense But Without The Fun Bits | MJ 62: Colors | rank: 19 | ilscore: 88&#10;&bull; Faulty Winch | MJ 60: Crime | rank: 10 | ilscore: 62&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>wormgirlie</h1>
+		<a href="https://wormgirlie.itch.io">wormgirlie.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1364</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 196</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>11</span>
+			<span>19</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 306</p>
+		<p>Total ilScore: 309</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://wormgirlie.itch.io/spindigo-bones-and-the-escape-from-the-golden-city">Spindigo Bones and The Escape From The Golden City</a></td>
+				<td><span class="early">11h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>53</td>
+				<td>8</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://wormgirlie.itch.io/sacridice">Sacridice</a></td>
+				<td><span class="early">9h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>11</td>
+				<td>23</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://wormgirlie.itch.io/tower-defense">Tower Defense But Without The Fun Bits</a></td>
+				<td><span class="early">13h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>19</td>
+				<td>14</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://wormgirlie.itch.io/faulty-winch">Faulty Winch</a></td>
+				<td><span class="early">10h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-60">MJ 60: Crime</a></td>
+				<td>64</td>
+				<td>10</td>
+				<td>14</td>
+				<td>62</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				279, 283, 296, 312, 320, 327, 340, 348, 355, 368, 381, 384, 392, 397, 411, 420, 431, 440, 442, 449, 462, 469, 472, 474, 485, 495, 503, 510, 522, 528, 540, 550, 558, 566, 575, 583, 594, 604, 605, 615,
+				620, 631, 646, 653, 656, 665, 674, 681, 690, 707, 714, 723, 733, 745, 759, 772, 773, 778, 783, 791, 800, 817, 825, 834, 847, 849, 858, 876, 884, 894, 907, 917, 923, 933, 937, 940, 956, 967, 970, 971,
+				975, 989, 992, 994, 998, 999, 1006, 1015, 1016, 1021, 1022, 1030, 1035, 1044, 1050, 1059, 1070, 1087, 1093, 1097, 1102, 1113, 1115, 1125, 1137, 1141, 1154, 1157, 1162, 1170, 1182, 1186, 1186, 1187, 1189, 1193, 1200, 1206, 1221, 1230,
+				1236, 1243, 1252, 1255, 1264, 1275, 1279, 1288, 1304, 1315, 1328, 1332, 1342, 1352, 1363,
+			]],
+			[ "20", [
+				355, 360, 88, 90, 94, 95, 98, 101, 101, 102, 104, 104, 110, 111, 115, 116, 119, 121, 122, 125, 128, 138, 140, 141, 59, 60, 60, 60, 61, 63, 63, 63, 63, 63, 65, 65, 68, 72, 72, 75,
+				77, 78, 80, 81, 82, 86, 87, 87, 89, 89, 90, 91, 91, 91, 93, 94, 94, 94, 97, 98, 101, 101, 101, 102, 102, 102, 103, 106, 106, 109, 113, 113, 116, 117, 117, 117, 117, 120, 120, 121,
+				122, 124, 126, 127, 129, 130, 131, 133, 133, 133, 133, 134, 134, 135, 136, 139, 139, 140, 143, 143, 143, 143, 147, 149, 151, 153, 154, 158, 161, 161, 163, 166, 166, 168, 170, 172, 172, 174, 174, 174,
+				176, 177, 177, 179, 180, 183, 185, 185, 186, 188, 190, 190, 193, 193, 195,
+			]],
+			[ "ilscore", [
+				468, 475, 63, 72, 77, 84, 87, 93, 95, 98, 105, 109, 118, 122, 139, 143, 154, 165, 174, 176, 199, 225, 228, 231, 84, 89, 50, 52, 54, 56, 58, 59, 62, 65, 67, 69, 70, 71, 71, 72,
+				77, 82, 87, 96, 97, 103, 105, 109, 115, 117, 122, 127, 132, 140, 144, 148, 148, 148, 148, 148, 153, 156, 156, 156, 157, 158, 162, 163, 164, 167, 173, 175, 176, 184, 185, 185, 187, 189, 189, 191,
+				191, 194, 194, 194, 195, 197, 197, 199, 200, 200, 201, 204, 206, 209, 212, 216, 216, 218, 221, 221, 224, 231, 231, 233, 237, 238, 242, 248, 248, 248, 251, 251, 252, 253, 254, 255, 255, 258, 261, 267,
+				272, 274, 277, 278, 278, 287, 290, 293, 293, 295, 298, 298, 301, 303, 305,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Mysterious Hat&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Mysterious Hat&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mysterious-hat.html" property="og:url">
+	<meta content="Rank by game in top 20: 3607&#10;Rank by ilScore: 12466&#10;&#10;1 games&#10;&bull; Lucas Symphony | MJ 10: Micro | rank: 16 | ilscore: 24&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Mysterious Hat</h1>
+		<a href="https://mysterious-hat.itch.io">mysterious-hat.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3607</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12466</p>
+		<p>Total ilScore: 24</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mysterious-hat.itch.io/lucas-symphony">Lucas Symphony</a></td>
+				<td><span class="early">5h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-10-micro-">MJ 10: Micro</a></td>
+				<td>22</td>
+				<td>16</td>
+				<td>6</td>
+				<td>24</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				87, 95, 104, 104, 126, 140, 146, 150, 167, 178, 189, 195, 203, 232, 253, 277, 286, 290, 303, 317, 334, 343, 356, 376, 389, 395, 412, 416, 429, 442, 458, 471, 485, 494, 507, 526, 536, 552, 568, 577,
+				599, 629, 653, 672, 688, 707, 723, 746, 772, 797, 803, 814, 839, 868, 895, 924, 936, 951, 974, 989, 1006, 1032, 1055, 1074, 1088, 1107, 1132, 1152, 1170, 1187, 1211, 1232, 1250, 1263, 1285, 1302, 1324, 1343, 1367, 1387,
+				1412, 1431, 1457, 1473, 1496, 1512, 1531, 1553, 1577, 1592, 1616, 1631, 1649, 1674, 1700, 1712, 1732, 1753, 1765, 1781, 1800, 1820, 1835, 1854, 1872, 1894, 1916, 1939, 1945, 1969, 1986, 2007, 2025, 2045, 2074, 2097, 2119, 2135, 2153, 2180,
+				2196, 2216, 2231, 2253, 2267, 2293, 2313, 2332, 2357, 2378, 2397, 2420, 2434, 2462, 2470, 2490, 2515, 2533, 2555, 2576, 2600, 2623, 2643, 2659, 2681, 2699, 2711, 2729, 2758, 2790, 2812, 2832, 2853, 2873, 2894, 2909, 2926, 2949, 2989, 3003,
+				3018, 3031, 3056, 3070, 3085, 3110, 3134, 3156, 3179, 3196, 3227, 3247, 3271, 3300, 3324, 3350, 3374, 3404, 3422, 3441, 3468, 3487, 3513, 3538, 3570, 3589, 3606,
+			]],
+			[ "ilscore", [
+				72, 78, 87, 87, 109, 123, 127, 127, 150, 162, 174, 176, 179, 237, 276, 312, 320, 327, 344, 359, 386, 392, 412, 448, 463, 463, 489, 489, 499, 511, 533, 547, 565, 570, 586, 628, 660, 699, 718, 722,
+				838, 938, 960, 1027, 1068, 1148, 1206, 1325, 1365, 1412, 1416, 1426, 1495, 1541, 1698, 1815, 1819, 1861, 1967, 2014, 2063, 2119, 2202, 2247, 2324, 2376, 2551, 2611, 2699, 2790, 2903, 2954, 3109, 3217, 3273, 3320, 3407, 3538, 3689, 3775,
+				3914, 3997, 4095, 4161, 4221, 4325, 4419, 4452, 4523, 4563, 4614, 4697, 4786, 5004, 5124, 5234, 5257, 5378, 5457, 5560, 5815, 5878, 6067, 6159, 6337, 6707, 6788, 6887, 6890, 6936, 6959, 6989, 7138, 7261, 7357, 7393, 7489, 7513, 7688, 7774,
+				7828, 7875, 7961, 8067, 8116, 8302, 8325, 8355, 8460, 8548, 8590, 8616, 8626, 8774, 8779, 8804, 8842, 8872, 8901, 8945, 9001, 9080, 9113, 9140, 9178, 9311, 9437, 9514, 9554, 9731, 9786, 9880, 9949, 10046, 10073, 10169, 10258, 10283, 10417, 10453,
+				10506, 10527, 10720, 10763, 10778, 10811, 10841, 10883, 10909, 10966, 11059, 11175, 11243, 11293, 11365, 11436, 11506, 11593, 11664, 11749, 11827, 11916, 12095, 12166, 12292, 12375, 12465,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

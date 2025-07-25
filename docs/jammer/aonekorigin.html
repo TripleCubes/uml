@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Aonekorigin&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Aonekorigin&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/aonekorigin.html" property="og:url">
+	<meta content="Rank by ilScore: 7382&#10;&#10;2 games&#10;&bull; Hell Escape | MJ 69: Hell | rank: 47 | ilscore: 60&#10;&bull; The Abuelita | MJ 13: Villains | rank: 9999999 | ilscore: 0&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Aonekorigin</h1>
+		<a href="https://aonekorigin.itch.io">aonekorigin.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7382</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yuulo-sm.itch.io/hell-escape">Hell Escape</a></td>
+				<td><span class="early">18m 40s early</span></td>
+				<td>
+					<a href="../jammer/yuulo-sm.html">yuulo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>47</td>
+				<td>11</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://aonekorigin.itch.io/theabuelita">The Abuelita</a></td>
+				<td><span class="early">13m 22s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-13-villains-">MJ 13: Villains</a></td>
+				<td>23</td>
+				<td>&#x1F352;</td>
+				<td>11</td>
+				<td>&#x1F30A;</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				159, 184, 201, 207, 211, 239, 258, 275, 283, 289, 351, 392, 432, 447, 464, 493, 512, 535, 550, 574, 619, 635, 644, 675, 680, 698, 718, 742, 764, 783, 796, 818, 861, 893, 933, 956, 965, 1081, 1183, 1208,
+				1273, 1314, 1398, 1457, 1577, 1617, 1666, 1678, 1689, 1759, 1808, 1970, 2087, 2093, 2137, 2243, 2290, 2339, 2395, 940, 953, 1008, 1033, 1172, 1196, 1242, 1317, 1401, 1413, 1552, 1636, 1651, 1664, 1728, 1838, 1955, 1998, 2090, 2134, 2199,
+				2227, 2246, 2305, 2374, 2376, 2433, 2444, 2452, 2496, 2556, 2739, 2835, 2909, 2915, 3006, 3047, 3133, 3355, 3395, 3552, 3623, 3750, 4057, 4122, 4178, 4178, 4185, 4191, 4196, 4305, 4393, 4424, 4436, 4496, 4497, 4632, 4696, 4712, 4735, 4801,
+				4877, 4898, 5051, 5061, 5066, 5133, 5192, 5211, 5219, 5222, 5330, 5330, 5333, 5339, 5344, 5353, 5373, 5385, 5424, 5430, 5439, 5444, 5538, 5623, 5657, 5667, 5819, 5846, 5895, 5924, 5984, 5989, 6061, 6115, 6125, 6219, 6230, 6249, 6254, 6409,
+				6418, 6422, 6425, 6429, 6436, 6445, 6464, 6529, 6614, 6647, 6664, 6710, 6750, 6784, 6845, 6877, 6943, 7000, 7057, 7175, 7199, 7290, 7336, 7381,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

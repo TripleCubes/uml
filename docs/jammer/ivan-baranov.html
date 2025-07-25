@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ivan_baranov&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ivan_baranov&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ivan-baranov.html" property="og:url">
+	<meta content="Rank by game in top 5: 648&#10;Rank by game in top 10: 871&#10;Rank by game in top 20: 1236&#10;Rank by ilScore: 1678&#10;&#10;2 games&#10;&bull; Demon of destruction | MJ 87: Break | rank: 4 | ilscore: 82&#10;&bull; Power Tower | MJ 73: Power | rank: 135 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ivan_baranov</h1>
+		<a href="https://ivan-baranov.itch.io">ivan-baranov.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 648</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 871</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1236</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1678</p>
+		<p>Total ilScore: 135</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ivan-baranov.itch.io/demon-of-destruction">Demon of destruction</a></td>
+				<td><span class="early">10h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-87-break">MJ 87: Break</a></td>
+				<td>104</td>
+				<td>4</td>
+				<td>20</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://ivan-baranov.itch.io/power-tower">Power Tower</a></td>
+				<td><span class="early">7h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>135</td>
+				<td>5</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				248, 255, 261, 264, 267, 272, 276, 277, 282, 282, 282, 287, 292, 303, 307, 307, 314, 317, 318, 325, 325, 329, 332, 336, 342, 352, 356, 356, 357, 361, 369, 373, 381, 381, 385, 393, 393, 398, 408, 411,
+				419, 423, 425, 430, 431, 433, 433, 439, 445, 447, 447, 447, 452, 456, 461, 468, 469, 476, 480, 480, 482, 482, 484, 486, 492, 494, 500, 507, 517, 518, 521, 523, 527, 528, 533, 538, 539, 547, 549, 554,
+				558, 564, 567, 567, 567, 567, 569, 571, 573, 584, 589, 591, 593, 597, 599, 600, 604, 605, 610, 612, 620, 630, 630, 637, 644, 647,
+			]],
+			[ "10", [
+				335, 342, 347, 351, 353, 358, 362, 363, 368, 368, 371, 376, 380, 395, 400, 401, 409, 413, 417, 426, 426, 434, 442, 450, 462, 474, 484, 484, 484, 488, 495, 499, 508, 508, 514, 522, 524, 529, 551, 554,
+				563, 577, 580, 588, 589, 592, 594, 606, 613, 615, 616, 618, 623, 627, 631, 638, 639, 646, 650, 651, 654, 654, 656, 659, 665, 669, 677, 684, 697, 698, 701, 704, 713, 714, 720, 725, 729, 743, 746, 751,
+				758, 771, 774, 777, 777, 778, 780, 782, 785, 796, 802, 805, 807, 812, 814, 814, 820, 824, 830, 832, 845, 855, 855, 859, 866, 870,
+			]],
+			[ "20", [
+				462, 469, 478, 483, 490, 496, 501, 502, 509, 515, 517, 521, 526, 552, 558, 562, 568, 573, 578, 591, 595, 605, 615, 623, 645, 657, 670, 670, 670, 678, 689, 693, 710, 712, 722, 733, 737, 744, 766, 774,
+				786, 800, 804, 813, 815, 818, 820, 835, 843, 846, 850, 854, 858, 860, 865, 875, 878, 888, 896, 899, 904, 909, 916, 921, 927, 931, 939, 949, 964, 968, 979, 981, 991, 997, 1010, 1018, 1024, 1045, 1049, 1057,
+				1067, 1080, 1085, 1095, 1096, 1098, 1102, 1107, 1111, 1123, 1131, 1135, 1140, 1147, 1154, 1163, 1169, 1174, 1179, 1182, 1195, 1208, 1209, 1214, 1226, 1235,
+			]],
+			[ "ilscore", [
+				1392, 1432, 1483, 1559, 1656, 1681, 1825, 1914, 1939, 1961, 2026, 2141, 2270, 2317, 2425, 402, 407, 411, 417, 438, 448, 452, 463, 471, 480, 484, 496, 528, 561, 580, 580, 597, 609, 624, 664, 678, 715, 740, 769, 824,
+				843, 859, 859, 865, 869, 877, 900, 919, 925, 933, 945, 950, 976, 995, 1012, 1025, 1039, 1059, 1066, 1098, 1107, 1118, 1138, 1154, 1162, 1168, 1168, 1184, 1184, 1185, 1189, 1189, 1192, 1200, 1208, 1215, 1218, 1220, 1224, 1235,
+				1247, 1258, 1262, 1294, 1311, 1320, 1325, 1337, 1340, 1361, 1377, 1383, 1401, 1405, 1415, 1422, 1445, 1446, 1448, 1450, 1452, 1457, 1457, 1460, 1473, 1494, 1508, 1514, 1522, 1532, 1543, 1548, 1558, 1578, 1594, 1610, 1631, 1637, 1654, 1667,
+				1677,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

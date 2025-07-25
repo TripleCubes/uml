@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Pepotrouille&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Pepotrouille&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pepotrouille.html" property="og:url">
+	<meta content="Rank by game in top 20: 2596&#10;Rank by ilScore: 1313&#10;&#10;2 games&#10;&bull; Sisyphus and the Pumpkin | MJ 89: Pumpkin | rank: 17 | ilscore: 65&#10;&bull; Golden Retriever | MJ 85: Gold | rank: 26 | ilscore: 87&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Pepotrouille</h1>
+		<a href="https://pepotrouille.itch.io">pepotrouille.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2596</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1313</p>
+		<p>Total ilScore: 153</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pepotrouille.itch.io/sisyphus-and-the-pumpkin">Sisyphus and the Pumpkin</a></td>
+				<td><span class="early">8h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>17</td>
+				<td>23</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://pepotrouille.itch.io/golden-retriever">Golden Retriever</a></td>
+				<td><span class="early">6h 59m early</span></td>
+				<td>
+					<a href="../jammer/kiminako.html">Kimi</a>,
+					<a href="../jammer/1erradiant.html">1erRadiant</a>,
+					<a href="../jammer/paul-arthursauvageot.html">paul-arthur.sauvageot</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>26</td>
+				<td>31</td>
+				<td>87</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1018, 1035, 1053, 1069, 1077, 1097, 1109, 1115, 1128, 1146, 1172, 1201, 1214, 1219, 1240, 1254, 1270, 1289, 1309, 1324, 1343, 1361, 1383, 1405, 1428, 1429, 1443, 1452, 1464, 1482, 1502, 1515, 1524, 1546, 1550, 1568, 1598, 1611, 1627, 1644,
+				1666, 1681, 1707, 1712, 1715, 1743, 1765, 1773, 1779, 1783, 1811, 1814, 1816, 1820, 1823, 1835, 1854, 1863, 1883, 1892, 1904, 1919, 1937, 1951, 1967, 1987, 2019, 2035, 2044, 2054, 2073, 2085, 2104, 2122, 2138, 2178, 2182, 2193, 2204, 2229,
+				2236, 2240, 2243, 2252, 2255, 2263, 2271, 2299, 2319, 2332, 2347, 2370, 2386, 2411, 2430, 2444, 2464, 2485, 2506, 2532, 2547, 2568, 2582, 2595,
+			]],
+			[ "ilscore", [
+				806, 820, 857, 870, 891, 299, 306, 321, 328, 331, 337, 341, 346, 349, 356, 382, 415, 434, 434, 444, 450, 458, 489, 500, 530, 550, 574, 616, 632, 646, 646, 650, 654, 658, 674, 691, 695, 702, 707, 710,
+				727, 746, 760, 769, 788, 803, 812, 835, 844, 852, 869, 883, 893, 898, 899, 913, 913, 913, 916, 916, 921, 924, 931, 936, 938, 940, 942, 951, 964, 971, 974, 1003, 1015, 1021, 1024, 1035, 1041, 1060, 1075, 1080,
+				1098, 1101, 1109, 1114, 1134, 1136, 1140, 1142, 1143, 1147, 1147, 1150, 1159, 1170, 1178, 1184, 1190, 1195, 1207, 1217, 1224, 1236, 1244, 1260, 1276, 1282, 1294, 1303, 1312,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

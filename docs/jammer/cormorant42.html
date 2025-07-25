@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Cormorant42&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Cormorant42&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cormorant42.html" property="og:url">
+	<meta content="Rank by game in top 20: 3052&#10;Rank by ilScore: 9205&#10;&#10;1 games&#10;&bull; Pixel Mural RPG 2K2D | MJ 61: Ancient Egypt | rank: 13 | ilscore: 48&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Cormorant42</h1>
+		<a href="https://cormorant42.itch.io">cormorant42.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3052</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9205</p>
+		<p>Total ilScore: 48</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cormorant42.itch.io/pixel-mural-rpg-2k2d">Pixel Mural RPG 2K2D</a></td>
+				<td><span class="late">55m 58s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-61">MJ 61: Ancient Egypt</a></td>
+				<td>49</td>
+				<td>13</td>
+				<td>13</td>
+				<td>48</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				608, 635, 664, 672, 686, 710, 726, 742, 768, 791, 803, 817, 834, 859, 879, 898, 915, 939, 954, 974, 987, 1001, 1017, 1039, 1059, 1084, 1104, 1129, 1148, 1174, 1191, 1213, 1229, 1248, 1263, 1287, 1303, 1316, 1331, 1349,
+				1374, 1400, 1413, 1421, 1442, 1455, 1471, 1490, 1511, 1526, 1545, 1563, 1585, 1607, 1630, 1633, 1649, 1658, 1679, 1697, 1717, 1731, 1745, 1767, 1775, 1793, 1823, 1840, 1860, 1876, 1898, 1913, 1939, 1951, 1960, 1985, 2006, 2020, 2032, 2038,
+				2066, 2068, 2072, 2085, 2091, 2102, 2126, 2139, 2163, 2177, 2194, 2211, 2229, 2241, 2259, 2285, 2317, 2340, 2361, 2379, 2399, 2414, 2431, 2448, 2469, 2509, 2515, 2533, 2543, 2568, 2580, 2587, 2602, 2612, 2618, 2631, 2646, 2678, 2698, 2723,
+				2744, 2768, 2795, 2820, 2850, 2868, 2887, 2914, 2935, 2961, 2982, 3014, 3034, 3051,
+			]],
+			[ "ilscore", [
+				801, 939, 1040, 1042, 1058, 1151, 1175, 1202, 1238, 1297, 1330, 1395, 1426, 1591, 1633, 1698, 1770, 1869, 1900, 2053, 2147, 2183, 2213, 2286, 2407, 2543, 2600, 2714, 2773, 2858, 2900, 2941, 3013, 3084, 3091, 3154, 3173, 3199, 3260, 3327,
+				3518, 3623, 3711, 3719, 3825, 3885, 3983, 4219, 4268, 4434, 4512, 4657, 4992, 5060, 5130, 5130, 5150, 5155, 5167, 5284, 5388, 5443, 5456, 5533, 5542, 5684, 5755, 5786, 5819, 5897, 5986, 6021, 6187, 6204, 6214, 6301, 6373, 6402, 6408, 6409,
+				6532, 6532, 6536, 6542, 6550, 6562, 6596, 6630, 6693, 6709, 6720, 6734, 6842, 6949, 7005, 7032, 7190, 7225, 7292, 7344, 7425, 7441, 7526, 7592, 7610, 7731, 7744, 7789, 7799, 7977, 7997, 7997, 8002, 8003, 8020, 8028, 8062, 8141, 8231, 8276,
+				8300, 8360, 8421, 8476, 8551, 8592, 8662, 8727, 8798, 8937, 8980, 9086, 9147, 9204,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

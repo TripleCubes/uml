@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Candypaint&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Candypaint&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/candypaint.html" property="og:url">
+	<meta content="Rank by ilScore: 631&#10;&#10;3 games&#10;&bull; MeltDown | MJ 92: Death | rank: 21 | ilscore: 74&#10;&bull; Underwater Floating Object | MJ 91: UFO | rank: 23 | ilscore: 78&#10;&bull; Blind Travels | MJ 88: Rush | rank: 49 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Candypaint</h1>
+		<a href="https://candypaint.itch.io">candypaint.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 631</p>
+		<p>Total ilScore: 218</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://airfutureguy1.itch.io/meltdown">MeltDown</a></td>
+				<td><span class="early">4h 4m early</span></td>
+				<td>
+					<a href="../jammer/airfutureguy1.html">airfutureguy1</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>21</td>
+				<td>13</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://airfutureguy1.itch.io/underwater-floating-object">Underwater Floating Object</a></td>
+				<td><span class="early">8h 42m early</span></td>
+				<td>
+					<a href="../jammer/airfutureguy1.html">airfutureguy1</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>23</td>
+				<td>23</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://candypaint.itch.io/blind-travels">Blind Travels</a></td>
+				<td><span class="early">3m 32s early</span></td>
+				<td>
+					<a href="../jammer/airfutureguy1.html">airfutureguy1</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>49</td>
+				<td>14</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1823, 1843, 1852, 371, 135, 135, 139, 146, 148, 152, 154, 167, 186, 195, 196, 200, 203, 207, 219, 224, 240, 248, 253, 275, 281, 285, 285, 285, 288, 291, 301, 305, 310, 311, 315, 316, 323, 333, 338, 345,
+				352, 362, 369, 381, 382, 384, 393, 399, 404, 404, 405, 416, 416, 416, 416, 418, 418, 419, 421, 424, 430, 431, 432, 440, 446, 451, 456, 468, 469, 477, 481, 486, 490, 499, 510, 513, 525, 530, 534, 537,
+				548, 552, 555, 556, 556, 557, 559, 561, 564, 567, 573, 576, 576, 580, 583, 588, 591, 593, 598, 605, 610, 613, 618, 623, 630,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

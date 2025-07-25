@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>tete&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="tete&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tete-dev.html" property="og:url">
+	<meta content="Rank by ilScore: 1069&#10;&#10;2 games&#10;&bull; Cosmic Golf | MJ+ 4: Cosmic | rank: 21 | ilscore: 83&#10;&bull; Battery Color | MJ 73: Power | rank: 39 | ilscore: 86&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>tete</h1>
+		<a href="https://tete-dev.itch.io">tete-dev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1069</p>
+		<p>Total ilScore: 169</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://tete-dev.itch.io/cosmic-golf">Cosmic Golf</a></td>
+				<td><span class="early">3h 33m early</span></td>
+				<td>
+					<a href="../jammer/felkymike.html">FelkyMike</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>21</td>
+				<td>11</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://tete-dev.itch.io/battery-color">Battery Color</a></td>
+				<td><span class="early">5h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>39</td>
+				<td>11</td>
+				<td>86</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				484, 496, 508, 537, 558, 569, 659, 697, 716, 725, 745, 793, 849, 863, 216, 220, 229, 235, 240, 253, 259, 262, 267, 270, 274, 275, 280, 298, 332, 347, 348, 351, 355, 359, 389, 398, 420, 441, 459, 494,
+				505, 517, 517, 521, 525, 528, 546, 556, 562, 569, 575, 576, 592, 609, 620, 626, 645, 654, 662, 681, 684, 689, 703, 711, 721, 722, 725, 739, 741, 745, 748, 750, 755, 759, 762, 767, 769, 771, 772, 777,
+				787, 791, 793, 816, 819, 824, 827, 840, 845, 865, 877, 881, 896, 899, 903, 906, 921, 925, 927, 928, 929, 934, 934, 938, 944, 951, 960, 969, 970, 974, 982, 992, 999, 1009, 1016, 1023, 1035, 1039, 1053, 1059,
+				1068,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

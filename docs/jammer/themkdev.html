@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TheMKDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TheMKDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/themkdev.html" property="og:url">
+	<meta content="Rank by game in top 10: 1638&#10;Rank by game in top 20: 80&#10;Rank by ilScore: 388&#10;&#10;6 games&#10;&bull; Rain Drop Drop | MJ 173: Action | rank: 18 | ilscore: 55&#10;&bull; Spell-evator | MJ 171: Mystic | rank: 7 | ilscore: 56&#10;&bull; An Eye For The Sky | MJ 169: Future | rank: 19 | ilscore: 40&#10;&bull; Sosigian Surf | MJ 168: Retro | rank: 11 | ilscore: 37&#10;&bull; Frog&#39;s Climb | MJ 120: Hell | rank: 20 | ilscore: 48&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TheMKDev</h1>
+		<a href="https://themkdev.itch.io">themkdev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1638</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 80</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>11</span>
+			<span>18</span>
+			<span>19</span>
+			<span>20</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 388</p>
+		<p>Total ilScore: 273</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://themkdev.itch.io/raindropdrop">Rain Drop Drop</a></td>
+				<td><span class="early">7h 37m early</span></td>
+				<td>
+					<a href="../jammer/detective-nuts.html">Detective Nuts</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-173-action">MJ 173: Action</a></td>
+				<td>67</td>
+				<td>18</td>
+				<td>14</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://themkdev.itch.io/spell-evator">Spell-evator</a></td>
+				<td><span class="early">1h 24m early</span></td>
+				<td>
+					<a href="../jammer/detective-nuts.html">Detective Nuts</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-171-mystic">MJ 171: Mystic</a></td>
+				<td>56</td>
+				<td>7</td>
+				<td>10</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://themkdev.itch.io/an-eye-for-the-sky">An Eye For The Sky</a></td>
+				<td><span class="early">3h early</span></td>
+				<td>
+					<a href="../jammer/detective-nuts.html">Detective Nuts</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-169-future">MJ 169: Future</a></td>
+				<td>43</td>
+				<td>19</td>
+				<td>13</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://themkdev2.itch.io/sosigian-surf">Sosigian Surf</a></td>
+				<td><span class="early">2h 53m early</span></td>
+				<td>
+					<a href="../jammer/themkdev2.html">TheMKDev2</a>,
+					<a href="../jammer/detective-nuts.html">Detective Nuts</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-168-retro">MJ 168: Retro</a></td>
+				<td>37</td>
+				<td>11</td>
+				<td>9</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://themkdev.itch.io/fc">Frog&#39;s Climb</a></td>
+				<td><span class="early">5h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>20</td>
+				<td>16</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://themkdev.itch.io/sm">Shotgun Mayham</a></td>
+				<td><span class="early">8h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>22</td>
+				<td>11</td>
+				<td>37</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1416, 1424, 1431, 1449, 1458, 1468, 1484, 1495, 1506, 1519, 1536, 1546, 1555, 1570, 1581, 1594, 1600, 1617, 1625, 1637,
+			]],
+			[ "20", [
+				1892, 1914, 1924, 1942, 1969, 1985, 2005, 2021, 2043, 2057, 2083, 2102, 2115, 2140, 2161, 2180, 2196, 2203, 2231, 2235, 2244, 2263, 2276, 2291, 2312, 2332, 2356, 2373, 2391, 2412, 2430, 2442, 2460, 2489, 2521, 2543, 2563, 2584, 2604, 2620,
+				2636, 2653, 2675, 2715, 2726, 2742, 2753, 2778, 2792, 636, 221, 223, 118, 119, 67, 67, 68, 70, 70, 71, 72, 73, 74, 74, 74, 77, 77, 77, 77, 78, 79, 79,
+			]],
+			[ "ilscore", [
+				6116, 6136, 6271, 6390, 6467, 2258, 2285, 2290, 2374, 2409, 2423, 2441, 2467, 2496, 2510, 2609, 2624, 2627, 2651, 2673, 2688, 2694, 2698, 2728, 2732, 2737, 2745, 2748, 2752, 2765, 2773, 2779, 2790, 2800, 2810, 2849, 2875, 2893, 2899, 2996,
+				3014, 3034, 3047, 3067, 3076, 3097, 3123, 3134, 3178, 3185, 3201, 3206, 3292, 3299, 1706, 1009, 1009, 554, 556, 346, 346, 349, 351, 351, 354, 355, 361, 365, 368, 371, 372, 374, 376, 376, 378, 382, 387,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>rem23&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="rem23&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rem23.html" property="og:url">
+	<meta content="Rank by ilScore: 1853&#10;&#10;3 games&#10;&bull; Light The Way | MJ 150: Magic | rank: 90 | ilscore: 51&#10;&bull; Cat Burglar | MJ 127: Cats | rank: 90 | ilscore: 50&#10;&bull; Feeding the Family | MJ 123: Web | rank: 202 | ilscore: 26&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>rem23</h1>
+		<a href="https://rem23.itch.io">rem23.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1853</p>
+		<p>Total ilScore: 127</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rem23.itch.io/light-the-way">Light The Way</a></td>
+				<td><span class="early">2h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>90</td>
+				<td>6</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://rem23.itch.io/cat-burglar">Cat Burglar</a></td>
+				<td><span class="early">1h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>90</td>
+				<td>9</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://rem23.itch.io/feeding-the-family">Feeding the Family</a></td>
+				<td><span class="early">17m 38s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>202</td>
+				<td>3</td>
+				<td>26</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				7593, 7678, 7732, 7776, 3203, 3248, 3263, 3391, 3403, 3406, 3449, 3485, 3501, 3508, 3510, 3576, 3580, 3583, 3591, 3595, 3604, 3613, 3622, 3629, 3640, 3653, 3660, 3720, 1392, 1407, 1412, 1444, 1464, 1474, 1481, 1491, 1495, 1515, 1535, 1542,
+				1560, 1563, 1574, 1579, 1600, 1601, 1605, 1609, 1610, 1616, 1617, 1619, 1631, 1652, 1666, 1675, 1684, 1696, 1711, 1715, 1725, 1745, 1762, 1779, 1798, 1806, 1822, 1839, 1852,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

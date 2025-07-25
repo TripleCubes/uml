@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>lukefoster11&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="lukefoster11&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lukefoster11.html" property="og:url">
+	<meta content="Rank by game in top 20: 1610&#10;Rank by ilScore: 3200&#10;&#10;1 games&#10;&bull; BubbleQuest | MJ 84: Bubbles | rank: 14 | ilscore: 91&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>lukefoster11</h1>
+		<a href="https://lukefoster11.itch.io">lukefoster11.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1610</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3200</p>
+		<p>Total ilScore: 91</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lukefoster11.itch.io/bubblequest">BubbleQuest</a></td>
+				<td><span class="early">3h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>14</td>
+				<td>11</td>
+				<td>91</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				578, 586, 591, 605, 611, 620, 633, 640, 645, 653, 660, 663, 671, 677, 685, 690, 704, 733, 744, 750, 767, 778, 784, 803, 811, 822, 835, 850, 873, 890, 904, 905, 910, 919, 927, 936, 953, 960, 970, 987,
+				992, 1004, 1027, 1037, 1048, 1064, 1073, 1079, 1090, 1093, 1097, 1111, 1124, 1127, 1129, 1136, 1149, 1151, 1153, 1159, 1160, 1171, 1181, 1184, 1191, 1195, 1201, 1208, 1224, 1232, 1240, 1251, 1269, 1273, 1282, 1286, 1299, 1305, 1323, 1333,
+				1337, 1363, 1365, 1373, 1382, 1402, 1408, 1414, 1416, 1419, 1424, 1434, 1437, 1450, 1464, 1470, 1476, 1485, 1491, 1502, 1511, 1517, 1526, 1541, 1553, 1572, 1575, 1583, 1598, 1609,
+			]],
+			[ "ilscore", [
+				679, 718, 735, 765, 779, 799, 811, 818, 837, 857, 867, 881, 895, 899, 915, 937, 1058, 1112, 1133, 1142, 1178, 1198, 1216, 1371, 1385, 1452, 1484, 1558, 1793, 1807, 1820, 1820, 1823, 1830, 1835, 1886, 1913, 1928, 1940, 1958,
+				1966, 2038, 2062, 2079, 2097, 2114, 2138, 2152, 2225, 2235, 2242, 2260, 2284, 2300, 2305, 2310, 2328, 2331, 2336, 2343, 2346, 2350, 2363, 2370, 2376, 2386, 2394, 2404, 2428, 2452, 2470, 2479, 2567, 2588, 2608, 2622, 2634, 2643, 2660, 2681,
+				2689, 2721, 2726, 2741, 2746, 2820, 2826, 2834, 2841, 2844, 2851, 2857, 2868, 2888, 2922, 2936, 2951, 2971, 2987, 2997, 3007, 3018, 3044, 3072, 3096, 3127, 3141, 3162, 3181, 3199,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

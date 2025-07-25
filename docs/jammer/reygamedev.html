@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ReyGameDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ReyGameDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/reygamedev.html" property="og:url">
+	<meta content="Rank by ilScore: 220&#10;&#10;6 games&#10;&bull; Mari&#39;s Adventure | MJ 108: Seaside | rank: 47 | ilscore: 92&#10;&bull; Mini Gravity | MJ 107: Music | rank: 58 | ilscore: 50&#10;&bull; Jump Over It! | MJ 106: Frogs | rank: 173 | ilscore: 74&#10;&bull; Corrupted Cube | MJ 105: Dreamy | rank: 107 | ilscore: 52&#10;&bull; Planet Overload | MJ 100: Overload | rank: 134 | ilscore: 54&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ReyGameDev</h1>
+		<a href="https://reygamedev.itch.io">reygamedev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 220</p>
+		<p>Total ilScore: 361</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/maris-adventure">Mari&#39;s Adventure</a></td>
+				<td><span class="early">1h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>47</td>
+				<td>21</td>
+				<td>92</td>
+			</tr>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/mini-gravity">Mini Gravity</a></td>
+				<td><span class="early">15h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>58</td>
+				<td>14</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/jump-over-it">Jump Over It!</a></td>
+				<td><span class="early">20h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>173</td>
+				<td>10</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/corrupted-cube">Corrupted Cube</a></td>
+				<td><span class="early">20h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>107</td>
+				<td>6</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/planet-overload">Planet Overload</a></td>
+				<td><span class="early">17h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>134</td>
+				<td>17</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://reygamedev.itch.io/fly-high">Fly High!</a></td>
+				<td><span class="early">14h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>236</td>
+				<td>3</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4175, 1068, 1086, 1095, 1124, 1143, 526, 217, 139, 91, 94, 98, 104, 107, 108, 108, 108, 108, 109, 113, 116, 117, 120, 121, 122, 125, 126, 128, 128, 131, 134, 139, 142, 143, 144, 147, 148, 148, 148, 148,
+				148, 148, 149, 149, 149, 150, 152, 155, 155, 156, 156, 156, 158, 159, 160, 160, 161, 162, 162, 162, 164, 166, 168, 169, 170, 172, 176, 179, 179, 182, 184, 184, 184, 184, 184, 184, 185, 189, 191, 196,
+				196, 196, 198, 198, 204, 206, 208, 210, 210, 214, 215, 216, 218, 219,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

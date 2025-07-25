@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NxhzGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NxhzGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nxhzgames.html" property="og:url">
+	<meta content="Rank by game in top 5: 1055&#10;Rank by game in top 10: 1798&#10;Rank by game in top 20: 2776&#10;Rank by ilScore: 2415&#10;&#10;2 games&#10;&bull; Severed wire | MJ 132: Severed | rank: 4 | ilscore: 54&#10;&bull; Poison from the lab | MJ 129: Poison | rank: 38 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NxhzGames</h1>
+		<a href="https://nxhzgames.itch.io">nxhzgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1055</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1798</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2776</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2415</p>
+		<p>Total ilScore: 107</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nxhzgames.itch.io/severed-wire">Severed wire</a></td>
+				<td><span class="early">10h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>4</td>
+				<td>16</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://nxhzgames.itch.io/poison-from-the-lab">Poison from the lab</a></td>
+				<td><span class="early">6h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>38</td>
+				<td>11</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				702, 707, 713, 718, 723, 727, 736, 738, 743, 750, 753, 760, 766, 772, 777, 783, 791, 801, 807, 809, 813, 820, 830, 841, 846, 851, 855, 862, 866, 872, 878, 886, 890, 893, 899, 905, 909, 909, 912, 920,
+				923, 930, 937, 948, 953, 957, 963, 968, 974, 983, 993, 996, 1001, 1012, 1020, 1027, 1032, 1039, 1049, 1054,
+			]],
+			[ "10", [
+				1168, 1183, 1194, 1202, 1208, 1212, 1226, 1230, 1234, 1250, 1253, 1264, 1280, 1289, 1300, 1312, 1324, 1339, 1347, 1353, 1361, 1382, 1399, 1413, 1421, 1430, 1441, 1453, 1463, 1475, 1491, 1504, 1511, 1517, 1526, 1538, 1543, 1543, 1548, 1556,
+				1564, 1571, 1579, 1597, 1605, 1615, 1631, 1642, 1654, 1669, 1687, 1696, 1705, 1720, 1731, 1744, 1755, 1772, 1785, 1797,
+			]],
+			[ "20", [
+				1805, 1832, 1854, 1864, 1872, 1876, 1904, 1907, 1910, 1922, 1925, 1937, 1959, 1970, 1994, 2007, 2019, 2035, 2053, 2067, 2085, 2105, 2137, 2158, 2175, 2187, 2207, 2219, 2238, 2255, 2273, 2313, 2318, 2330, 2341, 2366, 2374, 2378, 2384, 2392,
+				2398, 2406, 2414, 2446, 2466, 2487, 2502, 2526, 2542, 2567, 2587, 2606, 2625, 2646, 2667, 2693, 2711, 2743, 2758, 2775,
+			]],
+			[ "ilscore", [
+				5448, 5605, 5618, 1644, 1664, 1689, 1704, 1704, 1708, 1727, 1727, 1729, 1737, 1740, 1745, 1755, 1762, 1768, 1776, 1779, 1790, 1801, 1820, 1840, 1849, 1892, 1919, 1938, 1949, 1958, 1968, 1985, 2007, 2014, 2031, 2033, 2048, 2051, 2080, 2086,
+				2094, 2099, 2100, 2106, 2108, 2114, 2130, 2161, 2178, 2189, 2203, 2219, 2231, 2238, 2250, 2274, 2297, 2319, 2341, 2356, 2378, 2397, 2414,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

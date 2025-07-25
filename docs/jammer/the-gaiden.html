@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>The Gaiden&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="The Gaiden&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/the-gaiden.html" property="og:url">
+	<meta content="Rank by game in top 20: 1880&#10;Rank by ilScore: 5271&#10;&#10;1 games&#10;&bull; Fyz and Now in Olympic Games of Tartarus | MJ 71: Puzzles | rank: 12 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>The Gaiden</h1>
+		<a href="https://the-gaiden.itch.io">the-gaiden.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1880</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5271</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://the-gaiden.itch.io/fyz-and-now">Fyz and Now in Olympic Games of Tartarus</a></td>
+				<td><span class="early">3h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>12</td>
+				<td>24</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				506, 512, 538, 548, 560, 579, 581, 588, 610, 624, 631, 636, 651, 671, 680, 687, 706, 713, 728, 738, 746, 755, 765, 773, 784, 790, 797, 806, 811, 834, 863, 875, 880, 897, 909, 915, 934, 950, 966, 981,
+				1000, 1023, 1044, 1059, 1060, 1065, 1072, 1083, 1100, 1117, 1126, 1136, 1154, 1158, 1174, 1201, 1212, 1223, 1241, 1251, 1257, 1271, 1275, 1278, 1297, 1313, 1316, 1319, 1326, 1340, 1342, 1344, 1350, 1351, 1361, 1371, 1376, 1383, 1387, 1396,
+				1402, 1420, 1430, 1440, 1452, 1475, 1482, 1490, 1495, 1509, 1516, 1538, 1550, 1557, 1592, 1593, 1601, 1610, 1636, 1642, 1646, 1648, 1651, 1655, 1665, 1671, 1686, 1702, 1708, 1716, 1728, 1735, 1753, 1764, 1769, 1783, 1803, 1818, 1836, 1840,
+				1851, 1866, 1879,
+			]],
+			[ "ilscore", [
+				601, 619, 742, 758, 781, 836, 888, 896, 1018, 1090, 1098, 1107, 1141, 1220, 1323, 1346, 1416, 1429, 1471, 1488, 1495, 1542, 1582, 1588, 1613, 1622, 1628, 1655, 1692, 1866, 1952, 2007, 2014, 2072, 2110, 2159, 2356, 2377, 2500, 2552,
+				2665, 2940, 2967, 2995, 2996, 3000, 3008, 3013, 3103, 3160, 3181, 3193, 3230, 3232, 3344, 3393, 3404, 3424, 3467, 3522, 3538, 3669, 3680, 3684, 3728, 3768, 3783, 3790, 3792, 3874, 3877, 3880, 3887, 3891, 3900, 3912, 3922, 3930, 3942, 3952,
+				3960, 4027, 4071, 4091, 4097, 4230, 4244, 4272, 4291, 4332, 4342, 4393, 4432, 4443, 4508, 4520, 4535, 4541, 4669, 4675, 4677, 4680, 4683, 4688, 4698, 4711, 4744, 4813, 4823, 4835, 4856, 4876, 4887, 4912, 4925, 4983, 5021, 5052, 5153, 5167,
+				5224, 5248, 5270,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

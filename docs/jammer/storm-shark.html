@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Storm Shark&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Storm Shark&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/storm-shark.html" property="og:url">
+	<meta content="Rank by game in top 20: 1907&#10;Rank by ilScore: 3366&#10;&#10;1 games&#10;&bull; Radiant Gardens | MJ 62: Colors | rank: 18 | ilscore: 89&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Storm Shark</h1>
+		<a href="https://storm-shark.itch.io">storm-shark.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1907</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3366</p>
+		<p>Total ilScore: 89</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://storm-shark.itch.io/radiance">Radiant Gardens</a></td>
+				<td><span class="early">1m 53s early</span></td>
+				<td>
+					<a href="../jammer/the-prancing-pony.html">the_prancing_pony</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>18</td>
+				<td>11</td>
+				<td>89</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				392, 414, 424, 434, 451, 460, 467, 484, 498, 502, 514, 520, 546, 556, 568, 587, 589, 596, 618, 632, 639, 644, 659, 679, 688, 699, 719, 726, 741, 751, 759, 768, 778, 786, 798, 805, 812, 822, 827, 853,
+				882, 894, 899, 916, 928, 934, 953, 969, 985, 1000, 1019, 1042, 1063, 1077, 1078, 1083, 1091, 1102, 1119, 1136, 1145, 1155, 1173, 1177, 1193, 1220, 1231, 1242, 1260, 1270, 1276, 1290, 1294, 1297, 1316, 1332, 1335, 1338, 1345, 1359,
+				1361, 1363, 1369, 1370, 1380, 1390, 1395, 1404, 1408, 1417, 1423, 1442, 1452, 1462, 1474, 1498, 1505, 1513, 1518, 1532, 1539, 1559, 1571, 1579, 1614, 1614, 1621, 1631, 1657, 1663, 1667, 1669, 1672, 1676, 1686, 1693, 1708, 1724, 1730, 1739,
+				1751, 1758, 1776, 1787, 1794, 1808, 1828, 1844, 1862, 1867, 1878, 1893, 1906,
+			]],
+			[ "ilscore", [
+				225, 263, 264, 270, 281, 291, 299, 308, 323, 334, 349, 363, 439, 450, 462, 488, 509, 519, 600, 629, 648, 658, 677, 716, 768, 782, 818, 831, 852, 866, 873, 894, 915, 925, 939, 952, 959, 974, 997, 1124,
+				1180, 1202, 1211, 1247, 1267, 1286, 1443, 1457, 1530, 1565, 1651, 1894, 1908, 1919, 1919, 1922, 1930, 1933, 1990, 2017, 2032, 2045, 2067, 2075, 2152, 2175, 2192, 2210, 2228, 2255, 2269, 2357, 2368, 2372, 2392, 2416, 2432, 2438, 2443, 2465,
+				2468, 2473, 2481, 2483, 2486, 2499, 2507, 2513, 2524, 2533, 2543, 2577, 2601, 2619, 2627, 2720, 2738, 2758, 2772, 2785, 2793, 2809, 2832, 2841, 2873, 2880, 2895, 2900, 2981, 2987, 2993, 3000, 3003, 3010, 3017, 3029, 3048, 3087, 3100, 3116,
+				3135, 3150, 3160, 3170, 3181, 3206, 3235, 3258, 3294, 3307, 3328, 3347, 3365,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TeaPot TopHats&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TeaPot TopHats&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/teapottophats.html" property="og:url">
+	<meta content="Rank by ilScore: 2256&#10;&#10;2 games&#10;&bull; RealmShift: Hunters | MJ 133: Fusion | rank: 62 | ilscore: 65&#10;&bull; Ole Iron Lung and the Quest for Davy Jone&#39;s Locker | MJ 108: Seaside | rank: 191 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TeaPot TopHats</h1>
+		<a href="https://teapottophats.itch.io">teapottophats.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2256</p>
+		<p>Total ilScore: 113</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://teapottophats.itch.io/realmshift-hunters">RealmShift: Hunters</a></td>
+				<td><span class="early">42m 24s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>62</td>
+				<td>11</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://maiza989.itch.io/ole-iron-lung-and-the-quest-for-davy-jones-locker">Ole Iron Lung and the Quest for Davy Jone&#39;s Locker</a></td>
+				<td><span class="late">13h 8m late</span></td>
+				<td>
+					<a href="../jammer/maiza989.html">maiza989</a>,
+					<a href="../jammer/jk-bizcuits.html">JK_Bizcuits</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>191</td>
+				<td>5</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4508, 4587, 4733, 5071, 5138, 5208, 5208, 5228, 5232, 5244, 5360, 5465, 5522, 5536, 5618, 5627, 5769, 5840, 5872, 5907, 5985, 6076, 6111, 6279, 6295, 6305, 1547, 1569, 1581, 1586, 1589, 1607, 1607, 1608, 1615, 1617, 1621, 1631, 1639, 1646,
+				1653, 1655, 1664, 1675, 1691, 1709, 1714, 1749, 1773, 1790, 1802, 1814, 1822, 1838, 1860, 1868, 1886, 1889, 1904, 1909, 1932, 1938, 1945, 1948, 1949, 1956, 1957, 1961, 1977, 2008, 2024, 2036, 2048, 2066, 2080, 2087, 2099, 2123, 2145, 2164,
+				2183, 2199, 2221, 2240, 2255,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

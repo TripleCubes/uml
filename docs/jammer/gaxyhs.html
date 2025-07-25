@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Gaxyhs&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Gaxyhs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gaxyhs.html" property="og:url">
+	<meta content="Rank by game in top 20: 2851&#10;Rank by ilScore: 8555&#10;&#10;1 games&#10;&bull; Heavenly Hell | MJ 120: Hell | rank: 12 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Gaxyhs</h1>
+		<a href="https://gaxyhs.itch.io">gaxyhs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2851</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8555</p>
+		<p>Total ilScore: 52</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gaxyhs.itch.io/heavenly-hell">Heavenly Hell</a></td>
+				<td><span class="early">1d 11h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>12</td>
+				<td>9</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1633, 1655, 1659, 1677, 1707, 1724, 1739, 1755, 1777, 1792, 1818, 1828, 1834, 1861, 1883, 1895, 1903, 1909, 1937, 1940, 1943, 1955, 1958, 1970, 1992, 2006, 2030, 2044, 2058, 2074, 2092, 2105, 2123, 2148, 2180, 2203, 2219, 2231, 2251, 2263,
+				2282, 2299, 2317, 2357, 2362, 2378, 2389, 2414, 2424, 2428, 2434, 2443, 2449, 2458, 2469, 2501, 2521, 2546, 2561, 2584, 2601, 2626, 2655, 2675, 2694, 2720, 2741, 2767, 2785, 2817, 2833, 2850,
+			]],
+			[ "ilscore", [
+				5066, 5140, 5144, 5283, 5352, 5373, 5402, 5481, 5566, 5598, 5757, 5770, 5776, 5861, 5926, 5949, 5954, 5956, 6075, 6075, 6079, 6084, 6091, 6102, 6129, 6151, 6207, 6221, 6226, 6237, 6345, 6448, 6501, 6522, 6680, 6712, 6768, 6815, 6890, 6902,
+				6982, 7043, 7060, 7174, 7186, 7224, 7232, 7403, 7420, 7423, 7427, 7428, 7434, 7439, 7469, 7549, 7639, 7682, 7704, 7761, 7814, 7859, 7932, 7971, 8043, 8107, 8174, 8311, 8352, 8451, 8506, 8554,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

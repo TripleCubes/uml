@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>apaphy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="apaphy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/apaphy.html" property="og:url">
+	<meta content="Rank by game in top 20: 2574&#10;Rank by ilScore: 5291&#10;&#10;1 games&#10;&bull; a very normal bike race | MJ 86: Sports | rank: 14 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>apaphy</h1>
+		<a href="https://apaphy.itch.io">apaphy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2574</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5291</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://apaphy.itch.io/bike-race">a very normal bike race</a></td>
+				<td><span class="early">1h 38m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-86-sports">MJ 86: Sports</a></td>
+				<td>104</td>
+				<td>14</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				937, 962, 971, 996, 1012, 1029, 1046, 1062, 1070, 1090, 1102, 1108, 1121, 1139, 1165, 1194, 1207, 1212, 1233, 1247, 1263, 1282, 1302, 1317, 1336, 1354, 1376, 1398, 1421, 1422, 1436, 1445, 1457, 1475, 1495, 1508, 1517, 1539, 1543, 1561,
+				1591, 1604, 1620, 1637, 1659, 1674, 1700, 1705, 1708, 1736, 1758, 1766, 1772, 1776, 1804, 1807, 1809, 1813, 1816, 1828, 1847, 1856, 1876, 1884, 1896, 1910, 1928, 1942, 1958, 1978, 2010, 2025, 2033, 2043, 2062, 2071, 2090, 2108, 2119, 2159,
+				2163, 2174, 2185, 2210, 2217, 2221, 2224, 2233, 2236, 2244, 2252, 2280, 2300, 2313, 2328, 2351, 2367, 2390, 2409, 2423, 2443, 2464, 2485, 2511, 2526, 2547, 2561, 2573,
+			]],
+			[ "ilscore", [
+				1353, 1423, 1436, 1478, 1495, 1502, 1550, 1590, 1596, 1621, 1630, 1636, 1663, 1701, 1874, 1960, 2015, 2022, 2080, 2118, 2170, 2367, 2388, 2511, 2564, 2676, 2951, 2978, 3006, 3007, 3011, 3019, 3024, 3114, 3171, 3192, 3204, 3241, 3243, 3355,
+				3406, 3416, 3436, 3479, 3534, 3550, 3682, 3693, 3697, 3741, 3781, 3796, 3803, 3805, 3887, 3890, 3893, 3900, 3904, 3913, 3925, 3935, 3943, 3955, 3965, 3973, 4042, 4086, 4108, 4114, 4246, 4260, 4288, 4307, 4348, 4358, 4409, 4448, 4459, 4525,
+				4537, 4552, 4558, 4686, 4692, 4694, 4698, 4701, 4706, 4716, 4729, 4762, 4831, 4841, 4853, 4874, 4894, 4905, 4930, 4943, 5001, 5039, 5070, 5172, 5186, 5244, 5268, 5290,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

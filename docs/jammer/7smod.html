@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>7sMoD&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="7sMoD&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/7smod.html" property="og:url">
+	<meta content="Rank by game in top 10: 1863&#10;Rank by game in top 20: 2938&#10;Rank by ilScore: 8799&#10;&#10;1 games&#10;&bull; Bag It | MJ 158: Shopping | rank: 10 | ilscore: 51&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>7sMoD</h1>
+		<a href="https://7smod.itch.io">7smod.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1863</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2938</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8799</p>
+		<p>Total ilScore: 51</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://7smod.itch.io/bagit">Bag It</a></td>
+				<td><span class="early">1d 5h early</span></td>
+				<td>
+					<a href="../jammer/kelly2d.html">kelly2D</a>,
+					<a href="../jammer/stephuxui.html">Steph</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-158-shopping">MJ 158: Shopping</a></td>
+				<td>52</td>
+				<td>10</td>
+				<td>20</td>
+				<td>51</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1506, 1516, 1528, 1544, 1557, 1564, 1570, 1580, 1592, 1597, 1598, 1606, 1617, 1625, 1633, 1644, 1662, 1670, 1680, 1696, 1707, 1719, 1734, 1752, 1761, 1770, 1785, 1796, 1809, 1820, 1837, 1850, 1862,
+			]],
+			[ "20", [
+				2330, 2349, 2366, 2383, 2423, 2429, 2447, 2459, 2484, 2495, 2499, 2508, 2518, 2524, 2533, 2544, 2576, 2596, 2621, 2642, 2666, 2684, 2708, 2737, 2756, 2775, 2802, 2823, 2849, 2869, 2901, 2920, 2937,
+			]],
+			[ "ilscore", [
+				7095, 7179, 7240, 7260, 7378, 7387, 7427, 7436, 7612, 7632, 7634, 7639, 7640, 7647, 7652, 7683, 7763, 7852, 7896, 7920, 7980, 8037, 8090, 8163, 8204, 8274, 8339, 8409, 8546, 8588, 8688, 8748, 8798,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

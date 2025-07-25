@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>The Käseling&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="The Käseling&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kaeseling.html" property="og:url">
+	<meta content="Rank by game in top 20: 3170&#10;Rank by ilScore: 229&#10;&#10;5 games&#10;&bull; Gotta go fast! | MJ 157: Electric | rank: 21 | ilscore: 75&#10;&bull; Bloody Hell! | MJ 118: Vampires | rank: 85 | ilscore: 57&#10;&bull; Tiny Fairy in the forest | MJ 101: Limit | rank: 67 | ilscore: 69&#10;&bull; Birds Want Walnuts | MJ 99: Birds | rank: 57 | ilscore: 98&#10;&bull; Fate Factory | MJ 96: Fate | rank: 13 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>The Käseling</h1>
+		<a href="https://kaeseling.itch.io">kaeseling.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3170</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 229</p>
+		<p>Total ilScore: 352</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kaeseling.itch.io/gotta-go-fast">Gotta go fast!</a></td>
+				<td><span class="late">9h 36m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>21</td>
+				<td>27</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaeseling.itch.io/bloody-hell">Bloody Hell!</a></td>
+				<td><span class="early">2h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>85</td>
+				<td>4</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaeseling.itch.io/tiny-fairy-in-the-forest">Tiny Fairy in the forest</a></td>
+				<td><span class="early">9h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>67</td>
+				<td>15</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://kaeseling.itch.io/birds-want-walnuts">Birds Want Walnuts</a></td>
+				<td><span class="early">13h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>57</td>
+				<td>12</td>
+				<td>98</td>
+			</tr>
+			<tr>
+				<td><a href="https://creatorguy.itch.io/fatefactory">Fate Factory</a></td>
+				<td><span class="early">1h 30m early</span></td>
+				<td>
+					<a href="../jammer/creatorguy.html">Creator Guy</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>13</td>
+				<td>17</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1383, 1398, 1416, 1441, 1467, 1479, 1488, 1509, 1522, 1538, 1557, 1578, 1593, 1612, 1630, 1652, 1674, 1697, 1700, 1718, 1730, 1751, 1769, 1789, 1804, 1819, 1841, 1851, 1869, 1899, 1915, 1935, 1951, 1973, 1988, 2014, 2030, 2041, 2066, 2087,
+				2101, 2114, 2120, 2148, 2151, 2156, 2173, 2183, 2197, 2218, 2235, 2259, 2275, 2293, 2312, 2330, 2342, 2360, 2389, 2421, 2443, 2463, 2484, 2504, 2520, 2537, 2554, 2576, 2616, 2626, 2642, 2653, 2678, 2692, 2698, 2713, 2724, 2731, 2748, 2764,
+				2796, 2816, 2840, 2862, 2886, 2912, 2937, 2967, 2985, 3004, 3031, 3050, 3076, 3100, 3132, 3152, 3169,
+			]],
+			[ "ilscore", [
+				2926, 2976, 3043, 407, 441, 188, 189, 193, 196, 200, 212, 219, 234, 241, 247, 269, 275, 280, 280, 280, 282, 285, 295, 187, 187, 187, 188, 188, 193, 197, 200, 205, 214, 215, 218, 226, 229, 229, 234, 237,
+				239, 241, 241, 246, 247, 247, 248, 249, 250, 253, 253, 253, 255, 256, 257, 260, 264, 268, 271, 274, 277, 280, 288, 174, 176, 178, 179, 181, 182, 186, 188, 188, 192, 194, 194, 194, 194, 194, 194, 195,
+				199, 201, 206, 206, 206, 207, 207, 213, 216, 218, 220, 220, 223, 224, 225, 227, 228,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

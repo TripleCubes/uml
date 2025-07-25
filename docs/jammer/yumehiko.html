@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>yumehiko&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="yumehiko&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/yumehiko.html" property="og:url">
+	<meta content="Rank by game in top 1: 1&#10;Rank by game in top 5: 2&#10;Rank by game in top 10: 2&#10;Rank by game in top 20: 3&#10;Rank by ilScore: 8&#10;&#10;19 games&#10;&bull; Bullet Ballet | MJ 138: Rewind | rank: 1 | ilscore: 35&#10;&bull; Hands | MJ 135: Deception | rank: 37 | ilscore: 48&#10;&bull; 10 Seconds FARM! | MJ 130: Lunar | rank: 1 | ilscore: 118&#10;&bull; Please, Stop my Laser!! | MJ 122: Intermission | rank: 2 | ilscore: 58&#10;&bull; Battle of Windows | MJ 121: Reflection | rank: 2 | ilscore: 90&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>yumehiko</h1>
+		<a href="https://yumehiko.itch.io">yumehiko.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 1</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 2</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>13</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>9</span>
+			<span>9</span>
+			<span>15</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<span>9</span>
+			<span>9</span>
+			<span>11</span>
+			<span>12</span>
+			<span>20</span>
+			<span>18</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8</p>
+		<p>Total ilScore: 1523</p>
+
+		<h3 id="games_header">19 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/bullet-ballet">Bullet Ballet</a></td>
+				<td><span class="early">5h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>1</td>
+				<td>11</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/hands">Hands</a></td>
+				<td><span class="early">9h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>37</td>
+				<td>9</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/10-seconds-farm">10 Seconds FARM!</a></td>
+				<td><span class="early">11h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>1</td>
+				<td>36</td>
+				<td>118</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/stopmylaser">Please, Stop my Laser!!</a></td>
+				<td><span class="early">3h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>2</td>
+				<td>24</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/battle-of-windows">Battle of Windows</a></td>
+				<td><span class="early">8h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>2</td>
+				<td>18</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/savetheprincess">SAVE THE PRINCESS</a></td>
+				<td><span class="early">12h 23m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>20</td>
+				<td>29</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/rogue-idea">Rogue Idea</a></td>
+				<td><span class="early">4h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>2</td>
+				<td>28</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/everything-is-your-enemy">Everything is your enemy</a></td>
+				<td><span class="early">5h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>9</td>
+				<td>24</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/iai">IAI</a></td>
+				<td><span class="early">6h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>12</td>
+				<td>14</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/moksha">Moksha</a></td>
+				<td><span class="early">9h 56m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-93-vacation">MJ 93: Vacation</a></td>
+				<td>45</td>
+				<td>1</td>
+				<td>21</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/pyon-pyon">PYON PYON</a></td>
+				<td><span class="early">49m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>3</td>
+				<td>22</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/red-queens-race">Red Queen’s Race</a></td>
+				<td><span class="early">9h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-86-sports">MJ 86: Sports</a></td>
+				<td>104</td>
+				<td>11</td>
+				<td>15</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/breakout">Breakout: 死中求活</a></td>
+				<td><span class="early">25m 0s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>5</td>
+				<td>17</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/miniventure">Miniventure</a></td>
+				<td><span class="early">14h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>3</td>
+				<td>27</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/bad-guy-tv">Bad Guy TV</a></td>
+				<td><span class="early">47m 41s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>4</td>
+				<td>36</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/ningen-maru">人間　◉</a></td>
+				<td><span class="early">13h 33m early</span></td>
+				<td>
+					<a href="../jammer/tsukihiko0709.html">tsukihiko0709</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>1</td>
+				<td>51</td>
+				<td>96</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/ohb">O.H.B.</a></td>
+				<td><span class="early">12h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>9</td>
+				<td>22</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/weightofthesoul">Weight of the Soul</a></td>
+				<td><span class="early">1h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>2</td>
+				<td>27</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://yumehiko.itch.io/color-dimension">Color Dimension.</a></td>
+				<td><span class="early">13h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>1</td>
+				<td>26</td>
+				<td>112</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				25, 25, 25, 25, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0,
+			]],
+			[ "5", [
+				60, 61, 17, 17, 7, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1,
+			]],
+			[ "10", [
+				127, 127, 41, 17, 11, 6, 6, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1,
+			]],
+			[ "20", [
+				240, 240, 79, 33, 18, 12, 12, 9, 9, 10, 10, 6, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 4, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2,
+			]],
+			[ "ilscore", [
+				270, 278, 81, 34, 15, 9, 10, 6, 7, 7, 8, 5, 7, 5, 6, 6, 6, 6, 6, 4, 4, 3, 3, 2, 2, 2, 1, 1, 1, 2, 2, 3, 4, 3, 4, 4, 5, 5, 5, 5,
+				5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7,
+				7,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

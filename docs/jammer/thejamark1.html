@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>theJAMARK1&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="theJAMARK1&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thejamark1.html" property="og:url">
+	<meta content="Rank by game in top 5: 517&#10;Rank by game in top 10: 175&#10;Rank by game in top 20: 215&#10;Rank by ilScore: 534&#10;&#10;3 games&#10;&bull; EscapeBoard | MJ 160: Light | rank: 3 | ilscore: 90&#10;&bull; Sock Quest III: Remastered Edition | MJ 136: Cycles | rank: 20 | ilscore: 40&#10;&bull; Rush Hour | MJ 110: Sacrifice | rank: 9 | ilscore: 108&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>theJAMARK1</h1>
+		<a href="https://thejamark1.itch.io">thejamark1.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 517</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 175</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>9</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 215</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>9</span>
+			<span>20</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 534</p>
+		<p>Total ilScore: 239</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://char64.itch.io/escapeboard">EscapeBoard</a></td>
+				<td><span class="early">52s early</span></td>
+				<td>
+					<a href="../jammer/char64.html">Char</a>,
+					<a href="../jammer/salad1021.html">sallycrow</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-160-light">MJ 160: Light</a></td>
+				<td>123</td>
+				<td>3</td>
+				<td>22</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejamark1.itch.io/sockquest3remastered">Sock Quest III: Remastered Edition</a></td>
+				<td><span class="early">6h 37m early</span></td>
+				<td>
+					<a href="../jammer/heftybandicoot.html">HeftyBandicoot</a>,
+					<a href="../jammer/tofuwarlock.html">TofuWarlock</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>20</td>
+				<td>8</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://thejamark1.itch.io/rush-hour">Rush Hour</a></td>
+				<td><span class="late">19h 56m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>9</td>
+				<td>17</td>
+				<td>108</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				426, 427, 435, 438, 443, 448, 454, 457, 457, 457, 457, 459, 461, 461, 467, 471, 471, 473, 478, 480, 481, 484, 485, 488, 492, 497, 504, 504, 511, 516, 516,
+			]],
+			[ "10", [
+				498, 510, 521, 531, 532, 532, 536, 542, 548, 560, 560, 566, 575, 577, 582, 603, 607, 616, 629, 631, 639, 640, 643, 644, 656, 665, 667, 667, 669, 678, 682, 686, 693, 694, 701, 705, 706, 710, 710, 712,
+				715, 722, 728, 736, 746, 760, 761, 765, 769, 778, 779, 785, 137, 138, 139, 144, 145, 146, 148, 150, 153, 154, 155, 155, 155, 155, 156, 157, 159, 160, 162, 163, 163, 163, 163, 163, 164, 165, 166, 166,
+				172, 172, 174,
+			]],
+			[ "20", [
+				674, 697, 708, 721, 722, 722, 730, 740, 746, 766, 768, 777, 789, 793, 800, 821, 829, 841, 856, 860, 869, 871, 874, 875, 890, 900, 903, 419, 421, 424, 424, 428, 434, 435, 439, 442, 443, 448, 450, 459,
+				462, 463, 466, 468, 473, 476, 483, 492, 492, 495, 496, 505, 160, 162, 163, 168, 171, 171, 173, 177, 177, 179, 182, 184, 184, 187, 187, 187, 190, 191, 192, 193, 197, 198, 200, 200, 203, 205, 208, 208,
+				212, 212, 214,
+			]],
+			[ "ilscore", [
+				1095, 1262, 1281, 1297, 1297, 1302, 1307, 1316, 1345, 1363, 1376, 1389, 1404, 1412, 1450, 1474, 1492, 1506, 1525, 1549, 1557, 1595, 1608, 1618, 1639, 1664, 1678, 953, 954, 969, 969, 969, 972, 972, 977, 981, 988, 995, 997, 999,
+				1001, 1010, 1024, 1032, 1035, 1064, 1076, 1083, 1086, 1096, 1100, 1121, 430, 433, 445, 448, 451, 452, 466, 467, 471, 471, 471, 471, 472, 475, 477, 479, 484, 485, 486, 488, 493, 499, 502, 504, 508, 514, 518, 521,
+				526, 529, 533,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

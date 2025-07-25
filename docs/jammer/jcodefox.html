@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Jcodefox&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Jcodefox&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jcodefox.html" property="og:url">
+	<meta content="Rank by game in top 10: 1455&#10;Rank by game in top 20: 2053&#10;Rank by ilScore: 7135&#10;&#10;1 games&#10;&bull; Alternating Network | MJ 167: Cyber | rank: 8 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Jcodefox</h1>
+		<a href="https://jcodefox.itch.io">jcodefox.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1455</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2053</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7135</p>
+		<p>Total ilScore: 61</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://jcodefox.itch.io/alternating-network">Alternating Network</a></td>
+				<td><span class="late">22m 30s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-167-cyber">MJ 167: Cyber</a></td>
+				<td>63</td>
+				<td>8</td>
+				<td>12</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1257, 1257, 1259, 1263, 1266, 1274, 1280, 1298, 1307, 1317, 1326, 1337, 1343, 1352, 1363, 1369, 1378, 1393, 1404, 1417, 1422, 1433, 1443, 1454,
+			]],
+			[ "20", [
+				1786, 1790, 1793, 1798, 1802, 1813, 1820, 1838, 1856, 1865, 1875, 1892, 1902, 1920, 1931, 1938, 1952, 1971, 1988, 2008, 2013, 2025, 2040, 2052,
+			]],
+			[ "ilscore", [
+				6204, 6207, 6210, 6214, 6219, 6228, 6247, 6307, 6397, 6426, 6440, 6483, 6522, 6556, 6617, 6647, 6713, 6768, 6824, 6941, 6963, 7051, 7095, 7134,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

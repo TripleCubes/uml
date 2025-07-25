@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dirtbug.games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dirtbug.games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dirtbug.html" property="og:url">
+	<meta content="Rank by ilScore: 1214&#10;&#10;3 games&#10;&bull; a moment of clarity (in times of chaos) | MJ 107: Music | rank: 70 | ilscore: 41&#10;&bull; (prototype) Congratulations, You Have Died! | MJ 96: Fate | rank: 37 | ilscore: 41&#10;&bull; Mr. Frog&#39;s TOWER OF DOOM | MJ 79: Frogs | rank: 99 | ilscore: 77&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dirtbug.games</h1>
+		<a href="https://dirtbug.itch.io">dirtbug.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1214</p>
+		<p>Total ilScore: 159</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dirtbug.itch.io/a-moment-of-clarity">a moment of clarity (in times of chaos)</a></td>
+				<td><span class="early">13m 21s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>70</td>
+				<td>9</td>
+				<td>41</td>
+			</tr>
+			<tr>
+				<td><a href="https://dirtbug.itch.io/congratulations-youre-dead">(prototype) Congratulations, You Have Died!</a></td>
+				<td><span class="late">18h 29m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>37</td>
+				<td>19</td>
+				<td>41</td>
+			</tr>
+			<tr>
+				<td><a href="https://dirtbug.itch.io/mr-frogs-tower-of-doom">Mr. Frog&#39;s TOWER OF DOOM</a></td>
+				<td><span class="early">20h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>99</td>
+				<td>13</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				901, 970, 979, 988, 1019, 1094, 1185, 1206, 1268, 1282, 1315, 1328, 1335, 1373, 1404, 1412, 1426, 1437, 602, 612, 628, 670, 704, 720, 724, 747, 765, 786, 848, 461, 489, 511, 533, 577, 592, 605, 605, 608, 611, 615,
+				629, 642, 646, 654, 660, 661, 676, 696, 707, 715, 733, 746, 754, 777, 784, 790, 807, 820, 829, 831, 834, 848, 849, 849, 852, 852, 856, 860, 865, 870, 872, 874, 876, 883, 894, 897, 900, 930, 941, 947,
+				950, 961, 967, 987, 1001, 1006, 1023, 1027, 1032, 1036, 1054, 1058, 1061, 1063, 1063, 1066, 1067, 1070, 1078, 1086, 1095, 1101, 1104, 1109, 1120, 1129, 1135, 1147, 1155, 1167, 1180, 1185, 1198, 1205, 1213,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

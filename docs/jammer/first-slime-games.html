@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>First Slime Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="First Slime Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/first-slime-games.html" property="og:url">
+	<meta content="Rank by game in top 1: 167&#10;Rank by game in top 5: 388&#10;Rank by game in top 10: 561&#10;Rank by game in top 20: 426&#10;Rank by ilScore: 961&#10;&#10;3 games&#10;&bull; Between Worlds | MJ 90: Illusion | rank: 1 | ilscore: 72&#10;&bull; Gates of Paradise | MJ 70: Heaven | rank: 26 | ilscore: 51&#10;&bull; Black Holes Escape | MJ 67: Void | rank: 19 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>First Slime Games</h1>
+		<a href="https://first-slime-games.itch.io">first-slime-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 167</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 388</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 561</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 426</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 961</p>
+		<p>Total ilScore: 179</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://first-slime-games.itch.io/between-worlds">Between Worlds</a></td>
+				<td><span class="early">52m 16s early</span></td>
+				<td>
+					<a href="../jammer/protosev.html">protosev</a>,
+					<a href="../jammer/myatezhny.html">Myatezhny</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>1</td>
+				<td>18</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://first-slime-games.itch.io/gates-of-paradise">Gates of Paradise</a></td>
+				<td><span class="early">3h 33m early</span></td>
+				<td>
+					<a href="../jammer/protosev.html">protosev</a>,
+					<a href="../jammer/myatezhny.html">Myatezhny</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>26</td>
+				<td>17</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://protosev.itch.io/blackholesescape">Black Holes Escape</a></td>
+				<td><span class="early">9h 11m early</span></td>
+				<td>
+					<a href="../jammer/protosev.html">protosev</a>,
+					<a href="../jammer/myatezhny.html">Myatezhny</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-67-void">MJ 67: Void</a></td>
+				<td>61</td>
+				<td>19</td>
+				<td>23</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				81, 82, 84, 84, 84, 84, 84, 84, 84, 84, 85, 86, 86, 86, 88, 89, 92, 92, 93, 95, 96, 97, 98, 99, 99, 99, 100, 103, 103, 104, 104, 104, 105, 106, 108, 111, 114, 118, 118, 118,
+				120, 120, 120, 120, 121, 121, 122, 122, 122, 123, 123, 124, 124, 124, 127, 127, 127, 129, 129, 130, 130, 131, 133, 134, 136, 138, 138, 138, 138, 139, 139, 140, 141, 142, 143, 143, 145, 146, 147, 148,
+				148, 148, 148, 148, 148, 148, 152, 153, 153, 153, 154, 155, 155, 155, 155, 156, 157, 159, 160, 160, 166, 166, 166,
+			]],
+			[ "5", [
+				160, 161, 163, 163, 166, 166, 166, 167, 168, 168, 179, 183, 183, 186, 189, 190, 196, 196, 198, 200, 203, 209, 215, 218, 218, 219, 223, 229, 229, 230, 230, 230, 231, 232, 235, 238, 241, 247, 249, 249,
+				252, 253, 254, 255, 257, 258, 260, 261, 261, 265, 270, 274, 276, 278, 286, 287, 287, 289, 289, 290, 290, 292, 293, 296, 300, 303, 303, 303, 303, 307, 308, 315, 317, 318, 326, 330, 336, 338, 344, 347,
+				347, 347, 347, 349, 351, 351, 358, 360, 360, 361, 363, 364, 365, 365, 366, 369, 373, 377, 381, 381, 387, 387, 387,
+			]],
+			[ "10", [
+				235, 235, 238, 238, 241, 243, 243, 246, 248, 248, 260, 263, 264, 269, 272, 276, 283, 283, 287, 290, 293, 299, 305, 310, 310, 310, 314, 323, 323, 324, 324, 327, 328, 331, 334, 341, 348, 356, 358, 359,
+				366, 367, 369, 373, 377, 380, 383, 384, 386, 390, 395, 399, 403, 404, 411, 412, 413, 416, 416, 417, 418, 421, 425, 428, 432, 435, 439, 441, 442, 446, 448, 453, 456, 460, 469, 474, 479, 484, 492, 495,
+				498, 500, 501, 503, 505, 506, 513, 517, 519, 520, 522, 523, 523, 525, 529, 533, 537, 547, 551, 551, 554, 557, 560,
+			]],
+			[ "20", [
+				646, 655, 681, 704, 715, 729, 744, 769, 787, 806, 824, 839, 848, 869, 882, 898, 909, 931, 951, 977, 994, 1019, 1030, 1056, 1074, 150, 152, 153, 156, 161, 168, 169, 171, 172, 172, 177, 184, 184, 188, 189,
+				192, 195, 198, 203, 208, 208, 210, 214, 220, 220, 220, 222, 227, 228, 228, 228, 232, 234, 236, 238, 243, 249, 252, 256, 257, 264, 266, 267, 268, 272, 275, 278, 279, 281, 284, 287, 287, 289, 290, 295,
+				297, 298, 300, 301, 303, 305, 306, 308, 311, 313, 314, 318, 321, 322, 326, 326, 329, 337, 341, 342, 349, 354, 358, 363, 364, 367, 368, 369, 372, 374, 376, 378, 379, 382, 384, 388, 388, 391, 392, 392,
+				395, 402, 411, 415, 415, 418, 422, 425,
+			]],
+			[ "ilscore", [
+				941, 956, 984, 1044, 235, 247, 262, 291, 302, 313, 336, 355, 364, 399, 429, 446, 455, 473, 490, 525, 540, 561, 576, 587, 598, 209, 216, 222, 226, 231, 237, 239, 241, 247, 260, 286, 299, 301, 303, 306,
+				311, 333, 343, 367, 382, 393, 430, 439, 448, 448, 452, 457, 459, 472, 481, 490, 496, 501, 502, 518, 533, 542, 548, 566, 574, 581, 597, 599, 602, 617, 624, 634, 635, 639, 650, 652, 656, 658, 661, 664,
+				669, 672, 677, 680, 681, 681, 690, 700, 705, 706, 726, 729, 735, 740, 751, 756, 774, 787, 790, 803, 807, 811, 814, 826, 831, 835, 836, 837, 841, 841, 845, 851, 854, 864, 870, 872, 875, 881, 892, 898,
+				908, 914, 923, 932, 935, 945, 951, 960,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

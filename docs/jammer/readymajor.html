@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ReadyMajor&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ReadyMajor&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/readymajor.html" property="og:url">
+	<meta content="Rank by game in top 1: 9&#10;Rank by game in top 5: 5&#10;Rank by game in top 10: 3&#10;Rank by game in top 20: 5&#10;Rank by ilScore: 18&#10;&#10;22 games&#10;&bull; Tap Legend | MJ 176: Foxes | rank: 23 | ilscore: 66&#10;&bull; TT Slime Hunters | MJ 176: Foxes | rank: 10 | ilscore: 73&#10;&bull; Velocity Vortex | MJ 175: Gravity | rank: 8 | ilscore: 90&#10;&bull; GhostBlasters | MJ 117: Ghosts | rank: 31 | ilscore: 93&#10;&bull; Operation: Pocket Sand | MJ 116: Pocket Sized | rank: 10 | ilscore: 52&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ReadyMajor</h1>
+		<a href="https://readymajor.itch.io">readymajor.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 9</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 5</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>9</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 3</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>10</span>
+			<span>10</span>
+			<span>10</span>
+			<span>15</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 5</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>10</span>
+			<span>10</span>
+			<span>10</span>
+			<span>17</span>
+			<span>16</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 18</p>
+		<p>Total ilScore: 1089</p>
+
+		<h3 id="games_header">22 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://readymajor.itch.io/tap-legend">Tap Legend</a></td>
+				<td><span class="late">1d 9h late</span></td>
+				<td>
+					<a href="../jammer/red1m3n.html">red1m3n</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>23</td>
+				<td>15</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tt-slime-hunters">TT Slime Hunters</a></td>
+				<td><span class="late">16h 39m late</span></td>
+				<td>
+					<a href="../jammer/ilprinni.html">ilPrinni</a>,
+					<a href="../jammer/vvulpes0.html">Pineberry Fox</a>,
+					<a href="../jammer/triplecubes.html">TripleCubes</a>,
+					<a href="../jammer/30fps.html">30fps</a>,
+					<a href="../jammer/murgn.html">Murgn</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>,
+					<a href="../jammer/tlalice.html">TLAlice</a>,
+					<a href="../jammer/cat-jug.html">Cat Jug</a>,
+					<a href="../jammer/hotnoggin.html">Hot Noggin Studios</a>,
+					<a href="../jammer/blankedslate.html">Blank Slate</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>10</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/velocity-vortex">Velocity Vortex</a></td>
+				<td><span class="late">1d 9h late</span></td>
+				<td>
+					<a href="../jammer/heyimrein.html">rein</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>8</td>
+				<td>14</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/ghostblasters">GhostBlasters</a></td>
+				<td><span class="late">1d 10h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>31</td>
+				<td>7</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/operation-pocket-sand">Operation: Pocket Sand</a></td>
+				<td><span class="late">1d 8h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>10</td>
+				<td>6</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/gravrabbit">GravRabbit</a></td>
+				<td><span class="early">7m 50s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>1</td>
+				<td>24</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/frogout">FrogOut</a></td>
+				<td><span class="late">3d 23h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>268</td>
+				<td>1</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/farm-fresh-fish">Farm Fresh Fish</a></td>
+				<td><span class="early">4h 30m early</span></td>
+				<td>
+					<a href="../jammer/heyimrein.html">rein</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>4</td>
+				<td>15</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/20">20</a></td>
+				<td><span class="early">6m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>10</td>
+				<td>9</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/19">19</a></td>
+				<td><span class="early">30m 51s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>24</td>
+				<td>9</td>
+				<td>75</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://readymajor.itch.io/readymajorboom">ReadyMajorBoom</a></td>
+				<td><span class="early">46m 0s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>130</td>
+				<td>5</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/ninja-tactics-season-of-undead">Ninja Tactics: Season of Undead</a></td>
+				<td><span class="late">56m 31s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>3</td>
+				<td>13</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/kitchen-quest">Kitchen Quest</a></td>
+				<td><span class="late">3d 23h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-38-food">MJ 38: Food</a></td>
+				<td>21</td>
+				<td>inf</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/seesaw-simulator-19">Seesaw Simulator 19</a></td>
+				<td><span class="late">2h 51m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-34-balance">MJ 34: Balance</a></td>
+				<td>25</td>
+				<td>1</td>
+				<td>17</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/ninja-tactics">Ninja Tactics</a></td>
+				<td><span class="late">1h 14m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>2</td>
+				<td>26</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/spirit-mixer">Spirit Mixer</a></td>
+				<td><span class="late">1d 8h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-25-spirits">MJ 25: Spirits</a></td>
+				<td>45</td>
+				<td>17</td>
+				<td>7</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/villagetown">VillageTown</a></td>
+				<td><span class="early">32s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-23-time">MJ 23: Time</a></td>
+				<td>52</td>
+				<td>7</td>
+				<td>14</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/princess-story">Princess Story</a></td>
+				<td><span class="early">42s early</span></td>
+				<td>
+					<a href="../jammer/revelationgt.html">JamesGMarks</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-21-stories">MJ 21: Stories</a></td>
+				<td>13</td>
+				<td>1</td>
+				<td>13</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/sykes">Sykes</a></td>
+				<td><span class="late">9h 51m late</span></td>
+				<td>
+					<a href="../jammer/akusan.html">Akusan</a>,
+					<a href="../jammer/revelationgt.html">JamesGMarks</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-19-mysteries">MJ 19: Mysteries</a></td>
+				<td>26</td>
+				<td>3</td>
+				<td>8</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/i-think-i-can-hear-a-wolf">I Think I Can Hear A Wolf</a></td>
+				<td><span class="late">2d 9h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-17-home-alone">MJ 17: Home Alone</a></td>
+				<td>7</td>
+				<td>7</td>
+				<td>3</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/the-six-chambers-minijam-16">The Six Chambers (Minijam 16)</a></td>
+				<td><span class="late">39m 5s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-16-western">MJ 16: Western</a></td>
+				<td>12</td>
+				<td>4</td>
+				<td>9</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://readymajor.itch.io/i-think-i-can-handle-a-wolf">I Think I Can Handle a Wolf</a></td>
+				<td><span class="late">12m 44s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-15-technology">MJ 15: Technology</a></td>
+				<td>22</td>
+				<td>3</td>
+				<td>15</td>
+				<td>35</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				17, 19, 19, 20, 22, 23, 24, 24, 25, 26, 27, 27, 31, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 5, 5, 5, 5, 5, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9,
+				9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14,
+				14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7,
+				7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+				8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+			]],
+			[ "5", [
+				34, 5, 5, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0,
+				0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+			]],
+			[ "10", [
+				43, 6, 3, 3, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0,
+				0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+			]],
+			[ "20", [
+				55, 9, 4, 5, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2,
+				2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4,
+				4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 6, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+			]],
+			[ "ilscore", [
+				48, 10, 8, 11, 4, 5, 2, 2, 1, 2, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5, 5, 5, 4, 4, 4, 4, 4, 4,
+				4, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8, 11, 11, 14, 15, 15, 16, 17, 21, 25, 27, 30, 32, 33, 33, 34, 39, 40, 40, 27, 29, 17, 10, 10,
+				9, 9, 9, 9, 9, 9, 9, 10, 10, 12, 12, 12, 13, 14, 16, 18, 14, 15, 16, 16, 18, 19, 19, 19, 19, 19, 18, 15, 15, 16, 16, 16, 16, 16, 17, 17, 18, 18, 18, 18,
+				18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23,
+				23, 23, 23, 23, 23, 25, 18, 15, 15, 15, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

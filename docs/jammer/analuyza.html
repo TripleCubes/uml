@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ana Luyza&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Ana Luyza&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/analuyza.html" property="og:url">
+	<meta content="Rank by game in top 10: 984&#10;Rank by game in top 20: 1343&#10;Rank by ilScore: 5248&#10;&#10;1 games&#10;&bull; Pumpkin Craving | MJ 89: Pumpkin | rank: 6 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ana Luyza</h1>
+		<a href="https://analuyza.itch.io">analuyza.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 984</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1343</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5248</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://analuyza.itch.io/pumpkincraving">Pumpkin Craving</a></td>
+				<td><span class="early">2h 16m early</span></td>
+				<td>
+					<a href="../jammer/ewerton13.html">ewerton13</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>6</td>
+				<td>30</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				391, 395, 399, 405, 411, 414, 422, 422, 430, 434, 439, 454, 459, 460, 472, 477, 482, 491, 495, 502, 511, 521, 533, 547, 557, 558, 559, 563, 569, 575, 587, 587, 593, 603, 605, 611, 632, 636, 645, 658,
+				664, 672, 674, 677, 678, 689, 697, 699, 699, 699, 708, 712, 716, 723, 724, 731, 737, 738, 743, 743, 745, 748, 757, 764, 771, 781, 795, 796, 800, 804, 813, 814, 821, 829, 832, 845, 848, 854, 861, 873,
+				876, 879, 879, 881, 884, 886, 889, 900, 908, 911, 913, 918, 920, 920, 926, 930, 936, 948, 956, 969, 970, 971, 978, 983,
+			]],
+			[ "20", [
+				526, 531, 539, 546, 553, 556, 563, 569, 576, 579, 585, 614, 621, 625, 634, 640, 646, 660, 668, 677, 687, 697, 720, 734, 747, 748, 749, 757, 767, 773, 792, 794, 803, 816, 820, 828, 849, 857, 869, 884,
+				892, 901, 904, 907, 908, 922, 931, 934, 936, 940, 948, 950, 955, 964, 967, 977, 987, 990, 997, 1002, 1009, 1014, 1023, 1030, 1037, 1049, 1064, 1068, 1079, 1082, 1091, 1097, 1110, 1120, 1124, 1145, 1148, 1155, 1165, 1178,
+				1183, 1193, 1194, 1197, 1202, 1207, 1211, 1223, 1233, 1237, 1242, 1249, 1256, 1265, 1270, 1276, 1281, 1294, 1302, 1318, 1320, 1322, 1334, 1342,
+			]],
+			[ "ilscore", [
+				1482, 1489, 1536, 1576, 1582, 1607, 1616, 1622, 1649, 1686, 1859, 1945, 2000, 2007, 2065, 2094, 2143, 2339, 2360, 2483, 2535, 2648, 2923, 2949, 2977, 2978, 2982, 2990, 2995, 3085, 3142, 3163, 3175, 3211, 3213, 3325, 3374, 3385, 3405, 3448,
+				3503, 3519, 3654, 3665, 3669, 3713, 3752, 3767, 3774, 3776, 3858, 3861, 3864, 3871, 3875, 3884, 3895, 3905, 3913, 3925, 3935, 3943, 4010, 4054, 4074, 4080, 4211, 4225, 4253, 4272, 4313, 4323, 4371, 4409, 4420, 4485, 4497, 4512, 4518, 4646,
+				4652, 4654, 4657, 4660, 4665, 4675, 4688, 4721, 4790, 4800, 4812, 4833, 4853, 4864, 4889, 4902, 4960, 4998, 5029, 5130, 5144, 5201, 5225, 5247,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

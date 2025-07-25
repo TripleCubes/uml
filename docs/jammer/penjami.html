@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Penjami&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Penjami&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/penjami.html" property="og:url">
+	<meta content="Rank by game in top 10: 1975&#10;Rank by game in top 20: 3424&#10;Rank by ilScore: 11612&#10;&#10;1 games&#10;&bull; Book of Mystery | MJ 41: Magic | rank: 10 | ilscore: 32&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Penjami</h1>
+		<a href="https://penjami.itch.io">penjami.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1975</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3424</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11612</p>
+		<p>Total ilScore: 32</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://penjami.itch.io/book-of-mystery">Book of Mystery</a></td>
+				<td><span class="early">20h 58m early</span></td>
+				<td>
+					<a href="../jammer/masterofmosh.html">masterofmosh</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-41-magic">MJ 41: Magic</a></td>
+				<td>28</td>
+				<td>10</td>
+				<td>7</td>
+				<td>32</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				282, 289, 296, 300, 310, 316, 325, 333, 336, 347, 366, 380, 389, 397, 408, 418, 429, 440, 451, 454, 459, 472, 490, 503, 519, 531, 538, 550, 558, 566, 579, 592, 602, 610, 619, 632, 641, 651, 660, 669,
+				678, 690, 697, 714, 724, 735, 745, 757, 769, 781, 789, 800, 810, 827, 835, 844, 861, 874, 884, 898, 906, 912, 923, 935, 942, 952, 959, 968, 975, 984, 1001, 1008, 1017, 1027, 1038, 1052, 1065, 1069, 1084, 1093,
+				1101, 1110, 1127, 1142, 1154, 1167, 1175, 1184, 1202, 1211, 1222, 1235, 1248, 1258, 1268, 1276, 1286, 1301, 1311, 1319, 1327, 1337, 1351, 1355, 1366, 1382, 1390, 1402, 1418, 1431, 1441, 1455, 1467, 1482, 1490, 1494, 1502, 1523, 1540, 1554,
+				1562, 1571, 1582, 1597, 1607, 1619, 1635, 1648, 1655, 1661, 1670, 1682, 1687, 1696, 1710, 1721, 1729, 1747, 1758, 1776, 1784, 1793, 1809, 1820, 1832, 1847, 1865, 1874, 1882, 1897, 1908, 1921, 1932, 1949, 1962, 1974,
+			]],
+			[ "20", [
+				376, 386, 394, 399, 417, 430, 446, 457, 460, 482, 512, 530, 549, 565, 585, 602, 625, 652, 677, 679, 687, 712, 741, 768, 797, 808, 823, 846, 861, 878, 904, 927, 946, 960, 979, 1004, 1024, 1042, 1059, 1083,
+				1104, 1124, 1137, 1159, 1176, 1198, 1217, 1242, 1262, 1287, 1306, 1332, 1348, 1371, 1387, 1406, 1428, 1452, 1467, 1491, 1506, 1524, 1549, 1575, 1587, 1598, 1619, 1632, 1648, 1667, 1687, 1702, 1721, 1739, 1761, 1783, 1806, 1810, 1834, 1853,
+				1874, 1892, 1912, 1941, 1964, 1986, 1998, 2016, 2043, 2059, 2079, 2094, 2116, 2130, 2156, 2176, 2195, 2220, 2241, 2260, 2277, 2285, 2313, 2317, 2329, 2352, 2368, 2388, 2409, 2433, 2456, 2476, 2492, 2514, 2532, 2544, 2562, 2591, 2623, 2645,
+				2665, 2686, 2706, 2726, 2741, 2758, 2781, 2821, 2835, 2850, 2864, 2889, 2903, 2908, 2932, 2954, 2976, 2996, 3013, 3044, 3064, 3088, 3117, 3141, 3167, 3191, 3221, 3239, 3258, 3285, 3304, 3330, 3355, 3387, 3406, 3423,
+			]],
+			[ "ilscore", [
+				405, 415, 416, 422, 455, 482, 521, 532, 532, 642, 734, 746, 810, 852, 924, 979, 1097, 1138, 1178, 1179, 1183, 1244, 1285, 1437, 1547, 1549, 1589, 1692, 1732, 1779, 1830, 1903, 1944, 2019, 2070, 2245, 2298, 2378, 2468, 2578,
+				2626, 2785, 2887, 2934, 2980, 3063, 3192, 3342, 3423, 3552, 3632, 3729, 3788, 3844, 3937, 4025, 4054, 4128, 4162, 4207, 4285, 4370, 4585, 4702, 4804, 4822, 4944, 5020, 5123, 5373, 5432, 5622, 5706, 5876, 6244, 6320, 6414, 6415, 6456, 6477,
+				6501, 6644, 6765, 6846, 6877, 6969, 6986, 7149, 7232, 7283, 7326, 7412, 7513, 7556, 7743, 7762, 7787, 7889, 7973, 8009, 8032, 8038, 8185, 8186, 8204, 8240, 8266, 8289, 8333, 8382, 8453, 8480, 8497, 8524, 8651, 8774, 8850, 8889, 9060, 9113,
+				9201, 9268, 9365, 9389, 9477, 9556, 9579, 9712, 9743, 9795, 9810, 9999, 10036, 10046, 10071, 10096, 10130, 10153, 10207, 10294, 10401, 10458, 10506, 10576, 10646, 10708, 10789, 10852, 10934, 11010, 11095, 11262, 11325, 11446, 11526, 11611,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

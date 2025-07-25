@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Iris Trummer&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Iris Trummer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/iris-trummer.html" property="og:url">
+	<meta content="Rank by game in top 5: 567&#10;Rank by game in top 10: 228&#10;Rank by game in top 20: 181&#10;Rank by ilScore: 501&#10;&#10;3 games&#10;&bull; Last Straw | MJ 92: Death | rank: 8 | ilscore: 80&#10;&bull; What do vacuums dream? | MJ+ 4: Cosmic | rank: 5 | ilscore: 93&#10;&bull; Night Candy | MJ 66: Sweets | rank: 17 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Iris Trummer</h1>
+		<a href="https://iris-trummer.itch.io">iris-trummer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 567</p>
+		<div class="boxes">
+			<span class="box_majorjam">5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 228</p>
+		<div class="boxes">
+			<span class="box_majorjam">5</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 181</p>
+		<div class="boxes">
+			<span class="box_majorjam">5</span>
+			<span>8</span>
+			<span>17</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 501</p>
+		<p>Total ilScore: 248</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sandrofigo.itch.io/last-straw">Last Straw</a></td>
+				<td><span class="early">5h 5m early</span></td>
+				<td>
+					<a href="../jammer/sandrofigo.html">Sandro Figo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>8</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://sandrofigo.itch.io/what-do-vacuums-dream">What do vacuums dream?</a></td>
+				<td><span class="late">1h 32m late</span></td>
+				<td>
+					<a href="../jammer/sandrofigo.html">Sandro Figo</a>,
+					<a href="../jammer/clockworkjellyfish.html">clockworkjellyfish</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>5</td>
+				<td>9</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://sandrofigo.itch.io/night-candy">Night Candy</a></td>
+				<td><span class="early">4h 23m early</span></td>
+				<td>
+					<a href="../jammer/sandrofigo.html">Sandro Figo</a>,
+					<a href="../jammer/clockworkjellyfish.html">clockworkjellyfish</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>17</td>
+				<td>13</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				223, 223, 229, 231, 234, 235, 240, 244, 245, 248, 248, 248, 252, 253, 264, 267, 267, 272, 275, 276, 283, 283, 286, 289, 293, 299, 306, 310, 310, 311, 315, 323, 326, 332, 332, 332, 339, 339, 343, 353,
+				356, 362, 366, 367, 372, 373, 375, 376, 381, 387, 388, 388, 388, 392, 397, 402, 405, 406, 414, 418, 418, 420, 420, 422, 422, 428, 430, 436, 444, 450, 450, 452, 453, 457, 458, 463, 468, 469, 477, 481,
+				486, 490, 496, 499, 499, 499, 499, 501, 503, 503, 514, 518, 519, 520, 525, 527, 528, 531, 532, 537, 541, 546, 554, 554, 561, 566, 566,
+			]],
+			[ "10", [
+				291, 292, 298, 301, 305, 305, 77, 77, 81, 83, 83, 84, 88, 88, 88, 92, 92, 95, 96, 96, 99, 99, 104, 106, 106, 106, 107, 111, 111, 112, 115, 119, 119, 119, 120, 120, 120, 121, 122, 126,
+				131, 131, 133, 134, 137, 138, 139, 140, 141, 144, 147, 150, 150, 152, 153, 153, 155, 155, 156, 157, 157, 157, 157, 159, 159, 160, 162, 165, 166, 167, 171, 171, 171, 172, 174, 176, 179, 181, 182, 187,
+				191, 193, 195, 196, 199, 199, 200, 200, 200, 200, 201, 202, 204, 205, 207, 208, 208, 208, 208, 208, 210, 217, 221, 221, 224, 224, 227,
+			]],
+			[ "20", [
+				483, 492, 499, 525, 542, 547, 561, 570, 595, 605, 619, 638, 643, 650, 672, 686, 693, 699, 715, 735, 745, 758, 133, 136, 136, 138, 139, 140, 60, 60, 63, 64, 64, 67, 69, 70, 71, 73, 74, 77,
+				78, 78, 80, 80, 82, 83, 83, 83, 85, 86, 86, 86, 89, 90, 93, 93, 93, 94, 94, 94, 94, 97, 97, 100, 104, 104, 106, 110, 110, 110, 110, 113, 113, 114, 115, 117, 119, 121, 122, 123,
+				124, 126, 126, 126, 126, 127, 127, 128, 128, 130, 130, 131, 134, 134, 134, 134, 137, 140, 142, 143, 144, 147, 148, 148, 150, 152, 152, 155, 156, 158, 159, 161, 161, 161, 162, 163, 164, 166, 167, 170,
+				171, 171, 172, 173, 175, 175, 178, 178, 180,
+			]],
+			[ "ilscore", [
+				480, 492, 502, 510, 540, 552, 569, 588, 708, 722, 745, 799, 848, 857, 977, 1047, 1055, 1064, 1097, 1173, 1272, 1293, 227, 231, 239, 245, 250, 263, 102, 103, 107, 107, 109, 113, 115, 126, 137, 140, 142, 148,
+				153, 157, 165, 171, 183, 190, 196, 211, 216, 220, 220, 221, 221, 221, 232, 238, 239, 240, 244, 246, 255, 262, 267, 274, 281, 285, 293, 300, 303, 305, 311, 316, 322, 324, 325, 331, 332, 332, 332, 334,
+				334, 335, 337, 338, 340, 341, 341, 348, 353, 356, 360, 365, 368, 373, 379, 382, 384, 386, 397, 401, 411, 413, 416, 417, 431, 432, 435, 435, 436, 436, 436, 440, 442, 445, 449, 450, 452, 454, 459, 465,
+				468, 470, 474, 480, 484, 487, 493, 496, 500,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

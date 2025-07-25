@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ritsu_snow&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ritsu_snow&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ritsu-snow.html" property="og:url">
+	<meta content="Rank by game in top 1: 82&#10;Rank by game in top 5: 231&#10;Rank by game in top 10: 418&#10;Rank by game in top 20: 814&#10;Rank by ilScore: 3071&#10;&#10;1 games&#10;&bull; Cozy Lullaby | MJ 124: Warmth | rank: 1 | ilscore: 93&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ritsu_snow</h1>
+		<a href="https://ritsu-snow.itch.io">ritsu-snow.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 82</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 231</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 418</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 814</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3071</p>
+		<p>Total ilScore: 93</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://createam1.itch.io/sashasmelody">Cozy Lullaby</a></td>
+				<td><span class="early">8m 7s early</span></td>
+				<td>
+					<a href="../jammer/createam1.html">frens who do games</a>,
+					<a href="../jammer/fr0ozzfred.html">Fr0oZzFred</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>1</td>
+				<td>12</td>
+				<td>93</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 63, 64, 64, 65, 65, 65, 68, 68, 68, 68, 68, 68, 68, 68, 70, 70, 72, 72, 72, 72, 72, 73, 73, 73, 73, 74, 75,
+				75, 76, 76, 77, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 78, 79, 79, 79, 79, 79, 79, 80, 80, 80, 80, 80, 80, 81,
+			]],
+			[ "5", [
+				135, 136, 138, 140, 140, 141, 142, 143, 144, 145, 146, 147, 148, 148, 150, 155, 159, 161, 163, 170, 171, 171, 171, 171, 173, 173, 173, 173, 175, 179, 179, 179, 179, 179, 181, 182, 185, 186, 187, 188,
+				192, 197, 198, 200, 200, 203, 204, 205, 207, 209, 209, 210, 210, 210, 211, 213, 213, 214, 214, 216, 216, 220, 221, 224, 224, 230, 230, 230,
+			]],
+			[ "10", [
+				249, 254, 258, 260, 261, 266, 267, 269, 273, 276, 279, 282, 283, 285, 287, 292, 296, 300, 301, 307, 308, 309, 311, 311, 313, 314, 315, 319, 321, 325, 325, 329, 331, 332, 334, 337, 338, 340, 344, 345,
+				352, 356, 361, 365, 365, 371, 373, 374, 376, 378, 379, 380, 382, 384, 385, 388, 388, 388, 390, 394, 395, 398, 405, 408, 408, 411, 414, 417,
+			]],
+			[ "20", [
+				475, 485, 495, 500, 502, 508, 510, 512, 515, 521, 525, 531, 535, 540, 542, 544, 549, 558, 561, 570, 576, 579, 584, 589, 599, 602, 603, 606, 608, 617, 619, 626, 636, 636, 640, 646, 656, 662, 668, 670,
+				679, 687, 695, 699, 701, 714, 717, 719, 723, 728, 730, 733, 737, 740, 744, 750, 755, 764, 767, 772, 773, 777, 786, 792, 793, 797, 805, 813,
+			]],
+			[ "ilscore", [
+				1964, 1981, 2000, 2016, 2040, 2053, 2125, 2135, 2142, 2160, 2184, 2200, 2205, 2210, 2227, 2229, 2233, 2240, 2243, 2247, 2259, 2266, 2272, 2282, 2289, 2300, 2321, 2345, 2363, 2372, 2459, 2483, 2503, 2516, 2526, 2535, 2553, 2574, 2582, 2608,
+				2613, 2628, 2632, 2698, 2704, 2712, 2719, 2722, 2729, 2735, 2745, 2766, 2800, 2814, 2829, 2849, 2865, 2874, 2883, 2894, 2918, 2945, 2969, 2999, 3013, 3033, 3052, 3070,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

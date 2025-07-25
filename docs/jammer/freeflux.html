@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>FreeFlux&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="FreeFlux&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/freeflux.html" property="og:url">
+	<meta content="Rank by game in top 20: 2768&#10;Rank by ilScore: 5180&#10;&#10;1 games&#10;&bull; Donut Dominion | MJ 56: Sky | rank: 20 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>FreeFlux</h1>
+		<a href="https://freeflux.itch.io">freeflux.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2768</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5180</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://freeflux.itch.io/donut-dominion">Donut Dominion</a></td>
+				<td><span class="early">3m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-56-sky">MJ 56: Sky</a></td>
+				<td>112</td>
+				<td>20</td>
+				<td>20</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				445, 457, 478, 485, 492, 519, 538, 566, 595, 601, 614, 638, 653, 662, 688, 711, 722, 736, 752, 777, 796, 815, 833, 849, 858, 879, 892, 908, 919, 941, 961, 986, 1003, 1028, 1040, 1066, 1084, 1100, 1117, 1136,
+				1144, 1168, 1181, 1189, 1204, 1222, 1248, 1277, 1290, 1296, 1317, 1330, 1346, 1365, 1384, 1399, 1418, 1436, 1458, 1480, 1503, 1505, 1519, 1528, 1540, 1558, 1578, 1591, 1602, 1624, 1628, 1646, 1676, 1693, 1708, 1725, 1747, 1762, 1788, 1798,
+				1802, 1829, 1851, 1861, 1869, 1873, 1901, 1904, 1907, 1919, 1922, 1934, 1956, 1967, 1991, 2000, 2012, 2027, 2045, 2059, 2077, 2097, 2129, 2150, 2167, 2179, 2199, 2211, 2230, 2247, 2265, 2305, 2310, 2322, 2333, 2358, 2366, 2370, 2376, 2384,
+				2390, 2398, 2406, 2438, 2458, 2479, 2494, 2518, 2534, 2559, 2579, 2598, 2617, 2638, 2659, 2685, 2703, 2735, 2750, 2767,
+			]],
+			[ "ilscore", [
+				270, 286, 293, 298, 301, 305, 311, 396, 455, 458, 466, 495, 507, 517, 525, 556, 568, 587, 606, 729, 744, 767, 821, 872, 881, 1002, 1074, 1082, 1091, 1125, 1202, 1302, 1324, 1394, 1406, 1448, 1462, 1469, 1516, 1554,
+				1561, 1587, 1596, 1602, 1629, 1665, 1838, 1923, 1976, 1983, 2041, 2069, 2118, 2313, 2333, 2456, 2508, 2620, 2895, 2920, 2948, 2949, 2953, 2961, 2966, 3052, 3109, 3129, 3141, 3177, 3179, 3290, 3339, 3350, 3369, 3409, 3463, 3479, 3613, 3624,
+				3628, 3672, 3708, 3723, 3730, 3732, 3813, 3816, 3819, 3826, 3830, 3839, 3850, 3860, 3867, 3879, 3889, 3897, 3963, 4007, 4028, 4035, 4165, 4178, 4205, 4224, 4261, 4271, 4317, 4355, 4366, 4430, 4442, 4457, 4463, 4590, 4596, 4598, 4601, 4604,
+				4609, 4619, 4632, 4662, 4731, 4739, 4751, 4771, 4790, 4800, 4826, 4839, 4895, 4932, 4963, 5063, 5076, 5133, 5157, 5179,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

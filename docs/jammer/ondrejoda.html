@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ondrejoda&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Ondrejoda&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ondrejoda.html" property="og:url">
+	<meta content="Rank by ilScore: 1335&#10;&#10;3 games&#10;&bull; Dice-Shift | MJ 83: Dread | rank: 48 | ilscore: 64&#10;&bull; CPong | MJ 79: Frogs | rank: 162 | ilscore: 48&#10;&bull; Both Sides of the Bugs | MJ 78: Bugs | rank: 46 | ilscore: 40&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ondrejoda</h1>
+		<a href="https://ondrejoda.itch.io">ondrejoda.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1335</p>
+		<p>Total ilScore: 152</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ondrejoda.itch.io/dice-shift">Dice-Shift</a></td>
+				<td><span class="early">6h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>48</td>
+				<td>10</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://ondrejoda.itch.io/cpong">CPong</a></td>
+				<td><span class="early">6h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>162</td>
+				<td>4</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://ondrejoda.itch.io/bsotb">Both Sides of the Bugs</a></td>
+				<td><span class="early">6h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>46</td>
+				<td>8</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2242, 615, 646, 665, 674, 237, 254, 271, 281, 294, 303, 305, 311, 317, 333, 340, 343, 349, 353, 358, 361, 368, 394, 428, 447, 447, 457, 464, 472, 503, 514, 544, 564, 588, 630, 646, 661, 661, 664, 668,
+				672, 688, 705, 709, 716, 721, 724, 741, 760, 774, 783, 802, 818, 827, 852, 861, 869, 886, 900, 911, 916, 917, 932, 932, 932, 935, 935, 940, 943, 950, 956, 958, 960, 962, 971, 984, 992, 995, 1024, 1036,
+				1042, 1045, 1055, 1060, 1079, 1094, 1100, 1118, 1121, 1129, 1134, 1154, 1156, 1160, 1162, 1163, 1167, 1167, 1170, 1179, 1190, 1198, 1204, 1210, 1215, 1228, 1238, 1245, 1258, 1265, 1281, 1298, 1304, 1316, 1326, 1334,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

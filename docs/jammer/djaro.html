@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DjaroGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DjaroGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/djaro.html" property="og:url">
+	<meta content="Rank by ilScore: 7360&#10;&#10;1 games&#10;&bull; Penguin  Food Collector | MJ 94: Baking | rank: 45 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DjaroGames</h1>
+		<a href="https://djaro.itch.io">djaro.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7360</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://djaro.itch.io/penguin">Penguin  Food Collector</a></td>
+				<td><span class="early">1d 1h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>45</td>
+				<td>9</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2423, 2434, 2442, 2485, 2546, 2728, 2824, 2898, 2904, 2995, 3036, 3122, 3344, 3384, 3541, 3612, 3739, 4046, 4111, 4167, 4167, 4174, 4180, 4185, 4293, 4380, 4411, 4423, 4482, 4483, 4618, 4682, 4698, 4720, 4786, 4862, 4883, 5034, 5044, 5049,
+				5116, 5174, 5193, 5201, 5204, 5312, 5312, 5315, 5321, 5326, 5335, 5355, 5367, 5406, 5412, 5421, 5426, 5517, 5602, 5635, 5645, 5797, 5824, 5873, 5902, 5962, 5967, 6039, 6093, 6103, 6197, 6208, 6227, 6232, 6387, 6396, 6400, 6403, 6407, 6414,
+				6423, 6442, 6507, 6592, 6625, 6642, 6688, 6728, 6762, 6823, 6855, 6921, 6978, 7035, 7153, 7177, 7268, 7314, 7359,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

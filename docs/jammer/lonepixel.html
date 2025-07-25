@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LonePixel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LonePixel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lonepixel.html" property="og:url">
+	<meta content="Rank by ilScore: 4009&#10;&#10;2 games&#10;&bull; FrogMania [Alpha] | MJ 79: Frogs | rank: 160 | ilscore: 49&#10;&bull; BugInMyJam | MJ 78: Bugs | rank: 56 | ilscore: 34&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LonePixel</h1>
+		<a href="https://lonepixel.itch.io">lonepixel.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4009</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lonepixel.itch.io/frogmania-alpha">FrogMania [Alpha]</a></td>
+				<td><span class="early">6h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>160</td>
+				<td>2</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://lonepixel.itch.io/buginmyjam">BugInMyJam</a></td>
+				<td><span class="early">4h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>56</td>
+				<td>5</td>
+				<td>34</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2543, 732, 780, 799, 808, 831, 882, 948, 962, 1009, 1021, 1044, 1057, 1065, 1089, 1115, 1125, 1139, 1149, 1156, 1171, 1197, 1346, 1421, 1449, 1459, 1501, 1521, 1551, 1724, 1738, 1840, 1881, 1982, 2238, 2250, 2266, 2267, 2270, 2279,
+				2282, 2362, 2392, 2407, 2421, 2451, 2455, 2547, 2582, 2595, 2613, 2641, 2674, 2688, 2798, 2810, 2813, 2841, 2868, 2883, 2889, 2893, 2939, 2943, 2948, 2956, 2959, 2965, 2978, 2986, 2992, 3002, 3012, 3022, 3065, 3095, 3114, 3119, 3233, 3249,
+				3269, 3283, 3307, 3316, 3347, 3372, 3382, 3433, 3443, 3459, 3465, 3565, 3572, 3576, 3580, 3584, 3592, 3600, 3613, 3634, 3683, 3695, 3709, 3728, 3743, 3754, 3765, 3777, 3806, 3832, 3855, 3931, 3944, 3972, 3993, 4008,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

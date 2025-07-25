@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>feraswheel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="feraswheel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/feraswheel.html" property="og:url">
+	<meta content="Rank by game in top 5: 997&#10;Rank by game in top 10: 56&#10;Rank by game in top 20: 14&#10;Rank by ilScore: 5&#10;&#10;24 games&#10;&bull; Rabbit Run | MJ 181: Rabbits | rank: 50 | ilscore: 55&#10;&bull; The Fox Hunt | MJ 176: Foxes | rank: 26 | ilscore: 64&#10;&bull; Lightspeed | MJ 160: Light | rank: 18 | ilscore: 80&#10;&bull; Cat In A Box | MJ 154: Travel | rank: 29 | ilscore: 58&#10;&bull; Unhooked | MJ 153: Fishing | rank: 39 | ilscore: 95&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>feraswheel</h1>
+		<a href="https://feraswheel.itch.io">feraswheel.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 997</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 56</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>7</span>
+			<span>9</span>
+			<span>10</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 14</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>7</span>
+			<span>9</span>
+			<span>10</span>
+			<span>11</span>
+			<span>12</span>
+			<span>13</span>
+			<span>13</span>
+			<span>16</span>
+			<span>18</span>
+			<span>10</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5</p>
+		<p>Total ilScore: 1809</p>
+
+		<h3 id="games_header">24 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/rabbitrun">Rabbit Run</a></td>
+				<td><span class="early">16h 2m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-181-rabbits">MJ 181: Rabbits</a></td>
+				<td>96</td>
+				<td>50</td>
+				<td>8</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/thefoxhunt">The Fox Hunt</a></td>
+				<td><span class="early">16h 22m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>26</td>
+				<td>22</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/lightspeed">Lightspeed</a></td>
+				<td><span class="early">6h 20m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-160-light">MJ 160: Light</a></td>
+				<td>123</td>
+				<td>18</td>
+				<td>22</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/catinabox">Cat In A Box</a></td>
+				<td><span class="early">2h early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-154-travel">MJ 154: Travel</a></td>
+				<td>79</td>
+				<td>29</td>
+				<td>21</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/unhooked">Unhooked</a></td>
+				<td><span class="early">1d 1h early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>39</td>
+				<td>30</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/2024theyearofthedragon">2024: The Year Of The Dragon</a></td>
+				<td><span class="early">21h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>55</td>
+				<td>6</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/hollywoodwalkoffamepinball">Hollywood Walk Of Fame Pinball</a></td>
+				<td><span class="early">20h 4m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-147-cinema">MJ 147: Cinema</a></td>
+				<td>40</td>
+				<td>26</td>
+				<td>7</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/leprechaunfortune">Leprechaun Fortune</a></td>
+				<td><span class="early">5h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>23</td>
+				<td>17</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/frogjump">Frog Jump</a></td>
+				<td><span class="early">22h 48m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>9</td>
+				<td>35</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/dandelion">Dandelion</a></td>
+				<td><span class="early">1d 3h early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>21</td>
+				<td>22</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/thelifeofsteven">The Life Of Steven</a></td>
+				<td><span class="early">22h 50m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>13</td>
+				<td>27</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/vitals">Vitals</a></td>
+				<td><span class="early">20h 23m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>12</td>
+				<td>23</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/whenpigsfly">When Pigs Fly</a></td>
+				<td><span class="early">16h 53m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>96</td>
+				<td>10</td>
+				<td>23</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/thebloodbar">The Blood Bar</a></td>
+				<td><span class="early">3h 14m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>25</td>
+				<td>18</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/shiftinglanes">Shifting Lanes</a></td>
+				<td><span class="early">9m 22s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>37</td>
+				<td>13</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/catsinabasket">Cats In A Basket</a></td>
+				<td><span class="early">2h 31m early</span></td>
+				<td>
+					<a href="../jammer/mental3122.html">mental3122</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>77</td>
+				<td>44</td>
+				<td>120</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/mundane">Mundane</a></td>
+				<td><span class="early">16h 56m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>27</td>
+				<td>26</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/armageddon">Armageddon</a></td>
+				<td><span class="early">16h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>13</td>
+				<td>23</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/savetheturtles">Save The Turtles</a></td>
+				<td><span class="early">16m 42s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>11</td>
+				<td>22</td>
+				<td>106</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/technodrop">Techno Drop</a></td>
+				<td><span class="early">55m 56s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>25</td>
+				<td>19</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/getlit">Get Lit</a></td>
+				<td><span class="early">14h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>7</td>
+				<td>19</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/piperunner">Pipe Runner</a></td>
+				<td><span class="early">15h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>4</td>
+				<td>14</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/shiftingroads">Shifting Roads</a></td>
+				<td><span class="early">16h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>16</td>
+				<td>22</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://feraswheel.itch.io/shortcircuit">Short Circuit</a></td>
+				<td><span class="early">16h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>58</td>
+				<td>25</td>
+				<td>84</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				491, 496, 499, 504, 511, 520, 524, 527, 531, 537, 546, 550, 551, 556, 561, 569, 573, 581, 590, 599, 607, 609, 614, 624, 628, 636, 639, 646, 651, 654, 658, 661, 666, 672, 677, 680, 684, 693, 694, 697,
+				704, 707, 714, 720, 726, 731, 734, 742, 751, 757, 759, 763, 770, 780, 791, 796, 801, 805, 809, 813, 819, 825, 833, 837, 840, 846, 852, 856, 856, 858, 861, 864, 872, 879, 890, 895, 899, 905, 910, 916,
+				925, 935, 938, 943, 954, 962, 969, 974, 981, 991, 996,
+			]],
+			[ "10", [
+				754, 120, 121, 124, 127, 127, 132, 134, 134, 135, 136, 139, 139, 139, 143, 147, 147, 147, 57, 57, 57, 57, 57, 57, 57, 57, 57, 57, 58, 59, 59, 59, 60, 32, 32, 32, 33, 33, 34, 34,
+				34, 34, 35, 35, 35, 35, 35, 35, 35, 36, 37, 38, 38, 38, 39, 39, 39, 39, 39, 39, 40, 40, 40, 42, 45, 45, 45, 45, 45, 45, 45, 46, 46, 46, 46, 46, 49, 49, 50, 50,
+				51, 52, 52, 52, 52, 52, 52, 52, 53, 55, 55,
+			]],
+			[ "20", [
+				779, 207, 79, 80, 80, 82, 82, 44, 25, 25, 25, 25, 25, 26, 26, 26, 26, 26, 26, 22, 22, 22, 22, 22, 22, 16, 16, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11,
+				11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13,
+				13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
+			]],
+			[ "ilscore", [
+				1361, 322, 176, 93, 60, 61, 69, 70, 38, 21, 18, 14, 12, 12, 12, 13, 13, 13, 13, 10, 8, 8, 8, 8, 8, 9, 8, 8, 7, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

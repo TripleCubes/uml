@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SavestateCorrupted&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SavestateCorrupted&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/savestatecorrupted.html" property="og:url">
+	<meta content="Rank by game in top 5: 572&#10;Rank by game in top 10: 752&#10;Rank by game in top 20: 1108&#10;Rank by ilScore: 473&#10;&#10;3 games&#10;&bull; Glow Down | MJ 109: Depths | rank: 70 | ilscore: 67&#10;&bull; Dream of the Machine | MJ 109: Depths | rank: 5 | ilscore: 94&#10;&bull; Frog Force: The Power of Friendship | MJ 106: Frogs | rank: 114 | ilscore: 93&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SavestateCorrupted</h1>
+		<a href="https://savestatecorrupted.itch.io">savestatecorrupted.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 572</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 752</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1108</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 473</p>
+		<p>Total ilScore: 253</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fizzy214.itch.io/glow-down">Glow Down</a></td>
+				<td><span class="early">1h 26m early</span></td>
+				<td>
+					<a href="../jammer/fizzy214.html">Fizzy</a>,
+					<a href="../jammer/composerkirk.html">Kirk</a>,
+					<a href="../jammer/veggiepug.html">veggiepug</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>70</td>
+				<td>7</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/the-dreams-of-machines">Dream of the Machine</a></td>
+				<td><span class="early">5m 30s early</span></td>
+				<td>
+					<a href="../jammer/ilprinni.html">ilPrinni</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>5</td>
+				<td>15</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://savestatecorrupted.itch.io/frog-force">Frog Force: The Power of Friendship</a></td>
+				<td><span class="early">21m 59s early</span></td>
+				<td>
+					<a href="../jammer/qnickw.html">qnickw</a>,
+					<a href="../jammer/daddydemus.html">demus</a>,
+					<a href="../jammer/chriztiuit.html">ChriztiUit</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>114</td>
+				<td>15</td>
+				<td>93</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				294, 298, 304, 311, 315, 315, 316, 320, 328, 331, 337, 337, 337, 344, 344, 348, 358, 361, 367, 371, 372, 377, 378, 380, 381, 386, 392, 393, 393, 393, 397, 402, 407, 410, 411, 419, 423, 423, 425, 425,
+				427, 427, 433, 435, 441, 449, 455, 455, 457, 458, 462, 463, 468, 473, 474, 482, 486, 491, 495, 501, 504, 504, 504, 504, 506, 508, 508, 519, 523, 524, 525, 530, 532, 533, 536, 537, 542, 546, 551, 559,
+				559, 566, 571, 571,
+			]],
+			[ "10", [
+				382, 388, 400, 407, 418, 418, 418, 422, 429, 432, 438, 438, 441, 448, 450, 454, 470, 475, 482, 494, 496, 504, 505, 508, 512, 518, 525, 527, 528, 530, 534, 539, 543, 547, 548, 555, 559, 560, 563, 563,
+				565, 566, 572, 576, 581, 589, 595, 599, 601, 603, 608, 610, 615, 620, 624, 637, 642, 647, 654, 665, 668, 671, 671, 672, 674, 676, 677, 688, 694, 697, 698, 703, 705, 705, 710, 714, 719, 723, 733, 740,
+				740, 744, 750, 751,
+			]],
+			[ "20", [
+				548, 555, 566, 576, 590, 590, 590, 598, 609, 613, 627, 629, 636, 646, 650, 656, 674, 684, 697, 709, 712, 721, 723, 726, 729, 738, 746, 749, 753, 757, 760, 762, 767, 776, 779, 789, 797, 800, 805, 810,
+				819, 822, 828, 832, 837, 848, 856, 863, 873, 874, 880, 887, 900, 909, 915, 928, 936, 944, 954, 965, 970, 980, 981, 983, 987, 992, 994, 1006, 1014, 1018, 1022, 1029, 1036, 1045, 1050, 1055, 1059, 1064, 1074, 1084,
+				1085, 1090, 1101, 1107,
+			]],
+			[ "ilscore", [
+				1323, 1338, 1403, 179, 185, 197, 202, 206, 206, 207, 207, 207, 218, 223, 224, 225, 229, 231, 240, 246, 250, 255, 263, 266, 273, 282, 285, 287, 295, 300, 304, 306, 307, 313, 313, 313, 314, 315, 316, 317,
+				319, 320, 323, 324, 324, 332, 335, 339, 343, 347, 351, 356, 361, 364, 366, 367, 377, 381, 390, 391, 394, 395, 408, 409, 412, 412, 413, 413, 413, 417, 418, 421, 425, 425, 428, 430, 435, 440, 443, 445,
+				448, 453, 457, 460, 465, 469, 472,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

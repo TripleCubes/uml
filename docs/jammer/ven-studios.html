@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ven&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Ven&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ven-studios.html" property="og:url">
+	<meta content="Rank by game in top 10: 983&#10;Rank by game in top 20: 1342&#10;Rank by ilScore: 1362&#10;&#10;2 games&#10;&bull; Boventure! | MJ 104: Cascade | rank: 8 | ilscore: 81&#10;&bull; 7 Ways To Die | MJ 92: Death | rank: 38 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ven</h1>
+		<a href="https://ven-studios.itch.io">ven-studios.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 983</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1342</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1362</p>
+		<p>Total ilScore: 150</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ven-studios.itch.io/boventure">Boventure!</a></td>
+				<td><span class="late">8h 40m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>8</td>
+				<td>16</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://ven-studios.itch.io/7-ways-to-die">7 Ways To Die</a></td>
+				<td><span class="late">7h 59m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>38</td>
+				<td>28</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				476, 481, 490, 494, 501, 510, 520, 532, 546, 556, 557, 558, 562, 568, 574, 586, 586, 592, 602, 604, 610, 631, 635, 644, 657, 663, 671, 673, 676, 677, 688, 696, 698, 698, 698, 707, 711, 715, 722, 723,
+				730, 736, 737, 742, 742, 744, 747, 756, 763, 770, 780, 794, 795, 799, 803, 812, 813, 820, 828, 831, 844, 847, 853, 860, 872, 875, 878, 878, 880, 883, 885, 888, 899, 907, 910, 912, 917, 919, 919, 925,
+				929, 935, 947, 955, 968, 969, 970, 977, 982,
+			]],
+			[ "20", [
+				639, 645, 659, 667, 676, 686, 696, 719, 733, 746, 747, 748, 756, 766, 772, 791, 793, 802, 815, 819, 827, 848, 856, 868, 883, 891, 900, 903, 906, 907, 921, 930, 933, 935, 939, 947, 949, 954, 963, 966,
+				976, 986, 989, 996, 1001, 1008, 1013, 1022, 1029, 1036, 1048, 1063, 1067, 1078, 1081, 1090, 1096, 1109, 1119, 1123, 1144, 1147, 1154, 1164, 1177, 1182, 1192, 1193, 1196, 1201, 1206, 1210, 1222, 1232, 1236, 1241, 1248, 1255, 1264, 1269,
+				1275, 1280, 1293, 1301, 1317, 1319, 1321, 1333, 1341,
+			]],
+			[ "ilscore", [
+				1778, 1783, 1813, 1821, 1828, 1859, 1897, 2073, 2162, 2223, 2229, 2302, 480, 490, 520, 531, 560, 581, 605, 647, 664, 679, 679, 682, 686, 691, 707, 725, 727, 735, 741, 744, 763, 782, 796, 805, 824, 840, 849, 875,
+				883, 891, 909, 923, 934, 939, 940, 955, 955, 955, 958, 958, 963, 966, 973, 979, 981, 983, 985, 994, 1008, 1016, 1019, 1047, 1059, 1065, 1068, 1078, 1083, 1102, 1117, 1123, 1141, 1144, 1152, 1157, 1177, 1179, 1183, 1185,
+				1186, 1190, 1190, 1193, 1202, 1213, 1223, 1229, 1235, 1240, 1253, 1262, 1270, 1284, 1291, 1307, 1325, 1330, 1342, 1352, 1361,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

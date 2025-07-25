@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Jennavieve&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Jennavieve&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jennavieve.html" property="og:url">
+	<meta content="Rank by game in top 20: 2930&#10;Rank by ilScore: 8522&#10;&#10;1 games&#10;&bull; Unfinished Saga (Demo) | MJ 65: Abandoned | rank: 19 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Jennavieve</h1>
+		<a href="https://jennavieve.itch.io">jennavieve.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2930</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8522</p>
+		<p>Total ilScore: 52</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://jennavieve.itch.io/unfinishedsaga">Unfinished Saga (Demo)</a></td>
+				<td><span class="early">1h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>19</td>
+				<td>4</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				647, 671, 687, 701, 727, 750, 761, 775, 791, 816, 836, 855, 872, 896, 909, 929, 942, 953, 967, 989, 1009, 1034, 1054, 1079, 1098, 1124, 1142, 1161, 1177, 1196, 1210, 1234, 1250, 1261, 1276, 1294, 1319, 1345, 1358, 1363,
+				1384, 1397, 1413, 1432, 1453, 1468, 1487, 1505, 1527, 1549, 1572, 1574, 1589, 1598, 1615, 1633, 1653, 1667, 1680, 1702, 1706, 1724, 1754, 1771, 1787, 1803, 1825, 1840, 1866, 1876, 1882, 1909, 1931, 1944, 1954, 1961, 1989, 1990, 1993, 2005,
+				2010, 2022, 2044, 2059, 2083, 2097, 2110, 2127, 2145, 2158, 2176, 2201, 2233, 2256, 2277, 2291, 2311, 2322, 2341, 2358, 2375, 2415, 2421, 2439, 2451, 2476, 2487, 2491, 2500, 2510, 2516, 2525, 2536, 2568, 2588, 2613, 2634, 2658, 2676, 2700,
+				2729, 2748, 2767, 2794, 2815, 2841, 2861, 2893, 2912, 2929,
+			]],
+			[ "ilscore", [
+				923, 1008, 1031, 1053, 1085, 1142, 1162, 1226, 1251, 1405, 1445, 1497, 1573, 1671, 1696, 1840, 1930, 1957, 1979, 2047, 2163, 2292, 2339, 2448, 2500, 2571, 2608, 2646, 2708, 2782, 2787, 2846, 2858, 2873, 2922, 2989, 3181, 3283, 3370, 3377,
+				3481, 3540, 3631, 3852, 3899, 4062, 4141, 4282, 4611, 4681, 4744, 4744, 4760, 4765, 4773, 4886, 4987, 5031, 5041, 5115, 5119, 5258, 5327, 5348, 5377, 5455, 5540, 5572, 5731, 5745, 5751, 5836, 5900, 5923, 5928, 5930, 6049, 6049, 6054, 6059,
+				6066, 6077, 6104, 6126, 6182, 6196, 6201, 6212, 6320, 6423, 6476, 6497, 6655, 6687, 6742, 6789, 6861, 6873, 6952, 7013, 7030, 7144, 7156, 7194, 7202, 7372, 7389, 7392, 7396, 7397, 7403, 7408, 7438, 7518, 7607, 7650, 7672, 7729, 7782, 7827,
+				7898, 7937, 8009, 8073, 8140, 8277, 8318, 8418, 8473, 8521,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

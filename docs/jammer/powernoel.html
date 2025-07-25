@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>powernoel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="powernoel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/powernoel.html" property="og:url">
+	<meta content="Rank by game in top 5: 904&#10;Rank by game in top 10: 1344&#10;Rank by game in top 20: 600&#10;Rank by ilScore: 771&#10;&#10;4 games&#10;&bull; Hello_Underworld | MJ 137: Judgement | rank: 4 | ilscore: 40&#10;&bull; Soul Locked | MJ 114: Anime | rank: 11 | ilscore: 53&#10;&bull; Lampade | MJ 105: Dreamy | rank: 106 | ilscore: 52&#10;&bull; Aphelion Rescue Team | MJ 77: Courage | rank: 90 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>powernoel</h1>
+		<a href="https://powernoel.itch.io">powernoel.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 904</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1344</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 600</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>11</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 771</p>
+		<p>Total ilScore: 198</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://powernoel.itch.io/hello-underworld">Hello_Underworld</a></td>
+				<td><span class="early">6h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-137-judgement">MJ 137: Judgement</a></td>
+				<td>27</td>
+				<td>4</td>
+				<td>11</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://powernoel.itch.io/soul-locked">Soul Locked</a></td>
+				<td><span class="early">6h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>11</td>
+				<td>10</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://powernoel.itch.io/lampade">Lampade</a></td>
+				<td><span class="early">10h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>106</td>
+				<td>4</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://powernoel.itch.io/aphelion">Aphelion Rescue Team</a></td>
+				<td><span class="early">6h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>90</td>
+				<td>3</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				625, 634, 635, 638, 643, 644, 651, 657, 658, 663, 664, 672, 676, 682, 684, 689, 696, 706, 716, 720, 725, 729, 731, 735, 741, 745, 753, 755, 758, 763, 769, 773, 773, 774, 775, 779, 786, 788, 799, 804,
+				808, 814, 819, 822, 832, 842, 845, 850, 862, 870, 877, 881, 888, 898, 903,
+			]],
+			[ "10", [
+				958, 972, 975, 977, 981, 982, 989, 998, 999, 1004, 1005, 1013, 1018, 1027, 1033, 1042, 1053, 1070, 1076, 1080, 1085, 1096, 1098, 1108, 1120, 1124, 1137, 1140, 1145, 1153, 1165, 1169, 1169, 1170, 1172, 1176, 1183, 1186, 1201, 1210,
+				1216, 1223, 1232, 1235, 1244, 1255, 1259, 1268, 1284, 1295, 1308, 1312, 1322, 1332, 1343,
+			]],
+			[ "20", [
+				1645, 1654, 1675, 1693, 1713, 1727, 1741, 1763, 1770, 1788, 1818, 1835, 1855, 1871, 1893, 1908, 1934, 1946, 1955, 1980, 2001, 2015, 2027, 392, 395, 397, 401, 407, 408, 411, 414, 415, 420, 420, 428, 431, 432, 435, 437, 442,
+				445, 452, 460, 461, 464, 465, 474, 483, 486, 487, 494, 500, 505, 509, 510, 514, 517, 517, 519, 523, 524, 528, 532, 535, 539, 545, 546, 548, 552, 556, 558, 563, 574, 580, 581, 585, 591, 599,
+			]],
+			[ "ilscore", [
+				1650, 1675, 1819, 1908, 1933, 1955, 2019, 2134, 2262, 2309, 2416, 2469, 2541, 2579, 2617, 2677, 2749, 2753, 2811, 2823, 2838, 2888, 2953, 3144, 3246, 3329, 3335, 3438, 3496, 923, 1024, 1038, 1076, 1104, 1150, 1331, 1350, 1366, 1366, 609,
+				612, 616, 631, 644, 648, 656, 662, 663, 678, 699, 710, 718, 736, 750, 758, 781, 788, 794, 811, 824, 833, 836, 501, 511, 511, 517, 518, 521, 523, 524, 526, 528, 534, 534, 534, 544, 552, 557, 561, 576,
+				577, 583, 588, 595, 598, 610, 622, 626, 637, 643, 649, 650, 661, 665, 668, 670, 671, 673, 675, 678, 683, 686, 693, 699, 702, 705, 708, 714, 719, 724, 731, 738, 746, 747, 758, 763, 770,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

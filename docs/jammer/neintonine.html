@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>iedSoftworks&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="iedSoftworks&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/neintonine.html" property="og:url">
+	<meta content="Rank by game in top 5: 818&#10;Rank by game in top 10: 1171&#10;Rank by game in top 20: 1557&#10;Rank by ilScore: 1536&#10;&#10;3 games&#10;&bull; A Papercut | MJ 177: Papercraft | rank: 43 | ilscore: 40&#10;&bull; Non-Viable Product | MJ 172: Security | rank: 3 | ilscore: 48&#10;&bull; SUPER DANGEROUS CYBER DISC GOLF | MJ 167: Cyber | rank: 22 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>iedSoftworks</h1>
+		<a href="https://neintonine.itch.io">neintonine.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 818</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1171</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1557</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1536</p>
+		<p>Total ilScore: 141</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://neintonine.itch.io/a-papercut">A Papercut</a></td>
+				<td><span class="early">2h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-177-papercraft">MJ 177: Papercraft</a></td>
+				<td>63</td>
+				<td>43</td>
+				<td>11</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://neintonine.itch.io/non-viable-product">Non-Viable Product</a></td>
+				<td><span class="early">5h 46m early</span></td>
+				<td>
+					<a href="../jammer/pandotcodes.html">pandotcodes</a>,
+					<a href="../jammer/daviddotcheck.html">daviddotcheck</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-172-security">MJ 172: Security</a></td>
+				<td>37</td>
+				<td>3</td>
+				<td>10</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://neintonine.itch.io/super-dangerous-cyber-disc-golf">SUPER DANGEROUS CYBER DISC GOLF</a></td>
+				<td><span class="early">6h 37m early</span></td>
+				<td>
+					<a href="../jammer/tomcomic.html">TomComic</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-167-cyber">MJ 167: Cyber</a></td>
+				<td>63</td>
+				<td>22</td>
+				<td>10</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				713, 715, 726, 731, 734, 737, 742, 744, 747, 756, 759, 764, 776, 784, 794, 796, 802, 812, 817,
+			]],
+			[ "10", [
+				1040, 1043, 1056, 1065, 1069, 1072, 1079, 1081, 1083, 1094, 1098, 1107, 1122, 1133, 1146, 1148, 1154, 1164, 1170,
+			]],
+			[ "20", [
+				1389, 1392, 1405, 1419, 1424, 1430, 1439, 1445, 1456, 1465, 1471, 1480, 1495, 1507, 1523, 1525, 1532, 1547, 1556,
+			]],
+			[ "ilscore", [
+				7386, 7389, 7393, 7394, 7400, 2356, 2363, 2381, 2411, 2425, 1391, 1399, 1406, 1418, 1427, 1433, 1449, 1460, 1477, 1496, 1501, 1513, 1523, 1535,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

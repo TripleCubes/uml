@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kaircha&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kaircha&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kaircha.html" property="og:url">
+	<meta content="Rank by game in top 5: 814&#10;Rank by game in top 10: 1163&#10;Rank by game in top 20: 1546&#10;Rank by ilScore: 6031&#10;&#10;1 games&#10;&bull; Screwble | MJ 135: Deception | rank: 4 | ilscore: 68&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kaircha</h1>
+		<a href="https://kaircha.itch.io">kaircha.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 814</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1163</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1546</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6031</p>
+		<p>Total ilScore: 68</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kaircha.itch.io/screwble">Screwble</a></td>
+				<td><span class="early">2m 20s early</span></td>
+				<td>
+					<a href="../jammer/muddddd.html">Mudd</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>4</td>
+				<td>13</td>
+				<td>68</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				557, 557, 558, 567, 571, 576, 583, 584, 593, 599, 599, 604, 605, 607, 611, 617, 619, 624, 631, 641, 648, 652, 656, 660, 661, 666, 672, 672, 680, 682, 685, 690, 696, 700, 700, 701, 702, 705, 709, 711,
+				722, 727, 730, 733, 738, 740, 743, 752, 755, 760, 772, 780, 790, 792, 798, 808, 813,
+			]],
+			[ "10", [
+				820, 820, 821, 833, 837, 841, 848, 849, 858, 866, 867, 871, 872, 874, 879, 888, 895, 903, 913, 930, 933, 937, 941, 952, 953, 964, 974, 975, 988, 991, 996, 1004, 1016, 1020, 1022, 1023, 1025, 1028, 1032, 1035,
+				1048, 1057, 1061, 1064, 1071, 1073, 1075, 1086, 1090, 1099, 1114, 1125, 1138, 1140, 1146, 1156, 1162,
+			]],
+			[ "20", [
+				1085, 1087, 1092, 1103, 1105, 1110, 1119, 1120, 1131, 1141, 1144, 1151, 1156, 1163, 1170, 1184, 1192, 1200, 1211, 1229, 1233, 1242, 1246, 1257, 1263, 1279, 1289, 1293, 1314, 1316, 1324, 1334, 1351, 1357, 1366, 1368, 1371, 1375, 1382, 1385,
+				1398, 1409, 1414, 1420, 1429, 1435, 1446, 1455, 1461, 1470, 1485, 1496, 1512, 1514, 1521, 1536, 1545,
+			]],
+			[ "ilscore", [
+				4285, 4293, 4296, 4395, 4397, 4399, 4405, 4410, 4419, 4431, 4441, 4464, 4474, 4484, 4489, 4572, 4629, 4659, 4665, 4803, 4821, 4862, 4884, 4934, 4943, 5006, 5051, 5062, 5140, 5152, 5167, 5173, 5313, 5321, 5324, 5327, 5331, 5336, 5345, 5357,
+				5400, 5479, 5501, 5511, 5533, 5555, 5575, 5615, 5639, 5699, 5741, 5788, 5897, 5909, 5975, 6003, 6030,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

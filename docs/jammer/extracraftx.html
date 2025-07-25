@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ExtraCrafTX&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ExtraCrafTX&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/extracraftx.html" property="og:url">
+	<meta content="Rank by game in top 20: 2609&#10;Rank by ilScore: 5018&#10;&#10;1 games&#10;&bull; Gun-Die | MJ 92: Death | rank: 19 | ilscore: 75&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ExtraCrafTX</h1>
+		<a href="https://extracraftx.itch.io">extracraftx.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2609</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5018</p>
+		<p>Total ilScore: 75</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://extracraftx.itch.io/gun-die">Gun-Die</a></td>
+				<td><span class="early">1h 10m early</span></td>
+				<td>
+					<a href="../jammer/popstuff.html">Popstuff</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>19</td>
+				<td>15</td>
+				<td>75</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1076, 1084, 1104, 1116, 1122, 1135, 1153, 1179, 1208, 1221, 1226, 1247, 1261, 1277, 1296, 1316, 1331, 1350, 1368, 1390, 1412, 1435, 1436, 1450, 1459, 1471, 1489, 1509, 1522, 1531, 1553, 1557, 1575, 1605, 1618, 1634, 1651, 1673, 1688, 1714,
+				1719, 1722, 1750, 1772, 1780, 1786, 1790, 1818, 1821, 1823, 1827, 1830, 1842, 1862, 1871, 1891, 1900, 1912, 1927, 1945, 1959, 1975, 1995, 2027, 2045, 2058, 2068, 2087, 2099, 2118, 2136, 2152, 2192, 2196, 2207, 2218, 2243, 2250, 2254, 2257,
+				2266, 2269, 2277, 2285, 2313, 2333, 2346, 2361, 2384, 2400, 2425, 2444, 2458, 2478, 2499, 2520, 2546, 2561, 2582, 2594, 2608,
+			]],
+			[ "ilscore", [
+				1506, 1513, 1531, 1542, 1548, 1573, 1608, 1777, 1860, 1912, 1919, 1976, 2004, 2048, 2241, 2255, 2374, 2425, 2537, 2809, 2834, 2860, 2861, 2865, 2873, 2878, 2964, 3018, 3038, 3049, 3085, 3087, 3198, 3242, 3254, 3273, 3313, 3359, 3373, 3507,
+				3519, 3522, 3565, 3600, 3616, 3623, 3625, 3702, 3705, 3708, 3715, 3719, 3728, 3739, 3748, 3755, 3767, 3779, 3786, 3852, 3889, 3912, 3919, 4051, 4065, 4085, 4102, 4136, 4146, 4190, 4226, 4238, 4298, 4310, 4326, 4332, 4452, 4459, 4463, 4466,
+				4469, 4474, 4484, 4497, 4529, 4596, 4603, 4615, 4635, 4654, 4664, 4690, 4701, 4751, 4788, 4819, 4907, 4920, 4973, 4997, 5017,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

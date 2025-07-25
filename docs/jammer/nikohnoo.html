@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NikOhNoo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NikOhNoo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nikohnoo.html" property="og:url">
+	<meta content="Rank by game in top 20: 2160&#10;Rank by ilScore: 343&#10;&#10;4 games&#10;&bull; Life Anew | MJ+ 6: Life | rank: 17 | ilscore: 85&#10;&bull; Stranded In Space | MJ 114: Anime | rank: 23 | ilscore: 47&#10;&bull; Dance Dance Armageddon | MJ 113: Final Boss | rank: 26 | ilscore: 71&#10;&bull; Anarch-Bee | MJ 110: Sacrifice | rank: 52 | ilscore: 91&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NikOhNoo</h1>
+		<a href="https://nikohnoo.itch.io">nikohnoo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2160</p>
+		<div class="boxes">
+			<span class="box_majorjam">17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 343</p>
+		<p>Total ilScore: 294</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://nikohnoo.itch.io/life-anew">Life Anew</a></td>
+				<td><span class="late">6m 36s late</span></td>
+				<td>
+					<a href="../jammer/unimeno.html">unimeno</a>,
+					<a href="../jammer/charmiedev.html">Charmie</a>,
+					<a href="../jammer/garrickchiu.html">GarrickChiu</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>17</td>
+				<td>11</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://nikohnoo.itch.io/stranded-in-space">Stranded In Space</a></td>
+				<td><span class="early">4m 51s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>23</td>
+				<td>10</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://nikohnoo.itch.io/dance-dance-armageddon">Dance Dance Armageddon</a></td>
+				<td><span class="early">6m 7s early</span></td>
+				<td>
+					<a href="../jammer/unimeno.html">unimeno</a>,
+					<a href="../jammer/genysys.html">Genysys</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>26</td>
+				<td>17</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://wesm.itch.io/anarch-bee">Anarch-Bee</a></td>
+				<td><span class="early">31m 18s early</span></td>
+				<td>
+					<a href="../jammer/wesm.html">wesm</a>,
+					<a href="../jammer/rusakic.html">sunner</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>52</td>
+				<td>20</td>
+				<td>91</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1522, 1524, 1526, 1531, 1533, 1543, 1559, 1566, 1576, 1581, 1593, 1603, 1622, 1633, 1645, 1666, 1699, 1707, 1714, 1721, 1735, 1742, 1762, 1773, 1781, 1821, 1823, 1833, 1842, 1867, 1873, 1877, 1880, 1885, 1889, 1899, 1906, 1924, 1944, 1954,
+				1970, 1987, 2001, 2017, 2028, 2035, 2049, 2068, 2090, 2115, 2120, 2131, 2146, 2159,
+			]],
+			[ "ilscore", [
+				1584, 1819, 1833, 589, 589, 306, 309, 313, 323, 329, 335, 336, 340, 341, 350, 360, 365, 370, 376, 385, 392, 405, 405, 408, 419, 425, 430, 430, 431, 215, 216, 216, 218, 220, 220, 222, 222, 222, 224, 227,
+				229, 233, 236, 240, 241, 244, 247, 249, 253, 258, 258, 260, 265, 266, 273, 277, 277, 277, 283, 283, 284, 284, 285, 286, 287, 291, 292, 298, 300, 302, 306, 307, 308, 315, 320, 325, 325, 328, 332, 332,
+				335, 338, 342,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

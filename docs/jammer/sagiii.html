@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SAGIII&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SAGIII&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sagiii.html" property="og:url">
+	<meta content="Rank by game in top 10: 651&#10;Rank by game in top 20: 1018&#10;Rank by ilScore: 1599&#10;&#10;1 games&#10;&bull; Cursed Walker | MJ 111: Colors | rank: 8 | ilscore: 138&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SAGIII</h1>
+		<a href="https://sagiii.itch.io">sagiii.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 651</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1018</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1599</p>
+		<p>Total ilScore: 138</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sagiii.itch.io/mini-jam-111">Cursed Walker</a></td>
+				<td><span class="early">2h 26m early</span></td>
+				<td>
+					<a href="../jammer/soleil-23.html">Soleil_23</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>8</td>
+				<td>59</td>
+				<td>138</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				346, 352, 358, 358, 358, 363, 372, 374, 379, 379, 382, 383, 385, 389, 397, 403, 411, 413, 414, 424, 424, 427, 431, 437, 441, 443, 444, 446, 450, 455, 459, 464, 465, 472, 475, 476, 479, 479, 480, 481,
+				486, 491, 496, 500, 504, 508, 510, 511, 515, 518, 523, 526, 530, 541, 545, 550, 558, 569, 572, 575, 577, 578, 580, 582, 583, 589, 595, 597, 598, 603, 604, 604, 609, 613, 617, 621, 632, 639, 639, 643,
+				649, 650,
+			]],
+			[ "20", [
+				514, 523, 533, 533, 534, 542, 555, 558, 571, 573, 580, 584, 588, 595, 605, 616, 630, 635, 637, 648, 649, 652, 655, 664, 669, 673, 677, 681, 684, 686, 691, 701, 704, 714, 722, 725, 730, 735, 744, 747,
+				752, 756, 761, 770, 776, 783, 793, 793, 798, 805, 818, 825, 831, 842, 850, 858, 869, 880, 885, 895, 898, 900, 904, 909, 911, 918, 926, 929, 933, 941, 947, 956, 961, 966, 969, 974, 984, 994, 995, 1000,
+				1011, 1017,
+			]],
+			[ "ilscore", [
+				777, 796, 811, 811, 817, 821, 830, 852, 870, 875, 883, 892, 897, 920, 941, 958, 971, 989, 1008, 1017, 1048, 1056, 1069, 1088, 1103, 1111, 1117, 1117, 1132, 1132, 1132, 1135, 1135, 1138, 1142, 1150, 1157, 1160, 1162, 1166,
+				1176, 1189, 1198, 1202, 1234, 1251, 1258, 1263, 1275, 1278, 1299, 1314, 1320, 1337, 1341, 1351, 1358, 1380, 1381, 1383, 1385, 1387, 1392, 1392, 1395, 1408, 1425, 1440, 1445, 1453, 1462, 1474, 1483, 1492, 1507, 1521, 1537, 1557, 1562, 1574,
+				1586, 1598,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

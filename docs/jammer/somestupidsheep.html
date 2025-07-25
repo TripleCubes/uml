@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SomeStupidSheep&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SomeStupidSheep&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/somestupidsheep.html" property="og:url">
+	<meta content="Rank by game in top 20: 2546&#10;Rank by ilScore: 2060&#10;&#10;2 games&#10;&bull; 1,001 Robots | MJ 179: Energy | rank: 26 | ilscore: 61&#10;&bull; Flip-Flop | MJ 167: Cyber | rank: 11 | ilscore: 58&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SomeStupidSheep</h1>
+		<a href="https://somestupidsheep.itch.io">somestupidsheep.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2546</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2060</p>
+		<p>Total ilScore: 119</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://somestupidsheep.itch.io/1001-robots">1,001 Robots</a></td>
+				<td><span class="early">2h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-179-energy">MJ 179: Energy</a></td>
+				<td>82</td>
+				<td>26</td>
+				<td>15</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://somestupidsheep.itch.io/flip-flop">Flip-Flop</a></td>
+				<td><span class="early">9m 20s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-167-cyber">MJ 167: Cyber</a></td>
+				<td>63</td>
+				<td>11</td>
+				<td>14</td>
+				<td>58</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2198, 2202, 2205, 2214, 2217, 2225, 2233, 2261, 2281, 2294, 2309, 2332, 2348, 2371, 2389, 2400, 2420, 2441, 2462, 2488, 2498, 2518, 2533, 2545,
+			]],
+			[ "ilscore", [
+				6581, 6585, 6588, 6592, 6599, 6608, 6629, 6704, 6791, 6824, 6840, 6887, 1885, 1901, 1907, 1919, 1942, 1960, 1976, 1995, 2008, 2027, 2045, 2059,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

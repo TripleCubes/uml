@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DeltaNeverUsed&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DeltaNeverUsed&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/deltaneverused.html" property="og:url">
+	<meta content="Rank by game in top 5: 150&#10;Rank by game in top 10: 273&#10;Rank by game in top 20: 432&#10;Rank by ilScore: 168&#10;&#10;6 games&#10;&bull; Pablo: A Goopy Goopers Journey | MJ 110: Sacrifice | rank: 60 | ilscore: 88&#10;&bull; Pizza Lad | MJ 88: Rush | rank: 5 | ilscore: 85&#10;&bull; Cube Lad | MJ 81: Kaiju | rank: 4 | ilscore: 65&#10;&bull; Neon Jam Session | MJ 74: Chaos | rank: 28 | ilscore: 58&#10;&bull; Re:Coil | MJ 62: Colors | rank: 26 | ilscore: 86&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DeltaNeverUsed</h1>
+		<a href="https://deltaneverused.itch.io">deltaneverused.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 150</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 273</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 432</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 168</p>
+		<p>Total ilScore: 410</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://deltaneverused.itch.io/pablo">Pablo: A Goopy Goopers Journey</a></td>
+				<td><span class="early">3h 33m early</span></td>
+				<td>
+					<a href="../jammer/asillyvole.html">ASillyVole</a>,
+					<a href="../jammer/osun.html">Osun</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>60</td>
+				<td>12</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltaneverused.itch.io/pizza-lad">Pizza Lad</a></td>
+				<td><span class="early">4h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>5</td>
+				<td>30</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltaneverused.itch.io/cube-lad">Cube Lad</a></td>
+				<td><span class="early">2h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>4</td>
+				<td>35</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltaneverused.itch.io/neon-jam-session">Neon Jam Session</a></td>
+				<td><span class="early">3h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>28</td>
+				<td>6</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltaneverused.itch.io/recoil">Re:Coil</a></td>
+				<td><span class="early">14s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>26</td>
+				<td>16</td>
+				<td>86</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://deltaneverused.itch.io/little-dungeon">Little Dungeon</a></td>
+				<td><span class="early">5h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-2">MJ+ 2: Love</a></td>
+				<td>51</td>
+				<td>42</td>
+				<td>2</td>
+				<td>29</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				351, 356, 362, 366, 372, 377, 383, 387, 47, 47, 47, 48, 48, 48, 52, 52, 52, 53, 54, 54, 54, 58, 58, 60, 61, 61, 62, 62, 63, 64, 64, 65, 66, 67, 67, 68, 70, 71, 71, 71,
+				71, 71, 71, 72, 73, 73, 75, 77, 79, 79, 80, 81, 82, 83, 84, 85, 86, 87, 87, 88, 88, 91, 91, 93, 97, 98, 98, 98, 98, 100, 100, 100, 100, 102, 103, 104, 104, 104, 104, 105,
+				106, 109, 111, 113, 113, 117, 122, 123, 123, 123, 126, 127, 128, 130, 130, 130, 131, 131, 131, 132, 134, 134, 134, 134, 135, 135, 139, 140, 143, 143, 149, 149, 149,
+			]],
+			[ "10", [
+				523, 528, 539, 549, 559, 572, 584, 590, 87, 89, 90, 91, 92, 92, 96, 98, 98, 99, 102, 102, 105, 109, 109, 112, 113, 114, 117, 117, 122, 124, 124, 125, 126, 129, 129, 130, 134, 138, 138, 138,
+				139, 142, 142, 143, 144, 148, 153, 156, 158, 159, 162, 163, 164, 166, 169, 172, 175, 176, 176, 178, 179, 182, 184, 185, 188, 189, 189, 190, 190, 192, 192, 193, 195, 199, 200, 201, 205, 207, 207, 208,
+				210, 211, 214, 216, 217, 224, 228, 230, 232, 233, 236, 236, 237, 239, 239, 239, 240, 241, 244, 245, 247, 247, 247, 247, 249, 249, 252, 259, 263, 263, 266, 269, 272,
+			]],
+			[ "20", [
+				725, 731, 750, 770, 780, 793, 818, 825, 146, 148, 152, 154, 155, 158, 163, 170, 171, 173, 174, 174, 179, 186, 186, 190, 191, 194, 197, 200, 205, 210, 210, 212, 216, 222, 222, 222, 224, 229, 230, 230,
+				230, 234, 236, 238, 240, 245, 251, 254, 258, 259, 266, 268, 269, 270, 274, 277, 280, 281, 283, 286, 289, 292, 294, 295, 300, 302, 303, 305, 306, 308, 310, 311, 313, 316, 318, 319, 323, 326, 327, 331,
+				331, 334, 342, 346, 347, 354, 359, 363, 368, 369, 372, 373, 374, 377, 379, 381, 383, 384, 387, 389, 393, 393, 396, 397, 398, 401, 408, 417, 421, 421, 424, 428, 431,
+			]],
+			[ "ilscore", [
+				1252, 1253, 1259, 1321, 1362, 122, 154, 154, 162, 169, 175, 177, 183, 197, 200, 214, 224, 254, 100, 110, 118, 122, 122, 139, 160, 75, 75, 79, 83, 90, 93, 94, 95, 48, 49, 51, 54, 58, 59, 60,
+				61, 62, 64, 69, 73, 79, 86, 88, 92, 93, 96, 103, 104, 111, 115, 73, 79, 80, 85, 85, 86, 89, 89, 92, 93, 94, 95, 97, 98, 101, 102, 103, 104, 108, 109, 109, 113, 114, 115, 117,
+				120, 121, 122, 122, 123, 123, 123, 124, 124, 125, 126, 127, 128, 128, 128, 128, 129, 131, 131, 131, 132, 132, 132, 132, 132, 132, 133, 135, 136, 138, 139, 141, 141, 144, 144, 144, 145, 145, 146, 146,
+				146, 146, 149, 151, 151, 152, 153, 153, 156, 157, 159, 161, 163, 167, 167, 167, 167, 167,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

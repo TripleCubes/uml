@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>redstonie&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="redstonie&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/redstonie.html" property="og:url">
+	<meta content="Rank by game in top 10: 2033&#10;Rank by game in top 20: 771&#10;Rank by ilScore: 8670&#10;&#10;3 games&#10;&bull; You Just Water Flowers, Apparently. | MJ 21: Stories | rank: 8 | ilscore: 17&#10;&bull; Fantasy Game That Takes Place In A Super Market | MJ 8: Fantasy | rank: 22 | ilscore: 15&#10;&bull; A gentleman and his tophat:A tragedy | MJ 1: Break Out | rank: 17 | ilscore: 19&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>redstonie</h1>
+		<a href="https://redstonie.itch.io">redstonie.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2033</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 771</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>17</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8670</p>
+		<p>Total ilScore: 51</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://redstonie.itch.io/you-just-water-flowers-apparently">You Just Water Flowers, Apparently.</a></td>
+				<td><span class="late">11m 17s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-21-stories">MJ 21: Stories</a></td>
+				<td>13</td>
+				<td>8</td>
+				<td>5</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://redstonie.itch.io/fantasy-game-that-takes-place-in-a-super-market">Fantasy Game That Takes Place In A Super Market</a></td>
+				<td><span class="late">8h 47m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-8-fantasy">MJ 8: Fantasy</a></td>
+				<td>23</td>
+				<td>22</td>
+				<td>4</td>
+				<td>15</td>
+			</tr>
+			<tr>
+				<td><a href="https://redstonie.itch.io/a-gentleman-and-his-tophata-tragedy">A gentleman and his tophat:A tragedy</a></td>
+				<td><span class="early">3h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam">MJ 1: Break Out</a></td>
+				<td>19</td>
+				<td>17</td>
+				<td>7</td>
+				<td>19</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				144, 150, 167, 176, 188, 197, 201, 209, 216, 225, 234, 241, 254, 260, 266, 275, 281, 292, 300, 311, 321, 328, 338, 346, 356, 362, 371, 378, 385, 396, 415, 429, 438, 446, 457, 467, 478, 488, 499, 510,
+				515, 528, 546, 559, 575, 587, 594, 606, 614, 622, 635, 648, 658, 666, 675, 688, 697, 707, 716, 725, 734, 746, 753, 770, 780, 791, 801, 813, 825, 837, 845, 856, 866, 883, 891, 900, 917, 930, 940, 954,
+				962, 968, 979, 991, 998, 1008, 1015, 1024, 1031, 1040, 1057, 1064, 1073, 1083, 1094, 1108, 1121, 1126, 1141, 1150, 1158, 1167, 1184, 1199, 1211, 1224, 1232, 1241, 1259, 1268, 1279, 1292, 1305, 1315, 1325, 1333, 1343, 1358, 1368, 1376,
+				1384, 1394, 1408, 1414, 1425, 1441, 1449, 1461, 1477, 1490, 1500, 1514, 1526, 1541, 1549, 1553, 1561, 1582, 1599, 1613, 1621, 1630, 1641, 1656, 1666, 1678, 1694, 1707, 1714, 1720, 1728, 1740, 1745, 1754, 1768, 1779, 1787, 1805, 1816, 1834,
+				1842, 1851, 1867, 1878, 1890, 1905, 1923, 1932, 1940, 1955, 1966, 1979, 1990, 2007, 2020, 2032,
+			]],
+			[ "20", [
+				16, 21, 22, 22, 24, 35, 46, 65, 81, 100, 108, 116, 116, 139, 154, 160, 164, 181, 193, 206, 39, 40, 43, 47, 48, 53, 55, 57, 59, 64, 65, 71, 74, 77, 78, 83, 86, 86, 91, 95,
+				96, 99, 102, 103, 107, 119, 123, 126, 129, 132, 133, 133, 134, 141, 143, 147, 149, 154, 155, 162, 169, 171, 173, 177, 179, 187, 191, 195, 201, 204, 207, 209, 210, 216, 220, 224, 224, 228, 231, 231,
+				235, 240, 246, 256, 260, 263, 267, 271, 276, 280, 284, 285, 291, 296, 302, 304, 308, 311, 315, 321, 322, 323, 324, 327, 333, 337, 340, 344, 350, 352, 356, 362, 368, 369, 371, 375, 382, 382, 383, 390,
+				399, 400, 408, 410, 418, 422, 427, 431, 437, 447, 457, 462, 464, 470, 472, 474, 477, 483, 487, 493, 497, 502, 504, 506, 510, 519, 522, 529, 535, 538, 543, 548, 558, 561, 562, 565, 567, 573, 576, 583,
+				593, 593, 596, 602, 612, 619, 626, 628, 637, 645, 653, 656, 658, 671, 674, 676, 680, 685, 687, 690, 694, 697, 701, 707, 712, 721, 724, 729, 730, 734, 743, 749, 750, 754, 762, 770,
+			]],
+			[ "ilscore", [
+				16, 16, 17, 17, 17, 30, 32, 13, 24, 28, 29, 34, 34, 46, 50, 53, 53, 68, 75, 80, 32, 32, 39, 60, 69, 73, 77, 81, 85, 92, 93, 102, 116, 119, 120, 125, 128, 129, 134, 142,
+				145, 149, 151, 151, 157, 167, 186, 190, 193, 275, 348, 350, 398, 412, 463, 505, 594, 605, 628, 635, 641, 679, 701, 831, 930, 932, 943, 1029, 1052, 1078, 1112, 1169, 1191, 1255, 1282, 1436, 1477, 1531, 1607, 1706,
+				1734, 1880, 1972, 2001, 2023, 2091, 2211, 2341, 2395, 2503, 2556, 2628, 2665, 2703, 2766, 2840, 2845, 2906, 2920, 2939, 2989, 3056, 3246, 3348, 3436, 3443, 3550, 3610, 3705, 3933, 3980, 4145, 4224, 4364, 4695, 4765, 4829, 4829, 4846, 4851,
+				4859, 4975, 5077, 5124, 5135, 5209, 5213, 5356, 5426, 5447, 5476, 5555, 5641, 5673, 5834, 5848, 5855, 5940, 6004, 6029, 6034, 6036, 6155, 6155, 6159, 6164, 6171, 6182, 6210, 6234, 6292, 6307, 6312, 6323, 6432, 6535, 6588, 6609, 6767, 6799,
+				6860, 6907, 6982, 6994, 7075, 7136, 7153, 7270, 7283, 7320, 7329, 7505, 7523, 7525, 7529, 7530, 7536, 7541, 7571, 7651, 7741, 7784, 7807, 7865, 7919, 7967, 8040, 8079, 8151, 8216, 8283, 8420, 8461, 8561, 8621, 8669,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

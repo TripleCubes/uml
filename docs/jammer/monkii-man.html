@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Monkii Goes Boarding&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Monkii Goes Boarding&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/monkii-man.html" property="og:url">
+	<meta content="Rank by game in top 10: 1088&#10;Rank by game in top 20: 422&#10;Rank by ilScore: 131&#10;&#10;7 games&#10;&bull; Gibbon Time | MJ 126: Lost | rank: 50 | ilscore: 43&#10;&bull; Tactical Fishing | MJ 108: Seaside | rank: 18 | ilscore: 103&#10;&bull; Boss Fight | MJ 77: Courage | rank: 75 | ilscore: 60&#10;&bull; Lucifer | MJ 69: Hell | rank: 28 | ilscore: 67&#10;&bull; Lone King | MJ 65: Abandoned | rank: 9 | ilscore: 60&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Monkii Goes Boarding</h1>
+		<a href="https://monkii-man.itch.io">monkii-man.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1088</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 422</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>18</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 131</p>
+		<p>Total ilScore: 459</p>
+
+		<h3 id="games_header">7 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mprlindell.itch.io/timemonkey">Gibbon Time</a></td>
+				<td><span class="late">21h 6m late</span></td>
+				<td>
+					<a href="../jammer/mprlindell.html">mprlindell</a>,
+					<a href="../jammer/discordian.html">Discordian</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>50</td>
+				<td>6</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/tactical-fishing">Tactical Fishing</a></td>
+				<td><span class="late">21h 7m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>18</td>
+				<td>15</td>
+				<td>103</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/boss-fight">Boss Fight</a></td>
+				<td><span class="late">1h 7m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>75</td>
+				<td>12</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/lucifer">Lucifer</a></td>
+				<td><span class="early">58m 37s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>28</td>
+				<td>13</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/lone-king">Lone King</a></td>
+				<td><span class="early">15m 21s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>9</td>
+				<td>19</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/impact-tower">Impact Tower</a></td>
+				<td><span class="early">1h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>46</td>
+				<td>12</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://monkii-man.itch.io/go-to-war">Go to War</a></td>
+				<td><span class="early">1h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>101</td>
+				<td>8</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				251, 262, 267, 272, 282, 296, 297, 302, 305, 319, 324, 328, 337, 339, 345, 358, 365, 367, 367, 376, 386, 388, 393, 404, 408, 416, 425, 429, 433, 439, 445, 448, 457, 457, 464, 468, 475, 490, 497, 500,
+				510, 519, 527, 536, 545, 552, 561, 571, 583, 597, 608, 609, 611, 615, 623, 630, 642, 647, 653, 666, 669, 677, 695, 702, 711, 724, 731, 739, 742, 745, 746, 757, 765, 767, 767, 767, 778, 782, 786, 793,
+				794, 803, 811, 812, 817, 817, 819, 822, 831, 838, 845, 855, 871, 874, 878, 882, 891, 892, 901, 909, 912, 925, 928, 933, 941, 953, 956, 959, 960, 962, 965, 967, 970, 983, 991, 995, 997, 1003, 1005, 1006,
+				1017, 1021, 1030, 1044, 1053, 1066, 1068, 1074, 1081, 1087,
+			]],
+			[ "20", [
+				339, 350, 358, 364, 376, 390, 392, 398, 402, 424, 429, 435, 446, 448, 454, 475, 486, 493, 496, 507, 518, 523, 529, 542, 548, 556, 569, 573, 581, 588, 595, 598, 605, 611, 618, 621, 629, 658, 668, 674,
+				681, 691, 700, 718, 726, 199, 204, 204, 206, 210, 216, 216, 216, 218, 223, 224, 224, 224, 228, 230, 233, 235, 240, 246, 249, 253, 254, 261, 263, 264, 265, 269, 272, 275, 276, 278, 281, 284, 284, 286,
+				287, 292, 294, 295, 297, 298, 300, 302, 303, 305, 308, 310, 311, 315, 318, 319, 323, 323, 326, 334, 338, 339, 346, 350, 354, 359, 360, 363, 364, 365, 368, 370, 372, 374, 375, 378, 380, 384, 384, 387,
+				388, 388, 391, 398, 407, 411, 411, 414, 418, 421,
+			]],
+			[ "ilscore", [
+				669, 124, 128, 44, 49, 55, 57, 57, 22, 23, 25, 26, 32, 35, 39, 45, 29, 31, 34, 38, 39, 41, 41, 47, 47, 49, 51, 52, 53, 54, 57, 60, 62, 64, 65, 65, 66, 67, 72, 77,
+				82, 92, 93, 98, 100, 104, 110, 112, 64, 67, 68, 74, 75, 80, 80, 80, 83, 83, 85, 87, 88, 89, 91, 92, 95, 96, 96, 77, 79, 82, 83, 89, 89, 90, 92, 95, 99, 100, 100, 103,
+				103, 103, 103, 103, 104, 104, 104, 104, 104, 104, 104, 104, 106, 106, 106, 106, 106, 106, 106, 107, 107, 108, 108, 108, 108, 108, 110, 110, 111, 111, 111, 111, 111, 111, 111, 113, 114, 118, 119, 119,
+				119, 120, 120, 120, 121, 121, 123, 125, 130, 130, 130, 130, 130,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

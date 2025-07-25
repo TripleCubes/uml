@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Combowar5&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Combowar5&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/combowar5.html" property="og:url">
+	<meta content="Rank by ilScore: 9714&#10;&#10;1 games&#10;&bull; SleepGuardian | MJ 68: Sleep | rank: 34 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Combowar5</h1>
+		<a href="https://combowar5.itch.io">combowar5.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9714</p>
+		<p>Total ilScore: 45</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://combowar5.itch.io/sleepguardian">SleepGuardian</a></td>
+				<td><span class="early">1d 3h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-68-sleep">MJ 68: Sleep</a></td>
+				<td>62</td>
+				<td>34</td>
+				<td>13</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1293, 1331, 1395, 1429, 1497, 1528, 1696, 1741, 1811, 1887, 1987, 2019, 2175, 2273, 2314, 2345, 2422, 2546, 2685, 2749, 2865, 2932, 3020, 3064, 3111, 3185, 3267, 3283, 3346, 3370, 3399, 3463, 3533, 3729, 3839, 3931, 3939, 4046, 4107, 4207,
+				4447, 4497, 4676, 4755, 4905, 5251, 5318, 5391, 5391, 5415, 5420, 5436, 5553, 5660, 5721, 5740, 5829, 5838, 5989, 6060, 6094, 6130, 6208, 6298, 6335, 6505, 6523, 6534, 6620, 6692, 6724, 6732, 6733, 6863, 6864, 6869, 6883, 6891, 6906, 6950,
+				6986, 7049, 7068, 7079, 7097, 7207, 7328, 7393, 7427, 7589, 7625, 7699, 7753, 7838, 7853, 7936, 8004, 8021, 8146, 8162, 8208, 8218, 8398, 8421, 8421, 8435, 8437, 8459, 8466, 8507, 8590, 8685, 8730, 8765, 8829, 8892, 8949, 9027, 9071, 9145,
+				9210, 9284, 9427, 9476, 9583, 9654, 9713,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

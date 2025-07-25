@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nezt50&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Nezt50&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nezt50.html" property="og:url">
+	<meta content="Rank by game in top 20: 488&#10;Rank by ilScore: 904&#10;&#10;2 games&#10;&bull; Mechalike | MJ 113: Final Boss | rank: 14 | ilscore: 75&#10;&bull; Flying Hazard | MJ 99: Birds | rank: 18 | ilscore: 109&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nezt50</h1>
+		<a href="https://nezt50.itch.io">nezt50.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 488</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>18</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 904</p>
+		<p>Total ilScore: 185</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nezt50.itch.io/mechalike">Mechalike</a></td>
+				<td><span class="late">1h 32m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>14</td>
+				<td>8</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://nezt50.itch.io/flying-hazard">Flying Hazard</a></td>
+				<td><span class="late">30m 7s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>18</td>
+				<td>9</td>
+				<td>109</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				844, 873, 885, 890, 907, 919, 925, 944, 960, 976, 991, 1010, 1033, 1054, 247, 247, 247, 249, 255, 256, 262, 262, 266, 268, 270, 273, 277, 283, 286, 291, 292, 300, 303, 304, 305, 308, 311, 314, 316, 318,
+				321, 324, 327, 331, 332, 336, 339, 340, 343, 343, 348, 349, 350, 351, 354, 357, 360, 365, 368, 369, 373, 374, 379, 388, 392, 393, 400, 406, 410, 414, 414, 417, 420, 421, 424, 428, 429, 432, 436, 439,
+				441, 448, 448, 448, 450, 452, 455, 460, 471, 474, 474, 477, 481, 487,
+			]],
+			[ "ilscore", [
+				755, 791, 806, 812, 836, 856, 876, 957, 970, 1010, 1038, 1075, 1238, 1257, 408, 408, 412, 417, 420, 430, 439, 448, 452, 458, 459, 474, 489, 498, 504, 519, 528, 534, 549, 551, 553, 566, 573, 583, 584, 588,
+				600, 602, 607, 609, 612, 615, 619, 622, 626, 630, 631, 631, 640, 650, 655, 658, 677, 679, 685, 689, 698, 704, 722, 735, 739, 751, 755, 760, 763, 777, 782, 785, 787, 788, 792, 793, 797, 801, 804, 813,
+				819, 821, 824, 827, 838, 844, 853, 858, 866, 874, 877, 888, 894, 903,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

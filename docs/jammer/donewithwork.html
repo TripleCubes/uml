@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DoneWithWork&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DoneWithWork&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/donewithwork.html" property="og:url">
+	<meta content="Rank by ilScore: 189&#10;&#10;7 games&#10;&bull; Coffeethon | MJ 99: Birds | rank: 199 | ilscore: 59&#10;&bull; Health is Wealth | MJ 92: Death | rank: 69 | ilscore: 58&#10;&bull; Dodgethon | MJ 75: Wisdom | rank: 48 | ilscore: 59&#10;&bull; Little Bob&#39;s journey | MJ 73: Power | rank: 105 | ilscore: 68&#10;&bull; Taking the Chance | MJ 69: Hell | rank: 65 | ilscore: 47&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DoneWithWork</h1>
+		<a href="https://donewithwork.itch.io">donewithwork.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 189</p>
+		<p>Total ilScore: 385</p>
+
+		<h3 id="games_header">7 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/coffeethon">Coffeethon</a></td>
+				<td><span class="early">15h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>199</td>
+				<td>8</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/health-is-wealth">Health is Wealth</a></td>
+				<td><span class="early">1h 14m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>69</td>
+				<td>10</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/dodgethon">Dodgethon</a></td>
+				<td><span class="early">4m 15s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>48</td>
+				<td>10</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/little-bobs-journey">Little Bob&#39;s journey</a></td>
+				<td><span class="early">1h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>105</td>
+				<td>9</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/taking-the-chance">Taking the Chance</a></td>
+				<td><span class="early">2h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>65</td>
+				<td>13</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/take-cover">Take Cover!</a></td>
+				<td><span class="early">20h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>101</td>
+				<td>14</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://donewithwork.itch.io/shootoff">SHOOTOFF</a></td>
+				<td><span class="early">23h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-61">MJ 61: Ancient Egypt</a></td>
+				<td>49</td>
+				<td>34</td>
+				<td>8</td>
+				<td>35</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1180, 194, 231, 232, 238, 248, 258, 265, 274, 121, 122, 135, 138, 53, 60, 35, 39, 42, 43, 47, 52, 55, 56, 58, 62, 66, 70, 70, 71, 75, 76, 78, 80, 56, 56, 58, 59, 60, 62, 67,
+				46, 50, 53, 55, 61, 65, 66, 75, 75, 79, 81, 85, 91, 92, 94, 94, 95, 98, 98, 102, 104, 104, 106, 108, 109, 112, 113, 115, 115, 118, 119, 124, 130, 130, 132, 135, 136, 136, 136, 136,
+				136, 136, 136, 136, 136, 138, 140, 141, 141, 141, 141, 141, 142, 144, 144, 144, 145, 145, 145, 145, 145, 145, 147, 149, 150, 152, 154, 157, 157, 160, 161, 161, 162, 162, 163, 163, 164, 165, 166, 170,
+				170, 170, 171, 171, 173, 175, 178, 181, 182, 185, 186, 186, 187, 188,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

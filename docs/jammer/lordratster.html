@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>theRatster&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="theRatster&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lordratster.html" property="og:url">
+	<meta content="Rank by ilScore: 1441&#10;&#10;2 games&#10;&bull; Hamster Playground | MJ 101: Limit | rank: 64 | ilscore: 70&#10;&bull; Mewmew and Bip | MJ+ 4: Cosmic | rank: 48 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>theRatster</h1>
+		<a href="https://lordratster.itch.io">lordratster.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1441</p>
+		<p>Total ilScore: 145</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://m77mdsd.itch.io/hamster-playground">Hamster Playground</a></td>
+				<td><span class="late">1d 17h late</span></td>
+				<td>
+					<a href="../jammer/m77mdsd.html">M77mdsD</a>,
+					<a href="../jammer/nerdishere.html">Sakata</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>64</td>
+				<td>8</td>
+				<td>70</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://lordratster.itch.io/mewmew-and-bip">Mewmew and Bip</a></td>
+				<td><span class="early">11m 39s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>48</td>
+				<td>15</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1366, 1380, 1421, 1434, 1441, 1487, 1523, 1530, 1548, 1559, 1565, 1590, 1625, 1795, 1879, 498, 498, 512, 523, 534, 567, 579, 611, 634, 658, 699, 717, 731, 731, 733, 737, 743, 761, 779, 780, 789, 796, 800, 823, 843,
+				857, 866, 886, 902, 911, 938, 946, 954, 972, 987, 997, 1003, 1003, 1017, 1017, 1017, 1020, 1020, 1024, 1027, 1035, 1042, 1045, 1047, 1051, 1060, 1074, 1082, 1085, 1115, 1128, 1135, 1138, 1150, 1153, 1174, 1186, 1191, 1208, 1211,
+				1221, 1227, 1248, 1249, 1253, 1255, 1256, 1259, 1259, 1261, 1271, 1285, 1296, 1301, 1307, 1314, 1326, 1335, 1341, 1357, 1367, 1382, 1401, 1406, 1418, 1428, 1440,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

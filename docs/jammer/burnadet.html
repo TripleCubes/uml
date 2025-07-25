@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Burnadet&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Burnadet&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/burnadet.html" property="og:url">
+	<meta content="Rank by game in top 10: 322&#10;Rank by game in top 20: 557&#10;Rank by ilScore: 109&#10;&#10;9 games&#10;&bull; Purradin | MJ 150: Magic | rank: 118 | ilscore: 38&#10;&bull; Bomba Squad | MJ 135: Deception | rank: 53 | ilscore: 40&#10;&bull; Party in Puitenol | MJ 79: Frogs | rank: 118 | ilscore: 68&#10;&bull; Mission: Egguinox | MJ 77: Courage | rank: 99 | ilscore: 48&#10;&bull; Power to the people | MJ 73: Power | rank: 91 | ilscore: 73&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Burnadet</h1>
+		<a href="https://burnadet.itch.io">burnadet.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 322</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 557</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 109</p>
+		<p>Total ilScore: 493</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://burnadet.itch.io/purradin">Purradin</a></td>
+				<td><span class="early">1h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>118</td>
+				<td>4</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/bomba-squad">Bomba Squad</a></td>
+				<td><span class="early">6h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>53</td>
+				<td>2</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/party-in-puitenol">Party in Puitenol</a></td>
+				<td><span class="early">4h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>118</td>
+				<td>10</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/mission-egguinox">Mission: Egguinox</a></td>
+				<td><span class="early">2h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>99</td>
+				<td>6</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/power-to-the-people">Power to the people</a></td>
+				<td><span class="early">9h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>91</td>
+				<td>9</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/magicon-stadium">Magicon Stadium</a></td>
+				<td><span class="early">3h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-64">MJ 64: Nintendo 64</a></td>
+				<td>13</td>
+				<td>7</td>
+				<td>8</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/the-tale-of-the-brave-knight">The Tale of the Brave Knight</a></td>
+				<td><span class="early">3h 10m early</span></td>
+				<td>
+					<a href="../jammer/supersander.html">SuperSander</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>27</td>
+				<td>9</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/no-going-back">No Going Back</a></td>
+				<td><span class="early">3h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>8</td>
+				<td>14</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://burnadet.itch.io/fruitmemory">FruitMemory</a></td>
+				<td><span class="early">6h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-54-memories">MJ 54: Memories</a></td>
+				<td>92</td>
+				<td>27</td>
+				<td>18</td>
+				<td>62</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				164, 164, 174, 182, 182, 186, 194, 194, 207, 218, 66, 67, 68, 70, 72, 73, 74, 75, 79, 81, 83, 83, 85, 86, 87, 90, 91, 97, 99, 100, 100, 102, 102, 106, 107, 108, 109, 111, 112, 113,
+				114, 114, 118, 120, 120, 123, 125, 125, 128, 131, 131, 136, 137, 140, 143, 143, 148, 150, 150, 151, 152, 155, 155, 155, 159, 163, 163, 163, 163, 166, 166, 168, 169, 173, 178, 182, 184, 185, 190, 191,
+				193, 196, 199, 202, 205, 206, 208, 210, 213, 216, 220, 221, 224, 225, 226, 228, 228, 230, 230, 231, 235, 237, 238, 239, 243, 245, 246, 247, 250, 251, 254, 259, 260, 266, 270, 272, 274, 274, 277, 279,
+				279, 281, 283, 283, 284, 286, 288, 289, 292, 292, 292, 294, 298, 299, 302, 309, 312, 312, 315, 318, 321,
+			]],
+			[ "20", [
+				228, 230, 241, 249, 256, 262, 270, 272, 286, 299, 107, 108, 111, 116, 119, 122, 124, 125, 132, 135, 139, 140, 142, 145, 146, 150, 153, 163, 168, 169, 171, 174, 176, 181, 186, 189, 190, 194, 198, 204,
+				206, 210, 213, 217, 217, 220, 221, 221, 226, 232, 233, 236, 239, 246, 248, 253, 259, 265, 266, 268, 272, 279, 279, 280, 282, 291, 292, 300, 300, 305, 308, 310, 314, 320, 327, 334, 338, 340, 345, 347,
+				349, 351, 354, 357, 362, 363, 363, 366, 369, 373, 377, 378, 381, 384, 386, 391, 391, 399, 401, 402, 405, 407, 410, 413, 420, 427, 428, 432, 433, 439, 448, 452, 453, 460, 466, 470, 474, 474, 477, 480,
+				480, 482, 486, 487, 490, 494, 497, 501, 507, 508, 508, 512, 515, 517, 523, 534, 540, 541, 544, 548, 556,
+			]],
+			[ "ilscore", [
+				337, 63, 71, 73, 75, 79, 81, 82, 85, 92, 27, 19, 21, 24, 27, 28, 28, 30, 32, 34, 35, 22, 24, 26, 29, 22, 22, 13, 14, 16, 16, 16, 17, 18, 18, 18, 21, 22, 22, 22,
+				23, 24, 25, 25, 27, 27, 28, 31, 35, 38, 41, 42, 46, 50, 51, 58, 60, 65, 68, 69, 75, 76, 81, 81, 81, 84, 84, 86, 88, 89, 90, 92, 93, 96, 97, 97, 98, 102, 104, 104,
+				108, 109, 110, 111, 115, 102, 103, 103, 106, 106, 106, 107, 107, 107, 107, 107, 107, 107, 107, 107, 107, 88, 88, 88, 88, 89, 89, 89, 90, 90, 91, 91, 91, 91, 91, 93, 93, 93, 94, 94,
+				94, 94, 94, 94, 94, 95, 96, 97, 97, 98, 99, 99, 99, 100, 100, 102, 104, 106, 106, 106, 106, 108,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

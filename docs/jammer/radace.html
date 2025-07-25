@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Radace&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Radace&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/radace.html" property="og:url">
+	<meta content="Rank by game in top 20: 490&#10;Rank by ilScore: 648&#10;&#10;3 games&#10;&bull; Quark Sea | MJ 159: Ocean | rank: 17 | ilscore: 84&#10;&bull; Buboxic | MJ 129: Poison | rank: 20 | ilscore: 65&#10;&bull; Crustaceans Innovations | MJ 108: Seaside | rank: 144 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Radace</h1>
+		<a href="https://radace.itch.io">radace.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 490</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 648</p>
+		<p>Total ilScore: 215</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://radace.itch.io/quark-sea">Quark Sea</a></td>
+				<td><span class="early">28m 26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-159-ocean">MJ 159: Ocean</a></td>
+				<td>123</td>
+				<td>17</td>
+				<td>8</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://radace.itch.io/buboxic">Buboxic</a></td>
+				<td><span class="early">4h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>20</td>
+				<td>10</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://radace.itch.io/crustaceans-innovations">Crustaceans Innovations</a></td>
+				<td><span class="early">1h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>144</td>
+				<td>6</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1508, 1534, 1538, 1541, 1566, 1588, 1594, 1598, 1603, 1631, 1633, 1635, 1640, 1643, 1654, 1670, 1678, 1695, 1701, 1713, 1724, 1743, 1756, 1769, 1789, 1822, 1832, 1839, 1847, 1862, 1869, 380, 389, 393, 394, 401, 407, 411, 415, 415,
+				418, 421, 422, 425, 429, 430, 433, 437, 440, 442, 449, 449, 449, 452, 454, 457, 462, 473, 476, 476, 479, 483, 489,
+			]],
+			[ "ilscore", [
+				3019, 3086, 3209, 3498, 3557, 3601, 3602, 3606, 3612, 3615, 3715, 3784, 3805, 3814, 3866, 3867, 3993, 4052, 4062, 4084, 4138, 4202, 1128, 1159, 1170, 1182, 1201, 1220, 1229, 1235, 1235, 1251, 1251, 1252, 1256, 1257, 1260, 1270, 1278, 1285,
+				1289, 1291, 1297, 1308, 1320, 1331, 1335, 1366, 1385, 1395, 1402, 1413, 1417, 513, 524, 528, 540, 547, 550, 552, 563, 568, 571, 572, 572, 573, 575, 577, 581, 584, 590, 594, 595, 598, 600, 606, 609, 611, 616, 623,
+				628, 630, 635, 640, 647,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

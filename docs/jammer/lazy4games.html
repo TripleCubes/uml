@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Lazy4Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Lazy4Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lazy4games.html" property="og:url">
+	<meta content="Rank by game in top 20: 3385&#10;Rank by ilScore: 1083&#10;&#10;3 games&#10;&bull; Island Defender | MJ 134: Islands | rank: 27 | ilscore: 74&#10;&bull; The Wizard of Gifts | MJ 132: Severed | rank: 19 | ilscore: 47&#10;&bull; Super Cool Rocket Game | MJ 131: Solar | rank: 22 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Lazy4Games</h1>
+		<a href="https://lazy4games.itch.io">lazy4games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3385</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1083</p>
+		<p>Total ilScore: 168</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lazy4games.itch.io/island-defender">Island Defender</a></td>
+				<td><span class="early">12h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>27</td>
+				<td>21</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://lazy4games.itch.io/the-wizard-of-gifts">The Wizard of Gifts</a></td>
+				<td><span class="early">12h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>19</td>
+				<td>11</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://lazy4games.itch.io/super-cool-rocket-game">Super Cool Rocket Game</a></td>
+				<td><span class="early">9h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>22</td>
+				<td>22</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2173, 2198, 2219, 2239, 2256, 2264, 2292, 2296, 2308, 2328, 2343, 2358, 2379, 2403, 2426, 2446, 2462, 2484, 2502, 2514, 2532, 2561, 2593, 2615, 2635, 2656, 2676, 2695, 2710, 2727, 2749, 2789, 2803, 2818, 2831, 2856, 2870, 2875, 2894, 2914,
+				2936, 2956, 2973, 3004, 3024, 3048, 3077, 3101, 3127, 3151, 3181, 3199, 3218, 3245, 3264, 3290, 3315, 3347, 3367, 3384,
+			]],
+			[ "ilscore", [
+				6413, 2120, 2138, 722, 732, 733, 736, 749, 751, 755, 758, 760, 765, 769, 772, 777, 779, 781, 782, 788, 798, 803, 805, 828, 831, 836, 839, 852, 858, 878, 891, 895, 910, 913, 917, 920, 935, 939, 941, 942,
+				943, 948, 948, 952, 958, 965, 974, 983, 984, 988, 996, 1006, 1013, 1023, 1030, 1037, 1049, 1053, 1067, 1073, 1082,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

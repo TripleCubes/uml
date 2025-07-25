@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dylaan&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dylaan&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dylaan.html" property="og:url">
+	<meta content="Rank by game in top 10: 1589&#10;Rank by game in top 20: 716&#10;Rank by ilScore: 860&#10;&#10;4 games&#10;&bull; Meltdown | MJ 76: Radiation | rank: 33 | ilscore: 78&#10;&bull; In Search of Oasis | MJ 53: Oasis | rank: 54 | ilscore: 33&#10;&bull; Frantic Farmer | MJ 49: Seasons | rank: 11 | ilscore: 23&#10;&bull; Interknight Jam-Edition | MJ 47: Internet | rank: 7 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dylaan</h1>
+		<a href="https://dylaan.itch.io">dylaan.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1589</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 716</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>11</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 860</p>
+		<p>Total ilScore: 189</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dylaan.itch.io/meltdown">Meltdown</a></td>
+				<td><span class="early">11m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>33</td>
+				<td>16</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://dylaan.itch.io/in-search-of-oasis">In Search of Oasis</a></td>
+				<td><span class="late">12h 48m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-53-oasis">MJ 53: Oasis</a></td>
+				<td>56</td>
+				<td>54</td>
+				<td>4</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td><a href="https://dylaan.itch.io/frantic-farmer">Frantic Farmer</a></td>
+				<td><span class="late">5m 36s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>11</td>
+				<td>6</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://dylaan.itch.io/interknight-jam-edition">Interknight Jam-Edition</a></td>
+				<td><span class="late">31m 9s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-47-internet">MJ 47: Internet</a></td>
+				<td>52</td>
+				<td>7</td>
+				<td>11</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				187, 193, 194, 208, 227, 234, 242, 251, 261, 271, 282, 294, 305, 305, 308, 322, 339, 352, 368, 372, 379, 392, 400, 408, 421, 434, 440, 448, 455, 468, 477, 488, 497, 505, 512, 525, 532, 538, 543, 554,
+				564, 576, 588, 600, 608, 619, 629, 641, 649, 658, 667, 680, 690, 693, 703, 709, 720, 735, 742, 747, 756, 765, 772, 781, 798, 805, 814, 824, 836, 850, 863, 864, 878, 886, 894, 903, 920, 932, 940, 953,
+				955, 964, 982, 991, 1002, 1015, 1028, 1038, 1048, 1054, 1057, 1072, 1083, 1089, 1091, 1095, 1109, 1112, 1114, 1119, 1122, 1130, 1145, 1151, 1162, 1165, 1177, 1187, 1196, 1202, 1210, 1231, 1248, 1257, 1264, 1272, 1283, 1287, 1297, 1309,
+				1315, 1328, 1334, 1340, 1348, 1360, 1365, 1365, 1367, 1371, 1374, 1382, 1389, 1407, 1416, 1426, 1442, 1453, 1464, 1477, 1488, 1498, 1507, 1522, 1533, 1546, 1552, 1569, 1576, 1588,
+			]],
+			[ "20", [
+				241, 246, 94, 97, 100, 100, 101, 108, 109, 113, 115, 120, 121, 124, 130, 132, 133, 137, 139, 145, 149, 153, 159, 162, 165, 167, 168, 174, 178, 182, 182, 186, 189, 189, 193, 198, 206, 216, 220, 222,
+				226, 230, 235, 239, 243, 244, 250, 255, 261, 263, 267, 270, 274, 279, 280, 281, 282, 285, 291, 295, 298, 302, 308, 310, 314, 320, 326, 327, 329, 333, 340, 340, 341, 346, 355, 356, 364, 365, 373, 377,
+				382, 386, 392, 402, 412, 417, 418, 424, 426, 428, 431, 437, 441, 447, 450, 454, 456, 456, 460, 469, 472, 478, 484, 486, 491, 495, 504, 508, 509, 512, 514, 520, 523, 530, 540, 540, 543, 549, 559, 566,
+				573, 574, 583, 591, 598, 601, 603, 613, 616, 617, 622, 628, 630, 633, 637, 640, 644, 650, 655, 664, 667, 672, 673, 678, 688, 694, 695, 699, 707, 715,
+			]],
+			[ "ilscore", [
+				172, 177, 95, 126, 164, 165, 173, 76, 84, 88, 95, 105, 110, 114, 116, 119, 123, 137, 170, 170, 177, 185, 193, 196, 202, 217, 221, 235, 249, 279, 288, 299, 95, 98, 98, 115, 129, 133, 133, 140,
+				149, 156, 161, 165, 168, 177, 183, 184, 190, 196, 200, 202, 208, 210, 215, 221, 233, 256, 266, 267, 270, 272, 278, 298, 305, 327, 337, 344, 378, 386, 392, 393, 397, 401, 404, 414, 423, 432, 435, 441,
+				442, 456, 470, 479, 485, 500, 509, 515, 528, 530, 532, 544, 552, 561, 562, 565, 574, 575, 581, 582, 585, 587, 591, 594, 598, 602, 603, 603, 612, 623, 627, 629, 647, 648, 654, 658, 665, 671, 685, 698,
+				702, 713, 719, 724, 725, 738, 743, 745, 747, 748, 752, 753, 755, 760, 763, 771, 778, 781, 783, 787, 798, 804, 812, 819, 826, 834, 836, 847, 852, 859,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

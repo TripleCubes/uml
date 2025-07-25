@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NoomsterGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NoomsterGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/noomstergames.html" property="og:url">
+	<meta content="Rank by ilScore: 6699&#10;&#10;1 games&#10;&bull; Raid | MJ 92: Death | rank: 57 | ilscore: 64&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NoomsterGames</h1>
+		<a href="https://noomstergames.itch.io">noomstergames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6699</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://noomstergames.itch.io/raid">Raid</a></td>
+				<td><span class="early">2h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>57</td>
+				<td>10</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2103, 2105, 2153, 2163, 2170, 2209, 2258, 2439, 2530, 2599, 2606, 2687, 2725, 2801, 3016, 3049, 3198, 3265, 3389, 3687, 3749, 3794, 3795, 3799, 3805, 3808, 3911, 3985, 4006, 4015, 4071, 4073, 4199, 4263, 4275, 4299, 4357, 4423, 4441, 4588,
+				4598, 4602, 4658, 4712, 4728, 4736, 4739, 4844, 4844, 4847, 4852, 4858, 4868, 4883, 4891, 4924, 4930, 4940, 4944, 5030, 5099, 5131, 5140, 5289, 5314, 5356, 5384, 5437, 5443, 5508, 5562, 5571, 5660, 5673, 5688, 5692, 5842, 5851, 5854, 5857,
+				5861, 5866, 5875, 5892, 5949, 6037, 6062, 6074, 6113, 6137, 6163, 6217, 6245, 6308, 6361, 6412, 6524, 6543, 6625, 6667, 6698,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>AngryBananas&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="AngryBananas&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/angrybannanas.html" property="og:url">
+	<meta content="Rank by game in top 20: 3180&#10;Rank by ilScore: 2324&#10;&#10;2 games&#10;&bull; Castle Clones | MJ 135: Deception | rank: 18 | ilscore: 57&#10;&bull; Grim Scape | MJ 134: Islands | rank: 73 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>AngryBananas</h1>
+		<a href="https://angrybannanas.itch.io">angrybannanas.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3180</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2324</p>
+		<p>Total ilScore: 110</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sustachio.itch.io/castle-clones">Castle Clones</a></td>
+				<td><span class="early">12m 38s early</span></td>
+				<td>
+					<a href="../jammer/sustachio.html">sustachio</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>18</td>
+				<td>9</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://angrybannanas.itch.io/grim-scape">Grim Scape</a></td>
+				<td><span class="early">9m 25s early</span></td>
+				<td>
+					<a href="../jammer/downtownmafia97.html">DowntownMafia97</a>,
+					<a href="../jammer/sustachio.html">sustachio</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>73</td>
+				<td>9</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2110, 2123, 2129, 2157, 2160, 2165, 2182, 2192, 2206, 2227, 2244, 2268, 2285, 2303, 2322, 2340, 2352, 2370, 2399, 2431, 2453, 2473, 2494, 2514, 2530, 2547, 2564, 2586, 2626, 2636, 2652, 2663, 2688, 2702, 2708, 2723, 2734, 2741, 2758, 2774,
+				2806, 2826, 2850, 2872, 2896, 2922, 2947, 2977, 2995, 3014, 3041, 3060, 3086, 3110, 3142, 3162, 3179,
+			]],
+			[ "ilscore", [
+				5789, 1634, 1636, 1639, 1658, 1658, 1659, 1666, 1668, 1672, 1681, 1689, 1695, 1702, 1704, 1713, 1724, 1740, 1759, 1766, 1804, 1831, 1849, 1859, 1869, 1877, 1894, 1917, 1925, 1944, 1947, 1962, 1966, 1993, 1999, 2006, 2010, 2011, 2018, 2019,
+				2024, 2040, 2071, 2087, 2098, 2110, 2127, 2140, 2147, 2158, 2182, 2205, 2227, 2248, 2263, 2286, 2306, 2323,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

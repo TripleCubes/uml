@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>protosev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="protosev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/protosev.html" property="og:url">
+	<meta content="Rank by game in top 1: 165&#10;Rank by game in top 5: 386&#10;Rank by game in top 10: 559&#10;Rank by game in top 20: 424&#10;Rank by ilScore: 622&#10;&#10;4 games&#10;&bull; Suburb hero | MJ 152: Heroes | rank: 28 | ilscore: 40&#10;&bull; Between Worlds | MJ 90: Illusion | rank: 1 | ilscore: 72&#10;&bull; Gates of Paradise | MJ 70: Heaven | rank: 26 | ilscore: 51&#10;&bull; Black Holes Escape | MJ 67: Void | rank: 19 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>protosev</h1>
+		<a href="https://protosev.itch.io">protosev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 165</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 386</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 559</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 424</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 622</p>
+		<p>Total ilScore: 219</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://protosev.itch.io/suburb-hero">Suburb hero</a></td>
+				<td><span class="early">7h 47m early</span></td>
+				<td>
+					<a href="../jammer/myatezhny.html">Myatezhny</a>,
+					<a href="../jammer/super-salty-friend.html">Super Salty Friend</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-152-heroes">MJ 152: Heroes</a></td>
+				<td>52</td>
+				<td>28</td>
+				<td>13</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://first-slime-games.itch.io/between-worlds">Between Worlds</a></td>
+				<td><span class="early">52m 16s early</span></td>
+				<td>
+					<a href="../jammer/first-slime-games.html">First Slime Games</a>,
+					<a href="../jammer/myatezhny.html">Myatezhny</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>1</td>
+				<td>18</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://first-slime-games.itch.io/gates-of-paradise">Gates of Paradise</a></td>
+				<td><span class="early">3h 33m early</span></td>
+				<td>
+					<a href="../jammer/first-slime-games.html">First Slime Games</a>,
+					<a href="../jammer/myatezhny.html">Myatezhny</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>26</td>
+				<td>17</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://protosev.itch.io/blackholesescape">Black Holes Escape</a></td>
+				<td><span class="early">9h 11m early</span></td>
+				<td>
+					<a href="../jammer/myatezhny.html">Myatezhny</a>,
+					<a href="../jammer/first-slime-games.html">First Slime Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-67-void">MJ 67: Void</a></td>
+				<td>61</td>
+				<td>19</td>
+				<td>23</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				79, 80, 82, 82, 82, 82, 82, 82, 82, 82, 83, 84, 84, 84, 86, 87, 90, 90, 91, 93, 94, 95, 96, 97, 97, 97, 98, 101, 101, 102, 102, 102, 103, 104, 106, 109, 112, 116, 116, 116,
+				118, 118, 118, 118, 119, 119, 120, 120, 120, 121, 121, 122, 122, 122, 125, 125, 125, 127, 127, 128, 128, 129, 131, 132, 134, 136, 136, 136, 136, 137, 137, 138, 139, 140, 141, 141, 143, 144, 145, 146,
+				146, 146, 146, 146, 146, 146, 150, 151, 151, 151, 152, 153, 153, 153, 153, 154, 155, 157, 158, 158, 164, 164, 164,
+			]],
+			[ "5", [
+				158, 159, 161, 161, 164, 164, 164, 165, 166, 166, 177, 181, 181, 184, 187, 188, 194, 194, 196, 198, 201, 207, 213, 216, 216, 217, 221, 227, 227, 228, 228, 228, 229, 230, 233, 236, 239, 245, 247, 247,
+				250, 251, 252, 253, 255, 256, 258, 259, 259, 263, 268, 272, 274, 276, 284, 285, 285, 287, 287, 288, 288, 290, 291, 294, 298, 301, 301, 301, 301, 305, 306, 313, 315, 316, 324, 328, 334, 336, 342, 345,
+				345, 345, 345, 347, 349, 349, 356, 358, 358, 359, 361, 362, 363, 363, 364, 367, 371, 375, 379, 379, 385, 385, 385,
+			]],
+			[ "10", [
+				233, 233, 236, 236, 239, 241, 241, 244, 246, 246, 258, 261, 262, 267, 270, 274, 281, 281, 285, 288, 291, 297, 303, 308, 308, 308, 312, 321, 321, 322, 322, 325, 326, 329, 332, 339, 346, 354, 356, 357,
+				364, 365, 367, 371, 375, 378, 381, 382, 384, 388, 393, 397, 401, 402, 409, 410, 411, 414, 414, 415, 416, 419, 423, 426, 430, 433, 437, 439, 440, 444, 446, 451, 454, 458, 467, 472, 477, 482, 490, 493,
+				496, 498, 499, 501, 503, 504, 511, 515, 517, 518, 520, 521, 521, 523, 527, 531, 535, 545, 549, 549, 552, 555, 558,
+			]],
+			[ "20", [
+				644, 653, 679, 702, 713, 727, 742, 767, 785, 804, 822, 837, 846, 867, 880, 896, 907, 929, 949, 975, 992, 1017, 1028, 1054, 1072, 148, 150, 151, 154, 159, 166, 167, 169, 170, 170, 175, 182, 182, 186, 187,
+				190, 193, 196, 201, 206, 206, 208, 212, 218, 218, 218, 220, 225, 226, 226, 226, 230, 232, 234, 236, 241, 247, 250, 254, 255, 262, 264, 265, 266, 270, 273, 276, 277, 279, 282, 285, 285, 287, 288, 293,
+				295, 296, 298, 299, 301, 303, 304, 306, 309, 311, 312, 316, 319, 320, 324, 324, 327, 335, 339, 340, 347, 352, 356, 361, 362, 365, 366, 367, 370, 372, 374, 376, 377, 380, 382, 386, 386, 389, 390, 390,
+				393, 400, 409, 413, 413, 416, 420, 423,
+			]],
+			[ "ilscore", [
+				939, 954, 982, 1042, 233, 245, 260, 289, 300, 311, 334, 353, 362, 397, 427, 444, 453, 471, 488, 523, 538, 559, 574, 585, 596, 207, 214, 220, 224, 229, 235, 237, 239, 245, 258, 284, 297, 299, 301, 304,
+				309, 331, 341, 365, 380, 391, 428, 437, 446, 446, 450, 455, 457, 470, 479, 488, 494, 499, 500, 516, 531, 540, 546, 564, 572, 579, 595, 597, 600, 615, 622, 632, 633, 637, 648, 650, 654, 656, 659, 662,
+				667, 670, 675, 678, 679, 679, 688, 698, 703, 451, 462, 464, 472, 476, 481, 485, 494, 505, 508, 520, 525, 529, 532, 543, 546, 549, 550, 550, 550, 551, 554, 557, 560, 566, 569, 569, 572, 576, 581, 583,
+				585, 590, 597, 602, 605, 610, 614, 621,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

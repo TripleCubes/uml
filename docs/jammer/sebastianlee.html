@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SebastianLee&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SebastianLee&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sebastianlee.html" property="og:url">
+	<meta content="Rank by ilScore: 2903&#10;&#10;2 games&#10;&bull; Home Painter Cat | MJ 165: Paint | rank: 35 | ilscore: 30&#10;&bull; Beyond Isolation | MJ+ 1: Isolation | rank: 39 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SebastianLee</h1>
+		<a href="https://sebastianlee.itch.io">sebastianlee.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2903</p>
+		<p>Total ilScore: 96</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sebastianlee.itch.io/home-painter-cat">Home Painter Cat</a></td>
+				<td><span class="early">7h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-165-paint">MJ 165: Paint</a></td>
+				<td>44</td>
+				<td>35</td>
+				<td>15</td>
+				<td>30</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://sebastianlee.itch.io/beyondisolation">Beyond Isolation</a></td>
+				<td><span class="early">13h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>39</td>
+				<td>8</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				246, 249, 262, 272, 299, 319, 374, 385, 391, 399, 404, 409, 416, 526, 608, 612, 618, 671, 682, 692, 700, 744, 752, 792, 810, 949, 967, 997, 1064, 1136, 1146, 1273, 1356, 1365, 1373, 1418, 1512, 1622, 1656, 1740,
+				1765, 1828, 1848, 1857, 1914, 1972, 1975, 2016, 2024, 2031, 2064, 2110, 2287, 2377, 2445, 2452, 2530, 2566, 2641, 2852, 2882, 3027, 3094, 3217, 3506, 3565, 3609, 3610, 3614, 3620, 3623, 3723, 3792, 3813, 3822, 3874, 3875, 4001, 4060, 4070,
+				4092, 4147, 4211, 4229, 4371, 4380, 4384, 4436, 4488, 4502, 4510, 4513, 4614, 4614, 4616, 4622, 4627, 4636, 4651, 4661, 4691, 4699, 4709, 4714, 4798, 4857, 4887, 4895, 5042, 5061, 5101, 5124, 5175, 5184, 5251, 5299, 5308, 5392, 5405, 5419,
+				2483, 2542, 2548, 2556, 2563, 2566, 2573, 2579, 2590, 2608, 2642, 2656, 2668, 2687, 2703, 2713, 2721, 2732, 2757, 2784, 2807, 2832, 2845, 2865, 2884, 2902,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>MrSoraDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="MrSoraDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mrsoradev.html" property="og:url">
+	<meta content="Rank by game in top 20: 692&#10;Rank by ilScore: 949&#10;&#10;3 games&#10;&bull; Midnight Train | MJ 180: Refresh | rank: 18 | ilscore: 63&#10;&bull; BROTHER | MJ 174: Defense | rank: 48 | ilscore: 61&#10;&bull; QUACKSHOT RAMPAGE | MJ 173: Action | rank: 13 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>MrSoraDev</h1>
+		<a href="https://mrsoradev.itch.io">mrsoradev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 692</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>18</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 949</p>
+		<p>Total ilScore: 180</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mrsoradev.itch.io/midnight-train">Midnight Train</a></td>
+				<td><span class="early">3h 56m early</span></td>
+				<td>
+					<a href="../jammer/olunae.html">Lunae</a>,
+					<a href="../jammer/yukilix1.html">yukilix1</a>,
+					<a href="../jammer/yrs-making-games.html">Yrs_Making_games</a>,
+					<a href="../jammer/boitatatavern.html">BoitataTavern</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-180-refresh">MJ 180: Refresh</a></td>
+				<td>83</td>
+				<td>18</td>
+				<td>40</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://yrs-making-games.itch.io/brother">BROTHER</a></td>
+				<td><span class="early">21m 36s early</span></td>
+				<td>
+					<a href="../jammer/yrs-making-games.html">Yrs_Making_games</a>,
+					<a href="../jammer/boitatatavern.html">BoitataTavern</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-174-defense">MJ 174: Defense</a></td>
+				<td>98</td>
+				<td>48</td>
+				<td>9</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://yrs-making-games.itch.io/quack">QUACKSHOT RAMPAGE</a></td>
+				<td><span class="early">11m 16s early</span></td>
+				<td>
+					<a href="../jammer/yrs-making-games.html">Yrs_Making_games</a>,
+					<a href="../jammer/yukilix1.html">yukilix1</a>,
+					<a href="../jammer/boitatatavern.html">BoitataTavern</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-173-action">MJ 173: Action</a></td>
+				<td>67</td>
+				<td>13</td>
+				<td>11</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2617, 2649, 2669, 2694, 2715, 2739, 2763, 638, 641, 646, 648, 653, 664, 670, 671, 675, 683, 691,
+			]],
+			[ "ilscore", [
+				6875, 1836, 1864, 1880, 1892, 1903, 1920, 871, 882, 888, 898, 904, 912, 921, 924, 934, 940, 948,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

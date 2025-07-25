@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>unlasting&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="unlasting&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/unlasting.html" property="og:url">
+	<meta content="Rank by ilScore: 2040&#10;&#10;2 games&#10;&bull; Quantum Space, Eternal Horizon! | MJ 73: Power | rank: 111 | ilscore: 67&#10;&bull; Harvest Match | MJ 71: Puzzles | rank: 59 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>unlasting</h1>
+		<a href="https://unlasting.itch.io">unlasting.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2040</p>
+		<p>Total ilScore: 120</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://annedo.itch.io/quantum-space-eternal-horizon">Quantum Space, Eternal Horizon!</a></td>
+				<td><span class="early">20h 29m early</span></td>
+				<td>
+					<a href="../jammer/annedo.html">Anne Do</a>,
+					<a href="../jammer/musclehakase.html">musclehakase</a>,
+					<a href="../jammer/nlaneau.html">nlaneau</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>111</td>
+				<td>12</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://annedo.itch.io/harvest-match">Harvest Match</a></td>
+				<td><span class="early">19m 47s early</span></td>
+				<td>
+					<a href="../jammer/annedo.html">Anne Do</a>,
+					<a href="../jammer/musclehakase.html">musclehakase</a>,
+					<a href="../jammer/nlaneau.html">nlaneau</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>59</td>
+				<td>10</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1199, 1224, 234, 242, 253, 277, 293, 299, 330, 362, 380, 386, 404, 422, 453, 466, 483, 496, 506, 513, 520, 542, 555, 560, 573, 582, 588, 594, 608, 645, 679, 696, 700, 723, 740, 761, 819, 832, 868, 895,
+				929, 1040, 1063, 1082, 1082, 1088, 1092, 1102, 1127, 1146, 1156, 1164, 1178, 1185, 1216, 1242, 1261, 1278, 1297, 1318, 1326, 1362, 1373, 1384, 1401, 1421, 1434, 1440, 1442, 1460, 1460, 1461, 1466, 1468, 1470, 1480, 1488, 1495, 1500, 1502,
+				1508, 1520, 1535, 1552, 1557, 1587, 1608, 1624, 1632, 1644, 1649, 1668, 1690, 1697, 1714, 1717, 1729, 1735, 1756, 1758, 1764, 1766, 1767, 1775, 1776, 1779, 1791, 1819, 1832, 1842, 1853, 1866, 1882, 1888, 1900, 1923, 1941, 1957, 1976, 1989,
+				2007, 2025, 2039,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

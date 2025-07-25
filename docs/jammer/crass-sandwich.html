@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>crass_sandwich&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="crass_sandwich&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/crass-sandwich.html" property="og:url">
+	<meta content="Rank by game in top 20: 2237&#10;Rank by ilScore: 492&#10;&#10;4 games&#10;&bull; Venomous Vault Guardian | MJ 129: Poison | rank: 26 | ilscore: 62&#10;&bull; PillCorp Employee Training Module | MJ 128: Health | rank: 104 | ilscore: 38&#10;&bull; Luminous Crucible | MJ 121: Reflection | rank: 17 | ilscore: 79&#10;&bull; Holeworm | MJ 112: Chrono | rank: 30 | ilscore: 70&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>crass_sandwich</h1>
+		<a href="https://crass-sandwich.itch.io">crass-sandwich.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2237</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 492</p>
+		<p>Total ilScore: 249</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://crass-sandwich.itch.io/venomous-vault-guardian">Venomous Vault Guardian</a></td>
+				<td><span class="early">3m 47s early</span></td>
+				<td>
+					<a href="../jammer/antreepower.html">antreepower</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>26</td>
+				<td>8</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://crass-sandwich.itch.io/pillcorp-employee-training-module">PillCorp Employee Training Module</a></td>
+				<td><span class="early">20m 9s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>104</td>
+				<td>6</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td><a href="https://crass-sandwich.itch.io/luminous-crucible">Luminous Crucible</a></td>
+				<td><span class="early">3m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>17</td>
+				<td>11</td>
+				<td>79</td>
+			</tr>
+			<tr>
+				<td><a href="https://crass-sandwich.itch.io/holeworm">Holeworm</a></td>
+				<td><span class="early">13s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>30</td>
+				<td>15</td>
+				<td>70</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1332, 1337, 1354, 1383, 1394, 1407, 1423, 1437, 1451, 1477, 1481, 1484, 1510, 1532, 1538, 1541, 1546, 1573, 1575, 1577, 1582, 1584, 1595, 1611, 1618, 1632, 1638, 1650, 1661, 1680, 1693, 1706, 1726, 1759, 1767, 1774, 1781, 1795, 1802, 1822,
+				1834, 1842, 1882, 1884, 1895, 1904, 1929, 1935, 1939, 1942, 1947, 1951, 1961, 1968, 1986, 2006, 2016, 2032, 2053, 2067, 2084, 2095, 2105, 2125, 2144, 2166, 2192, 2198, 2209, 2223, 2236,
+			]],
+			[ "ilscore", [
+				3198, 3230, 3231, 3235, 3242, 3247, 3341, 3401, 3423, 3435, 746, 749, 768, 787, 801, 810, 829, 512, 283, 292, 295, 297, 304, 309, 314, 316, 317, 323, 324, 324, 324, 325, 326, 327, 329, 330, 333, 334, 334, 342,
+				347, 350, 354, 359, 362, 367, 373, 376, 378, 380, 391, 395, 405, 406, 409, 410, 423, 424, 427, 427, 428, 428, 428, 432, 434, 437, 441, 442, 444, 446, 451, 456, 459, 461, 465, 471, 475, 478, 484, 487,
+				491,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

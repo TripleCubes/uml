@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>parsnip36&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="parsnip36&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/parsnip36.html" property="og:url">
+	<meta content="Rank by game in top 20: 703&#10;Rank by ilScore: 237&#10;&#10;5 games&#10;&bull; Assurety Systems LLC: For Top-Notch Security, Rely on Assurety! | MJ 172: Security | rank: 14 | ilscore: 39&#10;&bull; Chaos Rift | MJ 100: Overload | rank: 81 | ilscore: 77&#10;&bull; Polly Rhythm | MJ 99: Birds | rank: 76 | ilscore: 94&#10;&bull; Season&#39;s End | MJ 89: Pumpkin | rank: 19 | ilscore: 65&#10;&bull; Burning | MJ 88: Rush | rank: 24 | ilscore: 75&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>parsnip36</h1>
+		<a href="https://parsnip36.itch.io">parsnip36.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 703</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 237</p>
+		<p>Total ilScore: 349</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://parsnip36.itch.io/security">Assurety Systems LLC: For Top-Notch Security, Rely on Assurety!</a></td>
+				<td><span class="early">55m 15s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-172-security">MJ 172: Security</a></td>
+				<td>37</td>
+				<td>14</td>
+				<td>9</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://parsnip36.itch.io/chaos-rift">Chaos Rift</a></td>
+				<td><span class="early">8m 2s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>81</td>
+				<td>9</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://parsnip36.itch.io/polly-rhythm">Polly Rhythm</a></td>
+				<td><span class="late">6m 6s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>76</td>
+				<td>10</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://parsnip36.itch.io/seasons-end">Season&#39;s End</a></td>
+				<td><span class="early">21m 16s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>19</td>
+				<td>10</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://parsnip36.itch.io/burning">Burning</a></td>
+				<td><span class="early">57m 42s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>24</td>
+				<td>9</td>
+				<td>75</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1047, 1065, 1083, 1102, 1110, 1133, 1146, 1152, 1166, 1184, 1210, 1239, 1252, 1257, 1278, 1291, 1307, 1326, 1346, 1361, 1380, 1398, 1420, 1442, 1465, 1466, 1480, 1489, 1500, 1518, 1538, 1551, 1561, 1583, 1587, 1605, 1635, 1651, 1667, 1684,
+				1706, 1721, 1747, 1754, 1757, 1784, 1806, 1814, 1820, 1824, 1852, 1855, 1857, 1861, 1864, 1876, 1896, 1905, 1925, 1933, 1945, 1960, 1978, 1992, 2010, 2030, 2062, 2082, 2096, 2108, 2128, 2140, 2159, 2177, 2194, 2234, 2238, 2248, 2259, 2284,
+				2292, 2296, 2300, 2309, 2312, 616, 618, 621, 625, 628, 633, 639, 644, 652, 655, 660, 661, 666, 676, 682, 683, 687, 694, 702,
+			]],
+			[ "ilscore", [
+				1408, 375, 381, 402, 412, 415, 424, 431, 439, 443, 453, 145, 84, 94, 95, 101, 103, 107, 113, 115, 120, 125, 130, 137, 141, 144, 144, 144, 144, 144, 149, 152, 153, 153, 154, 155, 159, 160, 161, 164,
+				170, 172, 173, 181, 182, 182, 183, 185, 185, 187, 187, 190, 190, 190, 191, 192, 192, 194, 195, 195, 196, 199, 201, 204, 207, 212, 212, 214, 217, 217, 220, 227, 228, 230, 234, 235, 239, 244, 244, 244,
+				247, 247, 248, 249, 250, 251, 201, 201, 206, 208, 214, 214, 214, 215, 215, 220, 224, 226, 228, 228, 231, 232, 233, 235, 236,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

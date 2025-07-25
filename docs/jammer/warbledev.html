@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>warbledev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="warbledev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/warbledev.html" property="og:url">
+	<meta content="Rank by game in top 5: 435&#10;Rank by game in top 10: 611&#10;Rank by game in top 20: 984&#10;Rank by ilScore: 2962&#10;&#10;1 games&#10;&bull; Intergalactic Exam | MJ+ 4: Cosmic | rank: 2 | ilscore: 95&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>warbledev</h1>
+		<a href="https://warbledev.itch.io">warbledev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 435</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 611</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 984</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2962</p>
+		<p>Total ilScore: 95</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://warbledev.itch.io/intergalactic-exam">Intergalactic Exam</a></td>
+				<td><span class="early">9h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>2</td>
+				<td>11</td>
+				<td>95</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				165, 165, 171, 173, 176, 177, 179, 179, 183, 183, 183, 184, 185, 186, 197, 201, 201, 205, 208, 209, 216, 216, 217, 219, 223, 229, 235, 239, 239, 240, 245, 252, 253, 257, 257, 257, 258, 258, 262, 265,
+				268, 274, 276, 276, 281, 282, 283, 284, 288, 289, 290, 290, 290, 294, 299, 304, 307, 308, 316, 319, 319, 321, 321, 322, 322, 324, 326, 331, 335, 339, 339, 341, 341, 345, 347, 353, 355, 356, 364, 368,
+				374, 376, 382, 385, 385, 385, 385, 387, 389, 389, 395, 398, 398, 399, 404, 405, 406, 409, 410, 413, 417, 422, 428, 428, 434, 434, 434,
+			]],
+			[ "10", [
+				237, 238, 244, 247, 252, 252, 255, 255, 259, 261, 261, 264, 266, 267, 279, 282, 283, 288, 291, 295, 305, 305, 308, 311, 315, 323, 329, 335, 335, 335, 340, 349, 350, 354, 354, 357, 358, 360, 364, 371,
+				377, 385, 387, 388, 397, 398, 400, 404, 409, 412, 414, 415, 417, 421, 426, 430, 435, 436, 443, 446, 447, 450, 450, 451, 452, 455, 460, 465, 469, 473, 477, 479, 480, 484, 487, 492, 495, 499, 510, 515,
+				520, 525, 533, 536, 539, 541, 542, 544, 546, 547, 553, 558, 560, 561, 566, 567, 567, 572, 576, 580, 584, 595, 601, 601, 604, 607, 610,
+			]],
+			[ "20", [
+				373, 377, 383, 390, 395, 401, 405, 409, 411, 415, 421, 422, 423, 425, 436, 440, 444, 447, 452, 459, 468, 472, 477, 483, 488, 495, 504, 514, 514, 515, 523, 536, 538, 550, 552, 559, 563, 567, 574, 583,
+				594, 608, 613, 615, 625, 627, 629, 632, 640, 644, 648, 652, 656, 659, 661, 666, 676, 679, 689, 697, 700, 705, 710, 719, 722, 725, 729, 734, 743, 749, 756, 766, 766, 771, 778, 791, 798, 804, 815, 824,
+				832, 840, 848, 853, 863, 866, 868, 872, 877, 879, 887, 894, 897, 901, 909, 915, 924, 930, 935, 938, 943, 953, 962, 963, 967, 975, 983,
+			]],
+			[ "ilscore", [
+				689, 704, 724, 735, 743, 762, 781, 791, 806, 819, 824, 839, 861, 963, 1014, 1032, 1041, 1068, 1087, 1107, 1248, 1264, 1322, 1350, 1422, 1648, 1662, 1677, 1677, 1680, 1686, 1694, 1735, 1757, 1771, 1784, 1802, 1810, 1868, 1891,
+				1909, 1928, 1944, 1969, 1979, 2051, 2061, 2067, 2084, 2109, 2124, 2128, 2133, 2151, 2153, 2157, 2164, 2167, 2171, 2183, 2190, 2196, 2206, 2213, 2224, 2241, 2266, 2284, 2293, 2369, 2396, 2416, 2429, 2438, 2447, 2463, 2483, 2491, 2514, 2519,
+				2533, 2536, 2597, 2603, 2611, 2618, 2621, 2628, 2634, 2645, 2666, 2700, 2714, 2727, 2746, 2762, 2772, 2780, 2791, 2815, 2842, 2865, 2891, 2904, 2924, 2943, 2961,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

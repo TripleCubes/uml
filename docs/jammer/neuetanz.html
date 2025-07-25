@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>nyu&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="nyu&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/neuetanz.html" property="og:url">
+	<meta content="Rank by game in top 20: 3160&#10;Rank by ilScore: 905&#10;&#10;3 games&#10;&bull; Multiversal Mold: A Journey Through Time and Space | MJ 132: Severed | rank: 39 | ilscore: 37&#10;&bull; Like Moths to a Star | MJ 131: Solar | rank: 17 | ilscore: 51&#10;&bull; Moon Muncher: Lunar Looting | MJ 130: Lunar | rank: 34 | ilscore: 96&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>nyu</h1>
+		<a href="https://neuetanz.itch.io">neuetanz.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3160</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 905</p>
+		<p>Total ilScore: 185</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mewore.itch.io/multiversal-mold-a-journey-through-time-and-space">Multiversal Mold: A Journey Through Time and Space</a></td>
+				<td><span class="early">25s early</span></td>
+				<td>
+					<a href="../jammer/mewore.html">Mewore</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>39</td>
+				<td>5</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://mewore.itch.io/like-moths-to-a-star">Like Moths to a Star</a></td>
+				<td><span class="early">37s early</span></td>
+				<td>
+					<a href="../jammer/mewore.html">Mewore</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>17</td>
+				<td>11</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://mewore.itch.io/moon-muncher-lunar-looting">Moon Muncher: Lunar Looting</a></td>
+				<td><span class="early">2h 18m early</span></td>
+				<td>
+					<a href="../jammer/mewore.html">Mewore</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>34</td>
+				<td>10</td>
+				<td>96</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2022, 2033, 2058, 2079, 2093, 2106, 2112, 2140, 2143, 2148, 2165, 2175, 2189, 2210, 2227, 2251, 2267, 2285, 2304, 2322, 2334, 2352, 2381, 2413, 2435, 2455, 2476, 2496, 2512, 2529, 2546, 2567, 2607, 2617, 2633, 2644, 2669, 2683, 2689, 2704,
+				2715, 2722, 2739, 2755, 2787, 2807, 2831, 2852, 2876, 2902, 2927, 2957, 2975, 2994, 3021, 3040, 3066, 3090, 3122, 3142, 3159,
+			]],
+			[ "ilscore", [
+				1985, 912, 554, 567, 574, 584, 585, 589, 601, 603, 608, 610, 613, 616, 620, 623, 627, 631, 632, 632, 641, 651, 656, 659, 678, 680, 686, 690, 699, 705, 723, 736, 740, 752, 756, 761, 764, 778, 783, 786,
+				788, 789, 793, 794, 798, 802, 805, 814, 820, 822, 825, 828, 839, 845, 854, 859, 867, 875, 878, 889, 895, 904,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

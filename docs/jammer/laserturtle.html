@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LaserTurtle&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LaserTurtle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/laserturtle.html" property="og:url">
+	<meta content="Rank by ilScore: 708&#10;&#10;3 games&#10;&bull; Space Signals | MJ 125: Signal | rank: 56 | ilscore: 39&#10;&bull; Possessive Posts | MJ 117: Ghosts | rank: 84 | ilscore: 77&#10;&bull; Aerial Dive | MJ 99: Birds | rank: 92 | ilscore: 90&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LaserTurtle</h1>
+		<a href="https://laserturtle.itch.io">laserturtle.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 708</p>
+		<p>Total ilScore: 206</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://laserturtle.itch.io/space-signals">Space Signals</a></td>
+				<td><span class="early">6h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>56</td>
+				<td>6</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://laserturtle.itch.io/possessive-posts">Possessive Posts</a></td>
+				<td><span class="early">11h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>84</td>
+				<td>7</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://laserturtle.itch.io/aerial-dive">Aerial Dive</a></td>
+				<td><span class="early">7h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>92</td>
+				<td>11</td>
+				<td>90</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1094, 1148, 1170, 1179, 1215, 1235, 1254, 1410, 1424, 1496, 1530, 1614, 1851, 1865, 1877, 1877, 1880, 1888, 1892, 573, 584, 589, 596, 602, 603, 618, 636, 381, 386, 392, 401, 408, 421, 421, 424, 436, 443, 450, 450, 450,
+				461, 461, 465, 465, 468, 470, 471, 473, 475, 481, 481, 482, 491, 498, 504, 508, 520, 521, 529, 534, 539, 543, 553, 566, 569, 581, 587, 592, 594, 604, 610, 612, 614, 614, 616, 619, 622, 627, 630, 636,
+				641, 643, 646, 649, 657, 660, 663, 670, 678, 684, 685, 693, 698, 707,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

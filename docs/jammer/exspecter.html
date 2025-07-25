@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ExSpecter&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ExSpecter&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/exspecter.html" property="og:url">
+	<meta content="Rank by game in top 20: 1574&#10;Rank by ilScore: 3340&#10;&#10;1 games&#10;&bull; SubMarie | MJ 109: Depths | rank: 14 | ilscore: 89&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ExSpecter</h1>
+		<a href="https://exspecter.itch.io">exspecter.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1574</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3340</p>
+		<p>Total ilScore: 89</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://exspecter.itch.io/submarie">SubMarie</a></td>
+				<td><span class="early">6h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>14</td>
+				<td>10</td>
+				<td>89</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				829, 843, 866, 883, 895, 896, 901, 910, 918, 926, 944, 951, 961, 978, 983, 994, 1017, 1027, 1038, 1054, 1063, 1069, 1076, 1079, 1080, 1094, 1107, 1110, 1112, 1117, 1128, 1130, 1135, 1143, 1144, 1155, 1165, 1168, 1175, 1179,
+				1185, 1192, 1206, 1214, 1222, 1233, 1251, 1255, 1264, 1268, 1279, 1285, 1301, 1311, 1315, 1336, 1338, 1346, 1356, 1373, 1379, 1388, 1390, 1393, 1397, 1407, 1410, 1423, 1437, 1442, 1448, 1457, 1463, 1474, 1483, 1489, 1498, 1513, 1525, 1541,
+				1543, 1550, 1565, 1573,
+			]],
+			[ "ilscore", [
+				1560, 1644, 1885, 1899, 1911, 1911, 1914, 1922, 1926, 1981, 2008, 2023, 2036, 2053, 2061, 2137, 2160, 2177, 2195, 2212, 2239, 2253, 2337, 2348, 2353, 2373, 2397, 2413, 2419, 2424, 2445, 2448, 2453, 2461, 2463, 2466, 2479, 2487, 2493, 2504,
+				2513, 2523, 2555, 2578, 2596, 2604, 2695, 2714, 2734, 2748, 2761, 2769, 2785, 2808, 2817, 2849, 2856, 2871, 2876, 2955, 2961, 2969, 2976, 2979, 2986, 2993, 3004, 3023, 3060, 3073, 3089, 3108, 3123, 3133, 3143, 3154, 3180, 3208, 3232, 3267,
+				3281, 3302, 3321, 3339,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

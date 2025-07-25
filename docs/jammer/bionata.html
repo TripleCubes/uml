@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Bionata&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Bionata&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bionata.html" property="og:url">
+	<meta content="Rank by ilScore: 1486&#10;&#10;3 games&#10;&bull; Dreaded Snakes &amp; ladders | MJ 83: Dread | rank: 76 | ilscore: 51&#10;&bull; Weird Girl&#39;s Ascent | MJ 82: Doodle | rank: 37 | ilscore: 45&#10;&bull; Tug Of Pug | MJ 81: Kaiju | rank: 37 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Bionata</h1>
+		<a href="https://bionata.itch.io">bionata.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1486</p>
+		<p>Total ilScore: 143</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bionata.itch.io/dreaded-snakes-ladders">Dreaded Snakes &amp; ladders</a></td>
+				<td><span class="early">8h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>76</td>
+				<td>9</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://bionata.itch.io/weird-girls-ascent">Weird Girl&#39;s Ascent</a></td>
+				<td><span class="early">13h 23m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>37</td>
+				<td>8</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://bionata.itch.io/tug-of-pug">Tug Of Pug</a></td>
+				<td><span class="early">4h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>37</td>
+				<td>17</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2223, 616, 279, 295, 314, 326, 340, 352, 352, 356, 362, 382, 392, 395, 403, 407, 415, 419, 428, 460, 492, 512, 512, 527, 540, 552, 587, 599, 633, 656, 682, 726, 745, 759, 759, 761, 765, 771, 790, 807,
+				808, 817, 824, 829, 852, 873, 889, 899, 919, 936, 946, 977, 985, 993, 1011, 1025, 1035, 1041, 1041, 1055, 1055, 1055, 1058, 1058, 1061, 1064, 1071, 1079, 1083, 1084, 1088, 1098, 1112, 1120, 1123, 1153, 1166, 1172, 1175, 1187,
+				1190, 1211, 1223, 1228, 1245, 1249, 1259, 1265, 1286, 1288, 1291, 1293, 1294, 1297, 1297, 1299, 1312, 1326, 1340, 1345, 1351, 1358, 1370, 1379, 1385, 1401, 1412, 1429, 1447, 1452, 1463, 1473, 1485,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

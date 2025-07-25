@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>brockdar&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="brockdar&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/brockdar.html" property="og:url">
+	<meta content="Rank by game in top 20: 1914&#10;Rank by ilScore: 4402&#10;&#10;1 games&#10;&bull; Snake Eyes | MJ 83: Dread | rank: 13 | ilscore: 79&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>brockdar</h1>
+		<a href="https://brockdar.itch.io">brockdar.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1914</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4402</p>
+		<p>Total ilScore: 79</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://brockdar.itch.io/snake-eyes">Snake Eyes</a></td>
+				<td><span class="late">10h 32m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>13</td>
+				<td>24</td>
+				<td>79</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				661, 681, 690, 701, 721, 728, 743, 753, 761, 770, 780, 788, 800, 807, 814, 824, 829, 855, 884, 896, 901, 918, 930, 936, 955, 971, 987, 1003, 1022, 1045, 1066, 1080, 1081, 1086, 1094, 1105, 1122, 1139, 1148, 1158,
+				1176, 1180, 1196, 1223, 1234, 1245, 1263, 1273, 1279, 1293, 1297, 1300, 1319, 1335, 1338, 1341, 1348, 1362, 1364, 1366, 1372, 1373, 1383, 1393, 1398, 1408, 1412, 1421, 1427, 1446, 1457, 1467, 1479, 1503, 1510, 1518, 1523, 1537, 1544, 1564,
+				1576, 1584, 1619, 1619, 1626, 1636, 1662, 1668, 1672, 1674, 1677, 1681, 1691, 1698, 1713, 1729, 1735, 1744, 1756, 1763, 1781, 1792, 1799, 1813, 1833, 1850, 1868, 1873, 1885, 1900, 1913,
+			]],
+			[ "ilscore", [
+				941, 1002, 1079, 1094, 1151, 1165, 1197, 1211, 1219, 1251, 1280, 1289, 1303, 1314, 1321, 1341, 1368, 1531, 1609, 1648, 1657, 1702, 1726, 1758, 1935, 1947, 2060, 2108, 2215, 2474, 2492, 2509, 2510, 2513, 2522, 2527, 2610, 2655, 2671, 2682,
+				2712, 2716, 2823, 2862, 2871, 2889, 2919, 2959, 2973, 3094, 3106, 3109, 3142, 3172, 3184, 3190, 3192, 3248, 3252, 3257, 3265, 3269, 3278, 3287, 3296, 3304, 3314, 3325, 3334, 3384, 3419, 3438, 3444, 3565, 3581, 3598, 3613, 3641, 3651, 3684,
+				3711, 3722, 3779, 3789, 3804, 3810, 3921, 3928, 3932, 3935, 3939, 3946, 3955, 3969, 3994, 4052, 4061, 4075, 4091, 4106, 4118, 4136, 4149, 4186, 4222, 4243, 4319, 4333, 4366, 4388, 4401,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

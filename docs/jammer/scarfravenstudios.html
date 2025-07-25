@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ScarfRavenStudios&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ScarfRavenStudios&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/scarfravenstudios.html" property="og:url">
+	<meta content="Rank by game in top 10: 1665&#10;Rank by game in top 20: 2454&#10;Rank by ilScore: 1700&#10;&#10;2 games&#10;&bull; Unidentified Fish-Killing Object | MJ 91: UFO | rank: 45 | ilscore: 71&#10;&bull; The Eternal Queen&#39;s Rampage! | MJ 81: Kaiju | rank: 6 | ilscore: 63&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ScarfRavenStudios</h1>
+		<a href="https://scarfravenstudios.itch.io">scarfravenstudios.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1665</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2454</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1700</p>
+		<p>Total ilScore: 134</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://scarfravenstudios.itch.io/unidentified-fish-killing-object">Unidentified Fish-Killing Object</a></td>
+				<td><span class="early">4h 56m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>45</td>
+				<td>17</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://scarfravenstudios.itch.io/the-eternal-queens-rampage">The Eternal Queen&#39;s Rampage!</a></td>
+				<td><span class="early">1h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>6</td>
+				<td>14</td>
+				<td>63</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				570, 578, 589, 599, 611, 623, 635, 643, 654, 664, 681, 689, 698, 708, 721, 731, 734, 744, 750, 761, 776, 783, 789, 797, 806, 813, 822, 839, 846, 855, 865, 877, 891, 904, 905, 919, 928, 936, 945, 962,
+				974, 982, 995, 997, 1006, 1024, 1033, 1044, 1057, 1070, 1080, 1090, 1096, 1099, 1114, 1125, 1133, 1135, 1139, 1153, 1156, 1159, 1164, 1167, 1175, 1191, 1198, 1209, 1213, 1225, 1238, 1246, 1252, 1260, 1281, 1298, 1312, 1319, 1328, 1339,
+				1346, 1356, 1368, 1374, 1387, 1393, 1399, 1407, 1419, 1424, 1424, 1426, 1434, 1439, 1445, 1452, 1470, 1479, 1489, 1505, 1516, 1527, 1542, 1559, 1569, 1578, 1593, 1604, 1617, 1624, 1641, 1652, 1664,
+			]],
+			[ "20", [
+				802, 811, 832, 852, 874, 886, 911, 919, 939, 954, 970, 984, 998, 1007, 1026, 1037, 1043, 1057, 1071, 1097, 1126, 1139, 1144, 1165, 1179, 1195, 1214, 1233, 1248, 1267, 1286, 1308, 1330, 1353, 1354, 1368, 1377, 1389, 1407, 1427,
+				1440, 1448, 1471, 1476, 1494, 1524, 1535, 1548, 1565, 1583, 1598, 1624, 1628, 1631, 1659, 1681, 1689, 1693, 1697, 1725, 1727, 1729, 1734, 1737, 1748, 1766, 1775, 1793, 1800, 1812, 1826, 1844, 1858, 1873, 1893, 1925, 1940, 1947, 1956, 1973,
+				1983, 2002, 2014, 2023, 2063, 2067, 2078, 2087, 2112, 2118, 2122, 2125, 2134, 2137, 2145, 2153, 2177, 2197, 2209, 2224, 2247, 2262, 2282, 2299, 2309, 2329, 2351, 2372, 2398, 2405, 2425, 2440, 2453,
+			]],
+			[ "ilscore", [
+				1460, 1470, 1518, 1620, 1732, 1769, 1858, 1890, 1952, 1975, 1986, 447, 456, 460, 472, 480, 489, 493, 505, 537, 570, 588, 588, 605, 617, 633, 673, 688, 725, 751, 782, 841, 861, 877, 877, 883, 887, 895, 920, 939,
+				945, 953, 965, 971, 997, 1016, 1033, 1046, 1060, 1080, 1087, 1119, 1128, 1140, 1159, 1175, 1183, 1189, 1189, 1205, 1205, 1206, 1210, 1210, 1213, 1221, 1229, 1236, 1239, 1241, 1245, 1255, 1268, 1279, 1283, 1315, 1334, 1343, 1347, 1359,
+				1362, 1383, 1399, 1405, 1423, 1427, 1437, 1444, 1468, 1469, 1471, 1473, 1475, 1480, 1480, 1483, 1496, 1515, 1529, 1535, 1543, 1553, 1565, 1570, 1579, 1601, 1617, 1632, 1653, 1659, 1676, 1689, 1699,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Hios&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Hios&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hios.html" property="og:url">
+	<meta content="Rank by game in top 5: 375&#10;Rank by game in top 10: 547&#10;Rank by game in top 20: 928&#10;Rank by ilScore: 1017&#10;&#10;2 games&#10;&bull; Shotgun Ghost Rider | MJ 117: Ghosts | rank: 37 | ilscore: 91&#10;&bull; RoboQ | MJ 112: Chrono | rank: 3 | ilscore: 83&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Hios</h1>
+		<a href="https://hios.itch.io">hios.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 375</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 547</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 928</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1017</p>
+		<p>Total ilScore: 174</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://karasikrus.itch.io/shotgun-ghost-rider">Shotgun Ghost Rider</a></td>
+				<td><span class="late">9h 18m late</span></td>
+				<td>
+					<a href="../jammer/karasikrus.html">karasikrus</a>,
+					<a href="../jammer/higi98.html">HiGi98</a>,
+					<a href="../jammer/roundedglint585.html">RoundedGlint585</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>37</td>
+				<td>12</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://karasikrus.itch.io/roboq">RoboQ</a></td>
+				<td><span class="early">5m 14s early</span></td>
+				<td>
+					<a href="../jammer/karasikrus.html">karasikrus</a>,
+					<a href="../jammer/higi98.html">HiGi98</a>,
+					<a href="../jammer/dodekayder.html">dodekayder</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>3</td>
+				<td>10</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				204, 208, 208, 209, 212, 218, 218, 219, 219, 219, 219, 220, 223, 226, 229, 235, 237, 237, 240, 241, 242, 243, 245, 246, 248, 249, 249, 254, 259, 263, 265, 267, 273, 274, 274, 276, 276, 279, 279, 281,
+				282, 285, 289, 292, 292, 292, 292, 296, 297, 304, 306, 307, 315, 319, 325, 327, 332, 335, 336, 336, 336, 338, 340, 340, 347, 349, 349, 350, 352, 353, 354, 354, 355, 358, 362, 364, 368, 368, 374, 374,
+				374,
+			]],
+			[ "10", [
+				294, 300, 300, 300, 303, 312, 312, 313, 313, 316, 316, 319, 322, 329, 336, 344, 346, 347, 354, 355, 357, 361, 365, 368, 371, 372, 374, 379, 384, 388, 392, 393, 398, 399, 400, 403, 403, 406, 407, 410,
+				414, 417, 421, 424, 428, 430, 431, 435, 437, 442, 445, 449, 457, 462, 467, 472, 479, 482, 486, 488, 489, 491, 493, 494, 501, 505, 507, 508, 510, 511, 511, 513, 517, 521, 525, 533, 537, 537, 540, 543,
+				546,
+			]],
+			[ "20", [
+				475, 485, 485, 486, 492, 505, 506, 515, 517, 524, 528, 533, 539, 548, 560, 574, 579, 581, 589, 591, 593, 596, 603, 607, 612, 616, 620, 623, 625, 630, 639, 642, 650, 656, 659, 664, 669, 680, 683, 686,
+				689, 692, 701, 706, 713, 723, 723, 728, 734, 747, 754, 760, 769, 778, 786, 794, 801, 806, 817, 820, 822, 826, 831, 833, 842, 848, 851, 855, 860, 866, 875, 878, 883, 886, 891, 899, 906, 907, 911, 919,
+				927,
+			]],
+			[ "ilscore", [
+				2260, 2276, 2277, 2280, 2289, 2292, 511, 520, 528, 534, 540, 541, 557, 572, 583, 588, 608, 617, 624, 644, 646, 651, 663, 670, 680, 681, 685, 698, 700, 704, 707, 709, 713, 718, 721, 726, 728, 730, 730, 736,
+				746, 751, 753, 774, 777, 783, 788, 801, 807, 826, 837, 840, 854, 857, 861, 864, 878, 882, 885, 886, 887, 891, 891, 895, 901, 905, 915, 922, 924, 928, 935, 946, 951, 961, 967, 975, 985, 988, 1001, 1007,
+				1016,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

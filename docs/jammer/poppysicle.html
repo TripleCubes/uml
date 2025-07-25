@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Poppysicle&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Poppysicle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/poppysicle.html" property="og:url">
+	<meta content="Rank by game in top 20: 2973&#10;Rank by ilScore: 9764&#10;&#10;1 games&#10;&bull; Carrot Catcher | MJ 116: Pocket Sized | rank: 20 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Poppysicle</h1>
+		<a href="https://poppysicle.itch.io">poppysicle.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2973</p>
+		<div class="boxes">
+			<span>20</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9764</p>
+		<p>Total ilScore: 45</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ohhnate.itch.io/carrot-catcher">Carrot Catcher</a></td>
+				<td><span class="early">6m 38s early</span></td>
+				<td>
+					<a href="../jammer/ohhnate.html">Nate</a>,
+					<a href="../jammer/gogibahp.html">Gogibahp</a>,
+					<a href="../jammer/saitooo.html">Saitooo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-116-pocket-sized">MJ 116: Pocket Sized</a></td>
+				<td>42</td>
+				<td>20</td>
+				<td>5</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1640, 1658, 1678, 1692, 1705, 1727, 1734, 1752, 1782, 1799, 1815, 1831, 1853, 1868, 1894, 1906, 1912, 1939, 1960, 1973, 1983, 1990, 2018, 2019, 2023, 2035, 2040, 2052, 2073, 2088, 2112, 2126, 2141, 2158, 2176, 2189, 2207, 2232, 2264, 2287,
+				2308, 2322, 2342, 2356, 2375, 2392, 2409, 2449, 2455, 2473, 2484, 2509, 2520, 2524, 2539, 2549, 2555, 2565, 2576, 2608, 2628, 2653, 2674, 2698, 2716, 2742, 2772, 2790, 2809, 2836, 2857, 2883, 2903, 2935, 2955, 2972,
+			]],
+			[ "ilscore", [
+				5467, 5583, 5691, 5754, 5773, 5862, 5871, 6023, 6096, 6133, 6167, 6245, 6333, 6370, 6540, 6558, 6569, 6657, 6729, 6761, 6768, 6769, 6899, 6900, 6905, 6919, 6928, 6943, 6987, 7022, 7085, 7104, 7117, 7136, 7247, 7367, 7432, 7466, 7630, 7668,
+				7742, 7796, 7882, 7898, 7981, 8049, 8066, 8191, 8209, 8255, 8265, 8445, 8468, 8468, 8482, 8484, 8507, 8514, 8555, 8638, 8732, 8777, 8812, 8875, 8938, 8995, 9073, 9118, 9192, 9259, 9333, 9476, 9525, 9633, 9704, 9763,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

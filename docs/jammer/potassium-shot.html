@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Potassium Shot&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Potassium Shot&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/potassium-shot.html" property="og:url">
+	<meta content="Rank by game in top 10: 1112&#10;Rank by game in top 20: 1495&#10;Rank by ilScore: 2668&#10;&#10;1 games&#10;&bull; Salty Ghosts | MJ 117: Ghosts | rank: 9 | ilscore: 101&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Potassium Shot</h1>
+		<a href="https://potassium-shot.itch.io">potassium-shot.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1112</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1495</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2668</p>
+		<p>Total ilScore: 101</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://potassium-shot.itch.io/salty-ghosts">Salty Ghosts</a></td>
+				<td><span class="early">5h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>9</td>
+				<td>11</td>
+				<td>101</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				644, 658, 663, 669, 682, 685, 694, 712, 719, 728, 741, 748, 754, 757, 760, 761, 772, 783, 784, 784, 784, 795, 799, 803, 810, 811, 820, 828, 829, 834, 834, 836, 841, 850, 857, 865, 875, 891, 894, 898,
+				902, 912, 913, 922, 930, 933, 946, 949, 954, 962, 974, 977, 980, 981, 983, 986, 990, 993, 1006, 1014, 1018, 1020, 1026, 1028, 1029, 1040, 1044, 1053, 1067, 1077, 1090, 1092, 1098, 1105, 1111,
+			]],
+			[ "20", [
+				864, 884, 891, 900, 918, 923, 934, 957, 967, 979, 994, 1002, 1009, 1013, 1016, 1017, 1031, 1043, 1045, 1047, 1051, 1061, 1063, 1068, 1077, 1078, 1089, 1100, 1103, 1110, 1115, 1122, 1129, 1142, 1150, 1158, 1169, 1186, 1190, 1199,
+				1202, 1212, 1218, 1233, 1242, 1246, 1267, 1269, 1277, 1288, 1305, 1310, 1320, 1322, 1325, 1329, 1336, 1340, 1353, 1363, 1368, 1373, 1381, 1388, 1398, 1407, 1413, 1422, 1437, 1447, 1463, 1466, 1473, 1485, 1494,
+			]],
+			[ "ilscore", [
+				1544, 1562, 1575, 1589, 1606, 1613, 1660, 1684, 1701, 1719, 1737, 1760, 1769, 1827, 1840, 1847, 1863, 1887, 1901, 1901, 1906, 1925, 1926, 1930, 1938, 1941, 1945, 1954, 1962, 1968, 1977, 1982, 1994, 2008, 2030, 2051, 2060, 2120, 2146, 2164,
+				2176, 2186, 2195, 2209, 2228, 2236, 2254, 2256, 2273, 2275, 2320, 2325, 2333, 2340, 2343, 2350, 2357, 2364, 2382, 2412, 2426, 2437, 2453, 2467, 2478, 2485, 2498, 2524, 2549, 2572, 2595, 2608, 2630, 2650, 2667,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

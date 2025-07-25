@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kiwi&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kiwi&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kiwigamedev.html" property="og:url">
+	<meta content="Rank by ilScore: 4982&#10;&#10;1 games&#10;&bull; Isolated Mind | MJ+ 1: Isolation | rank: 27 | ilscore: 75&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kiwi</h1>
+		<a href="https://kiwigamedev.itch.io">kiwigamedev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4982</p>
+		<p>Total ilScore: 75</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://kiwigamedev.itch.io/isolated-mind">Isolated Mind</a></td>
+				<td><span class="early">14h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>27</td>
+				<td>9</td>
+				<td>75</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				185, 187, 195, 203, 218, 233, 257, 272, 279, 282, 285, 289, 295, 378, 434, 436, 445, 470, 482, 492, 501, 528, 540, 557, 576, 695, 709, 731, 782, 829, 838, 958, 1028, 1036, 1045, 1077, 1153, 1250, 1272, 1341,
+				1354, 1394, 1408, 1415, 1458, 1491, 1498, 1516, 1527, 1533, 1558, 1593, 1761, 1844, 1894, 1901, 1956, 1983, 2028, 2221, 2236, 2355, 2406, 2518, 2790, 2815, 2841, 2842, 2845, 2853, 2858, 2945, 2999, 3019, 3030, 3066, 3068, 3179, 3222, 3234,
+				3253, 3292, 3338, 3352, 3482, 3494, 3497, 3541, 3577, 3593, 3600, 3602, 3679, 3682, 3685, 3693, 3697, 3706, 3715, 3725, 3732, 3744, 3756, 3763, 3828, 3866, 3889, 3896, 4027, 4041, 4060, 4077, 4109, 4119, 4162, 4198, 4210, 4268, 4280, 4296,
+				4302, 4423, 4430, 4434, 4437, 4440, 4445, 4455, 4468, 4497, 4564, 4572, 4584, 4604, 4621, 4632, 4658, 4669, 4715, 4752, 4783, 4872, 4885, 4937, 4961, 4981,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

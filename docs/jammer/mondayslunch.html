@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Monday&#39;s Lunch&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Monday&#39;s Lunch&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mondayslunch.html" property="og:url">
+	<meta content="Rank by game in top 10: 650&#10;Rank by game in top 20: 1017&#10;Rank by ilScore: 770&#10;&#10;3 games&#10;&bull; Rule Overload | MJ 100: Overload | rank: 7 | ilscore: 102&#10;&bull; Just Tanks | MJ 98: Empty | rank: 109 | ilscore: 36&#10;&bull; It fell off again... | MJ 97: Simulation | rank: 50 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Monday&#39;s Lunch</h1>
+		<a href="https://mondayslunch.itch.io">mondayslunch.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 650</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1017</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 770</p>
+		<p>Total ilScore: 198</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mondayslunch.itch.io/rule-overload">Rule Overload</a></td>
+				<td><span class="early">34m 0s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>7</td>
+				<td>9</td>
+				<td>102</td>
+			</tr>
+			<tr>
+				<td><a href="https://mondayslunch.itch.io/just-tanks">Just Tanks</a></td>
+				<td><span class="early">15m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>109</td>
+				<td>4</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://mondayslunch.itch.io/it-fell-off-again">It fell off again...</a></td>
+				<td><span class="early">28s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>50</td>
+				<td>5</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				298, 301, 302, 307, 311, 315, 326, 326, 329, 333, 337, 345, 351, 357, 357, 357, 362, 371, 373, 378, 378, 381, 382, 384, 388, 396, 402, 410, 412, 413, 423, 423, 426, 430, 436, 440, 442, 443, 445, 449,
+				454, 458, 463, 464, 471, 474, 475, 478, 478, 479, 480, 485, 490, 495, 499, 503, 507, 509, 510, 514, 517, 522, 525, 529, 540, 544, 549, 557, 568, 571, 574, 576, 577, 579, 581, 582, 588, 594, 596, 597,
+				602, 603, 603, 608, 612, 616, 620, 631, 638, 638, 642, 648, 649,
+			]],
+			[ "20", [
+				452, 456, 460, 463, 468, 475, 485, 489, 494, 501, 506, 513, 522, 532, 532, 533, 541, 554, 557, 570, 572, 579, 583, 587, 594, 604, 615, 629, 634, 636, 647, 648, 651, 654, 663, 668, 672, 676, 680, 683,
+				685, 690, 700, 703, 713, 721, 724, 729, 734, 743, 746, 751, 755, 760, 769, 775, 782, 792, 792, 797, 804, 817, 824, 830, 841, 849, 857, 868, 879, 884, 894, 897, 899, 903, 908, 910, 917, 925, 928, 932,
+				940, 946, 955, 960, 965, 968, 973, 983, 993, 994, 999, 1010, 1016,
+			]],
+			[ "ilscore", [
+				2489, 845, 943, 234, 244, 245, 249, 251, 255, 269, 277, 297, 306, 312, 338, 346, 351, 352, 355, 358, 362, 371, 379, 386, 389, 393, 394, 406, 417, 423, 429, 438, 448, 455, 470, 471, 473, 483, 491, 498,
+				499, 500, 510, 510, 516, 517, 520, 522, 523, 525, 527, 533, 533, 533, 543, 551, 556, 560, 575, 576, 582, 587, 594, 597, 609, 621, 625, 636, 642, 648, 649, 660, 664, 667, 669, 670, 672, 674, 677, 682,
+				685, 692, 698, 701, 704, 707, 713, 718, 723, 730, 737, 745, 746, 757, 762, 769,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

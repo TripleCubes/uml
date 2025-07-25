@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Jomiak&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Jomiak&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jomiak.html" property="og:url">
+	<meta content="Rank by ilScore: 11264&#10;&#10;2 games&#10;&bull; Piloting Passengers Past Planets | MJ 24: Space | rank: 54 | ilscore: 20&#10;&bull; Trip to Dreamland | MJ 18: Dreams | rank: 29 | ilscore: 16&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Jomiak</h1>
+		<a href="https://jomiak.itch.io">jomiak.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11264</p>
+		<p>Total ilScore: 35</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://jomiak.itch.io/piloting-passengers-past-planets">Piloting Passengers Past Planets</a></td>
+				<td><span class="early">1d 0h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-24-space">MJ 24: Space</a></td>
+				<td>56</td>
+				<td>54</td>
+				<td>3</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td><a href="https://jomiak.itch.io/trip-to-dreamland">Trip to Dreamland</a></td>
+				<td><span class="early">2h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-18-dreams">MJ 18: Dreams</a></td>
+				<td>30</td>
+				<td>29</td>
+				<td>5</td>
+				<td>16</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				194, 210, 223, 229, 234, 297, 168, 195, 199, 201, 212, 229, 249, 249, 267, 294, 296, 296, 317, 317, 320, 328, 344, 351, 358, 359, 362, 390, 414, 452, 464, 464, 574, 665, 672, 735, 777, 846, 898, 1014,
+				1050, 1086, 1087, 1090, 1150, 1191, 1341, 1449, 1451, 1486, 1587, 1626, 1673, 1720, 1791, 1829, 1903, 1950, 2124, 2177, 2254, 2344, 2452, 2498, 2658, 2757, 2802, 2845, 2927, 3056, 3204, 3283, 3410, 3488, 3586, 3641, 3696, 3785, 3871, 3896,
+				3971, 4005, 4050, 4126, 4209, 4421, 4537, 4636, 4654, 4773, 4848, 4950, 5199, 5254, 5439, 5520, 5688, 6054, 6129, 6217, 6218, 6258, 6272, 6294, 6432, 6551, 6628, 6656, 6746, 6762, 6925, 7006, 7057, 7100, 7185, 7282, 7325, 7506, 7523, 7546,
+				7647, 7731, 7766, 7786, 7790, 7936, 7937, 7952, 7979, 7999, 8021, 8065, 8105, 8174, 8201, 8218, 8245, 8368, 8491, 8568, 8606, 8773, 8825, 8912, 8978, 9074, 9097, 9185, 9263, 9286, 9419, 9446, 9498, 9511, 9701, 9736, 9744, 9767, 9787, 9817,
+				9839, 9889, 9976, 10079, 10135, 10178, 10250, 10320, 10382, 10461, 10515, 10597, 10675, 10756, 10922, 10983, 11103, 11180, 11263,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Gunnar Clovis&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Gunnar Clovis&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gunnar-clovis.html" property="og:url">
+	<meta content="Rank by game in top 10: 1974&#10;Rank by game in top 20: 3421&#10;Rank by ilScore: 11610&#10;&#10;1 games&#10;&bull; Sunny New Year: Death of Snowman | MJ 44: New Year | rank: 6 | ilscore: 32&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Gunnar Clovis</h1>
+		<a href="https://gunnar-clovis.itch.io">gunnar-clovis.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1974</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3421</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11610</p>
+		<p>Total ilScore: 32</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gunnar-clovis.itch.io/sunny-new-year-death-of-snowman">Sunny New Year: Death of Snowman</a></td>
+				<td><span class="early">19h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-44-new-year">MJ 44: New Year</a></td>
+				<td>28</td>
+				<td>6</td>
+				<td>19</td>
+				<td>32</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				299, 309, 315, 324, 332, 335, 346, 365, 379, 388, 396, 407, 417, 428, 439, 450, 453, 458, 471, 489, 502, 518, 530, 537, 549, 557, 565, 578, 591, 601, 609, 618, 631, 640, 650, 659, 668, 677, 689, 696,
+				713, 723, 734, 744, 756, 768, 780, 788, 799, 809, 826, 834, 843, 860, 873, 883, 897, 905, 911, 922, 934, 941, 951, 958, 967, 974, 983, 1000, 1007, 1016, 1026, 1037, 1051, 1064, 1068, 1083, 1092, 1100, 1109, 1126,
+				1141, 1153, 1166, 1174, 1183, 1201, 1210, 1221, 1234, 1247, 1257, 1267, 1275, 1285, 1300, 1310, 1318, 1326, 1336, 1350, 1354, 1365, 1381, 1389, 1401, 1417, 1430, 1440, 1454, 1466, 1481, 1489, 1493, 1501, 1522, 1539, 1553, 1561, 1570, 1581,
+				1596, 1606, 1618, 1634, 1647, 1654, 1660, 1669, 1681, 1686, 1695, 1709, 1720, 1728, 1746, 1757, 1775, 1783, 1792, 1808, 1819, 1831, 1846, 1864, 1873, 1881, 1896, 1907, 1920, 1931, 1948, 1961, 1973,
+			]],
+			[ "20", [
+				396, 414, 427, 443, 454, 457, 479, 509, 527, 546, 562, 582, 599, 622, 649, 674, 676, 684, 709, 738, 765, 794, 805, 820, 843, 858, 875, 901, 924, 943, 957, 976, 1001, 1021, 1039, 1056, 1080, 1101, 1121, 1134,
+				1156, 1173, 1195, 1214, 1239, 1259, 1284, 1303, 1329, 1345, 1368, 1384, 1403, 1425, 1449, 1464, 1488, 1503, 1521, 1546, 1572, 1584, 1595, 1616, 1629, 1645, 1664, 1684, 1699, 1718, 1736, 1758, 1780, 1803, 1807, 1831, 1850, 1871, 1889, 1909,
+				1938, 1961, 1983, 1995, 2013, 2040, 2056, 2076, 2091, 2113, 2127, 2153, 2173, 2192, 2217, 2238, 2257, 2274, 2282, 2310, 2314, 2326, 2349, 2365, 2385, 2406, 2430, 2453, 2473, 2489, 2511, 2529, 2541, 2559, 2588, 2620, 2642, 2662, 2683, 2703,
+				2723, 2738, 2755, 2778, 2818, 2832, 2847, 2861, 2886, 2900, 2905, 2929, 2951, 2973, 2993, 3010, 3041, 3061, 3085, 3114, 3138, 3164, 3188, 3218, 3236, 3255, 3282, 3301, 3327, 3352, 3384, 3403, 3420,
+			]],
+			[ "ilscore", [
+				421, 454, 481, 520, 531, 531, 641, 733, 745, 809, 851, 923, 978, 1096, 1137, 1177, 1178, 1182, 1243, 1284, 1436, 1546, 1548, 1588, 1691, 1731, 1778, 1829, 1902, 1943, 2018, 2069, 2244, 2297, 2377, 2467, 2577, 2625, 2784, 2886,
+				2933, 2979, 3062, 3191, 3341, 3422, 3551, 3631, 3728, 3787, 3843, 3936, 4024, 4053, 4127, 4161, 4206, 4284, 4369, 4584, 4701, 4803, 4821, 4943, 5019, 5122, 5372, 5431, 5621, 5705, 5875, 6243, 6319, 6413, 6414, 6455, 6476, 6500, 6643, 6764,
+				6845, 6876, 6968, 6985, 7148, 7231, 7282, 7324, 7410, 7511, 7554, 7741, 7760, 7785, 7887, 7971, 8007, 8030, 8036, 8183, 8184, 8202, 8238, 8264, 8287, 8331, 8380, 8451, 8478, 8495, 8522, 8649, 8772, 8848, 8887, 9058, 9111, 9199, 9266, 9363,
+				9387, 9475, 9554, 9577, 9710, 9741, 9793, 9808, 9997, 10034, 10044, 10069, 10094, 10128, 10151, 10205, 10292, 10399, 10456, 10504, 10574, 10644, 10706, 10787, 10850, 10932, 11008, 11093, 11260, 11323, 11444, 11524, 11609,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

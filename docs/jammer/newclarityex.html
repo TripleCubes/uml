@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>newclarityex&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="newclarityex&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/newclarityex.html" property="og:url">
+	<meta content="Rank by game in top 10: 1084&#10;Rank by game in top 20: 542&#10;Rank by ilScore: 530&#10;&#10;3 games&#10;&bull; The Ship of Theseus | MJ 155: Wind | rank: 20 | ilscore: 72&#10;&bull; Kitty Sledding Xtreme | MJ 154: Travel | rank: 23 | ilscore: 61&#10;&bull; Man I Love Fishing | MJ 153: Fishing | rank: 9 | ilscore: 106&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>newclarityex</h1>
+		<a href="https://newclarityex.itch.io">newclarityex.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1084</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 542</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 530</p>
+		<p>Total ilScore: 239</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://newclarityex.itch.io/the-ship-of-theseus">The Ship of Theseus</a></td>
+				<td><span class="early">4m 23s early</span></td>
+				<td>
+					<a href="../jammer/purpledev.html">PurpleDev</a>,
+					<a href="../jammer/sfeldman.html">sfeldman</a>,
+					<a href="../jammer/strawbe.html">Straw</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>20</td>
+				<td>24</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://newclarityex.itch.io/kitty-sledding-xtreme">Kitty Sledding Xtreme</a></td>
+				<td><span class="early">3m 59s early</span></td>
+				<td>
+					<a href="../jammer/purpledev.html">PurpleDev</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-154-travel">MJ 154: Travel</a></td>
+				<td>79</td>
+				<td>23</td>
+				<td>29</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://newclarityex.itch.io/man-i-love-fishing">Man I Love Fishing</a></td>
+				<td><span class="early">2h 8m early</span></td>
+				<td>
+					<a href="../jammer/purpledev.html">PurpleDev</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>9</td>
+				<td>26</td>
+				<td>106</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				867, 870, 874, 878, 887, 888, 897, 905, 908, 921, 924, 929, 937, 949, 952, 955, 956, 958, 961, 963, 966, 979, 987, 991, 993, 999, 1001, 1002, 1013, 1017, 1026, 1040, 1049, 1062, 1064, 1070, 1077, 1083,
+			]],
+			[ "20", [
+				1153, 1157, 412, 413, 417, 418, 424, 433, 437, 438, 445, 451, 455, 459, 459, 462, 465, 465, 467, 471, 472, 475, 479, 482, 486, 492, 492, 492, 496, 499, 502, 508, 519, 525, 526, 529, 533, 541,
+			]],
+			[ "ilscore", [
+				1924, 843, 402, 408, 412, 415, 416, 426, 429, 441, 444, 447, 448, 462, 463, 467, 467, 467, 467, 468, 471, 473, 475, 480, 481, 482, 484, 489, 495, 498, 500, 504, 510, 514, 517, 522, 525, 529,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

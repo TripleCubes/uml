@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ChXris&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ChXris&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/formal-chxris.html" property="og:url">
+	<meta content="Rank by game in top 20: 722&#10;Rank by ilScore: 3252&#10;&#10;2 games&#10;&bull; There&#39;s no Script | MJ 147: Cinema | rank: 19 | ilscore: 43&#10;&bull; The Window Thief | MJ 146: Windows | rank: 20 | ilscore: 48&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ChXris</h1>
+		<a href="https://formal-chxris.itch.io">formal-chxris.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 722</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3252</p>
+		<p>Total ilScore: 91</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://formal-chxris.itch.io/theres-no-script">There&#39;s no Script</a></td>
+				<td><span class="early">4h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-147-cinema">MJ 147: Cinema</a></td>
+				<td>40</td>
+				<td>19</td>
+				<td>5</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://formal-chxris.itch.io/window-thief">The Window Thief</a></td>
+				<td><span class="early">27m 43s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>20</td>
+				<td>15</td>
+				<td>48</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2438, 510, 514, 515, 518, 520, 526, 529, 536, 546, 546, 549, 555, 565, 572, 579, 580, 589, 597, 604, 607, 609, 619, 622, 624, 629, 635, 637, 640, 644, 647, 651, 657, 662, 671, 674, 679, 680, 684, 694,
+				700, 701, 705, 713, 721,
+			]],
+			[ "ilscore", [
+				6748, 2439, 2449, 2474, 2498, 2516, 2524, 2613, 2633, 2653, 2667, 2679, 2688, 2705, 2726, 2735, 2767, 2774, 2789, 2794, 2870, 2876, 2884, 2891, 2894, 2901, 2908, 2919, 2938, 2973, 2987, 3002, 3022, 3037, 3047, 3057, 3068, 3094, 3122, 3146,
+				3179, 3193, 3214, 3233, 3251,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DonyPMuse&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DonyPMuse&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/donypmuse.html" property="og:url">
+	<meta content="Rank by game in top 10: 1525&#10;Rank by game in top 20: 2206&#10;Rank by ilScore: 2914&#10;&#10;2 games&#10;&bull; Study Break | MJ 93: Vacation | rank: 7 | ilscore: 51&#10;&bull; Icthyoid Belt | MJ 91: UFO | rank: 93 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DonyPMuse</h1>
+		<a href="https://donypmuse.itch.io">donypmuse.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1525</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2206</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2914</p>
+		<p>Total ilScore: 96</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://donypmuse.itch.io/study-break">Study Break</a></td>
+				<td><span class="early">2m 36s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-93-vacation">MJ 93: Vacation</a></td>
+				<td>45</td>
+				<td>7</td>
+				<td>13</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://donypmuse.itch.io/icthyoid-belt">Icthyoid Belt</a></td>
+				<td><span class="late">10h 16m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>93</td>
+				<td>2</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				639, 652, 662, 665, 675, 681, 692, 707, 714, 717, 726, 735, 742, 751, 768, 775, 784, 794, 806, 820, 833, 834, 845, 853, 861, 870, 887, 896, 904, 917, 919, 928, 946, 955, 965, 978, 991, 1001, 1011, 1015,
+				1018, 1034, 1045, 1049, 1050, 1054, 1068, 1071, 1073, 1078, 1080, 1087, 1102, 1107, 1118, 1121, 1133, 1143, 1152, 1158, 1166, 1187, 1204, 1211, 1218, 1225, 1236, 1238, 1248, 1260, 1265, 1278, 1282, 1288, 1296, 1308, 1313, 1313, 1315, 1319,
+				1322, 1330, 1336, 1354, 1363, 1373, 1388, 1399, 1409, 1419, 1430, 1437, 1446, 1461, 1472, 1485, 1491, 1502, 1512, 1524,
+			]],
+			[ "20", [
+				888, 902, 909, 917, 929, 936, 962, 991, 1004, 1007, 1028, 1043, 1051, 1070, 1086, 1102, 1121, 1140, 1162, 1184, 1204, 1205, 1216, 1226, 1238, 1256, 1272, 1282, 1291, 1311, 1316, 1332, 1361, 1372, 1384, 1400, 1414, 1428, 1454, 1457,
+				1460, 1486, 1508, 1512, 1515, 1520, 1547, 1549, 1551, 1556, 1558, 1568, 1584, 1591, 1605, 1611, 1623, 1634, 1653, 1665, 1678, 1699, 1732, 1740, 1747, 1754, 1768, 1775, 1795, 1807, 1815, 1855, 1857, 1868, 1877, 1902, 1908, 1912, 1915, 1920,
+				1924, 1934, 1941, 1959, 1979, 1989, 2005, 2026, 2040, 2057, 2068, 2075, 2090, 2109, 2131, 2160, 2166, 2177, 2192, 2205,
+			]],
+			[ "ilscore", [
+				3216, 3298, 780, 795, 808, 813, 828, 850, 948, 998, 1014, 1023, 1050, 1069, 1089, 1229, 1245, 1303, 1330, 1400, 1620, 1635, 1650, 1650, 1654, 1660, 1668, 1705, 1726, 1740, 1753, 1770, 1778, 1835, 1860, 1878, 1897, 1914, 1938, 1947,
+				2013, 2024, 2030, 2047, 2073, 2088, 2091, 2096, 2112, 2114, 2118, 2125, 2128, 2132, 2143, 2150, 2156, 2166, 2172, 2183, 2199, 2225, 2243, 2252, 2327, 2354, 2374, 2387, 2396, 2405, 2421, 2441, 2449, 2473, 2477, 2492, 2495, 2554, 2560, 2568,
+				2575, 2578, 2585, 2591, 2602, 2620, 2654, 2668, 2680, 2699, 2715, 2725, 2733, 2744, 2768, 2795, 2818, 2843, 2856, 2876, 2895, 2913,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

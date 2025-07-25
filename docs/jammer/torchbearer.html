@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>torchbearer&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="torchbearer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/torchbearer.html" property="og:url">
+	<meta content="Rank by game in top 20: 3593&#10;Rank by ilScore: 12098&#10;&#10;1 games&#10;&bull; WIZ | MJ 44: New Year | rank: 13 | ilscore: 28&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>torchbearer</h1>
+		<a href="https://torchbearer.itch.io">torchbearer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3593</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12098</p>
+		<p>Total ilScore: 28</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://torchbearer.itch.io/wiz">WIZ</a></td>
+				<td><span class="late">10h 24m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-44-new-year">MJ 44: New Year</a></td>
+				<td>28</td>
+				<td>13</td>
+				<td>12</td>
+				<td>28</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				496, 515, 525, 541, 557, 566, 588, 618, 641, 660, 676, 695, 711, 734, 760, 785, 791, 802, 827, 856, 883, 912, 924, 939, 962, 977, 994, 1020, 1043, 1062, 1076, 1095, 1120, 1140, 1158, 1175, 1199, 1220, 1238, 1251,
+				1273, 1290, 1312, 1331, 1355, 1375, 1400, 1419, 1445, 1461, 1484, 1500, 1519, 1541, 1565, 1580, 1604, 1619, 1637, 1662, 1688, 1700, 1720, 1741, 1753, 1769, 1788, 1808, 1823, 1842, 1860, 1882, 1904, 1927, 1932, 1956, 1973, 1994, 2012, 2032,
+				2061, 2084, 2106, 2122, 2140, 2167, 2183, 2203, 2218, 2240, 2254, 2280, 2300, 2319, 2344, 2365, 2384, 2407, 2420, 2448, 2456, 2476, 2501, 2519, 2541, 2562, 2586, 2609, 2629, 2645, 2667, 2685, 2697, 2715, 2744, 2776, 2798, 2818, 2839, 2859,
+				2880, 2895, 2912, 2935, 2975, 2989, 3004, 3017, 3042, 3056, 3071, 3096, 3120, 3142, 3165, 3182, 3213, 3233, 3257, 3286, 3310, 3336, 3360, 3390, 3408, 3427, 3454, 3473, 3499, 3524, 3556, 3575, 3592,
+			]],
+			[ "ilscore", [
+				496, 534, 565, 604, 621, 621, 736, 831, 848, 914, 955, 1030, 1086, 1205, 1246, 1292, 1294, 1301, 1365, 1407, 1562, 1679, 1681, 1722, 1827, 1875, 1924, 1980, 2058, 2103, 2180, 2228, 2403, 2461, 2548, 2639, 2750, 2798, 2954, 3061,
+				3114, 3161, 3247, 3377, 3528, 3612, 3749, 3832, 3930, 3993, 4053, 4149, 4241, 4272, 4343, 4382, 4431, 4512, 4600, 4817, 4936, 5044, 5067, 5186, 5262, 5365, 5618, 5681, 5871, 5961, 6133, 6501, 6581, 6680, 6683, 6729, 6750, 6780, 6926, 7049,
+				7143, 7177, 7271, 7290, 7462, 7547, 7600, 7643, 7731, 7835, 7882, 8066, 8087, 8117, 8220, 8306, 8346, 8371, 8381, 8527, 8531, 8551, 8588, 8616, 8642, 8688, 8743, 8816, 8844, 8870, 8901, 9029, 9153, 9230, 9270, 9444, 9498, 9589, 9657, 9756,
+				9782, 9874, 9957, 9980, 10114, 10148, 10200, 10219, 10409, 10450, 10464, 10490, 10520, 10556, 10581, 10637, 10726, 10842, 10905, 10953, 11025, 11096, 11163, 11245, 11314, 11398, 11474, 11562, 11733, 11800, 11926, 12008, 12097,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

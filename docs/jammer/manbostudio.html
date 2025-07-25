@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Manbo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Manbo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/manbostudio.html" property="og:url">
+	<meta content="Rank by game in top 5: 1042&#10;Rank by game in top 10: 324&#10;Rank by game in top 20: 63&#10;Rank by ilScore: 21&#10;&#10;13 games&#10;&bull; Clutter Collectors | MJ 122: Intermission | rank: 5 | ilscore: 52&#10;&bull; Tone Death | MJ 111: Colors | rank: 105 | ilscore: 114&#10;&bull; Territorial Defense Frogs | MJ 106: Frogs | rank: 53 | ilscore: 107&#10;&bull; Domino Domination | MJ 104: Cascade | rank: 22 | ilscore: 74&#10;&bull; Caverns of the Mind | MJ 103: Darkness | rank: 19 | ilscore: 88&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Manbo</h1>
+		<a href="https://manbostudio.itch.io">manbostudio.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1042</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 324</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>9</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 63</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>9</span>
+			<span>15</span>
+			<span>19</span>
+			<span>19</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 21</p>
+		<p>Total ilScore: 970</p>
+
+		<h3 id="games_header">13 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/clutter-collectors">Clutter Collectors</a></td>
+				<td><span class="early">8m 5s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>5</td>
+				<td>7</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/tone-death">Tone Death</a></td>
+				<td><span class="early">3h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>105</td>
+				<td>9</td>
+				<td>114</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/territorial-defense-frogs">Territorial Defense Frogs</a></td>
+				<td><span class="early">3h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>53</td>
+				<td>10</td>
+				<td>107</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/domino-domination">Domino Domination</a></td>
+				<td><span class="early">2h 19m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>22</td>
+				<td>13</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/caverns-of-the-mind">Caverns of the Mind</a></td>
+				<td><span class="early">4h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>19</td>
+				<td>21</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/wind-water">Wind &amp; Water</a></td>
+				<td><span class="early">5h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>19</td>
+				<td>18</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/glow-verload">Glow-verload</a></td>
+				<td><span class="early">16m 12s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>27</td>
+				<td>22</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/sewer-stash">Sewer Stash</a></td>
+				<td><span class="early">3h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>72</td>
+				<td>9</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/subject-13">Subject 13</a></td>
+				<td><span class="early">40m 28s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>15</td>
+				<td>17</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/redmund">Redmund</a></td>
+				<td><span class="early">50m 16s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>29</td>
+				<td>13</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/bake-my-day">Bake My Day</a></td>
+				<td><span class="early">4h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>9</td>
+				<td>26</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/retriever-of-souls">Retriever of Souls</a></td>
+				<td><span class="early">1m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>51</td>
+				<td>14</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://manbostudio.itch.io/disco-dirtbag">Disco Dirtbag</a></td>
+				<td><span class="early">5m 16s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>25</td>
+				<td>16</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				639, 644, 654, 658, 666, 669, 676, 681, 684, 688, 691, 696, 702, 707, 712, 716, 725, 727, 731, 738, 741, 748, 754, 760, 765, 771, 779, 789, 795, 797, 801, 808, 818, 829, 834, 839, 843, 850, 854, 860,
+				866, 874, 878, 881, 887, 893, 897, 897, 900, 908, 911, 917, 924, 935, 940, 944, 950, 955, 961, 970, 980, 983, 988, 999, 1007, 1014, 1019, 1026, 1036, 1041,
+			]],
+			[ "10", [
+				607, 617, 618, 628, 633, 644, 659, 666, 669, 678, 687, 694, 703, 720, 727, 736, 746, 758, 772, 785, 786, 791, 797, 805, 814, 831, 839, 848, 861, 170, 171, 175, 180, 184, 186, 187, 192, 193, 195, 198,
+				201, 204, 207, 208, 210, 212, 215, 218, 222, 223, 226, 227, 228, 230, 230, 232, 232, 233, 237, 239, 240, 241, 245, 247, 248, 249, 252, 253, 256, 261, 262, 268, 272, 274, 276, 276, 279, 281, 281, 283,
+				285, 285, 286, 288, 290, 291, 294, 294, 294, 296, 300, 301, 304, 311, 314, 314, 317, 320, 323,
+			]],
+			[ "20", [
+				803, 810, 255, 256, 257, 258, 263, 98, 98, 47, 48, 48, 49, 50, 53, 53, 54, 55, 56, 56, 56, 56, 58, 60, 60, 61, 62, 62, 62, 33, 33, 33, 33, 33, 33, 33, 34, 34, 35, 35,
+				36, 38, 38, 38, 39, 39, 39, 39, 40, 40, 41, 41, 41, 41, 41, 41, 41, 44, 46, 46, 46, 46, 46, 46, 46, 46, 46, 46, 48, 48, 48, 50, 50, 50, 50, 50, 50, 50, 50, 50,
+				50, 52, 52, 54, 56, 56, 56, 57, 57, 57, 57, 57, 60, 60, 61, 61, 62, 62, 62,
+			]],
+			[ "ilscore", [
+				2489, 2548, 534, 538, 190, 108, 78, 80, 57, 64, 34, 17, 19, 12, 10, 11, 9, 10, 10, 10, 11, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11,
+				11, 11, 11, 11, 12, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+				16, 16, 16, 16, 16, 16, 16, 16, 19, 19, 19, 19, 19, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

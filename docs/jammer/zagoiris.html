@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>zagoiris&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="zagoiris&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zagoiris.html" property="og:url">
+	<meta content="Rank by game in top 10: 1936&#10;Rank by game in top 20: 3212&#10;Rank by ilScore: 3136&#10;&#10;2 games&#10;&bull; Fae&#39;s Lullaby | MJ 139: Fae | rank: 8 | ilscore: 40&#10;&bull; A Star Tale - Episode I | MJ 62: Colors | rank: 109 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>zagoiris</h1>
+		<a href="https://zagoiris.itch.io">zagoiris.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1936</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3212</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3136</p>
+		<p>Total ilScore: 92</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kevina.itch.io/faes-lullaby">Fae&#39;s Lullaby</a></td>
+				<td><span class="early">34m 45s early</span></td>
+				<td>
+					<a href="../jammer/kevina.html">Kevin Andok</a>,
+					<a href="../jammer/linasgames.html">Linas Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>8</td>
+				<td>11</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://zagoiris.itch.io/astartale">A Star Tale - Episode I</a></td>
+				<td><span class="early">7h 21m early</span></td>
+				<td>
+					<a href="../jammer/rafa-parra.html">Rafa Parra</a>,
+					<a href="../jammer/shmank.html">shmank</a>,
+					<a href="../jammer/srheidgger.html">srheidgger</a>,
+					<a href="../jammer/alanflorianoteixeira.html">AlanFlorianoTeixeira</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>109</td>
+				<td>4</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1330, 1346, 1354, 1366, 1382, 1395, 1406, 1420, 1432, 1447, 1455, 1459, 1467, 1488, 1505, 1519, 1527, 1536, 1547, 1562, 1572, 1584, 1600, 1613, 1620, 1626, 1635, 1647, 1652, 1657, 1671, 1682, 1690, 1708, 1719, 1737, 1745, 1754, 1770, 1781,
+				1793, 1808, 1826, 1835, 1843, 1858, 1869, 1882, 1893, 1910, 1923, 1935,
+			]],
+			[ "20", [
+				2184, 2201, 2211, 2226, 2247, 2266, 2290, 2307, 2325, 2345, 2363, 2375, 2393, 2423, 2455, 2477, 2497, 2518, 2538, 2554, 2571, 2588, 2610, 2650, 2661, 2677, 2688, 2713, 2727, 2732, 2747, 2759, 2770, 2787, 2804, 2835, 2855, 2879, 2904, 2928,
+				2954, 2979, 3009, 3027, 3046, 3073, 3092, 3118, 3142, 3174, 3194, 3211,
+			]],
+			[ "ilscore", [
+				817, 915, 917, 928, 1013, 1036, 1059, 1092, 1149, 1169, 1233, 1259, 1413, 1453, 1505, 1581, 1679, 1706, 1849, 1939, 1966, 1988, 2056, 2176, 2305, 2353, 2462, 2514, 2585, 2622, 2660, 2722, 2796, 2801, 2860, 2872, 2887, 2937, 3004, 3196,
+				3298, 3385, 3392, 3498, 3557, 3649, 3871, 3918, 4081, 4160, 4301, 4631, 4701, 4764, 4764, 4780, 4785, 4793, 4906, 5007, 5051, 5061, 5135, 5139, 5278, 5347, 5368, 5397, 5476, 5561, 5593, 5752, 5765, 5771, 5856, 5921, 5944, 5949, 5951, 6070,
+				6070, 2288, 2295, 2298, 2302, 2315, 2322, 2328, 2338, 2347, 2357, 2381, 2405, 2423, 2432, 2518, 2539, 2559, 2572, 2583, 2592, 2610, 2631, 2639, 2665, 2670, 2685, 2690, 2759, 2765, 2773, 2780, 2783, 2790, 2796, 2807, 2827, 2861, 2875, 2890,
+				2910, 2926, 2936, 2945, 2956, 2981, 3008, 3032, 3063, 3077, 3098, 3117, 3135,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

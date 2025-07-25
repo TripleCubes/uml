@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>angelalb&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="angelalb&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/angelalb.html" property="og:url">
+	<meta content="Rank by game in top 1: 207&#10;Rank by game in top 5: 97&#10;Rank by game in top 10: 168&#10;Rank by game in top 20: 313&#10;Rank by ilScore: 1056&#10;&#10;2 games&#10;&bull; Eat Your Cake | MJ 163: Dessert | rank: 1 | ilscore: 60&#10;&bull; Cosmic Piscary | MJ 153: Fishing | rank: 5 | ilscore: 110&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>angelalb</h1>
+		<a href="https://angelalb.itch.io">angelalb.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 207</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 97</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 168</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 313</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1056</p>
+		<p>Total ilScore: 170</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://erebrus.itch.io/eat-your-cake">Eat Your Cake</a></td>
+				<td><span class="early">7h 15m early</span></td>
+				<td>
+					<a href="../jammer/erebrus.html">erebrus</a>,
+					<a href="../jammer/thom13made.html">Thom13made</a>,
+					<a href="../jammer/jammydoodles.html">jammydoodles</a>,
+					<a href="../jammer/axelftv.html">Axelf</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-163-dessert">MJ 163: Dessert</a></td>
+				<td>51</td>
+				<td>1</td>
+				<td>11</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://erebrus.itch.io/cosmic-piscary">Cosmic Piscary</a></td>
+				<td><span class="early">5h 50m early</span></td>
+				<td>
+					<a href="../jammer/erebrus.html">erebrus</a>,
+					<a href="../jammer/thom13made.html">Thom13made</a>,
+					<a href="../jammer/skwiggle-skwid.html">skwid</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-153-fishing">MJ 153: Fishing</a></td>
+				<td>212</td>
+				<td>5</td>
+				<td>23</td>
+				<td>110</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				177, 178, 179, 180, 181, 181, 181, 181, 181, 181, 181, 185, 186, 186, 189, 189, 190, 190, 190, 190, 191, 192, 194, 195, 195, 201, 206, 206,
+			]],
+			[ "5", [
+				489, 490, 493, 495, 499, 500, 505, 509, 510, 518, 79, 81, 82, 82, 82, 82, 82, 82, 82, 82, 82, 83, 83, 83, 84, 86, 86, 86, 86, 87, 87, 88, 89, 89, 89, 95, 95, 96,
+			]],
+			[ "10", [
+				635, 640, 643, 646, 651, 652, 658, 662, 666, 680, 138, 139, 140, 141, 143, 144, 145, 147, 147, 147, 147, 148, 149, 151, 152, 154, 155, 155, 155, 156, 156, 157, 158, 159, 159, 165, 165, 167,
+			]],
+			[ "20", [
+				905, 912, 923, 925, 931, 937, 950, 958, 964, 978, 250, 253, 256, 259, 262, 263, 264, 266, 268, 270, 272, 274, 274, 277, 279, 282, 282, 285, 286, 288, 290, 295, 300, 301, 301, 308, 309, 312,
+			]],
+			[ "ilscore", [
+				1809, 1836, 1854, 1864, 1874, 1882, 1899, 1922, 1930, 1949, 888, 892, 895, 909, 913, 915, 916, 917, 922, 922, 926, 932, 939, 948, 957, 958, 962, 970, 980, 985, 995, 1003, 1010, 1022, 1026, 1040, 1046, 1055,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

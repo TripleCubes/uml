@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Autumn West&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Autumn West&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/autumnwest.html" property="og:url">
+	<meta content="Rank by game in top 5: 391&#10;Rank by game in top 10: 565&#10;Rank by game in top 20: 942&#10;Rank by ilScore: 3712&#10;&#10;1 games&#10;&bull; The Mighty Mipple | MJ 113: Final Boss | rank: 5 | ilscore: 85&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Autumn West</h1>
+		<a href="https://autumnwest.itch.io">autumnwest.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 391</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 565</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 942</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3712</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://autumnwest.itch.io/the-mighty-mipple">The Mighty Mipple</a></td>
+				<td><span class="early">1m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>5</td>
+				<td>6</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				220, 220, 221, 225, 232, 232, 233, 233, 233, 234, 235, 238, 241, 244, 250, 252, 252, 255, 256, 257, 258, 260, 261, 263, 264, 264, 268, 273, 277, 279, 281, 289, 290, 290, 292, 292, 293, 293, 295, 296,
+				299, 303, 306, 306, 306, 306, 310, 311, 318, 320, 321, 329, 333, 339, 341, 347, 350, 350, 350, 350, 352, 354, 354, 361, 363, 363, 364, 366, 367, 368, 368, 369, 372, 376, 380, 384, 384, 390, 390, 390,
+			]],
+			[ "10", [
+				313, 313, 313, 317, 327, 327, 328, 328, 331, 332, 335, 338, 345, 352, 360, 362, 363, 370, 371, 373, 377, 381, 384, 387, 388, 390, 394, 399, 403, 407, 408, 415, 416, 417, 420, 420, 421, 422, 425, 429,
+				432, 436, 439, 443, 445, 446, 450, 452, 457, 460, 464, 473, 478, 483, 488, 496, 499, 502, 504, 505, 507, 509, 510, 517, 521, 523, 524, 526, 527, 527, 529, 533, 537, 541, 551, 555, 555, 558, 561, 564,
+			]],
+			[ "20", [
+				495, 495, 496, 503, 517, 518, 527, 529, 536, 540, 545, 551, 560, 572, 586, 591, 593, 601, 603, 605, 608, 615, 619, 624, 628, 632, 635, 637, 642, 651, 654, 664, 670, 673, 678, 683, 692, 695, 698, 701,
+				704, 713, 718, 725, 735, 735, 740, 746, 759, 766, 772, 781, 790, 798, 806, 814, 819, 829, 832, 834, 838, 843, 845, 854, 860, 863, 867, 872, 878, 887, 890, 895, 898, 903, 913, 920, 921, 925, 933, 941,
+			]],
+			[ "ilscore", [
+				2110, 2111, 2113, 2121, 2124, 2198, 2226, 2241, 2254, 2281, 2288, 2372, 2407, 2421, 2439, 2465, 2494, 2508, 2607, 2622, 2625, 2649, 2671, 2686, 2692, 2696, 2726, 2730, 2735, 2743, 2746, 2750, 2763, 2771, 2777, 2788, 2798, 2808, 2847, 2873,
+				2891, 2897, 2994, 3012, 3032, 3045, 3065, 3074, 3095, 3121, 3132, 3176, 3183, 3199, 3204, 3289, 3296, 3301, 3306, 3310, 3318, 3326, 3339, 3360, 3407, 3419, 3433, 3453, 3469, 3479, 3490, 3501, 3527, 3556, 3581, 3637, 3650, 3674, 3695, 3711,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

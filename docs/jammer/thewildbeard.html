@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Wild Beard&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Wild Beard&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thewildbeard.html" property="og:url">
+	<meta content="Rank by game in top 10: 850&#10;Rank by game in top 20: 1214&#10;Rank by ilScore: 3649&#10;&#10;1 games&#10;&bull; Spin To Begin | MJ 157: Electric | rank: 7 | ilscore: 86&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Wild Beard</h1>
+		<a href="https://thewildbeard.itch.io">thewildbeard.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 850</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1214</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3649</p>
+		<p>Total ilScore: 86</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://indigosingularity.itch.io/spintobegin">Spin To Begin</a></td>
+				<td><span class="early">56m 12s early</span></td>
+				<td>
+					<a href="../jammer/indigosingularity.html">tharmoth</a>,
+					<a href="../jammer/anonfood.html">AnonFood</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>7</td>
+				<td>19</td>
+				<td>86</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				695, 696, 702, 707, 711, 725, 728, 733, 740, 753, 756, 759, 759, 760, 762, 764, 765, 776, 782, 785, 787, 792, 794, 794, 800, 804, 810, 814, 827, 836, 836, 840, 847, 849,
+			]],
+			[ "20", [
+				972, 978, 991, 999, 1005, 1026, 1030, 1038, 1048, 1061, 1066, 1076, 1077, 1079, 1083, 1088, 1090, 1102, 1110, 1114, 1119, 1126, 1133, 1142, 1148, 1153, 1158, 1163, 1176, 1188, 1189, 1194, 1206, 1213,
+			]],
+			[ "ilscore", [
+				3012, 3021, 3041, 3065, 3077, 3121, 3128, 3144, 3149, 3234, 3241, 3247, 3252, 3256, 3264, 3272, 3285, 3303, 3349, 3361, 3375, 3395, 3411, 3421, 3432, 3443, 3469, 3497, 3522, 3574, 3587, 3611, 3632, 3648,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

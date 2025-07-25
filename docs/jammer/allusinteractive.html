@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Allus Interactive&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Allus Interactive&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/allusinteractive.html" property="og:url">
+	<meta content="Rank by game in top 20: 3494&#10;Rank by ilScore: 10461&#10;&#10;1 games&#10;&bull; Scuba Dive Danger | MJ 33: Underwater | rank: 17 | ilscore: 40&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Allus Interactive</h1>
+		<a href="https://allusinteractive.itch.io">allusinteractive.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3494</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10461</p>
+		<p>Total ilScore: 40</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://allusinteractive.itch.io/scuba-dive-danger">Scuba Dive Danger</a></td>
+				<td><span class="early">7h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-33-underwater">MJ 33: Underwater</a></td>
+				<td>46</td>
+				<td>17</td>
+				<td>12</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				331, 340, 344, 359, 361, 369, 378, 395, 405, 418, 427, 435, 455, 466, 482, 493, 498, 520, 550, 569, 588, 604, 624, 640, 663, 690, 715, 718, 726, 751, 780, 807, 836, 846, 861, 884, 899, 916, 942, 965,
+				984, 998, 1017, 1042, 1062, 1080, 1097, 1121, 1142, 1162, 1175, 1197, 1214, 1236, 1255, 1279, 1299, 1324, 1343, 1369, 1385, 1408, 1424, 1443, 1465, 1489, 1504, 1528, 1543, 1561, 1586, 1612, 1624, 1635, 1656, 1669, 1685, 1704, 1724, 1739,
+				1758, 1776, 1798, 1820, 1843, 1847, 1871, 1890, 1911, 1929, 1949, 1978, 2001, 2023, 2039, 2057, 2084, 2100, 2120, 2135, 2157, 2171, 2197, 2217, 2236, 2261, 2282, 2301, 2324, 2335, 2363, 2368, 2384, 2409, 2427, 2449, 2470, 2494, 2517, 2537,
+				2553, 2575, 2593, 2605, 2623, 2652, 2684, 2706, 2726, 2747, 2767, 2788, 2803, 2820, 2843, 2883, 2897, 2912, 2926, 2951, 2965, 2975, 2999, 3022, 3044, 3066, 3083, 3114, 3134, 3158, 3187, 3211, 3237, 3261, 3291, 3309, 3328, 3355, 3374, 3400,
+				3425, 3457, 3476, 3493,
+			]],
+			[ "ilscore", [
+				211, 213, 214, 230, 232, 234, 238, 253, 257, 262, 265, 267, 289, 306, 339, 344, 344, 439, 521, 525, 584, 610, 675, 728, 834, 865, 898, 900, 904, 959, 989, 1138, 1246, 1248, 1278, 1375, 1411, 1453, 1497, 1566,
+				1601, 1672, 1711, 1883, 1929, 2001, 2081, 2184, 2223, 2385, 2481, 2523, 2561, 2641, 2767, 2911, 2978, 3102, 3176, 3270, 3318, 3371, 3453, 3537, 3553, 3624, 3652, 3689, 3759, 3840, 4044, 4159, 4256, 4266, 4383, 4452, 4555, 4796, 4849, 5031,
+				5110, 5275, 5625, 5695, 5774, 5774, 5810, 5817, 5838, 5967, 6083, 6155, 6183, 6273, 6286, 6441, 6520, 6563, 6599, 6682, 6774, 6815, 6989, 7006, 7023, 7117, 7194, 7224, 7231, 7235, 7375, 7376, 7383, 7400, 7418, 7433, 7476, 7513, 7577, 7602,
+				7617, 7640, 7758, 7884, 7953, 7989, 8155, 8198, 8280, 8338, 8432, 8452, 8537, 8609, 8630, 8758, 8781, 8831, 8844, 9027, 9060, 9061, 9082, 9090, 9118, 9136, 9177, 9262, 9362, 9415, 9455, 9523, 9589, 9650, 9731, 9785, 9864, 9934, 10011, 10160,
+				10212, 10324, 10394, 10460,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

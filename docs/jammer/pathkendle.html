@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Pathkendle&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Pathkendle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pathkendle.html" property="og:url">
+	<meta content="Rank by game in top 20: 2992&#10;Rank by ilScore: 8166&#10;&#10;1 games&#10;&bull; Inky &amp; Blot | MJ 143: Ink | rank: 18 | ilscore: 55&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Pathkendle</h1>
+		<a href="https://pathkendle.itch.io">pathkendle.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2992</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8166</p>
+		<p>Total ilScore: 55</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pathkendle.itch.io/inky-blot">Inky &amp; Blot</a></td>
+				<td><span class="early">38m 56s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-143-ink">MJ 143: Ink</a></td>
+				<td>62</td>
+				<td>18</td>
+				<td>12</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2091, 2105, 2129, 2143, 2158, 2175, 2193, 2206, 2224, 2249, 2281, 2304, 2325, 2340, 2360, 2375, 2394, 2411, 2428, 2468, 2474, 2492, 2503, 2528, 2539, 2543, 2558, 2568, 2574, 2584, 2595, 2627, 2647, 2672, 2693, 2717, 2735, 2761, 2791, 2809,
+				2828, 2855, 2876, 2902, 2922, 2954, 2974, 2991,
+			]],
+			[ "ilscore", [
+				5884, 5904, 5950, 5961, 5967, 5974, 6083, 6176, 6224, 6245, 6403, 6432, 6486, 6527, 6598, 6603, 6680, 6739, 6751, 6860, 6871, 6906, 6913, 7081, 7092, 7095, 7098, 7099, 7105, 7114, 7139, 7217, 7305, 7343, 7362, 7413, 7463, 7502, 7567, 7606,
+				7677, 7737, 7803, 7936, 7972, 8070, 8120, 8165,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>MAV_DEV&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="MAV_DEV&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mav-dev.html" property="og:url">
+	<meta content="Rank by game in top 20: 3103&#10;Rank by ilScore: 3498&#10;&#10;2 games&#10;&bull; cozy cutter | MJ 161: Style | rank: 32 | ilscore: 38&#10;&bull; Sword and Shield | MJ 152: Heroes | rank: 17 | ilscore: 49&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>MAV_DEV</h1>
+		<a href="https://mav-dev.itch.io">mav-dev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3103</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3498</p>
+		<p>Total ilScore: 87</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mav-dev.itch.io/cozy-cutter">cozy cutter</a></td>
+				<td><span class="early">1h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-161-style">MJ 161: Style</a></td>
+				<td>53</td>
+				<td>32</td>
+				<td>12</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td><a href="https://mav-dev.itch.io/sword-and-shield">Sword and Shield</a></td>
+				<td><span class="early">6h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-152-heroes">MJ 152: Heroes</a></td>
+				<td>52</td>
+				<td>17</td>
+				<td>8</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2330, 2362, 2385, 2406, 2425, 2445, 2460, 2477, 2494, 2515, 2555, 2564, 2580, 2591, 2616, 2630, 2637, 2652, 2662, 2668, 2684, 2700, 2732, 2752, 2776, 2796, 2820, 2847, 2872, 2902, 2920, 2939, 2966, 2985, 3011, 3033, 3065, 3085, 3102,
+			]],
+			[ "ilscore", [
+				6877, 7037, 7073, 7141, 7192, 7269, 7284, 7368, 7431, 2951, 2987, 2994, 3010, 3015, 3098, 3105, 3110, 3115, 3118, 3125, 3132, 3144, 3162, 3206, 3219, 3235, 3254, 3269, 3279, 3289, 3300, 3326, 3355, 3380, 3422, 3435, 3459, 3480, 3497,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

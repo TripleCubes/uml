@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>lexenson&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="lexenson&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lexenson.html" property="og:url">
+	<meta content="Rank by game in top 5: 573&#10;Rank by game in top 10: 243&#10;Rank by game in top 20: 384&#10;Rank by ilScore: 1357&#10;&#10;2 games&#10;&bull; The Devil&#39;s Spawn | MJ 120: Hell | rank: 6 | ilscore: 57&#10;&bull; Fly my Children | MJ 118: Vampires | rank: 5 | ilscore: 94&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>lexenson</h1>
+		<a href="https://lexenson.itch.io">lexenson.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 573</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 243</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 384</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1357</p>
+		<p>Total ilScore: 151</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lexenson.itch.io/the-devils-spawn">The Devil&#39;s Spawn</a></td>
+				<td><span class="late">1d 8h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>6</td>
+				<td>9</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://lexenson.itch.io/fly-my-children">Fly my Children</a></td>
+				<td><span class="early">5h 21m early</span></td>
+				<td>
+					<a href="../jammer/finnp.html">finnp</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>5</td>
+				<td>21</td>
+				<td>94</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				338, 338, 338, 345, 345, 349, 359, 362, 368, 372, 373, 378, 379, 381, 382, 387, 393, 394, 394, 394, 398, 403, 408, 411, 412, 420, 424, 424, 426, 426, 428, 428, 434, 436, 442, 450, 456, 456, 458, 459,
+				463, 464, 469, 474, 475, 483, 487, 492, 496, 502, 505, 505, 505, 505, 507, 509, 509, 520, 524, 525, 526, 531, 533, 534, 537, 538, 543, 547, 552, 560, 560, 567, 572, 572,
+			]],
+			[ "10", [
+				439, 439, 127, 127, 128, 129, 133, 138, 139, 141, 142, 145, 146, 147, 148, 151, 154, 157, 158, 158, 160, 161, 161, 163, 163, 166, 167, 167, 167, 167, 169, 169, 170, 172, 176, 177, 178, 182, 182, 182,
+				183, 185, 187, 190, 192, 193, 200, 204, 206, 208, 209, 212, 212, 213, 215, 215, 215, 216, 217, 219, 220, 222, 223, 223, 223, 223, 223, 225, 232, 236, 236, 239, 239, 242,
+			]],
+			[ "20", [
+				628, 630, 207, 209, 212, 214, 217, 223, 226, 230, 231, 235, 237, 238, 239, 243, 245, 248, 249, 251, 254, 257, 257, 260, 260, 264, 265, 266, 268, 269, 271, 274, 274, 276, 279, 280, 281, 285, 285, 286,
+				289, 290, 293, 299, 303, 304, 311, 315, 319, 324, 325, 328, 329, 330, 333, 335, 337, 339, 340, 342, 344, 348, 348, 351, 352, 353, 355, 361, 371, 375, 375, 378, 379, 383,
+			]],
+			[ "ilscore", [
+				1803, 1817, 731, 737, 740, 759, 778, 792, 801, 820, 836, 845, 870, 879, 887, 905, 919, 930, 935, 936, 951, 951, 951, 954, 954, 959, 962, 969, 975, 977, 979, 981, 990, 1004, 1012, 1015, 1043, 1055, 1061, 1064,
+				1074, 1079, 1098, 1113, 1119, 1137, 1140, 1148, 1153, 1173, 1175, 1179, 1181, 1182, 1186, 1186, 1189, 1198, 1209, 1218, 1224, 1230, 1235, 1248, 1258, 1266, 1280, 1287, 1303, 1321, 1326, 1338, 1348, 1356,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

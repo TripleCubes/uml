@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Electromagnum Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Electromagnum Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/electromagnum-games.html" property="og:url">
+	<meta content="Rank by game in top 20: 3577&#10;Rank by ilScore: 12309&#10;&#10;1 games&#10;&bull; Tree Fortress - Unfinished | MJ 59: Fortress | rank: 17 | ilscore: 26&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Electromagnum Games</h1>
+		<a href="https://electromagnum-games.itch.io">electromagnum-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3577</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12309</p>
+		<p>Total ilScore: 26</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://electromagnum-games.itch.io/tree-fortress-unfinished">Tree Fortress - Unfinished</a></td>
+				<td><span class="late">6m 18s late</span></td>
+				<td>
+					<a href="../jammer/speakertone.html">speakertone</a>,
+					<a href="../jammer/kaisor-meridian.html">Kaisor Meridian</a>,
+					<a href="../jammer/tesselata.html">Tess</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-59">MJ 59: Fortress</a></td>
+				<td>24</td>
+				<td>17</td>
+				<td>7</td>
+				<td>26</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				788, 813, 842, 869, 898, 909, 924, 947, 962, 979, 1005, 1028, 1047, 1061, 1080, 1105, 1125, 1143, 1160, 1184, 1205, 1223, 1236, 1258, 1275, 1297, 1316, 1340, 1360, 1385, 1404, 1430, 1446, 1469, 1485, 1504, 1526, 1550, 1565, 1589,
+				1604, 1622, 1647, 1673, 1685, 1705, 1726, 1738, 1754, 1773, 1793, 1808, 1827, 1845, 1867, 1889, 1912, 1917, 1941, 1958, 1979, 1997, 2017, 2046, 2069, 2091, 2107, 2125, 2152, 2168, 2188, 2203, 2225, 2239, 2265, 2285, 2304, 2329, 2350, 2369,
+				2392, 2405, 2433, 2441, 2460, 2485, 2503, 2525, 2546, 2570, 2593, 2613, 2629, 2651, 2669, 2681, 2699, 2728, 2760, 2782, 2802, 2823, 2843, 2864, 2879, 2896, 2919, 2959, 2973, 2988, 3001, 3026, 3040, 3055, 3080, 3104, 3126, 3149, 3166, 3197,
+				3217, 3241, 3270, 3294, 3320, 3344, 3374, 3392, 3411, 3438, 3457, 3483, 3508, 3540, 3559, 3576,
+			]],
+			[ "ilscore", [
+				1366, 1433, 1476, 1631, 1749, 1753, 1794, 1900, 1948, 1997, 2053, 2133, 2178, 2255, 2305, 2480, 2540, 2628, 2719, 2832, 2882, 3037, 3144, 3198, 3245, 3331, 3462, 3613, 3699, 3837, 3920, 4019, 4085, 4145, 4248, 4341, 4374, 4445, 4485, 4534,
+				4616, 4705, 4922, 5042, 5151, 5174, 5294, 5371, 5473, 5727, 5789, 5979, 6071, 6246, 6615, 6696, 6796, 6799, 6845, 6867, 6897, 7045, 7168, 7263, 7298, 7393, 7416, 7588, 7673, 7727, 7771, 7858, 7962, 8009, 8195, 8217, 8246, 8351, 8439, 8481,
+				8506, 8516, 8664, 8668, 8692, 8730, 8758, 8784, 8830, 8885, 8960, 8989, 9016, 9050, 9181, 9306, 9384, 9424, 9598, 9652, 9744, 9814, 9911, 9936, 10029, 10118, 10142, 10276, 10312, 10366, 10387, 10577, 10618, 10633, 10664, 10694, 10735, 10762, 10819, 10909,
+				11025, 11092, 11141, 11213, 11284, 11354, 11441, 11512, 11597, 11675, 11764, 11941, 12009, 12136, 12218, 12308,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Higgaion Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Higgaion Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/higgaion-games.html" property="og:url">
+	<meta content="Rank by game in top 20: 2030&#10;Rank by ilScore: 845&#10;&#10;2 games&#10;&bull; INFECT | MJ 129: Poison | rank: 14 | ilscore: 67&#10;&bull; Red! Blue! Green! | MJ 111: Colors | rank: 60 | ilscore: 123&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Higgaion Games</h1>
+		<a href="https://higgaion-games.itch.io">higgaion-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2030</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 845</p>
+		<p>Total ilScore: 190</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://higgaion-games.itch.io/infect">INFECT</a></td>
+				<td><span class="early">3h 39m early</span></td>
+				<td>
+					<a href="../jammer/brandloose.html">Brandloose</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>14</td>
+				<td>23</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://higgaion-games.itch.io/red-blue-green">Red! Blue! Green!</a></td>
+				<td><span class="early">1m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>60</td>
+				<td>16</td>
+				<td>123</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1332, 1354, 1358, 1361, 1383, 1401, 1405, 1408, 1414, 1436, 1438, 1440, 1446, 1448, 1458, 1468, 1473, 1484, 1488, 1498, 1504, 1523, 1534, 1544, 1564, 1595, 1602, 1609, 1615, 1629, 1636, 1656, 1667, 1675, 1715, 1716, 1724, 1734, 1759, 1764,
+				1768, 1771, 1776, 1781, 1792, 1799, 1817, 1835, 1843, 1853, 1868, 1878, 1896, 1907, 1914, 1928, 1947, 1964, 1984, 1989, 2001, 2016, 2029,
+			]],
+			[ "ilscore", [
+				987, 1010, 1029, 1029, 1035, 1039, 1048, 1073, 1092, 1101, 1109, 1123, 1132, 1161, 1186, 1202, 1216, 1231, 1251, 506, 520, 522, 524, 536, 544, 551, 552, 554, 564, 565, 571, 572, 575, 577, 581, 584, 588, 592, 593, 593,
+				603, 614, 618, 620, 637, 638, 643, 647, 654, 660, 674, 686, 690, 701, 707, 712, 713, 725, 730, 732, 734, 735, 739, 740, 742, 747, 750, 758, 765, 768, 770, 773, 784, 790, 797, 804, 811, 819, 821, 832,
+				837, 844,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

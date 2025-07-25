@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>miumiria&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="miumiria&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/miumiria.html" property="og:url">
+	<meta content="Rank by game in top 10: 2038&#10;Rank by game in top 20: 3612&#10;Rank by ilScore: 633&#10;&#10;6 games&#10;&bull; Dragon Tax | MJ 151: Dragons | rank: 50 | ilscore: 53&#10;&bull; Cat Garden | MJ 101: Limit | rank: 50 | ilscore: 77&#10;&bull; The Viking&#39;s Passage | MJ 35: Vikings | rank: 7 | ilscore: 15&#10;&bull; The underwater Treasure | MJ 33: Underwater | rank: 35 | ilscore: 24&#10;&bull; N.O.U.K.Y | MJ 30: GBStudio | rank: 29 | ilscore: 27&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>miumiria</h1>
+		<a href="https://miumiria.itch.io">miumiria.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2038</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3612</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 633</p>
+		<p>Total ilScore: 218</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://miumiria.itch.io/dragon-tax">Dragon Tax</a></td>
+				<td><span class="early">4h 45m early</span></td>
+				<td>
+					<a href="../jammer/ledracarnos.html">Ledracarnos</a>,
+					<a href="../jammer/ray-yami.html">Ray-Yami</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>50</td>
+				<td>11</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://miumiria.itch.io/cat-garden">Cat Garden</a></td>
+				<td><span class="early">7h 6m early</span></td>
+				<td>
+					<a href="../jammer/ray-yami.html">Ray-Yami</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>50</td>
+				<td>44</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://miumiria.itch.io/the-vikings-passage">The Viking&#39;s Passage</a></td>
+				<td><span class="early">8m 43s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-35-vikings">MJ 35: Vikings</a></td>
+				<td>11</td>
+				<td>7</td>
+				<td>8</td>
+				<td>15</td>
+			</tr>
+			<tr>
+				<td><a href="https://miumiria.itch.io/the-underwater-treasure">The underwater Treasure</a></td>
+				<td><span class="early">7m 27s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-33-underwater">MJ 33: Underwater</a></td>
+				<td>46</td>
+				<td>35</td>
+				<td>10</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://miumiria.itch.io/nouky">N.O.U.K.Y</a></td>
+				<td><span class="early">2h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-30-gameboy">MJ 30: GBStudio</a></td>
+				<td>34</td>
+				<td>29</td>
+				<td>8</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td><a href="https://miumiria.itch.io/i-dont-want-to-be-a-ninja">I don&#39;t want to be a ninja!</a></td>
+				<td><span class="early">3h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>21</td>
+				<td>13</td>
+				<td>22</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				270, 279, 285, 296, 304, 315, 325, 332, 342, 350, 360, 366, 375, 382, 389, 400, 419, 433, 442, 450, 461, 471, 482, 492, 503, 514, 519, 532, 550, 563, 579, 591, 598, 610, 618, 626, 639, 652, 662, 670,
+				679, 692, 701, 711, 720, 729, 738, 750, 757, 774, 784, 795, 805, 817, 829, 841, 849, 860, 870, 887, 895, 904, 921, 934, 944, 958, 966, 972, 983, 995, 1002, 1012, 1019, 1028, 1035, 1044, 1061, 1068, 1077, 1087,
+				1098, 1112, 1125, 1131, 1146, 1155, 1163, 1172, 1189, 1204, 1216, 1229, 1237, 1246, 1264, 1273, 1284, 1297, 1310, 1320, 1330, 1338, 1348, 1363, 1373, 1381, 1389, 1399, 1413, 1419, 1430, 1446, 1454, 1466, 1482, 1495, 1505, 1519, 1531, 1546,
+				1554, 1558, 1566, 1587, 1604, 1618, 1626, 1635, 1646, 1661, 1671, 1683, 1699, 1712, 1719, 1725, 1733, 1745, 1750, 1759, 1773, 1784, 1792, 1810, 1821, 1839, 1847, 1856, 1872, 1883, 1895, 1910, 1928, 1937, 1945, 1960, 1971, 1984, 1995, 2012,
+				2025, 2037,
+			]],
+			[ "20", [
+				397, 414, 418, 431, 444, 460, 474, 488, 497, 510, 529, 539, 555, 571, 580, 602, 632, 656, 675, 691, 710, 726, 749, 775, 800, 809, 819, 844, 873, 900, 929, 941, 956, 979, 994, 1011, 1037, 1060, 1079, 1093,
+				1112, 1137, 1157, 1175, 1192, 1216, 1237, 1255, 1268, 1290, 1307, 1329, 1348, 1372, 1392, 1417, 1436, 1462, 1478, 1501, 1517, 1536, 1558, 1582, 1597, 1621, 1636, 1654, 1679, 1705, 1717, 1737, 1758, 1770, 1786, 1805, 1825, 1840, 1859, 1877,
+				1899, 1921, 1944, 1950, 1974, 1991, 2012, 2030, 2050, 2079, 2102, 2124, 2140, 2158, 2185, 2201, 2221, 2236, 2258, 2272, 2298, 2318, 2337, 2362, 2383, 2402, 2425, 2439, 2467, 2475, 2495, 2520, 2538, 2560, 2581, 2605, 2628, 2648, 2664, 2686,
+				2704, 2716, 2734, 2763, 2795, 2817, 2837, 2858, 2878, 2899, 2914, 2931, 2954, 2994, 3008, 3023, 3036, 3061, 3075, 3090, 3115, 3139, 3161, 3184, 3201, 3232, 3252, 3276, 3305, 3329, 3355, 3379, 3409, 3427, 3446, 3473, 3492, 3518, 3543, 3575,
+				3594, 3611,
+			]],
+			[ "ilscore", [
+				372, 104, 105, 114, 60, 63, 37, 38, 38, 38, 40, 43, 43, 44, 44, 45, 47, 58, 62, 68, 68, 85, 96, 97, 107, 119, 129, 142, 148, 166, 174, 174, 178, 182, 185, 229, 266, 267, 273, 284,
+				294, 304, 312, 327, 339, 354, 368, 447, 459, 471, 497, 516, 526, 610, 641, 660, 669, 688, 734, 788, 802, 839, 852, 873, 887, 894, 915, 936, 946, 960, 972, 979, 994, 1019, 1147, 1207, 377, 378, 381, 386,
+				392, 422, 431, 455, 476, 496, 536, 549, 561, 561, 565, 568, 571, 587, 599, 604, 611, 617, 618, 633, 652, 662, 668, 685, 695, 703, 722, 727, 734, 748, 760, 771, 772, 775, 790, 791, 792, 795, 795, 800,
+				804, 807, 812, 815, 817, 818, 825, 835, 453, 458, 470, 471, 479, 483, 488, 492, 501, 512, 515, 527, 532, 536, 539, 550, 554, 557, 558, 558, 559, 561, 563, 566, 569, 575, 578, 578, 582, 585, 590, 593,
+				595, 600, 607, 612, 615, 620, 625, 632,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Voycawojka&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Voycawojka&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/voycawojka.html" property="og:url">
+	<meta content="Rank by game in top 5: 105&#10;Rank by game in top 10: 49&#10;Rank by game in top 20: 93&#10;Rank by ilScore: 363&#10;&#10;4 games&#10;&bull; Sinking Worm | MJ 180: Refresh | rank: 6 | ilscore: 69&#10;&bull; Equilarium | MJ 97: Simulation | rank: 5 | ilscore: 80&#10;&bull; Snow Phantom | MJ 72: Adventure | rank: 6 | ilscore: 65&#10;&bull; No, I&#39;m Invisible! | MJ 55: Stealth | rank: 3 | ilscore: 71&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Voycawojka</h1>
+		<a href="https://voycawojka.itch.io">voycawojka.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 105</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 49</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>5</span>
+			<span>6</span>
+			<span>6</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 93</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>5</span>
+			<span>6</span>
+			<span>6</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 363</p>
+		<p>Total ilScore: 286</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://voycawojka.itch.io/sinking-worm">Sinking Worm</a></td>
+				<td><span class="early">6h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-180-refresh">MJ 180: Refresh</a></td>
+				<td>83</td>
+				<td>6</td>
+				<td>35</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://voycawojka.itch.io/equilarium">Equilarium</a></td>
+				<td><span class="early">6h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>5</td>
+				<td>36</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://voycawojka.itch.io/snow-phantom">Snow Phantom</a></td>
+				<td><span class="early">6h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>6</td>
+				<td>13</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://voycawojka.itch.io/no-im-invisible">No, I&#39;m Invisible!</a></td>
+				<td><span class="early">4h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>3</td>
+				<td>16</td>
+				<td>71</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				83, 83, 89, 94, 94, 96, 101, 101, 108, 111, 114, 117, 123, 124, 125, 129, 134, 134, 138, 138, 141, 145, 148, 153, 154, 159, 167, 170, 171, 172, 175, 178, 178, 181, 184, 184, 190, 192, 195, 196,
+				199, 199, 203, 204, 204, 40, 40, 40, 40, 44, 44, 44, 46, 46, 47, 47, 48, 49, 49, 49, 50, 51, 51, 51, 53, 54, 54, 54, 54, 54, 54, 55, 56, 56, 58, 58, 60, 60, 62, 62,
+				63, 63, 64, 65, 66, 66, 66, 67, 67, 67, 67, 67, 69, 70, 70, 70, 70, 70, 70, 70, 70, 71, 72, 73, 73, 73, 73, 74, 75, 78, 80, 81, 81, 85, 87, 88, 88, 88, 90, 91,
+				91, 91, 91, 91, 92, 92, 92, 93, 95, 95, 95, 95, 96, 96, 97, 98, 98, 98, 104, 104, 104,
+			]],
+			[ "10", [
+				126, 126, 135, 141, 141, 147, 151, 151, 159, 162, 169, 172, 178, 179, 181, 185, 191, 191, 196, 53, 54, 55, 57, 58, 59, 59, 59, 65, 66, 68, 68, 70, 71, 71, 72, 75, 75, 77, 77, 78,
+				79, 79, 83, 85, 85, 31, 33, 36, 37, 37, 37, 37, 38, 38, 39, 39, 41, 43, 43, 43, 44, 44, 44, 44, 45, 47, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 49, 50,
+				50, 50, 51, 53, 54, 54, 56, 56, 57, 57, 58, 58, 59, 59, 59, 59, 59, 59, 59, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 65, 65, 65, 65, 66, 68, 68, 69, 70, 70, 72,
+				72, 73, 74, 75, 75, 76, 77, 78, 79, 79, 44, 45, 45, 45, 45, 45, 45, 45, 46, 48, 48,
+			]],
+			[ "20", [
+				191, 193, 203, 209, 216, 224, 227, 229, 238, 243, 253, 259, 266, 272, 276, 282, 288, 289, 295, 88, 91, 93, 96, 97, 98, 99, 100, 109, 111, 112, 114, 117, 117, 117, 120, 123, 123, 125, 126, 127,
+				129, 131, 136, 142, 143, 62, 64, 65, 66, 67, 68, 71, 72, 72, 75, 75, 78, 79, 79, 79, 81, 81, 81, 81, 84, 85, 87, 87, 88, 89, 89, 89, 89, 91, 91, 93, 94, 95, 96, 101,
+				101, 101, 101, 103, 104, 105, 106, 108, 110, 112, 113, 114, 114, 116, 116, 116, 116, 116, 116, 117, 117, 119, 119, 120, 123, 123, 123, 123, 125, 128, 130, 131, 132, 134, 135, 135, 137, 138, 138, 141,
+				142, 144, 145, 147, 147, 147, 148, 149, 150, 152, 84, 86, 86, 86, 89, 89, 89, 89, 90, 92, 92,
+			]],
+			[ "ilscore", [
+				269, 298, 314, 321, 327, 330, 334, 340, 434, 500, 503, 511, 547, 559, 568, 576, 608, 618, 645, 153, 174, 181, 189, 203, 214, 218, 248, 275, 291, 298, 314, 331, 352, 365, 379, 390, 395, 399, 405, 426,
+				436, 439, 450, 457, 466, 157, 159, 172, 191, 200, 201, 205, 209, 213, 225, 230, 246, 255, 260, 282, 288, 292, 292, 292, 295, 298, 308, 313, 319, 320, 324, 325, 333, 342, 346, 352, 359, 369, 376, 388,
+				389, 391, 401, 407, 412, 412, 413, 424, 424, 425, 425, 427, 427, 428, 431, 434, 440, 440, 441, 449, 455, 461, 466, 478, 479, 486, 490, 495, 499, 508, 519, 523, 535, 541, 545, 547, 558, 563, 566, 567,
+				567, 568, 570, 572, 575, 578, 584, 587, 588, 591, 333, 337, 341, 346, 346, 348, 351, 351, 353, 357, 362,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

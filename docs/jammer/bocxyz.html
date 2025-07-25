@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>bocxyz&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="bocxyz&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bocxyz.html" property="og:url">
+	<meta content="Rank by game in top 20: 1394&#10;Rank by ilScore: 2786&#10;&#10;1 games&#10;&bull; trip-&gt;power | MJ 73: Power | rank: 14 | ilscore: 99&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>bocxyz</h1>
+		<a href="https://bocxyz.itch.io">bocxyz.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1394</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2786</p>
+		<p>Total ilScore: 99</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bocxyz.itch.io/trip-power">trip-&gt;power</a></td>
+				<td><span class="early">4m 49s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>14</td>
+				<td>14</td>
+				<td>99</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				407, 412, 418, 428, 430, 436, 455, 465, 472, 475, 486, 493, 498, 504, 517, 523, 530, 542, 547, 555, 562, 569, 572, 579, 585, 592, 595, 601, 630, 638, 642, 651, 660, 667, 682, 689, 698, 711, 721, 744,
+				759, 771, 772, 773, 781, 791, 797, 816, 823, 832, 848, 852, 861, 883, 894, 906, 921, 929, 938, 942, 945, 946, 960, 969, 972, 974, 978, 987, 989, 994, 1003, 1006, 1018, 1028, 1031, 1038, 1043, 1050, 1055, 1064,
+				1071, 1078, 1090, 1105, 1109, 1120, 1123, 1132, 1138, 1153, 1163, 1167, 1188, 1191, 1197, 1208, 1220, 1225, 1235, 1237, 1240, 1244, 1249, 1253, 1266, 1276, 1281, 1286, 1294, 1301, 1311, 1315, 1321, 1327, 1340, 1349, 1365, 1367, 1372, 1384,
+				1393,
+			]],
+			[ "ilscore", [
+				352, 363, 374, 395, 416, 427, 477, 505, 524, 533, 552, 572, 607, 624, 648, 662, 680, 691, 697, 719, 736, 747, 760, 772, 776, 790, 810, 900, 946, 962, 971, 996, 1016, 1038, 1172, 1188, 1241, 1269, 1329, 1538,
+				1554, 1569, 1569, 1574, 1580, 1588, 1626, 1644, 1658, 1672, 1689, 1696, 1746, 1771, 1789, 1808, 1825, 1848, 1857, 1919, 1931, 1938, 1954, 1978, 1993, 1993, 1998, 2017, 2019, 2022, 2029, 2032, 2035, 2044, 2052, 2059, 2070, 2076, 2087, 2102,
+				2125, 2145, 2154, 2225, 2251, 2271, 2284, 2294, 2303, 2319, 2339, 2346, 2367, 2371, 2388, 2390, 2436, 2442, 2450, 2457, 2460, 2468, 2474, 2483, 2501, 2533, 2547, 2559, 2575, 2590, 2601, 2607, 2618, 2644, 2670, 2693, 2714, 2727, 2748, 2767,
+				2785,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

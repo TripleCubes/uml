@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>KoaRizumu&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="KoaRizumu&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/koarizumu.html" property="og:url">
+	<meta content="Rank by ilScore: 9622&#10;&#10;1 games&#10;&bull; The Birds And The Bees | MJ 99: Birds | rank: 220 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>KoaRizumu</h1>
+		<a href="https://koarizumu.itch.io">koarizumu.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9622</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://koarizumu.itch.io/the-birds-and-the-bees">The Birds And The Bees</a></td>
+				<td><span class="early">1d 20h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>220</td>
+				<td>3</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				3698, 3808, 3898, 3905, 4012, 4073, 4173, 4413, 4463, 4642, 4721, 4870, 5216, 5283, 5356, 5356, 5380, 5385, 5397, 5514, 5620, 5680, 5699, 5788, 5797, 5941, 6012, 6045, 6081, 6159, 6250, 6287, 6457, 6475, 6486, 6573, 6645, 6677, 6683, 6684,
+				6814, 6815, 6820, 6827, 6835, 6849, 6893, 6928, 6991, 7010, 7020, 7038, 7148, 7268, 7333, 7361, 7523, 7559, 7632, 7685, 7770, 7786, 7869, 7938, 7955, 8080, 8096, 8142, 8151, 8332, 8354, 8354, 8365, 8367, 8389, 8396, 8432, 8518, 8613, 8658,
+				8689, 8749, 8809, 8867, 8946, 8990, 9061, 9125, 9199, 9337, 9384, 9492, 9562, 9621,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

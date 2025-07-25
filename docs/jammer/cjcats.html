@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CJCats&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CJCats&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cjcats.html" property="og:url">
+	<meta content="Rank by ilScore: 2175&#10;&#10;2 games&#10;&bull; Frog Time! | MJ 79: Frogs | rank: 126 | ilscore: 63&#10;&bull; Drop Vision | MJ 75: Wisdom | rank: 57 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CJCats</h1>
+		<a href="https://cjcats.itch.io">cjcats.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2175</p>
+		<p>Total ilScore: 115</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cjcats.itch.io/frog-time">Frog Time!</a></td>
+				<td><span class="early">43m 59s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>126</td>
+				<td>10</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://cjcats.itch.io/drop-vision">Drop Vision</a></td>
+				<td><span class="early">2h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>57</td>
+				<td>9</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1493, 1569, 1667, 1692, 356, 385, 402, 409, 427, 446, 478, 491, 508, 522, 532, 542, 548, 571, 587, 593, 605, 614, 620, 630, 647, 692, 726, 742, 748, 772, 789, 810, 873, 884, 920, 947, 982, 1113, 1135, 1154,
+				1154, 1160, 1165, 1175, 1201, 1220, 1230, 1242, 1258, 1265, 1299, 1325, 1344, 1358, 1378, 1400, 1406, 1443, 1455, 1466, 1485, 1507, 1518, 1524, 1527, 1545, 1545, 1546, 1553, 1555, 1558, 1568, 1576, 1583, 1589, 1591, 1599, 1611, 1627, 1645,
+				1651, 1682, 1706, 1722, 1734, 1747, 1754, 1770, 1792, 1801, 1819, 1823, 1836, 1841, 1862, 1866, 1874, 1876, 1877, 1885, 1886, 1889, 1904, 1934, 1952, 1964, 1976, 1994, 2008, 2015, 2026, 2049, 2070, 2086, 2105, 2119, 2140, 2159, 2174,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

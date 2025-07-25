@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Blockhead Maniac&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Blockhead Maniac&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blockhead-maniac.html" property="og:url">
+	<meta content="Rank by game in top 10: 1887&#10;Rank by game in top 20: 140&#10;Rank by ilScore: 13&#10;&#10;24 games&#10;&bull; Baker&#39;s Madness | MJ 163: Dessert | rank: 12 | ilscore: 49&#10;&bull; Under Budget | MJ 158: Shopping | rank: 32 | ilscore: 37&#10;&bull; Fire Wall | MJ 148: Connections | rank: 14 | ilscore: 51&#10;&bull; One Shot Sniper | MJ 142: Fortune | rank: 10 | ilscore: 44&#10;&bull; Crank Rush | MJ 138: Rewind | rank: 14 | ilscore: 21&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Blockhead Maniac</h1>
+		<a href="https://blockhead-maniac.itch.io">blockhead-maniac.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1887</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 140</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>12</span>
+			<span>14</span>
+			<span>14</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 13</p>
+		<p>Total ilScore: 1179</p>
+
+		<h3 id="games_header">24 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/bakers-madness">Baker&#39;s Madness</a></td>
+				<td><span class="late">19h 24m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-163-dessert">MJ 163: Dessert</a></td>
+				<td>51</td>
+				<td>12</td>
+				<td>9</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/under-budget">Under Budget</a></td>
+				<td><span class="early">12m 55s early</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-158-shopping">MJ 158: Shopping</a></td>
+				<td>52</td>
+				<td>32</td>
+				<td>7</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/fire-wall">Fire Wall</a></td>
+				<td><span class="late">17h 23m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-148-connections">MJ 148: Connections</a></td>
+				<td>52</td>
+				<td>14</td>
+				<td>15</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/one-shot-sniper">One Shot Sniper</a></td>
+				<td><span class="late">1d 21h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>10</td>
+				<td>11</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/minijam138-rewind">Crank Rush</a></td>
+				<td><span class="early">1h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>14</td>
+				<td>5</td>
+				<td>21</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/mini-jam-133">Office Merge</a></td>
+				<td><span class="late">1d 17h late</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>77</td>
+				<td>6</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/lost-dog">Lost Dog</a></td>
+				<td><span class="late">3d 16h late</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>,
+					<a href="../jammer/soninho-dev.html">Soninho dev</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>78</td>
+				<td>1</td>
+				<td>13</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/gate-keeper">The Gate Keeper</a></td>
+				<td><span class="early">1h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>96</td>
+				<td>35</td>
+				<td>10</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/black-paint">Black Paint</a></td>
+				<td><span class="late">2d 21h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>37</td>
+				<td>2</td>
+				<td>21</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/kung-fu-hives">Kung fu Hives</a></td>
+				<td><span class="early">2h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>49</td>
+				<td>2</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/nightmare-spiral">Nightmare Spiral</a></td>
+				<td><span class="late">2d 9h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>73</td>
+				<td>3</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/time-car">Need for Time</a></td>
+				<td><span class="late">20h 48m late</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>63</td>
+				<td>7</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/welcome-to-drugland">Welcome to Drugland</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>178</td>
+				<td>14</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/savage-hunt">Savage Hunt</a></td>
+				<td><span class="late">1d 18h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>107</td>
+				<td>7</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/submarine-game">Submarine game</a></td>
+				<td><span class="late">1d 14h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>133</td>
+				<td>2</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/crab-rave-the-game">Crab Rave - The Game</a></td>
+				<td><span class="late">1d 15h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>45</td>
+				<td>13</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/mini-jam-107-music">What comes up, Must come down</a></td>
+				<td><span class="late">1d 10h late</span></td>
+				<td>
+					<a href="../jammer/frodotimbaku.html">frodoTimBaku</a>,
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>88</td>
+				<td>6</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/newgame">Hungry Frog</a></td>
+				<td><span class="early">2h 31m early</span></td>
+				<td>
+					<a href="../jammer/soninho-dev.html">Soninho dev</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>152</td>
+				<td>10</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/onlyup">OnlyUp</a></td>
+				<td><span class="early">3h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>82</td>
+				<td>14</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/barrelfall">BarrelFall</a></td>
+				<td><span class="early">3h 39m early</span></td>
+				<td>
+					<a href="../jammer/buyana114.html">Buyana114</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>53</td>
+				<td>10</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/dont-talk-to-strangers">Don&#39;t talk To Strangers</a></td>
+				<td><span class="early">34m 11s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>146</td>
+				<td>3</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td><a href="https://cdplaya.itch.io/mistwalkers">Mistwalkers</a></td>
+				<td><span class="early">2h 49m early</span></td>
+				<td>
+					<a href="../jammer/cdplaya.html">CDplaya</a>,
+					<a href="../jammer/zomare.html">Zomare</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>37</td>
+				<td>5</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/run-escape">Run Escape</a></td>
+				<td><span class="early">1h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>45</td>
+				<td>18</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://blockhead-maniac.itch.io/deliverly-chaos">Deliverly Chaos - Mini Jam 100</a></td>
+				<td><span class="early">3h 22m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>66</td>
+				<td>12</td>
+				<td>82</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1327, 1343, 1356, 1367, 1381, 1393, 1408, 1416, 1421, 1429, 1450, 1467, 1481, 1489, 1498, 1509, 1524, 1534, 1546, 1562, 1575, 1582, 1588, 1597, 1609, 1614, 1615, 1629, 1640, 1648, 1657, 1668, 1686, 1694, 1704, 1720, 1731, 1743, 1758, 1776,
+				1785, 1794, 1809, 1820, 1833, 1844, 1861, 1874, 1886,
+			]],
+			[ "20", [
+				2508, 2528, 2553, 2571, 516, 522, 525, 530, 534, 544, 184, 184, 185, 187, 187, 188, 192, 192, 193, 194, 196, 198, 202, 204, 204, 111, 114, 114, 116, 117, 117, 119, 120, 122, 123, 125, 125, 125, 127, 127,
+				129, 131, 133, 136, 136, 136, 136, 136, 137, 137, 137, 139, 139,
+			]],
+			[ "ilscore", [
+				1491, 398, 288, 237, 144, 97, 65, 57, 32, 29, 22, 19, 17, 15, 15, 15, 15, 15, 16, 16, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 11, 12, 12, 12, 12, 13,
+				13, 13, 13, 13, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

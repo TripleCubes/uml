@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ScoobySnacks&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ScoobySnacks&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/scbysnak.html" property="og:url">
+	<meta content="Rank by ilScore: 4302&#10;&#10;2 games&#10;&bull; Hungry Delivery | MJ 75: Wisdom | rank: 92 | ilscore: 26&#10;&bull; HyperJump | MJ+ 3: Retro | rank: 22 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ScoobySnacks</h1>
+		<a href="https://scbysnak.itch.io">scbysnak.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4302</p>
+		<p>Total ilScore: 80</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://scbysnak.itch.io/hungry-delivery">Hungry Delivery</a></td>
+				<td><span class="early">9h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>92</td>
+				<td>3</td>
+				<td>26</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://scbysnak.itch.io/hyperjump">HyperJump</a></td>
+				<td><span class="early">6h 25m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>22</td>
+				<td>10</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1047, 1104, 1121, 1182, 1207, 1359, 1397, 611, 650, 680, 691, 800, 863, 881, 889, 915, 974, 1052, 1065, 1121, 1135, 1165, 1178, 1186, 1215, 1244, 1254, 1268, 1279, 1286, 1306, 1333, 1493, 1572, 1605, 1615, 1656, 1680, 1711, 1884,
+				1897, 2007, 2052, 2161, 2419, 2434, 2452, 2453, 2456, 2465, 2469, 2550, 2590, 2606, 2617, 2646, 2650, 2756, 2794, 2805, 2824, 2854, 2892, 2906, 3021, 3033, 3036, 3066, 3095, 3109, 3115, 3117, 3167, 3171, 3176, 3184, 3188, 3197, 3206, 3215,
+				3223, 3234, 3245, 3254, 3301, 3336, 3355, 3361, 3481, 3497, 3515, 3529, 3557, 3567, 3598, 3625, 3636, 3692, 3702, 3718, 3724, 3831, 3838, 3842, 3846, 3850, 3858, 3867, 3880, 3905, 3960, 3970, 3983, 4000, 4015, 4027, 4045, 4058, 4087, 4123,
+				4143, 4221, 4235, 4267, 4288, 4301,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

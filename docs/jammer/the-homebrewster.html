@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Homebrewster&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Homebrewster&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/the-homebrewster.html" property="og:url">
+	<meta content="Rank by ilScore: 2442&#10;&#10;2 games&#10;&bull; Weighed Down | MJ 75: Wisdom | rank: 41 | ilscore: 61&#10;&bull; Senior UI Designer Hell | MJ 69: Hell | rank: 67 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Homebrewster</h1>
+		<a href="https://the-homebrewster.itch.io">the-homebrewster.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2442</p>
+		<p>Total ilScore: 107</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://the-homebrewster.itch.io/weighed-down">Weighed Down</a></td>
+				<td><span class="early">2d 8h early</span></td>
+				<td>
+					<a href="../jammer/coffeekatevisual.html">CoffeeKateVisual</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>41</td>
+				<td>6</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://the-homebrewster.itch.io/senior-ui-designer-hell">Senior UI Designer Hell</a></td>
+				<td><span class="early">6h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>67</td>
+				<td>6</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1394, 1428, 1496, 1527, 1695, 1740, 315, 338, 358, 367, 402, 432, 449, 458, 476, 493, 528, 543, 565, 580, 591, 602, 606, 629, 646, 654, 666, 676, 681, 695, 713, 783, 823, 838, 844, 869, 890, 910, 1004, 1018,
+				1055, 1084, 1128, 1308, 1327, 1343, 1343, 1348, 1354, 1363, 1392, 1410, 1424, 1439, 1454, 1461, 1500, 1524, 1542, 1556, 1573, 1597, 1606, 1646, 1659, 1668, 1687, 1713, 1728, 1728, 1733, 1752, 1752, 1754, 1761, 1764, 1769, 1779, 1787, 1793,
+				1801, 1804, 1816, 1827, 1846, 1865, 1874, 1917, 1944, 1963, 1974, 1984, 1994, 2011, 2033, 2040, 2057, 2060, 2076, 2079, 2108, 2114, 2122, 2128, 2129, 2136, 2138, 2144, 2160, 2191, 2207, 2218, 2232, 2248, 2259, 2266, 2278, 2302, 2324, 2346,
+				2367, 2382, 2404, 2424, 2441,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

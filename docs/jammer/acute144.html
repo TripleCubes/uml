@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Acute&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Acute&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/acute144.html" property="og:url">
+	<meta content="Rank by game in top 10: 817&#10;Rank by game in top 20: 247&#10;Rank by ilScore: 213&#10;&#10;5 games&#10;&bull; Sweet Sails | MJ 163: Dessert | rank: 20 | ilscore: 46&#10;&bull; Cannon Blast | MJ 147: Cinema | rank: 19 | ilscore: 43&#10;&bull; Douse the Bomb! | MJ 130: Lunar | rank: 22 | ilscore: 101&#10;&bull; Blood Bucket | MJ 118: Vampires | rank: 6 | ilscore: 93&#10;&bull; Rotating Robert | MJ 101: Limit | rank: 30 | ilscore: 84&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Acute</h1>
+		<a href="https://acute144.itch.io">acute144.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 817</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 247</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>19</span>
+			<span>20</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 213</p>
+		<p>Total ilScore: 366</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://acute144.itch.io/sweet-sails">Sweet Sails</a></td>
+				<td><span class="early">1h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-163-dessert">MJ 163: Dessert</a></td>
+				<td>51</td>
+				<td>20</td>
+				<td>6</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://acute144.itch.io/cannon-blast">Cannon Blast</a></td>
+				<td><span class="early">4h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-147-cinema">MJ 147: Cinema</a></td>
+				<td>40</td>
+				<td>19</td>
+				<td>7</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://acute144.itch.io/douse-the-bomb">Douse the Bomb!</a></td>
+				<td><span class="early">6h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>22</td>
+				<td>13</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://acute144.itch.io/blood-bucket">Blood Bucket</a></td>
+				<td><span class="early">8h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>6</td>
+				<td>6</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://acute144.itch.io/rotating-robert">Rotating Robert</a></td>
+				<td><span class="early">11h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>30</td>
+				<td>12</td>
+				<td>84</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				479, 479, 481, 489, 491, 496, 518, 521, 528, 542, 545, 553, 554, 556, 559, 565, 571, 573, 574, 576, 580, 584, 588, 594, 596, 603, 607, 608, 611, 611, 613, 616, 622, 626, 631, 639, 649, 654, 657, 660,
+				665, 666, 672, 676, 680, 694, 696, 701, 708, 721, 724, 727, 727, 728, 730, 732, 733, 744, 750, 753, 755, 760, 762, 762, 768, 772, 777, 781, 794, 803, 803, 807, 814, 816,
+			]],
+			[ "20", [
+				680, 682, 688, 699, 703, 710, 732, 740, 753, 767, 771, 780, 782, 784, 786, 795, 802, 805, 809, 813, 816, 818, 823, 832, 836, 846, 854, 857, 862, 867, 395, 397, 398, 400, 403, 406, 409, 416, 422, 423,
+				427, 428, 434, 443, 447, 448, 194, 197, 197, 200, 204, 205, 206, 208, 210, 210, 214, 215, 215, 218, 219, 220, 221, 225, 227, 229, 231, 235, 237, 239, 239, 243, 243, 246,
+			]],
+			[ "ilscore", [
+				1401, 1411, 1452, 1472, 1499, 1668, 1682, 1778, 1819, 1916, 2171, 2185, 2197, 2198, 2201, 2209, 2212, 2291, 496, 505, 510, 515, 516, 532, 547, 556, 563, 583, 590, 597, 222, 225, 225, 230, 233, 235, 236, 236, 241, 242,
+				242, 243, 244, 245, 248, 248, 248, 250, 190, 191, 194, 197, 201, 201, 203, 205, 205, 208, 215, 217, 219, 222, 223, 227, 169, 172, 172, 175, 177, 177, 177, 177, 177, 177, 178, 182, 184, 189, 189, 189,
+				191, 191, 195, 197, 199, 203, 204, 208, 209, 210, 211, 212,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

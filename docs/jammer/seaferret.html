@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SeaFerret&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SeaFerret&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/seaferret.html" property="og:url">
+	<meta content="Rank by game in top 5: 165&#10;Rank by game in top 10: 308&#10;Rank by game in top 20: 123&#10;Rank by ilScore: 71&#10;&#10;10 games&#10;&bull; SPRINT. | MJ 169: Future | rank: 11 | ilscore: 44&#10;&bull; Crystal CLEAR | MJ 138: Rewind | rank: 2 | ilscore: 32&#10;&bull; Devil Blanc | MJ 120: Hell | rank: 19 | ilscore: 48&#10;&bull; Angel Noir | MJ 119: Heaven | rank: 38 | ilscore: 53&#10;&bull; Ghost With a Sick Nasty Shotgun | MJ 117: Ghosts | rank: 29 | ilscore: 93&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SeaFerret</h1>
+		<a href="https://seaferret.itch.io">seaferret.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 165</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 308</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 123</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>11</span>
+			<span>19</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 71</p>
+		<p>Total ilScore: 583</p>
+
+		<h3 id="games_header">10 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://seaferret.itch.io/sprint">SPRINT.</a></td>
+				<td><span class="early">44m 11s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-169-future">MJ 169: Future</a></td>
+				<td>43</td>
+				<td>11</td>
+				<td>28</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/crystal-clear">Crystal CLEAR</a></td>
+				<td><span class="early">1m 4s early</span></td>
+				<td>
+					<a href="../jammer/hivye.html">vye</a>,
+					<a href="../jammer/retrodead.html">RETRODEAD</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>2</td>
+				<td>6</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/devil-blanc">Devil Blanc</a></td>
+				<td><span class="late">12h 3m late</span></td>
+				<td>
+					<a href="../jammer/stresspuddle.html">Stress Puddle</a>,
+					<a href="../jammer/retrodead.html">RETRODEAD</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-120-hell">MJ 120: Hell</a></td>
+				<td>54</td>
+				<td>19</td>
+				<td>14</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/angel-noir">Angel Noir</a></td>
+				<td><span class="early">39m 41s early</span></td>
+				<td>
+					<a href="../jammer/stresspuddle.html">Stress Puddle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-119-heaven">MJ 119: Heaven</a></td>
+				<td>96</td>
+				<td>38</td>
+				<td>15</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/ghost-with-a-sick-nasty-shotgun">Ghost With a Sick Nasty Shotgun</a></td>
+				<td><span class="early">2h 5m early</span></td>
+				<td>
+					<a href="../jammer/retrodead.html">RETRODEAD</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-117-ghosts">MJ 117: Ghosts</a></td>
+				<td>186</td>
+				<td>29</td>
+				<td>24</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/the-ceaseless-hunger">The Ceaseless Hunger</a></td>
+				<td><span class="early">1h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>47</td>
+				<td>15</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/chromatoad">Chroma-Toad</a></td>
+				<td><span class="early">3h 6m early</span></td>
+				<td>
+					<a href="../jammer/beached.html">Beached</a>,
+					<a href="../jammer/itsastr0.html">ItsAstr0</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-90-illusion">MJ 90: Illusion</a></td>
+				<td>69</td>
+				<td>2</td>
+				<td>24</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/slot-car-spammin">Slot Car Spammin&#39;</a></td>
+				<td><span class="early">3h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-86-sports">MJ 86: Sports</a></td>
+				<td>104</td>
+				<td>69</td>
+				<td>5</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/cave-coin-chaos">Cave Coin Chaos</a></td>
+				<td><span class="early">1d 1h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>82</td>
+				<td>9</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://seaferret.itch.io/wall-breaker">I am breaking down your walls</a></td>
+				<td><span class="early">5h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>48</td>
+				<td>5</td>
+				<td>37</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				333, 336, 342, 348, 351, 360, 360, 367, 371, 377, 388, 391, 393, 398, 401, 406, 413, 422, 426, 429, 433, 439, 448, 452, 453, 459, 464, 472, 476, 484, 489, 496, 504, 505, 511, 521, 525, 534, 537, 544,
+				549, 552, 554, 554, 559, 565, 569, 569, 570, 579, 97, 100, 102, 104, 108, 109, 109, 109, 109, 111, 111, 111, 111, 113, 114, 115, 115, 115, 115, 116, 117, 120, 122, 124, 124, 128, 133, 134, 134, 134,
+				137, 138, 139, 141, 143, 143, 144, 144, 144, 145, 147, 147, 148, 148, 150, 150, 154, 155, 158, 158, 164, 164, 164,
+			]],
+			[ "10", [
+				474, 478, 484, 490, 493, 504, 504, 513, 519, 530, 545, 552, 555, 565, 574, 582, 591, 601, 608, 617, 627, 639, 653, 664, 665, 670, 675, 683, 691, 705, 710, 718, 731, 734, 744, 762, 769, 779, 792, 800,
+				805, 811, 814, 815, 826, 837, 840, 840, 841, 853, 201, 204, 208, 209, 212, 213, 213, 214, 214, 216, 216, 217, 220, 223, 224, 225, 229, 231, 232, 233, 236, 237, 240, 245, 246, 252, 256, 258, 260, 260,
+				264, 266, 266, 268, 270, 270, 271, 273, 275, 276, 279, 279, 279, 281, 284, 284, 287, 294, 298, 298, 301, 304, 307,
+			]],
+			[ "20", [
+				630, 635, 642, 649, 652, 660, 666, 674, 679, 691, 720, 731, 737, 754, 765, 773, 792, 800, 811, 822, 836, 859, 875, 887, 888, 893, 902, 910, 918, 938, 945, 337, 341, 343, 347, 353, 362, 371, 377, 378,
+				383, 385, 387, 390, 396, 400, 405, 406, 408, 411, 155, 155, 157, 158, 159, 160, 160, 161, 162, 163, 165, 165, 166, 168, 168, 169, 172, 172, 173, 174, 176, 178, 181, 183, 183, 187, 190, 190, 192, 196,
+				197, 104, 105, 106, 107, 109, 109, 109, 111, 111, 113, 114, 115, 119, 119, 119, 119, 119, 120, 120, 120, 122, 122,
+			]],
+			[ "ilscore", [
+				2763, 2843, 2972, 516, 270, 283, 292, 295, 301, 127, 128, 133, 133, 137, 144, 146, 150, 152, 165, 184, 193, 194, 198, 201, 205, 216, 222, 237, 245, 128, 135, 139, 142, 142, 142, 142, 142, 95, 97, 71,
+				50, 50, 50, 51, 52, 53, 54, 55, 56, 58, 61, 62, 63, 66, 68, 68, 69, 70, 72, 59, 59, 60, 61, 62, 62, 62, 64, 64, 64, 64, 65, 66, 66, 66, 67, 68, 70, 70, 70, 71,
+				71, 72, 72, 72, 72, 73, 74, 74, 75, 75, 62, 63, 63, 63, 63, 63, 63, 65, 65, 65, 65, 66, 66, 67, 68, 69, 70, 70, 70, 70, 70, 70,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

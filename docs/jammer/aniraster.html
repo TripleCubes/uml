@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Aniraster&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Aniraster&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/aniraster.html" property="og:url">
+	<meta content="Rank by game in top 5: 920&#10;Rank by game in top 10: 1389&#10;Rank by game in top 20: 61&#10;Rank by ilScore: 97&#10;&#10;8 games&#10;&bull; Maggie The Magpie | MJ 184: Birds | rank: 15 | ilscore: 73&#10;&bull; Five Dollar Flights | MJ 175: Gravity | rank: 77 | ilscore: 63&#10;&bull; Meatball Man Mania | MJ 143: Ink | rank: 17 | ilscore: 55&#10;&bull; Paint and Slash | MJ+ 6: Life | rank: 81 | ilscore: 61&#10;&bull; Space Trash Smash | MJ 133: Fusion | rank: 11 | ilscore: 85&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Aniraster</h1>
+		<a href="https://aniraster.itch.io">aniraster.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 920</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1389</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 61</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>11</span>
+			<span>15</span>
+			<span>17</span>
+			<span>17</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 97</p>
+		<p>Total ilScore: 518</p>
+
+		<h3 id="games_header">8 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://aniraster.itch.io/maggie-the-magpie">Maggie The Magpie</a></td>
+				<td><span class="early">6m 55s early</span></td>
+				<td>
+					<a href="../jammer/stethr1.html">Stethri</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-184-birds">MJ 184: Birds</a></td>
+				<td>101</td>
+				<td>15</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/five-dollar-flights">Five Dollar Flights</a></td>
+				<td><span class="early">5m 18s early</span></td>
+				<td>
+					<a href="../jammer/stethr1.html">Stethri</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>77</td>
+				<td>6</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/meatball-man-mania">Meatball Man Mania</a></td>
+				<td><span class="early">2h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-143-ink">MJ 143: Ink</a></td>
+				<td>62</td>
+				<td>17</td>
+				<td>9</td>
+				<td>55</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://aniraster.itch.io/paint-and-slash">Paint and Slash</a></td>
+				<td><span class="early">13h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>81</td>
+				<td>5</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/space-trash-smash">Space Trash Smash</a></td>
+				<td><span class="early">3h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>11</td>
+				<td>22</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/prowler">Prismatic Prowler</a></td>
+				<td><span class="early">9m 19s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>17</td>
+				<td>13</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/3-second-delivery">3 Second Delivery</a></td>
+				<td><span class="early">57m 31s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>5</td>
+				<td>26</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniraster.itch.io/unpire-bloodbank">Unpire Bloodbank</a></td>
+				<td><span class="early">1h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>124</td>
+				<td>1</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				589, 592, 599, 604, 607, 611, 614, 619, 625, 629, 630, 634, 643, 644, 647, 652, 653, 660, 666, 669, 674, 675, 683, 687, 693, 695, 700, 707, 717, 727, 731, 736, 740, 742, 746, 752, 757, 765, 767, 770,
+				776, 782, 786, 786, 787, 788, 790, 797, 803, 814, 819, 823, 829, 834, 837, 847, 857, 860, 865, 877, 885, 892, 897, 904, 914, 919,
+			]],
+			[ "10", [
+				908, 921, 931, 937, 947, 951, 954, 970, 981, 984, 985, 989, 1003, 1006, 1008, 1012, 1013, 1020, 1029, 1032, 1040, 1041, 1049, 1054, 1063, 1069, 1078, 1089, 1106, 1112, 1116, 1121, 1132, 1134, 1144, 1156, 1161, 1174, 1176, 1181,
+				1190, 1202, 1206, 1206, 1207, 1209, 1211, 1218, 1224, 1239, 1248, 1254, 1262, 1273, 1276, 1285, 1296, 1302, 1311, 1327, 1338, 1351, 1356, 1367, 1377, 1388,
+			]],
+			[ "20", [
+				1256, 290, 291, 299, 302, 303, 304, 119, 122, 122, 123, 124, 126, 128, 129, 131, 132, 133, 80, 81, 81, 81, 81, 81, 83, 84, 85, 85, 85, 86, 86, 86, 86, 87, 88, 89, 89, 91, 92, 94,
+				94, 95, 95, 95, 96, 96, 97, 98, 100, 100, 100, 101, 101, 103, 104, 106, 110, 110, 110, 58, 58, 59, 59, 60, 60, 60,
+			]],
+			[ "ilscore", [
+				6719, 6799, 6830, 6922, 6939, 7102, 7185, 7236, 1713, 555, 563, 570, 586, 588, 591, 252, 255, 258, 260, 260, 178, 178, 178, 179, 180, 180, 141, 142, 142, 142, 142, 142, 143, 145, 145, 145, 146, 146, 146, 146,
+				146, 146, 148, 150, 151, 153, 155, 159, 159, 162, 163, 163, 164, 164, 165, 165, 166, 167, 128, 129, 129, 129, 130, 130, 131, 131, 131, 91, 92, 93, 93, 94, 94, 96,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

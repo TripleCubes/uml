@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>unaFORDable&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="unaFORDable&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/unafordable.html" property="og:url">
+	<meta content="Rank by game in top 20: 3028&#10;Rank by ilScore: 53&#10;&#10;11 games&#10;&bull; Dwagon&#39;s Loot | MJ 151: Dragons | rank: 37 | ilscore: 58&#10;&bull; Project Melody: A Gaia&#39;s Melody Fan Game | MJ 133: Fusion | rank: 79 | ilscore: 59&#10;&bull; Moon Defender | MJ 130: Lunar | rank: 144 | ilscore: 65&#10;&bull; Ballooning Across | MJ 123: Web | rank: 95 | ilscore: 78&#10;&bull; A Gift in the cold | MJ 122: Intermission | rank: 30 | ilscore: 34&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>unaFORDable</h1>
+		<a href="https://unafordable.itch.io">unafordable.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3028</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 53</p>
+		<p>Total ilScore: 653</p>
+
+		<h3 id="games_header">11 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://unafordable.itch.io/dwagon">Dwagon&#39;s Loot</a></td>
+				<td><span class="early">18m 55s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>37</td>
+				<td>10</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/project-melody-a-gaias-melody-fan-game">Project Melody: A Gaia&#39;s Melody Fan Game</a></td>
+				<td><span class="early">57m 15s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>79</td>
+				<td>11</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/moon-defender">Moon Defender</a></td>
+				<td><span class="early">10h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>144</td>
+				<td>6</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/ballooning-across">Ballooning Across</a></td>
+				<td><span class="early">1h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>95</td>
+				<td>10</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/a-gift-in-the-cold">A Gift in the cold</a></td>
+				<td><span class="early">2h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>30</td>
+				<td>6</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/achromatic-gift">Achromatic Gift</a></td>
+				<td><span class="early">4h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>277</td>
+				<td>7</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/coconut-cravings">Coconut Cravings</a></td>
+				<td><span class="early">9h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>33</td>
+				<td>10</td>
+				<td>97</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/starlight-connection">Starlight Connection</a></td>
+				<td><span class="early">5h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>120</td>
+				<td>3</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/lusaka-cairo-dessert">Lusaka &amp; Cairo Dessert</a></td>
+				<td><span class="early">3h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>79</td>
+				<td>4</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/bubblegum-pop">Bubblegum POP</a></td>
+				<td><span class="early">6h 38m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>128</td>
+				<td>4</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://unafordable.itch.io/blak-mage-wite-mage">Blak Mage Wite Mage</a></td>
+				<td><span class="early">8h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>18</td>
+				<td>8</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1006, 1028, 1048, 1073, 1093, 1118, 1137, 1163, 1181, 1201, 1217, 1236, 1251, 1275, 1291, 1304, 1319, 1337, 1362, 1388, 1401, 1407, 1428, 1441, 1457, 1476, 1497, 1512, 1531, 1549, 1571, 1593, 1616, 1619, 1634, 1643, 1664, 1682, 1702, 1716,
+				1730, 1752, 1759, 1777, 1807, 1824, 1844, 1860, 1882, 1897, 1923, 1935, 1944, 1969, 1990, 2003, 2015, 2022, 2050, 2052, 2056, 2069, 2075, 2086, 2110, 2123, 2147, 2161, 2177, 2194, 2212, 2224, 2242, 2268, 2300, 2323, 2344, 2359, 2379, 2395,
+				2414, 2431, 2452, 2492, 2498, 2516, 2526, 2551, 2562, 2566, 2581, 2591, 2597, 2610, 2625, 2657, 2677, 2702, 2723, 2747, 2771, 2796, 2826, 2844, 2863, 2890, 2911, 2937, 2958, 2990, 3010, 3027,
+			]],
+			[ "ilscore", [
+				1850, 1916, 522, 556, 571, 594, 608, 621, 632, 636, 659, 676, 685, 381, 386, 393, 397, 406, 435, 468, 487, 487, 501, 511, 273, 292, 299, 137, 144, 146, 107, 110, 111, 111, 111, 111, 112, 117, 119, 120,
+				122, 123, 105, 66, 67, 67, 68, 70, 73, 75, 51, 51, 54, 44, 44, 44, 44, 44, 45, 45, 45, 46, 46, 46, 46, 46, 46, 46, 48, 48, 50, 51, 44, 44, 46, 46, 46, 46, 46, 46,
+				46, 47, 47, 47, 47, 47, 47, 48, 49, 49, 49, 49, 49, 49, 50, 50, 50, 51, 51, 51, 51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 52,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

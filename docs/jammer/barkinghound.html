@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Barking Hound&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Barking Hound&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/barkinghound.html" property="og:url">
+	<meta content="Rank by game in top 5: 923&#10;Rank by game in top 10: 1393&#10;Rank by game in top 20: 1927&#10;Rank by ilScore: 2859&#10;&#10;2 games&#10;&bull; Chasing Chimes | MJ 178: Monsters | rank: 42 | ilscore: 50&#10;&bull; Sticky Mondays | MJ 172: Security | rank: 4 | ilscore: 47&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Barking Hound</h1>
+		<a href="https://barkinghound.itch.io">barkinghound.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 923</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1393</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1927</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2859</p>
+		<p>Total ilScore: 97</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://barkinghound.itch.io/chasing-chimes">Chasing Chimes</a></td>
+				<td><span class="early">5h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-178-monsters">MJ 178: Monsters</a></td>
+				<td>77</td>
+				<td>42</td>
+				<td>12</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://barkinghound.itch.io/stickymondays">Sticky Mondays</a></td>
+				<td><span class="early">2h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-172-security">MJ 172: Security</a></td>
+				<td>37</td>
+				<td>4</td>
+				<td>14</td>
+				<td>47</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				800, 806, 817, 822, 826, 832, 837, 840, 850, 860, 863, 868, 880, 888, 895, 900, 907, 917, 922,
+			]],
+			[ "10", [
+				1222, 1228, 1243, 1252, 1258, 1266, 1277, 1280, 1289, 1300, 1306, 1315, 1331, 1342, 1355, 1360, 1371, 1381, 1392,
+			]],
+			[ "20", [
+				1704, 1711, 1726, 1742, 1748, 1757, 1769, 1776, 1794, 1805, 1812, 1826, 1846, 1863, 1881, 1886, 1898, 1913, 1926,
+			]],
+			[ "ilscore", [
+				8210, 8246, 8328, 8417, 8463, 8494, 2647, 2662, 2672, 2680, 2691, 2716, 2741, 2764, 2787, 2800, 2821, 2840, 2858,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

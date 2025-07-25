@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Wrimor&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Wrimor&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/wrimor.html" property="og:url">
+	<meta content="Rank by ilScore: 1732&#10;&#10;2 games&#10;&bull; One Armed Circle | MJ 73: Power | rank: 62 | ilscore: 80&#10;&bull; The Gravedigger | MJ 72: Adventure | rank: 30 | ilscore: 52&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Wrimor</h1>
+		<a href="https://wrimor.itch.io">wrimor.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1732</p>
+		<p>Total ilScore: 132</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://wrimor.itch.io/one-armed-circle">One Armed Circle</a></td>
+				<td><span class="early">10h 51m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>62</td>
+				<td>14</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://wrimor.itch.io/the-gravedigger">The Gravedigger</a></td>
+				<td><span class="early">10h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>30</td>
+				<td>13</td>
+				<td>52</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1269, 192, 199, 206, 224, 237, 241, 270, 298, 314, 321, 338, 354, 379, 392, 407, 419, 424, 429, 436, 459, 468, 472, 485, 493, 501, 505, 518, 550, 583, 601, 601, 618, 631, 648, 689, 704, 740, 766, 798,
+				860, 880, 896, 896, 902, 906, 914, 938, 957, 964, 971, 983, 991, 1019, 1037, 1055, 1069, 1083, 1103, 1110, 1140, 1151, 1163, 1182, 1199, 1207, 1213, 1213, 1229, 1229, 1230, 1234, 1235, 1238, 1246, 1254, 1261, 1265, 1267, 1272,
+				1282, 1294, 1305, 1309, 1341, 1360, 1369, 1374, 1385, 1388, 1408, 1424, 1430, 1448, 1452, 1463, 1470, 1493, 1494, 1496, 1500, 1501, 1507, 1507, 1510, 1524, 1543, 1556, 1563, 1571, 1583, 1595, 1599, 1608, 1629, 1645, 1660, 1681, 1688, 1705,
+				1720, 1731,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

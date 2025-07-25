@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ItsmeMaxim&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ItsmeMaxim&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/itsmemaxim.html" property="og:url">
+	<meta content="Rank by ilScore: 1431&#10;&#10;3 games&#10;&bull; The Gingerbread Dungeon | MJ 66: Sweets | rank: 46 | ilscore: 63&#10;&bull; Get Ghosted | MJ 65: Abandoned | rank: 43 | ilscore: 39&#10;&bull; Pr0jection | MJ 63: Future | rank: 94 | ilscore: 43&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ItsmeMaxim</h1>
+		<a href="https://itsmemaxim.itch.io">itsmemaxim.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1431</p>
+		<p>Total ilScore: 145</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://itsmemaxim.itch.io/tgingerbread-dungeon">The Gingerbread Dungeon</a></td>
+				<td><span class="early">3h 22m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>46</td>
+				<td>11</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://itsmemaxim.itch.io/get-ghosted">Get Ghosted</a></td>
+				<td><span class="early">4h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>43</td>
+				<td>3</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://itsmemaxim.itch.io/pr0jection">Pr0jection</a></td>
+				<td><span class="early">4h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>94</td>
+				<td>6</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1169, 1171, 348, 95, 100, 102, 105, 113, 117, 128, 131, 150, 154, 164, 176, 185, 188, 214, 241, 244, 247, 262, 277, 295, 306, 320, 331, 333, 338, 344, 362, 374, 375, 383, 388, 396, 400, 409, 439, 472,
+				491, 491, 505, 516, 527, 560, 572, 604, 627, 651, 692, 710, 724, 724, 726, 730, 736, 754, 771, 772, 781, 788, 792, 814, 834, 848, 857, 877, 893, 902, 929, 937, 945, 963, 978, 988, 994, 994, 1008, 1008,
+				1008, 1011, 1011, 1015, 1018, 1026, 1033, 1036, 1038, 1042, 1051, 1065, 1073, 1076, 1106, 1119, 1126, 1129, 1141, 1144, 1165, 1177, 1182, 1199, 1202, 1212, 1218, 1239, 1240, 1244, 1246, 1247, 1250, 1250, 1252, 1262, 1276, 1287, 1292, 1298,
+				1304, 1316, 1325, 1331, 1347, 1357, 1372, 1391, 1396, 1408, 1418, 1430,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

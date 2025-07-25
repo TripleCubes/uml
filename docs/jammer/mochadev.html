@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>MochaDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="MochaDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/mochadev.html" property="og:url">
+	<meta content="Rank by ilScore: 7322&#10;&#10;1 games&#10;&bull; Slime Jam | MJ 62: Colors | rank: 99 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>MochaDev</h1>
+		<a href="https://mochadev.itch.io">mochadev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7322</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mochadev.itch.io/slime-jam">Slime Jam</a></td>
+				<td><span class="early">45m 50s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-62">MJ 62: Colors</a></td>
+				<td>146</td>
+				<td>99</td>
+				<td>4</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				651, 745, 748, 758, 832, 846, 859, 875, 930, 943, 997, 1022, 1160, 1183, 1228, 1301, 1384, 1396, 1535, 1620, 1634, 1647, 1709, 1814, 1931, 1973, 2064, 2106, 2171, 2198, 2217, 2277, 2346, 2348, 2404, 2415, 2423, 2466, 2525, 2707,
+				2803, 2877, 2883, 2974, 3015, 3099, 3321, 3360, 3517, 3588, 3715, 4019, 4084, 4140, 4140, 4147, 4153, 4157, 4264, 4351, 4381, 4393, 4452, 4453, 4586, 4650, 4666, 4688, 4754, 4831, 4852, 5003, 5013, 5017, 5084, 5142, 5161, 5169, 5172, 5280,
+				5280, 5283, 5289, 5294, 5303, 5323, 5335, 5374, 5380, 5389, 5394, 5485, 5570, 5603, 5614, 5765, 5792, 5841, 5869, 5928, 5932, 6004, 6058, 6068, 6162, 6173, 6192, 6197, 6350, 6359, 6363, 6366, 6370, 6376, 6385, 6404, 6465, 6554, 6587, 6604,
+				6650, 6690, 6724, 6785, 6816, 6882, 6939, 6996, 7114, 7139, 7230, 7276, 7321,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

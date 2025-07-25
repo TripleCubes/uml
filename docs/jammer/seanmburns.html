@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>seanmburns&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="seanmburns&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/seanmburns.html" property="og:url">
+	<meta content="Rank by ilScore: 753&#10;&#10;3 games&#10;&bull; Cal-e | MJ 183: Calculations | rank: 33 | ilscore: 77&#10;&bull; Hex Climbers | MJ 182: Horror | rank: 40 | ilscore: 54&#10;&bull; Seas Of Rage | MJ 108: Seaside | rank: 135 | ilscore: 68&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>seanmburns</h1>
+		<a href="https://seanmburns.itch.io">seanmburns.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 753</p>
+		<p>Total ilScore: 200</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://seanmburns.itch.io/cal-e">Cal-e</a></td>
+				<td><span class="early">4h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-183-calculations">MJ 183: Calculations</a></td>
+				<td>119</td>
+				<td>33</td>
+				<td>10</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://seanmburns.itch.io/hex-climbers">Hex Climbers</a></td>
+				<td><span class="early">9m 37s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-182-horror">MJ 182: Horror</a></td>
+				<td>93</td>
+				<td>40</td>
+				<td>8</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://seanmburns.itch.io/sea-of-rage">Seas Of Rage</a></td>
+				<td><span class="early">3m 8s early</span></td>
+				<td>
+					<a href="../jammer/maxerrackham.html">MaxerRackham</a>,
+					<a href="../jammer/yoyoyollie.html">Yoyoyollie</a>,
+					<a href="../jammer/neverdusk.html">Neverdusk</a>,
+					<a href="../jammer/shoelaces.html">shoelaces</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>135</td>
+				<td>10</td>
+				<td>68</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2822, 2882, 2997, 3284, 3342, 3374, 3375, 3379, 3385, 3390, 3486, 3554, 3577, 3585, 3634, 3636, 3751, 3809, 3820, 3841, 3893, 3954, 3969, 4108, 4119, 4123, 4169, 4210, 4225, 4233, 4236, 4332, 4334, 4336, 4342, 4346, 4355, 4367, 4377, 4399,
+				4410, 4420, 4425, 4504, 4561, 4591, 4597, 4733, 4750, 4790, 4813, 4863, 4872, 4935, 4980, 4991, 5067, 5079, 5094, 5100, 5239, 5247, 5250, 5253, 5257, 5262, 5270, 5283, 5326, 5405, 5424, 5434, 5456, 5478, 5495, 5527, 1833, 706, 713, 721,
+				729, 730, 740, 744, 752,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

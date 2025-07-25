@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NatureStudioz&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NatureStudioz&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/naturestudioz.html" property="og:url">
+	<meta content="Rank by game in top 20: 660&#10;Rank by ilScore: 435&#10;&#10;4 games&#10;&bull; Heads-Up | MJ 84: Bubbles | rank: 18 | ilscore: 90&#10;&bull; Hexing Steps. Featuring Atragon. | MJ 81: Kaiju | rank: 19 | ilscore: 54&#10;&bull; The Story of Cuber-O-Loo | MJ 78: Bugs | rank: 35 | ilscore: 47&#10;&bull; Battle for the body | MJ 77: Courage | rank: 45 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NatureStudioz</h1>
+		<a href="https://naturestudioz.itch.io">naturestudioz.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 660</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 435</p>
+		<p>Total ilScore: 261</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://naturestudioz.itch.io/heads-up">Heads-Up</a></td>
+				<td><span class="early">47m 46s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>18</td>
+				<td>36</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://naturestudioz.itch.io/hexing-steps">Hexing Steps. Featuring Atragon.</a></td>
+				<td><span class="early">1h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>19</td>
+				<td>23</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://naturestudioz.itch.io/the-story-of-cuber-o-loo">The Story of Cuber-O-Loo</a></td>
+				<td><span class="early">1h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>35</td>
+				<td>15</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://naturestudioz.itch.io/battle-for-the-body">Battle for the body</a></td>
+				<td><span class="early">10h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>45</td>
+				<td>25</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1135, 1152, 1174, 210, 214, 219, 223, 227, 228, 234, 239, 245, 247, 250, 253, 257, 260, 261, 262, 263, 268, 274, 275, 278, 282, 288, 290, 296, 302, 308, 309, 311, 315, 322, 322, 323, 328, 337, 338, 346,
+				347, 353, 357, 359, 363, 370, 380, 389, 394, 395, 401, 403, 405, 408, 414, 418, 423, 425, 427, 430, 430, 434, 443, 444, 448, 451, 452, 457, 459, 468, 471, 472, 475, 477, 482, 485, 492, 501, 501, 504,
+				507, 516, 524, 528, 529, 538, 546, 553, 557, 558, 567, 570, 570, 575, 580, 581, 584, 588, 591, 595, 601, 602, 606, 609, 614, 616, 621, 632, 638, 639, 643, 651, 659,
+			]],
+			[ "ilscore", [
+				1009, 315, 346, 376, 166, 166, 176, 67, 71, 75, 76, 77, 82, 83, 85, 87, 91, 92, 93, 95, 97, 100, 102, 112, 124, 128, 128, 135, 138, 142, 146, 150, 160, 166, 171, 183, 188, 192, 192, 193,
+				194, 194, 204, 209, 210, 211, 215, 217, 225, 230, 233, 237, 244, 246, 252, 261, 265, 266, 272, 276, 279, 281, 282, 287, 287, 287, 288, 290, 291, 293, 295, 296, 298, 299, 299, 305, 309, 313, 316, 319,
+				323, 328, 334, 337, 337, 338, 346, 351, 360, 360, 362, 363, 375, 376, 378, 378, 380, 380, 380, 385, 385, 388, 392, 392, 395, 396, 401, 407, 410, 412, 413, 416, 420, 423, 425, 430, 434,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Blank Slate&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Blank Slate&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/blankedslate.html" property="og:url">
+	<meta content="Rank by game in top 10: 108&#10;Rank by game in top 20: 227&#10;Rank by ilScore: 117&#10;&#10;7 games&#10;&bull; Faeware | MJ+ 7: Wild | rank: 37 | ilscore: 80&#10;&bull; TT Slime Hunters | MJ 176: Foxes | rank: 10 | ilscore: 73&#10;&bull; Dungeon Flipper | MJ 176: Foxes | rank: 8 | ilscore: 75&#10;&bull; DivinEmu | MJ 132: Severed | rank: 9 | ilscore: 51&#10;&bull; Batsy the Great (Jam Version) | MJ 128: Health | rank: 29 | ilscore: 77&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Blank Slate</h1>
+		<a href="https://blankedslate.itch.io">blankedslate.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 108</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 227</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 117</p>
+		<p>Total ilScore: 484</p>
+
+		<h3 id="games_header">7 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://blankedslate.itch.io/faeware">Faeware</a></td>
+				<td><span class="early">14h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-7-wild">MJ+ 7: Wild</a></td>
+				<td>147</td>
+				<td>37</td>
+				<td>9</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tt-slime-hunters">TT Slime Hunters</a></td>
+				<td><span class="late">16h 39m late</span></td>
+				<td>
+					<a href="../jammer/ilprinni.html">ilPrinni</a>,
+					<a href="../jammer/vvulpes0.html">Pineberry Fox</a>,
+					<a href="../jammer/triplecubes.html">TripleCubes</a>,
+					<a href="../jammer/readymajor.html">ReadyMajor</a>,
+					<a href="../jammer/30fps.html">30fps</a>,
+					<a href="../jammer/murgn.html">Murgn</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>,
+					<a href="../jammer/tlalice.html">TLAlice</a>,
+					<a href="../jammer/cat-jug.html">Cat Jug</a>,
+					<a href="../jammer/hotnoggin.html">Hot Noggin Studios</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>10</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://blankedslate.itch.io/dungeon-flipper">Dungeon Flipper</a></td>
+				<td><span class="early">1h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>8</td>
+				<td>12</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://blankedslate.itch.io/divinemu">DivinEmu</a></td>
+				<td><span class="early">10h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>9</td>
+				<td>7</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://blankedslate.itch.io/batsy-the-great">Batsy the Great (Jam Version)</a></td>
+				<td><span class="early">1d 0h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>29</td>
+				<td>11</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://blankedslate.itch.io/devils-gambit">Devils Gambit</a></td>
+				<td><span class="early">11h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>28</td>
+				<td>7</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://blankedslate.itch.io/koryf">Koryfí</a></td>
+				<td><span class="early">14h 14m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>38</td>
+				<td>7</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1236, 1251, 1261, 1269, 1277, 1285, 1299, 1302, 1307, 1323, 1330, 1342, 1358, 1371, 1382, 1396, 1408, 1423, 1431, 1435, 1443, 1464, 1481, 1495, 1503, 1512, 1523, 1538, 1548, 1560, 1576, 1589, 1596, 1602, 1611, 1623, 1628, 1633, 1647, 1658,
+				1666, 1683, 1694, 1712, 1720, 95, 96, 97, 98, 98, 98, 99, 99, 100, 100, 102, 102, 105, 105, 107,
+			]],
+			[ "20", [
+				1983, 2008, 2029, 2044, 2055, 2061, 2089, 2091, 2095, 2109, 2115, 2126, 2150, 2164, 2188, 2203, 2220, 2240, 2258, 2270, 2288, 2314, 2346, 2369, 2390, 2409, 2429, 2444, 2461, 2478, 2499, 2539, 2548, 2564, 2575, 2600, 2614, 2621, 2636, 2646,
+				2652, 2668, 2684, 2716, 2736, 201, 202, 203, 204, 208, 209, 211, 212, 216, 218, 220, 220, 224, 224, 226,
+			]],
+			[ "ilscore", [
+				369, 380, 425, 464, 543, 556, 573, 580, 585, 617, 626, 750, 852, 854, 866, 947, 970, 989, 1017, 1075, 1088, 1150, 1174, 1322, 1356, 1408, 1486, 1581, 1598, 1740, 1827, 1847, 1866, 363, 380, 408, 421, 436, 449, 456,
+				462, 469, 491, 502, 506, 519, 526, 533, 538, 551, 584, 616, 634, 634, 652, 667, 686, 733, 749, 786, 813, 846, 933, 953, 971, 971, 977, 981, 989, 1013, 1031, 1039, 1046, 1059, 1068, 1098, 1121, 1137, 1150, 1164,
+				409, 414, 427, 427, 281, 289, 293, 297, 299, 300, 306, 306, 306, 307, 308, 309, 311, 313, 314, 317, 318, 318, 326, 329, 334, 337, 341, 345, 350, 355, 358, 359, 360, 369, 373, 382, 383, 385, 386, 399,
+				400, 403, 403, 404, 404, 404, 409, 410, 413, 156, 156, 157, 158, 158, 161, 163, 165, 167, 169, 114, 114, 114, 114, 116,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

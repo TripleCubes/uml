@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TwinFlame Interactive&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TwinFlame Interactive&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/twinflame-interactive.html" property="og:url">
+	<meta content="Rank by ilScore: 1221&#10;&#10;2 games&#10;&bull; I Wanna be a Mage | MJ 128: Health | rank: 60 | ilscore: 65&#10;&bull; Attack on the Seaside | Voice Over!!! | MJ 108: Seaside | rank: 41 | ilscore: 93&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TwinFlame Interactive</h1>
+		<a href="https://twinflame-interactive.itch.io">twinflame-interactive.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1221</p>
+		<p>Total ilScore: 158</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://twinflame-interactive.itch.io/i-wanna-be-a-mage">I Wanna be a Mage</a></td>
+				<td><span class="early">2d 16h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>60</td>
+				<td>28</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://twinflame-interactive.itch.io/attack-on-the-seaside">Attack on the Seaside | Voice Over!!!</a></td>
+				<td><span class="early">2d 23h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>41</td>
+				<td>70</td>
+				<td>93</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1370, 1399, 1472, 1700, 1713, 1727, 1727, 1730, 1736, 1744, 1790, 1815, 1829, 1841, 1860, 1868, 1930, 1953, 1970, 1989, 2005, 752, 760, 784, 791, 797, 814, 827, 836, 839, 841, 854, 855, 855, 858, 858, 862, 866, 871, 876,
+				878, 880, 882, 889, 900, 904, 907, 937, 948, 954, 957, 968, 973, 993, 1007, 1012, 1029, 1033, 1038, 1042, 1060, 1064, 1067, 1069, 1069, 1072, 1073, 1076, 1084, 1092, 1101, 1107, 1110, 1115, 1126, 1135, 1141, 1154, 1162, 1174,
+				1187, 1192, 1205, 1212, 1220,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

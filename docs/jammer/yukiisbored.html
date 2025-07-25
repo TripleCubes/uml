@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Yuki&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Yuki&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/yukiisbored.html" property="og:url">
+	<meta content="Rank by game in top 5: 562&#10;Rank by game in top 10: 742&#10;Rank by game in top 20: 1099&#10;Rank by ilScore: 441&#10;&#10;3 games&#10;&bull; QWE | MJ 112: Chrono | rank: 4 | ilscore: 80&#10;&bull; Relative | MJ 111: Colors | rank: 176 | ilscore: 100&#10;&bull; Frogball | MJ 79: Frogs | rank: 82 | ilscore: 80&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Yuki</h1>
+		<a href="https://yukiisbored.itch.io">yukiisbored.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 562</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 742</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1099</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 441</p>
+		<p>Total ilScore: 260</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yukiisbored.itch.io/qwe">QWE</a></td>
+				<td><span class="early">11h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>4</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://yukiisbored.itch.io/relative">Relative</a></td>
+				<td><span class="early">8h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>176</td>
+				<td>12</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td><a href="https://yukiisbored.itch.io/frogball">Frogball</a></td>
+				<td><span class="early">9h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>82</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				303, 307, 307, 308, 312, 320, 323, 329, 329, 329, 336, 336, 340, 350, 353, 359, 363, 364, 369, 370, 372, 373, 378, 382, 383, 383, 383, 387, 392, 397, 400, 401, 409, 413, 413, 415, 415, 417, 417, 423,
+				425, 431, 439, 445, 445, 447, 448, 452, 453, 458, 463, 464, 472, 476, 481, 485, 491, 494, 494, 494, 494, 496, 498, 498, 509, 513, 514, 515, 520, 522, 523, 526, 527, 532, 536, 541, 549, 549, 556, 561,
+				561,
+			]],
+			[ "10", [
+				398, 409, 409, 409, 413, 420, 423, 429, 429, 432, 439, 441, 445, 461, 466, 474, 486, 488, 496, 497, 500, 504, 510, 515, 517, 518, 520, 524, 529, 533, 537, 538, 545, 549, 550, 553, 553, 555, 556, 562,
+				566, 571, 579, 585, 589, 591, 593, 598, 600, 605, 610, 614, 627, 632, 637, 644, 655, 658, 661, 661, 662, 664, 666, 667, 678, 684, 687, 688, 693, 695, 695, 700, 704, 709, 713, 723, 730, 730, 734, 740,
+				741,
+			]],
+			[ "20", [
+				568, 582, 582, 582, 590, 601, 605, 619, 621, 628, 638, 642, 648, 666, 676, 690, 702, 705, 714, 716, 719, 722, 731, 737, 740, 744, 748, 751, 753, 758, 767, 770, 780, 788, 791, 796, 801, 810, 813, 819,
+				823, 828, 839, 847, 854, 864, 865, 871, 878, 891, 900, 906, 919, 927, 935, 945, 956, 961, 971, 972, 974, 978, 983, 985, 997, 1005, 1009, 1013, 1020, 1027, 1036, 1041, 1046, 1050, 1055, 1065, 1075, 1076, 1081, 1092,
+				1098,
+			]],
+			[ "ilscore", [
+				792, 853, 872, 880, 906, 965, 1043, 1056, 1112, 1126, 1153, 1166, 1174, 1203, 1232, 1242, 1256, 1267, 1274, 1294, 1320, 1472, 1551, 1583, 1593, 1634, 1658, 1689, 1863, 1876, 1986, 2031, 2140, 424, 190, 194, 194, 195, 196, 196,
+				206, 211, 212, 213, 217, 219, 227, 232, 235, 239, 246, 248, 254, 263, 267, 268, 276, 280, 283, 285, 286, 292, 292, 292, 293, 294, 295, 297, 299, 300, 302, 303, 303, 309, 313, 317, 320, 323, 327, 332,
+				338, 341, 341, 342, 351, 356, 365, 366, 368, 369, 381, 382, 384, 384, 386, 386, 386, 390, 390, 393, 397, 397, 400, 401, 406, 412, 415, 417, 418, 421, 425, 428, 433, 436, 440,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

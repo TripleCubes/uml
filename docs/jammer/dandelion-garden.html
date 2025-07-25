@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Dandelion Garden&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Dandelion Garden&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dandelion-garden.html" property="og:url">
+	<meta content="Rank by game in top 5: 428&#10;Rank by game in top 10: 604&#10;Rank by game in top 20: 978&#10;Rank by ilScore: 2249&#10;&#10;1 games&#10;&bull; A Daydream | MJ 110: Sacrifice | rank: 5 | ilscore: 113&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Dandelion Garden</h1>
+		<a href="https://dandelion-garden.itch.io">dandelion-garden.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 428</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 604</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 978</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2249</p>
+		<p>Total ilScore: 113</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dandelion-garden.itch.io/a-daydream">A Daydream</a></td>
+				<td><span class="late">1d 21h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>5</td>
+				<td>15</td>
+				<td>113</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				220, 226, 232, 236, 236, 237, 242, 249, 250, 254, 254, 254, 255, 255, 258, 261, 264, 270, 272, 272, 277, 278, 279, 280, 284, 285, 286, 286, 286, 290, 295, 300, 302, 303, 311, 312, 312, 314, 314, 315,
+				315, 317, 319, 324, 328, 332, 332, 334, 334, 338, 339, 345, 347, 348, 356, 360, 366, 368, 374, 377, 377, 377, 377, 379, 381, 381, 388, 391, 391, 392, 397, 398, 399, 402, 403, 406, 410, 415, 421, 421,
+				427, 427, 427,
+			]],
+			[ "10", [
+				313, 320, 326, 332, 332, 332, 337, 346, 347, 351, 351, 354, 355, 357, 360, 367, 373, 381, 383, 384, 393, 394, 396, 400, 405, 408, 410, 411, 413, 417, 422, 426, 430, 431, 438, 439, 440, 443, 443, 444,
+				445, 448, 453, 458, 462, 466, 470, 472, 473, 477, 479, 484, 487, 491, 502, 507, 512, 517, 525, 528, 531, 533, 534, 536, 538, 539, 546, 551, 553, 554, 559, 560, 560, 565, 569, 573, 577, 588, 594, 594,
+				597, 600, 603,
+			]],
+			[ "20", [
+				486, 493, 502, 512, 512, 513, 521, 534, 536, 548, 550, 557, 561, 565, 571, 580, 591, 605, 610, 612, 622, 624, 626, 629, 637, 641, 645, 649, 653, 656, 658, 663, 672, 675, 685, 691, 694, 699, 704, 713,
+				716, 719, 723, 728, 737, 743, 750, 760, 760, 765, 771, 784, 791, 797, 808, 817, 825, 833, 841, 846, 856, 859, 861, 865, 870, 872, 881, 888, 891, 895, 903, 909, 918, 924, 929, 932, 937, 947, 956, 957,
+				961, 969, 977,
+			]],
+			[ "ilscore", [
+				1014, 1166, 1186, 1205, 1205, 1211, 1216, 1226, 1252, 1271, 1282, 1293, 1309, 1316, 1350, 1376, 1395, 1409, 1428, 1451, 1459, 1496, 1509, 1520, 1539, 1561, 1573, 1578, 1581, 1599, 1599, 1600, 1607, 1609, 1613, 1623, 1631, 1638, 1645, 1647,
+				1656, 1667, 1683, 1701, 1706, 1741, 1765, 1782, 1794, 1807, 1815, 1831, 1853, 1861, 1879, 1882, 1897, 1902, 1924, 1930, 1938, 1941, 1942, 1949, 1950, 1954, 1970, 2001, 2017, 2029, 2041, 2059, 2073, 2080, 2092, 2116, 2138, 2157, 2176, 2192,
+				2214, 2233, 2248,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

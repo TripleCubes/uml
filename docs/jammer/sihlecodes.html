@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>sihlecodes&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="sihlecodes&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sihlecodes.html" property="og:url">
+	<meta content="Rank by game in top 5: 831&#10;Rank by game in top 10: 1187&#10;Rank by game in top 20: 1572&#10;Rank by ilScore: 1409&#10;&#10;2 games&#10;&bull; Necro Masochist | MJ 92: Death | rank: 5 | ilscore: 81&#10;&bull; Piranha Feeding Frenzy | MJ 91: UFO | rank: 58 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>sihlecodes</h1>
+		<a href="https://sihlecodes.itch.io">sihlecodes.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 831</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1187</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1572</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1409</p>
+		<p>Total ilScore: 146</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sihlecodes.itch.io/necro-m">Necro Masochist</a></td>
+				<td><span class="late">1d 6h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>5</td>
+				<td>10</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://sihlecodes.itch.io/piranha-feeding-frenzy">Piranha Feeding Frenzy</a></td>
+				<td><span class="early">4h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-91-ufo">MJ 91: UFO</a></td>
+				<td>127</td>
+				<td>58</td>
+				<td>10</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				345, 351, 354, 363, 363, 370, 374, 380, 391, 394, 396, 401, 404, 409, 416, 425, 429, 432, 436, 442, 451, 455, 456, 462, 467, 475, 479, 487, 492, 499, 507, 508, 514, 524, 528, 537, 540, 547, 552, 555,
+				557, 557, 562, 568, 572, 572, 573, 582, 585, 590, 597, 598, 607, 613, 613, 618, 619, 621, 625, 631, 633, 638, 645, 655, 662, 666, 670, 674, 675, 680, 686, 686, 694, 696, 699, 704, 710, 714, 714, 715,
+				716, 719, 726, 728, 739, 744, 747, 750, 755, 757, 760, 769, 772, 777, 789, 797, 807, 809, 815, 825, 830,
+			]],
+			[ "10", [
+				487, 493, 496, 507, 507, 516, 522, 533, 548, 555, 558, 568, 577, 585, 594, 604, 611, 620, 630, 642, 656, 667, 668, 673, 678, 686, 694, 708, 713, 721, 734, 737, 747, 765, 772, 782, 795, 803, 808, 814,
+				817, 818, 829, 840, 843, 843, 844, 856, 859, 863, 870, 871, 880, 888, 889, 893, 894, 896, 901, 910, 917, 925, 935, 952, 955, 959, 963, 974, 975, 986, 996, 996, 1009, 1012, 1017, 1025, 1037, 1041, 1043, 1044,
+				1046, 1049, 1056, 1059, 1072, 1081, 1085, 1088, 1095, 1097, 1099, 1110, 1114, 1123, 1138, 1149, 1162, 1164, 1170, 1180, 1186,
+			]],
+			[ "20", [
+				645, 652, 655, 663, 669, 677, 682, 695, 724, 735, 741, 758, 769, 777, 796, 804, 815, 826, 840, 863, 880, 892, 893, 898, 907, 915, 923, 942, 949, 959, 976, 981, 992, 1015, 1025, 1036, 1052, 1061, 1067, 1074,
+				1077, 1078, 1092, 1105, 1108, 1110, 1115, 1126, 1128, 1133, 1141, 1142, 1153, 1163, 1166, 1173, 1177, 1183, 1190, 1204, 1212, 1220, 1231, 1249, 1253, 1262, 1266, 1277, 1283, 1299, 1309, 1313, 1334, 1336, 1344, 1354, 1371, 1377, 1386, 1388,
+				1391, 1395, 1405, 1408, 1421, 1435, 1440, 1446, 1455, 1461, 1472, 1481, 1487, 1496, 1511, 1523, 1539, 1541, 1548, 1563, 1571,
+			]],
+			[ "ilscore", [
+				1960, 365, 366, 373, 377, 384, 387, 396, 425, 458, 478, 478, 492, 502, 513, 545, 557, 587, 610, 634, 676, 693, 708, 708, 710, 714, 720, 736, 753, 755, 764, 772, 776, 797, 816, 831, 840, 860, 876, 885,
+				912, 920, 927, 945, 960, 969, 975, 976, 990, 990, 990, 993, 993, 998, 1002, 1009, 1016, 1018, 1020, 1023, 1032, 1046, 1054, 1057, 1087, 1100, 1106, 1109, 1121, 1125, 1146, 1158, 1163, 1180, 1183, 1192, 1198, 1219, 1220, 1224,
+				1226, 1227, 1230, 1230, 1232, 1242, 1255, 1266, 1272, 1278, 1283, 1296, 1305, 1311, 1326, 1336, 1351, 1369, 1374, 1387, 1398, 1408,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

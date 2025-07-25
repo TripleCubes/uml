@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Henrik Pira&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Henrik Pira&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/henrikpira.html" property="og:url">
+	<meta content="Rank by game in top 10: 1089&#10;Rank by game in top 20: 1463&#10;Rank by ilScore: 359&#10;&#10;4 games&#10;&bull; Dragazon | MJ 151: Dragons | rank: 9 | ilscore: 77&#10;&bull; More money More problems | MJ 124: Warmth | rank: 58 | ilscore: 65&#10;&bull; Birds just can&#39;t stop moving out | MJ 99: Birds | rank: 150 | ilscore: 77&#10;&bull; The incredible bouncing boi | MJ 71: Puzzles | rank: 24 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Henrik Pira</h1>
+		<a href="https://henrikpira.itch.io">henrikpira.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1089</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1463</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 359</p>
+		<p>Total ilScore: 287</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://henrikpira.itch.io/dragazon">Dragazon</a></td>
+				<td><span class="early">11h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>9</td>
+				<td>22</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://henrikpira.itch.io/more-money-more-problems">More money More problems</a></td>
+				<td><span class="early">4h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>58</td>
+				<td>6</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://henrikpira.itch.io/birds">Birds just can&#39;t stop moving out</a></td>
+				<td><span class="early">5h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>150</td>
+				<td>7</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://henrikpira.itch.io/the-incredible-bouncy-boi">The incredible bouncing boi</a></td>
+				<td><span class="early">3h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>24</td>
+				<td>6</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				846, 856, 872, 875, 879, 883, 892, 893, 902, 910, 913, 926, 929, 934, 942, 954, 957, 960, 961, 963, 966, 968, 971, 984, 992, 996, 998, 1004, 1006, 1007, 1018, 1022, 1031, 1045, 1054, 1067, 1069, 1075, 1082, 1088,
+			]],
+			[ "20", [
+				1131, 1142, 1159, 1163, 1172, 1175, 1184, 1190, 1205, 1214, 1218, 1239, 1241, 1249, 1260, 1277, 1282, 1292, 1294, 1297, 1301, 1306, 1310, 1323, 1333, 1338, 1343, 1351, 1358, 1368, 1377, 1383, 1391, 1406, 1415, 1431, 1434, 1441, 1453, 1462,
+			]],
+			[ "ilscore", [
+				700, 718, 851, 867, 892, 955, 1019, 1027, 1148, 1227, 1235, 1243, 1283, 1373, 1484, 1516, 1596, 1618, 1671, 1689, 1696, 1752, 1797, 1802, 1831, 1839, 1846, 1877, 1916, 436, 469, 488, 488, 502, 512, 522, 556, 568, 600, 623,
+				647, 687, 705, 719, 719, 721, 725, 731, 747, 764, 766, 775, 783, 787, 808, 357, 362, 367, 374, 383, 390, 403, 403, 406, 417, 423, 428, 428, 429, 440, 440, 443, 443, 445, 446, 447, 450, 453, 459, 459,
+				460, 469, 476, 252, 253, 256, 259, 261, 266, 270, 270, 272, 278, 279, 287, 291, 292, 292, 301, 301, 302, 302, 304, 305, 306, 311, 312, 317, 319, 320, 324, 325, 329, 333, 337, 342, 342, 344, 347, 347,
+				349, 353, 358,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

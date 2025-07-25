@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kevin Catlett Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kevin Catlett Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kevincatlettgames.html" property="og:url">
+	<meta content="Rank by game in top 10: 2052&#10;Rank by game in top 20: 3656&#10;Rank by ilScore: 12999&#10;&#10;1 games&#10;&bull; Anarchy Creation | MJ 37: Engineering | rank: 9 | ilscore: 13&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kevin Catlett Games</h1>
+		<a href="https://kevincatlettgames.itch.io">kevincatlettgames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2052</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3656</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12999</p>
+		<p>Total ilScore: 13</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kevincatlettgames.itch.io/anarchy-creation">Anarchy Creation</a></td>
+				<td><span class="early">12h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-37-engineering">MJ 37: Engineering</a></td>
+				<td>11</td>
+				<td>9</td>
+				<td>4</td>
+				<td>13</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				296, 307, 315, 326, 336, 343, 354, 362, 372, 378, 387, 394, 401, 412, 431, 445, 454, 462, 473, 483, 494, 504, 515, 526, 531, 544, 562, 575, 591, 603, 610, 622, 630, 638, 651, 664, 674, 682, 691, 704,
+				713, 723, 732, 741, 750, 762, 769, 786, 796, 807, 817, 829, 841, 853, 861, 872, 882, 899, 907, 916, 933, 946, 956, 970, 978, 984, 995, 1007, 1014, 1024, 1031, 1040, 1047, 1056, 1073, 1080, 1089, 1099, 1110, 1124,
+				1137, 1145, 1160, 1169, 1177, 1186, 1203, 1218, 1230, 1243, 1251, 1260, 1278, 1287, 1298, 1311, 1324, 1334, 1344, 1352, 1362, 1377, 1387, 1395, 1403, 1413, 1427, 1433, 1444, 1460, 1468, 1480, 1496, 1509, 1519, 1533, 1545, 1560, 1568, 1572,
+				1580, 1601, 1618, 1632, 1640, 1649, 1660, 1675, 1685, 1697, 1713, 1726, 1733, 1739, 1747, 1759, 1764, 1773, 1787, 1798, 1806, 1824, 1835, 1853, 1861, 1870, 1886, 1897, 1909, 1924, 1942, 1951, 1959, 1974, 1985, 1998, 2009, 2026, 2039, 2051,
+			]],
+			[ "20", [
+				444, 459, 474, 490, 506, 520, 530, 546, 565, 575, 591, 607, 617, 639, 669, 694, 713, 729, 748, 764, 787, 813, 838, 848, 860, 885, 913, 940, 969, 981, 996, 1019, 1034, 1051, 1077, 1100, 1119, 1133, 1152, 1177,
+				1197, 1215, 1232, 1256, 1277, 1295, 1308, 1330, 1347, 1368, 1387, 1411, 1431, 1456, 1475, 1501, 1517, 1540, 1556, 1575, 1597, 1621, 1636, 1660, 1675, 1693, 1718, 1744, 1756, 1776, 1797, 1809, 1825, 1844, 1864, 1879, 1898, 1916, 1938, 1960,
+				1983, 1991, 2015, 2032, 2053, 2071, 2091, 2120, 2143, 2165, 2181, 2199, 2226, 2242, 2262, 2277, 2299, 2313, 2339, 2359, 2378, 2403, 2424, 2443, 2466, 2481, 2509, 2520, 2540, 2565, 2583, 2604, 2625, 2649, 2672, 2692, 2708, 2730, 2748, 2760,
+				2778, 2807, 2839, 2861, 2881, 2902, 2922, 2943, 2958, 2975, 2998, 3038, 3052, 3067, 3080, 3105, 3119, 3134, 3159, 3183, 3205, 3228, 3245, 3276, 3296, 3320, 3349, 3373, 3399, 3423, 3453, 3471, 3490, 3517, 3536, 3562, 3587, 3619, 3638, 3655,
+			]],
+			[ "ilscore", [
+				627, 644, 663, 689, 709, 727, 738, 760, 803, 835, 875, 898, 907, 1023, 1125, 1150, 1215, 1256, 1339, 1398, 1518, 1558, 1607, 1618, 1629, 1699, 1747, 1908, 2025, 2031, 2075, 2182, 2230, 2279, 2335, 2425, 2476, 2552, 2610, 2784,
+				2847, 2940, 3032, 3153, 3203, 3357, 3467, 3525, 3573, 3662, 3795, 3946, 4034, 4173, 4259, 4356, 4423, 4487, 4596, 4690, 4724, 4795, 4835, 4887, 4972, 5061, 5279, 5399, 5513, 5545, 5668, 5751, 5856, 6110, 6174, 6363, 6460, 6641, 7014, 7095,
+				7198, 7207, 7258, 7282, 7313, 7466, 7599, 7694, 7730, 7834, 7865, 8037, 8123, 8176, 8227, 8312, 8422, 8472, 8659, 8685, 8715, 8824, 8913, 8956, 8985, 9004, 9151, 9161, 9189, 9229, 9258, 9288, 9335, 9394, 9476, 9510, 9540, 9580, 9725, 9847,
+				9925, 9971, 10155, 10215, 10315, 10383, 10480, 10514, 10616, 10706, 10736, 10873, 10910, 10964, 10986, 11181, 11229, 11249, 11290, 11322, 11372, 11401, 11458, 11557, 11676, 11747, 11799, 11871, 11941, 12014, 12105, 12177, 12262, 12342, 12434, 12617, 12693, 12820, 12906, 12998,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

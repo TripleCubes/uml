@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nico&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Nico&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/netmind.html" property="og:url">
+	<meta content="Rank by ilScore: 1010&#10;&#10;3 games&#10;&bull; The Myth of Pumpkins and Wolves | MJ 89: Pumpkin | rank: 44 | ilscore: 53&#10;&bull; Power of Martial Arts | MJ 73: Power | rank: 85 | ilscore: 74&#10;&bull; Where is my mind? | MJ 54: Memories | rank: 62 | ilscore: 48&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nico</h1>
+		<a href="https://netmind.itch.io">netmind.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1010</p>
+		<p>Total ilScore: 175</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://netmind.itch.io/pumpkins-and-wolves">The Myth of Pumpkins and Wolves</a></td>
+				<td><span class="early">4h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>44</td>
+				<td>12</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://netmind.itch.io/the-power-of-martial-arts">Power of Martial Arts</a></td>
+				<td><span class="early">10h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>85</td>
+				<td>27</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://netmind.itch.io/where-is-my-mind">Where is my mind?</a></td>
+				<td><span class="early">39m 3s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-54-memories">MJ 54: Memories</a></td>
+				<td>92</td>
+				<td>62</td>
+				<td>19</td>
+				<td>48</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				555, 600, 695, 715, 741, 744, 750, 792, 819, 958, 1060, 1062, 1078, 1171, 1195, 1224, 1261, 1320, 1353, 1419, 1449, 227, 235, 246, 268, 284, 289, 319, 349, 367, 373, 391, 410, 439, 452, 469, 483, 491, 218, 222,
+				233, 239, 243, 248, 252, 256, 257, 262, 279, 308, 321, 323, 326, 329, 334, 357, 367, 391, 408, 424, 460, 469, 479, 479, 483, 488, 491, 505, 514, 522, 528, 534, 535, 550, 565, 576, 582, 602, 611, 618,
+				638, 640, 645, 657, 664, 674, 675, 679, 692, 694, 698, 701, 703, 707, 712, 715, 720, 722, 723, 723, 729, 739, 744, 746, 767, 770, 776, 781, 794, 800, 819, 830, 832, 847, 850, 854, 857, 871, 875, 878,
+				879, 880, 884, 884, 888, 894, 898, 908, 915, 917, 921, 928, 939, 944, 954, 960, 968, 978, 981, 994, 1000, 1009,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

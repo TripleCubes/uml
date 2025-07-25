@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Floratoby&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Floratoby&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/floratoby.html" property="og:url">
+	<meta content="Rank by game in top 5: 423&#10;Rank by game in top 10: 599&#10;Rank by game in top 20: 973&#10;Rank by ilScore: 405&#10;&#10;4 games&#10;&bull; Mutators | MJ 135: Deception | rank: 41 | ilscore: 48&#10;&bull; Cube&#39;s Journey | MJ 115: Noir | rank: 3 | ilscore: 52&#10;&bull; Loop | MJ 113: Final Boss | rank: 23 | ilscore: 71&#10;&bull; Whack-a-Crab | MJ 108: Seaside | rank: 36 | ilscore: 96&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Floratoby</h1>
+		<a href="https://floratoby.itch.io">floratoby.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 423</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 599</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 973</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 405</p>
+		<p>Total ilScore: 267</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://floratoby.itch.io/mutators">Mutators</a></td>
+				<td><span class="late">12h 53m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>41</td>
+				<td>5</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://floratoby.itch.io/cubes-journey">Cube&#39;s Journey</a></td>
+				<td><span class="early">2h 19m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>3</td>
+				<td>20</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://floratoby.itch.io/loop">Loop</a></td>
+				<td><span class="early">14m 48s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-113-final-boss">MJ 113: Final Boss</a></td>
+				<td>102</td>
+				<td>23</td>
+				<td>13</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://floratoby.itch.io/whack-a-crab">Whack-a-Crab</a></td>
+				<td><span class="early">2m 29s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>36</td>
+				<td>42</td>
+				<td>96</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				240, 247, 248, 252, 252, 252, 253, 254, 257, 260, 263, 269, 271, 271, 275, 276, 277, 278, 281, 282, 283, 284, 284, 288, 293, 298, 300, 301, 309, 310, 310, 312, 312, 313, 313, 315, 317, 322, 326, 330,
+				330, 332, 332, 336, 337, 343, 345, 346, 354, 358, 364, 366, 372, 375, 375, 375, 375, 377, 379, 379, 386, 389, 389, 390, 395, 396, 397, 397, 398, 401, 405, 410, 416, 416, 422, 422, 422,
+			]],
+			[ "10", [
+				335, 344, 345, 349, 349, 352, 353, 356, 359, 366, 372, 380, 382, 383, 391, 392, 394, 398, 403, 406, 408, 409, 411, 415, 420, 424, 428, 429, 436, 437, 438, 441, 441, 442, 443, 446, 451, 456, 460, 464,
+				468, 470, 471, 475, 477, 482, 485, 489, 500, 505, 510, 515, 523, 526, 529, 531, 532, 534, 536, 537, 544, 549, 551, 552, 557, 558, 558, 560, 564, 568, 572, 583, 589, 589, 592, 595, 598,
+			]],
+			[ "20", [
+				519, 532, 534, 546, 548, 555, 559, 564, 570, 579, 590, 604, 609, 611, 620, 622, 624, 627, 635, 639, 643, 647, 651, 654, 656, 661, 670, 673, 683, 689, 692, 697, 702, 711, 714, 717, 721, 726, 735, 741,
+				748, 758, 758, 763, 769, 782, 789, 795, 806, 815, 823, 831, 839, 844, 854, 857, 859, 863, 868, 870, 879, 886, 889, 893, 901, 907, 916, 919, 924, 927, 932, 942, 951, 952, 956, 964, 972,
+			]],
+			[ "ilscore", [
+				1288, 1316, 1384, 1603, 1619, 540, 540, 544, 283, 286, 296, 300, 305, 306, 309, 310, 317, 327, 332, 339, 346, 356, 364, 376, 377, 379, 388, 394, 256, 258, 258, 262, 262, 262, 263, 264, 265, 268, 268, 269,
+				272, 273, 273, 278, 282, 286, 289, 292, 297, 301, 307, 309, 309, 310, 318, 322, 332, 335, 337, 337, 349, 349, 351, 351, 353, 353, 354, 359, 359, 362, 366, 366, 369, 369, 375, 381, 383, 385, 386, 388,
+				391, 393, 395, 399, 404,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Pytrax&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Pytrax&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pytrax.html" property="og:url">
+	<meta content="Rank by ilScore: 6925&#10;&#10;2 games&#10;&bull; GrenadeScape | MJ 74: Chaos | rank: 68 | ilscore: 37&#10;&bull; Mozambique Adventure | MJ 54: Memories | rank: 85 | ilscore: 25&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Pytrax</h1>
+		<a href="https://pytrax.itch.io">pytrax.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6925</p>
+		<p>Total ilScore: 62</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pytrax.itch.io/grenadescape">GrenadeScape</a></td>
+				<td><span class="early">16h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>68</td>
+				<td>3</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://gandous.itch.io/mozambique-adventure">Mozambique Adventure</a></td>
+				<td><span class="early">10h 55m early</span></td>
+				<td>
+					<a href="../jammer/gandous.html">gandous</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-54-memories">MJ 54: Memories</a></td>
+				<td>92</td>
+				<td>85</td>
+				<td>3</td>
+				<td>25</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1100, 1158, 1277, 1317, 1364, 1367, 1377, 1444, 1488, 1643, 1761, 1765, 1806, 1912, 1960, 2009, 2065, 2146, 2191, 2268, 2318, 2493, 1093, 1130, 1204, 1283, 1294, 1424, 1509, 1525, 1535, 1588, 1693, 1806, 1843, 1933, 1969, 2030, 2053, 2067,
+				2126, 2190, 2192, 2244, 2254, 2260, 2299, 2355, 2535, 2629, 2700, 2706, 2794, 2833, 2911, 3132, 3168, 3321, 3392, 3517, 3820, 3885, 3930, 3931, 3936, 3942, 3945, 4051, 4127, 4152, 4160, 4216, 4218, 4348, 4410, 4422, 4445, 4504, 4572, 4590,
+				4736, 4746, 4750, 4809, 4863, 4880, 4888, 4891, 4998, 4998, 5001, 5006, 5012, 5022, 5037, 5048, 5081, 5087, 5096, 5099, 5186, 5268, 5300, 5309, 5454, 5481, 5526, 5554, 5609, 5615, 5684, 5739, 5748, 5838, 5851, 5865, 5870, 6023, 6031, 6034,
+				6038, 6042, 6046, 6055, 6073, 6133, 6222, 6250, 6264, 6306, 6332, 6364, 6418, 6448, 6514, 6569, 6623, 6741, 6762, 6848, 6890, 6924,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

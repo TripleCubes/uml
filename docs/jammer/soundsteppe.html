@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SoundSteppe&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SoundSteppe&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/soundsteppe.html" property="og:url">
+	<meta content="Rank by game in top 20: 1436&#10;Rank by ilScore: 1329&#10;&#10;2 games&#10;&bull; Domination | MJ 81: Kaiju | rank: 21 | ilscore: 54&#10;&bull; Dark Power | MJ 73: Power | rank: 16 | ilscore: 98&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SoundSteppe</h1>
+		<a href="https://soundsteppe.itch.io">soundsteppe.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1436</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1329</p>
+		<p>Total ilScore: 152</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://danilagd.itch.io/domination">Domination</a></td>
+				<td><span class="early">2h 13m early</span></td>
+				<td>
+					<a href="../jammer/danilagd.html">DanilaGD</a>,
+					<a href="../jammer/guetarist.html">Alexander Rogachev</a>,
+					<a href="../jammer/kote5281.html">kote5281</a>,
+					<a href="../jammer/feargin.html">Feargin</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>21</td>
+				<td>28</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://soundsteppe.itch.io/dark-power">Dark Power</a></td>
+				<td><span class="early">7h 20m early</span></td>
+				<td>
+					<a href="../jammer/feargin.html">Feargin</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>16</td>
+				<td>11</td>
+				<td>98</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				413, 418, 424, 435, 437, 443, 463, 474, 481, 484, 495, 506, 511, 517, 530, 536, 543, 555, 560, 568, 575, 582, 585, 592, 598, 605, 608, 616, 645, 653, 659, 666, 676, 684, 700, 708, 717, 729, 741, 764,
+				779, 791, 792, 793, 801, 811, 818, 837, 844, 853, 871, 875, 885, 907, 917, 929, 944, 952, 961, 965, 968, 969, 983, 992, 995, 997, 1001, 1011, 1013, 1018, 1027, 1030, 1042, 1052, 1055, 1062, 1067, 1074, 1079, 1091,
+				1099, 1106, 1117, 1132, 1136, 1147, 1150, 1159, 1165, 1180, 1189, 1193, 1214, 1217, 1223, 1234, 1250, 1255, 1265, 1267, 1270, 1274, 1279, 1283, 1296, 1306, 1311, 1316, 1324, 1331, 1341, 1350, 1356, 1364, 1379, 1388, 1404, 1407, 1414, 1426,
+				1435,
+			]],
+			[ "ilscore", [
+				354, 365, 376, 397, 418, 429, 480, 508, 221, 222, 233, 249, 266, 276, 289, 298, 300, 306, 312, 328, 335, 338, 344, 348, 353, 356, 363, 389, 423, 442, 442, 453, 460, 468, 499, 510, 540, 560, 584, 626,
+				642, 657, 657, 660, 664, 668, 684, 701, 705, 712, 717, 720, 737, 756, 770, 779, 798, 814, 823, 848, 857, 865, 882, 896, 907, 912, 913, 927, 927, 927, 930, 930, 935, 938, 945, 951, 953, 955, 957, 966,
+				979, 987, 990, 1019, 1031, 1037, 1040, 1050, 1055, 1074, 1089, 1095, 1113, 1116, 1124, 1129, 1149, 1151, 1155, 1157, 1158, 1162, 1162, 1165, 1174, 1185, 1193, 1199, 1205, 1210, 1223, 1233, 1240, 1253, 1260, 1276, 1292, 1298, 1310, 1320,
+				1328,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

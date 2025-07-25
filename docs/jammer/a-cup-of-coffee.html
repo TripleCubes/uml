@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>A Cup Of Coffee&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="A Cup Of Coffee&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/a-cup-of-coffee.html" property="og:url">
+	<meta content="Rank by game in top 5: 599&#10;Rank by game in top 10: 780&#10;Rank by game in top 20: 1144&#10;Rank by ilScore: 2347&#10;&#10;1 games&#10;&bull; Sticky Jump | MJ 123: Web | rank: 4 | ilscore: 109&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>A Cup Of Coffee</h1>
+		<a href="https://a-cup-of-coffee.itch.io">a-cup-of-coffee.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 599</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 780</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1144</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2347</p>
+		<p>Total ilScore: 109</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://a-cup-of-coffee.itch.io/sticky-jump">Sticky Jump</a></td>
+				<td><span class="early">5h 23m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>4</td>
+				<td>31</td>
+				<td>109</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				370, 380, 383, 389, 393, 395, 400, 401, 403, 403, 408, 414, 415, 415, 415, 419, 424, 429, 432, 433, 441, 445, 445, 447, 447, 449, 449, 455, 457, 463, 471, 477, 477, 480, 481, 485, 486, 491, 495, 496,
+				504, 508, 513, 517, 523, 526, 526, 526, 526, 528, 530, 530, 541, 545, 546, 548, 553, 555, 556, 560, 561, 566, 570, 575, 585, 585, 592, 597, 598,
+			]],
+			[ "10", [
+				474, 494, 497, 504, 517, 520, 528, 529, 532, 535, 540, 547, 549, 550, 552, 556, 561, 565, 569, 570, 577, 581, 582, 585, 585, 587, 588, 594, 598, 603, 611, 617, 621, 624, 626, 631, 633, 638, 642, 646,
+				659, 664, 669, 676, 688, 691, 694, 694, 695, 697, 699, 700, 711, 717, 720, 722, 727, 729, 729, 735, 739, 744, 748, 758, 767, 767, 771, 777, 779,
+			]],
+			[ "20", [
+				684, 706, 714, 727, 740, 744, 753, 755, 758, 760, 768, 776, 779, 783, 787, 790, 792, 797, 806, 809, 819, 827, 830, 835, 840, 849, 852, 858, 862, 867, 878, 886, 893, 904, 905, 911, 918, 931, 939, 945,
+				958, 966, 974, 984, 996, 1001, 1011, 1012, 1014, 1018, 1023, 1025, 1037, 1045, 1049, 1054, 1061, 1068, 1077, 1083, 1088, 1092, 1097, 1107, 1119, 1120, 1125, 1136, 1143,
+			]],
+			[ "ilscore", [
+				1427, 1451, 1469, 1483, 1502, 1526, 1534, 1572, 1585, 1595, 1615, 1640, 1654, 1656, 1659, 1678, 1678, 1679, 1687, 1689, 1694, 1703, 1711, 1717, 1724, 1727, 1736, 1748, 1764, 1783, 1790, 1830, 1857, 1875, 1885, 1894, 1902, 1919, 1942, 1950,
+				1969, 1971, 1986, 1990, 2017, 2023, 2030, 2034, 2036, 2042, 2044, 2049, 2065, 2096, 2112, 2123, 2135, 2152, 2165, 2172, 2183, 2207, 2229, 2251, 2272, 2287, 2310, 2329, 2346,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

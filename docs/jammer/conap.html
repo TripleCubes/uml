@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Conap&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Conap&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/conap.html" property="og:url">
+	<meta content="Rank by ilScore: 381&#10;&#10;4 games&#10;&bull; Chill or Be Chilled! | MJ 162: Heat | rank: 40 | ilscore: 77&#10;&bull; Thrown Apart | MJ 92: Death | rank: 47 | ilscore: 68&#10;&bull; The Graveyard Gourd | MJ 89: Pumpkin | rank: 41 | ilscore: 54&#10;&bull; CrimsonBubble | MJ 84: Bubbles | rank: 61 | ilscore: 78&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Conap</h1>
+		<a href="https://conap.itch.io">conap.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 381</p>
+		<p>Total ilScore: 276</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://conap.itch.io/chill-or-be-chilled">Chill or Be Chilled!</a></td>
+				<td><span class="late">1d 8h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-162-heat">MJ 162: Heat</a></td>
+				<td>134</td>
+				<td>40</td>
+				<td>9</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://losalamosgames.itch.io/thrown-apart">Thrown Apart</a></td>
+				<td><span class="early">45m 40s early</span></td>
+				<td>
+					<a href="../jammer/losalamosgames.html">LosAlamosGames</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>47</td>
+				<td>10</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://conap.itch.io/the-graveyard-gourd">The Graveyard Gourd</a></td>
+				<td><span class="early">3m 11s early</span></td>
+				<td>
+					<a href="../jammer/einveru-arts.html">Einveru Arts</a>,
+					<a href="../jammer/neverdusk.html">Neverdusk</a>,
+					<a href="../jammer/nicoledev.html">nICOLEdev</a>,
+					<a href="../jammer/chopov1.html">Chopov1</a>,
+					<a href="../jammer/somasomasoma.html">Soma!</a>,
+					<a href="../jammer/krikson.html">Krikson</a>,
+					<a href="../jammer/elton-silva.html">Elton Silva</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>41</td>
+				<td>10</td>
+				<td>54</td>
+			</tr>
+			<tr>
+				<td><a href="https://conap.itch.io/crimson-bubble">CrimsonBubble</a></td>
+				<td><span class="late">17h 44m late</span></td>
+				<td>
+					<a href="../jammer/theoneexpert.html">TheOneExpert</a>,
+					<a href="../jammer/qweny.html">Qweny</a>,
+					<a href="../jammer/scottyrich.html">Scotty Rich</a>,
+					<a href="../jammer/mellyn.html">Mell</a>,
+					<a href="../jammer/lilligant101.html">lilligant101</a>,
+					<a href="../jammer/barretwallace.html">Barret</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>61</td>
+				<td>6</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1058, 1140, 1156, 1216, 1230, 1262, 431, 438, 461, 173, 175, 177, 184, 186, 191, 195, 210, 228, 238, 239, 243, 245, 249, 263, 271, 291, 300, 306, 332, 340, 345, 346, 348, 351, 355, 364, 371, 378, 381, 385,
+				386, 397, 408, 414, 420, 428, 438, 443, 458, 459, 461, 471, 479, 486, 487, 488, 498, 498, 503, 504, 508, 510, 511, 512, 514, 520, 520, 521, 531, 539, 544, 548, 562, 563, 569, 573, 580, 584, 596, 608,
+				612, 312, 315, 317, 317, 327, 327, 328, 328, 331, 332, 333, 338, 338, 341, 343, 344, 348, 349, 355, 359, 362, 365, 365, 367, 369, 369, 371, 375, 380,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

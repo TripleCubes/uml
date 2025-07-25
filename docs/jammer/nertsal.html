@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nertsal&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Nertsal&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nertsal.html" property="og:url">
+	<meta content="Rank by game in top 20: 3136&#10;Rank by ilScore: 1714&#10;&#10;2 games&#10;&bull; Tiring Golf | MJ 122: Intermission | rank: 13 | ilscore: 48&#10;&bull; MiniJam 80 - Cats, Mice and 8Pixels | MJ 80: Cats | rank: 26 | ilscore: 85&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nertsal</h1>
+		<a href="https://nertsal.itch.io">nertsal.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3136</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1714</p>
+		<p>Total ilScore: 133</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nertsal.itch.io/tiring-golf">Tiring Golf</a></td>
+				<td><span class="early">9h 22m early</span></td>
+				<td>
+					<a href="../jammer/kuviman.html">kuviman</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-122-intermission">MJ 122: Intermission</a></td>
+				<td>50</td>
+				<td>13</td>
+				<td>14</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://nertsal.itch.io/catsmice8pixels">MiniJam 80 - Cats, Mice and 8Pixels</a></td>
+				<td><span class="early">11h 53m early</span></td>
+				<td>
+					<a href="../jammer/kuviman.html">kuviman</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>26</td>
+				<td>13</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1826, 1844, 1874, 1890, 1910, 1926, 1948, 1963, 1989, 2004, 2014, 2039, 2060, 2075, 2085, 2091, 2119, 2122, 2127, 2143, 2153, 2167, 2188, 2204, 2228, 2244, 2261, 2281, 2299, 2311, 2329, 2357, 2389, 2411, 2432, 2452, 2472, 2487, 2504, 2521,
+				2542, 2582, 2592, 2608, 2619, 2644, 2659, 2665, 2680, 2691, 2698, 2715, 2731, 2763, 2783, 2807, 2827, 2851, 2878, 2903, 2933, 2951, 2970, 2997, 3016, 3042, 3066, 3098, 3118, 3135,
+			]],
+			[ "ilscore", [
+				715, 735, 743, 762, 810, 867, 882, 929, 942, 964, 977, 985, 1007, 1031, 1041, 1056, 1067, 1074, 1089, 1114, 1249, 1316, 1340, 1350, 1389, 1408, 1428, 1597, 1610, 1697, 1734, 1830, 2086, 2099, 2111, 2112, 2114, 2122, 2125, 2199,
+				2227, 2242, 2255, 2282, 978, 1004, 1023, 1041, 1054, 1068, 1088, 1096, 1126, 1136, 1148, 1167, 1184, 1192, 1198, 1198, 1214, 1214, 1215, 1219, 1220, 1223, 1231, 1239, 1246, 1249, 1251, 1255, 1265, 1278, 1289, 1293, 1325, 1344, 1353, 1358,
+				1369, 1372, 1392, 1408, 1414, 1432, 1436, 1447, 1454, 1477, 1478, 1480, 1484, 1485, 1491, 1491, 1494, 1508, 1527, 1541, 1547, 1555, 1565, 1577, 1581, 1590, 1612, 1628, 1643, 1664, 1671, 1688, 1703, 1713,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

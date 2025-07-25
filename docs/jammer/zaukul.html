@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ZK&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ZK&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/zaukul.html" property="og:url">
+	<meta content="Rank by game in top 5: 704&#10;Rank by game in top 10: 52&#10;Rank by game in top 20: 53&#10;Rank by ilScore: 132&#10;&#10;6 games&#10;&bull; Bird Herder | MJ 99: Birds | rank: 8 | ilscore: 113&#10;&bull; Rogue Restaurant | MJ 98: Empty | rank: 8 | ilscore: 82&#10;&bull; Friendly Kaiju Simulator | MJ 97: Simulation | rank: 4 | ilscore: 81&#10;&bull; Robo Assassin/Savior | MJ 96: Fate | rank: 6 | ilscore: 55&#10;&bull; Chance Encounter | MJ 95: Chance | rank: 15 | ilscore: 59&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ZK</h1>
+		<a href="https://zaukul.itch.io">zaukul.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 704</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 52</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>6</span>
+			<span>8</span>
+			<span>8</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 53</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>6</span>
+			<span>8</span>
+			<span>8</span>
+			<span>15</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 132</p>
+		<p>Total ilScore: 458</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://zaukul.itch.io/bird-herder">Bird Herder</a></td>
+				<td><span class="early">3m 16s early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>8</td>
+				<td>17</td>
+				<td>113</td>
+			</tr>
+			<tr>
+				<td><a href="https://zaukul.itch.io/rogue-restaurant">Rogue Restaurant</a></td>
+				<td><span class="early">1m 49s early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>8</td>
+				<td>12</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://zaukul.itch.io/friendly-kaiju-simulator">Friendly Kaiju Simulator</a></td>
+				<td><span class="early">2h 6m early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>4</td>
+				<td>28</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://zaukul.itch.io/robo-assassin-savior">Robo Assassin/Savior</a></td>
+				<td><span class="early">14m 9s early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>6</td>
+				<td>20</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://zaukul.itch.io/chance-encounter">Chance Encounter</a></td>
+				<td><span class="early">38m 6s early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>15</td>
+				<td>9</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://zaukul.itch.io/ingredient-grab">Ingredient Grab</a></td>
+				<td><span class="early">1m 37s early</span></td>
+				<td>
+					<a href="../jammer/nuyhij.html">Nuyhij</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>26</td>
+				<td>13</td>
+				<td>67</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				311, 315, 321, 332, 335, 335, 342, 345, 347, 354, 358, 362, 365, 369, 375, 384, 388, 389, 391, 395, 403, 407, 415, 415, 420, 428, 428, 433, 443, 447, 455, 458, 461, 466, 467, 469, 469, 475, 481, 483,
+				483, 483, 492, 496, 501, 508, 509, 516, 522, 522, 526, 526, 528, 530, 536, 538, 544, 551, 561, 562, 566, 569, 573, 574, 579, 585, 586, 594, 596, 602, 606, 612, 615, 615, 615, 616, 618, 620, 622, 633,
+				638, 640, 642, 646, 648, 649, 653, 655, 660, 672, 680, 690, 691, 692, 699, 703,
+			]],
+			[ "10", [
+				794, 114, 39, 21, 22, 22, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 25, 25, 26, 27, 27, 27, 27, 27, 27, 27, 28, 28, 28, 28, 28, 29, 29, 29, 29, 29, 29, 29,
+				29, 29, 30, 30, 31, 31, 31, 31, 32, 32, 32, 32, 32, 32, 32, 33, 34, 35, 35, 35, 36, 36, 36, 36, 36, 36, 37, 37, 37, 38, 40, 40, 40, 41, 41, 41, 41, 41, 41, 41,
+				41, 41, 44, 44, 45, 45, 47, 48, 48, 48, 48, 48, 48, 48, 49, 51, 51,
+			]],
+			[ "20", [
+				1021, 233, 85, 38, 21, 21, 22, 22, 22, 23, 23, 23, 23, 25, 27, 27, 27, 27, 27, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 28, 30, 30, 32, 32, 33,
+				35, 35, 35, 35, 36, 36, 36, 36, 36, 37, 37, 37, 37, 37, 37, 37, 39, 40, 41, 41, 41, 42, 42, 42, 42, 42, 42, 43, 43, 43, 44, 45, 45, 45, 45, 45, 45, 45, 45, 45,
+				45, 46, 48, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 51, 51, 52, 52, 52,
+			]],
+			[ "ilscore", [
+				1970, 534, 228, 98, 61, 30, 31, 34, 34, 37, 38, 39, 45, 46, 51, 53, 53, 59, 60, 61, 61, 62, 62, 64, 66, 67, 69, 70, 71, 71, 74, 75, 75, 78, 80, 83, 84, 90, 90, 91,
+				93, 96, 100, 101, 101, 104, 104, 104, 104, 104, 105, 105, 105, 105, 105, 105, 105, 105, 107, 107, 107, 107, 107, 107, 107, 108, 108, 109, 109, 109, 109, 109, 111, 111, 112, 112, 112, 112, 112, 112,
+				112, 114, 115, 119, 120, 120, 120, 121, 121, 122, 122, 122, 124, 126, 131, 131, 131, 131, 131,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

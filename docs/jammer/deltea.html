@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>deltea&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="deltea&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/deltea.html" property="og:url">
+	<meta content="Rank by ilScore: 553&#10;&#10;3 games&#10;&bull; Information Overload | MJ 100: Overload | rank: 50 | ilscore: 85&#10;&bull; Damn Those Birds! | MJ 99: Birds | rank: 121 | ilscore: 84&#10;&bull; Hypothesis | MJ 97: Simulation | rank: 33 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>deltea</h1>
+		<a href="https://deltea.itch.io">deltea.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 553</p>
+		<p>Total ilScore: 234</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://deltea.itch.io/information-overload">Information Overload</a></td>
+				<td><span class="early">3h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>50</td>
+				<td>12</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltea.itch.io/damn-those-birds">Damn Those Birds!</a></td>
+				<td><span class="early">1d 3h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>121</td>
+				<td>7</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://deltea.itch.io/hypothesis">Hypothesis</a></td>
+				<td><span class="early">1d 3h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>33</td>
+				<td>11</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2126, 2174, 413, 160, 166, 168, 173, 177, 181, 189, 194, 208, 215, 222, 239, 246, 250, 250, 251, 252, 255, 265, 270, 272, 273, 277, 279, 287, 295, 299, 307, 314, 322, 330, 339, 341, 343, 351, 355, 361,
+				362, 364, 374, 375, 375, 375, 377, 377, 378, 380, 382, 384, 385, 386, 394, 398, 402, 405, 411, 414, 420, 425, 428, 431, 432, 444, 446, 460, 463, 467, 468, 482, 483, 488, 488, 488, 488, 489, 493, 495,
+				497, 502, 504, 505, 507, 511, 517, 519, 521, 526, 531, 535, 538, 543, 546, 552,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

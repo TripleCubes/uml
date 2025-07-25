@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>KeyboardKrieger&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="KeyboardKrieger&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/keyboardkrieger.html" property="og:url">
+	<meta content="Rank by game in top 10: 1471&#10;Rank by game in top 20: 2081&#10;Rank by ilScore: 6466&#10;&#10;1 games&#10;&bull; Einzigartig | MJ 72: Adventure | rank: 8 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>KeyboardKrieger</h1>
+		<a href="https://keyboardkrieger.itch.io">keyboardkrieger.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1471</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2081</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6466</p>
+		<p>Total ilScore: 65</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://keyboardkrieger.itch.io/einzigartig">Einzigartig</a></td>
+				<td><span class="early">9h 8m early</span></td>
+				<td>
+					<a href="../jammer/mrmaskie.html">MrMaskie</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>8</td>
+				<td>9</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				419, 432, 441, 452, 461, 465, 472, 485, 492, 495, 500, 511, 521, 531, 542, 554, 560, 572, 582, 590, 598, 607, 615, 628, 638, 640, 650, 656, 667, 682, 689, 692, 701, 710, 717, 726, 743, 750, 759, 769,
+				781, 795, 808, 809, 820, 828, 836, 845, 862, 870, 878, 891, 892, 901, 919, 928, 938, 951, 964, 974, 984, 988, 991, 1007, 1018, 1022, 1023, 1027, 1041, 1044, 1046, 1051, 1053, 1060, 1069, 1073, 1084, 1086, 1096, 1101,
+				1110, 1116, 1125, 1146, 1163, 1170, 1176, 1183, 1194, 1196, 1206, 1218, 1223, 1236, 1239, 1245, 1254, 1266, 1271, 1271, 1273, 1277, 1280, 1288, 1294, 1312, 1321, 1331, 1340, 1351, 1359, 1368, 1379, 1385, 1394, 1409, 1420, 1433, 1438, 1449,
+				1459, 1470,
+			]],
+			[ "20", [
+				558, 583, 593, 607, 626, 630, 637, 659, 673, 680, 687, 703, 723, 733, 744, 771, 778, 795, 807, 815, 824, 834, 842, 855, 862, 869, 880, 887, 913, 942, 954, 959, 979, 993, 999, 1018, 1035, 1051, 1070, 1089,
+				1111, 1133, 1152, 1153, 1164, 1174, 1185, 1203, 1219, 1228, 1237, 1255, 1259, 1276, 1305, 1316, 1328, 1345, 1358, 1370, 1392, 1395, 1398, 1422, 1443, 1447, 1450, 1455, 1477, 1479, 1481, 1486, 1488, 1498, 1508, 1514, 1524, 1529, 1540, 1546,
+				1565, 1576, 1588, 1609, 1640, 1648, 1656, 1663, 1677, 1684, 1704, 1715, 1723, 1763, 1764, 1772, 1782, 1807, 1813, 1817, 1820, 1825, 1829, 1840, 1847, 1865, 1883, 1892, 1902, 1919, 1931, 1947, 1958, 1965, 1979, 1998, 2016, 2036, 2041, 2053,
+				2068, 2080,
+			]],
+			[ "ilscore", [
+				829, 969, 988, 1018, 1089, 1164, 1175, 1302, 1384, 1393, 1401, 1448, 1544, 1656, 1691, 1777, 1803, 1867, 1887, 1897, 1955, 2015, 2017, 2058, 2066, 2073, 2106, 2153, 2331, 2421, 2489, 2496, 2575, 2611, 2687, 2900, 2931, 3076, 3144, 3265,
+				3555, 3614, 3659, 3660, 3664, 3670, 3673, 3776, 3847, 3868, 3877, 3930, 3932, 4057, 4116, 4126, 4149, 4206, 4270, 4288, 4430, 4439, 4443, 4497, 4549, 4563, 4571, 4574, 4678, 4678, 4681, 4687, 4692, 4702, 4717, 4726, 4756, 4764, 4774, 4779,
+				4865, 4932, 4963, 4972, 5118, 5141, 5178, 5202, 5253, 5262, 5329, 5378, 5387, 5471, 5484, 5499, 5504, 5649, 5657, 5660, 5663, 5667, 5672, 5682, 5696, 5748, 5835, 5859, 5871, 5910, 5934, 5960, 6010, 6035, 6097, 6145, 6193, 6303, 6322, 6397,
+				6439, 6465,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

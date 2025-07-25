@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Sporekid&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Sporekid&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sporekidxx.html" property="og:url">
+	<meta content="Rank by game in top 20: 2504&#10;Rank by ilScore: 5225&#10;&#10;1 games&#10;&bull; You Can&#39;t Go Up ! | MJ 87: Break | rank: 11 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Sporekid</h1>
+		<a href="https://sporekidxx.itch.io">sporekidxx.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2504</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5225</p>
+		<p>Total ilScore: 73</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sporekidxx.itch.io/ycgu">You Can&#39;t Go Up !</a></td>
+				<td><span class="early">34m 42s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-87-break">MJ 87: Break</a></td>
+				<td>104</td>
+				<td>11</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				946, 967, 983, 1000, 1015, 1030, 1039, 1058, 1069, 1075, 1088, 1104, 1130, 1159, 1172, 1177, 1198, 1212, 1228, 1247, 1266, 1281, 1300, 1319, 1341, 1363, 1386, 1387, 1401, 1410, 1422, 1440, 1460, 1473, 1481, 1503, 1508, 1526, 1556, 1568,
+				1580, 1597, 1615, 1630, 1656, 1661, 1664, 1692, 1714, 1722, 1728, 1732, 1760, 1763, 1765, 1770, 1773, 1784, 1802, 1811, 1830, 1839, 1851, 1864, 1882, 1896, 1911, 1931, 1963, 1978, 1986, 1995, 2014, 2025, 2044, 2056, 2065, 2105, 2109, 2120,
+				2131, 2156, 2162, 2166, 2169, 2178, 2181, 2189, 2197, 2221, 2241, 2254, 2269, 2292, 2308, 2331, 2349, 2359, 2379, 2400, 2421, 2447, 2456, 2476, 2491, 2503,
+			]],
+			[ "ilscore", [
+				1418, 1460, 1474, 1481, 1528, 1566, 1573, 1599, 1608, 1614, 1641, 1678, 1851, 1936, 1991, 1998, 2056, 2085, 2134, 2329, 2350, 2473, 2525, 2638, 2913, 2938, 2966, 2967, 2971, 2979, 2984, 3072, 3129, 3150, 3162, 3198, 3200, 3312, 3361, 3372,
+				3392, 3432, 3486, 3502, 3636, 3647, 3651, 3695, 3734, 3749, 3756, 3758, 3840, 3843, 3846, 3853, 3857, 3866, 3877, 3887, 3895, 3907, 3917, 3925, 3992, 4036, 4056, 4063, 4194, 4208, 4236, 4255, 4296, 4306, 4354, 4392, 4403, 4467, 4479, 4494,
+				4500, 4628, 4634, 4636, 4639, 4642, 4647, 4657, 4670, 4701, 4770, 4779, 4791, 4812, 4832, 4842, 4867, 4880, 4937, 4975, 5006, 5107, 5121, 5178, 5202, 5224,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

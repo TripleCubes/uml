@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ThatCakey&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ThatCakey&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/thatcake.html" property="og:url">
+	<meta content="Rank by ilScore: 377&#10;&#10;5 games&#10;&bull; Fit Finder | MJ 161: Style | rank: 35 | ilscore: 36&#10;&bull; Alindoctrination | MJ 149: Ancient | rank: 72 | ilscore: 69&#10;&bull; Bird Delivery Service | MJ 99: Birds | rank: 149 | ilscore: 77&#10;&bull; CupCake Stress | MJ 94: Baking | rank: 49 | ilscore: 58&#10;&bull; Candy Catcher | MJ 66: Sweets | rank: 90 | ilscore: 39&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ThatCakey</h1>
+		<a href="https://thatcake.itch.io">thatcake.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 377</p>
+		<p>Total ilScore: 278</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://thatcake.itch.io/fit-finder">Fit Finder</a></td>
+				<td><span class="early">3h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-161-style">MJ 161: Style</a></td>
+				<td>53</td>
+				<td>35</td>
+				<td>5</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://thatcake.itch.io/alindoctrination">Alindoctrination</a></td>
+				<td><span class="early">3h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-149-ancient">MJ 149: Ancient</a></td>
+				<td>152</td>
+				<td>72</td>
+				<td>7</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://thatcake.itch.io/bird">Bird Delivery Service</a></td>
+				<td><span class="early">11h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>149</td>
+				<td>8</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://thatcake.itch.io/cupcakestress">CupCake Stress</a></td>
+				<td><span class="early">10h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>49</td>
+				<td>9</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://thatcake.itch.io/candy-cather">Candy Catcher</a></td>
+				<td><span class="early">8h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>90</td>
+				<td>3</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1466, 1504, 1549, 1594, 1663, 1699, 1770, 1811, 1984, 2032, 2106, 2190, 2299, 2341, 2501, 2598, 2641, 2682, 2764, 2892, 3038, 3106, 3232, 3308, 3402, 3451, 3506, 3592, 3675, 3697, 785, 798, 803, 817, 837, 286, 321, 335, 336, 339,
+				342, 347, 375, 385, 407, 424, 440, 475, 484, 494, 494, 498, 503, 506, 523, 532, 540, 547, 552, 553, 570, 585, 596, 601, 621, 630, 637, 657, 659, 664, 677, 684, 694, 695, 698, 711, 713, 717, 720, 722,
+				726, 731, 734, 739, 741, 743, 743, 368, 373, 376, 379, 384, 387, 391, 397, 400, 403, 404, 414, 297, 305, 308, 310, 310, 320, 320, 320, 320, 323, 324, 325, 330, 331, 335, 337, 338, 342, 343, 349, 353,
+				356, 360, 360, 363, 365, 365, 367, 371, 376,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

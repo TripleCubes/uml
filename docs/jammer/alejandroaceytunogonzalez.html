@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Aletuno&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Aletuno&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/alejandroaceytunogonzalez.html" property="og:url">
+	<meta content="Rank by game in top 5: 269&#10;Rank by game in top 10: 447&#10;Rank by game in top 20: 841&#10;Rank by ilScore: 3817&#10;&#10;1 games&#10;&bull; Dragon Hoarder | MJ 151: Dragons | rank: 2 | ilscore: 85&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Aletuno</h1>
+		<a href="https://alejandroaceytunogonzalez.itch.io">alejandroaceytunogonzalez.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 269</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 447</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 841</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3817</p>
+		<p>Total ilScore: 85</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://alejandroaceytunogonzalez.itch.io/dragon-hoarder">Dragon Hoarder</a></td>
+				<td><span class="early">9h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>2</td>
+				<td>14</td>
+				<td>85</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				205, 209, 209, 209, 209, 209, 213, 214, 217, 219, 220, 224, 228, 233, 234, 237, 237, 240, 241, 242, 244, 246, 246, 247, 247, 247, 248, 250, 250, 251, 251, 253, 253, 257, 258, 262, 262, 268, 268, 268,
+			]],
+			[ "10", [
+				344, 348, 348, 352, 354, 355, 359, 362, 363, 366, 370, 374, 379, 383, 388, 393, 393, 399, 401, 402, 404, 406, 407, 408, 410, 412, 413, 416, 416, 416, 418, 422, 423, 426, 433, 437, 437, 440, 443, 446,
+			]],
+			[ "20", [
+				628, 637, 639, 646, 656, 656, 662, 668, 677, 684, 690, 695, 704, 712, 720, 725, 727, 740, 743, 745, 749, 754, 756, 759, 763, 766, 770, 776, 781, 790, 793, 798, 799, 803, 812, 819, 820, 824, 832, 840,
+			]],
+			[ "ilscore", [
+				2972, 2977, 3081, 3099, 3119, 3131, 3151, 3160, 3184, 3209, 3219, 3267, 3274, 3290, 3295, 3386, 3393, 3397, 3402, 3406, 3414, 3422, 3435, 3458, 3506, 3518, 3532, 3550, 3566, 3576, 3587, 3598, 3626, 3655, 3679, 3739, 3752, 3779, 3800, 3816,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

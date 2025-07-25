@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CyrolisDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CyrolisDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cyrolisdev.html" property="og:url">
+	<meta content="Rank by ilScore: 6073&#10;&#10;1 games&#10;&bull; Miraï-J | MJ 63: Future | rank: 43 | ilscore: 68&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CyrolisDev</h1>
+		<a href="https://cyrolisdev.itch.io">cyrolisdev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6073</p>
+		<p>Total ilScore: 68</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cyrolisdev.itch.io/mirai-j">Miraï-J</a></td>
+				<td><span class="early">7h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>43</td>
+				<td>7</td>
+				<td>68</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				574, 578, 585, 631, 642, 652, 660, 700, 708, 743, 761, 895, 913, 943, 1007, 1075, 1083, 1207, 1291, 1300, 1308, 1353, 1442, 1551, 1584, 1664, 1687, 1745, 1767, 1774, 1830, 1882, 1886, 1919, 1927, 1934, 1966, 2005, 2181, 2268,
+				2335, 2342, 2417, 2455, 2524, 2728, 2754, 2895, 2955, 3072, 3359, 3417, 3458, 3459, 3463, 3469, 3473, 3570, 3638, 3661, 3670, 3720, 3722, 3844, 3904, 3914, 3935, 3986, 4048, 4063, 4202, 4213, 4217, 4264, 4305, 4320, 4328, 4331, 4430, 4432,
+				4434, 4440, 4445, 4454, 4466, 4476, 4499, 4509, 4519, 4524, 4607, 4665, 4694, 4702, 4840, 4858, 4898, 4920, 4971, 4980, 5043, 5089, 5100, 5178, 5190, 5205, 5211, 5351, 5359, 5362, 5365, 5369, 5374, 5383, 5395, 5440, 5519, 5541, 5551, 5575,
+				5597, 5617, 5657, 5681, 5742, 5784, 5830, 5939, 5950, 6017, 6045, 6072,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

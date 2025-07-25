@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Overlord&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Overlord&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/overlordnikita.html" property="og:url">
+	<meta content="Rank by game in top 20: 2142&#10;Rank by ilScore: 4580&#10;&#10;1 games&#10;&bull; Chicken Loop | MJ 92: Death | rank: 12 | ilscore: 78&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Overlord</h1>
+		<a href="https://overlordnikita.itch.io">overlordnikita.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2142</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4580</p>
+		<p>Total ilScore: 78</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://overlordnikita.itch.io/chicken-loop">Chicken Loop</a></td>
+				<td><span class="early">2h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>12</td>
+				<td>12</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				862, 870, 884, 891, 898, 909, 916, 942, 971, 984, 987, 1007, 1022, 1029, 1048, 1064, 1080, 1099, 1118, 1140, 1162, 1181, 1182, 1193, 1203, 1214, 1232, 1248, 1258, 1267, 1285, 1290, 1306, 1335, 1346, 1358, 1375, 1389, 1401, 1427,
+				1430, 1433, 1457, 1479, 1483, 1486, 1491, 1513, 1515, 1517, 1522, 1524, 1534, 1550, 1556, 1566, 1571, 1583, 1591, 1610, 1621, 1633, 1654, 1687, 1695, 1702, 1709, 1723, 1730, 1750, 1761, 1769, 1809, 1811, 1821, 1830, 1855, 1861, 1865, 1868,
+				1873, 1877, 1887, 1894, 1912, 1932, 1942, 1952, 1969, 1983, 1999, 2010, 2017, 2031, 2050, 2072, 2097, 2102, 2114, 2129, 2141,
+			]],
+			[ "ilscore", [
+				1346, 1354, 1368, 1379, 1386, 1407, 1437, 1601, 1679, 1723, 1730, 1775, 1800, 1837, 2025, 2036, 2151, 2201, 2308, 2569, 2587, 2607, 2608, 2612, 2620, 2625, 2709, 2758, 2779, 2790, 2822, 2825, 2936, 2976, 2985, 3002, 3034, 3077, 3091, 3213,
+				3225, 3228, 3265, 3296, 3308, 3314, 3317, 3377, 3381, 3386, 3393, 3397, 3406, 3414, 3423, 3430, 3441, 3453, 3461, 3517, 3552, 3576, 3582, 3707, 3720, 3739, 3753, 3781, 3790, 3826, 3860, 3872, 3930, 3941, 3955, 3961, 4073, 4080, 4084, 4087,
+				4091, 4097, 4107, 4120, 4147, 4203, 4212, 4226, 4242, 4259, 4270, 4289, 4301, 4343, 4379, 4403, 4484, 4498, 4540, 4562, 4579,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

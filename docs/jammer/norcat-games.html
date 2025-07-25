@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NORCAT Games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NORCAT Games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/norcat-games.html" property="og:url">
+	<meta content="Rank by game in top 10: 365&#10;Rank by game in top 20: 724&#10;Rank by ilScore: 340&#10;&#10;6 games&#10;&bull; Dead Weight | MJ 182: Horror | rank: 63 | ilscore: 44&#10;&bull; 1-1 Maintenance Crew | MJ 138: Rewind | rank: 9 | ilscore: 26&#10;&bull; A Spark Of Life | MJ+ 6: Life | rank: 55 | ilscore: 72&#10;&bull; Season Swap | MJ 136: Cycles | rank: 10 | ilscore: 46&#10;&bull; Gaslight Express | MJ 135: Deception | rank: 32 | ilscore: 50&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NORCAT Games</h1>
+		<a href="https://norcat-games.itch.io">norcat-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 365</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>10</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 724</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>10</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 340</p>
+		<p>Total ilScore: 296</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://norcat-games.itch.io/dead-weight">Dead Weight</a></td>
+				<td><span class="early">1d 1h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-182-horror">MJ 182: Horror</a></td>
+				<td>93</td>
+				<td>63</td>
+				<td>7</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://norcat-games.itch.io/1-1-maintenance-crew">1-1 Maintenance Crew</a></td>
+				<td><span class="early">1h 46m early</span></td>
+				<td>
+					<a href="../jammer/misterp.html">MisterP</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>9</td>
+				<td>9</td>
+				<td>26</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://norcat-games.itch.io/a-spark-of-life">A Spark Of Life</a></td>
+				<td><span class="early">5h 8m early</span></td>
+				<td>
+					<a href="../jammer/knightsorea.html">Knight/Sorea</a>,
+					<a href="../jammer/misterp.html">MisterP</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-6-life">MJ+ 6: Life</a></td>
+				<td>138</td>
+				<td>55</td>
+				<td>10</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://norcat-games.itch.io/season-swap">Season Swap</a></td>
+				<td><span class="early">5m 26s early</span></td>
+				<td>
+					<a href="../jammer/misterp.html">MisterP</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-136-cycles">MJ 136: Cycles</a></td>
+				<td>43</td>
+				<td>10</td>
+				<td>15</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://norcat-games.itch.io/gaslight-express">Gaslight Express</a></td>
+				<td><span class="early">5h 41m early</span></td>
+				<td>
+					<a href="../jammer/misterp.html">MisterP</a>,
+					<a href="../jammer/knightsorea.html">Knight/Sorea</a>,
+					<a href="../jammer/boardingasp642.html">BoardingAsp642</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>32</td>
+				<td>6</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://norcat-games.itch.io/treasure-hunter">Treasure Hunter</a></td>
+				<td><span class="early">5h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>67</td>
+				<td>7</td>
+				<td>58</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1239, 1246, 1260, 247, 250, 254, 255, 258, 259, 260, 262, 262, 264, 265, 266, 270, 272, 273, 274, 278, 280, 281, 282, 285, 286, 289, 294, 295, 302, 306, 310, 312, 312, 318, 320, 321, 323, 325, 326, 327,
+				329, 331, 332, 335, 335, 335, 337, 341, 342, 345, 352, 355, 355, 358, 361, 364,
+			]],
+			[ "20", [
+				1940, 1947, 1975, 462, 466, 475, 478, 484, 490, 493, 498, 502, 512, 516, 517, 520, 522, 528, 531, 538, 548, 548, 551, 557, 567, 574, 581, 582, 591, 599, 606, 609, 611, 621, 624, 626, 631, 637, 639, 642,
+				646, 649, 653, 659, 664, 673, 676, 681, 682, 686, 696, 702, 703, 707, 715, 723,
+			]],
+			[ "ilscore", [
+				5365, 1689, 880, 882, 395, 315, 315, 316, 317, 318, 319, 321, 322, 325, 326, 326, 334, 337, 341, 345, 349, 353, 358, 363, 366, 368, 370, 380, 384, 394, 395, 398, 399, 412, 413, 416, 416, 417, 417, 417,
+				421, 422, 425, 429, 429, 432, 434, 439, 444, 318, 323, 323, 326, 330, 330, 333, 336, 339,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

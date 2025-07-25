@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Krocgar&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Krocgar&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/krocgar.html" property="og:url">
+	<meta content="Rank by game in top 10: 2011&#10;Rank by game in top 20: 3528&#10;Rank by ilScore: 12355&#10;&#10;1 games&#10;&bull; Carrot Knight 2 | MJ 38: Food | rank: 9 | ilscore: 25&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Krocgar</h1>
+		<a href="https://krocgar.itch.io">krocgar.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 2011</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3528</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12355</p>
+		<p>Total ilScore: 25</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://krocgar.itch.io/carrot-knight">Carrot Knight 2</a></td>
+				<td><span class="early">7h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-38-food">MJ 38: Food</a></td>
+				<td>21</td>
+				<td>9</td>
+				<td>5</td>
+				<td>25</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				274, 282, 293, 303, 310, 319, 327, 337, 343, 352, 359, 366, 377, 396, 410, 419, 427, 438, 448, 459, 469, 480, 488, 493, 506, 524, 537, 553, 565, 572, 584, 592, 600, 613, 626, 636, 644, 653, 666, 675,
+				685, 694, 703, 712, 724, 731, 748, 758, 769, 779, 791, 803, 815, 823, 834, 844, 861, 869, 878, 895, 908, 918, 932, 940, 946, 957, 969, 976, 986, 993, 1002, 1009, 1018, 1035, 1042, 1051, 1061, 1072, 1086, 1099,
+				1104, 1119, 1128, 1136, 1145, 1162, 1177, 1189, 1202, 1210, 1219, 1237, 1246, 1257, 1270, 1283, 1293, 1303, 1311, 1321, 1336, 1346, 1354, 1362, 1372, 1386, 1391, 1402, 1418, 1426, 1438, 1454, 1467, 1477, 1491, 1503, 1518, 1526, 1530, 1538,
+				1559, 1576, 1590, 1598, 1607, 1618, 1633, 1643, 1655, 1671, 1684, 1691, 1697, 1706, 1718, 1723, 1732, 1746, 1757, 1765, 1783, 1794, 1812, 1820, 1829, 1845, 1856, 1868, 1883, 1901, 1910, 1918, 1933, 1944, 1957, 1968, 1985, 1998, 2010,
+			]],
+			[ "20", [
+				385, 397, 414, 425, 439, 448, 456, 476, 486, 502, 514, 520, 542, 572, 591, 610, 626, 646, 662, 685, 711, 736, 741, 749, 774, 803, 830, 859, 870, 885, 908, 923, 940, 966, 989, 1008, 1022, 1041, 1066, 1086,
+				1104, 1121, 1145, 1166, 1186, 1199, 1221, 1238, 1260, 1279, 1303, 1323, 1348, 1367, 1393, 1409, 1432, 1448, 1467, 1489, 1513, 1528, 1552, 1567, 1585, 1610, 1636, 1648, 1661, 1682, 1695, 1711, 1730, 1750, 1765, 1784, 1802, 1824, 1846, 1869,
+				1874, 1898, 1917, 1938, 1956, 1976, 2005, 2028, 2050, 2066, 2084, 2111, 2127, 2147, 2162, 2184, 2198, 2224, 2244, 2263, 2288, 2309, 2328, 2351, 2362, 2390, 2395, 2413, 2438, 2456, 2478, 2499, 2523, 2546, 2566, 2582, 2604, 2622, 2634, 2652,
+				2681, 2713, 2735, 2755, 2776, 2796, 2817, 2832, 2849, 2872, 2912, 2926, 2941, 2955, 2980, 2994, 3006, 3031, 3055, 3077, 3100, 3117, 3148, 3168, 3192, 3221, 3245, 3271, 3295, 3325, 3343, 3362, 3389, 3408, 3434, 3459, 3491, 3510, 3527,
+			]],
+			[ "ilscore", [
+				476, 487, 508, 522, 540, 540, 556, 595, 627, 667, 685, 687, 803, 901, 922, 988, 1030, 1110, 1168, 1287, 1327, 1374, 1377, 1387, 1454, 1498, 1653, 1771, 1775, 1817, 1923, 1971, 2020, 2076, 2157, 2202, 2279, 2330, 2505, 2565,
+				2653, 2744, 2857, 2907, 3063, 3170, 3225, 3272, 3359, 3490, 3641, 3727, 3866, 3949, 4048, 4114, 4175, 4278, 4371, 4404, 4475, 4515, 4564, 4646, 4735, 4952, 5072, 5182, 5205, 5325, 5403, 5505, 5759, 5822, 6012, 6104, 6281, 6650, 6731, 6831,
+				6834, 6880, 6903, 6933, 7081, 7204, 7299, 7334, 7430, 7454, 7628, 7713, 7767, 7811, 7897, 8002, 8051, 8237, 8259, 8288, 8393, 8481, 8523, 8548, 8558, 8706, 8710, 8734, 8772, 8801, 8829, 8873, 8928, 9003, 9032, 9059, 9094, 9225, 9351, 9428,
+				9468, 9643, 9698, 9792, 9860, 9958, 9983, 10076, 10165, 10190, 10324, 10360, 10413, 10434, 10624, 10665, 10680, 10712, 10742, 10783, 10810, 10867, 10957, 11073, 11140, 11189, 11261, 11332, 11402, 11489, 11559, 11644, 11721, 11810, 11987, 12055, 12182, 12264, 12354,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

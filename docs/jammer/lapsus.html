@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LapsuS&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LapsuS&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lapsus.html" property="og:url">
+	<meta content="Rank by game in top 20: 2127&#10;Rank by ilScore: 5056&#10;&#10;1 games&#10;&bull; Sweet Teeth | MJ 66: Sweets | rank: 17 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LapsuS</h1>
+		<a href="https://lapsus.itch.io">lapsus.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2127</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5056</p>
+		<p>Total ilScore: 74</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lapsus.itch.io/sweet-teeth">Sweet Teeth</a></td>
+				<td><span class="early">3h 15m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>17</td>
+				<td>13</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				482, 491, 498, 524, 541, 546, 560, 569, 594, 604, 618, 637, 642, 649, 671, 685, 692, 698, 714, 734, 744, 757, 784, 791, 808, 820, 829, 838, 848, 856, 870, 877, 884, 895, 902, 928, 957, 970, 975, 995,
+				1009, 1016, 1035, 1052, 1068, 1087, 1106, 1128, 1150, 1169, 1170, 1181, 1191, 1202, 1220, 1236, 1246, 1255, 1273, 1278, 1294, 1323, 1334, 1346, 1363, 1377, 1389, 1415, 1418, 1421, 1445, 1467, 1471, 1474, 1479, 1501, 1503, 1505, 1510, 1512,
+				1522, 1538, 1544, 1554, 1559, 1571, 1577, 1596, 1607, 1618, 1639, 1672, 1680, 1687, 1694, 1708, 1715, 1735, 1746, 1754, 1794, 1796, 1806, 1815, 1840, 1846, 1850, 1853, 1858, 1862, 1872, 1879, 1897, 1917, 1927, 1937, 1954, 1968, 1984, 1995,
+				2002, 2016, 2035, 2057, 2082, 2087, 2099, 2114, 2126,
+			]],
+			[ "ilscore", [
+				479, 491, 501, 509, 539, 551, 568, 587, 707, 721, 744, 798, 847, 856, 976, 1046, 1054, 1063, 1096, 1172, 1271, 1292, 1361, 1375, 1416, 1429, 1436, 1482, 1518, 1525, 1543, 1554, 1560, 1585, 1620, 1789, 1873, 1926, 1933, 1990,
+				2018, 2063, 2257, 2271, 2390, 2441, 2552, 2824, 2849, 2875, 2876, 2880, 2888, 2893, 2979, 3033, 3053, 3064, 3100, 3102, 3214, 3259, 3270, 3289, 3329, 3375, 3391, 3526, 3537, 3540, 3583, 3618, 3633, 3640, 3642, 3719, 3722, 3725, 3732, 3736,
+				3745, 3755, 3764, 3771, 3783, 3795, 3802, 3868, 3908, 3931, 3938, 4069, 4083, 4107, 4124, 4160, 4170, 4215, 4251, 4263, 4327, 4339, 4355, 4361, 4481, 4488, 4490, 4493, 4496, 4501, 4511, 4524, 4556, 4624, 4631, 4643, 4663, 4682, 4692, 4718,
+				4729, 4784, 4821, 4852, 4941, 4954, 5009, 5033, 5055,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

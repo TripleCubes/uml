@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Hugheth&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Hugheth&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hugheth.html" property="og:url">
+	<meta content="Rank by game in top 10: 915&#10;Rank by game in top 20: 1282&#10;Rank by ilScore: 3970&#10;&#10;1 games&#10;&bull; Octopus Boutique | MJ 134: Islands | rank: 6 | ilscore: 83&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Hugheth</h1>
+		<a href="https://hugheth.itch.io">hugheth.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 915</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1282</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3970</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://flatwhitecanvas.itch.io/octopusboutique">Octopus Boutique</a></td>
+				<td><span class="early">5h 12m early</span></td>
+				<td>
+					<a href="../jammer/flatwhitecanvas.html">Flat White Canvas</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>6</td>
+				<td>12</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				650, 652, 652, 654, 663, 667, 671, 678, 679, 686, 690, 691, 694, 694, 696, 699, 705, 709, 717, 724, 737, 738, 742, 745, 754, 755, 761, 766, 770, 784, 787, 792, 799, 812, 815, 818, 818, 819, 821, 823,
+				826, 837, 843, 846, 848, 853, 855, 855, 861, 865, 871, 883, 891, 901, 901, 902, 909, 914,
+			]],
+			[ "20", [
+				887, 890, 893, 897, 905, 907, 912, 921, 924, 934, 942, 945, 950, 955, 962, 967, 973, 977, 985, 995, 1010, 1014, 1025, 1027, 1037, 1043, 1056, 1064, 1070, 1091, 1094, 1101, 1111, 1124, 1129, 1139, 1140, 1142, 1146, 1151,
+				1155, 1167, 1175, 1179, 1184, 1191, 1198, 1207, 1213, 1218, 1223, 1236, 1244, 1257, 1258, 1260, 1272, 1281,
+			]],
+			[ "ilscore", [
+				2850, 2865, 2871, 2875, 2911, 2915, 2920, 2928, 2931, 2937, 2950, 2958, 2964, 2974, 2984, 2994, 3035, 3065, 3084, 3089, 3202, 3218, 3238, 3252, 3275, 3284, 3310, 3336, 3346, 3398, 3408, 3424, 3429, 3529, 3536, 3540, 3544, 3548, 3556, 3564,
+				3577, 3598, 3646, 3658, 3672, 3691, 3707, 3718, 3729, 3741, 3769, 3795, 3818, 3892, 3905, 3933, 3954, 3969,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

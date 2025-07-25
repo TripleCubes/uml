@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Jefferson Toal&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Jefferson Toal&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/jeffersontoal.html" property="og:url">
+	<meta content="Rank by game in top 5: 630&#10;Rank by game in top 10: 837&#10;Rank by game in top 20: 1201&#10;Rank by ilScore: 488&#10;&#10;3 games&#10;&bull; NICK OF TIME (jam version) | MJ 126: Lost | rank: 2 | ilscore: 73&#10;&bull; Hide And Squeak | MJ 80: Cats | rank: 37 | ilscore: 83&#10;&bull; Froguelike | MJ 79: Frogs | rank: 39 | ilscore: 95&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Jefferson Toal</h1>
+		<a href="https://jeffersontoal.itch.io">jeffersontoal.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 630</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 837</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1201</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 488</p>
+		<p>Total ilScore: 250</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://viigames.itch.io/nick-of-time">NICK OF TIME (jam version)</a></td>
+				<td><span class="early">27m 53s early</span></td>
+				<td>
+					<a href="../jammer/viigames.html">Gorethumb</a>,
+					<a href="../jammer/tornadocub.html">tornado cub</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>2</td>
+				<td>22</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://viigames.itch.io/hideandsqueak">Hide And Squeak</a></td>
+				<td><span class="early">37m 28s early</span></td>
+				<td>
+					<a href="../jammer/viigames.html">Gorethumb</a>,
+					<a href="../jammer/thezoeag.html">TheZoeAG</a>,
+					<a href="../jammer/tornadocub.html">tornado cub</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>37</td>
+				<td>30</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://kasmeltz.itch.io/froguelike">Froguelike</a></td>
+				<td><span class="early">7m 10s early</span></td>
+				<td>
+					<a href="../jammer/kasmeltz.html">kasmeltz</a>,
+					<a href="../jammer/thezoeag.html">TheZoeAG</a>,
+					<a href="../jammer/rayvax.html">Rayvax</a>,
+					<a href="../jammer/jneen.html">jneen</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>39</td>
+				<td>15</td>
+				<td>95</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				407, 411, 413, 418, 419, 420, 420, 426, 431, 433, 433, 433, 438, 442, 447, 452, 453, 461, 465, 465, 467, 467, 469, 471, 477, 479, 485, 493, 503, 504, 507, 509, 513, 514, 519, 523, 524, 532, 534, 539,
+				543, 549, 552, 552, 552, 552, 554, 556, 556, 567, 572, 573, 575, 579, 581, 582, 586, 587, 592, 596, 604, 614, 614, 621, 628, 629,
+			]],
+			[ "10", [
+				538, 552, 555, 563, 564, 566, 569, 581, 587, 589, 590, 592, 597, 601, 605, 611, 612, 619, 623, 624, 627, 627, 629, 632, 638, 642, 650, 658, 668, 673, 676, 679, 684, 685, 691, 695, 699, 713, 716, 721,
+				728, 741, 744, 747, 747, 748, 750, 752, 753, 764, 770, 773, 775, 780, 782, 782, 788, 792, 797, 801, 814, 823, 823, 827, 834, 836,
+			]],
+			[ "20", [
+				761, 775, 779, 788, 790, 792, 794, 809, 816, 819, 823, 827, 831, 833, 838, 847, 850, 860, 868, 871, 876, 881, 888, 893, 899, 903, 911, 922, 934, 941, 952, 954, 960, 966, 979, 987, 993, 1014, 1018, 1026,
+				1036, 1049, 1054, 1064, 1065, 1067, 1071, 1076, 1078, 1090, 1098, 1102, 1107, 1114, 1121, 1130, 1136, 1141, 1145, 1150, 1163, 1175, 1176, 1181, 1193, 1200,
+			]],
+			[ "ilscore", [
+				518, 150, 152, 152, 162, 175, 183, 187, 191, 196, 205, 209, 213, 220, 226, 230, 235, 241, 243, 245, 251, 265, 290, 304, 306, 309, 312, 318, 341, 351, 376, 392, 405, 441, 450, 459, 459, 463, 468, 471,
+				484, 493, 502, 507, 512, 513, 529, 544, 553, 264, 271, 274, 281, 290, 293, 295, 302, 307, 312, 314, 315, 321, 322, 322, 322, 323, 324, 325, 327, 328, 331, 332, 332, 340, 343, 347, 351, 356, 359, 364,
+				370, 373, 375, 377, 388, 392, 402, 403, 406, 407, 420, 421, 424, 424, 425, 425, 425, 429, 431, 434, 438, 439, 441, 443, 448, 453, 456, 458, 462, 468, 472, 475, 480, 483, 487,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

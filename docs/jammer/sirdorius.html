@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>sirdorius&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="sirdorius&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/sirdorius.html" property="og:url">
+	<meta content="Rank by game in top 20: 527&#10;Rank by ilScore: 1202&#10;&#10;2 games&#10;&bull; Aleph | MJ 118: Vampires | rank: 16 | ilscore: 84&#10;&bull; Touchdown Troubles | MJ 75: Wisdom | rank: 11 | ilscore: 76&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>sirdorius</h1>
+		<a href="https://sirdorius.itch.io">sirdorius.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 527</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>16</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1202</p>
+		<p>Total ilScore: 160</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sirdorius.itch.io/aleph">Aleph</a></td>
+				<td><span class="early">14m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>16</td>
+				<td>16</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://sirdorius.itch.io/touchdown-troubles">Touchdown Troubles</a></td>
+				<td><span class="early">13h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>11</td>
+				<td>19</td>
+				<td>76</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				581, 600, 602, 609, 631, 645, 652, 657, 673, 693, 702, 713, 733, 740, 755, 765, 773, 782, 792, 800, 813, 820, 826, 836, 842, 868, 897, 909, 914, 931, 943, 949, 968, 984, 1000, 1018, 1037, 1060, 1081, 1100,
+				1101, 1106, 1114, 1125, 1142, 280, 280, 284, 288, 290, 293, 297, 303, 309, 314, 316, 324, 326, 328, 329, 332, 335, 339, 341, 343, 346, 349, 353, 356, 357, 360, 363, 364, 368, 368, 373, 374, 375, 377, 380,
+				383, 386, 393, 397, 398, 402, 403, 409, 418, 422, 423, 430, 435, 439, 443, 443, 447, 450, 450, 453, 457, 458, 461, 465, 468, 472, 478, 478, 478, 482, 485, 488, 494, 505, 511, 512, 515, 519, 526,
+			]],
+			[ "ilscore", [
+				714, 765, 810, 819, 938, 1007, 1014, 1024, 1055, 1130, 1228, 1249, 1316, 1328, 1363, 1376, 1383, 1425, 1457, 1464, 1482, 1493, 1499, 1523, 1558, 1726, 1805, 1853, 1860, 1910, 1937, 1982, 2172, 2186, 2304, 2353, 2466, 2734, 2754, 2780,
+				2781, 2784, 2792, 2796, 2883, 637, 641, 649, 655, 656, 671, 691, 702, 708, 726, 739, 747, 770, 777, 783, 800, 813, 822, 823, 826, 839, 840, 840, 843, 843, 847, 851, 856, 860, 862, 864, 866, 873, 884, 887,
+				890, 920, 931, 937, 940, 951, 957, 977, 991, 996, 1013, 1017, 1021, 1025, 1042, 1046, 1049, 1051, 1051, 1054, 1055, 1058, 1066, 1074, 1083, 1089, 1092, 1097, 1107, 1116, 1123, 1135, 1142, 1154, 1168, 1173, 1186, 1193, 1201,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

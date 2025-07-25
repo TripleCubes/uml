@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Gameomatic&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Gameomatic&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gameomatic.html" property="og:url">
+	<meta content="Rank by ilScore: 7082&#10;&#10;1 games&#10;&bull; BubbleRage | MJ 84: Bubbles | rank: 105 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Gameomatic</h1>
+		<a href="https://gameomatic.itch.io">gameomatic.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7082</p>
+		<p>Total ilScore: 61</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gameomatic.itch.io/bubblerage">BubbleRage</a></td>
+				<td><span class="early">14h 33m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>105</td>
+				<td>12</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1739, 1853, 1892, 1984, 2022, 2086, 2112, 2131, 2190, 2255, 2257, 2312, 2322, 2328, 2369, 2427, 2608, 2702, 2775, 2781, 2869, 2909, 2989, 3210, 3247, 3401, 3472, 3597, 3902, 3967, 4014, 4015, 4022, 4028, 4031, 4137, 4215, 4241, 4253, 4312,
+				4313, 4444, 4506, 4519, 4540, 4600, 4673, 4693, 4840, 4850, 4854, 4914, 4972, 4991, 4999, 5002, 5110, 5110, 5113, 5118, 5124, 5133, 5147, 5160, 5196, 5202, 5211, 5214, 5303, 5385, 5417, 5428, 5574, 5601, 5646, 5675, 5731, 5737, 5809, 5862,
+				5872, 5964, 5975, 5989, 5994, 6147, 6155, 6158, 6161, 6165, 6170, 6179, 6198, 6258, 6348, 6376, 6390, 6433, 6472, 6505, 6563, 6593, 6659, 6714, 6771, 6889, 6911, 6998, 7042, 7081,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

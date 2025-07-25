@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DoogleGames&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DoogleGames&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dooglegames.html" property="og:url">
+	<meta content="Rank by ilScore: 7977&#10;&#10;1 games&#10;&bull; Beatbox Burglar | MJ 55: Stealth | rank: 34 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DoogleGames</h1>
+		<a href="https://dooglegames.itch.io">dooglegames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7977</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://shinyadmiral.itch.io/beatbox-bur">Beatbox Burglar</a></td>
+				<td><span class="early">33m 23s early</span></td>
+				<td>
+					<a href="../jammer/shinyadmiral.html">shinyadmiral</a>,
+					<a href="../jammer/msl-music.html">MSL_Music</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>34</td>
+				<td>6</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				457, 535, 548, 564, 571, 576, 608, 617, 740, 842, 844, 855, 936, 955, 971, 999, 1059, 1071, 1130, 1154, 1299, 1331, 1382, 1460, 1553, 1569, 1710, 1798, 1818, 1835, 1901, 2015, 2140, 2184, 2288, 2339, 2411, 2442, 2473, 2531,
+				2602, 2605, 2661, 2675, 2685, 2732, 2792, 2977, 3078, 3159, 3167, 3264, 3309, 3400, 3623, 3667, 3830, 3909, 4043, 4364, 4430, 4490, 4490, 4505, 4509, 4516, 4625, 4715, 4752, 4764, 4831, 4834, 4971, 5037, 5058, 5086, 5161, 5244, 5267, 5422,
+				5432, 5437, 5516, 5576, 5593, 5601, 5604, 5719, 5719, 5722, 5727, 5733, 5743, 5766, 5783, 5827, 5836, 5843, 5849, 5956, 6046, 6092, 6104, 6261, 6290, 6344, 6383, 6452, 6457, 6534, 6592, 6604, 6713, 6723, 6752, 6759, 6921, 6933, 6937, 6940,
+				6941, 6948, 6957, 6982, 7058, 7146, 7181, 7198, 7249, 7298, 7333, 7396, 7435, 7505, 7565, 7627, 7754, 7783, 7883, 7931, 7976,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

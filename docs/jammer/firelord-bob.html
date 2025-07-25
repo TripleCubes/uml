@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Firelord Bob&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Firelord Bob&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/firelord-bob.html" property="og:url">
+	<meta content="Rank by game in top 5: 1033&#10;Rank by game in top 10: 1701&#10;Rank by game in top 20: 2531&#10;Rank by ilScore: 1198&#10;&#10;4 games&#10;&bull; Little Death | MJ 72: Adventure | rank: 23 | ilscore: 56&#10;&bull; Surmount The Summit | MJ 52: Summit | rank: 72 | ilscore: 37&#10;&bull; The Magic Lance | MJ 39: Monsters | rank: 4 | ilscore: 34&#10;&bull; Trainger Danger! | MJ 32: Explosions | rank: 21 | ilscore: 33&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Firelord Bob</h1>
+		<a href="https://firelord-bob.itch.io">firelord-bob.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1033</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1701</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2531</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1198</p>
+		<p>Total ilScore: 160</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://firelord-bob.itch.io/little-death">Little Death</a></td>
+				<td><span class="early">13m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-72-adventure">MJ 72: Adventure</a></td>
+				<td>73</td>
+				<td>23</td>
+				<td>10</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://firelord-bob.itch.io/surmount-the-summit">Surmount The Summit</a></td>
+				<td><span class="early">1h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>72</td>
+				<td>3</td>
+				<td>37</td>
+			</tr>
+			<tr>
+				<td><a href="https://firelord-bob.itch.io/the-magic-lance">The Magic Lance</a></td>
+				<td><span class="early">6m 38s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-39-monsters">MJ 39: Monsters</a></td>
+				<td>23</td>
+				<td>4</td>
+				<td>10</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://firelord-bob.itch.io/trainger-danger">Trainger Danger!</a></td>
+				<td><span class="early">2m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-32-explosions">MJ 32: Explosions</a></td>
+				<td>36</td>
+				<td>21</td>
+				<td>6</td>
+				<td>33</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				133, 137, 140, 145, 148, 149, 151, 155, 160, 165, 166, 174, 186, 193, 198, 204, 211, 216, 224, 232, 239, 239, 242, 248, 256, 264, 272, 281, 285, 291, 296, 302, 307, 313, 318, 323, 328, 335, 338, 342,
+				347, 351, 358, 366, 368, 382, 387, 393, 397, 403, 408, 414, 418, 424, 431, 440, 443, 450, 457, 465, 474, 477, 484, 488, 494, 505, 508, 513, 518, 521, 526, 533, 542, 546, 549, 553, 559, 568, 572, 573,
+				578, 583, 591, 595, 603, 612, 621, 629, 631, 636, 646, 650, 658, 661, 668, 673, 676, 680, 683, 688, 694, 699, 704, 708, 717, 719, 723, 730, 733, 740, 746, 752, 757, 763, 771, 781, 787, 789, 793, 800,
+				810, 821, 826, 831, 835, 842, 846, 852, 858, 866, 870, 873, 879, 885, 889, 889, 891, 899, 902, 908, 915, 926, 931, 935, 941, 946, 952, 961, 971, 974, 979, 990, 998, 1005, 1010, 1017, 1027, 1032,
+			]],
+			[ "10", [
+				178, 189, 192, 196, 199, 200, 202, 209, 219, 226, 227, 238, 257, 265, 274, 284, 295, 305, 316, 328, 339, 339, 343, 357, 375, 388, 404, 408, 415, 428, 436, 444, 457, 470, 476, 484, 493, 506, 515, 526,
+				535, 544, 551, 564, 571, 587, 596, 607, 617, 629, 641, 653, 661, 672, 682, 700, 708, 717, 727, 740, 750, 753, 763, 769, 780, 795, 802, 808, 816, 825, 832, 841, 858, 865, 874, 884, 896, 910, 923, 924,
+				938, 947, 955, 964, 981, 993, 1001, 1014, 1016, 1025, 1043, 1052, 1063, 1076, 1089, 1099, 1109, 1116, 1119, 1134, 1145, 1153, 1157, 1161, 1175, 1179, 1182, 1187, 1190, 1198, 1214, 1221, 1232, 1238, 1250, 1264, 1272, 1278, 1286, 1307,
+				1324, 1338, 1346, 1355, 1366, 1374, 1384, 1396, 1402, 1415, 1421, 1427, 1436, 1448, 1453, 1453, 1455, 1464, 1469, 1475, 1482, 1500, 1508, 1518, 1534, 1545, 1557, 1572, 1590, 1600, 1609, 1624, 1635, 1648, 1658, 1675, 1688, 1700,
+			]],
+			[ "20", [
+				214, 227, 231, 235, 239, 241, 245, 255, 267, 272, 273, 286, 317, 325, 335, 345, 359, 377, 395, 408, 429, 436, 443, 469, 488, 516, 545, 551, 562, 586, 596, 603, 630, 651, 656, 672, 684, 709, 724, 740,
+				758, 769, 776, 798, 811, 826, 836, 858, 878, 903, 917, 942, 951, 972, 988, 1005, 1022, 1038, 1045, 1065, 1076, 1082, 1095, 1111, 1137, 1166, 1179, 1184, 1205, 1219, 1235, 1254, 1274, 1289, 1308, 1327, 1349, 1371, 1394, 1395,
+				1409, 1418, 1430, 1448, 1468, 1481, 1489, 1511, 1516, 1534, 1564, 1576, 1588, 1605, 1627, 1642, 1668, 1673, 1676, 1704, 1726, 1734, 1740, 1744, 1772, 1775, 1777, 1782, 1785, 1796, 1815, 1824, 1843, 1852, 1864, 1878, 1896, 1910, 1925, 1945,
+				1977, 1992, 2000, 2010, 2029, 2040, 2059, 2077, 2086, 2126, 2130, 2141, 2152, 2177, 2183, 2187, 2190, 2199, 2202, 2210, 2218, 2246, 2266, 2279, 2294, 2317, 2333, 2356, 2374, 2385, 2405, 2426, 2447, 2473, 2483, 2503, 2518, 2530,
+			]],
+			[ "ilscore", [
+				287, 322, 327, 327, 350, 350, 352, 84, 90, 91, 96, 96, 98, 102, 112, 117, 123, 127, 190, 239, 242, 77, 87, 96, 101, 108, 122, 129, 130, 132, 135, 140, 156, 190, 190, 196, 205, 215, 221, 228,
+				242, 250, 261, 105, 119, 124, 135, 144, 152, 152, 174, 200, 202, 202, 213, 228, 241, 248, 258, 265, 272, 277, 283, 296, 302, 305, 310, 314, 318, 320, 326, 348, 379, 397, 398, 404, 409, 416, 446, 456,
+				483, 504, 526, 570, 585, 598, 598, 601, 604, 608, 623, 635, 639, 647, 653, 654, 669, 689, 700, 706, 724, 736, 744, 767, 774, 780, 797, 810, 819, 820, 823, 836, 837, 837, 840, 840, 844, 848, 853, 857,
+				859, 861, 863, 870, 881, 885, 888, 918, 929, 934, 937, 948, 954, 974, 987, 992, 1010, 1013, 1017, 1021, 1037, 1041, 1044, 1046, 1046, 1049, 1050, 1053, 1061, 1069, 1078, 1084, 1087, 1092, 1102, 1111, 1118, 1130, 1137, 1149,
+				1163, 1168, 1181, 1188, 1197,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

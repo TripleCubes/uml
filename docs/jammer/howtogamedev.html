@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>HowToGameDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="HowToGameDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/howtogamedev.html" property="og:url">
+	<meta content="Rank by ilScore: 1370&#10;&#10;2 games&#10;&bull; Pawn Battle | MJ 108: Seaside | rank: 83 | ilscore: 84&#10;&bull; The Sorcerer&#39;s Tail | MJ 98: Empty | rank: 45 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>HowToGameDev</h1>
+		<a href="https://howtogamedev.itch.io">howtogamedev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1370</p>
+		<p>Total ilScore: 150</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://aslangames.itch.io/pawn-battle">Pawn Battle</a></td>
+				<td><span class="early">10h 37m early</span></td>
+				<td>
+					<a href="../jammer/aslangames.html">Ahmet Kamil Keleş</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>83</td>
+				<td>21</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://fledered.itch.io/the-sorcerers-tail">The Sorcerer&#39;s Tail</a></td>
+				<td><span class="early">3h 5m early</span></td>
+				<td>
+					<a href="../jammer/fledered.html">Fledered</a>,
+					<a href="../jammer/cagant.html">Frog King</a>,
+					<a href="../jammer/akashic-owl.html">Akashic Owl</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>45</td>
+				<td>13</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2102, 2278, 2368, 2435, 2442, 2519, 2556, 2631, 2842, 2872, 564, 585, 610, 652, 669, 684, 684, 687, 691, 696, 712, 730, 732, 740, 747, 750, 769, 788, 802, 811, 830, 846, 855, 881, 889, 897, 915, 929, 940, 945,
+				946, 961, 961, 961, 964, 964, 969, 973, 980, 986, 988, 990, 992, 1001, 1015, 1023, 1026, 1054, 1066, 1072, 1075, 1085, 1090, 1109, 1124, 1130, 1148, 1151, 1159, 1165, 1185, 1187, 1191, 1193, 1194, 1198, 1198, 1201, 1210, 1222,
+				1233, 1239, 1244, 1249, 1262, 1270, 1278, 1292, 1300, 1315, 1333, 1338, 1350, 1360, 1369,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

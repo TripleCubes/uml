@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>pinkpi&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="pinkpi&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pinkpi.html" property="og:url">
+	<meta content="Rank by game in top 5: 1054&#10;Rank by game in top 10: 1786&#10;Rank by game in top 20: 2738&#10;Rank by ilScore: 9940&#10;&#10;1 games&#10;&bull; on the subject of coins | MJ 139: Fae | rank: 5 | ilscore: 44&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>pinkpi</h1>
+		<a href="https://pinkpi.itch.io">pinkpi.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1054</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1786</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2738</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9940</p>
+		<p>Total ilScore: 44</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pinkpi.itch.io/on-the-subject-of-coins">on the subject of coins</a></td>
+				<td><span class="early">45m 22s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-139-fae">MJ 139: Fae</a></td>
+				<td>37</td>
+				<td>5</td>
+				<td>7</td>
+				<td>44</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				742, 749, 752, 759, 765, 771, 776, 782, 790, 800, 806, 808, 812, 819, 829, 840, 845, 850, 854, 861, 865, 871, 877, 885, 889, 892, 898, 904, 908, 908, 911, 919, 922, 929, 936, 947, 952, 956, 962, 967,
+				973, 982, 992, 995, 1000, 1011, 1019, 1026, 1031, 1038, 1048, 1053,
+			]],
+			[ "10", [
+				1232, 1247, 1250, 1261, 1277, 1284, 1295, 1303, 1315, 1330, 1338, 1344, 1352, 1373, 1390, 1404, 1412, 1421, 1432, 1444, 1454, 1466, 1482, 1495, 1502, 1508, 1517, 1529, 1534, 1534, 1538, 1546, 1551, 1558, 1566, 1584, 1592, 1602, 1618, 1629,
+				1641, 1656, 1674, 1684, 1693, 1708, 1719, 1732, 1743, 1760, 1773, 1785,
+			]],
+			[ "20", [
+				1899, 1910, 1913, 1925, 1945, 1954, 1977, 1986, 1997, 2012, 2030, 2044, 2062, 2082, 2114, 2135, 2151, 2163, 2183, 2195, 2214, 2232, 2249, 2289, 2294, 2304, 2315, 2340, 2348, 2352, 2357, 2365, 2368, 2376, 2384, 2416, 2436, 2451, 2466, 2491,
+				2507, 2532, 2551, 2570, 2590, 2611, 2632, 2658, 2676, 2707, 2721, 2737,
+			]],
+			[ "ilscore", [
+				7016, 7031, 7044, 7056, 7099, 7134, 7197, 7222, 7236, 7256, 7369, 7487, 7553, 7588, 7750, 7790, 7870, 7925, 8013, 8029, 8112, 8182, 8198, 8323, 8345, 8391, 8402, 8585, 8610, 8610, 8624, 8630, 8654, 8662, 8705, 8789, 8885, 8931, 8967, 9032,
+				9096, 9156, 9235, 9282, 9356, 9425, 9499, 9644, 9696, 9804, 9875, 9939,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

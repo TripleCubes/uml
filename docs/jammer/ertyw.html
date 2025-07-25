@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Ertyw&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Ertyw&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ertyw.html" property="og:url">
+	<meta content="Rank by ilScore: 875&#10;&#10;3 games&#10;&bull; Depths Explore | MJ 109: Depths | rank: 54 | ilscore: 73&#10;&bull; Heaven Battles | MJ 70: Heaven | rank: 34 | ilscore: 48&#10;&bull; Sweets drop | MJ 66: Sweets | rank: 35 | ilscore: 67&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Ertyw</h1>
+		<a href="https://ertyw.itch.io">ertyw.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 875</p>
+		<p>Total ilScore: 187</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ertyw.itch.io/depthsexplore">Depths Explore</a></td>
+				<td><span class="early">4h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>54</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://ertyw.itch.io/heaven-battle">Heaven Battles</a></td>
+				<td><span class="early">5h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>34</td>
+				<td>17</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://ertyw.itch.io/sweets-drop">Sweets drop</a></td>
+				<td><span class="early">11h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>35</td>
+				<td>10</td>
+				<td>67</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				659, 669, 679, 687, 729, 202, 216, 227, 257, 265, 277, 302, 319, 328, 360, 389, 406, 413, 431, 450, 482, 495, 512, 526, 536, 546, 552, 576, 592, 599, 610, 619, 625, 635, 652, 698, 734, 750, 756, 780,
+				799, 820, 885, 897, 932, 339, 346, 380, 389, 395, 396, 400, 404, 407, 417, 426, 435, 439, 445, 446, 460, 474, 483, 489, 503, 513, 518, 531, 533, 536, 548, 556, 566, 567, 571, 583, 584, 590, 591, 594,
+				596, 600, 603, 607, 611, 612, 612, 622, 632, 636, 639, 657, 658, 664, 668, 676, 682, 699, 712, 716, 728, 733, 738, 740, 754, 759, 761, 763, 764, 768, 769, 773, 777, 780, 789, 795, 798, 800, 804, 815,
+				821, 829, 834, 842, 849, 851, 862, 867, 874,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

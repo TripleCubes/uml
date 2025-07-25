@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>dk5000p&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="dk5000p&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dk5000p.html" property="og:url">
+	<meta content="Rank by game in top 10: 13&#10;Rank by game in top 20: 9&#10;Rank by ilScore: 33&#10;&#10;34 games&#10;&bull; Island Hopping | MJ 50: Islands | rank: 37 | ilscore: 69&#10;&bull; Seasoned Defender | MJ 49: Seasons | rank: 18 | ilscore: 16&#10;&bull; Energy Cycle | MJ 47: Internet | rank: 35 | ilscore: 39&#10;&bull; Just Ice | MJ 46: Justice | rank: 9999999 | ilscore: 0&#10;&bull; Happy New Year | MJ 44: New Year | rank: 20 | ilscore: 22&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>dk5000p</h1>
+		<a href="https://dk5000p.itch.io">dk5000p.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 13</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>6</span>
+			<span>6</span>
+			<span>6</span>
+			<span>7</span>
+			<span>9</span>
+			<span>9</span>
+			<span>9</span>
+			<span>10</span>
+			<span>9</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 9</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>6</span>
+			<span>6</span>
+			<span>6</span>
+			<span>7</span>
+			<span>9</span>
+			<span>9</span>
+			<span>9</span>
+			<span>10</span>
+			<span>11</span>
+			<span>11</span>
+			<span>12</span>
+			<span>14</span>
+			<span>16</span>
+			<span>18</span>
+			<span>18</span>
+			<span>18</span>
+			<span>20</span>
+			<span>20</span>
+			<span>19</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 33</p>
+		<p>Total ilScore: 781</p>
+
+		<h3 id="games_header">34 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/island-hopping">Island Hopping</a></td>
+				<td><span class="early">1h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>37</td>
+				<td>9</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/seasoned-defender">Seasoned Defender</a></td>
+				<td><span class="early">1h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>18</td>
+				<td>10</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/energy-cycle">Energy Cycle</a></td>
+				<td><span class="early">1h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-47-internet">MJ 47: Internet</a></td>
+				<td>52</td>
+				<td>35</td>
+				<td>8</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/just-ice">Just Ice</a></td>
+				<td><span class="early">42m 27s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-46-justice">MJ 46: Justice</a></td>
+				<td>43</td>
+				<td>inf</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/happy-new-year">Happy New Year</a></td>
+				<td><span class="early">46m 39s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-44-new-year">MJ 44: New Year</a></td>
+				<td>28</td>
+				<td>20</td>
+				<td>14</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/the-disposed">The Disposed</a></td>
+				<td><span class="early">8m 18s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-41-magic">MJ 41: Magic</a></td>
+				<td>28</td>
+				<td>20</td>
+				<td>8</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/an-ordinary-life">An Ordinary Life</a></td>
+				<td><span class="early">1h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-40-hunters">MJ 40: Hunters</a></td>
+				<td>35</td>
+				<td>22</td>
+				<td>6</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/appease-the-quadopus-minijam">Appease the Quadopus: Minijam</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-38-food">MJ 38: Food</a></td>
+				<td>21</td>
+				<td>11</td>
+				<td>8</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/ghost-hijanks">Ghost Hijanks</a></td>
+				<td><span class="early">28m 19s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-37-engineering">MJ 37: Engineering</a></td>
+				<td>11</td>
+				<td>11</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/human-nature">Human Nature</a></td>
+				<td><span class="early">29m 32s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-36-nature">MJ 36: Nature</a></td>
+				<td>37</td>
+				<td>25</td>
+				<td>3</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/the-viking-virus">The Viking Virus</a></td>
+				<td><span class="early">1h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-35-vikings">MJ 35: Vikings</a></td>
+				<td>11</td>
+				<td>9</td>
+				<td>9</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/balanced-puzzle">Balanced Puzzle</a></td>
+				<td><span class="early">4h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-34-balance">MJ 34: Balance</a></td>
+				<td>25</td>
+				<td>22</td>
+				<td>13</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/cephalfish-slayer">Cephalfish Slayer</a></td>
+				<td><span class="early">2h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-33-underwater">MJ 33: Underwater</a></td>
+				<td>46</td>
+				<td>32</td>
+				<td>12</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/explodey-bomb">Explodey Bomb</a></td>
+				<td><span class="early">1h 20m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-32-explosions">MJ 32: Explosions</a></td>
+				<td>36</td>
+				<td>26</td>
+				<td>11</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/making-a-movie">Making a Movie</a></td>
+				<td><span class="early">3h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-31-movies">MJ 31: Movies</a></td>
+				<td>17</td>
+				<td>6</td>
+				<td>8</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/double-dodge">Double Dodge</a></td>
+				<td><span class="early">3h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-30-gameboy">MJ 30: GBStudio</a></td>
+				<td>34</td>
+				<td>32</td>
+				<td>6</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/shuriken">Shuriken Target Practice</a></td>
+				<td><span class="early">3h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-29-ninjas">MJ 29: Ninjas</a></td>
+				<td>30</td>
+				<td>18</td>
+				<td>11</td>
+				<td>28</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/ruperts-reluctant-adventure">Rupert&#39;s Reluctant Adventure</a></td>
+				<td><span class="early">2h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-28-pirates">MJ 28: Pirates</a></td>
+				<td>38</td>
+				<td>24</td>
+				<td>6</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/cake-catcher">Cake Catcher</a></td>
+				<td><span class="early">3h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-27-celebration">MJ 27: Celebration</a></td>
+				<td>24</td>
+				<td>10</td>
+				<td>6</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/storm-battle">Storm Battle</a></td>
+				<td><span class="early">5h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-26-storms">MJ 26: Storms</a></td>
+				<td>21</td>
+				<td>14</td>
+				<td>6</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/ghost-dispatcher">Ghost Dispatcher</a></td>
+				<td><span class="early">3h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-25-spirits">MJ 25: Spirits</a></td>
+				<td>45</td>
+				<td>28</td>
+				<td>8</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/space">Space Exploration</a></td>
+				<td><span class="early">1h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-24-space">MJ 24: Space</a></td>
+				<td>56</td>
+				<td>32</td>
+				<td>9</td>
+				<td>41</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/the-clone-project">The Clone Project</a></td>
+				<td><span class="early">2h 40m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-23-time">MJ 23: Time</a></td>
+				<td>52</td>
+				<td>46</td>
+				<td>6</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/ring-out">Ring Out</a></td>
+				<td><span class="early">2h 56m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-22-anime">MJ 22: Anime</a></td>
+				<td>11</td>
+				<td>6</td>
+				<td>9</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/aquaticus-anti-hero">Aquaticus (Anti-Hero)</a></td>
+				<td><span class="early">27m 21s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-21-stories">MJ 21: Stories</a></td>
+				<td>13</td>
+				<td>6</td>
+				<td>9</td>
+				<td>18</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/no-more-music">No More Music</a></td>
+				<td><span class="early">3h 12m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-20-music">MJ 20: Music</a></td>
+				<td>23</td>
+				<td>9</td>
+				<td>8</td>
+				<td>27</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/faction-wars">Faction Wars</a></td>
+				<td><span class="early">3h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-19-mysteries">MJ 19: Mysteries</a></td>
+				<td>26</td>
+				<td>16</td>
+				<td>10</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/dreammare">Dreammare</a></td>
+				<td><span class="early">3h 9m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-18-dreams">MJ 18: Dreams</a></td>
+				<td>30</td>
+				<td>inf</td>
+				<td>0</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/the-present">The Present</a></td>
+				<td><span class="early">7h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-17-home-alone">MJ 17: Home Alone</a></td>
+				<td>7</td>
+				<td>6</td>
+				<td>10</td>
+				<td>11</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/cowboy-hell">Cowboy Hell</a></td>
+				<td><span class="early">3h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-16-western">MJ 16: Western</a></td>
+				<td>12</td>
+				<td>9</td>
+				<td>7</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/robopaint">RoboPaint</a></td>
+				<td><span class="early">2h 3m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-15-technology">MJ 15: Technology</a></td>
+				<td>22</td>
+				<td>18</td>
+				<td>10</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/slime-world">Slime World</a></td>
+				<td><span class="early">2h 55m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-13-villains-">MJ 13: Villains</a></td>
+				<td>23</td>
+				<td>&#x1F682;</td>
+				<td>10</td>
+				<td>&#x1FAD0;</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/the-karate-puncher">The Karate Puncher</a></td>
+				<td><span class="early">21h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-12-heroes-">MJ 12: Heroes</a></td>
+				<td>14</td>
+				<td>7</td>
+				<td>10</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td><a href="https://dk5000p.itch.io/unwritten">Unwritten</a></td>
+				<td><span class="early">7h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-11-">MJ 11: Harvest</a></td>
+				<td>14</td>
+				<td>12</td>
+				<td>8</td>
+				<td>16</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				41, 41, 53, 57, 11, 6, 6, 6, 4, 2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 3, 3, 3, 3, 3, 3, 3,
+				3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4,
+				4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+				8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12,
+			]],
+			[ "20", [
+				106, 12, 12, 12, 4, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
+				2, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7,
+				7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8,
+				8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8,
+			]],
+			[ "ilscore", [
+				108, 16, 16, 18, 9, 5, 1, 1, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4,
+				4, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8, 9, 9, 9, 9, 9, 11, 11, 12, 13, 14, 16, 16, 17, 17, 17, 17, 17, 19, 19, 19, 20, 20, 20, 21, 21, 21,
+				21, 22, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 25, 25, 25, 25, 25, 25, 25, 26, 26, 26, 27, 27, 28, 28, 28,
+				28, 28, 28, 28, 28, 29, 29, 29, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 30, 31, 31, 31, 31, 32, 32, 32,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

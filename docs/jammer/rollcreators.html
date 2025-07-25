@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>rollcreators&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="rollcreators&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rollcreators.html" property="og:url">
+	<meta content="Rank by game in top 20: 3109&#10;Rank by ilScore: 10331&#10;&#10;1 games&#10;&bull; To Home | MJ 115: Noir | rank: 13 | ilscore: 41&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>rollcreators</h1>
+		<a href="https://rollcreators.itch.io">rollcreators.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3109</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 10331</p>
+		<p>Total ilScore: 41</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rollcreators.itch.io/to-home">To Home</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>13</td>
+				<td>7</td>
+				<td>41</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1692, 1713, 1731, 1751, 1766, 1780, 1802, 1810, 1828, 1858, 1874, 1894, 1910, 1932, 1947, 1973, 1987, 1997, 2022, 2043, 2058, 2069, 2075, 2103, 2106, 2111, 2127, 2133, 2144, 2168, 2182, 2206, 2222, 2239, 2259, 2277, 2289, 2307, 2335, 2367,
+				2390, 2411, 2430, 2450, 2465, 2482, 2499, 2520, 2560, 2569, 2585, 2596, 2621, 2636, 2642, 2657, 2668, 2674, 2690, 2706, 2738, 2758, 2782, 2802, 2826, 2853, 2878, 2908, 2926, 2945, 2972, 2991, 3017, 3039, 3071, 3091, 3108,
+			]],
+			[ "ilscore", [
+				5754, 5774, 5899, 6014, 6081, 6106, 6198, 6210, 6365, 6442, 6485, 6521, 6603, 6693, 6733, 6907, 6921, 6936, 7029, 7105, 7137, 7143, 7144, 7279, 7280, 7287, 7306, 7324, 7339, 7382, 7418, 7481, 7506, 7521, 7543, 7661, 7782, 7851, 7887, 8053,
+				8093, 8174, 8232, 8326, 8345, 8429, 8501, 8519, 8647, 8670, 8721, 8734, 8916, 8948, 8949, 8969, 8977, 9003, 9020, 9063, 9148, 9247, 9296, 9334, 9400, 9465, 9525, 9606, 9656, 9735, 9805, 9882, 10030, 10082, 10193, 10264, 10330,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

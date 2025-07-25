@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>tavoe&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="tavoe&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tavoe.html" property="og:url">
+	<meta content="Rank by game in top 5: 890&#10;Rank by game in top 10: 1289&#10;Rank by game in top 20: 551&#10;Rank by ilScore: 803&#10;&#10;3 games&#10;&bull; Windmill Slam | MJ 147: Cinema | rank: 5 | ilscore: 50&#10;&bull; Sacrosanct | MJ 145: Frozen | rank: 19 | ilscore: 67&#10;&bull; Au Banque | MJ 85: Gold | rank: 57 | ilscore: 77&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>tavoe</h1>
+		<a href="https://tavoe.itch.io">tavoe.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 890</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1289</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 551</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 803</p>
+		<p>Total ilScore: 194</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tavoe.itch.io/windmillslam">Windmill Slam</a></td>
+				<td><span class="late">11h 9m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-147-cinema">MJ 147: Cinema</a></td>
+				<td>40</td>
+				<td>5</td>
+				<td>7</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td><a href="https://tavoe.itch.io/sacrosanct">Sacrosanct</a></td>
+				<td><span class="late">11h late</span></td>
+				<td>
+					<a href="../jammer/knownaspk.html">KnownAsPK</a>,
+					<a href="../jammer/mikelyle.html">mikelyle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-145-frozen">MJ 145: Frozen</a></td>
+				<td>89</td>
+				<td>19</td>
+				<td>6</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://tavoe.itch.io/au-banque">Au Banque</a></td>
+				<td><span class="late">21h 15m late</span></td>
+				<td>
+					<a href="../jammer/mikelyle.html">mikelyle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>57</td>
+				<td>14</td>
+				<td>77</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				661, 665, 671, 673, 678, 685, 695, 705, 709, 713, 717, 719, 723, 729, 732, 740, 742, 745, 750, 756, 760, 760, 761, 762, 766, 773, 775, 786, 791, 795, 801, 806, 808, 818, 828, 832, 837, 849, 857, 864,
+				867, 874, 884, 889,
+			]],
+			[ "10", [
+				967, 972, 981, 987, 996, 1006, 1023, 1029, 1033, 1037, 1048, 1050, 1060, 1072, 1075, 1088, 1091, 1096, 1104, 1116, 1120, 1120, 1121, 1123, 1127, 1134, 1137, 1151, 1160, 1166, 1173, 1182, 1184, 1193, 1203, 1208, 1217, 1233, 1244, 1257,
+				1260, 1267, 1277, 1288,
+			]],
+			[ "20", [
+				1951, 1960, 393, 395, 396, 398, 401, 404, 407, 414, 420, 421, 425, 426, 432, 441, 445, 446, 453, 459, 463, 467, 467, 470, 473, 473, 475, 479, 480, 483, 487, 490, 494, 500, 501, 501, 505, 508, 511, 517,
+				528, 534, 535, 538, 542, 550,
+			]],
+			[ "ilscore", [
+				1163, 1179, 1238, 1252, 1284, 1297, 1304, 1340, 1371, 1379, 1393, 1404, 1411, 1432, 1461, 1626, 1703, 1747, 1754, 1804, 1829, 1868, 2056, 2067, 2183, 2233, 2340, 2601, 2621, 2641, 2642, 2646, 2654, 2659, 2743, 2795, 2815, 2826, 2858, 2861,
+				2972, 3013, 3022, 3038, 3068, 3112, 3126, 3248, 3260, 3263, 3300, 3330, 3342, 3348, 3351, 3412, 3416, 3421, 3428, 3433, 3442, 3450, 3459, 1045, 1049, 561, 561, 571, 580, 585, 589, 605, 606, 611, 616, 623, 627, 641, 652, 656,
+				666, 672, 677, 678, 690, 695, 698, 700, 701, 704, 705, 707, 711, 714, 721, 728, 731, 733, 736, 746, 751, 757, 763, 770, 778, 779, 790, 795, 802,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

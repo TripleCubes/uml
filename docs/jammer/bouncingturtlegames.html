@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Bouncing Turtle&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Bouncing Turtle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bouncingturtlegames.html" property="og:url">
+	<meta content="Rank by game in top 10: 55&#10;Rank by game in top 20: 26&#10;Rank by ilScore: 14&#10;&#10;16 games&#10;&bull; Vampire Dunk Tank | MJ 118: Vampires | rank: 65 | ilscore: 67&#10;&bull; Curse of the Drowsy Dinos | MJ 103: Darkness | rank: 35 | ilscore: 78&#10;&bull; Voidbreaker | MJ 98: Empty | rank: 10 | ilscore: 80&#10;&bull; The Loneliest Robot | MJ 97: Simulation | rank: 44 | ilscore: 62&#10;&bull; Fortnight | MJ 94: Baking | rank: 28 | ilscore: 65&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Bouncing Turtle</h1>
+		<a href="https://bouncingturtlegames.itch.io">bouncingturtlegames.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 55</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>10</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 26</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>10</span>
+			<span>14</span>
+			<span>17</span>
+			<span class="box_majorjam">20</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 14</p>
+		<p>Total ilScore: 1170</p>
+
+		<h3 id="games_header">16 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/vampire-dunk-tank">Vampire Dunk Tank</a></td>
+				<td><span class="late">13h 21m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>65</td>
+				<td>6</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/curse-of-the-drowsy-dinos">Curse of the Drowsy Dinos</a></td>
+				<td><span class="early">3m 30s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-103-darkness">MJ 103: Darkness</a></td>
+				<td>148</td>
+				<td>35</td>
+				<td>13</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://neverdusk.itch.io/voidbreaker">Voidbreaker</a></td>
+				<td><span class="early">35s early</span></td>
+				<td>
+					<a href="../jammer/neverdusk.html">Neverdusk</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>10</td>
+				<td>19</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/the-loneliest-robot">The Loneliest Robot</a></td>
+				<td><span class="early">1h 1m early</span></td>
+				<td>
+					<a href="../jammer/cthulork.html">cthulork</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>44</td>
+				<td>10</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/fortnight">Fortnight</a></td>
+				<td><span class="late">6m 12s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>28</td>
+				<td>14</td>
+				<td>65</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://bouncingturtlegames.itch.io/grow-to-hell">Grow To Hell</a></td>
+				<td><span class="early">5m 15s early</span></td>
+				<td>
+					<a href="../jammer/bennissimov.html">ben nissimov</a>
+				</td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>20</td>
+				<td>23</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/gold-rush">Gold Rush</a></td>
+				<td><span class="early">54m 33s early</span></td>
+				<td>
+					<a href="../jammer/bennissimov.html">ben nissimov</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>8</td>
+				<td>14</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/liquify">Liquify</a></td>
+				<td><span class="early">7s early</span></td>
+				<td>
+					<a href="../jammer/bennissimov.html">ben nissimov</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>17</td>
+				<td>10</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/time-shift-machina">Time Shift Machina</a></td>
+				<td><span class="early">19m 37s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>14</td>
+				<td>15</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/shroom-shock">Shroom Shock</a></td>
+				<td><span class="early">32m 7s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>92</td>
+				<td>6</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/kiss-ribbit-kill">Kiss Ribbit Kill</a></td>
+				<td><span class="late">37m 4s late</span></td>
+				<td>
+					<a href="../jammer/imasuperturtle.html">imasuperturtle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>65</td>
+				<td>10</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/picnic-panic">Picnic Panic</a></td>
+				<td><span class="early">2h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>7</td>
+				<td>32</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/winds-of-courage">Winds Of Courage</a></td>
+				<td><span class="early">1m 40s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>25</td>
+				<td>22</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/mutant-mayhem">Mutant Mayhem</a></td>
+				<td><span class="early">28m 2s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>68</td>
+				<td>6</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/pigdom">Pigdom</a></td>
+				<td><span class="early">8m 4s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>26</td>
+				<td>17</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://bouncingturtlegames.itch.io/chaos-crusade">Chaos Crusade</a></td>
+				<td><span class="early">21h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>8</td>
+				<td>19</td>
+				<td>71</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				352, 357, 366, 368, 79, 80, 86, 88, 89, 89, 91, 32, 32, 32, 34, 34, 34, 34, 34, 36, 36, 36, 36, 36, 37, 21, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25,
+				25, 27, 27, 28, 29, 29, 29, 29, 29, 29, 29, 30, 30, 30, 30, 30, 31, 31, 31, 31, 31, 31, 31, 31, 31, 32, 32, 33, 33, 33, 33, 34, 34, 34, 34, 34, 34, 34, 35, 36,
+				37, 37, 37, 38, 38, 38, 38, 38, 38, 39, 39, 39, 41, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 45, 45, 48, 48, 49, 49, 50, 51, 51, 51, 51, 51, 51, 51, 52, 54, 54,
+			]],
+			[ "20", [
+				466, 473, 486, 488, 128, 131, 141, 68, 68, 69, 30, 16, 16, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 11, 11, 12, 12, 12, 12, 12, 13, 14, 14, 14, 14, 14, 14, 15,
+				15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20,
+				20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 22, 22, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25, 25, 25,
+			]],
+			[ "ilscore", [
+				801, 178, 74, 37, 25, 12, 7, 6, 6, 7, 6, 4, 4, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 3, 4, 5, 5, 5, 2, 3, 4, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 7, 6, 6, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

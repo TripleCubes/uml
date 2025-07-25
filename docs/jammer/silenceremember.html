@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>silenceremember&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="silenceremember&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/silenceremember.html" property="og:url">
+	<meta content="Rank by ilScore: 478&#10;&#10;4 games&#10;&bull; Mushhoom Loop | MJ 156: Mushroom | rank: 23 | ilscore: 60&#10;&bull; Outer Signal | MJ 125: Signal | rank: 23 | ilscore: 60&#10;&bull; Thermic Spirit | MJ 124: Warmth | rank: 45 | ilscore: 69&#10;&bull; ChaiDOS | MJ 123: Web | rank: 127 | ilscore: 63&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>silenceremember</h1>
+		<a href="https://silenceremember.itch.io">silenceremember.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 478</p>
+		<p>Total ilScore: 252</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://thebestmrand.itch.io/mushhoom-loop">Mushhoom Loop</a></td>
+				<td><span class="early">8s early</span></td>
+				<td>
+					<a href="../jammer/thebestmrand.html">TheBestMrand</a>,
+					<a href="../jammer/getsometea.html">Getsometea</a>,
+					<a href="../jammer/r0mf.html">R0MF</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-156-mushroom">MJ 156: Mushroom</a></td>
+				<td>88</td>
+				<td>23</td>
+				<td>7</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://silenceremember.itch.io/outer-signal">Outer Signal</a></td>
+				<td><span class="early">1h 5m early</span></td>
+				<td>
+					<a href="../jammer/caramboula.html">caramboula</a>,
+					<a href="../jammer/getsometea.html">Getsometea</a>,
+					<a href="../jammer/thebestmrand.html">TheBestMrand</a>,
+					<a href="../jammer/sonavi.html">Sonavi</a>,
+					<a href="../jammer/r0mf.html">R0MF</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>23</td>
+				<td>22</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://silenceremember.itch.io/thermic-spirit">Thermic Spirit</a></td>
+				<td><span class="late">1d 19h late</span></td>
+				<td>
+					<a href="../jammer/r0mf.html">R0MF</a>,
+					<a href="../jammer/getsometea.html">Getsometea</a>,
+					<a href="../jammer/thebestmrand.html">TheBestMrand</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>45</td>
+				<td>14</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://getsometea.itch.io/chaidos">ChaiDOS</a></td>
+				<td><span class="early">2m 28s early</span></td>
+				<td>
+					<a href="../jammer/getsometea.html">Getsometea</a>,
+					<a href="../jammer/thebestmrand.html">TheBestMrand</a>,
+					<a href="../jammer/r0mf.html">R0MF</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>127</td>
+				<td>4</td>
+				<td>63</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				4278, 1046, 457, 462, 476, 486, 492, 505, 507, 509, 521, 529, 535, 536, 538, 548, 549, 555, 556, 559, 561, 565, 567, 571, 576, 577, 577, 587, 596, 602, 605, 621, 622, 627, 364, 367, 369, 371, 381, 385,
+				395, 396, 399, 400, 413, 414, 417, 417, 418, 418, 418, 422, 423, 426, 430, 430, 433, 435, 440, 445, 448, 450, 453, 458, 462, 465, 470, 474, 477,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

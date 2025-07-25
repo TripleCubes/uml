@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>rruido&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="rruido&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rruido.html" property="og:url">
+	<meta content="Rank by game in top 5: 1045&#10;Rank by game in top 10: 1766&#10;Rank by game in top 20: 2697&#10;Rank by ilScore: 8030&#10;&#10;1 games&#10;&bull; No Ring For Old Lemons | MJ 96: Fate | rank: 5 | ilscore: 56&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>rruido</h1>
+		<a href="https://rruido.itch.io">rruido.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1045</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1766</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2697</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8030</p>
+		<p>Total ilScore: 56</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rruido.itch.io/no-ring-for-old-lemons">No Ring For Old Lemons</a></td>
+				<td><span class="late">18h 39m late</span></td>
+				<td>
+					<a href="../jammer/levktet.html">levktet</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>5</td>
+				<td>17</td>
+				<td>56</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				488, 495, 499, 505, 516, 519, 524, 528, 531, 536, 543, 552, 556, 559, 563, 569, 578, 582, 583, 588, 593, 601, 605, 613, 622, 631, 639, 642, 647, 657, 661, 669, 672, 679, 684, 687, 691, 694, 699, 705,
+				710, 715, 719, 728, 730, 734, 741, 744, 751, 757, 763, 768, 774, 782, 792, 798, 800, 804, 811, 821, 832, 837, 842, 846, 853, 857, 863, 869, 877, 881, 884, 890, 896, 900, 900, 903, 911, 914, 920, 927,
+				938, 943, 947, 953, 958, 964, 973, 983, 986, 991, 1002, 1010, 1017, 1022, 1029, 1039, 1044,
+			]],
+			[ "10", [
+				779, 789, 795, 806, 821, 828, 834, 841, 850, 857, 866, 883, 890, 899, 909, 921, 935, 948, 949, 963, 972, 980, 989, 1006, 1018, 1030, 1043, 1045, 1054, 1072, 1081, 1092, 1105, 1118, 1128, 1138, 1146, 1149, 1164, 1175,
+				1183, 1188, 1192, 1206, 1210, 1213, 1227, 1230, 1241, 1257, 1264, 1275, 1283, 1295, 1310, 1318, 1324, 1332, 1353, 1370, 1384, 1392, 1401, 1412, 1424, 1434, 1446, 1462, 1475, 1482, 1488, 1497, 1509, 1514, 1514, 1518, 1527, 1532, 1538, 1546,
+				1564, 1572, 1582, 1598, 1609, 1621, 1636, 1654, 1664, 1673, 1688, 1699, 1712, 1723, 1740, 1753, 1765,
+			]],
+			[ "20", [
+				1161, 1175, 1193, 1219, 1248, 1261, 1266, 1287, 1300, 1316, 1335, 1355, 1370, 1389, 1407, 1429, 1451, 1474, 1475, 1489, 1498, 1509, 1527, 1547, 1560, 1571, 1593, 1597, 1615, 1645, 1662, 1677, 1694, 1716, 1731, 1757, 1764, 1767, 1794, 1816,
+				1826, 1833, 1837, 1865, 1868, 1870, 1881, 1884, 1897, 1917, 1926, 1946, 1955, 1967, 1982, 2000, 2014, 2032, 2052, 2084, 2104, 2120, 2132, 2152, 2164, 2183, 2201, 2218, 2258, 2263, 2273, 2284, 2309, 2317, 2321, 2326, 2335, 2338, 2345, 2353,
+				2385, 2405, 2418, 2433, 2458, 2474, 2499, 2518, 2534, 2554, 2575, 2596, 2622, 2640, 2666, 2680, 2696,
+			]],
+			[ "ilscore", [
+				2703, 2752, 2812, 2997, 3098, 3179, 3187, 3284, 3329, 3420, 3643, 3687, 3850, 3929, 4063, 4384, 4450, 4511, 4511, 4526, 4530, 4537, 4646, 4735, 4773, 4785, 4855, 4858, 4995, 5061, 5082, 5110, 5186, 5270, 5292, 5448, 5458, 5463, 5542, 5601,
+				5618, 5626, 5628, 5743, 5743, 5746, 5751, 5757, 5767, 5790, 5808, 5853, 5862, 5870, 5876, 5983, 6075, 6123, 6143, 6300, 6329, 6383, 6422, 6491, 6496, 6573, 6631, 6643, 6752, 6762, 6792, 6799, 6963, 6975, 6979, 6982, 6983, 6990, 6999, 7024,
+				7100, 7188, 7226, 7245, 7296, 7346, 7382, 7446, 7485, 7556, 7616, 7678, 7808, 7836, 7936, 7984, 8029,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

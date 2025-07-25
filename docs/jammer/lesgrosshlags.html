@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Les Gros Shlags&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Les Gros Shlags&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lesgrosshlags.html" property="og:url">
+	<meta content="Rank by game in top 20: 1709&#10;Rank by ilScore: 319&#10;&#10;4 games&#10;&bull; BIRIYADO | MJ 175: Gravity | rank: 53 | ilscore: 71&#10;&bull; CHAINSAW BEAT | MJ 125: Signal | rank: 29 | ilscore: 53&#10;&bull; CARIDEA | MJ 108: Seaside | rank: 29 | ilscore: 99&#10;&bull; VISCERA | MJ 83: Dread | rank: 12 | ilscore: 80&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Les Gros Shlags</h1>
+		<a href="https://lesgrosshlags.itch.io">lesgrosshlags.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1709</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 319</p>
+		<p>Total ilScore: 304</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lesgrosshlags.itch.io/biriyado">BIRIYADO</a></td>
+				<td><span class="late">11h 39m late</span></td>
+				<td>
+					<a href="../jammer/dominosxpizza.html">DominosXpizza</a>,
+					<a href="../jammer/balth.html">Balth</a>,
+					<a href="../jammer/abelgraux.html">abelgraux</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>53</td>
+				<td>9</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://lesgrosshlags.itch.io/chainsaw-beat">CHAINSAW BEAT</a></td>
+				<td><span class="early">2h 34m early</span></td>
+				<td>
+					<a href="../jammer/dominosxpizza.html">DominosXpizza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>29</td>
+				<td>6</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://lesgrosshlags.itch.io/caridea">CARIDEA</a></td>
+				<td><span class="early">8m 20s early</span></td>
+				<td>
+					<a href="../jammer/dominosxpizza.html">DominosXpizza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>29</td>
+				<td>31</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td><a href="https://lesgrosshlags.itch.io/viscera">VISCERA</a></td>
+				<td><span class="early">1h 26m early</span></td>
+				<td>
+					<a href="../jammer/dominosxpizza.html">DominosXpizza</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>12</td>
+				<td>12</td>
+				<td>80</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				600, 616, 625, 631, 646, 653, 663, 674, 682, 688, 696, 703, 711, 719, 725, 734, 739, 754, 783, 795, 800, 817, 828, 834, 853, 862, 873, 887, 904, 927, 948, 963, 964, 969, 977, 986, 998, 1015, 1024, 1034,
+				1052, 1057, 1068, 1091, 1101, 1112, 1128, 1137, 1143, 1157, 1161, 1164, 1178, 1194, 1197, 1200, 1207, 1220, 1222, 1224, 1230, 1231, 1242, 1252, 1255, 1261, 1265, 1275, 1281, 1297, 1305, 1313, 1324, 1346, 1350, 1359, 1363, 1377, 1384, 1402,
+				1412, 1416, 1442, 1443, 1451, 1460, 1483, 1489, 1495, 1497, 1500, 1505, 1515, 1518, 1532, 1547, 1553, 1561, 1570, 1576, 1594, 1604, 1610, 1620, 1640, 1652, 1671, 1674, 1682, 1697, 1708,
+			]],
+			[ "ilscore", [
+				901, 960, 1037, 1051, 1107, 1121, 1148, 1161, 1169, 1198, 1226, 1236, 1249, 1260, 1267, 1287, 1312, 1464, 1543, 1574, 1584, 1626, 1649, 1680, 1854, 1867, 362, 377, 388, 425, 433, 443, 443, 447, 452, 454, 467, 476, 485, 491,
+				496, 497, 513, 528, 300, 308, 316, 324, 332, 341, 343, 345, 353, 357, 363, 364, 366, 376, 377, 377, 377, 379, 379, 380, 382, 384, 386, 387, 388, 396, 400, 404, 407, 413, 416, 422, 427, 430, 433, 434,
+				446, 448, 462, 465, 469, 470, 484, 485, 490, 490, 490, 490, 491, 495, 497, 277, 282, 284, 287, 288, 289, 297, 300, 303, 303, 305, 308, 308, 311, 315, 318,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

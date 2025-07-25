@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Macrow&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Macrow&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/macrowdev.html" property="og:url">
+	<meta content="Rank by game in top 5: 737&#10;Rank by game in top 10: 57&#10;Rank by game in top 20: 42&#10;Rank by ilScore: 153&#10;&#10;7 games&#10;&bull; Fox.Coin.Flipper | MJ 176: Foxes | rank: 32 | ilscore: 60&#10;&bull; Escape from Sector X | MJ 174: Defense | rank: 20 | ilscore: 70&#10;&bull; Brick.Drop.Bash | MJ 173: Action | rank: 19 | ilscore: 55&#10;&bull; Security Sniper | MJ 172: Security | rank: 7 | ilscore: 42&#10;&bull; Maid.to.Clean | MJ 170: Clean | rank: 10 | ilscore: 40&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Macrow</h1>
+		<a href="https://macrowdev.itch.io">macrowdev.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 737</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 57</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>6</span>
+			<span>7</span>
+			<span>10</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 42</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>6</span>
+			<span>7</span>
+			<span>10</span>
+			<span>19</span>
+			<span>20</span>
+			<span>6</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 153</p>
+		<p>Total ilScore: 432</p>
+
+		<h3 id="games_header">7 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/fox-coin-flipper">Fox.Coin.Flipper</a></td>
+				<td><span class="early">1h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>32</td>
+				<td>11</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/escape-from-sector-x">Escape from Sector X</a></td>
+				<td><span class="early">1h 37m early</span></td>
+				<td>
+					<a href="../jammer/foxhyode.html">FoxHyode</a>,
+					<a href="../jammer/one-rat-in-a-trenchcoat.html">one rat in a trenchcoat</a>,
+					<a href="../jammer/deshuiyu.html">Deshui Yu</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-174-defense">MJ 174: Defense</a></td>
+				<td>98</td>
+				<td>20</td>
+				<td>13</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/brick-drop-bash">Brick.Drop.Bash</a></td>
+				<td><span class="early">29m 40s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-173-action">MJ 173: Action</a></td>
+				<td>67</td>
+				<td>19</td>
+				<td>28</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/security-sniper">Security Sniper</a></td>
+				<td><span class="early">5h 34m early</span></td>
+				<td>
+					<a href="../jammer/heyitsleona.html">heyitsleona</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-172-security">MJ 172: Security</a></td>
+				<td>37</td>
+				<td>7</td>
+				<td>18</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/maid-to-clean">Maid.to.Clean</a></td>
+				<td><span class="early">28m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-170-clean">MJ 170: Clean</a></td>
+				<td>35</td>
+				<td>10</td>
+				<td>11</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/feathermancer">feathermancer</a></td>
+				<td><span class="early">10h 53m early</span></td>
+				<td>
+					<a href="../jammer/deshuiyu.html">Deshui Yu</a>,
+					<a href="../jammer/dotfowl.html">dotfowl</a>,
+					<a href="../jammer/zipdisq.html">zipdisq™</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>204</td>
+				<td>6</td>
+				<td>21</td>
+				<td>111</td>
+			</tr>
+			<tr>
+				<td><a href="https://macrowdev.itch.io/tower-paint-refill">Tower.Paint.Refill</a></td>
+				<td><span class="early">1d 11h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-165-paint">MJ 165: Paint</a></td>
+				<td>44</td>
+				<td>4</td>
+				<td>29</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				631, 637, 640, 640, 641, 642, 645, 647, 649, 660, 665, 668, 670, 675, 677, 678, 682, 684, 689, 701, 709, 719, 720, 724, 731, 736,
+			]],
+			[ "10", [
+				893, 146, 148, 149, 150, 82, 82, 47, 47, 47, 47, 50, 50, 51, 51, 52, 53, 53, 53, 53, 53, 53, 53, 54, 56, 56,
+			]],
+			[ "20", [
+				1203, 265, 268, 269, 270, 168, 170, 91, 51, 39, 39, 40, 40, 40, 40, 40, 40, 40, 40, 40, 41, 41, 41, 41, 41, 41,
+			]],
+			[ "ilscore", [
+				6992, 973, 977, 980, 981, 617, 619, 438, 277, 177, 178, 138, 138, 139, 139, 139, 141, 142, 143, 146, 148, 152, 152, 152, 152, 152,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

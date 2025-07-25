@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Weebit&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Weebit&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/gamepad-gunk.html" property="og:url">
+	<meta content="Rank by ilScore: 6592&#10;&#10;1 games&#10;&bull; Cats Love Boxes | MJ 80: Cats | rank: 88 | ilscore: 64&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Weebit</h1>
+		<a href="https://gamepad-gunk.itch.io">gamepad-gunk.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6592</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gamepad-gunk.itch.io/cats-love-boxes">Cats Love Boxes</a></td>
+				<td><span class="early">8h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>88</td>
+				<td>11</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1420, 1431, 1439, 1486, 1585, 1696, 1731, 1817, 1848, 1910, 1930, 1941, 2000, 2059, 2061, 2104, 2113, 2120, 2156, 2206, 2385, 2474, 2543, 2550, 2630, 2666, 2744, 2955, 2988, 3134, 3202, 3324, 3618, 3680, 3724, 3725, 3729, 3735, 3738, 3840,
+				3912, 3933, 3942, 3998, 4000, 4124, 4185, 4196, 4222, 4280, 4346, 4364, 4509, 4519, 4523, 4579, 4633, 4649, 4657, 4660, 4764, 4764, 4767, 4772, 4777, 4787, 4803, 4812, 4845, 4852, 4862, 4866, 4952, 5021, 5053, 5062, 5210, 5234, 5274, 5298,
+				5351, 5358, 5425, 5478, 5487, 5575, 5588, 5604, 5608, 5757, 5765, 5768, 5771, 5775, 5780, 5789, 5803, 5858, 5945, 5969, 5981, 6020, 6044, 6070, 6120, 6147, 6210, 6262, 6311, 6421, 6441, 6520, 6560, 6591,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

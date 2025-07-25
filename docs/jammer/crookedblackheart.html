@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>CrookedBlackHeart&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="CrookedBlackHeart&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/crookedblackheart.html" property="og:url">
+	<meta content="Rank by game in top 20: 547&#10;Rank by ilScore: 1383&#10;&#10;2 games&#10;&bull; Attack of the Fifty Foot Irradiated Spider from Outer Space | MJ 76: Radiation | rank: 16 | ilscore: 85&#10;&bull; Slice Slice Baby | MJ 74: Chaos | rank: 20 | ilscore: 64&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>CrookedBlackHeart</h1>
+		<a href="https://crookedblackheart.itch.io">crookedblackheart.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 547</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>20</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1383</p>
+		<p>Total ilScore: 149</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://crookedblackheart.itch.io/radioactive-spider">Attack of the Fifty Foot Irradiated Spider from Outer Space</a></td>
+				<td><span class="early">4h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>16</td>
+				<td>5</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://crookedblackheart.itch.io/slice-slice-baby">Slice Slice Baby</a></td>
+				<td><span class="early">4h 31m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>20</td>
+				<td>14</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				811, 830, 142, 143, 147, 150, 160, 165, 166, 168, 171, 173, 177, 182, 185, 186, 190, 194, 200, 201, 205, 208, 212, 212, 215, 216, 216, 221, 227, 228, 231, 234, 240, 242, 247, 253, 259, 260, 262, 266,
+				273, 273, 274, 276, 285, 286, 294, 294, 298, 302, 304, 308, 312, 318, 325, 330, 332, 339, 341, 343, 344, 347, 350, 355, 357, 357, 360, 363, 367, 371, 372, 375, 378, 379, 384, 384, 390, 392, 393, 395,
+				398, 401, 404, 411, 417, 418, 422, 423, 429, 438, 442, 443, 450, 456, 460, 464, 464, 467, 470, 470, 472, 476, 477, 480, 484, 487, 491, 497, 497, 497, 501, 504, 507, 513, 524, 530, 531, 534, 538, 546,
+			]],
+			[ "ilscore", [
+				1027, 1059, 166, 175, 177, 202, 228, 231, 234, 248, 264, 282, 293, 306, 316, 318, 323, 329, 346, 354, 356, 363, 367, 373, 376, 384, 414, 447, 467, 467, 479, 487, 498, 529, 541, 571, 592, 617, 661, 678,
+				693, 693, 695, 699, 705, 721, 739, 741, 749, 756, 759, 779, 798, 812, 821, 840, 856, 865, 891, 898, 906, 924, 939, 950, 956, 957, 972, 972, 972, 975, 975, 980, 984, 991, 998, 1000, 1002, 1004, 1013, 1027,
+				1035, 1038, 1067, 1081, 1087, 1090, 1100, 1104, 1125, 1137, 1142, 1159, 1162, 1170, 1176, 1197, 1198, 1202, 1204, 1205, 1209, 1209, 1212, 1222, 1234, 1244, 1250, 1255, 1260, 1273, 1281, 1289, 1303, 1312, 1327, 1345, 1350, 1362, 1373, 1382,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

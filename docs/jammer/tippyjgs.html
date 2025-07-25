@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Johnny Scott&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Johnny Scott&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tippyjgs.html" property="og:url">
+	<meta content="Rank by game in top 20: 1280&#10;Rank by ilScore: 1280&#10;&#10;2 games&#10;&bull; Squaredy Cat | MJ 127: Cats | rank: 11 | ilscore: 86&#10;&bull; Reflector Knight | MJ 121: Reflection | rank: 38 | ilscore: 69&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Johnny Scott</h1>
+		<a href="https://tippyjgs.itch.io">tippyjgs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1280</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1280</p>
+		<p>Total ilScore: 154</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tippyjgs.itch.io/squaredy-cat">Squaredy Cat</a></td>
+				<td><span class="late">4h 40m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>11</td>
+				<td>12</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://tippyjgs.itch.io/reflectorknight">Reflector Knight</a></td>
+				<td><span class="late">1d 0h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-121-reflection">MJ 121: Reflection</a></td>
+				<td>118</td>
+				<td>38</td>
+				<td>13</td>
+				<td>69</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				843, 847, 856, 858, 861, 862, 877, 885, 888, 891, 895, 903, 905, 910, 919, 922, 932, 940, 943, 948, 953, 960, 965, 971, 975, 983, 993, 1008, 1012, 1023, 1025, 1035, 1041, 1054, 1062, 1068, 1089, 1092, 1099, 1109,
+				1122, 1127, 1137, 1138, 1140, 1144, 1149, 1153, 1165, 1173, 1177, 1182, 1189, 1196, 1205, 1211, 1216, 1221, 1234, 1242, 1255, 1256, 1258, 1270, 1279,
+			]],
+			[ "ilscore", [
+				3601, 3603, 3717, 3775, 3786, 3807, 772, 787, 795, 818, 827, 834, 851, 864, 874, 878, 880, 895, 895, 895, 898, 898, 903, 907, 912, 916, 918, 920, 922, 930, 943, 948, 951, 980, 991, 997, 1000, 1011, 1017, 1036,
+				1051, 1056, 1074, 1077, 1085, 1089, 1109, 1111, 1114, 1116, 1117, 1121, 1121, 1124, 1133, 1143, 1151, 1157, 1161, 1166, 1177, 1187, 1194, 1206, 1214, 1229, 1245, 1250, 1262, 1270, 1279,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

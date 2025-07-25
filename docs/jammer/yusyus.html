@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>yusyus&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="yusyus&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/yusyus.html" property="og:url">
+	<meta content="Rank by ilScore: 4086&#10;&#10;3 games&#10;&bull; Lovefinderrz | MJ 88: Rush | rank: 62 | ilscore: 60&#10;&bull; Shattered Mind | MJ 18: Dreams | rank: 26 | ilscore: 22&#10;&bull; Malevolent Management 2.0 | MJ 13: Villains | rank: 9999999 | ilscore: 0&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>yusyus</h1>
+		<a href="https://yusyus.itch.io">yusyus.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 4086</p>
+		<p>Total ilScore: 82</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yusyus.itch.io/lovefinderrz">Lovefinderrz</a></td>
+				<td><span class="early">5h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>62</td>
+				<td>8</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://yusyus.itch.io/shattered-mind">Shattered Mind</a></td>
+				<td><span class="early">1h early</span></td>
+				<td>
+					<a href="../jammer/elysiummusic.html">elysium.music</a>,
+					<a href="../jammer/signo.html">Signo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-18-dreams">MJ 18: Dreams</a></td>
+				<td>30</td>
+				<td>26</td>
+				<td>6</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td><a href="https://yusyus.itch.io/malevolent-management-2-0">Malevolent Management 2.0</a></td>
+				<td><span class="early">8h 12m early</span></td>
+				<td>
+					<a href="../jammer/gravity-hand.html">Jordan Dube</a>,
+					<a href="../jammer/combodroid.html">ComboDroid</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-13-villains-">MJ 13: Villains</a></td>
+				<td>23</td>
+				<td>&#x1F366;</td>
+				<td>5</td>
+				<td>&#x1F9C0;</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				163, 188, 205, 211, 215, 157, 169, 181, 183, 186, 244, 285, 321, 330, 338, 355, 369, 395, 401, 422, 459, 473, 476, 502, 502, 514, 528, 552, 567, 585, 590, 607, 650, 682, 721, 740, 746, 861, 961, 983,
+				1050, 1091, 1173, 1232, 1352, 1392, 1439, 1446, 1457, 1526, 1573, 1729, 1846, 1850, 1893, 1999, 2046, 2095, 2151, 2234, 2280, 2357, 2409, 2584, 2644, 2731, 2823, 2938, 2989, 3144, 3252, 3308, 3355, 3442, 3574, 3725, 3811, 3950, 4034, 1080,
+				1093, 1101, 1128, 1154, 1164, 1178, 1188, 1195, 1210, 1236, 1386, 1461, 1490, 1500, 1542, 1563, 1594, 1768, 1782, 1887, 1929, 2033, 2289, 2305, 2321, 2322, 2325, 2335, 2338, 2418, 2449, 2465, 2478, 2507, 2511, 2607, 2642, 2655, 2673, 2701,
+				2735, 2749, 2863, 2875, 2878, 2905, 2932, 2947, 2953, 2957, 3004, 3008, 3013, 3021, 3024, 3030, 3043, 3051, 3057, 3067, 3077, 3086, 3129, 3160, 3178, 3183, 3297, 3314, 3333, 3347, 3374, 3383, 3414, 3440, 3450, 3501, 3511, 3527, 3533, 3635,
+				3642, 3645, 3649, 3653, 3661, 3669, 3682, 3703, 3754, 3766, 3780, 3798, 3813, 3824, 3840, 3852, 3881, 3907, 3931, 4007, 4020, 4048, 4072, 4085,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

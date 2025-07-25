@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Adelphius&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Adelphius&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/adelphius.html" property="og:url">
+	<meta content="Rank by game in top 20: 3585&#10;Rank by ilScore: 12471&#10;&#10;1 games&#10;&bull; Why You Should Always Eat Your Peas With A Spoon | MJ 38: Food | rank: 12 | ilscore: 24&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Adelphius</h1>
+		<a href="https://adelphius.itch.io">adelphius.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3585</p>
+		<div class="boxes">
+			<span>12</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12471</p>
+		<p>Total ilScore: 24</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://adelphius.itch.io/why-you-should-always-eat-your-peas-with-a-spoon">Why You Should Always Eat Your Peas With A Spoon</a></td>
+				<td><span class="early">7m 36s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-38-food">MJ 38: Food</a></td>
+				<td>21</td>
+				<td>12</td>
+				<td>4</td>
+				<td>24</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				417, 430, 446, 459, 473, 482, 492, 511, 521, 537, 552, 560, 582, 612, 635, 654, 670, 689, 705, 728, 754, 779, 785, 796, 821, 850, 877, 906, 917, 932, 955, 970, 987, 1013, 1036, 1055, 1069, 1088, 1113, 1133,
+				1151, 1168, 1192, 1213, 1231, 1244, 1266, 1283, 1305, 1324, 1348, 1368, 1393, 1412, 1438, 1454, 1477, 1493, 1512, 1534, 1558, 1573, 1597, 1612, 1630, 1655, 1681, 1693, 1713, 1734, 1746, 1762, 1781, 1801, 1816, 1835, 1853, 1875, 1897, 1920,
+				1925, 1949, 1966, 1987, 2005, 2025, 2054, 2077, 2099, 2115, 2133, 2160, 2176, 2196, 2211, 2233, 2247, 2273, 2293, 2312, 2337, 2358, 2377, 2400, 2413, 2441, 2449, 2468, 2493, 2511, 2533, 2554, 2578, 2601, 2621, 2637, 2659, 2677, 2689, 2707,
+				2736, 2768, 2790, 2810, 2831, 2851, 2872, 2887, 2904, 2927, 2967, 2981, 2996, 3009, 3034, 3048, 3063, 3088, 3112, 3134, 3157, 3174, 3205, 3225, 3249, 3278, 3302, 3328, 3352, 3382, 3400, 3419, 3446, 3465, 3491, 3516, 3548, 3567, 3584,
+			]],
+			[ "ilscore", [
+				500, 512, 534, 548, 566, 571, 587, 629, 661, 700, 719, 723, 839, 939, 961, 1028, 1069, 1149, 1207, 1326, 1366, 1413, 1419, 1429, 1498, 1544, 1701, 1818, 1822, 1864, 1970, 2017, 2066, 2122, 2205, 2250, 2327, 2379, 2554, 2614,
+				2702, 2793, 2906, 2957, 3112, 3220, 3276, 3323, 3410, 3541, 3692, 3778, 3917, 4000, 4098, 4164, 4224, 4328, 4422, 4455, 4526, 4566, 4617, 4700, 4789, 5007, 5127, 5237, 5260, 5381, 5460, 5563, 5818, 5881, 6070, 6162, 6340, 6710, 6791, 6890,
+				6893, 6939, 6962, 6992, 7141, 7264, 7360, 7396, 7492, 7516, 7691, 7777, 7831, 7878, 7964, 8070, 8119, 8305, 8328, 8358, 8463, 8551, 8593, 8619, 8629, 8777, 8782, 8807, 8845, 8875, 8904, 8948, 9004, 9083, 9116, 9143, 9181, 9314, 9440, 9517,
+				9557, 9734, 9789, 9883, 9952, 10049, 10076, 10172, 10261, 10286, 10420, 10456, 10509, 10530, 10723, 10766, 10781, 10814, 10844, 10888, 10914, 10971, 11064, 11180, 11248, 11298, 11370, 11441, 11511, 11598, 11669, 11754, 11832, 11921, 12100, 12171, 12297, 12380, 12470,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

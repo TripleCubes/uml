@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Kostra&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Kostra&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kostra.html" property="og:url">
+	<meta content="Rank by game in top 20: 3179&#10;Rank by ilScore: 334&#10;&#10;5 games&#10;&bull; Synchronous | MJ 146: Windows | rank: 14 | ilscore: 51&#10;&bull; Mask | MJ 135: Deception | rank: 48 | ilscore: 44&#10;&bull; Rhythmic boxes | MJ 125: Signal | rank: 25 | ilscore: 58&#10;&bull; Ice Score | MJ 124: Warmth | rank: 41 | ilscore: 70&#10;&bull; Spider jump | MJ 123: Web | rank: 97 | ilscore: 76&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Kostra</h1>
+		<a href="https://kostra.itch.io">kostra.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3179</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 334</p>
+		<p>Total ilScore: 299</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kostra.itch.io/synchronous">Synchronous</a></td>
+				<td><span class="early">5h 45m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>14</td>
+				<td>10</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://kostra.itch.io/mask">Mask</a></td>
+				<td><span class="early">11h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>48</td>
+				<td>6</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://kostra.itch.io/rhythmic-boxes">Rhythmic boxes</a></td>
+				<td><span class="early">10h 19m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>25</td>
+				<td>8</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://kostra.itch.io/ice-score">Ice Score</a></td>
+				<td><span class="early">9h 22m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>41</td>
+				<td>9</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://kostra.itch.io/spider-jump">Spider jump</a></td>
+				<td><span class="early">9h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>97</td>
+				<td>11</td>
+				<td>76</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2284, 2302, 2321, 2339, 2351, 2369, 2398, 2430, 2452, 2472, 2493, 2513, 2529, 2546, 2563, 2585, 2625, 2635, 2651, 2662, 2687, 2701, 2707, 2722, 2733, 2740, 2757, 2773, 2805, 2825, 2849, 2871, 2895, 2921, 2946, 2976, 2994, 3013, 3040, 3059,
+				3085, 3109, 3141, 3161, 3178,
+			]],
+			[ "ilscore", [
+				3105, 821, 390, 395, 403, 413, 418, 431, 432, 434, 445, 452, 318, 320, 321, 327, 328, 328, 328, 330, 330, 331, 333, 334, 216, 219, 221, 225, 228, 232, 233, 236, 240, 242, 246, 252, 252, 254, 259, 260,
+				266, 270, 270, 271, 277, 277, 278, 278, 279, 280, 280, 285, 286, 292, 295, 297, 301, 302, 303, 310, 314, 318, 318, 320, 324, 324, 327, 330, 333,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

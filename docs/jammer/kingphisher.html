@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>kingphisher&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="kingphisher&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kingphisher.html" property="og:url">
+	<meta content="Rank by game in top 20: 3586&#10;Rank by ilScore: 5151&#10;&#10;2 games&#10;&bull; A Drift At Sea | MJ 50: Islands | rank: 72 | ilscore: 52&#10;&bull; Very Patient Man | MJ 49: Seasons | rank: 15 | ilscore: 21&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>kingphisher</h1>
+		<a href="https://kingphisher.itch.io">kingphisher.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3586</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5151</p>
+		<p>Total ilScore: 74</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://kingphisher.itch.io/a-drift-at-sea">A Drift At Sea</a></td>
+				<td><span class="early">21m 16s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>72</td>
+				<td>7</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://kingphisher.itch.io/very-patient-man">Very Patient Man</a></td>
+				<td><span class="early">7h 11m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>15</td>
+				<td>15</td>
+				<td>21</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				561, 583, 613, 636, 655, 671, 690, 706, 729, 755, 780, 786, 797, 822, 851, 878, 907, 918, 933, 956, 971, 988, 1014, 1037, 1056, 1070, 1089, 1114, 1134, 1152, 1169, 1193, 1214, 1232, 1245, 1267, 1284, 1306, 1325, 1349,
+				1369, 1394, 1413, 1439, 1455, 1478, 1494, 1513, 1535, 1559, 1574, 1598, 1613, 1631, 1656, 1682, 1694, 1714, 1735, 1747, 1763, 1782, 1802, 1817, 1836, 1854, 1876, 1898, 1921, 1926, 1950, 1967, 1988, 2006, 2026, 2055, 2078, 2100, 2116, 2134,
+				2161, 2177, 2197, 2212, 2234, 2248, 2274, 2294, 2313, 2338, 2359, 2378, 2401, 2414, 2442, 2450, 2469, 2494, 2512, 2534, 2555, 2579, 2602, 2622, 2638, 2660, 2678, 2690, 2708, 2737, 2769, 2791, 2811, 2832, 2852, 2873, 2888, 2905, 2928, 2968,
+				2982, 2997, 3010, 3035, 3049, 3064, 3089, 3113, 3135, 3158, 3175, 3206, 3226, 3250, 3279, 3303, 3329, 3353, 3383, 3401, 3420, 3447, 3466, 3492, 3517, 3549, 3568, 3585,
+			]],
+			[ "ilscore", [
+				767, 148, 191, 193, 202, 210, 226, 241, 266, 281, 288, 293, 296, 300, 306, 391, 450, 452, 460, 489, 501, 511, 519, 550, 562, 581, 600, 723, 737, 759, 813, 864, 873, 993, 1065, 1073, 1082, 1116, 1193, 1292,
+				1314, 1384, 1396, 1438, 1452, 1459, 1506, 1544, 1551, 1574, 1585, 1591, 1618, 1653, 1826, 1911, 1964, 1971, 2028, 2056, 2104, 2301, 2320, 2442, 2494, 2607, 2881, 2907, 2935, 2936, 2940, 2949, 2954, 3040, 3097, 3117, 3128, 3164, 3166, 3277,
+				3322, 3333, 3352, 3392, 3446, 3462, 3596, 3607, 3610, 3654, 3689, 3704, 3711, 3713, 3793, 3796, 3799, 3806, 3810, 3819, 3829, 3839, 3846, 3858, 3868, 3876, 3942, 3986, 4007, 4014, 4144, 4158, 4185, 4203, 4240, 4250, 4295, 4331, 4342, 4406,
+				4418, 4433, 4439, 4566, 4573, 4575, 4578, 4581, 4586, 4596, 4609, 4641, 4710, 4717, 4729, 4749, 4768, 4778, 4804, 4815, 4871, 4908, 4939, 5034, 5047, 5104, 5128, 5150,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

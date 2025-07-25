@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DmAndy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DmAndy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dmandy.html" property="og:url">
+	<meta content="Rank by game in top 20: 2966&#10;Rank by ilScore: 8093&#10;&#10;1 games&#10;&bull; Burn the Ants | MJ 78: Bugs | rank: 14 | ilscore: 55&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DmAndy</h1>
+		<a href="https://dmandy.itch.io">dmandy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2966</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 8093</p>
+		<p>Total ilScore: 55</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://dmandy.itch.io/burn-the-ants">Burn the Ants</a></td>
+				<td><span class="early">1d 19h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>14</td>
+				<td>21</td>
+				<td>55</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				925, 945, 958, 970, 984, 1006, 1026, 1051, 1071, 1096, 1115, 1141, 1159, 1178, 1194, 1213, 1227, 1251, 1267, 1279, 1294, 1312, 1337, 1363, 1376, 1381, 1402, 1415, 1431, 1450, 1471, 1486, 1505, 1523, 1545, 1567, 1590, 1593, 1608, 1617,
+				1634, 1652, 1672, 1686, 1699, 1721, 1728, 1746, 1776, 1793, 1809, 1825, 1847, 1862, 1888, 1900, 1906, 1933, 1954, 1967, 1977, 1984, 2012, 2013, 2017, 2029, 2034, 2046, 2067, 2082, 2106, 2120, 2135, 2152, 2170, 2183, 2201, 2226, 2258, 2281,
+				2302, 2316, 2336, 2350, 2369, 2386, 2403, 2443, 2449, 2467, 2478, 2503, 2514, 2518, 2533, 2543, 2549, 2559, 2570, 2602, 2622, 2647, 2668, 2692, 2710, 2735, 2765, 2783, 2802, 2829, 2850, 2876, 2896, 2928, 2948, 2965,
+			]],
+			[ "ilscore", [
+				1602, 1744, 1831, 1851, 1870, 1935, 2048, 2170, 2214, 2318, 2370, 2442, 2474, 2507, 2567, 2638, 2641, 2697, 2711, 2722, 2771, 2832, 3022, 3123, 3205, 3212, 3310, 3363, 3455, 3679, 3722, 3885, 3964, 4098, 4420, 4486, 4547, 4547, 4562, 4566,
+				4573, 4682, 4772, 4812, 4824, 4894, 4897, 5034, 5100, 5121, 5149, 5225, 5308, 5332, 5488, 5498, 5503, 5584, 5643, 5662, 5670, 5672, 5788, 5788, 5791, 5796, 5802, 5811, 5834, 5852, 5899, 5909, 5917, 5923, 6030, 6122, 6170, 6191, 6349, 6378,
+				6432, 6472, 6542, 6547, 6624, 6682, 6694, 6803, 6814, 6845, 6852, 7019, 7031, 7034, 7037, 7038, 7044, 7053, 7078, 7156, 7244, 7282, 7301, 7352, 7402, 7439, 7504, 7544, 7615, 7675, 7739, 7872, 7900, 7998, 8047, 8092,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

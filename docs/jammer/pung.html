@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>PungFill&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="PungFill&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pung.html" property="og:url">
+	<meta content="Rank by ilScore: 3305&#10;&#10;2 games&#10;&bull; SUGAR and TEA | MJ 96: Fate | rank: 21 | ilscore: 48&#10;&bull; game for mini jam | MJ 81: Kaiju | rank: 44 | ilscore: 41&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>PungFill</h1>
+		<a href="https://pung.itch.io">pung.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3305</p>
+		<p>Total ilScore: 90</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pung.itch.io/sugar-and-tea">SUGAR and TEA</a></td>
+				<td><span class="early">5h 53m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-96-fate">MJ 96: Fate</a></td>
+				<td>59</td>
+				<td>21</td>
+				<td>23</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://pung.itch.io/game-for-mini-jam">game for mini jam</a></td>
+				<td><span class="early">13h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>44</td>
+				<td>12</td>
+				<td>41</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2484, 2522, 2602, 2728, 2871, 2938, 3055, 3129, 3223, 3270, 3320, 3401, 3485, 3501, 3573, 3600, 938, 954, 977, 1102, 1156, 1178, 1187, 1223, 1243, 1263, 1418, 1432, 1504, 1538, 1622, 1860, 1874, 1886, 1886, 1889, 1897, 1901, 1955, 1982,
+				1997, 2010, 2027, 2035, 2110, 2133, 2150, 2168, 2185, 2212, 2226, 2309, 2320, 2326, 2346, 2370, 2386, 2391, 2396, 2416, 2419, 2424, 2430, 2432, 2435, 2448, 2456, 2461, 2472, 2481, 2491, 2522, 2546, 2564, 2572, 2662, 2681, 2701, 2715, 2727,
+				2735, 2751, 2774, 2783, 2816, 2823, 2838, 2843, 2921, 2926, 2934, 2941, 2944, 2951, 2958, 2969, 2988, 3025, 3038, 3054, 3073, 3088, 3098, 3108, 3119, 3145, 3173, 3197, 3232, 3246, 3267, 3286, 3304,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+#rank_type_links:before {
+	content: "Games that got in top: ";
+	margin-right: 5px;
+}
+#rank_type_links > a {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 4px;
+}
+
+h3, h3 + span {
+	display: inline-block;
+}
+
+h3 {
+	margin-right: 3px;
+	margin-bottom: 12px;
+}
+
+.boxes {
+	margin-bottom: 5px;
+}
+
+h3 + span > a {
+	font-size: small;
+}
+
+h3 + span + span {
+	margin-left: 10px;
+}
+h3 + span + span:before {
+	content: "Total ilScore: ";
+}
+
+@media only screen and (max-width: 990px) {
+	h3, h3 + span {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	.boxes {
+		margin-bottom: 10px;
+	}
+
+	h3 + span + span {
+		margin-left: 0;
+		margin-bottom: 10px;
+		padding: 5px 10px;
+
+		display: block;
+		width: 100vw;
+
+		transform: translateX(-10px);
+		background-color: var(--early-tag-color);
+		color: var(--secondary-text-color);
+	}
+}

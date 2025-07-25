@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DaisieDoodle&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DaisieDoodle&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/daisiedoodle.html" property="og:url">
+	<meta content="Rank by game in top 10: 1719&#10;Rank by game in top 20: 2578&#10;Rank by ilScore: 2850&#10;&#10;2 games&#10;&bull; Thrift Store Fight League | MJ 161: Style | rank: 8 | ilscore: 53&#10;&bull; Mushroom Wardener | MJ 156: Mushroom | rank: 62 | ilscore: 44&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DaisieDoodle</h1>
+		<a href="https://daisiedoodle.itch.io">daisiedoodle.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1719</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2578</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2850</p>
+		<p>Total ilScore: 97</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://waynemadeagame.itch.io/thrift-store-fight-league">Thrift Store Fight League</a></td>
+				<td><span class="late">1d 7h late</span></td>
+				<td>
+					<a href="../jammer/waynemadeagame.html">WayneMadeAGame</a>,
+					<a href="../jammer/multiphonix.html">Multiphonix</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-161-style">MJ 161: Style</a></td>
+				<td>53</td>
+				<td>8</td>
+				<td>8</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://axelftv.itch.io/mushroom-wardener">Mushroom Wardener</a></td>
+				<td><span class="early">1h 12m early</span></td>
+				<td>
+					<a href="../jammer/axelftv.html">Axelf</a>,
+					<a href="../jammer/sealantern.html">SeaLantern</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-156-mushroom">MJ 156: Mushroom</a></td>
+				<td>88</td>
+				<td>62</td>
+				<td>6</td>
+				<td>44</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1418, 1431, 1437, 1443, 1452, 1464, 1469, 1469, 1471, 1480, 1485, 1491, 1499, 1517, 1525, 1535, 1551, 1562, 1574, 1589, 1607, 1617, 1626, 1641, 1652, 1665, 1676, 1693, 1706, 1718,
+			]],
+			[ "20", [
+				2123, 2163, 2167, 2178, 2189, 2214, 2221, 2225, 2228, 2237, 2240, 2248, 2256, 2284, 2304, 2317, 2332, 2355, 2371, 2394, 2413, 2427, 2447, 2468, 2489, 2515, 2530, 2551, 2565, 2577,
+			]],
+			[ "ilscore", [
+				7942, 8030, 8046, 8129, 8199, 2397, 2420, 2424, 2439, 2441, 2497, 2503, 2511, 2518, 2521, 2528, 2534, 2544, 2562, 2596, 2610, 2622, 2639, 2654, 2664, 2671, 2682, 2707, 2732, 2755, 2778, 2791, 2812, 2831, 2849,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

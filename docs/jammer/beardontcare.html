@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>bear&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="bear&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/beardontcare.html" property="og:url">
+	<meta content="Rank by game in top 10: 923&#10;Rank by game in top 20: 1288&#10;Rank by ilScore: 7400&#10;&#10;1 games&#10;&bull; Shop Hero | MJ 152: Heroes | rank: 6 | ilscore: 59&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>bear</h1>
+		<a href="https://beardontcare.itch.io">beardontcare.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 923</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1288</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7400</p>
+		<p>Total ilScore: 59</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://baldtaria.itch.io/shophero">Shop Hero</a></td>
+				<td><span class="early">18m 58s early</span></td>
+				<td>
+					<a href="../jammer/baldtaria.html">Baldtaria</a>,
+					<a href="../jammer/milkismet.html">milkismet</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-152-heroes">MJ 152: Heroes</a></td>
+				<td>52</td>
+				<td>6</td>
+				<td>19</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				731, 745, 746, 750, 753, 762, 763, 769, 774, 778, 792, 795, 800, 807, 820, 823, 826, 826, 827, 829, 831, 834, 845, 851, 854, 856, 861, 863, 863, 869, 873, 879, 891, 899, 909, 909, 910, 917, 922,
+			]],
+			[ "20", [
+				1002, 1017, 1021, 1032, 1034, 1044, 1050, 1062, 1070, 1076, 1097, 1100, 1107, 1117, 1130, 1135, 1145, 1146, 1148, 1152, 1157, 1161, 1173, 1181, 1185, 1190, 1197, 1204, 1213, 1219, 1224, 1229, 1242, 1250, 1263, 1264, 1266, 1278, 1287,
+			]],
+			[ "ilscore", [
+				5682, 5835, 5860, 5910, 5939, 5999, 6004, 6076, 6130, 6140, 6234, 6245, 6266, 6271, 6426, 6435, 6439, 6442, 6446, 6453, 6462, 6481, 6546, 6631, 6664, 6681, 6727, 6767, 6801, 6862, 6894, 6960, 7018, 7074, 7193, 7217, 7308, 7354, 7399,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

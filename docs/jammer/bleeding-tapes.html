@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Bleeding Tapes&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Bleeding Tapes&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bleeding-tapes.html" property="og:url">
+	<meta content="Rank by game in top 5: 1014&#10;Rank by game in top 10: 1629&#10;Rank by game in top 20: 2382&#10;Rank by ilScore: 12715&#10;&#10;1 games&#10;&bull; Minitaur&#39;s Labyrinth | MJ 7: Greek Mythology | rank: 2 | ilscore: 20&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Bleeding Tapes</h1>
+		<a href="https://bleeding-tapes.itch.io">bleeding-tapes.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1014</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1629</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2382</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12715</p>
+		<p>Total ilScore: 20</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bleeding-tapes.itch.io/minitaurs-labyrinth">Minitaur&#39;s Labyrinth</a></td>
+				<td><span class="early">51m 14s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-7-greek-mythology-">MJ 7: Greek Mythology</a></td>
+				<td>10</td>
+				<td>2</td>
+				<td>7</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				9, 14, 20, 24, 27, 31, 31, 36, 40, 44, 46, 50, 55, 58, 60, 64, 64, 69, 76, 81, 82, 82, 84, 87, 91, 95, 102, 102, 106, 110, 111, 115, 121, 125, 127, 132, 135, 136, 137, 141,
+				146, 151, 152, 163, 175, 182, 187, 193, 200, 205, 213, 221, 228, 228, 230, 236, 244, 252, 260, 269, 273, 279, 284, 290, 295, 301, 306, 311, 316, 323, 326, 330, 335, 339, 346, 354, 356, 371, 376, 382,
+				386, 392, 397, 403, 407, 413, 420, 429, 432, 439, 446, 454, 463, 466, 473, 477, 483, 494, 497, 502, 507, 510, 515, 522, 531, 535, 538, 542, 548, 557, 561, 562, 567, 572, 580, 584, 592, 601, 610, 618,
+				620, 625, 635, 639, 647, 650, 657, 662, 665, 669, 672, 677, 683, 688, 691, 695, 704, 705, 709, 716, 719, 726, 732, 738, 743, 746, 754, 764, 770, 772, 776, 783, 793, 804, 809, 814, 818, 822, 826, 832,
+				838, 846, 850, 853, 859, 865, 869, 869, 871, 878, 881, 889, 896, 907, 912, 916, 922, 927, 933, 942, 952, 955, 960, 971, 979, 986, 991, 998, 1008, 1013,
+			]],
+			[ "10", [
+				9, 18, 24, 28, 32, 39, 39, 47, 51, 58, 60, 67, 71, 75, 77, 81, 81, 91, 97, 103, 104, 104, 106, 110, 114, 121, 128, 130, 134, 143, 144, 148, 155, 166, 168, 172, 175, 176, 177, 183,
+				192, 198, 199, 213, 232, 240, 248, 257, 268, 278, 289, 301, 312, 312, 315, 329, 347, 360, 376, 380, 387, 400, 408, 416, 429, 442, 448, 456, 463, 476, 485, 496, 505, 514, 521, 534, 541, 556, 563, 574,
+				584, 596, 608, 620, 628, 639, 649, 666, 674, 683, 692, 705, 715, 718, 728, 734, 745, 760, 767, 773, 781, 790, 797, 806, 823, 830, 839, 849, 861, 875, 888, 889, 903, 911, 919, 928, 945, 957, 965, 978,
+				980, 989, 1007, 1016, 1027, 1040, 1053, 1063, 1073, 1079, 1082, 1097, 1108, 1115, 1117, 1121, 1135, 1138, 1141, 1146, 1149, 1157, 1173, 1179, 1190, 1193, 1205, 1216, 1225, 1231, 1239, 1260, 1277, 1286, 1293, 1301, 1312, 1316, 1326, 1338,
+				1344, 1357, 1363, 1369, 1377, 1389, 1394, 1394, 1396, 1404, 1407, 1415, 1422, 1440, 1449, 1459, 1475, 1486, 1497, 1510, 1527, 1537, 1546, 1561, 1572, 1585, 1591, 1608, 1616, 1628,
+			]],
+			[ "20", [
+				10, 21, 29, 33, 38, 48, 48, 56, 62, 68, 70, 77, 82, 89, 93, 99, 101, 113, 119, 127, 128, 130, 134, 141, 145, 155, 165, 168, 172, 182, 184, 188, 196, 209, 212, 216, 220, 222, 225, 234,
+				246, 251, 252, 265, 296, 304, 312, 322, 334, 352, 366, 379, 397, 404, 410, 430, 449, 477, 504, 510, 519, 543, 553, 561, 589, 609, 615, 631, 639, 664, 677, 693, 712, 721, 728, 750, 763, 777, 785, 806,
+				826, 846, 858, 883, 891, 910, 925, 941, 953, 967, 975, 990, 999, 1007, 1021, 1032, 1058, 1087, 1100, 1105, 1126, 1140, 1156, 1175, 1191, 1206, 1225, 1244, 1266, 1288, 1310, 1311, 1325, 1334, 1346, 1364, 1382, 1395, 1403, 1426,
+				1431, 1449, 1479, 1490, 1502, 1519, 1537, 1552, 1578, 1582, 1585, 1610, 1632, 1639, 1643, 1648, 1676, 1678, 1680, 1685, 1688, 1699, 1716, 1724, 1741, 1747, 1759, 1771, 1790, 1804, 1817, 1837, 1869, 1879, 1886, 1894, 1910, 1917, 1936, 1948,
+				1957, 1997, 2001, 2012, 2021, 2046, 2052, 2056, 2059, 2068, 2071, 2081, 2089, 2112, 2132, 2144, 2160, 2183, 2198, 2217, 2234, 2244, 2264, 2285, 2306, 2332, 2338, 2356, 2368, 2381,
+			]],
+			[ "ilscore", [
+				28, 51, 68, 87, 95, 103, 103, 128, 145, 150, 150, 177, 190, 203, 206, 209, 268, 311, 348, 361, 373, 392, 409, 433, 443, 462, 501, 514, 517, 544, 544, 558, 573, 598, 616, 634, 642, 662, 706, 737,
+				776, 797, 805, 920, 1022, 1045, 1111, 1152, 1234, 1293, 1412, 1452, 1499, 1507, 1519, 1589, 1637, 1795, 1911, 1916, 1960, 2067, 2114, 2163, 2219, 2303, 2350, 2427, 2481, 2656, 2716, 2804, 2896, 3012, 3063, 3218, 3327, 3384, 3432, 3520,
+				3653, 3804, 3892, 4032, 4116, 4213, 4279, 4340, 4447, 4541, 4575, 4646, 4686, 4737, 4822, 4911, 5128, 5248, 5360, 5388, 5510, 5591, 5694, 5949, 6013, 6202, 6295, 6475, 6846, 6927, 7027, 7033, 7081, 7105, 7136, 7286, 7414, 7510, 7546, 7648,
+				7678, 7850, 7936, 7989, 8038, 8124, 8234, 8283, 8470, 8494, 8522, 8628, 8715, 8758, 8786, 8800, 8948, 8954, 8981, 9020, 9050, 9079, 9125, 9182, 9262, 9296, 9325, 9362, 9504, 9627, 9703, 9745, 9925, 9983, 10080, 10148, 10245, 10277, 10378, 10466,
+				10493, 10628, 10664, 10718, 10740, 10934, 10980, 10997, 11035, 11067, 11114, 11142, 11198, 11294, 11413, 11483, 11532, 11602, 11673, 11745, 11831, 11903, 11987, 12067, 12157, 12339, 12413, 12540, 12622, 12714,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

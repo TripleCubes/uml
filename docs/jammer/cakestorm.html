@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Cakestorm&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Cakestorm&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/cakestorm.html" property="og:url">
+	<meta content="Rank by game in top 5: 17&#10;Rank by game in top 10: 10&#10;Rank by game in top 20: 18&#10;Rank by ilScore: 48&#10;&#10;7 games&#10;&bull; Interstitial Hyperdreaming | MJ 105: Dreamy | rank: 3 | ilscore: 91&#10;&bull; BLASTR | MJ 104: Cascade | rank: 4 | ilscore: 83&#10;&bull; Geowitch | MJ 101: Limit | rank: 2 | ilscore: 98&#10;&bull; core_error | MJ 100: Overload | rank: 8 | ilscore: 101&#10;&bull; Birdmada | MJ 99: Birds | rank: 2 | ilscore: 117&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Cakestorm</h1>
+		<a href="https://cakestorm.itch.io">cakestorm.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 17</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 10</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>6</span>
+			<span>6</span>
+			<span>8</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 18</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>6</span>
+			<span>6</span>
+			<span>8</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 48</p>
+		<p>Total ilScore: 682</p>
+
+		<h3 id="games_header">7 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/interstitial-hyperdreaming">Interstitial Hyperdreaming</a></td>
+				<td><span class="early">9h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>3</td>
+				<td>16</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/blastr">BLASTR</a></td>
+				<td><span class="early">10h 48m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>4</td>
+				<td>43</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/geowitch">Geowitch</a></td>
+				<td><span class="early">8h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>2</td>
+				<td>22</td>
+				<td>98</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/core-error">core_error</a></td>
+				<td><span class="early">8h 7m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>8</td>
+				<td>26</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/birdmada">Birdmada</a></td>
+				<td><span class="early">8h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>2</td>
+				<td>37</td>
+				<td>117</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/fission">Fission</a></td>
+				<td><span class="early">6h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>6</td>
+				<td>18</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://cakestorm.itch.io/voltknight">VoltKnight</a></td>
+				<td><span class="early">6h 37m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>6</td>
+				<td>51</td>
+				<td>101</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				275, 286, 31, 31, 31, 11, 7, 7, 7, 7, 7, 7, 7, 7, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11,
+				11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15,
+				15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16,
+			]],
+			[ "10", [
+				244, 247, 250, 45, 46, 46, 46, 53, 54, 55, 55, 55, 56, 56, 56, 58, 58, 58, 58, 59, 60, 60, 61, 61, 61, 62, 65, 28, 14, 11, 11, 11, 6, 5, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7,
+				7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9,
+				9,
+			]],
+			[ "20", [
+				344, 347, 352, 84, 85, 85, 85, 95, 98, 98, 99, 99, 99, 99, 102, 104, 104, 104, 105, 106, 108, 110, 113, 117, 118, 121, 121, 57, 28, 18, 19, 19, 13, 10, 11, 11, 11, 11, 11, 11,
+				11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
+				14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17,
+				17,
+			]],
+			[ "ilscore", [
+				332, 343, 355, 93, 96, 96, 113, 127, 131, 131, 137, 146, 153, 157, 161, 164, 173, 179, 180, 185, 191, 195, 197, 204, 206, 211, 215, 79, 41, 21, 23, 23, 16, 13, 15, 16, 18, 19, 20, 22,
+				22, 22, 22, 22, 22, 22, 24, 24, 24, 24, 24, 24, 24, 25, 26, 27, 27, 27, 27, 27, 28, 28, 30, 32, 33, 34, 34, 34, 35, 35, 35, 35, 35, 35, 35, 36, 36, 36, 37, 37,
+				37, 39, 39, 40, 40, 40, 40, 40, 40, 40, 42, 42, 42, 42, 42, 42, 42, 42, 43, 43, 43, 43, 43, 44, 44, 44, 44, 44, 44, 44, 44, 44, 44, 45, 45, 45, 47, 47, 47, 47,
+				47,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

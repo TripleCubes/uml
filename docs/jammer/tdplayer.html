@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>tdPlayer&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="tdPlayer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tdplayer.html" property="og:url">
+	<meta content="Rank by ilScore: 9552&#10;&#10;1 games&#10;&bull; Gold Shifter | MJ 85: Gold | rank: 148 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>tdPlayer</h1>
+		<a href="https://tdplayer.itch.io">tdplayer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9552</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tdplayer.itch.io/gold-shifter">Gold Shifter</a></td>
+				<td><span class="early">2h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>148</td>
+				<td>4</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2637, 2699, 2811, 2877, 2962, 3005, 3050, 3123, 3203, 3217, 3281, 3303, 3331, 3392, 3463, 3659, 3769, 3859, 3866, 3972, 4033, 4133, 4372, 4421, 4600, 4679, 4828, 5170, 5237, 5310, 5310, 5334, 5339, 5352, 5468, 5575, 5632, 5651, 5740, 5749,
+				5893, 5964, 5996, 6032, 6110, 6202, 6239, 6408, 6426, 6436, 6524, 6597, 6628, 6634, 6635, 6765, 6765, 6770, 6777, 6784, 6798, 6842, 6877, 6940, 6957, 6967, 6983, 7092, 7203, 7269, 7297, 7460, 7496, 7568, 7621, 7705, 7721, 7805, 7874, 7891,
+				8016, 8032, 8078, 8087, 8268, 8290, 8290, 8298, 8301, 8323, 8330, 8366, 8451, 8545, 8590, 8621, 8681, 8742, 8800, 8879, 8922, 8991, 9055, 9129, 9267, 9314, 9422, 9492, 9551,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

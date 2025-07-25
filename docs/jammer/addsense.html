@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>addsense&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="addsense&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/addsense.html" property="og:url">
+	<meta content="Rank by game in top 20: 3426&#10;Rank by ilScore: 271&#10;&#10;5 games&#10;&bull; Booma | MJ 141: Stories | rank: 18 | ilscore: 41&#10;&bull; Beep-boop | MJ 130: Lunar | rank: 42 | ilscore: 93&#10;&bull; Dotfence | MJ 124: Warmth | rank: 43 | ilscore: 70&#10;&bull; Exorcist&#39;s Hut | MJ 112: Chrono | rank: 47 | ilscore: 63&#10;&bull; Spebunko | MJ 111: Colors | rank: 303 | ilscore: 61&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>addsense</h1>
+		<a href="https://addsense.itch.io">addsense.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3426</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 271</p>
+		<p>Total ilScore: 328</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://addsense.itch.io/champ">Booma</a></td>
+				<td><span class="early">42s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-141-stories">MJ 141: Stories</a></td>
+				<td>43</td>
+				<td>18</td>
+				<td>14</td>
+				<td>41</td>
+			</tr>
+			<tr>
+				<td><a href="https://addsense.itch.io/36583">Beep-boop</a></td>
+				<td><span class="early">20m 20s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>42</td>
+				<td>12</td>
+				<td>93</td>
+			</tr>
+			<tr>
+				<td><a href="https://addsense.itch.io/dotfence">Dotfence</a></td>
+				<td><span class="early">1m 15s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>43</td>
+				<td>13</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://addsense.itch.io/exhut">Exorcist&#39;s Hut</a></td>
+				<td><span class="early">14m 43s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>47</td>
+				<td>9</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://addsense.itch.io/spebunko">Spebunko</a></td>
+				<td><span class="early">5m 50s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>303</td>
+				<td>4</td>
+				<td>61</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2370, 2390, 2411, 2435, 2458, 2478, 2494, 2516, 2534, 2546, 2564, 2593, 2625, 2647, 2667, 2688, 2708, 2728, 2743, 2760, 2783, 2823, 2837, 2852, 2866, 2891, 2905, 2910, 2934, 2956, 2978, 2998, 3015, 3046, 3066, 3090, 3119, 3143, 3169, 3193,
+				3223, 3241, 3260, 3287, 3306, 3332, 3357, 3389, 3408, 3425,
+			]],
+			[ "ilscore", [
+				3947, 1001, 1020, 1020, 1026, 1030, 1039, 1065, 1083, 1091, 1099, 1113, 1122, 1152, 442, 447, 452, 463, 473, 478, 210, 212, 212, 217, 220, 221, 222, 222, 227, 228, 228, 230, 178, 178, 181, 183, 183, 183, 184, 185,
+				188, 191, 195, 195, 196, 198, 198, 200, 207, 209, 211, 214, 215, 218, 221, 223, 223, 224, 225, 225, 226, 226, 226, 227, 229, 233, 238, 243, 245, 245, 246, 246, 254, 256, 258, 260, 262, 265, 265, 267,
+				269, 270,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

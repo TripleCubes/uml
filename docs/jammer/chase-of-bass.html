@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chase of Bass&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Chase of Bass&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chase-of-bass.html" property="og:url">
+	<meta content="Rank by game in top 5: 151&#10;Rank by game in top 10: 8&#10;Rank by game in top 20: 16&#10;Rank by ilScore: 31&#10;&#10;10 games&#10;&bull; Early Bird Lee | MJ 184: Birds | rank: 6 | ilscore: 80&#10;&bull; Bass 10 | MJ 183: Calculations | rank: 7 | ilscore: 87&#10;&bull; Pieces of Time | MJ 112: Chrono | rank: 8 | ilscore: 79&#10;&bull; They Came From Outer Bass | MJ 107: Music | rank: 8 | ilscore: 75&#10;&bull; Snacky Frog Remix | MJ 106: Frogs | rank: 22 | ilscore: 116&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chase of Bass</h1>
+		<a href="https://chase-of-bass.itch.io">chase-of-bass.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 151</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 8</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>6</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>8</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 16</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>2</span>
+			<span>6</span>
+			<span>7</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>11</span>
+			<span>9</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 31</p>
+		<p>Total ilScore: 828</p>
+
+		<h3 id="games_header">10 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/early-bird-lee">Early Bird Lee</a></td>
+				<td><span class="early">5m 47s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-184-birds">MJ 184: Birds</a></td>
+				<td>101</td>
+				<td>6</td>
+				<td>35</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/bass-10">Bass 10</a></td>
+				<td><span class="early">1m 18s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-183-calculations">MJ 183: Calculations</a></td>
+				<td>119</td>
+				<td>7</td>
+				<td>19</td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/pieces-of-time">Pieces of Time</a></td>
+				<td><span class="early">7m 11s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-112-chrono">MJ 112: Chrono</a></td>
+				<td>94</td>
+				<td>8</td>
+				<td>13</td>
+				<td>79</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/they-came-from-outer-bass">They Came From Outer Bass</a></td>
+				<td><span class="early">53s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>8</td>
+				<td>23</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/snacky-frog-remix">Snacky Frog Remix</a></td>
+				<td><span class="early">34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>22</td>
+				<td>22</td>
+				<td>116</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/tower-of-fire-dice">Tower of Fire &amp; Dice</a></td>
+				<td><span class="early">1h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>7</td>
+				<td>22</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/doodle-bounce">Doodle Bounce</a></td>
+				<td><span class="early">2m 39s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-82-doodle">MJ 82: Doodle</a></td>
+				<td>65</td>
+				<td>2</td>
+				<td>16</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/mecha-mayor">Mecha Mayor</a></td>
+				<td><span class="early">1m 55s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>2</td>
+				<td>23</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/catjam">Mauw</a></td>
+				<td><span class="early">55s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>11</td>
+				<td>37</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://chase-of-bass.itch.io/snacky-frog">Snacky Frog</a></td>
+				<td><span class="early">3m 10s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>9</td>
+				<td>51</td>
+				<td>105</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				341, 43, 43, 44, 44, 46, 47, 47, 48, 48, 48, 49, 49, 49, 53, 53, 53, 54, 55, 55, 55, 59, 59, 61, 62, 62, 63, 63, 64, 65, 65, 66, 67, 68, 68, 69, 71, 72, 72, 72,
+				72, 72, 72, 73, 74, 74, 76, 78, 80, 80, 81, 82, 83, 84, 85, 86, 87, 88, 88, 89, 89, 92, 92, 94, 98, 99, 99, 99, 99, 101, 101, 101, 101, 103, 104, 105, 105, 105, 105, 106,
+				107, 110, 112, 114, 114, 118, 123, 124, 124, 124, 127, 128, 129, 131, 131, 131, 132, 132, 132, 133, 135, 135, 135, 135, 136, 136, 140, 141, 144, 144, 150, 150, 150,
+			]],
+			[ "10", [
+				247, 251, 73, 25, 25, 25, 25, 25, 25, 27, 27, 27, 27, 28, 30, 30, 30, 18, 18, 18, 18, 18, 19, 19, 19, 19, 19, 19, 19, 14, 14, 14, 14, 14, 11, 11, 11, 11, 11, 11,
+				11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13,
+				13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 9, 7, 7, 7, 7, 7, 7, 7,
+			]],
+			[ "20", [
+				355, 99, 50, 22, 22, 23, 24, 24, 24, 24, 24, 24, 24, 27, 27, 27, 27, 17, 17, 17, 18, 18, 18, 19, 20, 20, 20, 20, 20, 16, 16, 17, 17, 17, 12, 12, 12, 12, 12, 12,
+				12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16,
+				16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 16, 14, 14, 14, 14, 14, 15, 15,
+			]],
+			[ "ilscore", [
+				417, 120, 61, 35, 35, 40, 41, 43, 45, 46, 46, 47, 49, 52, 55, 55, 57, 32, 32, 35, 37, 42, 47, 50, 52, 57, 61, 62, 32, 21, 22, 23, 25, 27, 23, 23, 23, 23, 23, 24,
+				26, 26, 26, 26, 26, 26, 26, 28, 29, 30, 30, 30, 30, 30, 31, 31, 34, 37, 38, 38, 38, 38, 39, 39, 39, 39, 39, 40, 40, 41, 41, 41, 41, 41, 41, 43, 43, 44, 44, 44,
+				44, 44, 44, 44, 45, 45, 45, 45, 45, 45, 46, 47, 47, 47, 47, 47, 47, 48, 48, 48, 48, 48, 48, 48, 48, 48, 48, 34, 29, 29, 29, 29, 29, 30, 30,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

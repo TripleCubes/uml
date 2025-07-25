@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>snwhd&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="snwhd&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/snwhd.html" property="og:url">
+	<meta content="Rank by game in top 10: 207&#10;Rank by game in top 20: 347&#10;Rank by ilScore: 589&#10;&#10;3 games&#10;&bull; Chromatic Vision | MJ 183: Calculations | rank: 59 | ilscore: 69&#10;&bull; Beat Bot | MJ 125: Signal | rank: 7 | ilscore: 69&#10;&bull; The Ice Caves | MJ 124: Warmth | rank: 6 | ilscore: 87&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>snwhd</h1>
+		<a href="https://snwhd.itch.io">snwhd.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 207</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>7</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 347</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>7</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 589</p>
+		<p>Total ilScore: 225</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://snwhd.itch.io/chromatic-vision">Chromatic Vision</a></td>
+				<td><span class="early">5m 49s early</span></td>
+				<td>
+					<a href="../jammer/scalmon.html">Scalmon</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-183-calculations">MJ 183: Calculations</a></td>
+				<td>119</td>
+				<td>59</td>
+				<td>8</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://snwhd.itch.io/beatbot">Beat Bot</a></td>
+				<td><span class="early">25m 46s early</span></td>
+				<td>
+					<a href="../jammer/mintwatercolor.html">mintwatercolor</a>,
+					<a href="../jammer/sul-iac.html">Sul_iac</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>7</td>
+				<td>18</td>
+				<td>69</td>
+			</tr>
+			<tr>
+				<td><a href="https://snwhd.itch.io/minijam124">The Ice Caves</a></td>
+				<td><span class="early">17h 58m early</span></td>
+				<td>
+					<a href="../jammer/suitepea.html">suitepea</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>6</td>
+				<td>23</td>
+				<td>87</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				451, 117, 117, 119, 119, 122, 123, 124, 125, 127, 129, 131, 134, 134, 136, 137, 137, 139, 139, 140, 141, 141, 141, 141, 143, 143, 144, 146, 149, 150, 151, 151, 151, 151, 152, 153, 155, 158, 160, 161,
+				166, 167, 169, 172, 174, 177, 177, 178, 178, 178, 178, 179, 181, 183, 184, 186, 187, 187, 187, 187, 187, 189, 196, 200, 200, 203, 203, 206,
+			]],
+			[ "20", [
+				659, 193, 195, 201, 202, 207, 209, 210, 211, 213, 215, 217, 219, 221, 225, 228, 228, 231, 231, 234, 235, 236, 237, 238, 240, 243, 243, 245, 247, 248, 249, 251, 251, 252, 255, 256, 259, 264, 268, 269,
+				276, 279, 283, 287, 289, 292, 293, 294, 296, 298, 300, 302, 303, 305, 307, 311, 311, 314, 315, 316, 318, 324, 333, 337, 337, 341, 342, 346,
+			]],
+			[ "ilscore", [
+				2300, 728, 736, 754, 769, 777, 800, 808, 814, 831, 844, 854, 858, 860, 873, 874, 874, 877, 877, 882, 886, 892, 896, 898, 900, 902, 910, 921, 925, 928, 958, 969, 975, 979, 990, 996, 1015, 1029, 1034, 1050,
+				1053, 1060, 1064, 1084, 1087, 1090, 1092, 1093, 1097, 1097, 1100, 1107, 1117, 1126, 1132, 1135, 1140, 1151, 1160, 1167, 553, 558, 565, 570, 573, 579, 581, 588,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

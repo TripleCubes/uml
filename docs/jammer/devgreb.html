@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>devgreb&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="devgreb&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/devgreb.html" property="og:url">
+	<meta content="Rank by ilScore: 734&#10;&#10;4 games&#10;&bull; Mystic Leap | MJ 150: Magic | rank: 28 | ilscore: 76&#10;&bull; Spiders??? | MJ 144: Nightmare | rank: 21 | ilscore: 51&#10;&bull; Ink Platformer | MJ 143: Ink | rank: 31 | ilscore: 49&#10;&bull; Earth Defense | MJ 142: Fortune | rank: 37 | ilscore: 25&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>devgreb</h1>
+		<a href="https://devgreb.itch.io">devgreb.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 734</p>
+		<p>Total ilScore: 202</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lightningpickle.itch.io/mystic-leap">Mystic Leap</a></td>
+				<td><span class="early">3h 17m early</span></td>
+				<td>
+					<a href="../jammer/lightningpickle.html">LightningPickle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>28</td>
+				<td>15</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://devgreb.itch.io/mini-jam-144-nightmare">Spiders???</a></td>
+				<td><span class="early">49m 42s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-144-nightmare">MJ 144: Nightmare</a></td>
+				<td>66</td>
+				<td>21</td>
+				<td>13</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://lightningpickle.itch.io/mini-jam-143-ink-platformer">Ink Platformer</a></td>
+				<td><span class="early">25m 47s early</span></td>
+				<td>
+					<a href="../jammer/lightningpickle.html">LightningPickle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-143-ink">MJ 143: Ink</a></td>
+				<td>62</td>
+				<td>31</td>
+				<td>6</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://devgreb.itch.io/mini-jam-142-earth-defense">Earth Defense</a></td>
+				<td><span class="early">44m 56s early</span></td>
+				<td>
+					<a href="../jammer/lightningpickle.html">LightningPickle</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>37</td>
+				<td>12</td>
+				<td>25</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				8809, 3731, 1372, 1379, 1382, 1385, 1392, 1404, 522, 527, 531, 545, 546, 553, 558, 563, 568, 580, 591, 595, 606, 613, 618, 620, 632, 637, 639, 641, 642, 644, 646, 648, 653, 656, 661, 667, 669, 672, 675, 682,
+				686, 689, 696, 704, 711, 712, 721, 725, 733,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

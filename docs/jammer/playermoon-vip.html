@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Playermoon&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Playermoon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/playermoon-vip.html" property="og:url">
+	<meta content="Rank by ilScore: 772&#10;&#10;4 games&#10;&bull; Bunny Forest Mayhem | MJ 100: Overload | rank: 121 | ilscore: 62&#10;&bull; PioPioWar | MJ 99: Birds | rank: 198 | ilscore: 59&#10;&bull; Vtopi | MJ 63: Future | rank: 101 | ilscore: 38&#10;&bull; Events | MJ 63: Future | rank: 100 | ilscore: 39&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Playermoon</h1>
+		<a href="https://playermoon-vip.itch.io">playermoon-vip.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 772</p>
+		<p>Total ilScore: 198</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://playermoon-vip.itch.io/bunnyforestmayhem">Bunny Forest Mayhem</a></td>
+				<td><span class="late">19h 36m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>121</td>
+				<td>4</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://playermoon-vip.itch.io/piopiowar">PioPioWar</a></td>
+				<td><span class="early">55m 2s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>198</td>
+				<td>4</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://playermoon-vip.itch.io/vtopi">Vtopi</a></td>
+				<td><span class="early">41m 45s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>101</td>
+				<td>5</td>
+				<td>38</td>
+			</tr>
+			<tr>
+				<td><a href="https://playermoon-vip.itch.io/events">Events</a></td>
+				<td><span class="early">40m 37s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>100</td>
+				<td>5</td>
+				<td>39</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				407, 408, 417, 440, 452, 461, 469, 497, 509, 528, 544, 655, 670, 689, 736, 781, 790, 907, 976, 985, 994, 1025, 1100, 1191, 1212, 1276, 1290, 1323, 1336, 1343, 1382, 1412, 1419, 1435, 1446, 1452, 1474, 1506, 519, 235,
+				245, 246, 250, 252, 256, 270, 278, 298, 307, 313, 339, 347, 352, 353, 356, 359, 363, 372, 380, 387, 390, 394, 395, 407, 418, 424, 430, 439, 449, 456, 471, 472, 474, 484, 493, 500, 501, 503, 513, 513,
+				519, 520, 523, 525, 526, 528, 530, 536, 536, 536, 546, 554, 559, 563, 578, 579, 585, 590, 597, 600, 612, 624, 628, 638, 644, 650, 651, 662, 666, 669, 671, 672, 674, 676, 679, 684, 687, 694, 700, 703,
+				706, 709, 715, 720, 725, 732, 739, 747, 748, 759, 764, 771,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>billakosama&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="billakosama&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/billakosama.html" property="og:url">
+	<meta content="Rank by game in top 20: 3671&#10;Rank by ilScore: 12714&#10;&#10;1 games&#10;&bull; Guardian of the Pharaoh | MJ 39: Monsters | rank: 17 | ilscore: 20&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>billakosama</h1>
+		<a href="https://billakosama.itch.io">billakosama.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3671</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12714</p>
+		<p>Total ilScore: 20</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://billakosama.itch.io/guardian-of-the-pharaoh">Guardian of the Pharaoh</a></td>
+				<td><span class="early">5m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-39-monsters">MJ 39: Monsters</a></td>
+				<td>23</td>
+				<td>17</td>
+				<td>7</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				484, 499, 515, 529, 539, 556, 575, 585, 601, 617, 628, 650, 680, 705, 724, 740, 759, 775, 798, 824, 849, 859, 870, 895, 923, 950, 979, 991, 1006, 1029, 1044, 1061, 1087, 1110, 1129, 1143, 1162, 1187, 1207, 1225,
+				1242, 1266, 1287, 1305, 1318, 1340, 1357, 1378, 1397, 1421, 1441, 1466, 1485, 1511, 1527, 1550, 1566, 1585, 1607, 1631, 1646, 1670, 1685, 1703, 1728, 1754, 1766, 1786, 1807, 1819, 1835, 1854, 1874, 1889, 1908, 1926, 1948, 1970, 1993, 2001,
+				2025, 2042, 2063, 2081, 2101, 2130, 2153, 2175, 2191, 2209, 2236, 2252, 2272, 2287, 2309, 2323, 2349, 2369, 2388, 2413, 2434, 2453, 2476, 2496, 2524, 2536, 2556, 2581, 2599, 2620, 2641, 2665, 2688, 2708, 2724, 2746, 2764, 2776, 2794, 2823,
+				2855, 2877, 2897, 2918, 2938, 2959, 2974, 2991, 3014, 3053, 3067, 3082, 3095, 3120, 3134, 3149, 3174, 3198, 3220, 3243, 3260, 3291, 3311, 3335, 3364, 3388, 3414, 3438, 3468, 3486, 3505, 3532, 3551, 3577, 3602, 3634, 3653, 3670,
+			]],
+			[ "ilscore", [
+				572, 597, 615, 633, 641, 661, 705, 736, 775, 796, 804, 919, 1021, 1044, 1110, 1151, 1233, 1292, 1411, 1451, 1498, 1506, 1518, 1588, 1636, 1794, 1910, 1915, 1959, 2066, 2113, 2162, 2218, 2302, 2349, 2426, 2480, 2655, 2715, 2803,
+				2895, 3011, 3062, 3217, 3326, 3383, 3431, 3519, 3652, 3803, 3891, 4031, 4115, 4212, 4278, 4339, 4446, 4540, 4574, 4645, 4685, 4736, 4821, 4910, 5127, 5247, 5359, 5387, 5509, 5590, 5693, 5948, 6012, 6201, 6294, 6474, 6845, 6926, 7026, 7032,
+				7080, 7104, 7135, 7285, 7413, 7509, 7545, 7647, 7677, 7849, 7935, 7988, 8037, 8123, 8233, 8282, 8469, 8493, 8521, 8627, 8714, 8757, 8785, 8799, 8947, 8953, 8980, 9019, 9049, 9078, 9124, 9181, 9261, 9295, 9324, 9361, 9503, 9626, 9702, 9742,
+				9923, 9981, 10078, 10146, 10243, 10275, 10376, 10464, 10491, 10626, 10662, 10716, 10738, 10932, 10978, 10995, 11033, 11065, 11112, 11140, 11196, 11292, 11411, 11481, 11530, 11600, 11671, 11743, 11829, 11901, 11985, 12065, 12155, 12338, 12412, 12539, 12621, 12713,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Vainer&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Vainer&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/vainer.html" property="og:url">
+	<meta content="Rank by game in top 5: 1111&#10;Rank by game in top 10: 362&#10;Rank by game in top 20: 260&#10;Rank by ilScore: 1326&#10;&#10;4 games&#10;&bull; Curious Island | MJ 50: Islands | rank: 79 | ilscore: 49&#10;&bull; Star-Friends | MJ 48: Teamwork | rank: 6 | ilscore: 42&#10;&bull; Eyes of Justice | MJ 46: Justice | rank: 15 | ilscore: 45&#10;&bull; Jörmungand&#39;s Wish | MJ 35: Vikings | rank: 5 | ilscore: 17&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Vainer</h1>
+		<a href="https://vainer.itch.io">vainer.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1111</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 362</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 260</p>
+		<div class="boxes">
+			<span>5</span>
+			<span>6</span>
+			<span>15</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1326</p>
+		<p>Total ilScore: 152</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://vainer.itch.io/curious-island">Curious Island</a></td>
+				<td><span class="early">28m 7s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>79</td>
+				<td>2</td>
+				<td>49</td>
+			</tr>
+			<tr>
+				<td><a href="https://vainer.itch.io/star-friends">Star-Friends</a></td>
+				<td><span class="early">10m 50s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-48-teamwork">MJ 48: Teamwork</a></td>
+				<td>31</td>
+				<td>6</td>
+				<td>8</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://vainer.itch.io/eyes-of-justice">Eyes of Justice</a></td>
+				<td><span class="early">45m 57s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-46-justice">MJ 46: Justice</a></td>
+				<td>43</td>
+				<td>15</td>
+				<td>4</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://vainer.itch.io/jormundangs-wish">Jörmungand&#39;s Wish</a></td>
+				<td><span class="early">1h 43m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-35-vikings">MJ 35: Vikings</a></td>
+				<td>11</td>
+				<td>5</td>
+				<td>7</td>
+				<td>17</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				155, 159, 162, 168, 175, 179, 183, 188, 195, 198, 203, 207, 212, 217, 220, 228, 240, 247, 252, 258, 265, 270, 278, 286, 293, 297, 300, 306, 314, 322, 330, 340, 344, 349, 354, 360, 365, 371, 376, 381,
+				386, 393, 396, 400, 405, 409, 416, 424, 426, 440, 445, 451, 455, 461, 466, 472, 476, 482, 489, 498, 501, 508, 515, 523, 532, 538, 545, 549, 555, 566, 569, 575, 579, 582, 587, 593, 602, 606, 609, 613,
+				618, 627, 631, 635, 640, 644, 652, 656, 664, 673, 682, 690, 693, 698, 708, 712, 720, 723, 730, 735, 738, 742, 748, 753, 759, 764, 769, 777, 786, 789, 794, 801, 804, 811, 817, 823, 828, 834, 842, 852,
+				858, 860, 864, 871, 881, 892, 897, 902, 906, 913, 917, 923, 929, 937, 941, 944, 950, 956, 960, 965, 968, 976, 979, 986, 993, 1004, 1009, 1013, 1019, 1024, 1030, 1039, 1049, 1052, 1057, 1068, 1076, 1083, 1088, 1095,
+				1105, 1110,
+			]],
+			[ "10", [
+				249, 258, 261, 269, 277, 288, 298, 305, 313, 321, 331, 337, 346, 60, 62, 66, 66, 66, 67, 72, 74, 74, 74, 77, 78, 78, 84, 86, 86, 88, 88, 93, 94, 96, 98, 99, 100, 101, 102, 106,
+				108, 110, 110, 112, 113, 113, 116, 117, 123, 126, 127, 127, 129, 129, 133, 134, 135, 136, 138, 140, 140, 141, 141, 145, 147, 147, 150, 152, 152, 155, 158, 159, 164, 165, 168, 171, 171, 176, 178, 178,
+				179, 180, 183, 183, 183, 187, 191, 191, 191, 191, 195, 195, 198, 199, 203, 208, 212, 214, 215, 220, 221, 223, 227, 230, 233, 236, 237, 239, 241, 244, 247, 251, 252, 255, 256, 257, 259, 259, 261, 262,
+				263, 267, 269, 270, 271, 275, 277, 278, 279, 282, 283, 286, 291, 292, 299, 303, 307, 309, 309, 315, 317, 318, 320, 322, 323, 324, 326, 328, 329, 332, 332, 332, 334, 338, 339, 342, 349, 352, 352, 355,
+				358, 361,
+			]],
+			[ "20", [
+				348, 363, 365, 373, 382, 399, 409, 422, 431, 439, 459, 92, 96, 36, 37, 37, 38, 38, 38, 38, 42, 42, 44, 45, 46, 46, 49, 52, 52, 52, 52, 52, 59, 59, 60, 60, 60, 61, 61, 63,
+				63, 63, 65, 68, 69, 70, 70, 70, 76, 81, 81, 82, 82, 82, 82, 85, 87, 87, 87, 88, 89, 91, 93, 95, 99, 100, 103, 103, 104, 108, 110, 110, 112, 112, 113, 115, 118, 118, 119, 119,
+				119, 120, 121, 122, 123, 124, 125, 128, 128, 128, 130, 131, 133, 134, 136, 136, 138, 143, 144, 150, 152, 152, 153, 154, 156, 156, 158, 161, 164, 167, 167, 169, 170, 172, 172, 173, 174, 175, 176, 178,
+				178, 179, 181, 181, 182, 186, 186, 187, 188, 190, 192, 196, 198, 198, 203, 206, 207, 209, 213, 214, 215, 217, 219, 219, 223, 224, 224, 227, 229, 231, 231, 234, 236, 238, 240, 245, 249, 251, 251, 255,
+				256, 259,
+			]],
+			[ "ilscore", [
+				553, 581, 582, 598, 615, 640, 660, 677, 686, 709, 753, 130, 136, 49, 50, 23, 28, 28, 30, 35, 37, 39, 44, 45, 47, 48, 50, 52, 53, 58, 66, 68, 79, 82, 89, 91, 93, 100, 104, 112,
+				116, 133, 137, 148, 159, 168, 170, 193, 218, 220, 221, 232, 248, 265, 275, 288, 297, 299, 305, 311, 327, 334, 337, 343, 347, 352, 355, 362, 388, 422, 441, 441, 452, 459, 467, 498, 509, 539, 559, 583,
+				625, 641, 656, 656, 659, 663, 667, 683, 700, 704, 711, 716, 719, 736, 755, 769, 778, 797, 813, 822, 846, 855, 863, 880, 894, 905, 910, 911, 925, 925, 925, 928, 928, 933, 936, 943, 949, 951, 953, 955,
+				964, 977, 985, 988, 1017, 1029, 1035, 1038, 1048, 1053, 1072, 1087, 1093, 1111, 1114, 1122, 1127, 1147, 1149, 1153, 1155, 1156, 1160, 1160, 1163, 1172, 1183, 1191, 1197, 1203, 1208, 1221, 1231, 1238, 1250, 1257, 1273, 1289, 1295, 1307,
+				1317, 1325,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

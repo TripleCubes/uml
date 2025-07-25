@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Feewo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Feewo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/feewo.html" property="og:url">
+	<meta content="Rank by game in top 20: 1539&#10;Rank by ilScore: 3228&#10;&#10;1 games&#10;&bull; The Ring of Rotation | MJ 101: Limit | rank: 13 | ilscore: 91&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Feewo</h1>
+		<a href="https://feewo.itch.io">feewo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1539</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3228</p>
+		<p>Total ilScore: 91</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://feewo.itch.io/the-ring-of-rotation">The Ring of Rotation</a></td>
+				<td><span class="early">14h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>13</td>
+				<td>27</td>
+				<td>91</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				710, 716, 729, 739, 747, 766, 774, 784, 795, 809, 832, 848, 860, 861, 866, 875, 886, 894, 914, 921, 930, 949, 954, 965, 988, 998, 1009, 1024, 1033, 1039, 1045, 1048, 1049, 1063, 1077, 1079, 1081, 1086, 1097, 1099,
+				1104, 1113, 1114, 1125, 1135, 1138, 1145, 1150, 1157, 1164, 1178, 1186, 1194, 1205, 1223, 1227, 1236, 1240, 1250, 1256, 1272, 1282, 1286, 1307, 1309, 1317, 1327, 1344, 1350, 1359, 1361, 1364, 1368, 1375, 1378, 1391, 1402, 1407, 1413, 1421,
+				1428, 1439, 1448, 1454, 1463, 1478, 1489, 1505, 1507, 1514, 1529, 1538,
+			]],
+			[ "ilscore", [
+				1143, 1152, 1188, 1208, 1226, 1382, 1396, 1467, 1499, 1578, 1814, 1828, 1841, 1841, 1844, 1851, 1856, 1909, 1936, 1952, 1964, 1982, 1990, 2063, 2087, 2104, 2122, 2139, 2163, 2177, 2250, 2260, 2267, 2285, 2309, 2325, 2330, 2335, 2353, 2356,
+				2361, 2368, 2371, 2374, 2387, 2394, 2400, 2410, 2418, 2428, 2452, 2476, 2494, 2503, 2592, 2612, 2632, 2646, 2658, 2667, 2684, 2705, 2714, 2746, 2751, 2766, 2771, 2847, 2853, 2861, 2868, 2871, 2878, 2884, 2896, 2915, 2949, 2963, 2978, 2998,
+				3013, 3023, 3033, 3044, 3070, 3098, 3122, 3155, 3169, 3190, 3209, 3227,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

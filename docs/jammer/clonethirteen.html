@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>clonethirteen&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="clonethirteen&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/clonethirteen.html" property="og:url">
+	<meta content="Rank by game in top 20: 576&#10;Rank by ilScore: 216&#10;&#10;5 games&#10;&bull; SUN-LANCER | MJ 76: Radiation | rank: 35 | ilscore: 78&#10;&bull; SAGE ADVICE | MJ 75: Wisdom | rank: 18 | ilscore: 73&#10;&bull; HOT MESS | MJ 74: Chaos | rank: 14 | ilscore: 67&#10;&bull; MAD-DASH | MJ 73: Power | rank: 47 | ilscore: 84&#10;&bull; BREAKPOINT | MJ 71: Puzzles | rank: 43 | ilscore: 62&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>clonethirteen</h1>
+		<a href="https://clonethirteen.itch.io">clonethirteen.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 576</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>18</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 216</p>
+		<p>Total ilScore: 364</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://clonethirteen.itch.io/sun-lancer">SUN-LANCER</a></td>
+				<td><span class="early">59m 13s early</span></td>
+				<td>
+					<a href="../jammer/bearscythestudios.html">Bearscythe Studios</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>35</td>
+				<td>15</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://clonethirteen.itch.io/sage-advice">SAGE ADVICE</a></td>
+				<td><span class="early">7h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>18</td>
+				<td>19</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://clonethirteen.itch.io/hot-mess">HOT MESS</a></td>
+				<td><span class="early">2m 24s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>14</td>
+				<td>29</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://clonethirteen.itch.io/mad-dash">MAD-DASH</a></td>
+				<td><span class="early">1m 49s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>47</td>
+				<td>33</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://clonethirteen.itch.io/breakpoint">BREAKPOINT</a></td>
+				<td><span class="early">1h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>43</td>
+				<td>7</td>
+				<td>62</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				667, 147, 150, 151, 155, 158, 168, 173, 174, 176, 179, 181, 186, 191, 194, 195, 199, 203, 209, 211, 215, 218, 222, 222, 225, 226, 227, 232, 238, 239, 242, 246, 253, 255, 260, 266, 272, 273, 275, 279,
+				286, 286, 287, 291, 300, 301, 309, 309, 314, 317, 319, 323, 329, 337, 344, 349, 351, 356, 358, 360, 362, 366, 369, 374, 375, 375, 378, 381, 385, 390, 391, 394, 397, 399, 404, 404, 412, 414, 415, 418,
+				420, 425, 428, 435, 442, 443, 447, 448, 455, 465, 469, 470, 477, 483, 487, 491, 491, 494, 497, 497, 499, 503, 503, 506, 510, 513, 517, 523, 524, 526, 530, 534, 536, 542, 553, 559, 560, 563, 567, 575,
+			]],
+			[ "ilscore", [
+				892, 914, 144, 56, 30, 16, 17, 18, 21, 23, 24, 24, 25, 27, 28, 28, 31, 33, 33, 33, 33, 35, 37, 38, 40, 42, 43, 46, 49, 55, 59, 66, 67, 72, 75, 78, 85, 86, 89, 92,
+				96, 102, 105, 106, 106, 106, 106, 107, 111, 114, 115, 118, 119, 120, 123, 123, 125, 125, 128, 131, 136, 139, 140, 141, 144, 145, 145, 145, 145, 145, 145, 146, 146, 146, 147, 149, 152, 152, 153, 153,
+				153, 155, 156, 157, 157, 158, 159, 159, 159, 159, 161, 163, 165, 166, 168, 172, 175, 175, 178, 180, 180, 180, 180, 180, 180, 181, 185, 187, 192, 192, 192, 194, 194, 198, 200, 202, 206, 206, 210, 211,
+				212, 214, 215,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

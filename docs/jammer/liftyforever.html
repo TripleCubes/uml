@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LiftyForever&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LiftyForever&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/liftyforever.html" property="og:url">
+	<meta content="Rank by game in top 10: 854&#10;Rank by game in top 20: 1216&#10;Rank by ilScore: 2350&#10;&#10;1 games&#10;&bull; Rat Collector | MJ 110: Sacrifice | rank: 8 | ilscore: 109&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LiftyForever</h1>
+		<a href="https://liftyforever.itch.io">liftyforever.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 854</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1216</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2350</p>
+		<p>Total ilScore: 109</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://liftyforever.itch.io/rat-collector">Rat Collector</a></td>
+				<td><span class="early">13h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-110-sacrifice">MJ 110: Sacrifice</a></td>
+				<td>213</td>
+				<td>8</td>
+				<td>11</td>
+				<td>109</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				439, 451, 463, 473, 473, 473, 477, 484, 487, 496, 496, 502, 510, 512, 517, 539, 542, 550, 564, 567, 575, 576, 578, 581, 593, 599, 601, 602, 604, 609, 613, 617, 623, 624, 631, 635, 636, 639, 639, 641,
+				644, 650, 654, 662, 670, 683, 684, 687, 690, 699, 700, 706, 711, 715, 729, 732, 737, 744, 757, 760, 763, 763, 764, 766, 768, 769, 780, 786, 789, 791, 796, 798, 798, 804, 808, 814, 818, 831, 840, 840,
+				844, 851, 853,
+			]],
+			[ "20", [
+				613, 631, 643, 656, 656, 656, 664, 675, 679, 696, 698, 708, 719, 723, 730, 752, 760, 771, 785, 789, 798, 800, 802, 804, 819, 826, 829, 833, 837, 841, 843, 848, 857, 860, 870, 878, 881, 886, 891, 898,
+				903, 909, 913, 921, 932, 947, 951, 962, 964, 974, 980, 993, 1001, 1007, 1028, 1032, 1040, 1050, 1063, 1068, 1078, 1079, 1081, 1085, 1090, 1092, 1104, 1112, 1116, 1121, 1128, 1135, 1144, 1150, 1155, 1160, 1165, 1178, 1190, 1191,
+				1196, 1208, 1215,
+			]],
+			[ "ilscore", [
+				1076, 1239, 1258, 1276, 1276, 1281, 1287, 1295, 1323, 1341, 1354, 1367, 1384, 1391, 1429, 1453, 1471, 1485, 1504, 1528, 1536, 1574, 1587, 1597, 1617, 1642, 1656, 1658, 1661, 1680, 1680, 1681, 1689, 1691, 1696, 1706, 1714, 1720, 1727, 1730,
+				1739, 1751, 1767, 1786, 1793, 1833, 1860, 1878, 1888, 1897, 1905, 1922, 1945, 1953, 1972, 1974, 1989, 1993, 2020, 2026, 2033, 2037, 2039, 2045, 2047, 2052, 2068, 2099, 2115, 2126, 2138, 2155, 2168, 2175, 2186, 2210, 2232, 2254, 2275, 2290,
+				2313, 2332, 2349,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

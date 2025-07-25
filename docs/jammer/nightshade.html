@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Junebug&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Junebug&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nightshade.html" property="og:url">
+	<meta content="Rank by game in top 5: 392&#10;Rank by game in top 10: 566&#10;Rank by game in top 20: 943&#10;Rank by ilScore: 6488&#10;&#10;1 games&#10;&bull; Skill Drop | MJ 65: Abandoned | rank: 2 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Junebug</h1>
+		<a href="https://nightshade.itch.io">nightshade.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 392</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 566</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 943</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6488</p>
+		<p>Total ilScore: 65</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nightshade.itch.io/skill-drop">Skill Drop</a></td>
+				<td><span class="early">1m 36s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>2</td>
+				<td>23</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				96, 100, 102, 103, 107, 111, 111, 115, 115, 117, 121, 123, 127, 127, 129, 137, 140, 141, 142, 144, 147, 147, 149, 151, 151, 157, 159, 162, 163, 165, 165, 168, 168, 168, 169, 170, 170, 181, 185, 185,
+				188, 191, 192, 198, 198, 200, 202, 205, 211, 217, 221, 221, 222, 226, 233, 233, 234, 234, 234, 235, 236, 239, 242, 245, 251, 253, 253, 256, 257, 258, 259, 261, 262, 264, 265, 265, 269, 274, 278, 280,
+				282, 290, 291, 291, 293, 293, 294, 294, 296, 297, 300, 304, 307, 307, 307, 307, 311, 312, 319, 321, 322, 330, 334, 340, 342, 348, 351, 351, 351, 351, 353, 355, 355, 362, 364, 364, 365, 367, 368, 369,
+				369, 370, 373, 377, 381, 385, 385, 391, 391, 391,
+			]],
+			[ "10", [
+				152, 156, 158, 160, 164, 169, 169, 174, 176, 179, 182, 184, 189, 189, 194, 203, 208, 211, 211, 213, 217, 217, 221, 223, 224, 230, 233, 238, 238, 241, 241, 244, 246, 246, 249, 251, 251, 263, 266, 267,
+				272, 275, 279, 286, 286, 290, 293, 296, 302, 308, 314, 314, 314, 318, 328, 328, 329, 329, 332, 333, 336, 339, 346, 353, 361, 363, 364, 371, 372, 374, 378, 382, 385, 388, 389, 391, 395, 400, 404, 408,
+				409, 416, 417, 418, 421, 421, 422, 423, 426, 430, 433, 437, 440, 444, 446, 447, 451, 453, 458, 461, 465, 474, 479, 484, 489, 497, 500, 503, 505, 506, 508, 510, 511, 518, 522, 524, 525, 527, 528, 528,
+				530, 534, 538, 542, 552, 556, 556, 559, 562, 565,
+			]],
+			[ "20", [
+				242, 248, 254, 258, 264, 269, 270, 276, 280, 285, 288, 292, 299, 299, 305, 317, 323, 333, 336, 340, 346, 350, 355, 360, 364, 370, 377, 382, 388, 392, 396, 397, 401, 407, 408, 409, 410, 421, 426, 430,
+				433, 438, 445, 451, 455, 461, 467, 471, 477, 486, 496, 496, 497, 504, 518, 519, 528, 530, 537, 541, 546, 552, 561, 573, 587, 592, 594, 602, 604, 606, 609, 616, 620, 625, 629, 633, 636, 638, 643, 652,
+				655, 665, 671, 674, 679, 684, 693, 696, 699, 702, 705, 714, 719, 726, 736, 736, 741, 747, 760, 767, 773, 782, 791, 799, 807, 815, 820, 830, 833, 835, 839, 844, 846, 855, 861, 864, 868, 873, 879, 888,
+				891, 896, 899, 904, 914, 921, 922, 926, 934, 942,
+			]],
+			[ "ilscore", [
+				637, 690, 702, 711, 722, 766, 775, 812, 833, 973, 992, 1022, 1094, 1169, 1180, 1307, 1389, 1400, 1408, 1455, 1552, 1664, 1699, 1785, 1812, 1876, 1896, 1907, 1966, 2025, 2027, 2069, 2077, 2084, 2117, 2165, 2343, 2433, 2502, 2509,
+				2588, 2623, 2699, 2910, 2941, 3088, 3156, 3278, 3571, 3630, 3675, 3676, 3680, 3686, 3689, 3792, 3863, 3884, 3893, 3947, 3949, 4074, 4133, 4143, 4166, 4223, 4286, 4304, 4446, 4455, 4459, 4513, 4565, 4580, 4588, 4591, 4695, 4695, 4698, 4704,
+				4709, 4719, 4734, 4743, 4773, 4781, 4791, 4796, 4882, 4949, 4980, 4989, 5135, 5158, 5195, 5220, 5272, 5281, 5348, 5397, 5406, 5492, 5505, 5521, 5525, 5671, 5679, 5682, 5685, 5689, 5694, 5703, 5717, 5769, 5856, 5880, 5892, 5931, 5955, 5981,
+				6032, 6057, 6119, 6167, 6215, 6325, 6344, 6419, 6461, 6487,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

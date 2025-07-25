@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Eaz_games&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Eaz_games&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/eaz-games.html" property="og:url">
+	<meta content="Rank by game in top 5: 1083&#10;Rank by game in top 10: 1901&#10;Rank by game in top 20: 254&#10;Rank by ilScore: 1003&#10;&#10;4 games&#10;&bull; SpaceCraft: War In The Void | MJ+ 1: Isolation | rank: 13 | ilscore: 81&#10;&bull; SeaWars: Naval Blockade | MJ 50: Islands | rank: 96 | ilscore: 42&#10;&bull; OtherSide | MJ 43: Travel | rank: 4 | ilscore: 23&#10;&bull; Rolla Rokka | MJ 34: Balance | rank: 16 | ilscore: 28&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Eaz_games</h1>
+		<a href="https://eaz-games.itch.io">eaz-games.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1083</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1901</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 254</p>
+		<div class="boxes">
+			<span>4</span>
+			<span class="box_majorjam">13</span>
+			<span>16</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1003</p>
+		<p>Total ilScore: 175</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://eaz-games.itch.io/spacecraft-in-the-void">SpaceCraft: War In The Void</a></td>
+				<td><span class="early">6h 50m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>13</td>
+				<td>9</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://eaz-games.itch.io/seawars-naval-blockade">SeaWars: Naval Blockade</a></td>
+				<td><span class="early">3h 6m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>96</td>
+				<td>3</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://eaz-games.itch.io/otherside">OtherSide</a></td>
+				<td><span class="early">12h 27m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-43-travel">MJ 43: Travel</a></td>
+				<td>14</td>
+				<td>4</td>
+				<td>8</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://eaz-games.itch.io/rolla-rokka">Rolla Rokka</a></td>
+				<td><span class="early">11h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-34-balance">MJ 34: Balance</a></td>
+				<td>25</td>
+				<td>16</td>
+				<td>7</td>
+				<td>28</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				173, 174, 179, 183, 188, 193, 194, 202, 214, 221, 226, 232, 239, 244, 252, 260, 267, 267, 271, 277, 285, 293, 301, 311, 315, 321, 326, 332, 337, 343, 348, 353, 358, 365, 368, 372, 377, 381, 388, 396,
+				398, 412, 417, 423, 427, 433, 438, 444, 448, 454, 461, 470, 473, 480, 487, 495, 504, 510, 517, 521, 527, 538, 541, 547, 551, 554, 559, 566, 575, 579, 582, 586, 591, 600, 604, 607, 612, 616, 624, 628,
+				636, 645, 654, 662, 665, 670, 680, 684, 692, 695, 702, 707, 710, 714, 720, 725, 731, 736, 741, 749, 758, 761, 766, 773, 776, 783, 789, 795, 800, 806, 814, 824, 830, 832, 836, 843, 853, 864, 869, 874,
+				878, 885, 889, 895, 901, 909, 913, 916, 922, 928, 932, 937, 940, 948, 951, 958, 965, 976, 981, 985, 991, 996, 1002, 1011, 1021, 1024, 1029, 1040, 1048, 1055, 1060, 1067, 1077, 1082,
+			]],
+			[ "10", [
+				257, 258, 268, 274, 283, 291, 291, 302, 321, 331, 340, 349, 360, 370, 381, 392, 403, 403, 407, 421, 439, 452, 468, 475, 482, 495, 503, 511, 524, 537, 547, 555, 564, 577, 586, 596, 605, 614, 623, 635,
+				642, 660, 670, 681, 691, 703, 715, 727, 735, 746, 756, 773, 781, 790, 807, 820, 830, 844, 852, 858, 869, 881, 888, 897, 904, 913, 920, 929, 946, 953, 962, 972, 983, 997, 1010, 1013, 1028, 1037, 1045, 1054,
+				1071, 1085, 1097, 1110, 1118, 1127, 1145, 1154, 1165, 1178, 1191, 1201, 1211, 1219, 1228, 1243, 1254, 1262, 1270, 1278, 1292, 1295, 1300, 1316, 1323, 1335, 1351, 1364, 1375, 1389, 1401, 1416, 1424, 1428, 1436, 1457, 1474, 1488, 1496, 1505,
+				1516, 1531, 1541, 1553, 1569, 1582, 1589, 1595, 1604, 1616, 1621, 1626, 1640, 1651, 1659, 1671, 1682, 1700, 1708, 1718, 1734, 1745, 1757, 1772, 1790, 1799, 1808, 1823, 1834, 1847, 1858, 1875, 1888, 1900,
+			]],
+			[ "20", [
+				350, 355, 371, 373, 382, 394, 411, 422, 436, 79, 79, 82, 95, 99, 102, 105, 108, 34, 34, 34, 34, 38, 38, 40, 41, 42, 42, 45, 48, 48, 48, 48, 48, 55, 55, 56, 56, 56, 58, 58,
+				60, 60, 60, 62, 65, 66, 67, 67, 67, 72, 77, 77, 78, 78, 78, 78, 81, 83, 83, 83, 84, 85, 87, 89, 91, 95, 96, 99, 99, 100, 104, 106, 106, 108, 108, 109, 111, 114, 114, 115,
+				115, 115, 116, 117, 117, 118, 119, 120, 123, 123, 123, 125, 126, 128, 129, 131, 131, 133, 138, 139, 145, 147, 147, 148, 149, 151, 151, 153, 156, 159, 162, 162, 164, 165, 167, 168, 169, 170, 171, 172,
+				174, 174, 175, 177, 177, 178, 182, 182, 183, 184, 186, 188, 192, 194, 194, 199, 202, 203, 205, 209, 210, 211, 213, 215, 215, 219, 220, 220, 223, 224, 226, 227, 230, 232, 234, 236, 240, 243, 245, 245,
+				249, 250, 253,
+			]],
+			[ "ilscore", [
+				397, 397, 422, 422, 428, 434, 451, 464, 480, 153, 153, 159, 169, 188, 192, 195, 76, 21, 21, 22, 26, 27, 28, 30, 31, 33, 33, 34, 36, 37, 42, 43, 43, 55, 58, 63, 67, 68, 72, 77,
+				82, 86, 93, 98, 106, 113, 116, 116, 134, 155, 157, 157, 167, 181, 190, 194, 198, 203, 212, 217, 221, 231, 237, 241, 246, 250, 253, 254, 260, 275, 301, 315, 317, 320, 323, 329, 352, 362, 387, 404,
+				418, 454, 463, 473, 473, 477, 483, 486, 500, 509, 518, 524, 530, 531, 546, 561, 571, 577, 597, 606, 613, 633, 635, 639, 651, 658, 668, 669, 673, 686, 688, 692, 695, 697, 701, 706, 709, 714, 717, 718,
+				718, 724, 734, 739, 741, 761, 764, 770, 775, 788, 794, 812, 824, 826, 840, 843, 847, 850, 863, 868, 872, 873, 874, 878, 878, 882, 888, 892, 902, 909, 911, 915, 922, 933, 938, 948, 954, 962, 972, 975,
+				988, 993, 1002,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

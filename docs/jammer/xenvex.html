@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Xenvex&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Xenvex&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/xenvex.html" property="og:url">
+	<meta content="Rank by game in top 20: 578&#10;Rank by ilScore: 167&#10;&#10;5 games&#10;&bull; Metronome | MJ 125: Signal | rank: 19 | ilscore: 63&#10;&bull; Painter Platformer | MJ 111: Colors | rank: 34 | ilscore: 130&#10;&bull; SandCastle King | MJ 108: Seaside | rank: 99 | ilscore: 80&#10;&bull; Dodgeball Simulator | MJ 97: Simulation | rank: 29 | ilscore: 66&#10;&bull; Flame Boy | MJ 71: Puzzles | rank: 14 | ilscore: 72&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Xenvex</h1>
+		<a href="https://xenvex.itch.io">xenvex.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 578</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>19</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 167</p>
+		<p>Total ilScore: 411</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://xenvex.itch.io/metronome">Metronome</a></td>
+				<td><span class="early">3m 12s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>19</td>
+				<td>13</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://xenvex.itch.io/painter-platformer">Painter Platformer</a></td>
+				<td><span class="early">56s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>34</td>
+				<td>19</td>
+				<td>130</td>
+			</tr>
+			<tr>
+				<td><a href="https://xenvex.itch.io/sandcastle-king">SandCastle King</a></td>
+				<td><span class="early">13m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>99</td>
+				<td>22</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://xenvex.itch.io/dodgeball-simulator">Dodgeball Simulator</a></td>
+				<td><span class="early">2h 46m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>29</td>
+				<td>23</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://xenvex.itch.io/flame-boy">Flame Boy</a></td>
+				<td><span class="early">57m 52s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>14</td>
+				<td>9</td>
+				<td>72</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				550, 557, 582, 592, 606, 625, 629, 636, 658, 672, 679, 686, 702, 722, 732, 743, 770, 777, 794, 806, 814, 823, 833, 841, 854, 861, 868, 879, 886, 912, 941, 953, 958, 978, 992, 998, 1017, 1034, 1050, 1069,
+				1088, 1110, 1132, 1151, 1152, 1163, 1173, 1184, 1202, 1218, 1227, 1236, 1254, 1258, 1275, 1304, 339, 346, 351, 353, 358, 360, 362, 364, 368, 371, 376, 377, 377, 380, 383, 387, 392, 393, 396, 399, 401, 406, 406, 414,
+				416, 417, 420, 422, 427, 430, 437, 444, 445, 449, 450, 459, 468, 471, 472, 479, 485, 489, 493, 493, 496, 499, 499, 501, 505, 505, 508, 512, 515, 519, 525, 526, 528, 532, 536, 538, 544, 555, 561, 562,
+				565, 569, 577,
+			]],
+			[ "ilscore", [
+				628, 646, 769, 785, 812, 868, 927, 934, 1055, 1131, 1139, 1148, 1183, 1264, 1372, 1397, 1471, 1486, 1532, 1550, 1557, 1612, 1653, 1659, 1684, 1692, 1699, 464, 474, 504, 538, 557, 557, 573, 585, 600, 636, 649, 239, 247,
+				252, 112, 115, 116, 116, 116, 116, 117, 122, 125, 126, 128, 128, 128, 131, 132, 102, 103, 107, 108, 108, 112, 113, 114, 116, 119, 120, 121, 121, 122, 122, 122, 123, 123, 124, 125, 126, 127, 127, 127,
+				127, 128, 130, 130, 130, 131, 131, 131, 131, 131, 131, 132, 134, 135, 137, 138, 140, 140, 143, 143, 143, 144, 144, 145, 145, 145, 145, 148, 150, 150, 151, 152, 152, 155, 156, 158, 160, 162, 166, 166,
+				166, 166, 166,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

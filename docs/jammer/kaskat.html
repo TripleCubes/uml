@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Yevhenii Hladkykh&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Yevhenii Hladkykh&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kaskat.html" property="og:url">
+	<meta content="Rank by game in top 5: 524&#10;Rank by game in top 10: 694&#10;Rank by game in top 20: 460&#10;Rank by ilScore: 1511&#10;&#10;2 games&#10;&bull; Magic Sneeze | MJ 178: Monsters | rank: 4 | ilscore: 74&#10;&bull; Fox Thieve | MJ 176: Foxes | rank: 16 | ilscore: 68&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Yevhenii Hladkykh</h1>
+		<a href="https://kaskat.itch.io">kaskat.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 524</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 694</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 460</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>16</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1511</p>
+		<p>Total ilScore: 142</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://overlord-mykyta.itch.io/magic-sneeze">Magic Sneeze</a></td>
+				<td><span class="early">3h 3m early</span></td>
+				<td>
+					<a href="../jammer/overlord-mykyta.html">Mykyta</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-178-monsters">MJ 178: Monsters</a></td>
+				<td>77</td>
+				<td>4</td>
+				<td>29</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://overlord-mykyta.itch.io/fox-thieve">Fox Thieve</a></td>
+				<td><span class="early">7m 46s early</span></td>
+				<td>
+					<a href="../jammer/overlord-mykyta.html">Mykyta</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>16</td>
+				<td>13</td>
+				<td>68</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				485, 487, 488, 491, 492, 495, 499, 504, 511, 511, 518, 523, 523,
+			]],
+			[ "10", [
+				645, 647, 647, 652, 656, 660, 664, 675, 682, 682, 686, 692, 693,
+			]],
+			[ "20", [
+				2465, 2480, 420, 420, 420, 422, 424, 427, 432, 443, 447, 447, 450, 454, 459,
+			]],
+			[ "ilscore", [
+				5416, 5426, 1375, 1382, 1394, 1403, 1409, 1426, 1437, 1454, 1472, 1477, 1488, 1498, 1510,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

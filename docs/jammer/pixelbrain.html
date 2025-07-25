@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>pixelbrain&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="pixelbrain&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pixelbrain.html" property="og:url">
+	<meta content="Rank by game in top 10: 1092&#10;Rank by game in top 20: 216&#10;Rank by ilScore: 302&#10;&#10;4 games&#10;&bull; Zombie Ragdoll Resistance | MJ 98: Empty | rank: 22 | ilscore: 75&#10;&bull; Hovercraft Chaos | MJ 95: Chance | rank: 6 | ilscore: 64&#10;&bull; Super Swing Block | MJ 85: Gold | rank: 11 | ilscore: 91&#10;&bull; Rise Of Neon Square | MJ 77: Courage | rank: 16 | ilscore: 81&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>pixelbrain</h1>
+		<a href="https://pixelbrain.itch.io">pixelbrain.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1092</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 216</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>11</span>
+			<span>16</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 302</p>
+		<p>Total ilScore: 311</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pixelbrain.itch.io/zombie-ragdoll-resistance">Zombie Ragdoll Resistance</a></td>
+				<td><span class="early">1m 49s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>22</td>
+				<td>10</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixelbrain.itch.io/hovercraft-chaos">Hovercraft Chaos</a></td>
+				<td><span class="late">17h 17m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>6</td>
+				<td>12</td>
+				<td>64</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixelbrain.itch.io/super-swing-block">Super Swing Block</a></td>
+				<td><span class="early">2m 32s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-85-gold">MJ 85: Gold</a></td>
+				<td>170</td>
+				<td>11</td>
+				<td>15</td>
+				<td>91</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixelbrain.itch.io/rise-of-neon-square">Rise Of Neon Square</a></td>
+				<td><span class="early">8m 1s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>16</td>
+				<td>20</td>
+				<td>81</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				460, 460, 467, 471, 478, 493, 500, 503, 513, 522, 530, 539, 548, 555, 564, 574, 586, 600, 611, 612, 614, 618, 626, 633, 645, 650, 656, 669, 672, 680, 698, 705, 714, 727, 734, 742, 745, 748, 749, 760,
+				768, 770, 770, 770, 781, 785, 789, 796, 797, 806, 814, 815, 820, 820, 822, 825, 834, 841, 849, 859, 875, 878, 882, 886, 895, 896, 905, 913, 916, 929, 932, 937, 945, 957, 960, 963, 964, 966, 969, 971,
+				974, 987, 995, 999, 1001, 1007, 1009, 1010, 1021, 1025, 1034, 1048, 1057, 1070, 1072, 1078, 1085, 1091,
+			]],
+			[ "20", [
+				842, 851, 872, 885, 901, 912, 934, 954, 191, 196, 200, 204, 205, 209, 213, 219, 221, 225, 228, 83, 83, 84, 86, 87, 89, 90, 91, 96, 97, 97, 99, 100, 100, 101, 101, 101, 103, 104, 104, 105,
+				107, 108, 111, 111, 111, 112, 113, 113, 114, 117, 117, 119, 123, 123, 126, 128, 128, 128, 129, 132, 132, 133, 134, 136, 138, 138, 140, 141, 142, 143, 143, 144, 144, 145, 145, 146, 147, 149, 149, 150,
+				153, 153, 153, 153, 156, 158, 161, 163, 164, 169, 172, 172, 174, 178, 178, 180, 183, 185, 185, 188, 188, 188, 191, 192, 193, 194, 198, 199, 201, 201, 204, 206, 209, 209, 213, 213, 215,
+			]],
+			[ "ilscore", [
+				666, 677, 784, 844, 863, 871, 895, 954, 196, 200, 205, 210, 219, 225, 229, 242, 248, 252, 257, 122, 124, 127, 73, 78, 83, 93, 94, 100, 102, 106, 112, 114, 119, 124, 129, 136, 140, 143, 143, 143,
+				143, 143, 148, 151, 152, 152, 153, 154, 158, 159, 160, 163, 169, 171, 172, 180, 181, 181, 182, 184, 184, 186, 186, 189, 189, 189, 190, 191, 191, 193, 194, 194, 195, 198, 200, 203, 206, 210, 210, 212,
+				215, 215, 218, 225, 226, 228, 232, 233, 237, 242, 242, 242, 245, 245, 246, 247, 248, 249, 250, 253, 257, 263, 267, 269, 272, 273, 273, 283, 286, 289, 289, 291, 294, 294, 297, 299, 301,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DaBonky&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DaBonky&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/dabonky.html" property="og:url">
+	<meta content="Rank by game in top 5: 173&#10;Rank by game in top 10: 112&#10;Rank by game in top 20: 241&#10;Rank by ilScore: 889&#10;&#10;4 games&#10;&bull; Agent 74 | MJ 138: Rewind | rank: 4 | ilscore: 30&#10;&bull; Who wants to live forever? | MJ 132: Severed | rank: 8 | ilscore: 52&#10;&bull; Bad Sunrise | MJ 131: Solar | rank: 5 | ilscore: 60&#10;&bull; &quot;Dealing&quot; with Rhinos | MJ 128: Health | rank: 96 | ilscore: 44&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DaBonky</h1>
+		<a href="https://dabonky.itch.io">dabonky.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 173</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 112</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>8</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 241</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>5</span>
+			<span>8</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 889</p>
+		<p>Total ilScore: 186</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://sawd-games.itch.io/agent-74">Agent 74</a></td>
+				<td><span class="early">50m 12s early</span></td>
+				<td>
+					<a href="../jammer/sawd-games.html">SAWD Games</a>,
+					<a href="../jammer/nikochantzis.html">Niko Chantzis</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>4</td>
+				<td>14</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td><a href="https://sawd-games.itch.io/who-wants-to-live-forever">Who wants to live forever?</a></td>
+				<td><span class="early">25m 43s early</span></td>
+				<td>
+					<a href="../jammer/sawd-games.html">SAWD Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-132-severed">MJ 132: Severed</a></td>
+				<td>56</td>
+				<td>8</td>
+				<td>16</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://sawd-games.itch.io/bad-sunrise">Bad Sunrise</a></td>
+				<td><span class="early">1m 40s early</span></td>
+				<td>
+					<a href="../jammer/sawd-games.html">SAWD Games</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>5</td>
+				<td>25</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://dabonky.itch.io/dealing-with-rhinos">&quot;Dealing&quot; with Rhinos</a></td>
+				<td><span class="late">22h 54m late</span></td>
+				<td>
+					<a href="../jammer/ayanne.html">ayanne</a>,
+					<a href="../jammer/apolloplease36.html">ApolloPlease36</a>,
+					<a href="../jammer/nsal124.html">Nsal124</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>96</td>
+				<td>8</td>
+				<td>44</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				577, 580, 585, 591, 595, 596, 599, 608, 105, 108, 110, 112, 116, 117, 117, 117, 117, 119, 119, 119, 119, 121, 122, 123, 123, 123, 123, 124, 125, 128, 130, 132, 132, 136, 141, 142, 142, 142, 145, 146,
+				147, 149, 151, 151, 152, 152, 152, 153, 155, 155, 156, 156, 158, 158, 162, 163, 166, 166, 172, 172, 172,
+			]],
+			[ "10", [
+				856, 209, 212, 216, 219, 220, 222, 224, 72, 72, 74, 74, 75, 75, 75, 75, 75, 76, 76, 77, 77, 79, 79, 79, 81, 81, 81, 81, 81, 84, 84, 84, 84, 85, 86, 86, 87, 90, 91, 93,
+				95, 95, 95, 96, 96, 97, 99, 100, 101, 102, 102, 102, 103, 103, 104, 104, 106, 106, 109, 109, 111,
+			]],
+			[ "20", [
+				1144, 376, 380, 383, 388, 389, 389, 392, 157, 157, 159, 160, 161, 162, 162, 163, 164, 165, 167, 167, 168, 170, 170, 171, 174, 174, 175, 176, 178, 180, 183, 185, 185, 189, 192, 192, 194, 198, 199, 200,
+				202, 204, 204, 208, 209, 209, 213, 214, 215, 216, 220, 221, 223, 225, 229, 231, 233, 233, 237, 237, 240,
+			]],
+			[ "ilscore", [
+				6382, 6419, 6590, 1734, 815, 832, 845, 855, 859, 861, 874, 592, 598, 599, 602, 604, 608, 611, 615, 619, 620, 620, 629, 639, 644, 647, 666, 667, 673, 677, 686, 692, 709, 722, 726, 738, 742, 747, 749, 763,
+				768, 771, 773, 774, 778, 779, 783, 787, 790, 799, 805, 808, 810, 813, 824, 830, 839, 844, 852, 860, 863, 874, 880, 888,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

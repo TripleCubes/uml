@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Isabel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Isabel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bugvevo.html" property="og:url">
+	<meta content="Rank by game in top 20: 2527&#10;Rank by ilScore: 1988&#10;&#10;2 games&#10;&bull; Flesh Shield | MJ 174: Defense | rank: 17 | ilscore: 71&#10;&bull; Blower-san&#39;s Bounty | MJ 155: Wind | rank: 68 | ilscore: 51&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Isabel</h1>
+		<a href="https://bugvevo.itch.io">bugvevo.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2527</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1988</p>
+		<p>Total ilScore: 122</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://mafcho.itch.io/flesh-shield">Flesh Shield</a></td>
+				<td><span class="early">5h 58m early</span></td>
+				<td>
+					<a href="../jammer/mafcho.html">mafcho</a>,
+					<a href="../jammer/slowback1.html">slowback1</a>,
+					<a href="../jammer/tesserex.html">Tesserex</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-174-defense">MJ 174: Defense</a></td>
+				<td>98</td>
+				<td>17</td>
+				<td>16</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://mafcho.itch.io/blower-sans-bounty">Blower-san&#39;s Bounty</a></td>
+				<td><span class="early">9h 34m early</span></td>
+				<td>
+					<a href="../jammer/mafcho.html">mafcho</a>,
+					<a href="../jammer/slowback1.html">slowback1</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>68</td>
+				<td>14</td>
+				<td>51</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2243, 2263, 2276, 2291, 2314, 2330, 2353, 2371, 2381, 2401, 2422, 2443, 2469, 2479, 2499, 2514, 2526,
+			]],
+			[ "ilscore", [
+				6938, 6986, 7060, 7072, 7154, 7215, 7232, 7349, 7358, 7398, 7407, 7583, 7603, 7605, 7609, 7610, 7617, 7622, 7652, 1746, 1773, 1786, 1796, 1807, 1820, 1836, 1842, 1854, 1877, 1894, 1910, 1929, 1939, 1958, 1975, 1987,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

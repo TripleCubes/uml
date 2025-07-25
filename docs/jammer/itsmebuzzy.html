@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ItsMeBuzzy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ItsMeBuzzy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/itsmebuzzy.html" property="og:url">
+	<meta content="Rank by game in top 10: 1430&#10;Rank by game in top 20: 2001&#10;Rank by ilScore: 6391&#10;&#10;1 games&#10;&bull; Boat Vs Zombies | MJ 164: Destruction | rank: 10 | ilscore: 66&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ItsMeBuzzy</h1>
+		<a href="https://itsmebuzzy.itch.io">itsmebuzzy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1430</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2001</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6391</p>
+		<p>Total ilScore: 66</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://itsmebuzzy.itch.io/zombie-playground">Boat Vs Zombies</a></td>
+				<td><span class="early">9h 42m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-164-destruction">MJ 164: Destruction</a></td>
+				<td>73</td>
+				<td>10</td>
+				<td>10</td>
+				<td>66</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1216, 1225, 1237, 1241, 1241, 1242, 1246, 1248, 1256, 1262, 1277, 1286, 1294, 1303, 1314, 1317, 1326, 1337, 1343, 1352, 1368, 1379, 1392, 1397, 1408, 1418, 1429,
+			]],
+			[ "20", [
+				1705, 1715, 1740, 1746, 1750, 1752, 1757, 1761, 1772, 1779, 1794, 1811, 1817, 1827, 1842, 1849, 1867, 1878, 1885, 1899, 1919, 1936, 1955, 1960, 1972, 1987, 2000,
+			]],
+			[ "ilscore", [
+				5434, 5439, 5584, 5592, 5595, 5598, 5602, 5607, 5617, 5631, 5683, 5770, 5794, 5806, 5845, 5869, 5895, 5943, 5968, 6031, 6078, 6126, 6236, 6250, 6323, 6363, 6390,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Nogus&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Nogus&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/nogus.html" property="og:url">
+	<meta content="Rank by game in top 20: 3719&#10;Rank by ilScore: 13085&#10;&#10;1 games&#10;&bull; Vikinze | MJ 35: Vikings | rank: 11 | ilscore: 7&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Nogus</h1>
+		<a href="https://nogus.itch.io">nogus.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3719</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 13085</p>
+		<p>Total ilScore: 7</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nogus.itch.io/vikinze">Vikinze</a></td>
+				<td><span class="early">1d 21h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-35-vikings">MJ 35: Vikings</a></td>
+				<td>11</td>
+				<td>11</td>
+				<td>3</td>
+				<td>7</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				460, 477, 482, 501, 519, 534, 550, 564, 577, 593, 612, 622, 638, 654, 665, 687, 717, 742, 761, 777, 796, 812, 835, 861, 886, 902, 913, 938, 966, 993, 1022, 1034, 1049, 1072, 1087, 1104, 1130, 1153, 1172, 1186,
+				1205, 1230, 1250, 1268, 1285, 1309, 1329, 1347, 1360, 1382, 1399, 1420, 1439, 1463, 1483, 1508, 1527, 1553, 1569, 1592, 1608, 1627, 1649, 1673, 1688, 1711, 1726, 1744, 1769, 1795, 1807, 1827, 1848, 1860, 1876, 1895, 1915, 1930, 1949, 1967,
+				1989, 2011, 2034, 2047, 2071, 2088, 2109, 2127, 2147, 2176, 2199, 2221, 2237, 2255, 2282, 2298, 2318, 2333, 2354, 2368, 2394, 2414, 2433, 2458, 2479, 2498, 2521, 2541, 2569, 2585, 2605, 2630, 2648, 2669, 2690, 2714, 2737, 2756, 2772, 2794,
+				2812, 2824, 2842, 2871, 2903, 2925, 2945, 2966, 2986, 3007, 3022, 3039, 3062, 3101, 3115, 3130, 3143, 3168, 3182, 3197, 3222, 3246, 3268, 3291, 3308, 3339, 3359, 3383, 3412, 3436, 3462, 3486, 3516, 3534, 3553, 3580, 3599, 3625, 3650, 3682,
+				3701, 3718,
+			]],
+			[ "ilscore", [
+				623, 654, 659, 677, 697, 721, 742, 760, 773, 795, 838, 870, 910, 933, 942, 1058, 1160, 1185, 1250, 1291, 1375, 1434, 1554, 1594, 1643, 1655, 1666, 1736, 1784, 1946, 2063, 2069, 2113, 2219, 2266, 2315, 2371, 2461, 2512, 2588,
+				2646, 2821, 2884, 2977, 3069, 3194, 3244, 3399, 3508, 3566, 3614, 3704, 3837, 3988, 4076, 4215, 4301, 4398, 4465, 4529, 4638, 4732, 4766, 4837, 4877, 4929, 5014, 5103, 5321, 5441, 5557, 5592, 5715, 5798, 5903, 6158, 6223, 6412, 6509, 6690,
+				7063, 7144, 7247, 7257, 7308, 7332, 7363, 7516, 7649, 7744, 7780, 7885, 7916, 8089, 8175, 8230, 8281, 8366, 8477, 8527, 8715, 8742, 8772, 8881, 8971, 9013, 9042, 9061, 9210, 9220, 9248, 9289, 9318, 9348, 9395, 9454, 9537, 9573, 9603, 9643,
+				9790, 9912, 9990, 10035, 10219, 10281, 10381, 10450, 10547, 10582, 10686, 10776, 10808, 10945, 10981, 11035, 11061, 11256, 11304, 11326, 11367, 11399, 11451, 11480, 11537, 11637, 11756, 11828, 11880, 11952, 12022, 12097, 12188, 12259, 12345, 12425, 12517, 12701, 12778, 12906,
+				12992, 13084,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

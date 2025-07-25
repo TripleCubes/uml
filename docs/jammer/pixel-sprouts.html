@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Pixel Sprouts&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Pixel Sprouts&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/pixel-sprouts.html" property="og:url">
+	<meta content="Rank by game in top 20: 605&#10;Rank by ilScore: 689&#10;&#10;3 games&#10;&bull; Minimalungeon (Mini Jam #101) | MJ 101: Limit | rank: 17 | ilscore: 90&#10;&bull; Brittlo (Mini Jam #97) | MJ 97: Simulation | rank: 35 | ilscore: 65&#10;&bull; Heaven VS Hell Tennis (Mini Jam #70) | MJ 70: Heaven | rank: 17 | ilscore: 54&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Pixel Sprouts</h1>
+		<a href="https://pixel-sprouts.itch.io">pixel-sprouts.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 605</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>17</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 689</p>
+		<p>Total ilScore: 209</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://pixel-sprouts.itch.io/minimalungeon-mini-jam-101">Minimalungeon (Mini Jam #101)</a></td>
+				<td><span class="early">7h 29m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>17</td>
+				<td>40</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixel-sprouts.itch.io/brittlo-mini-jam-97">Brittlo (Mini Jam #97)</a></td>
+				<td><span class="early">11h 59m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>35</td>
+				<td>26</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://pixel-sprouts.itch.io/heavenhelltennisminijam">Heaven VS Hell Tennis (Mini Jam #70)</a></td>
+				<td><span class="early">13h 49m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-70-heaven">MJ 70: Heaven</a></td>
+				<td>64</td>
+				<td>17</td>
+				<td>24</td>
+				<td>54</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				830, 844, 863, 888, 908, 927, 944, 968, 988, 1008, 1021, 1040, 1057, 1079, 1099, 1124, 1144, 1169, 1188, 1214, 1230, 1253, 1269, 1288, 1307, 1331, 1347, 1360, 1375, 1393, 1418, 1444, 249, 250, 253, 257, 264, 266, 271, 277,
+				283, 284, 286, 290, 297, 297, 298, 302, 311, 312, 320, 321, 327, 331, 333, 337, 343, 352, 360, 366, 368, 373, 375, 377, 380, 384, 388, 393, 394, 396, 399, 401, 405, 411, 412, 415, 418, 419, 424, 424,
+				432, 435, 436, 439, 441, 446, 449, 456, 464, 465, 468, 469, 478, 487, 490, 491, 498, 504, 509, 513, 514, 518, 521, 521, 523, 527, 528, 532, 536, 539, 543, 549, 550, 552, 556, 560, 562, 567, 578, 584,
+				585, 589, 595, 604,
+			]],
+			[ "ilscore", [
+				1118, 1179, 1204, 1355, 1393, 1445, 1523, 1619, 1639, 1782, 1869, 1891, 1912, 1976, 2090, 2214, 2260, 2366, 2419, 2491, 2523, 2561, 2621, 2691, 2695, 2752, 2765, 2778, 602, 617, 658, 693, 214, 215, 219, 223, 227, 239, 245, 261,
+				270, 275, 298, 304, 308, 308, 309, 312, 316, 327, 333, 339, 340, 344, 345, 354, 364, 369, 374, 380, 389, 396, 409, 409, 412, 423, 429, 434, 434, 435, 446, 446, 449, 449, 451, 452, 453, 456, 459, 465,
+				465, 466, 476, 483, 489, 493, 505, 506, 514, 519, 525, 529, 539, 552, 555, 567, 573, 578, 580, 590, 596, 598, 599, 599, 601, 603, 606, 611, 614, 620, 624, 626, 629, 632, 639, 643, 646, 653, 661, 667,
+				668, 676, 681, 688,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

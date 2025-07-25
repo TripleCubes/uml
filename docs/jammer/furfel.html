@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>furfel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="furfel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/furfel.html" property="og:url">
+	<meta content="Rank by ilScore: 2292&#10;&#10;2 games&#10;&bull; Doge Roulette | MJ 94: Baking | rank: 61 | ilscore: 52&#10;&bull; Das Neuland Eins | MJ 54: Memories | rank: 37 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>furfel</h1>
+		<a href="https://furfel.itch.io">furfel.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2292</p>
+		<p>Total ilScore: 111</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://furfel.itch.io/doge-roulette">Doge Roulette</a></td>
+				<td><span class="early">8h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>61</td>
+				<td>19</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://furfel.itch.io/das-neuland-eins">Das Neuland Eins</a></td>
+				<td><span class="early">7h 21m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-54-memories">MJ 54: Memories</a></td>
+				<td>92</td>
+				<td>37</td>
+				<td>15</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				369, 401, 470, 480, 490, 496, 501, 522, 529, 650, 744, 747, 757, 831, 845, 858, 874, 929, 942, 996, 1021, 1159, 1182, 1227, 1300, 1383, 1395, 1534, 1619, 1633, 1646, 1708, 1813, 1930, 1972, 2063, 2105, 2170, 2197, 2216,
+				2276, 2344, 2346, 636, 645, 651, 664, 681, 733, 768, 783, 789, 813, 832, 853, 921, 934, 970, 999, 1037, 1195, 1217, 1236, 1236, 1241, 1246, 1255, 1283, 1301, 1314, 1325, 1341, 1349, 1385, 1410, 1428, 1442, 1461, 1484, 1492,
+				1531, 1544, 1555, 1575, 1598, 1611, 1614, 1617, 1636, 1636, 1637, 1644, 1646, 1650, 1659, 1668, 1674, 1681, 1683, 1692, 1703, 1719, 1737, 1743, 1778, 1805, 1822, 1834, 1844, 1852, 1869, 1891, 1899, 1918, 1921, 1936, 1941, 1965, 1971, 1978,
+				1982, 1983, 1990, 1991, 1996, 2012, 2043, 2059, 2071, 2083, 2100, 2113, 2120, 2131, 2155, 2177, 2197, 2216, 2232, 2254, 2274, 2291,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

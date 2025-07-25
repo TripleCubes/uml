@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Dark Sun Arts&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Dark Sun Arts&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/darksunarts.html" property="og:url">
+	<meta content="Rank by game in top 20: 3125&#10;Rank by ilScore: 603&#10;&#10;5 games&#10;&bull; Super Marino | MJ 159: Ocean | rank: 97 | ilscore: 47&#10;&bull; Danmaku Shopping | MJ 158: Shopping | rank: 47 | ilscore: 17&#10;&bull; DragonPetals | MJ 151: Dragons | rank: 72 | ilscore: 42&#10;&bull; VANQUISH THEM | MJ 150: Magic | rank: 33 | ilscore: 74&#10;&bull; AlienAugur | MJ 142: Fortune | rank: 11 | ilscore: 43&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Dark Sun Arts</h1>
+		<a href="https://darksunarts.itch.io">darksunarts.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3125</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 603</p>
+		<p>Total ilScore: 223</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://darksunarts.itch.io/super-marino-world">Super Marino</a></td>
+				<td><span class="early">5m 31s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-159-ocean">MJ 159: Ocean</a></td>
+				<td>123</td>
+				<td>97</td>
+				<td>5</td>
+				<td>47</td>
+			</tr>
+			<tr>
+				<td><a href="https://darksunarts.itch.io/danmaku-shopping">Danmaku Shopping</a></td>
+				<td><span class="late">3d 18h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-158-shopping">MJ 158: Shopping</a></td>
+				<td>52</td>
+				<td>47</td>
+				<td>1</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://darksunarts.itch.io/dragonpetals">DragonPetals</a></td>
+				<td><span class="late">19h 41m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-151-dragons">MJ 151: Dragons</a></td>
+				<td>94</td>
+				<td>72</td>
+				<td>4</td>
+				<td>42</td>
+			</tr>
+			<tr>
+				<td><a href="https://darksunarts.itch.io/vanquish-them">VANQUISH THEM</a></td>
+				<td><span class="late">11h 58m late</span></td>
+				<td>
+					<a href="../jammer/tanktheta.html">TankTheta</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-150-magic">MJ 150: Magic</a></td>
+				<td>127</td>
+				<td>33</td>
+				<td>8</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://darksunarts.itch.io/alienaugur">AlienAugur</a></td>
+				<td><span class="early">1h 1m early</span></td>
+				<td>
+					<a href="../jammer/askerror.html">AskError</a>,
+					<a href="../jammer/cane-b.html">Cane B</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>11</td>
+				<td>11</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2157, 2181, 2195, 2219, 2235, 2252, 2272, 2290, 2302, 2320, 2348, 2380, 2402, 2423, 2443, 2463, 2478, 2495, 2512, 2533, 2573, 2582, 2598, 2609, 2634, 2649, 2655, 2670, 2681, 2688, 2704, 2720, 2752, 2772, 2796, 2816, 2840, 2867, 2892, 2922,
+				2940, 2959, 2986, 3005, 3031, 3055, 3087, 3107, 3124,
+			]],
+			[ "ilscore", [
+				7170, 7213, 7249, 7312, 7336, 7350, 7370, 7485, 1594, 898, 901, 931, 942, 948, 951, 962, 785, 476, 488, 491, 502, 507, 511, 514, 526, 529, 532, 533, 533, 533, 534, 537, 539, 540, 545, 548, 548, 551, 557, 562,
+				564, 566, 571, 578, 583, 586, 592, 595, 602,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

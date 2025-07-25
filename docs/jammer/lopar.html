@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>lopar&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="lopar&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lopar.html" property="og:url">
+	<meta content="Rank by game in top 10: 1605&#10;Rank by game in top 20: 2352&#10;Rank by ilScore: 266&#10;&#10;5 games&#10;&bull; Baseball Bat Xenolinguistic Astronaut | MJ 149: Ancient | rank: 40 | ilscore: 81&#10;&bull; Catortionist | MJ 97: Simulation | rank: 42 | ilscore: 63&#10;&bull; Cataclysm | MJ 80: Cats | rank: 77 | ilscore: 71&#10;&bull; Dr. Dog&#39;s Human Society | MJ 63: Future | rank: 58 | ilscore: 63&#10;&bull; Scripts of the Ancients | MJ 61: Ancient Egypt | rank: 9 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>lopar</h1>
+		<a href="https://lopar.itch.io">lopar.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1605</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2352</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 266</p>
+		<p>Total ilScore: 330</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lopar.itch.io/batstronaut">Baseball Bat Xenolinguistic Astronaut</a></td>
+				<td><span class="early">4m 14s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-149-ancient">MJ 149: Ancient</a></td>
+				<td>152</td>
+				<td>40</td>
+				<td>8</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://lopar.itch.io/catortionist">Catortionist</a></td>
+				<td><span class="early">33m 16s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>42</td>
+				<td>19</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://lopar.itch.io/cataclysm">Cataclysm</a></td>
+				<td><span class="early">38s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>77</td>
+				<td>8</td>
+				<td>71</td>
+			</tr>
+			<tr>
+				<td><a href="https://lopar.itch.io/dr-dog">Dr. Dog&#39;s Human Society</a></td>
+				<td><span class="early">1m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-63-future">MJ 63: Future</a></td>
+				<td>115</td>
+				<td>58</td>
+				<td>11</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://lopar.itch.io/scripts-of-the-ancients">Scripts of the Ancients</a></td>
+				<td><span class="early">1m 3s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-61">MJ 61: Ancient Egypt</a></td>
+				<td>49</td>
+				<td>9</td>
+				<td>9</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				346, 359, 375, 379, 386, 399, 407, 415, 428, 441, 447, 455, 462, 475, 484, 495, 504, 512, 519, 532, 539, 545, 550, 561, 571, 583, 595, 607, 615, 626, 636, 648, 656, 665, 674, 687, 697, 700, 710, 716,
+				727, 742, 749, 755, 763, 772, 779, 788, 805, 812, 821, 831, 843, 857, 870, 871, 885, 893, 901, 910, 927, 939, 947, 960, 962, 971, 989, 998, 1009, 1022, 1035, 1045, 1055, 1061, 1064, 1079, 1090, 1097, 1099, 1103,
+				1117, 1120, 1122, 1127, 1130, 1138, 1154, 1160, 1171, 1174, 1186, 1197, 1206, 1212, 1220, 1241, 1258, 1267, 1274, 1282, 1293, 1297, 1307, 1319, 1325, 1338, 1344, 1350, 1358, 1370, 1375, 1375, 1377, 1381, 1384, 1392, 1399, 1417, 1426, 1436,
+				1452, 1463, 1474, 1487, 1503, 1513, 1522, 1537, 1548, 1561, 1567, 1584, 1592, 1604,
+			]],
+			[ "20", [
+				448, 476, 503, 509, 518, 542, 552, 560, 588, 608, 614, 630, 638, 663, 676, 692, 711, 719, 726, 748, 761, 771, 777, 798, 818, 835, 847, 872, 880, 896, 911, 922, 934, 948, 957, 972, 981, 989, 1001, 1012,
+				1038, 1067, 1080, 1085, 1106, 1120, 1135, 1154, 1170, 1186, 1205, 1224, 1246, 1268, 1289, 1290, 1304, 1313, 1325, 1343, 1361, 1374, 1382, 1405, 1410, 1428, 1458, 1469, 1481, 1498, 1516, 1531, 1557, 1561, 1564, 1589, 1611, 1618, 1622, 1627,
+				1655, 1657, 1659, 1664, 1667, 1678, 1695, 1703, 1720, 1726, 1738, 1750, 1769, 1783, 1796, 1816, 1848, 1858, 1865, 1873, 1888, 1895, 1914, 1926, 1935, 1975, 1979, 1990, 1999, 2024, 2030, 2034, 2037, 2042, 2045, 2055, 2063, 2085, 2105, 2117,
+				2133, 2156, 2171, 2190, 2206, 2216, 2236, 2255, 2276, 2302, 2308, 2326, 2338, 2351,
+			]],
+			[ "ilscore", [
+				687, 812, 153, 153, 161, 168, 174, 176, 182, 196, 199, 213, 223, 253, 261, 273, 298, 315, 323, 354, 130, 134, 134, 141, 150, 157, 162, 166, 169, 178, 184, 185, 191, 197, 201, 203, 209, 211, 109, 111,
+				122, 132, 136, 138, 144, 149, 153, 160, 166, 177, 184, 190, 205, 210, 214, 214, 215, 215, 215, 226, 232, 233, 234, 238, 240, 249, 256, 261, 267, 274, 277, 285, 293, 296, 298, 305, 310, 315, 317, 318,
+				324, 325, 325, 325, 326, 327, 328, 330, 331, 334, 335, 335, 185, 188, 192, 192, 193, 195, 195, 195, 202, 204, 206, 209, 210, 213, 216, 218, 218, 219, 220, 220, 221, 221, 221, 222, 223, 227, 232, 238,
+				240, 240, 241, 241, 249, 251, 253, 255, 257, 260, 260, 262, 264, 265,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

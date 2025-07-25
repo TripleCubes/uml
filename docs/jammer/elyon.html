@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>elyon&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="elyon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/elyon.html" property="og:url">
+	<meta content="Rank by game in top 5: 11&#10;Rank by game in top 10: 11&#10;Rank by game in top 20: 25&#10;Rank by ilScore: 73&#10;&#10;9 games&#10;&bull; For Whom Time Tolls | MJ 169: Future | rank: 4 | ilscore: 48&#10;&bull; Falling sand? Worm. | MJ 164: Destruction | rank: 42 | ilscore: 51&#10;&bull; Lunar Arena | MJ 130: Lunar | rank: 27 | ilscore: 99&#10;&bull; StarCat Major | MJ+ 4: Cosmic | rank: 9 | ilscore: 90&#10;&bull; Astrocat | MJ 77: Courage | rank: 3 | ilscore: 87&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>elyon</h1>
+		<a href="https://elyon.itch.io">elyon.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 11</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>5</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 11</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>7</span>
+			<span class="box_majorjam">9</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 25</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>3</span>
+			<span>3</span>
+			<span>4</span>
+			<span>4</span>
+			<span>7</span>
+			<span class="box_majorjam">9</span>
+			<span>7</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 73</p>
+		<p>Total ilScore: 563</p>
+
+		<h3 id="games_header">9 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://wuffmakesgames.itch.io/for-whom-time-tolls">For Whom Time Tolls</a></td>
+				<td><span class="early">3m 56s early</span></td>
+				<td>
+					<a href="../jammer/wuffmakesgames.html">WuffMakesGames</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-169-future">MJ 169: Future</a></td>
+				<td>43</td>
+				<td>4</td>
+				<td>9</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/falling-sand-worm">Falling sand? Worm.</a></td>
+				<td><span class="early">1m 55s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-164-destruction">MJ 164: Destruction</a></td>
+				<td>73</td>
+				<td>42</td>
+				<td>5</td>
+				<td>51</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/lunar-arena">Lunar Arena</a></td>
+				<td><span class="late">9h 46m late</span></td>
+				<td>
+					<a href="../jammer/troldurt.html">Troldurt</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>27</td>
+				<td>15</td>
+				<td>99</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://elyon.itch.io/starcat-major">StarCat Major</a></td>
+				<td><span class="late">12h 46m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-4-cosmic">MJ+ 4: Cosmic</a></td>
+				<td>136</td>
+				<td>9</td>
+				<td>19</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/astrocat">Astrocat</a></td>
+				<td><span class="early">42m 46s early</span></td>
+				<td>
+					<a href="../jammer/fmlad.html">FmladGames</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>3</td>
+				<td>22</td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/doodle-planets">Doodle Planets</a></td>
+				<td><span class="early">11h 3m early</span></td>
+				<td>
+					<a href="../jammer/joydeluxe.html">Joy Deluxe</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>4</td>
+				<td>14</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/pirats">PiRATS</a></td>
+				<td><span class="early">58m 46s early</span></td>
+				<td>
+					<a href="../jammer/fmlad.html">FmladGames</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-28-pirates">MJ 28: Pirates</a></td>
+				<td>38</td>
+				<td>2</td>
+				<td>18</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://joydeluxe.itch.io/songs-of-change">Songs of Change</a></td>
+				<td><span class="early">5h 54m early</span></td>
+				<td>
+					<a href="../jammer/joydeluxe.html">Joy Deluxe</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-25-spirits">MJ 25: Spirits</a></td>
+				<td>45</td>
+				<td>3</td>
+				<td>12</td>
+				<td>57</td>
+			</tr>
+			<tr>
+				<td><a href="https://elyon.itch.io/starcat-mini">StarCat Mini</a></td>
+				<td><span class="early">25m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-24-space">MJ 24: Space</a></td>
+				<td>56</td>
+				<td>7</td>
+				<td>9</td>
+				<td>59</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				34, 34, 35, 10, 10, 10, 11, 11, 11, 11, 11, 13, 13, 14, 14, 15, 16, 16, 16, 18, 18, 19, 19, 21, 6, 6, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 9, 9,
+				9, 9, 9, 9, 9, 9, 9, 10, 10, 11, 11, 11, 11, 11, 11, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8,
+				8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13,
+				13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10,
+			]],
+			[ "10", [
+				74, 14, 14, 15, 9, 10, 10, 10, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 10,
+				10, 10, 11, 11, 11, 12, 12, 12, 12, 12, 13, 14, 14, 14, 14, 14, 9, 10, 10, 10, 10, 11, 11, 11, 11, 11, 7, 7, 7, 7, 7, 7, 8, 8, 9, 9, 9, 9, 10, 10,
+				10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13,
+				13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 9, 9, 9, 9, 9, 9, 9, 9, 9,
+				9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10,
+			]],
+			[ "20", [
+				98, 16, 17, 19, 14, 15, 15, 15, 15, 16, 16, 16, 16, 16, 17, 19, 19, 20, 21, 21, 21, 22, 23, 23, 24, 11, 12, 14, 14, 14, 14, 14, 14, 14, 15, 15, 17, 17, 17, 19,
+				19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 23, 24, 24, 24, 24, 24, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 13, 13, 13, 13, 13, 14, 14, 14, 14, 14, 14, 14, 16, 16,
+				17, 17, 17, 17, 18, 18, 18, 19, 19, 20, 20, 20, 20, 20, 22, 22, 22, 22, 22, 22, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 25, 25, 25, 27, 27, 27, 27,
+				28, 28, 28, 29, 29, 29, 29, 29, 29, 29, 29, 29, 29, 31, 31, 31, 31, 31, 31, 31, 31, 31, 32, 33, 33, 33, 33, 33, 33, 34, 34, 22, 22, 22, 22, 22, 22, 22, 23, 23,
+				23, 23, 23, 23, 23, 23, 23, 23, 24, 24, 24, 24, 24,
+			]],
+			[ "ilscore", [
+				47, 13, 14, 15, 8, 8, 8, 8, 9, 10, 10, 10, 11, 12, 12, 12, 12, 13, 15, 15, 15, 15, 16, 17, 17, 11, 13, 16, 16, 18, 21, 22, 22, 22, 24, 26, 26, 26, 28, 29,
+				34, 35, 35, 43, 48, 54, 56, 56, 60, 63, 67, 69, 75, 82, 88, 96, 39, 40, 43, 50, 53, 54, 55, 59, 63, 67, 30, 32, 32, 32, 32, 34, 36, 37, 39, 41, 42, 45, 48, 54,
+				58, 65, 66, 71, 74, 77, 84, 85, 88, 91, 95, 101, 104, 105, 105, 105, 105, 106, 110, 113, 114, 117, 118, 119, 122, 122, 124, 124, 127, 130, 135, 86, 86, 87, 89, 90, 95, 96, 96, 99,
+				99, 100, 100, 100, 101, 101, 101, 101, 101, 101, 101, 101, 103, 103, 103, 103, 104, 104, 104, 105, 105, 106, 106, 106, 106, 106, 85, 86, 86, 87, 87, 67, 68, 68, 68, 68, 68, 68, 68, 68,
+				68, 68, 68, 68, 69, 71, 72, 72, 72, 72, 72, 72, 72,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

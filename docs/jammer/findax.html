@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Findax&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Findax&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/findax.html" property="og:url">
+	<meta content="Rank by game in top 20: 2085&#10;Rank by ilScore: 1086&#10;&#10;2 games&#10;&bull; Surfing Scallywags | MJ 134: Islands | rank: 46 | ilscore: 66&#10;&bull; Frozen Frontier | MJ 130: Lunar | rank: 19 | ilscore: 102&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Findax</h1>
+		<a href="https://findax.itch.io">findax.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2085</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1086</p>
+		<p>Total ilScore: 168</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://funnymewy.itch.io/surfing-scallywags">Surfing Scallywags</a></td>
+				<td><span class="early">1h 42m early</span></td>
+				<td>
+					<a href="../jammer/funnymewy.html">funnymewy</a>,
+					<a href="../jammer/thegreenphoenix.html">thegreenphoenix</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>46</td>
+				<td>14</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://funnymewy.itch.io/frozen-frontier">Frozen Frontier</a></td>
+				<td><span class="early">28m 7s early</span></td>
+				<td>
+					<a href="../jammer/funnymewy.html">funnymewy</a>,
+					<a href="../jammer/thegreenphoenix.html">thegreenphoenix</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>19</td>
+				<td>9</td>
+				<td>102</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1396, 1399, 1402, 1426, 1447, 1451, 1454, 1459, 1481, 1483, 1485, 1490, 1492, 1502, 1512, 1518, 1528, 1533, 1544, 1550, 1569, 1580, 1592, 1613, 1644, 1652, 1660, 1667, 1681, 1688, 1708, 1719, 1727, 1767, 1768, 1776, 1786, 1811, 1817, 1821,
+				1824, 1829, 1833, 1844, 1851, 1869, 1887, 1896, 1906, 1923, 1935, 1951, 1962, 1969, 1983, 2002, 2020, 2040, 2045, 2057, 2072, 2084,
+			]],
+			[ "ilscore", [
+				1804, 1817, 1824, 1841, 725, 735, 736, 739, 753, 754, 758, 761, 763, 768, 772, 775, 780, 782, 784, 785, 791, 801, 806, 808, 831, 834, 839, 842, 855, 861, 881, 894, 898, 913, 916, 920, 923, 938, 942, 944,
+				945, 946, 951, 951, 955, 961, 968, 977, 986, 987, 991, 999, 1009, 1016, 1026, 1033, 1040, 1052, 1056, 1070, 1076, 1085,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

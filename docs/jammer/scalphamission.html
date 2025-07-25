@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ScalphaMission&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ScalphaMission&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/scalphamission.html" property="og:url">
+	<meta content="Rank by game in top 1: 23&#10;Rank by game in top 5: 36&#10;Rank by game in top 10: 5&#10;Rank by game in top 20: 2&#10;Rank by ilScore: 2&#10;&#10;36 games&#10;&bull; Hole In One | MJ 183: Calculations | rank: 39 | ilscore: 76&#10;&bull; MiniNinja | MJ 135: Deception | rank: 10 | ilscore: 62&#10;&bull; T-10 | MJ 130: Lunar | rank: 24 | ilscore: 101&#10;&bull; Alchemist: Prison Break | MJ 129: Poison | rank: 6 | ilscore: 73&#10;&bull; Healtris | MJ 128: Health | rank: 12 | ilscore: 83&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ScalphaMission</h1>
+		<a href="https://scalphamission.itch.io">scalphamission.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 1</h3>
+		<span class="dot_1"></span>
+		<p>Rank: 23</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 36</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>5</span>
+			<span>3</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 5</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>5</span>
+			<span>6</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>10</span>
+			<span>13</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2</p>
+		<div class="boxes">
+			<span>1</span>
+			<span>1</span>
+			<span>5</span>
+			<span>6</span>
+			<span>7</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>8</span>
+			<span>9</span>
+			<span>10</span>
+			<span>10</span>
+			<span>11</span>
+			<span class="box_majorjam">11</span>
+			<span>12</span>
+			<span>12</span>
+			<span>12</span>
+			<span>12</span>
+			<span>12</span>
+			<span>13</span>
+			<span>15</span>
+			<span>16</span>
+			<span>20</span>
+			<span>24</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2</p>
+		<p>Total ilScore: 2283</p>
+
+		<h3 id="games_header">36 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/hole-in-one">Hole In One</a></td>
+				<td><span class="early">10m 59s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-183-calculations">MJ 183: Calculations</a></td>
+				<td>119</td>
+				<td>39</td>
+				<td>20</td>
+				<td>76</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/minininja">MiniNinja</a></td>
+				<td><span class="early">25m 0s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-135-deception">MJ 135: Deception</a></td>
+				<td>73</td>
+				<td>10</td>
+				<td>14</td>
+				<td>62</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/t-10">T-10</a></td>
+				<td><span class="early">36m 1s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>24</td>
+				<td>27</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/alchemist-prison-break">Alchemist: Prison Break</a></td>
+				<td><span class="early">9m 56s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-129-poison">MJ 129: Poison</a></td>
+				<td>76</td>
+				<td>6</td>
+				<td>17</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/healtris">Healtris</a></td>
+				<td><span class="early">1h 35m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>12</td>
+				<td>22</td>
+				<td>83</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/cat">C.A.T.</a></td>
+				<td><span class="early">26m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>16</td>
+				<td>24</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/all-is-not-lost">All Is Not Lost</a></td>
+				<td><span class="early">6m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>12</td>
+				<td>35</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/pirate-signal">Pirate Signal</a></td>
+				<td><span class="early">21m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>8</td>
+				<td>15</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/base-camp">Base Camp</a></td>
+				<td><span class="early">10m 9s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>33</td>
+				<td>14</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/subterrania">SubTerrania</a></td>
+				<td><span class="early">26m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-109-depths">MJ 109: Depths</a></td>
+				<td>138</td>
+				<td>21</td>
+				<td>18</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/creatures-of-the-deep">Creatures of the Deep</a></td>
+				<td><span class="early">1h 2m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-108-seaside">MJ 108: Seaside</a></td>
+				<td>211</td>
+				<td>104</td>
+				<td>28</td>
+				<td>79</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/lickety-split">Lickety Split!</a></td>
+				<td><span class="early">5m 51s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>88</td>
+				<td>17</td>
+				<td>101</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/dream-dungeons">Dream Dungeons</a></td>
+				<td><span class="early">2h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-105-dreamy">MJ 105: Dreamy</a></td>
+				<td>137</td>
+				<td>8</td>
+				<td>13</td>
+				<td>89</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/colore">Coloré</a></td>
+				<td><span class="early">4h 47m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-104-cascade">MJ 104: Cascade</a></td>
+				<td>104</td>
+				<td>5</td>
+				<td>16</td>
+				<td>82</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/plagues-never-die">Plagues Never Die</a></td>
+				<td><span class="early">57s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>8</td>
+				<td>12</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/at-least-its-not-raining">At Least Its Not Raining</a></td>
+				<td><span class="early">3h 5m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>39</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/nyx">NYX</a></td>
+				<td><span class="early">6m 47s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>42</td>
+				<td>16</td>
+				<td>88</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/dive-bird">Dive Bird</a></td>
+				<td><span class="early">1d 6h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>76</td>
+				<td>18</td>
+				<td>94</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/tower-of-the-empty">Tower of the Empty</a></td>
+				<td><span class="early">5h 44m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>60</td>
+				<td>19</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/rift-runner-simulator">Rift Runner Simulator</a></td>
+				<td><span class="late">1d 14h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-97-simulation">MJ 97: Simulation</a></td>
+				<td>103</td>
+				<td>40</td>
+				<td>16</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/return-of-the-cake">Return of the Cake</a></td>
+				<td><span class="early">40m 58s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>10</td>
+				<td>19</td>
+				<td>72</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/samhain">Samhain</a></td>
+				<td><span class="early">6h 54m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-89-pumpkin">MJ 89: Pumpkin</a></td>
+				<td>82</td>
+				<td>20</td>
+				<td>11</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/catchise">Catchise (the game)</a></td>
+				<td><span class="early">4h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>63</td>
+				<td>11</td>
+				<td>75</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://scalphamission.itch.io/color-out-in-space">Color Out In Space</a></td>
+				<td><span class="late">9h 43m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>11</td>
+				<td>13</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/your-fortress-is-in-another-castle">Your Fortress is in Another Castle</a></td>
+				<td><span class="early">4m 41s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-59">MJ 59: Fortress</a></td>
+				<td>24</td>
+				<td>7</td>
+				<td>10</td>
+				<td>33</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/cloud-empire">Cloud Empire</a></td>
+				<td><span class="early">1h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>15</td>
+				<td>13</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/last-winter">Last Winter</a></td>
+				<td><span class="early">54m 28s early</span></td>
+				<td>
+					<a href="../jammer/rainetheglutton.html">RaineTheGlutton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-49-seasons">MJ 49: Seasons</a></td>
+				<td>18</td>
+				<td>12</td>
+				<td>8</td>
+				<td>23</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/defy-injustice">Defy: Injustice</a></td>
+				<td><span class="early">3m 26s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-46-justice">MJ 46: Justice</a></td>
+				<td>43</td>
+				<td>8</td>
+				<td>9</td>
+				<td>48</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/micro-vs-magic">Micro VS Magic</a></td>
+				<td><span class="early">14m 13s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-45-dungeons">MJ 45: Dungeons</a></td>
+				<td>44</td>
+				<td>12</td>
+				<td>11</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/battle-of-light-and-ghosts">Battle of Light and Ghosts</a></td>
+				<td><span class="early">3h 29m early</span></td>
+				<td>
+					<a href="../jammer/rainetheglutton.html">RaineTheGlutton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-44-new-year">MJ 44: New Year</a></td>
+				<td>28</td>
+				<td>1</td>
+				<td>13</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://rainetheglutton.itch.io/the-merchant-of-mors">The Merchant of Mors</a></td>
+				<td><span class="early">4m 42s early</span></td>
+				<td>
+					<a href="../jammer/rainetheglutton.html">RaineTheGlutton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-43-travel">MJ 43: Travel</a></td>
+				<td>14</td>
+				<td>9</td>
+				<td>4</td>
+				<td>17</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/sn0-bot-vs-the-yetis">SN0-BOT vs The Yetis</a></td>
+				<td><span class="early">3h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-42-snow">MJ 42: Snow</a></td>
+				<td>28</td>
+				<td>11</td>
+				<td>15</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/protect-the-library">Protect the Library</a></td>
+				<td><span class="early">33m 10s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-41-magic">MJ 41: Magic</a></td>
+				<td>28</td>
+				<td>12</td>
+				<td>9</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/the-least-deadliest-game">The Least Dangerous Game</a></td>
+				<td><span class="early">12m 40s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-40-hunters">MJ 40: Hunters</a></td>
+				<td>35</td>
+				<td>13</td>
+				<td>4</td>
+				<td>39</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/monster-trapper">Monster Trapper</a></td>
+				<td><span class="early">30m 25s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-39-monsters">MJ 39: Monsters</a></td>
+				<td>23</td>
+				<td>8</td>
+				<td>12</td>
+				<td>31</td>
+			</tr>
+			<tr>
+				<td><a href="https://scalphamission.itch.io/nomads">No Food Nomads</a></td>
+				<td><span class="early">15m 39s early</span></td>
+				<td>
+					<a href="../jammer/rainetheglutton.html">RaineTheGlutton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-38-food">MJ 38: Food</a></td>
+				<td>21</td>
+				<td>1</td>
+				<td>8</td>
+				<td>37</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+				23, 24, 25, 26, 27, 27, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5,
+				5, 5, 6, 6, 6, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10,
+				10, 10, 10, 10, 11, 11, 11, 11, 11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 14, 14,
+				14, 15, 15, 15, 15, 15, 15, 15, 16, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 18, 19, 19, 19, 20, 20, 20, 21, 21, 21, 21, 21, 21, 22,
+			]],
+			[ "5", [
+				49, 51, 54, 55, 56, 57, 16, 16, 17, 17, 19, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 21, 23, 24, 24, 24, 25, 26, 27, 27, 28, 28, 28, 29, 29, 29, 30,
+				31, 31, 31, 31, 31, 35, 35, 36, 36, 37, 37, 37, 38, 40, 40, 40, 40, 41, 41, 41, 45, 45, 45, 46, 47, 47, 47, 51, 51, 53, 16, 16, 16, 16, 18, 19, 19, 19, 19, 19,
+				19, 19, 19, 20, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 22, 22, 23, 23, 23, 23, 24, 24, 24, 24, 24, 24, 24, 24, 24, 25, 25, 25,
+				25, 25, 26, 26, 26, 26, 26, 26, 26, 27, 27, 28, 29, 29, 29, 30, 30, 30, 30, 30, 30, 31, 31, 31, 31, 32, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 33, 34, 35,
+			]],
+			[ "10", [
+				69, 29, 30, 30, 31, 17, 8, 8, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6,
+				6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 9, 9, 6, 6, 6, 6, 7, 7, 7, 7, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5,
+				5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3,
+				3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4,
+			]],
+			[ "20", [
+				114, 43, 25, 12, 8, 6, 5, 4, 3, 3, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 3,
+				3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 3, 3, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+				1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			]],
+			[ "ilscore", [
+				281, 80, 27, 16, 10, 7, 5, 5, 3, 3, 3, 3, 1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 3, 3, 5, 5,
+				5, 5, 5, 5, 5, 5, 5, 5, 5, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 7, 7, 7, 6, 5, 5, 4, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>RodPtahs&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="RodPtahs&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/rodptahs.html" property="og:url">
+	<meta content="Rank by game in top 20: 2243&#10;Rank by ilScore: 3932&#10;&#10;1 games&#10;&bull; Arterial Upstream | MJ 128: Health | rank: 13 | ilscore: 83&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>RodPtahs</h1>
+		<a href="https://rodptahs.itch.io">rodptahs.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2243</p>
+		<div class="boxes">
+			<span>13</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3932</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://rodptahs.itch.io/arterial-upstream">Arterial Upstream</a></td>
+				<td><span class="early">3h 23m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>13</td>
+				<td>18</td>
+				<td>83</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1439, 1453, 1479, 1483, 1486, 1512, 1534, 1540, 1543, 1548, 1575, 1577, 1579, 1584, 1586, 1597, 1613, 1621, 1635, 1641, 1653, 1664, 1683, 1696, 1709, 1729, 1762, 1770, 1777, 1784, 1798, 1805, 1825, 1837, 1845, 1885, 1887, 1898, 1907, 1932,
+				1938, 1942, 1945, 1950, 1954, 1964, 1971, 1990, 2010, 2022, 2038, 2059, 2073, 2090, 2101, 2111, 2131, 2150, 2172, 2198, 2204, 2215, 2229, 2242,
+			]],
+			[ "ilscore", [
+				2642, 2656, 2762, 2774, 2777, 2804, 2829, 2844, 2850, 2854, 2889, 2893, 2898, 2906, 2909, 2915, 2928, 2936, 2942, 2952, 2962, 2972, 3013, 3043, 3062, 3067, 3178, 3194, 3214, 3228, 3251, 3260, 3285, 3311, 3321, 3373, 3380, 3396, 3401, 3500,
+				3507, 3511, 3515, 3519, 3527, 3535, 3548, 3571, 3619, 3631, 3645, 3664, 3680, 3691, 3702, 3714, 3741, 3768, 3791, 3854, 3867, 3895, 3916, 3931,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

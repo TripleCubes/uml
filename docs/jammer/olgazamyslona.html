@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>OlgaZamyslona&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="OlgaZamyslona&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/olgazamyslona.html" property="og:url">
+	<meta content="Rank by game in top 20: 2289&#10;Rank by ilScore: 2984&#10;&#10;2 games&#10;&bull; Throw [Space] | MJ 95: Chance | rank: 14 | ilscore: 60&#10;&bull; Courage Test | MJ 77: Courage | rank: 114 | ilscore: 34&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>OlgaZamyslona</h1>
+		<a href="https://olgazamyslona.itch.io">olgazamyslona.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2289</p>
+		<div class="boxes">
+			<span>14</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2984</p>
+		<p>Total ilScore: 95</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://olgazamyslona.itch.io/throw-space">Throw [Space]</a></td>
+				<td><span class="early">8h 19m early</span></td>
+				<td>
+					<a href="../jammer/niwex20.html">Kawyn</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>14</td>
+				<td>20</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://olgazamyslona.itch.io/courage-test">Courage Test</a></td>
+				<td><span class="early">3m 10s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>114</td>
+				<td>3</td>
+				<td>34</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				944, 952, 964, 975, 1001, 1030, 1043, 1047, 1068, 1083, 1095, 1114, 1130, 1146, 1165, 1184, 1206, 1228, 1248, 1249, 1263, 1272, 1284, 1302, 1320, 1330, 1339, 1359, 1364, 1382, 1411, 1422, 1435, 1451, 1467, 1481, 1507, 1511, 1514, 1539,
+				1561, 1567, 1571, 1576, 1604, 1606, 1608, 1613, 1616, 1627, 1643, 1651, 1668, 1674, 1686, 1697, 1716, 1729, 1742, 1762, 1795, 1804, 1811, 1819, 1833, 1841, 1861, 1873, 1882, 1922, 1926, 1937, 1946, 1971, 1977, 1981, 1984, 1989, 1992, 2002,
+				2010, 2031, 2051, 2063, 2079, 2102, 2117, 2136, 2147, 2157, 2177, 2196, 2217, 2243, 2249, 2263, 2275, 2288,
+			]],
+			[ "ilscore", [
+				2480, 2528, 2688, 2787, 2831, 2875, 2957, 3086, 3234, 3315, 3443, 3522, 3620, 3677, 3732, 3823, 3908, 3934, 4009, 829, 833, 848, 870, 977, 1027, 1044, 1053, 1080, 1099, 1119, 1260, 1276, 1334, 1363, 1435, 1660, 1674, 1689, 1689, 1692,
+				1698, 1706, 1748, 1770, 1784, 1797, 1816, 1824, 1883, 1906, 1924, 1943, 1959, 1984, 1994, 2067, 2077, 2083, 2100, 2125, 2141, 2146, 2151, 2168, 2170, 2174, 2181, 2184, 2188, 2200, 2207, 2213, 2223, 2230, 2241, 2257, 2282, 2300, 2309, 2386,
+				2412, 2432, 2445, 2454, 2463, 2479, 2499, 2507, 2532, 2537, 2551, 2554, 2617, 2623, 2631, 2638, 2641, 2648, 2654, 2665, 2686, 2720, 2734, 2747, 2766, 2782, 2792, 2801, 2812, 2836, 2863, 2886, 2913, 2926, 2946, 2965, 2983,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

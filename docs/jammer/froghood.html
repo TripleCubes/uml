@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Frog&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Frog&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/froghood.html" property="og:url">
+	<meta content="Rank by game in top 5: 679&#10;Rank by game in top 10: 911&#10;Rank by game in top 20: 1277&#10;Rank by ilScore: 11156&#10;&#10;1 games&#10;&bull; Window Warfare | MJ+ 5: Legends | rank: 2 | ilscore: 36&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Frog</h1>
+		<a href="https://froghood.itch.io">froghood.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 679</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 911</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1277</p>
+		<div class="boxes">
+			<span class="box_majorjam">2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 11156</p>
+		<p>Total ilScore: 36</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://froghood.itch.io/window-warfare">Window Warfare</a></td>
+				<td><span class="early">59m 35s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-5">MJ+ 5: Legends</a></td>
+				<td>21</td>
+				<td>2</td>
+				<td>6</td>
+				<td>36</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				376, 377, 381, 389, 393, 401, 401, 406, 414, 414, 419, 429, 433, 441, 444, 446, 451, 452, 454, 454, 460, 466, 468, 468, 468, 477, 481, 486, 493, 494, 501, 505, 505, 507, 507, 509, 511, 517, 519, 525,
+				532, 542, 543, 547, 549, 553, 554, 559, 564, 565, 573, 575, 580, 584, 590, 593, 593, 593, 593, 595, 597, 599, 610, 615, 617, 619, 623, 625, 626, 630, 631, 636, 648, 656, 666, 666, 667, 674, 678,
+			]],
+			[ "10", [
+				517, 517, 521, 527, 533, 543, 543, 549, 557, 559, 564, 586, 590, 599, 612, 614, 622, 623, 626, 627, 639, 646, 648, 648, 650, 659, 663, 667, 674, 675, 682, 686, 687, 690, 690, 692, 695, 701, 705, 713,
+				720, 733, 734, 738, 741, 750, 751, 757, 762, 766, 780, 783, 788, 795, 808, 811, 814, 814, 815, 817, 819, 822, 833, 839, 842, 844, 849, 851, 851, 857, 861, 867, 879, 887, 897, 897, 898, 905, 910,
+			]],
+			[ "20", [
+				709, 709, 717, 727, 733, 751, 753, 762, 773, 777, 784, 806, 814, 826, 840, 844, 853, 855, 858, 859, 874, 882, 885, 888, 892, 900, 902, 907, 916, 919, 929, 937, 940, 945, 950, 957, 962, 968, 972, 980,
+				990, 1005, 1009, 1020, 1022, 1032, 1038, 1051, 1059, 1065, 1086, 1089, 1096, 1106, 1119, 1124, 1134, 1135, 1137, 1141, 1146, 1150, 1162, 1170, 1174, 1179, 1186, 1193, 1202, 1208, 1213, 1218, 1231, 1239, 1252, 1253, 1255, 1267, 1276,
+			]],
+			[ "ilscore", [
+				6153, 6193, 6205, 6225, 6362, 6481, 6558, 6586, 6675, 6691, 6855, 6936, 6987, 7030, 7115, 7211, 7253, 7435, 7452, 7473, 7572, 7655, 7690, 7706, 7710, 7856, 7857, 7872, 7898, 7918, 7938, 7983, 8023, 8091, 8117, 8134, 8161, 8284, 8407, 8483,
+				8521, 8685, 8737, 8823, 8886, 8982, 9005, 9093, 9169, 9192, 9325, 9349, 9400, 9412, 9602, 9637, 9645, 9667, 9687, 9717, 9739, 9787, 9874, 9976, 10032, 10075, 10147, 10216, 10279, 10358, 10412, 10493, 10570, 10651, 10816, 10877, 10997, 11073, 11155,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

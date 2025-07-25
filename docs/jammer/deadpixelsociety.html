@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>DeadPixel&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="DeadPixel&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/deadpixelsociety.html" property="og:url">
+	<meta content="Rank by game in top 5: 715&#10;Rank by game in top 10: 224&#10;Rank by game in top 20: 108&#10;Rank by ilScore: 368&#10;&#10;4 games&#10;&bull; Cozyware | MJ 124: Warmth | rank: 10 | ilscore: 84&#10;&bull; Dropman [JAM VERSION] | MJ 107: Music | rank: 4 | ilscore: 77&#10;&bull; Vapor | MJ 102: Steam | rank: 13 | ilscore: 46&#10;&bull; While You Sleep | MJ 83: Dread | rank: 15 | ilscore: 78&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>DeadPixel</h1>
+		<a href="https://deadpixelsociety.itch.io">deadpixelsociety.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 715</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 224</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>10</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 108</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>10</span>
+			<span>13</span>
+			<span>15</span>
+			<span>4</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 368</p>
+		<p>Total ilScore: 284</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://deadpixelsociety.itch.io/cozyware">Cozyware</a></td>
+				<td><span class="early">3h 53m early</span></td>
+				<td>
+					<a href="../jammer/muffnbuttn.html">muffnbuttn</a>,
+					<a href="../jammer/wrightrobt11.html">wrightrobt11</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>10</td>
+				<td>13</td>
+				<td>84</td>
+			</tr>
+			<tr>
+				<td><a href="https://deadpixelsociety.itch.io/dropman">Dropman [JAM VERSION]</a></td>
+				<td><span class="early">36m 0s early</span></td>
+				<td>
+					<a href="../jammer/cutestbichalive.html">CutestBichAlive</a>,
+					<a href="../jammer/muffnbuttn.html">muffnbuttn</a>,
+					<a href="../jammer/wrightrobt11.html">wrightrobt11</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-107-music">MJ 107: Music</a></td>
+				<td>93</td>
+				<td>4</td>
+				<td>17</td>
+				<td>77</td>
+			</tr>
+			<tr>
+				<td><a href="https://deadpixelsociety.itch.io/vapor">Vapor</a></td>
+				<td><span class="early">1h 29m early</span></td>
+				<td>
+					<a href="../jammer/cutestbichalive.html">CutestBichAlive</a>,
+					<a href="../jammer/muffnbuttn.html">muffnbuttn</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>13</td>
+				<td>8</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://deadpixelsociety.itch.io/while-you-sleep">While You Sleep</a></td>
+				<td><span class="early">2h 31m early</span></td>
+				<td>
+					<a href="../jammer/muffnbuttn.html">muffnbuttn</a>,
+					<a href="../jammer/wrightrobt11.html">wrightrobt11</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-83-dread">MJ 83: Dread</a></td>
+				<td>111</td>
+				<td>15</td>
+				<td>12</td>
+				<td>78</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				365, 369, 372, 376, 382, 391, 395, 396, 398, 402, 410, 414, 422, 422, 427, 435, 435, 441, 451, 455, 463, 466, 472, 477, 479, 481, 481, 486, 492, 494, 494, 494, 503, 507, 512, 519, 520, 527, 533, 533,
+				537, 537, 539, 541, 547, 549, 554, 561, 571, 572, 576, 579, 583, 584, 589, 595, 595, 603, 605, 611, 615, 621, 624, 624, 624, 625, 628, 630, 632, 643, 648, 650, 652, 656, 658, 659, 663, 665, 670, 682,
+				690, 700, 701, 702, 709, 714,
+			]],
+			[ "10", [
+				501, 508, 518, 528, 540, 554, 565, 566, 567, 571, 577, 583, 595, 595, 601, 613, 615, 621, 122, 127, 127, 129, 130, 133, 134, 135, 136, 137, 140, 143, 146, 146, 148, 149, 149, 151, 151, 152, 153, 153,
+				153, 153, 155, 155, 156, 158, 161, 162, 163, 167, 167, 167, 168, 170, 172, 175, 177, 178, 183, 187, 189, 191, 192, 195, 195, 196, 196, 196, 196, 197, 198, 200, 201, 203, 204, 204, 204, 204, 204, 206,
+				213, 217, 217, 220, 220, 223,
+			]],
+			[ "20", [
+				726, 746, 756, 769, 794, 801, 818, 831, 840, 848, 858, 866, 880, 887, 894, 905, 912, 938, 967, 980, 278, 281, 285, 291, 293, 106, 106, 107, 107, 107, 108, 109, 109, 110, 112, 113, 116, 116, 116, 117,
+				118, 119, 120, 58, 58, 59, 61, 64, 64, 68, 68, 69, 69, 70, 71, 72, 72, 72, 72, 72, 74, 74, 75, 76, 77, 77, 77, 77, 77, 79, 80, 80, 80, 80, 81, 81, 81, 81, 82, 83,
+				83, 83, 85, 86, 88, 88, 89, 89, 89, 90, 90, 91, 92, 94, 94, 94, 95, 95, 97, 98, 100, 104, 104, 104, 105, 105, 105, 105, 105, 107, 107,
+			]],
+			[ "ilscore", [
+				985, 1053, 1135, 1151, 1211, 1225, 1257, 1271, 1278, 1314, 1343, 1351, 1365, 1376, 1383, 1404, 1434, 1598, 1676, 1720, 666, 684, 699, 718, 772, 266, 286, 295, 301, 327, 334, 339, 340, 341, 345, 349, 358, 364, 371, 374,
+				378, 379, 389, 189, 191, 195, 202, 203, 205, 214, 217, 217, 222, 225, 227, 228, 228, 233, 234, 234, 235, 236, 237, 239, 239, 239, 241, 243, 244, 247, 252, 257, 259, 262, 265, 267, 275, 279, 279, 281,
+				287, 288, 297, 301, 303, 303, 312, 312, 312, 312, 314, 315, 316, 321, 322, 327, 329, 330, 334, 335, 340, 344, 347, 352, 352, 354, 356, 356, 358, 362, 367,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

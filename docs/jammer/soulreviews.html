@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>SoulReviews&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="SoulReviews&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/soulreviews.html" property="og:url">
+	<meta content="Rank by ilScore: 780&#10;&#10;3 games&#10;&bull; Two For Flinching | MJ 131: Solar | rank: 23 | ilscore: 46&#10;&bull; Lunar Trails | MJ 130: Lunar | rank: 98 | ilscore: 80&#10;&bull; Great Maw | MJ 106: Frogs | rank: 186 | ilscore: 71&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>SoulReviews</h1>
+		<a href="https://soulreviews.itch.io">soulreviews.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 780</p>
+		<p>Total ilScore: 197</p>
+
+		<h3 id="games_header">3 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://soulreviews.itch.io/two-for-flinching">Two For Flinching</a></td>
+				<td><span class="early">4h 16m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-131-solar">MJ 131: Solar</a></td>
+				<td>57</td>
+				<td>23</td>
+				<td>12</td>
+				<td>46</td>
+			</tr>
+			<tr>
+				<td><a href="https://soulreviews.itch.io/lunar-trails">Lunar Trails</a></td>
+				<td><span class="early">45m 13s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>98</td>
+				<td>9</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td><a href="https://soulreviews.itch.io/great-maw">Great Maw</a></td>
+				<td><span class="early">41m 27s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-106-frogs">MJ 106: Frogs</a></td>
+				<td>281</td>
+				<td>186</td>
+				<td>6</td>
+				<td>71</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2532, 2554, 2683, 2738, 2853, 3137, 3183, 3213, 3214, 3218, 3225, 3230, 3323, 3382, 3404, 3416, 3458, 3460, 3572, 3625, 3634, 3654, 3700, 3758, 3774, 872, 477, 479, 489, 498, 505, 506, 508, 518, 518, 524, 525, 528, 530, 534,
+				536, 538, 544, 544, 544, 554, 562, 567, 571, 586, 587, 593, 598, 605, 608, 620, 632, 636, 646, 652, 657, 658, 670, 675, 678, 680, 681, 683, 685, 688, 693, 696, 703, 709, 712, 715, 718, 724, 729, 734,
+				740, 747, 755, 756, 767, 772, 779,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

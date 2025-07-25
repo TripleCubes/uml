@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Coma Harmonium&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Coma Harmonium&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/coma-harmonium.html" property="og:url">
+	<meta content="Rank by ilScore: 2170&#10;&#10;2 games&#10;&bull; Prowling Fear | MJ 77: Courage | rank: 37 | ilscore: 73&#10;&bull; Crime Seen | MJ 60: Crime | rank: 42 | ilscore: 43&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Coma Harmonium</h1>
+		<a href="https://coma-harmonium.itch.io">coma-harmonium.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2170</p>
+		<p>Total ilScore: 116</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://benebeb.itch.io/prowlingfear">Prowling Fear</a></td>
+				<td><span class="early">1h 42m early</span></td>
+				<td>
+					<a href="../jammer/benebeb.html">beneb</a>,
+					<a href="../jammer/lehandesigns.html">Lehan Botha</a>,
+					<a href="../jammer/jaco-van-hemert.html">Jaco van Hemert</a>,
+					<a href="../jammer/siberianhacker.html">siberianhacker</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-77-courage">MJ 77: Courage</a></td>
+				<td>139</td>
+				<td>37</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://coma-harmonium.itch.io/crimeseen">Crime Seen</a></td>
+				<td><span class="early">9h 1m early</span></td>
+				<td>
+					<a href="../jammer/gsgamingteam.html">gsgamingteam</a>,
+					<a href="../jammer/calgreghard.html">calgreghard</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-60">MJ 60: Crime</a></td>
+				<td>64</td>
+				<td>42</td>
+				<td>7</td>
+				<td>43</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				902, 930, 1075, 1181, 1183, 1209, 1306, 1339, 1375, 1417, 1485, 1518, 1588, 1626, 1798, 1842, 1912, 1989, 312, 320, 351, 382, 399, 406, 424, 443, 474, 488, 505, 519, 529, 539, 545, 568, 584, 590, 602, 611, 617, 627,
+				644, 688, 722, 738, 743, 767, 784, 805, 868, 879, 915, 942, 978, 1108, 1130, 1149, 1149, 1155, 1160, 1170, 1196, 1215, 1225, 1237, 1253, 1260, 1294, 1320, 1339, 1353, 1373, 1395, 1401, 1438, 1450, 1461, 1480, 1502, 1513, 1519,
+				1522, 1540, 1540, 1541, 1548, 1550, 1553, 1563, 1571, 1578, 1584, 1586, 1594, 1606, 1622, 1640, 1646, 1677, 1701, 1717, 1729, 1742, 1749, 1765, 1787, 1796, 1814, 1818, 1831, 1836, 1857, 1861, 1869, 1871, 1872, 1880, 1881, 1884, 1899, 1929,
+				1947, 1959, 1971, 1989, 2003, 2010, 2021, 2044, 2065, 2081, 2100, 2114, 2135, 2154, 2169,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>smelulon&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="smelulon&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/smelulon.html" property="og:url">
+	<meta content="Rank by game in top 5: 1019&#10;Rank by game in top 10: 1657&#10;Rank by game in top 20: 2433&#10;Rank by ilScore: 2019&#10;&#10;2 games&#10;&bull; Solar System Hopper | MJ 146: Windows | rank: 4 | ilscore: 56&#10;&bull; Blind Spot | MJ 145: Frozen | rank: 26 | ilscore: 65&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>smelulon</h1>
+		<a href="https://smelulon.itch.io">smelulon.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 1019</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1657</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2433</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2019</p>
+		<p>Total ilScore: 121</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://smelulon.itch.io/solar-system-hopper">Solar System Hopper</a></td>
+				<td><span class="late">9h 30m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-146-windows">MJ 146: Windows</a></td>
+				<td>57</td>
+				<td>4</td>
+				<td>9</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://smelulon.itch.io/blind-spot">Blind Spot</a></td>
+				<td><span class="late">21m 51s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-145-frozen">MJ 145: Frozen</a></td>
+				<td>89</td>
+				<td>26</td>
+				<td>6</td>
+				<td>65</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				750, 758, 768, 774, 776, 780, 787, 797, 808, 813, 818, 822, 829, 833, 839, 845, 853, 857, 860, 866, 872, 876, 876, 878, 885, 888, 894, 901, 912, 917, 921, 927, 932, 938, 947, 957, 960, 965, 976, 984,
+				991, 996, 1003, 1013, 1018,
+			]],
+			[ "10", [
+				1210, 1222, 1235, 1243, 1249, 1257, 1278, 1295, 1305, 1312, 1321, 1332, 1339, 1349, 1361, 1367, 1380, 1386, 1392, 1400, 1412, 1417, 1417, 1419, 1427, 1432, 1438, 1445, 1463, 1472, 1482, 1498, 1509, 1520, 1535, 1552, 1562, 1571, 1586, 1597,
+				1610, 1616, 1633, 1644, 1656,
+			]],
+			[ "20", [
+				1785, 1797, 1811, 1829, 1843, 1858, 1878, 1910, 1921, 1928, 1937, 1953, 1963, 1982, 1994, 2003, 2043, 2047, 2058, 2067, 2092, 2098, 2102, 2105, 2114, 2117, 2125, 2133, 2157, 2177, 2189, 2204, 2227, 2242, 2262, 2279, 2289, 2309, 2331, 2352,
+				2378, 2384, 2404, 2419, 2432,
+			]],
+			[ "ilscore", [
+				4779, 1483, 1485, 1491, 1503, 1519, 1536, 1541, 1571, 1592, 1607, 1614, 1626, 1631, 1650, 1671, 1678, 1696, 1699, 1710, 1715, 1736, 1738, 1744, 1746, 1747, 1755, 1756, 1759, 1771, 1799, 1812, 1822, 1833, 1846, 1862, 1868, 1880, 1903, 1921,
+				1937, 1957, 1969, 1987, 2005, 2018,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

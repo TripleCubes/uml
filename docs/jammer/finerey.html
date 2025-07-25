@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>finerey&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="finerey&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/finerey.html" property="og:url">
+	<meta content="Rank by game in top 10: 1996&#10;Rank by game in top 20: 3476&#10;Rank by ilScore: 3084&#10;&#10;2 games&#10;&bull; Kiwi Lime | MJ 138: Rewind | rank: 8 | ilscore: 26&#10;&bull; Island Catcher | MJ 134: Islands | rank: 43 | ilscore: 67&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>finerey</h1>
+		<a href="https://finerey.itch.io">finerey.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1996</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3476</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3084</p>
+		<p>Total ilScore: 93</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://finerey.itch.io/kiwi-lime">Kiwi Lime</a></td>
+				<td><span class="early">12h 39m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>8</td>
+				<td>8</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://finerey.itch.io/island-catchers">Island Catcher</a></td>
+				<td><span class="early">1d 1h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-134-islands">MJ 134: Islands</a></td>
+				<td>108</td>
+				<td>43</td>
+				<td>8</td>
+				<td>67</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1376, 1387, 1403, 1411, 1423, 1439, 1452, 1462, 1476, 1488, 1503, 1511, 1515, 1523, 1544, 1561, 1575, 1583, 1592, 1603, 1618, 1628, 1640, 1656, 1669, 1676, 1682, 1691, 1703, 1708, 1717, 1731, 1742, 1750, 1768, 1779, 1797, 1805, 1814, 1830,
+				1841, 1853, 1868, 1886, 1895, 1903, 1918, 1929, 1942, 1953, 1970, 1983, 1995,
+			]],
+			[ "20", [
+				2355, 2369, 2394, 2412, 2434, 2455, 2479, 2502, 2522, 2538, 2560, 2578, 2590, 2608, 2637, 2669, 2691, 2711, 2732, 2752, 2773, 2788, 2805, 2828, 2868, 2882, 2897, 2911, 2936, 2950, 2958, 2982, 3004, 3026, 3048, 3065, 3096, 3116, 3140, 3169,
+				3193, 3219, 3243, 3273, 3291, 3310, 3337, 3356, 3382, 3407, 3439, 3458, 3475,
+			]],
+			[ "ilscore", [
+				4405, 4419, 4427, 4430, 4530, 2241, 2245, 2252, 2255, 2259, 2271, 2278, 2284, 2294, 2301, 2312, 2334, 2358, 2376, 2385, 2472, 2496, 2516, 2529, 2539, 2548, 2566, 2587, 2595, 2621, 2626, 2641, 2645, 2711, 2717, 2725, 2732, 2735, 2742, 2748,
+				2758, 2779, 2813, 2827, 2842, 2862, 2878, 2887, 2896, 2907, 2931, 2958, 2982, 3012, 3026, 3046, 3065, 3083,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

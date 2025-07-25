@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>AniUDuck&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="AniUDuck&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/aniuduck.html" property="og:url">
+	<meta content="Rank by game in top 20: 3711&#10;Rank by ilScore: 1421&#10;&#10;5 games&#10;&bull; Puzzle | MJ 71: Puzzles | rank: 87 | ilscore: 29&#10;&bull; Aerial Traffic | MJ+ 3: Retro | rank: 53 | ilscore: 29&#10;&bull; It&#39;s Bedtime! | MJ 68: Sleep | rank: 23 | ilscore: 53&#10;&bull; Froggie Rescue | MJ 59: Fortress | rank: 22 | ilscore: 20&#10;&bull; Don&#39;t Go Broke | MJ 58: Neon | rank: 19 | ilscore: 15&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>AniUDuck</h1>
+		<a href="https://aniuduck.itch.io">aniuduck.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3711</p>
+		<div class="boxes">
+			<span>19</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1421</p>
+		<p>Total ilScore: 146</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://aniuduck.itch.io/puzzle">Puzzle</a></td>
+				<td><span class="early">2h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-71-puzzles">MJ 71: Puzzles</a></td>
+				<td>91</td>
+				<td>87</td>
+				<td>2</td>
+				<td>29</td>
+			</tr>
+			<tr class="tr_majorjam">
+				<td><a href="https://aniuduck.itch.io/aerial-traffic">Aerial Traffic</a></td>
+				<td><span class="early">1d 5h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-3">MJ+ 3: Retro</a></td>
+				<td>55</td>
+				<td>53</td>
+				<td>7</td>
+				<td>29</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniuduck.itch.io/its-bedtime">It&#39;s Bedtime!</a></td>
+				<td><span class="early">2h 8m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-68-sleep">MJ 68: Sleep</a></td>
+				<td>62</td>
+				<td>23</td>
+				<td>6</td>
+				<td>53</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniuduck.itch.io/froggie-rescue">Froggie Rescue</a></td>
+				<td><span class="early">12m 38s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-59">MJ 59: Fortress</a></td>
+				<td>24</td>
+				<td>22</td>
+				<td>5</td>
+				<td>20</td>
+			</tr>
+			<tr>
+				<td><a href="https://aniuduck.itch.io/dont-go-broke">Don&#39;t Go Broke</a></td>
+				<td><span class="early">3h 24m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-58-neon">MJ 58: Neon</a></td>
+				<td>22</td>
+				<td>19</td>
+				<td>4</td>
+				<td>15</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				894, 905, 930, 958, 985, 1014, 1026, 1041, 1064, 1079, 1096, 1122, 1145, 1164, 1178, 1197, 1222, 1242, 1260, 1277, 1301, 1322, 1340, 1353, 1375, 1392, 1413, 1432, 1456, 1476, 1501, 1520, 1546, 1562, 1585, 1601, 1620, 1642, 1666, 1681,
+				1704, 1719, 1737, 1762, 1788, 1800, 1820, 1841, 1853, 1869, 1888, 1908, 1923, 1942, 1960, 1982, 2004, 2027, 2039, 2063, 2080, 2101, 2119, 2139, 2168, 2191, 2213, 2229, 2247, 2274, 2290, 2310, 2325, 2346, 2360, 2386, 2406, 2425, 2450, 2471,
+				2490, 2513, 2533, 2561, 2577, 2597, 2622, 2640, 2661, 2682, 2706, 2729, 2748, 2764, 2786, 2804, 2816, 2834, 2863, 2895, 2917, 2937, 2958, 2978, 2999, 3014, 3031, 3054, 3093, 3107, 3122, 3135, 3160, 3174, 3189, 3214, 3238, 3260, 3283, 3300,
+				3331, 3351, 3375, 3404, 3428, 3454, 3478, 3508, 3526, 3545, 3572, 3591, 3617, 3642, 3674, 3693, 3710,
+			]],
+			[ "ilscore", [
+				1598, 1099, 1160, 1201, 1351, 1459, 1461, 1496, 1597, 1636, 303, 176, 190, 193, 124, 127, 146, 150, 160, 172, 181, 184, 210, 238, 241, 244, 259, 274, 292, 303, 317, 328, 330, 335, 341, 359, 370, 371, 378, 383,
+				390, 394, 403, 432, 465, 484, 484, 498, 508, 519, 553, 565, 597, 619, 643, 683, 700, 714, 714, 716, 720, 726, 742, 759, 761, 770, 778, 782, 803, 824, 838, 847, 867, 883, 892, 919, 927, 934, 952, 967,
+				977, 983, 983, 997, 997, 997, 1000, 1000, 1005, 1008, 1016, 1023, 1026, 1028, 1032, 1041, 1055, 1063, 1066, 1096, 1109, 1116, 1119, 1131, 1134, 1155, 1167, 1172, 1189, 1192, 1202, 1208, 1229, 1230, 1234, 1236, 1237, 1240, 1240, 1242,
+				1252, 1265, 1276, 1282, 1288, 1294, 1306, 1315, 1321, 1337, 1347, 1362, 1381, 1386, 1398, 1408, 1420,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

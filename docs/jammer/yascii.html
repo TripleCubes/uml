@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>yascII&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="yascII&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/yascii.html" property="og:url">
+	<meta content="Rank by ilScore: 3121&#10;&#10;2 games&#10;&bull; Dungeon of One Billion Legs | MJ 98: Empty | rank: 96 | ilscore: 44&#10;&bull; Blaster Bottle | MJ 73: Power | rank: 146 | ilscore: 49&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>yascII</h1>
+		<a href="https://yascii.itch.io">yascii.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3121</p>
+		<p>Total ilScore: 93</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://yascii.itch.io/dungeon-of-one-billion-legs">Dungeon of One Billion Legs</a></td>
+				<td><span class="late">2d 14h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-98-empty">MJ 98: Empty</a></td>
+				<td>116</td>
+				<td>96</td>
+				<td>4</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://yascii.itch.io/blaster-bottle">Blaster Bottle</a></td>
+				<td><span class="late">1d 10h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>146</td>
+				<td>3</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1525, 1568, 1628, 1702, 1802, 1832, 1984, 2078, 2112, 2136, 2207, 2328, 2464, 2521, 2633, 2690, 2772, 2812, 2852, 2925, 2997, 3004, 3067, 3085, 3111, 3169, 908, 1026, 1077, 1096, 1105, 1134, 1154, 1172, 1321, 1336, 1401, 1431, 1504, 1734,
+				1748, 1761, 1761, 1764, 1771, 1779, 1828, 1853, 1868, 1880, 1898, 1906, 1977, 2002, 2019, 2038, 2055, 2079, 2092, 2164, 2174, 2181, 2200, 2224, 2240, 2245, 2250, 2267, 2270, 2274, 2281, 2284, 2288, 2301, 2308, 2314, 2324, 2333, 2343, 2365,
+				2389, 2407, 2416, 2502, 2526, 2546, 2559, 2570, 2579, 2597, 2618, 2626, 2652, 2657, 2672, 2676, 2745, 2751, 2759, 2766, 2769, 2776, 2782, 2793, 2813, 2847, 2861, 2876, 2896, 2912, 2921, 2930, 2941, 2966, 2993, 3017, 3048, 3062, 3083, 3102,
+				3120,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

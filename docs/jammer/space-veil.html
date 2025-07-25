@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Space Veil&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Space Veil&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/space-veil.html" property="og:url">
+	<meta content="Rank by game in top 10: 1714&#10;Rank by game in top 20: 2570&#10;Rank by ilScore: 5016&#10;&#10;1 games&#10;&bull; Sky Caravan | MJ 155: Wind | rank: 9 | ilscore: 75&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Space Veil</h1>
+		<a href="https://space-veil.itch.io">space-veil.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1714</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2570</p>
+		<div class="boxes">
+			<span>9</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 5016</p>
+		<p>Total ilScore: 75</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://space-veil.itch.io/sky-caravan">Sky Caravan</a></td>
+				<td><span class="early">2h 28m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>9</td>
+				<td>23</td>
+				<td>75</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1355, 1364, 1375, 1383, 1393, 1405, 1414, 1427, 1433, 1439, 1448, 1460, 1465, 1465, 1467, 1476, 1481, 1487, 1494, 1512, 1520, 1530, 1546, 1557, 1569, 1584, 1602, 1612, 1621, 1636, 1647, 1660, 1671, 1688, 1701, 1713,
+			]],
+			[ "20", [
+				2029, 2039, 2058, 2067, 2086, 2104, 2115, 2155, 2159, 2170, 2181, 2206, 2213, 2217, 2220, 2229, 2232, 2240, 2248, 2276, 2296, 2309, 2324, 2347, 2363, 2386, 2405, 2419, 2439, 2460, 2481, 2507, 2522, 2543, 2557, 2569,
+			]],
+			[ "ilscore", [
+				4083, 4100, 4134, 4144, 4188, 4224, 4236, 4296, 4308, 4324, 4330, 4450, 4457, 4461, 4464, 4467, 4472, 4482, 4495, 4527, 4594, 4601, 4613, 4633, 4652, 4662, 4688, 4699, 4749, 4786, 4817, 4905, 4918, 4971, 4995, 5015,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

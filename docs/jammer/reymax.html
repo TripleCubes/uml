@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Reymax Produções&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Reymax Produções&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/reymax.html" property="og:url">
+	<meta content="Rank by ilScore: 6333&#10;&#10;2 games&#10;&bull; Haunted By . | MJ 178: Monsters | rank: 68 | ilscore: 32&#10;&bull; Grass Remains on Lote | MJ 65: Abandoned | rank: 47 | ilscore: 34&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Reymax Produções</h1>
+		<a href="https://reymax.itch.io">reymax.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6333</p>
+		<p>Total ilScore: 66</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://fellipepeixoto.itch.io/haunted-by">Haunted By .</a></td>
+				<td><span class="early">11m 23s early</span></td>
+				<td>
+					<a href="../jammer/fellipepeixoto.html">FellipePeixoto</a>,
+					<a href="../jammer/iasgo.html">Iasgo</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-178-monsters">MJ 178: Monsters</a></td>
+				<td>77</td>
+				<td>68</td>
+				<td>7</td>
+				<td>32</td>
+			</tr>
+			<tr>
+				<td><a href="https://reymax.itch.io/grass-remains-on-lote">Grass Remains on Lote</a></td>
+				<td><span class="early">13m 19s early</span></td>
+				<td>
+					<a href="../jammer/fellipepeixoto.html">FellipePeixoto</a>,
+					<a href="../jammer/iasgo.html">Iasgo</a>,
+					<a href="../jammer/jhone-marra.html">Jhone Marra</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>47</td>
+				<td>3</td>
+				<td>34</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				1536, 1639, 1678, 1725, 1775, 1847, 1887, 1962, 2013, 2187, 2240, 2320, 2408, 2517, 2565, 2724, 2823, 2867, 2912, 2995, 3125, 3273, 3354, 3482, 3561, 3658, 3716, 3771, 3863, 3949, 3978, 4052, 4085, 4130, 4207, 4292, 4506, 4624, 4723, 4741,
+				4861, 4937, 5039, 5289, 5347, 5538, 5621, 5789, 6156, 6232, 6322, 6323, 6362, 6381, 6405, 6546, 6666, 6746, 6776, 6869, 6886, 7048, 7132, 7183, 7226, 7312, 7412, 7455, 7637, 7654, 7679, 7781, 7865, 7900, 7923, 7928, 8076, 8077, 8093, 8127,
+				8153, 8176, 8219, 8265, 8336, 8363, 8380, 8407, 8534, 8657, 8733, 8772, 8941, 8993, 9080, 9145, 9241, 9264, 9352, 9431, 9454, 9587, 9615, 9667, 9681, 9870, 9905, 9914, 9938, 9962, 9994, 10017, 10071, 10159, 10266, 10322, 10367, 5794, 5818, 5842,
+				5889, 5913, 5975, 6022, 6071, 6181, 6192, 6265, 6305, 6332,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chroma Crash&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Chroma Crash&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chroma-crash.html" property="og:url">
+	<meta content="Rank by game in top 20: 2314&#10;Rank by ilScore: 7303&#10;&#10;1 games&#10;&bull; With Haste | MJ 60: Crime | rank: 15 | ilscore: 60&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chroma Crash</h1>
+		<a href="https://chroma-crash.itch.io">chroma-crash.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2314</p>
+		<div class="boxes">
+			<span>15</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 7303</p>
+		<p>Total ilScore: 60</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chroma-crash.itch.io/with-haste">With Haste</a></td>
+				<td><span class="early">1h 58m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-60">MJ 60: Crime</a></td>
+				<td>64</td>
+				<td>15</td>
+				<td>13</td>
+				<td>60</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				420, 438, 466, 492, 498, 507, 530, 539, 547, 574, 592, 598, 614, 622, 647, 659, 675, 694, 702, 709, 731, 744, 754, 760, 779, 799, 812, 824, 848, 856, 872, 887, 898, 909, 921, 930, 945, 954, 962, 974,
+				985, 1011, 1040, 1053, 1058, 1079, 1093, 1106, 1125, 1141, 1157, 1176, 1195, 1217, 1239, 1259, 1260, 1274, 1283, 1295, 1313, 1331, 1344, 1353, 1376, 1381, 1400, 1429, 1441, 1454, 1471, 1487, 1501, 1527, 1531, 1534, 1559, 1581, 1587, 1591,
+				1596, 1624, 1626, 1628, 1633, 1636, 1647, 1663, 1671, 1688, 1694, 1706, 1717, 1736, 1749, 1762, 1782, 1815, 1825, 1832, 1840, 1855, 1862, 1882, 1894, 1903, 1943, 1947, 1958, 1967, 1992, 1998, 2002, 2005, 2010, 2013, 2023, 2031, 2053, 2073,
+				2085, 2101, 2124, 2139, 2158, 2169, 2179, 2199, 2218, 2239, 2265, 2271, 2289, 2300, 2313,
+			]],
+			[ "ilscore", [
+				521, 528, 649, 741, 744, 754, 822, 836, 848, 864, 919, 932, 986, 1011, 1149, 1172, 1216, 1289, 1372, 1384, 1523, 1608, 1622, 1635, 1697, 1802, 1920, 1962, 2053, 2095, 2160, 2187, 2206, 2266, 2334, 2336, 2393, 2404, 2412, 2455,
+				2515, 2696, 2792, 2866, 2872, 2962, 3003, 3087, 3308, 3347, 3502, 3573, 3700, 4005, 4070, 4126, 4126, 4134, 4140, 4144, 4251, 4337, 4368, 4380, 4439, 4440, 4573, 4637, 4653, 4675, 4741, 4818, 4839, 4990, 5000, 5004, 5070, 5129, 5148, 5156,
+				5159, 5266, 5266, 5269, 5275, 5280, 5289, 5309, 5321, 5360, 5366, 5375, 5380, 5471, 5555, 5588, 5599, 5750, 5777, 5826, 5854, 5911, 5915, 5987, 6041, 6051, 6145, 6156, 6175, 6180, 6333, 6342, 6346, 6349, 6353, 6358, 6367, 6386, 6447, 6536,
+				6569, 6586, 6632, 6672, 6706, 6767, 6798, 6864, 6921, 6978, 7096, 7121, 7212, 7258, 7302,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

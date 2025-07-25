@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>EthanDev&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="EthanDev&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ethandalecreative.html" property="og:url">
+	<meta content="Rank by game in top 20: 2103&#10;Rank by ilScore: 1626&#10;&#10;2 games&#10;&bull; Solar Bound | MJ 164: Destruction | rank: 11 | ilscore: 65&#10;&bull; Little Red Blood | MJ 118: Vampires | rank: 50 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>EthanDev</h1>
+		<a href="https://ethandalecreative.itch.io">ethandalecreative.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2103</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1626</p>
+		<p>Total ilScore: 138</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ethandalecreative.itch.io/solar-bound">Solar Bound</a></td>
+				<td><span class="early">4m 8s early</span></td>
+				<td>
+					<a href="../jammer/cdplaya.html">CDplaya</a>,
+					<a href="../jammer/denis002.html">Denis The Menace</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-164-destruction">MJ 164: Destruction</a></td>
+				<td>73</td>
+				<td>11</td>
+				<td>16</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://ethandalecreative.itch.io/littleredblood">Little Red Blood</a></td>
+				<td><span class="early">24m 44s early</span></td>
+				<td>
+					<a href="../jammer/ventousa.html">Javier Ventosa</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-118-vampires">MJ 118: Vampires</a></td>
+				<td>138</td>
+				<td>50</td>
+				<td>20</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1787, 1797, 1822, 1828, 1832, 1835, 1840, 1844, 1855, 1862, 1880, 1899, 1908, 1918, 1935, 1949, 1965, 1976, 1983, 1997, 2016, 2038, 2058, 2063, 2075, 2090, 2102,
+			]],
+			[ "ilscore", [
+				3190, 3211, 3223, 3261, 3263, 3375, 3425, 3435, 3455, 3498, 3553, 3569, 3700, 3711, 3715, 3759, 3800, 3815, 3822, 3824, 3907, 3910, 3913, 3920, 3924, 3933, 3945, 3955, 3962, 3974, 3984, 3992, 4061, 4105, 4127, 4133, 4265, 4279, 4307, 4326,
+				4368, 4378, 4429, 4471, 4482, 4549, 4561, 1369, 1376, 1399, 1400, 1402, 1404, 1406, 1411, 1411, 1414, 1427, 1444, 1458, 1463, 1471, 1480, 1492, 1501, 1510, 1529, 1543, 1559, 1579, 1585, 1601, 1613, 1625,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

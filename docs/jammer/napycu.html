@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>NapyCU&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="NapyCU&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/napycu.html" property="og:url">
+	<meta content="Rank by ilScore: 2121&#10;&#10;2 games&#10;&bull; Bloody Night | MJ 92: Death | rank: 23 | ilscore: 73&#10;&bull; Scare ´em | MJ 55: Stealth | rank: 53 | ilscore: 44&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>NapyCU</h1>
+		<a href="https://napycu.itch.io">napycu.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2121</p>
+		<p>Total ilScore: 117</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://napycu.itch.io/bloody-night">Bloody Night</a></td>
+				<td><span class="early">19m 54s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>23</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://napycu.itch.io/scare-em">Scare ´em</a></td>
+				<td><span class="early">20m 52s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-55-stealth">MJ 55: Stealth</a></td>
+				<td>71</td>
+				<td>53</td>
+				<td>8</td>
+				<td>44</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				663, 768, 793, 826, 828, 833, 879, 907, 1049, 1153, 1155, 1181, 1274, 1306, 1339, 1382, 1447, 1480, 1550, 1585, 1754, 1797, 1867, 1944, 2046, 2079, 2238, 2335, 2374, 2409, 2488, 2610, 2750, 2815, 2932, 3002, 3092, 3136, 3184, 3260,
+				570, 575, 588, 597, 604, 614, 630, 672, 706, 722, 726, 749, 767, 788, 851, 862, 897, 924, 959, 1084, 1106, 1125, 1125, 1131, 1136, 1147, 1173, 1192, 1202, 1214, 1228, 1235, 1268, 1292, 1311, 1327, 1346, 1368, 1375, 1412,
+				1424, 1435, 1454, 1476, 1487, 1493, 1496, 1514, 1514, 1515, 1520, 1522, 1525, 1535, 1543, 1550, 1556, 1558, 1566, 1578, 1593, 1610, 1616, 1645, 1668, 1684, 1693, 1706, 1712, 1729, 1751, 1760, 1776, 1779, 1792, 1797, 1818, 1821, 1827, 1829,
+				1830, 1838, 1839, 1842, 1857, 1885, 1902, 1914, 1925, 1942, 1957, 1965, 1977, 2000, 2019, 2035, 2054, 2067, 2087, 2106, 2120,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

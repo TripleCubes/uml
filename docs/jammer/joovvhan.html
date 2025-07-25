@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>joovvhan&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="joovvhan&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/joovvhan.html" property="og:url">
+	<meta content="Rank by game in top 5: 481&#10;Rank by game in top 10: 213&#10;Rank by game in top 20: 352&#10;Rank by ilScore: 1517&#10;&#10;2 games&#10;&bull; Chance Dungeon | MJ 95: Chance | rank: 2 | ilscore: 68&#10;&bull; Baguette in Paris | MJ 94: Baking | rank: 6 | ilscore: 74&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>joovvhan</h1>
+		<a href="https://joovvhan.itch.io">joovvhan.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 481</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 213</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 352</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>6</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1517</p>
+		<p>Total ilScore: 142</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://gownd.itch.io/chancedungeon">Chance Dungeon</a></td>
+				<td><span class="early">21s early</span></td>
+				<td>
+					<a href="../jammer/gownd.html">gownd</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-95-chance">MJ 95: Chance</a></td>
+				<td>64</td>
+				<td>2</td>
+				<td>18</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td><a href="https://joovvhan.itch.io/baguette-in-paris">Baguette in Paris</a></td>
+				<td><span class="early">1h 23m early</span></td>
+				<td>
+					<a href="../jammer/gownd.html">gownd</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>6</td>
+				<td>15</td>
+				<td>74</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				205, 205, 205, 208, 209, 220, 224, 224, 228, 232, 233, 240, 240, 241, 244, 248, 254, 260, 264, 264, 265, 270, 278, 280, 285, 285, 285, 286, 286, 290, 294, 297, 303, 305, 305, 311, 312, 314, 315, 320,
+				323, 324, 324, 324, 328, 333, 338, 341, 342, 350, 353, 353, 355, 355, 356, 356, 361, 363, 368, 372, 376, 376, 378, 378, 382, 384, 390, 392, 393, 401, 404, 409, 414, 420, 423, 423, 423, 423, 425, 427,
+				427, 433, 437, 437, 438, 443, 444, 445, 448, 449, 452, 456, 461, 468, 468, 475, 480, 480,
+			]],
+			[ "10", [
+				539, 80, 80, 81, 85, 85, 85, 89, 89, 91, 93, 93, 96, 96, 99, 101, 101, 101, 102, 105, 105, 106, 109, 113, 113, 113, 114, 114, 114, 115, 116, 116, 119, 119, 121, 121, 124, 125, 126, 127,
+				129, 131, 133, 136, 136, 138, 139, 139, 141, 141, 142, 143, 143, 143, 143, 145, 145, 146, 148, 151, 152, 153, 157, 157, 157, 158, 159, 161, 164, 166, 167, 172, 173, 175, 178, 180, 183, 183, 184, 184,
+				184, 184, 185, 187, 189, 190, 192, 193, 193, 193, 193, 193, 195, 202, 206, 206, 209, 209, 212,
+			]],
+			[ "20", [
+				715, 135, 136, 139, 140, 140, 143, 149, 149, 153, 154, 155, 159, 162, 164, 167, 167, 168, 169, 172, 173, 173, 176, 180, 181, 181, 181, 183, 184, 187, 189, 191, 194, 196, 202, 203, 208, 210, 211, 212,
+				214, 216, 218, 220, 222, 226, 229, 229, 232, 232, 235, 236, 237, 239, 240, 242, 245, 245, 247, 249, 250, 251, 256, 256, 257, 260, 261, 264, 269, 273, 274, 281, 284, 288, 292, 294, 297, 298, 299, 301,
+				303, 305, 307, 308, 310, 312, 316, 316, 319, 320, 321, 323, 329, 338, 342, 342, 346, 347, 351,
+			]],
+			[ "ilscore", [
+				1580, 414, 422, 426, 436, 467, 501, 520, 520, 535, 548, 560, 595, 607, 642, 665, 692, 738, 757, 772, 772, 774, 778, 785, 806, 823, 824, 833, 841, 846, 869, 890, 906, 917, 936, 954, 963, 995, 1003, 1015,
+				1033, 1048, 1057, 1063, 1063, 1077, 1077, 1077, 1081, 1081, 1084, 1087, 1095, 1103, 1106, 1107, 1111, 1121, 1135, 1143, 1146, 1176, 1192, 1199, 1202, 1214, 1217, 1238, 1251, 1257, 1273, 1277, 1285, 1292, 1313, 1315, 1318, 1320, 1321, 1326,
+				1326, 1328, 1341, 1356, 1369, 1374, 1381, 1388, 1400, 1409, 1415, 1432, 1443, 1460, 1478, 1483, 1494, 1504, 1516,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Shawn Bowers!&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Shawn Bowers!&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/shawnbowers.html" property="og:url">
+	<meta content="Rank by game in top 10: 815&#10;Rank by game in top 20: 1181&#10;Rank by ilScore: 2663&#10;&#10;1 games&#10;&bull; I Can Save This! | MJ 73: Power | rank: 7 | ilscore: 101&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Shawn Bowers!</h1>
+		<a href="https://shawnbowers.itch.io">shawnbowers.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 815</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1181</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2663</p>
+		<p>Total ilScore: 101</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://shawnbowers.itch.io/i-can-save-this">I Can Save This!</a></td>
+				<td><span class="early">1h 4m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>7</td>
+				<td>35</td>
+				<td>101</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				251, 254, 257, 264, 266, 272, 285, 289, 291, 291, 297, 302, 304, 309, 316, 318, 325, 330, 334, 335, 340, 344, 345, 350, 350, 353, 357, 358, 373, 377, 378, 386, 389, 393, 402, 402, 411, 416, 422, 434,
+				445, 455, 455, 455, 459, 466, 469, 477, 477, 479, 487, 489, 494, 516, 519, 526, 540, 543, 551, 552, 554, 557, 563, 569, 571, 572, 574, 578, 582, 586, 592, 594, 601, 605, 606, 609, 609, 611, 614, 620,
+				624, 629, 637, 647, 652, 655, 658, 663, 664, 670, 674, 678, 692, 694, 699, 706, 719, 722, 725, 725, 726, 728, 730, 731, 742, 748, 751, 753, 758, 760, 760, 766, 770, 775, 779, 792, 801, 801, 805, 812,
+				814,
+			]],
+			[ "20", [
+				351, 354, 359, 367, 369, 375, 390, 394, 404, 407, 415, 422, 427, 433, 441, 445, 452, 461, 466, 473, 480, 485, 486, 493, 499, 501, 504, 506, 531, 536, 540, 546, 550, 555, 567, 571, 581, 589, 596, 614,
+				626, 639, 639, 639, 647, 658, 662, 678, 680, 686, 697, 701, 708, 730, 738, 751, 765, 769, 778, 780, 782, 784, 793, 800, 803, 807, 811, 814, 816, 821, 830, 834, 844, 852, 855, 860, 865, 873, 878, 884,
+				888, 893, 904, 916, 923, 934, 936, 942, 948, 961, 969, 975, 994, 998, 1006, 1016, 1029, 1034, 1044, 1045, 1047, 1051, 1056, 1058, 1070, 1078, 1082, 1087, 1094, 1101, 1110, 1116, 1121, 1125, 1130, 1143, 1155, 1156, 1161, 1173,
+				1180,
+			]],
+			[ "ilscore", [
+				333, 344, 356, 377, 397, 406, 449, 478, 496, 505, 525, 545, 580, 597, 621, 634, 648, 660, 664, 687, 704, 714, 725, 736, 740, 755, 775, 858, 895, 910, 918, 944, 964, 986, 1113, 1128, 1174, 1202, 1256, 1455,
+				1473, 1488, 1488, 1492, 1499, 1507, 1540, 1558, 1571, 1585, 1602, 1609, 1656, 1680, 1697, 1715, 1733, 1755, 1764, 1822, 1835, 1842, 1859, 1883, 1897, 1897, 1902, 1921, 1922, 1926, 1934, 1937, 1941, 1950, 1958, 1964, 1972, 1977, 1989, 2003,
+				2025, 2046, 2055, 2115, 2141, 2160, 2172, 2182, 2191, 2205, 2224, 2231, 2249, 2251, 2268, 2270, 2315, 2320, 2328, 2335, 2338, 2345, 2351, 2358, 2376, 2406, 2420, 2432, 2448, 2462, 2473, 2480, 2493, 2519, 2544, 2567, 2590, 2603, 2625, 2645,
+				2662,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>L3mmy&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="L3mmy&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/l3mmy.html" property="og:url">
+	<meta content="Rank by game in top 10: 361&#10;Rank by game in top 20: 699&#10;Rank by ilScore: 42&#10;&#10;10 games&#10;&bull; Tetrinja | MJ 133: Fusion | rank: 67 | ilscore: 63&#10;&bull; Paint &#39;Em Up! | MJ 111: Colors | rank: 25 | ilscore: 132&#10;&bull; Snowbrawl Mayhem | MJ 99: Birds | rank: 70 | ilscore: 95&#10;&bull; Afterlife Animate | MJ 81: Kaiju | rank: 7 | ilscore: 63&#10;&bull; FrogBall | MJ 79: Frogs | rank: 21 | ilscore: 99&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>L3mmy</h1>
+		<a href="https://l3mmy.itch.io">l3mmy.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 361</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>9</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 699</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>9</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 42</p>
+		<p>Total ilScore: 714</p>
+
+		<h3 id="games_header">10 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://l3mmy.itch.io/tetrinja">Tetrinja</a></td>
+				<td><span class="late">13h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-133-fusion">MJ 133: Fusion</a></td>
+				<td>131</td>
+				<td>67</td>
+				<td>15</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://minimg.itch.io/paintemup">Paint &#39;Em Up!</a></td>
+				<td><span class="early">10m 25s early</span></td>
+				<td>
+					<a href="../jammer/minimg.html">Minimg</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-111-colors">MJ 111: Colors</a></td>
+				<td>385</td>
+				<td>25</td>
+				<td>49</td>
+				<td>132</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/snowbrawl-mayhem">Snowbrawl Mayhem</a></td>
+				<td><span class="late">1h 8m late</span></td>
+				<td>
+					<a href="../jammer/tlalice.html">TLAlice</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>70</td>
+				<td>13</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td><a href="https://vvulpes0.itch.io/afterlife-animate">Afterlife Animate</a></td>
+				<td><span class="early">4h 35m early</span></td>
+				<td>
+					<a href="../jammer/vvulpes0.html">Pineberry Fox</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>7</td>
+				<td>32</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://orbit-games.itch.io/frogball">FrogBall</a></td>
+				<td><span class="early">1h 37m early</span></td>
+				<td>
+					<a href="../jammer/orbit-games.html">Cassie Alice</a>,
+					<a href="../jammer/lilamellark.html">lila</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>21</td>
+				<td>28</td>
+				<td>99</td>
+			</tr>
+			<tr>
+				<td><a href="https://l3mmy.itch.io/radio-active">Active Radio</a></td>
+				<td><span class="late">1d 15h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-76-radiation">MJ 76: Radiation</a></td>
+				<td>122</td>
+				<td>91</td>
+				<td>5</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://l3mmy.itch.io/wisdom-weight">Wisdom Weight</a></td>
+				<td><span class="early">10h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-75-wisdom">MJ 75: Wisdom</a></td>
+				<td>101</td>
+				<td>42</td>
+				<td>9</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://dirtybong.itch.io/robotstealth">Robot Stealth</a></td>
+				<td><span class="late">9m 10s late</span></td>
+				<td>
+					<a href="../jammer/dirtybong.html">DirtyBong</a>,
+					<a href="../jammer/boerdiy.html">Boerdiy</a>,
+					<a href="../jammer/sirdaniel.html">Sir.Daniel</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>119</td>
+				<td>8</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://orrrca.itch.io/deck-of-hell">Deck Of Hell</a></td>
+				<td><span class="early">4h 12m early</span></td>
+				<td>
+					<a href="../jammer/orrrca.html">orca</a>,
+					<a href="../jammer/muttly-martin.html">Muttly_Martin</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-69-hell">MJ 69: Hell</a></td>
+				<td>99</td>
+				<td>38</td>
+				<td>22</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://shadyleegamer.itch.io/skate-for-speed">Skate For Speed</a></td>
+				<td><span class="early">17m 46s early</span></td>
+				<td>
+					<a href="../jammer/shadyleegamer.html">ShadyLeeGamer</a>,
+					<a href="../jammer/belu123mm.html">Belu123mm</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-64">MJ 64: Nintendo 64</a></td>
+				<td>13</td>
+				<td>9</td>
+				<td>9</td>
+				<td>20</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				520, 527, 539, 547, 555, 568, 581, 591, 599, 608, 621, 630, 640, 649, 658, 667, 679, 686, 125, 126, 126, 128, 128, 132, 133, 134, 135, 137, 139, 139, 140, 140, 144, 146, 146, 149, 151, 151, 154, 157,
+				158, 163, 164, 167, 170, 170, 175, 177, 177, 178, 179, 182, 182, 182, 186, 190, 190, 190, 190, 194, 194, 197, 198, 202, 207, 211, 213, 214, 219, 220, 222, 226, 229, 232, 235, 236, 238, 240, 243, 246,
+				250, 251, 254, 255, 256, 258, 258, 260, 261, 262, 266, 268, 269, 270, 274, 276, 277, 278, 281, 282, 285, 290, 291, 298, 302, 306, 308, 308, 314, 316, 317, 319, 321, 322, 323, 325, 327, 328, 331, 331,
+				331, 333, 337, 338, 341, 348, 351, 351, 354, 357, 360,
+			]],
+			[ "20", [
+				778, 793, 816, 831, 848, 874, 897, 916, 930, 949, 974, 994, 1013, 1030, 1054, 1075, 1095, 1108, 210, 214, 216, 220, 224, 229, 233, 237, 238, 244, 249, 255, 257, 260, 263, 267, 272, 273, 274, 275, 278, 284,
+				288, 291, 295, 301, 303, 307, 313, 319, 320, 322, 326, 333, 333, 334, 339, 348, 349, 357, 358, 366, 370, 375, 379, 385, 395, 405, 410, 411, 417, 419, 421, 424, 430, 434, 439, 442, 445, 447, 447, 451,
+				460, 463, 467, 473, 474, 479, 483, 492, 496, 497, 500, 502, 508, 511, 518, 528, 528, 531, 535, 545, 552, 557, 558, 567, 575, 581, 585, 587, 597, 600, 601, 606, 611, 612, 615, 619, 622, 627, 633, 638,
+				646, 649, 654, 656, 661, 672, 678, 679, 683, 690, 698,
+			]],
+			[ "ilscore", [
+				1902, 1946, 2053, 2100, 2149, 2205, 380, 392, 408, 423, 153, 158, 69, 41, 45, 46, 24, 25, 15, 15, 15, 16, 17, 17, 17, 18, 19, 19, 19, 22, 23, 23, 24, 26, 26, 27, 29, 16, 17, 19,
+				21, 21, 24, 26, 28, 29, 33, 35, 37, 23, 24, 24, 24, 24, 24, 25, 27, 27, 27, 27, 27, 27, 28, 30, 31, 31, 31, 32, 32, 33, 34, 35, 27, 28, 28, 29, 29, 29, 29, 29,
+				29, 29, 29, 29, 29, 29, 30, 30, 30, 30, 31, 32, 32, 32, 33, 33, 33, 33, 33, 33, 35, 36, 36, 36, 36, 36, 36, 36, 36, 37, 37, 37, 37, 37, 37, 38, 38, 38, 38, 38,
+				38, 38, 38, 39, 39, 39, 41, 41, 41, 41, 41,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

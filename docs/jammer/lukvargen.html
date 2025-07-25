@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Lukvargen&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Lukvargen&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lukvargen.html" property="og:url">
+	<meta content="Rank by game in top 5: 673&#10;Rank by game in top 10: 904&#10;Rank by game in top 20: 1271&#10;Rank by ilScore: 3863&#10;&#10;1 games&#10;&bull; Missing Soul | MJ 92: Death | rank: 4 | ilscore: 84&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Lukvargen</h1>
+		<a href="https://lukvargen.itch.io">lukvargen.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 673</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 904</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1271</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3863</p>
+		<p>Total ilScore: 84</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lukvargen.itch.io/missing-soul">Missing Soul</a></td>
+				<td><span class="early">1h 34m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-92-death">MJ 92: Death</a></td>
+				<td>111</td>
+				<td>4</td>
+				<td>20</td>
+				<td>84</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				281, 285, 286, 291, 291, 294, 299, 304, 315, 319, 319, 326, 329, 331, 338, 340, 344, 347, 351, 357, 367, 371, 371, 372, 376, 384, 388, 396, 396, 401, 409, 409, 414, 424, 427, 435, 438, 440, 445, 446,
+				448, 448, 454, 460, 462, 462, 462, 471, 475, 480, 487, 488, 495, 499, 499, 501, 501, 503, 505, 511, 513, 519, 526, 536, 537, 541, 543, 547, 548, 553, 558, 559, 567, 569, 574, 578, 584, 587, 587, 587,
+				587, 589, 591, 593, 604, 609, 611, 613, 617, 619, 620, 624, 625, 630, 642, 650, 660, 660, 661, 668, 672,
+			]],
+			[ "10", [
+				378, 382, 383, 388, 388, 394, 399, 403, 418, 423, 424, 432, 436, 441, 450, 452, 460, 469, 477, 489, 501, 511, 511, 511, 515, 521, 527, 537, 537, 543, 551, 553, 558, 580, 583, 592, 605, 607, 615, 616,
+				619, 620, 632, 639, 641, 641, 643, 652, 656, 660, 667, 668, 675, 679, 680, 683, 683, 685, 688, 694, 698, 706, 713, 726, 727, 731, 734, 743, 744, 750, 755, 759, 773, 776, 781, 788, 801, 804, 807, 807,
+				808, 810, 812, 815, 826, 832, 835, 837, 842, 844, 844, 850, 854, 860, 872, 880, 890, 890, 891, 898, 903,
+			]],
+			[ "20", [
+				521, 526, 527, 534, 540, 545, 549, 554, 581, 587, 591, 597, 602, 608, 621, 627, 637, 647, 655, 677, 689, 702, 702, 702, 710, 720, 726, 744, 746, 755, 766, 770, 777, 799, 807, 819, 833, 837, 846, 848,
+				851, 852, 867, 875, 878, 881, 885, 893, 895, 900, 909, 912, 922, 930, 933, 938, 943, 950, 955, 961, 965, 973, 983, 998, 1002, 1013, 1015, 1025, 1031, 1044, 1052, 1058, 1079, 1082, 1090, 1100, 1113, 1118, 1128, 1129,
+				1131, 1135, 1140, 1144, 1156, 1164, 1168, 1173, 1180, 1187, 1196, 1202, 1207, 1212, 1225, 1233, 1246, 1247, 1249, 1261, 1270,
+			]],
+			[ "ilscore", [
+				1074, 1084, 1099, 1110, 1117, 1132, 1157, 1302, 1372, 1398, 1408, 1449, 1469, 1496, 1665, 1679, 1774, 1813, 1910, 2166, 2180, 2192, 2193, 2196, 2204, 2207, 2286, 2315, 2330, 2344, 2372, 2377, 2466, 2501, 2515, 2533, 2560, 2591, 2605, 2709,
+				2722, 2725, 2750, 2774, 2789, 2795, 2799, 2834, 2838, 2843, 2851, 2854, 2859, 2872, 2880, 2886, 2897, 2907, 2917, 2957, 2987, 3006, 3011, 3119, 3136, 3156, 3168, 3188, 3197, 3222, 3249, 3259, 3308, 3315, 3331, 3336, 3430, 3437, 3441, 3446,
+				3450, 3458, 3466, 3479, 3502, 3550, 3562, 3576, 3595, 3611, 3621, 3632, 3644, 3671, 3700, 3724, 3784, 3797, 3825, 3846, 3862,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

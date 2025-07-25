@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Burnt Robot&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Burnt Robot&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/burntrobot.html" property="og:url">
+	<meta content="Rank by game in top 10: 1266&#10;Rank by game in top 20: 1707&#10;Rank by ilScore: 9533&#10;&#10;1 games&#10;&bull; Every bird is fed with its beak | MJ 40: Hunters | rank: 6 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Burnt Robot</h1>
+		<a href="https://burntrobot.itch.io">burntrobot.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1266</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1707</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 9533</p>
+		<p>Total ilScore: 46</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://burntrobot.itch.io/every-bird-is-fed-with-its-beak">Every bird is fed with its beak</a></td>
+				<td><span class="early">4h 30m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-40-hunters">MJ 40: Hunters</a></td>
+				<td>35</td>
+				<td>6</td>
+				<td>9</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				130, 131, 136, 137, 137, 138, 141, 144, 150, 151, 160, 179, 185, 188, 195, 201, 210, 218, 229, 241, 241, 244, 253, 256, 269, 285, 293, 299, 312, 318, 325, 338, 352, 353, 359, 364, 378, 386, 391, 400,
+				402, 407, 420, 427, 430, 432, 443, 453, 459, 464, 476, 482, 492, 500, 508, 513, 520, 527, 535, 547, 547, 557, 562, 573, 588, 595, 598, 608, 617, 624, 633, 644, 651, 660, 670, 682, 696, 709, 710, 715,
+				720, 728, 737, 751, 759, 767, 780, 783, 792, 810, 817, 827, 840, 849, 854, 864, 868, 871, 882, 893, 896, 897, 900, 914, 917, 918, 923, 924, 933, 941, 943, 947, 948, 954, 959, 968, 974, 982, 992, 1009,
+				1012, 1016, 1020, 1031, 1033, 1043, 1053, 1053, 1066, 1069, 1074, 1082, 1094, 1098, 1098, 1099, 1101, 1105, 1112, 1115, 1129, 1138, 1144, 1150, 1156, 1158, 1167, 1179, 1184, 1193, 1209, 1220, 1236, 1239, 1246, 1256, 1265,
+			]],
+			[ "20", [
+				176, 178, 183, 185, 186, 189, 196, 202, 207, 209, 217, 239, 245, 248, 256, 263, 275, 284, 296, 308, 315, 320, 329, 334, 360, 381, 391, 400, 415, 423, 430, 446, 460, 462, 469, 475, 500, 508, 515, 530,
+				532, 537, 559, 573, 580, 585, 598, 614, 623, 629, 644, 651, 661, 672, 680, 686, 694, 701, 709, 717, 723, 732, 737, 752, 781, 793, 798, 815, 826, 832, 851, 860, 871, 885, 902, 925, 946, 961, 962, 967,
+				975, 984, 996, 1013, 1022, 1032, 1050, 1055, 1066, 1089, 1099, 1110, 1126, 1135, 1141, 1155, 1159, 1162, 1176, 1192, 1195, 1198, 1205, 1218, 1220, 1222, 1228, 1229, 1240, 1250, 1253, 1259, 1263, 1273, 1279, 1295, 1303, 1311, 1322, 1344,
+				1348, 1357, 1361, 1375, 1382, 1400, 1410, 1414, 1440, 1441, 1449, 1458, 1481, 1487, 1493, 1495, 1498, 1503, 1513, 1516, 1530, 1545, 1551, 1559, 1568, 1574, 1592, 1602, 1608, 1618, 1638, 1650, 1669, 1672, 1680, 1695, 1706,
+			]],
+			[ "ilscore", [
+				197, 201, 205, 208, 209, 223, 235, 259, 264, 266, 359, 436, 440, 493, 514, 576, 621, 718, 740, 769, 772, 777, 820, 850, 989, 1090, 1092, 1114, 1207, 1234, 1264, 1302, 1365, 1397, 1464, 1494, 1658, 1702, 1769, 1843,
+				1943, 1974, 2129, 2225, 2266, 2296, 2372, 2496, 2633, 2696, 2808, 2874, 2959, 3002, 3047, 3120, 3200, 3214, 3278, 3300, 3327, 3388, 3459, 3655, 3765, 3855, 3862, 3968, 4029, 4129, 4368, 4417, 4596, 4675, 4824, 5166, 5233, 5306, 5306, 5330,
+				5335, 5348, 5464, 5570, 5627, 5646, 5735, 5744, 5888, 5958, 5990, 6026, 6104, 6196, 6233, 6402, 6420, 6430, 6518, 6591, 6621, 6627, 6628, 6758, 6758, 6763, 6770, 6777, 6790, 6830, 6865, 6927, 6944, 6954, 6970, 7079, 7190, 7256, 7284, 7447,
+				7483, 7552, 7606, 7690, 7706, 7790, 7858, 7875, 7999, 8015, 8061, 8070, 8250, 8272, 8272, 8280, 8283, 8305, 8312, 8348, 8433, 8526, 8572, 8603, 8663, 8724, 8782, 8860, 8903, 8972, 9036, 9110, 9248, 9295, 9403, 9473, 9532,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

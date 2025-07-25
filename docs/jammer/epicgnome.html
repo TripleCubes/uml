@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>EpicGnome&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="EpicGnome&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/epicgnome.html" property="og:url">
+	<meta content="Rank by game in top 20: 3696&#10;Rank by ilScore: 12900&#10;&#10;1 games&#10;&bull; Maze Rush: Monster Edition | MJ 6: Boss Rush | rank: 17 | ilscore: 16&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>EpicGnome</h1>
+		<a href="https://epicgnome.itch.io">epicgnome.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3696</p>
+		<div class="boxes">
+			<span>17</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12900</p>
+		<p>Total ilScore: 16</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://epicgnome.itch.io/maze-rush">Maze Rush: Monster Edition</a></td>
+				<td><span class="early">1h 1m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-6th-edition">MJ 6: Boss Rush</a></td>
+				<td>20</td>
+				<td>17</td>
+				<td>4</td>
+				<td>16</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				42, 54, 74, 90, 110, 118, 126, 126, 149, 164, 170, 174, 191, 206, 219, 227, 233, 261, 282, 306, 321, 333, 347, 363, 378, 391, 404, 424, 436, 444, 461, 466, 483, 501, 516, 532, 546, 557, 573, 592,
+				602, 618, 634, 645, 667, 697, 722, 741, 757, 776, 792, 815, 841, 866, 881, 892, 917, 945, 972, 1001, 1013, 1028, 1051, 1066, 1083, 1109, 1132, 1151, 1165, 1184, 1209, 1229, 1247, 1264, 1288, 1309, 1327, 1340, 1362, 1379,
+				1400, 1419, 1443, 1463, 1488, 1507, 1533, 1549, 1572, 1588, 1607, 1629, 1653, 1668, 1691, 1706, 1724, 1749, 1775, 1787, 1807, 1828, 1840, 1856, 1875, 1895, 1910, 1929, 1947, 1969, 1991, 2014, 2026, 2050, 2067, 2088, 2106, 2126, 2155, 2178,
+				2200, 2216, 2234, 2261, 2277, 2297, 2312, 2333, 2347, 2373, 2393, 2412, 2437, 2458, 2477, 2500, 2520, 2548, 2562, 2582, 2607, 2625, 2646, 2667, 2691, 2714, 2733, 2749, 2771, 2789, 2801, 2819, 2848, 2880, 2902, 2922, 2943, 2963, 2984, 2999,
+				3016, 3039, 3078, 3092, 3107, 3120, 3145, 3159, 3174, 3199, 3223, 3245, 3268, 3285, 3316, 3336, 3360, 3389, 3413, 3439, 3463, 3493, 3511, 3530, 3557, 3576, 3602, 3627, 3659, 3678, 3695,
+			]],
+			[ "ilscore", [
+				35, 38, 60, 78, 98, 106, 115, 115, 141, 158, 164, 165, 192, 208, 221, 226, 231, 294, 336, 374, 388, 402, 422, 441, 465, 478, 500, 541, 556, 561, 589, 591, 607, 626, 651, 671, 689, 698, 721, 765,
+				797, 836, 859, 868, 984, 1086, 1110, 1175, 1216, 1299, 1358, 1478, 1518, 1567, 1577, 1590, 1660, 1708, 1867, 1984, 1990, 2034, 2141, 2189, 2238, 2294, 2381, 2431, 2509, 2565, 2739, 2802, 2893, 2985, 3105, 3155, 3309, 3419, 3477, 3525,
+				3613, 3746, 3897, 3984, 4123, 4208, 4305, 4372, 4433, 4542, 4636, 4670, 4741, 4781, 4833, 4918, 5007, 5226, 5346, 5459, 5490, 5612, 5695, 5799, 6053, 6117, 6307, 6402, 6583, 6956, 7037, 7139, 7148, 7199, 7223, 7254, 7405, 7538, 7633, 7669,
+				7772, 7803, 7975, 8061, 8114, 8164, 8249, 8359, 8409, 8595, 8621, 8649, 8758, 8846, 8889, 8918, 8934, 9082, 9092, 9120, 9160, 9189, 9218, 9264, 9323, 9404, 9438, 9468, 9507, 9651, 9773, 9851, 9896, 10077, 10137, 10236, 10303, 10400, 10434, 10537,
+				10626, 10654, 10791, 10828, 10882, 10904, 11099, 11147, 11165, 11205, 11237, 11286, 11315, 11371, 11469, 11588, 11659, 11709, 11780, 11850, 11923, 12012, 12084, 12168, 12248, 12339, 12521, 12597, 12724, 12807, 12899,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

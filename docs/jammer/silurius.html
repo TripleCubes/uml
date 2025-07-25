@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>silurius&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="silurius&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/silurius.html" property="og:url">
+	<meta content="Rank by game in top 20: 729&#10;Rank by ilScore: 3924&#10;&#10;2 games&#10;&bull; And the Light Fades out | MJ 115: Noir | rank: 11 | ilscore: 43&#10;&bull; The Ferryman | MJ 102: Steam | rank: 17 | ilscore: 40&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>silurius</h1>
+		<a href="https://silurius.itch.io">silurius.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 729</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>17</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3924</p>
+		<p>Total ilScore: 83</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://keitjah.itch.io/and-the-light-fades-out">And the Light Fades out</a></td>
+				<td><span class="early">2h 33m early</span></td>
+				<td>
+					<a href="../jammer/keitjah.html">Keitjah</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-115-noir">MJ 115: Noir</a></td>
+				<td>37</td>
+				<td>11</td>
+				<td>11</td>
+				<td>43</td>
+			</tr>
+			<tr>
+				<td><a href="https://keitjah.itch.io/the-ferryman">The Ferryman</a></td>
+				<td><span class="early">3h 58m early</span></td>
+				<td>
+					<a href="../jammer/keitjah.html">Keitjah</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>17</td>
+				<td>8</td>
+				<td>40</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1667, 1688, 1701, 1717, 1736, 1756, 1771, 1790, 1808, 1830, 1852, 1875, 1880, 1904, 353, 362, 363, 371, 372, 380, 384, 389, 393, 399, 409, 419, 424, 425, 431, 433, 435, 438, 444, 448, 454, 458, 463, 465, 467, 471,
+				480, 483, 489, 495, 498, 503, 507, 517, 521, 522, 525, 527, 533, 536, 543, 553, 553, 556, 562, 572, 579, 586, 587, 596, 604, 611, 614, 616, 626, 629, 631, 636, 642, 644, 647, 651, 654, 658, 664, 669,
+				678, 681, 686, 687, 691, 701, 707, 708, 712, 720, 728,
+			]],
+			[ "ilscore", [
+				4291, 4408, 4477, 4580, 4821, 4874, 5056, 5135, 5300, 5650, 5720, 5799, 5799, 5835, 2245, 2248, 2328, 2356, 2371, 2385, 2414, 2419, 2510, 2545, 2558, 2576, 2603, 2634, 2648, 2754, 2766, 2769, 2796, 2821, 2836, 2842, 2846, 2881, 2885, 2890,
+				2898, 2901, 2907, 2920, 2928, 2934, 2944, 2954, 2964, 3005, 3035, 3054, 3059, 3170, 3186, 3206, 3220, 3243, 3252, 3277, 3303, 3313, 3365, 3372, 3388, 3393, 3492, 3499, 3503, 3507, 3511, 3519, 3527, 3540, 3563, 3611, 3623, 3637, 3656, 3672,
+				3683, 3694, 3706, 3733, 3760, 3783, 3846, 3859, 3887, 3908, 3923,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

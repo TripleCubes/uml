@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>diletta&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="diletta&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/diletta.html" property="og:url">
+	<meta content="Rank by game in top 5: 475&#10;Rank by game in top 10: 644&#10;Rank by game in top 20: 1011&#10;Rank by ilScore: 3414&#10;&#10;1 games&#10;&bull; Getting Warmer... | MJ 124: Warmth | rank: 2 | ilscore: 88&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>diletta</h1>
+		<a href="https://diletta.itch.io">diletta.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 475</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 644</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1011</p>
+		<div class="boxes">
+			<span>2</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 3414</p>
+		<p>Total ilScore: 88</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://diletta.itch.io/getting-warmer">Getting Warmer...</a></td>
+				<td><span class="early">2m 39s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-124-warmth">MJ 124: Warmth</a></td>
+				<td>114</td>
+				<td>2</td>
+				<td>12</td>
+				<td>88</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				289, 292, 298, 300, 300, 306, 307, 309, 310, 315, 317, 318, 318, 318, 322, 327, 332, 335, 336, 344, 347, 347, 349, 349, 350, 350, 354, 356, 361, 365, 369, 369, 371, 371, 376, 378, 384, 386, 387, 395,
+				398, 403, 408, 414, 417, 417, 417, 417, 419, 421, 421, 427, 431, 431, 432, 437, 438, 439, 442, 443, 446, 450, 455, 462, 462, 469, 474, 474,
+			]],
+			[ "10", [
+				391, 397, 405, 407, 408, 418, 418, 421, 425, 431, 434, 436, 437, 439, 443, 448, 452, 457, 458, 465, 468, 469, 472, 472, 473, 474, 478, 483, 488, 492, 496, 500, 502, 503, 508, 511, 516, 519, 523, 534,
+				538, 543, 551, 562, 565, 568, 570, 571, 573, 575, 576, 582, 588, 590, 591, 596, 597, 597, 602, 606, 610, 614, 625, 632, 632, 636, 642, 643,
+			]],
+			[ "20", [
+				599, 610, 624, 629, 631, 642, 643, 646, 649, 658, 662, 666, 670, 674, 677, 679, 684, 694, 697, 707, 715, 718, 723, 728, 737, 740, 744, 748, 753, 762, 768, 775, 785, 785, 791, 798, 811, 818, 824, 835,
+				843, 851, 862, 873, 878, 888, 891, 893, 897, 902, 904, 911, 919, 922, 926, 934, 940, 949, 954, 959, 962, 967, 977, 987, 988, 993, 1004, 1010,
+			]],
+			[ "ilscore", [
+				2211, 2229, 2247, 2265, 2293, 2307, 2396, 2408, 2412, 2432, 2456, 2472, 2478, 2482, 2504, 2507, 2512, 2520, 2522, 2525, 2538, 2546, 2552, 2563, 2573, 2583, 2617, 2641, 2659, 2667, 2760, 2778, 2798, 2812, 2825, 2833, 2849, 2872, 2881, 2913,
+				2920, 2935, 2940, 3023, 3030, 3036, 3043, 3046, 3053, 3060, 3072, 3090, 3132, 3145, 3161, 3180, 3195, 3205, 3215, 3226, 3252, 3281, 3304, 3341, 3354, 3375, 3395, 3413,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

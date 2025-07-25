@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Hyo&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Hyo&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/hyo331.html" property="og:url">
+	<meta content="Rank by ilScore: 276&#10;&#10;5 games&#10;&bull; Oxygen | MJ 84: Bubbles | rank: 35 | ilscore: 87&#10;&bull; Lollipop Pig Surprise | MJ 74: Chaos | rank: 72 | ilscore: 34&#10;&bull; SWAP | MJ 73: Power | rank: 27 | ilscore: 92&#10;&bull; Candy Bouncer | MJ 66: Sweets | rank: 39 | ilscore: 66&#10;&bull; Witch Game (Mini Jam 52 Submission) | MJ 52: Summit | rank: 55 | ilscore: 46&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Hyo</h1>
+		<a href="https://hyo331.itch.io">hyo331.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 276</p>
+		<p>Total ilScore: 325</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://hyo331.itch.io/oxygen">Oxygen</a></td>
+				<td><span class="late">24m 33s late</span></td>
+				<td>
+					<a href="../jammer/naemis.html">Naemis</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>35</td>
+				<td>18</td>
+				<td>87</td>
+			</tr>
+			<tr>
+				<td><a href="https://hyo331.itch.io/lollipop-pig-surprise">Lollipop Pig Surprise</a></td>
+				<td><span class="early">4h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-74-chaos">MJ 74: Chaos</a></td>
+				<td>82</td>
+				<td>72</td>
+				<td>7</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td><a href="https://hyo331.itch.io/swap">SWAP</a></td>
+				<td><span class="early">28m 36s early</span></td>
+				<td>
+					<a href="../jammer/naemis.html">Naemis</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-73-power">MJ 73: Power</a></td>
+				<td>171</td>
+				<td>27</td>
+				<td>14</td>
+				<td>92</td>
+			</tr>
+			<tr>
+				<td><a href="https://hyo331.itch.io/candy-bouncer">Candy Bouncer</a></td>
+				<td><span class="early">6h 41m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-66-sweets">MJ 66: Sweets</a></td>
+				<td>99</td>
+				<td>39</td>
+				<td>8</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://hyo331.itch.io/witch-game-mini-jam-52-submission">Witch Game (Mini Jam 52 Submission)</a></td>
+				<td><span class="early">3h 13m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-52-summit">MJ 52: Summit</a></td>
+				<td>79</td>
+				<td>55</td>
+				<td>5</td>
+				<td>46</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				494, 515, 577, 622, 719, 741, 771, 774, 779, 822, 852, 991, 1092, 1094, 1116, 180, 187, 189, 195, 209, 213, 227, 240, 57, 40, 44, 50, 53, 53, 56, 68, 73, 73, 77, 42, 42, 44, 46, 47, 47,
+				48, 50, 53, 57, 57, 59, 60, 61, 63, 68, 72, 77, 84, 86, 90, 91, 94, 100, 101, 109, 113, 118, 125, 130, 133, 133, 133, 133, 134, 138, 141, 142, 143, 144, 145, 149, 150, 151, 152, 157,
+				160, 162, 170, 170, 170, 173, 175, 176, 177, 177, 180, 180, 180, 181, 182, 182, 184, 185, 185, 185, 186, 187, 190, 193, 197, 197, 198, 200, 200, 203, 210, 212, 214, 216, 217, 220, 224, 226, 226, 227,
+				228, 228, 229, 229, 229, 230, 232, 236, 241, 246, 248, 249, 250, 250, 258, 260, 262, 264, 266, 269, 269, 271, 274, 275,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

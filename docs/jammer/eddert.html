@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>EdderT&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="EdderT&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/eddert.html" property="og:url">
+	<meta content="Rank by game in top 10: 1706&#10;Rank by game in top 20: 2552&#10;Rank by ilScore: 1488&#10;&#10;2 games&#10;&bull; Potato Kaiju Never Die! | MJ 81: Kaiju | rank: 8 | ilscore: 63&#10;&bull; Hey, Cat! Don&#39;t Drop the Potato! | MJ 80: Cats | rank: 50 | ilscore: 80&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>EdderT</h1>
+		<a href="https://eddert.itch.io">eddert.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1706</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2552</p>
+		<div class="boxes">
+			<span>8</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1488</p>
+		<p>Total ilScore: 143</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://eddert.itch.io/potato-kaiju-never-die">Potato Kaiju Never Die!</a></td>
+				<td><span class="early">3h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-81-kaiju">MJ 81: Kaiju</a></td>
+				<td>74</td>
+				<td>8</td>
+				<td>22</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://eddert.itch.io/hey-cat-dont-drop-the-potato">Hey, Cat! Don&#39;t Drop the Potato!</a></td>
+				<td><span class="early">15h 10m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>50</td>
+				<td>23</td>
+				<td>80</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				589, 598, 609, 619, 631, 643, 655, 663, 674, 684, 702, 710, 719, 730, 743, 753, 756, 766, 772, 783, 798, 805, 811, 819, 828, 835, 844, 861, 868, 877, 887, 899, 913, 926, 927, 941, 950, 958, 967, 984,
+				996, 1004, 1017, 1019, 1028, 1046, 1055, 1066, 1079, 1092, 1102, 1112, 1119, 1122, 1137, 1148, 1156, 1160, 1164, 1178, 1182, 1185, 1191, 1194, 1202, 1218, 1225, 1236, 1242, 1254, 1268, 1276, 1282, 1290, 1311, 1328, 1342, 1350, 1359, 1370,
+				1378, 1388, 1400, 1406, 1419, 1425, 1431, 1440, 1452, 1457, 1457, 1459, 1468, 1473, 1479, 1486, 1504, 1512, 1522, 1538, 1549, 1561, 1576, 1594, 1604, 1613, 1628, 1639, 1652, 1663, 1680, 1693, 1705,
+			]],
+			[ "20", [
+				835, 845, 867, 887, 913, 927, 952, 961, 986, 1002, 1019, 1036, 1052, 1060, 1080, 1091, 1097, 1110, 1128, 1154, 1183, 1196, 1201, 1222, 1236, 1252, 1271, 1291, 1306, 1325, 1344, 1366, 1388, 1411, 1412, 1426, 1435, 1447, 1465, 1485,
+				1498, 1506, 1528, 1533, 1551, 1581, 1594, 1607, 1624, 1646, 1661, 1687, 1692, 1695, 1723, 1745, 1753, 1759, 1763, 1791, 1794, 1796, 1800, 1803, 1814, 1833, 1842, 1862, 1870, 1882, 1896, 1914, 1928, 1944, 1964, 1996, 2011, 2018, 2028, 2047,
+				2058, 2077, 2095, 2104, 2144, 2148, 2159, 2170, 2195, 2202, 2206, 2209, 2218, 2221, 2229, 2237, 2265, 2285, 2298, 2313, 2336, 2352, 2375, 2393, 2404, 2424, 2445, 2466, 2492, 2503, 2524, 2539, 2551,
+			]],
+			[ "ilscore", [
+				862, 260, 264, 281, 297, 316, 328, 342, 354, 354, 358, 364, 384, 394, 397, 405, 409, 417, 421, 430, 462, 495, 514, 514, 529, 542, 554, 589, 601, 636, 659, 685, 729, 748, 762, 762, 764, 768, 774, 793,
+				810, 811, 820, 827, 832, 855, 876, 892, 902, 922, 939, 949, 980, 988, 996, 1014, 1028, 1038, 1044, 1044, 1058, 1058, 1058, 1061, 1061, 1064, 1067, 1074, 1082, 1086, 1087, 1091, 1101, 1115, 1123, 1126, 1156, 1169, 1175, 1178,
+				1190, 1193, 1214, 1226, 1231, 1248, 1252, 1262, 1268, 1289, 1291, 1294, 1296, 1297, 1300, 1300, 1302, 1315, 1329, 1342, 1347, 1353, 1360, 1372, 1381, 1387, 1403, 1414, 1431, 1449, 1454, 1465, 1475, 1487,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

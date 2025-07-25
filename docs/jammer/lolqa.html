@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LoLQa&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LoLQa&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/lolqa.html" property="og:url">
+	<meta content="Rank by ilScore: 1621&#10;&#10;2 games&#10;&bull; Journey of the skies | MJ 123: Web | rank: 124 | ilscore: 65&#10;&bull; Journey Of The Seasons(Check Description) | MJ 101: Limit | rank: 60 | ilscore: 73&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LoLQa</h1>
+		<a href="https://lolqa.itch.io">lolqa.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1621</p>
+		<p>Total ilScore: 138</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://lolqa.itch.io/journey-of-the-skies">Journey of the skies</a></td>
+				<td><span class="early">11m 21s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-123-web">MJ 123: Web</a></td>
+				<td>207</td>
+				<td>124</td>
+				<td>9</td>
+				<td>65</td>
+			</tr>
+			<tr>
+				<td><a href="https://lolqa.itch.io/journey-of-the-seasons">Journey Of The Seasons(Check Description)</a></td>
+				<td><span class="early">1h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>60</td>
+				<td>12</td>
+				<td>73</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2024, 2031, 2089, 2127, 2179, 2376, 2397, 2520, 2573, 2685, 2961, 2988, 3016, 3017, 3021, 3029, 3034, 3124, 3181, 3202, 3214, 3251, 3253, 934, 955, 972, 985, 1003, 1022, 1030, 1061, 1070, 1082, 1102, 1117, 1125, 1131, 1131, 1146, 1146,
+				1146, 1149, 1149, 1152, 1156, 1164, 1171, 1174, 1176, 1180, 1190, 1203, 1213, 1217, 1248, 1265, 1272, 1277, 1289, 1292, 1313, 1328, 1334, 1351, 1355, 1365, 1372, 1395, 1396, 1398, 1400, 1402, 1407, 1407, 1410, 1423, 1440, 1454, 1459, 1467,
+				1476, 1488, 1497, 1506, 1524, 1538, 1554, 1574, 1580, 1596, 1608, 1620,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Game Baker Studio&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Game Baker Studio&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/game-baker-studio.html" property="og:url">
+	<meta content="Rank by ilScore: 312&#10;&#10;6 games&#10;&bull; Better Batter | MJ 94: Baking | rank: 70 | ilscore: 44&#10;&bull; Carrot Collector | MJ 88: Rush | rank: 45 | ilscore: 66&#10;&bull; Bubbles! | MJ 84: Bubbles | rank: 100 | ilscore: 63&#10;&bull; Yarn Toss! | MJ 80: Cats | rank: 103 | ilscore: 55&#10;&bull; Lily Hopper | MJ 79: Frogs | rank: 170 | ilscore: 44&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Game Baker Studio</h1>
+		<a href="https://game-baker-studio.itch.io">game-baker-studio.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 312</p>
+		<p>Total ilScore: 306</p>
+
+		<h3 id="games_header">6 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/better-batter">Better Batter</a></td>
+				<td><span class="late">3d 0h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-94-baking">MJ 94: Baking</a></td>
+				<td>90</td>
+				<td>70</td>
+				<td>4</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/carrot-collector">Carrot Collector</a></td>
+				<td><span class="early">3m 11s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-88-rush">MJ 88: Rush</a></td>
+				<td>113</td>
+				<td>45</td>
+				<td>7</td>
+				<td>66</td>
+			</tr>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/bubbles">Bubbles!</a></td>
+				<td><span class="early">23m 22s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-84-bubbles">MJ 84: Bubbles</a></td>
+				<td>149</td>
+				<td>100</td>
+				<td>11</td>
+				<td>63</td>
+			</tr>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/yarn-toss">Yarn Toss!</a></td>
+				<td><span class="early">9m 8s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-80-cats">MJ 80: Cats</a></td>
+				<td>138</td>
+				<td>103</td>
+				<td>8</td>
+				<td>55</td>
+			</tr>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/lily-hopper">Lily Hopper</a></td>
+				<td><span class="early">5m 6s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>170</td>
+				<td>7</td>
+				<td>44</td>
+			</tr>
+			<tr>
+				<td><a href="https://game-baker-studio.itch.io/sprinkles">Sprinkles</a></td>
+				<td><span class="early">6m 34s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-78-bugs">MJ 78: Bugs</a></td>
+				<td>63</td>
+				<td>55</td>
+				<td>7</td>
+				<td>35</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+			]],
+			[ "ilscore", [
+				2517, 865, 296, 312, 319, 336, 137, 144, 148, 152, 155, 81, 82, 84, 86, 90, 91, 71, 72, 72, 73, 78, 83, 88, 97, 98, 104, 106, 110, 116, 118, 123, 128, 133, 142, 145, 149, 149, 149, 149,
+				149, 154, 157, 157, 157, 158, 159, 163, 164, 165, 168, 174, 176, 177, 186, 187, 187, 189, 192, 192, 193, 193, 196, 197, 197, 198, 200, 200, 202, 203, 203, 204, 207, 209, 212, 215, 219, 219, 221, 223,
+				224, 227, 234, 234, 237, 241, 241, 245, 251, 251, 251, 254, 254, 255, 256, 257, 258, 258, 262, 264, 270, 275, 277, 280, 281, 281, 290, 293, 296, 296, 298, 301, 301, 304, 308, 311,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

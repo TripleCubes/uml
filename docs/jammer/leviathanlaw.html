@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>LeviathanLaw&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="LeviathanLaw&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/leviathanlaw.html" property="og:url">
+	<meta content="Rank by game in top 20: 3025&#10;Rank by ilScore: 461&#10;&#10;4 games&#10;&bull; Mailure Is Not An Option | MJ 149: Ancient | rank: 37 | ilscore: 81&#10;&bull; Blood Pumpin | MJ 128: Health | rank: 49 | ilscore: 70&#10;&bull; Stranded Gardens | MJ 126: Lost | rank: 18 | ilscore: 61&#10;&bull; ACK Attack | MJ 125: Signal | rank: 46 | ilscore: 45&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>LeviathanLaw</h1>
+		<a href="https://leviathanlaw.itch.io">leviathanlaw.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3025</p>
+		<div class="boxes">
+			<span>18</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 461</p>
+		<p>Total ilScore: 257</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://nativefury.itch.io/mailure-is-not-an-option">Mailure Is Not An Option</a></td>
+				<td><span class="late">15h 21m late</span></td>
+				<td>
+					<a href="../jammer/nativefury.html">NativeFury</a>,
+					<a href="../jammer/icow.html">iCow</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-149-ancient">MJ 149: Ancient</a></td>
+				<td>152</td>
+				<td>37</td>
+				<td>12</td>
+				<td>81</td>
+			</tr>
+			<tr>
+				<td><a href="https://leviathanlaw.itch.io/blood-pumpin">Blood Pumpin</a></td>
+				<td><span class="late">4h 40m late</span></td>
+				<td>
+					<a href="../jammer/nativefury.html">NativeFury</a>,
+					<a href="../jammer/provolt.html">Provolt</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>49</td>
+				<td>20</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td><a href="https://leviathanlaw.itch.io/stranded-gardens">Stranded Gardens</a></td>
+				<td><span class="late">12h 29m late</span></td>
+				<td>
+					<a href="../jammer/nativefury.html">NativeFury</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>18</td>
+				<td>9</td>
+				<td>61</td>
+			</tr>
+			<tr>
+				<td><a href="https://leviathanlaw.itch.io/ackattack">ACK Attack</a></td>
+				<td><span class="early">6m 16s early</span></td>
+				<td>
+					<a href="../jammer/provolt.html">Provolt</a>,
+					<a href="../jammer/nativefury.html">NativeFury</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-125-signal">MJ 125: Signal</a></td>
+				<td>75</td>
+				<td>46</td>
+				<td>4</td>
+				<td>45</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				1841, 1857, 1879, 1894, 1920, 1932, 1941, 1966, 1987, 2000, 2012, 2019, 2047, 2049, 2053, 2066, 2072, 2083, 2107, 2120, 2144, 2158, 2174, 2191, 2209, 2221, 2239, 2265, 2297, 2320, 2341, 2356, 2376, 2392, 2411, 2428, 2448, 2488, 2494, 2512,
+				2523, 2548, 2559, 2563, 2578, 2588, 2594, 2607, 2622, 2654, 2674, 2699, 2720, 2744, 2768, 2793, 2823, 2841, 2860, 2887, 2908, 2934, 2955, 2987, 3007, 3024,
+			]],
+			[ "ilscore", [
+				6127, 1572, 1589, 597, 604, 619, 621, 625, 637, 644, 654, 655, 659, 672, 674, 678, 681, 683, 687, 692, 695, 700, 703, 704, 704, 322, 326, 331, 334, 337, 341, 346, 351, 354, 355, 356, 365, 370, 379, 380,
+				382, 383, 396, 397, 399, 399, 400, 400, 400, 404, 405, 409, 413, 413, 416, 418, 423, 428, 431, 433, 436, 441, 445, 448, 453, 456, 460,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

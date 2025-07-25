@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>TLAlice&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="TLAlice&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/tlalice.html" property="og:url">
+	<meta content="Rank by game in top 10: 1406&#10;Rank by game in top 20: 479&#10;Rank by ilScore: 106&#10;&#10;8 games&#10;&bull; Fox Coin Flipper | MJ 176: Foxes | rank: 39 | ilscore: 56&#10;&bull; TT Slime Hunters | MJ 176: Foxes | rank: 10 | ilscore: 73&#10;&bull; Cyber Cetacean | MJ 175: Gravity | rank: 17 | ilscore: 86&#10;&bull; It Sleeps Deeply | MJ 170: Clean | rank: 31 | ilscore: 26&#10;&bull; Earth Toy | MJ 166: Earth | rank: 147 | ilscore: 58&#10;...&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>TLAlice</h1>
+		<a href="https://tlalice.itch.io">tlalice.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1406</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 479</p>
+		<div class="boxes">
+			<span>10</span>
+			<span>17</span>
+			<span>2</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 106</p>
+		<p>Total ilScore: 499</p>
+
+		<h3 id="games_header">8 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://tlalice.itch.io/fox-coin-flipper">Fox Coin Flipper</a></td>
+				<td><span class="early">2h 32m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>39</td>
+				<td>24</td>
+				<td>56</td>
+			</tr>
+			<tr>
+				<td><a href="https://ilprinni.itch.io/tt-slime-hunters">TT Slime Hunters</a></td>
+				<td><span class="late">16h 39m late</span></td>
+				<td>
+					<a href="../jammer/ilprinni.html">ilPrinni</a>,
+					<a href="../jammer/vvulpes0.html">Pineberry Fox</a>,
+					<a href="../jammer/triplecubes.html">TripleCubes</a>,
+					<a href="../jammer/readymajor.html">ReadyMajor</a>,
+					<a href="../jammer/30fps.html">30fps</a>,
+					<a href="../jammer/murgn.html">Murgn</a>,
+					<a href="../jammer/derpyzza.html">Derpyzza</a>,
+					<a href="../jammer/cat-jug.html">Cat Jug</a>,
+					<a href="../jammer/hotnoggin.html">Hot Noggin Studios</a>,
+					<a href="../jammer/blankedslate.html">Blank Slate</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-176-foxes">MJ 176: Foxes</a></td>
+				<td>94</td>
+				<td>10</td>
+				<td>11</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/cyber-cetacean">Cyber Cetacean</a></td>
+				<td><span class="early">40m 17s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-175-gravity">MJ 175: Gravity</a></td>
+				<td>136</td>
+				<td>17</td>
+				<td>26</td>
+				<td>86</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/it-sleeps-deeply">It Sleeps Deeply</a></td>
+				<td><span class="late">34m 20s late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-170-clean">MJ 170: Clean</a></td>
+				<td>35</td>
+				<td>31</td>
+				<td>9</td>
+				<td>26</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/earth-toy">Earth Toy</a></td>
+				<td><span class="late">12h 43m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-166-earth">MJ 166: Earth</a></td>
+				<td>204</td>
+				<td>147</td>
+				<td>3</td>
+				<td>58</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/electric-massacre">Electric Massacre</a></td>
+				<td><span class="early">10m 5s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-157-electric">MJ 157: Electric</a></td>
+				<td>115</td>
+				<td>66</td>
+				<td>17</td>
+				<td>59</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/love-locked">Love Locked</a></td>
+				<td><span class="late">3d 11h late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-114-anime">MJ 114: Anime</a></td>
+				<td>58</td>
+				<td>25</td>
+				<td>4</td>
+				<td>45</td>
+			</tr>
+			<tr>
+				<td><a href="https://tlalice.itch.io/snowbrawl-mayhem">Snowbrawl Mayhem</a></td>
+				<td><span class="late">1h 8m late</span></td>
+				<td>
+					<a href="../jammer/l3mmy.html">L3mmy</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>70</td>
+				<td>13</td>
+				<td>95</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1270, 1279, 1290, 1293, 1302, 1313, 1319, 1328, 1344, 1355, 1368, 1373, 1384, 1394, 1405,
+			]],
+			[ "20", [
+				1754, 430, 432, 439, 439, 439, 441, 443, 446, 451, 462, 465, 465, 468, 472, 478,
+			]],
+			[ "ilscore", [
+				960, 1011, 1029, 1038, 1065, 1084, 1104, 1244, 1260, 1318, 1346, 1416, 1640, 1654, 1669, 1669, 791, 794, 801, 822, 839, 841, 849, 858, 863, 886, 907, 924, 935, 953, 971, 979, 1012, 1021, 1033, 1051, 1066, 1074, 1080, 1080,
+				1095, 1095, 1095, 1099, 1099, 1102, 1106, 1114, 1121, 1124, 1125, 1129, 1139, 1153, 1161, 1164, 1196, 1212, 1219, 1223, 578, 582, 594, 606, 610, 621, 628, 634, 635, 392, 393, 395, 395, 316, 317, 318, 323, 324, 181, 93,
+				93, 94, 95, 95, 95, 96, 97, 99, 101, 103, 103, 103, 103, 105,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

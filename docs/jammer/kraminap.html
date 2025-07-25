@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Marc Panicello (kraminap)&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Marc Panicello (kraminap)&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/kraminap.html" property="og:url">
+	<meta content="Rank by game in top 5: 641&#10;Rank by game in top 10: 865&#10;Rank by game in top 20: 1231&#10;Rank by ilScore: 2488&#10;&#10;2 games&#10;&bull; Whacky Weapons | MJ 140: Dungeons | rank: 3 | ilscore: 52&#10;&bull; Lunar Odyssey - A Rabbit&#39;s Tale | MJ 130: Lunar | rank: 171 | ilscore: 53&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Marc Panicello (kraminap)</h1>
+		<a href="https://kraminap.itch.io">kraminap.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 641</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 865</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1231</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 2488</p>
+		<p>Total ilScore: 105</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://silvyger.itch.io/whackyweapons">Whacky Weapons</a></td>
+				<td><span class="early">1h 12m early</span></td>
+				<td>
+					<a href="../jammer/silvyger.html">Silvyger</a>,
+					<a href="../jammer/ricenoodles.html">ricenoodles</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-140-dungeons">MJ 140: Dungeons</a></td>
+				<td>40</td>
+				<td>3</td>
+				<td>15</td>
+				<td>52</td>
+			</tr>
+			<tr>
+				<td><a href="https://dannyvsh.itch.io/lunar-odyssey-a-rabbits-tale">Lunar Odyssey - A Rabbit&#39;s Tale</a></td>
+				<td><span class="late">1d 11h late</span></td>
+				<td>
+					<a href="../jammer/dannyvsh.html">FenrixK17</a>,
+					<a href="../jammer/yugawa.html">Roger Ng</a>,
+					<a href="../jammer/jamesianworrall.html">JamesIanWorrall</a>,
+					<a href="../jammer/jb431.html">jb431</a>,
+					<a href="../jammer/cagant.html">Frog King</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>171</td>
+				<td>2</td>
+				<td>53</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				460, 461, 468, 472, 472, 474, 474, 476, 478, 484, 486, 492, 500, 510, 511, 514, 516, 520, 521, 526, 531, 532, 540, 542, 547, 551, 557, 560, 560, 560, 560, 562, 564, 566, 577, 582, 584, 586, 590, 592,
+				593, 597, 598, 603, 605, 613, 623, 623, 630, 637, 640,
+			]],
+			[ "10", [
+				631, 632, 639, 643, 644, 647, 647, 649, 652, 658, 662, 670, 678, 691, 692, 695, 698, 707, 708, 714, 719, 723, 737, 740, 745, 752, 765, 768, 771, 771, 772, 774, 776, 779, 790, 796, 799, 801, 806, 808,
+				808, 814, 818, 824, 826, 839, 849, 849, 853, 860, 864,
+			]],
+			[ "20", [
+				869, 872, 882, 890, 893, 898, 903, 910, 915, 921, 925, 933, 944, 959, 963, 974, 976, 986, 992, 1005, 1013, 1019, 1040, 1044, 1052, 1062, 1075, 1080, 1090, 1091, 1093, 1097, 1102, 1106, 1118, 1126, 1130, 1135, 1142, 1149,
+				1158, 1164, 1169, 1174, 1177, 1190, 1203, 1204, 1209, 1221, 1230,
+			]],
+			[ "ilscore", [
+				5683, 5696, 5702, 5787, 5851, 5874, 5880, 5882, 6000, 6000, 6005, 1801, 1804, 1809, 1819, 1826, 1832, 1841, 1844, 1856, 1867, 1886, 1906, 1915, 1960, 1986, 2005, 2018, 2028, 2038, 2053, 2076, 2083, 2100, 2103, 2118, 2121, 2152, 2158, 2166,
+				2172, 2173, 2180, 2183, 2190, 2206, 2237, 2252, 2263, 2277, 2292, 2303, 2310, 2322, 2347, 2369, 2391, 2412, 2426, 2448, 2469, 2487,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

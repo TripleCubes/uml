@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>quandangv&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="quandangv&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/quandangv.html" property="og:url">
+	<meta content="Rank by game in top 20: 2389&#10;Rank by ilScore: 1261&#10;&#10;2 games&#10;&bull; Dinosaurs | MJ+ 1: Isolation | rank: 29 | ilscore: 75&#10;&bull; Dinosaurs | MJ 50: Islands | rank: 11 | ilscore: 81&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>quandangv</h1>
+		<a href="https://quandangv.itch.io">quandangv.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2389</p>
+		<div class="boxes">
+			<span>11</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 1261</p>
+		<p>Total ilScore: 155</p>
+
+		<h3 id="games_header">2 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="tr_majorjam">
+				<td><a href="https://quandangv.itch.io/dinosaurs">Dinosaurs</a></td>
+				<td><span class="early">6d 9h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/major-jam-isolation">MJ+ 1: Isolation</a></td>
+				<td>114</td>
+				<td>29</td>
+				<td>13</td>
+				<td>75</td>
+			</tr>
+			<tr>
+				<td><a href="https://quandangv.itch.io/dinosaurs">Dinosaurs</a></td>
+				<td><span class="early">13h 26m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-50-islands">MJ 50: Islands</a></td>
+				<td>128</td>
+				<td>11</td>
+				<td>8</td>
+				<td>81</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				269, 300, 308, 316, 326, 338, 356, 370, 383, 401, 408, 414, 434, 453, 481, 508, 514, 523, 547, 557, 565, 593, 613, 619, 635, 643, 668, 681, 697, 716, 725, 732, 754, 767, 781, 789, 810, 830, 850, 862,
+				887, 895, 914, 929, 945, 958, 972, 980, 995, 1004, 1012, 1026, 1037, 1063, 1092, 1105, 1110, 1131, 1145, 1161, 1180, 1196, 1211, 1230, 1249, 1271, 1293, 1315, 1316, 1330, 1339, 1351, 1369, 1387, 1400, 1408, 1431, 1436, 1454, 1484,
+				1495, 1507, 1524, 1542, 1557, 1583, 1587, 1590, 1616, 1638, 1645, 1649, 1653, 1681, 1683, 1685, 1690, 1693, 1704, 1721, 1729, 1746, 1752, 1764, 1776, 1795, 1809, 1822, 1842, 1874, 1885, 1892, 1900, 1916, 1923, 1942, 1954, 1963, 2003, 2007,
+				2018, 2027, 2052, 2058, 2062, 2065, 2074, 2077, 2087, 2095, 2118, 2138, 2150, 2166, 2189, 2204, 2223, 2240, 2250, 2270, 2292, 2313, 2339, 2345, 2363, 2375, 2388,
+			]],
+			[ "ilscore", [
+				112, 26, 26, 28, 33, 35, 37, 41, 42, 44, 44, 46, 48, 49, 53, 61, 63, 75, 78, 85, 87, 89, 96, 100, 107, 111, 125, 129, 140, 149, 157, 159, 181, 207, 209, 210, 221, 237, 251, 260,
+				274, 281, 285, 290, 296, 310, 316, 319, 325, 329, 334, 336, 343, 366, 398, 418, 418, 424, 429, 437, 468, 478, 508, 529, 551, 594, 610, 623, 623, 628, 631, 635, 650, 665, 669, 677, 683, 684, 701, 722,
+				736, 744, 762, 777, 785, 808, 816, 823, 839, 852, 862, 866, 868, 882, 882, 882, 885, 885, 890, 894, 900, 904, 906, 908, 910, 918, 929, 933, 936, 966, 977, 983, 987, 998, 1004, 1023, 1037, 1042, 1061, 1064,
+				1072, 1076, 1096, 1099, 1102, 1104, 1105, 1109, 1109, 1112, 1119, 1129, 1138, 1144, 1148, 1153, 1164, 1174, 1181, 1193, 1200, 1213, 1226, 1231, 1243, 1251, 1260,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Chaaarles&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Chaaarles&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/chaaarles.html" property="og:url">
+	<meta content="Rank by game in top 10: 1953&#10;Rank by game in top 20: 3288&#10;Rank by ilScore: 12042&#10;&#10;1 games&#10;&bull; Neon Nexus Intrigue | MJ 138: Rewind | rank: 7 | ilscore: 29&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Chaaarles</h1>
+		<a href="https://chaaarles.itch.io">chaaarles.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1953</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3288</p>
+		<div class="boxes">
+			<span>7</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 12042</p>
+		<p>Total ilScore: 29</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://chaaarles.itch.io/neon-nexus-intrigue">Neon Nexus Intrigue</a></td>
+				<td><span class="early">8h 36m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-138-rewind">MJ 138: Rewind</a></td>
+				<td>21</td>
+				<td>7</td>
+				<td>10</td>
+				<td>29</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1334, 1344, 1360, 1368, 1380, 1396, 1409, 1420, 1434, 1446, 1461, 1469, 1473, 1481, 1502, 1519, 1533, 1541, 1550, 1561, 1576, 1586, 1598, 1614, 1627, 1634, 1640, 1649, 1661, 1666, 1674, 1688, 1699, 1707, 1725, 1736, 1754, 1762, 1771, 1787,
+				1798, 1810, 1825, 1843, 1852, 1860, 1875, 1886, 1899, 1910, 1927, 1940, 1952,
+			]],
+			[ "20", [
+				2233, 2242, 2261, 2274, 2289, 2310, 2330, 2354, 2371, 2389, 2410, 2428, 2440, 2458, 2487, 2519, 2541, 2561, 2582, 2602, 2618, 2634, 2651, 2673, 2713, 2724, 2740, 2751, 2776, 2790, 2796, 2811, 2827, 2844, 2863, 2880, 2911, 2931, 2955, 2980,
+				3004, 3030, 3054, 3084, 3102, 3121, 3148, 3167, 3193, 3218, 3250, 3270, 3287,
+			]],
+			[ "ilscore", [
+				8491, 8511, 8549, 8577, 8602, 8648, 8703, 8776, 8804, 8830, 8861, 8989, 9113, 9190, 9230, 9404, 9458, 9549, 9617, 9716, 9742, 9834, 9917, 9940, 10074, 10108, 10160, 10179, 10367, 10407, 10421, 10447, 10477, 10513, 10538, 10594, 10682, 10794, 10857, 10905,
+				10974, 11045, 11109, 11191, 11259, 11343, 11419, 11507, 11678, 11744, 11871, 11952, 12041,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

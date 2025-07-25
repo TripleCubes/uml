@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Bamimoth&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Bamimoth&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/bamimoth.html" property="og:url">
+	<meta content="Rank by game in top 5: 500&#10;Rank by game in top 10: 667&#10;Rank by game in top 20: 1035&#10;Rank by ilScore: 6689&#10;&#10;1 games&#10;&bull; Gravitas | MJ 65: Abandoned | rank: 3 | ilscore: 64&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Bamimoth</h1>
+		<a href="https://bamimoth.itch.io">bamimoth.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 500</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 667</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1035</p>
+		<div class="boxes">
+			<span>3</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 6689</p>
+		<p>Total ilScore: 64</p>
+
+		<h3 id="games_header">1 Game</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://bamimoth.itch.io/gravitas">Gravitas</a></td>
+				<td><span class="early">8h 57m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-65-abandoned">MJ 65: Abandoned</a></td>
+				<td>56</td>
+				<td>3</td>
+				<td>16</td>
+				<td>64</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				129, 135, 136, 137, 141, 146, 146, 150, 150, 153, 157, 160, 165, 166, 171, 179, 182, 183, 184, 187, 190, 190, 195, 198, 198, 204, 206, 209, 210, 213, 213, 217, 220, 220, 220, 224, 225, 236, 240, 240,
+				244, 248, 249, 256, 256, 259, 262, 266, 272, 278, 282, 282, 283, 288, 296, 298, 303, 303, 303, 304, 304, 308, 312, 315, 321, 323, 323, 329, 330, 332, 333, 338, 341, 342, 342, 342, 346, 351, 356, 359,
+				360, 368, 370, 370, 372, 372, 374, 374, 379, 381, 387, 391, 395, 395, 397, 397, 401, 402, 408, 410, 411, 419, 422, 427, 432, 438, 441, 441, 441, 441, 443, 445, 445, 451, 455, 455, 456, 461, 463, 464,
+				467, 468, 471, 475, 480, 487, 487, 494, 499, 499,
+			]],
+			[ "10", [
+				182, 188, 189, 191, 195, 201, 201, 206, 207, 211, 214, 217, 223, 224, 231, 241, 245, 248, 248, 251, 255, 255, 260, 263, 264, 270, 273, 278, 278, 282, 282, 286, 289, 289, 292, 296, 297, 310, 313, 314,
+				319, 323, 327, 338, 338, 343, 347, 351, 361, 367, 373, 373, 373, 378, 387, 389, 394, 394, 397, 398, 400, 404, 412, 418, 426, 428, 429, 439, 439, 442, 446, 452, 456, 458, 459, 461, 465, 470, 474, 479,
+				480, 487, 489, 490, 493, 493, 495, 496, 501, 506, 511, 515, 519, 523, 525, 526, 530, 532, 537, 540, 544, 556, 560, 565, 573, 584, 587, 590, 592, 593, 595, 597, 598, 604, 610, 612, 613, 618, 620, 620,
+				625, 629, 633, 637, 648, 655, 655, 659, 665, 666,
+			]],
+			[ "20", [
+				269, 276, 282, 286, 292, 298, 299, 305, 308, 314, 317, 322, 329, 330, 337, 350, 355, 365, 368, 373, 379, 383, 389, 395, 399, 405, 412, 417, 423, 428, 432, 434, 439, 445, 447, 450, 452, 464, 468, 472,
+				475, 480, 487, 500, 504, 511, 518, 523, 532, 541, 551, 551, 552, 560, 573, 576, 589, 591, 598, 602, 606, 613, 623, 634, 648, 653, 655, 666, 667, 670, 673, 682, 687, 690, 694, 698, 701, 703, 708, 717,
+				720, 730, 737, 740, 745, 750, 759, 762, 767, 771, 776, 785, 791, 798, 808, 808, 813, 820, 833, 840, 846, 858, 866, 874, 885, 896, 901, 911, 914, 916, 920, 925, 927, 934, 942, 945, 949, 957, 964, 973,
+				978, 983, 986, 991, 1001, 1011, 1012, 1017, 1028, 1034,
+			]],
+			[ "ilscore", [
+				669, 722, 733, 745, 756, 803, 812, 854, 875, 1015, 1038, 1070, 1143, 1219, 1230, 1358, 1441, 1456, 1466, 1514, 1616, 1728, 1765, 1854, 1886, 1948, 1969, 1980, 2039, 2099, 2101, 2148, 2158, 2165, 2204, 2253, 2435, 2526, 2595, 2602,
+				2683, 2721, 2797, 3012, 3045, 3194, 3261, 3385, 3682, 3744, 3789, 3790, 3794, 3800, 3803, 3906, 3980, 4001, 4010, 4066, 4068, 4194, 4258, 4270, 4294, 4352, 4418, 4436, 4581, 4591, 4595, 4651, 4705, 4721, 4729, 4732, 4836, 4836, 4839, 4844,
+				4850, 4860, 4875, 4883, 4916, 4922, 4932, 4936, 5022, 5091, 5123, 5132, 5281, 5306, 5348, 5375, 5428, 5434, 5499, 5553, 5562, 5651, 5664, 5679, 5683, 5833, 5842, 5845, 5848, 5852, 5857, 5866, 5883, 5940, 6028, 6052, 6064, 6103, 6127, 6153,
+				6207, 6235, 6298, 6351, 6402, 6514, 6533, 6615, 6657, 6688,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>

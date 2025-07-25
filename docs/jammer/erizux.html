@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Erizux&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Erizux&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/erizux.html" property="og:url">
+	<meta content="Rank by game in top 5: 646&#10;Rank by game in top 10: 869&#10;Rank by game in top 20: 1234&#10;Rank by ilScore: 165&#10;&#10;5 games&#10;&bull; Icy Ships | MJ 102: Steam | rank: 23 | ilscore: 36&#10;&bull; Flickers of the Hearth | MJ 101: Limit | rank: 27 | ilscore: 85&#10;&bull; Robot Game Show | MJ 100: Overload | rank: 53 | ilscore: 85&#10;&bull; Kuebiko | MJ 99: Birds | rank: 4 | ilscore: 116&#10;&bull; Chytrid | MJ 79: Frogs | rank: 47 | ilscore: 92&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000186.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Erizux</h1>
+		<a href="https://erizux.itch.io">erizux.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 5</h3>
+		<span class="dot_5"></span>
+		<p>Rank: 646</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 869</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 1234</p>
+		<div class="boxes">
+			<span>4</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 165</p>
+		<p>Total ilScore: 414</p>
+
+		<h3 id="games_header">5 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://erizux.itch.io/icy-ships">Icy Ships</a></td>
+				<td><span class="late">9m 45s late</span></td>
+				<td>
+					<a href="../jammer/haiyoooo.html">Haiyoooo | Artist</a>,
+					<a href="../jammer/mantis.html">Mantis</a>,
+					<a href="../jammer/adammorton.html">AdamMorton</a>,
+					<a href="../jammer/unnamed-collective.html">Unnamed Collective</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-102-steam">MJ 102: Steam</a></td>
+				<td>49</td>
+				<td>23</td>
+				<td>13</td>
+				<td>36</td>
+			</tr>
+			<tr>
+				<td><a href="https://erizux.itch.io/flickers-of-the-hearth">Flickers of the Hearth</a></td>
+				<td><span class="early">2m 15s early</span></td>
+				<td>
+					<a href="../jammer/neverdusk.html">Neverdusk</a>,
+					<a href="../jammer/pdcomposing.html">pdcomposing</a>,
+					<a href="../jammer/mantis.html">Mantis</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-101-limit">MJ 101: Limit</a></td>
+				<td>145</td>
+				<td>27</td>
+				<td>13</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://erizux.itch.io/robot-gameshow">Robot Game Show</a></td>
+				<td><span class="early">6h 9m early</span></td>
+				<td>
+					<a href="../jammer/adammorton.html">AdamMorton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-100-overload">MJ 100: Overload</a></td>
+				<td>165</td>
+				<td>53</td>
+				<td>7</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td><a href="https://erizux.itch.io/kuebiko">Kuebiko</a></td>
+				<td><span class="early">11m 42s early</span></td>
+				<td>
+					<a href="../jammer/adammorton.html">AdamMorton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-99-birds">MJ 99: Birds</a></td>
+				<td>253</td>
+				<td>4</td>
+				<td>17</td>
+				<td>116</td>
+			</tr>
+			<tr>
+				<td><a href="https://erizux.itch.io/chytrid">Chytrid</a></td>
+				<td><span class="early">5m 31s early</span></td>
+				<td>
+					<a href="../jammer/adammorton.html">AdamMorton</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-79-frogs">MJ 79: Frogs</a></td>
+				<td>182</td>
+				<td>47</td>
+				<td>8</td>
+				<td>92</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+				290, 301, 305, 305, 312, 315, 316, 323, 323, 327, 330, 334, 340, 350, 354, 354, 355, 359, 367, 371, 379, 379, 383, 391, 391, 396, 406, 409, 416, 420, 422, 427, 428, 430, 430, 436, 442, 444, 444, 444,
+				449, 453, 458, 465, 466, 473, 477, 477, 479, 479, 481, 483, 489, 491, 497, 505, 515, 516, 519, 521, 525, 526, 531, 536, 537, 545, 547, 552, 556, 562, 565, 565, 565, 565, 567, 569, 571, 582, 587, 589,
+				591, 595, 597, 598, 602, 603, 608, 610, 618, 628, 628, 635, 642, 645,
+			]],
+			[ "10", [
+				378, 393, 398, 399, 407, 411, 415, 424, 424, 432, 440, 448, 460, 472, 482, 482, 482, 486, 493, 497, 506, 506, 512, 520, 522, 527, 549, 552, 560, 574, 577, 585, 586, 589, 591, 603, 610, 612, 613, 615,
+				620, 624, 628, 635, 636, 643, 647, 648, 651, 651, 653, 656, 662, 666, 674, 682, 695, 696, 699, 702, 711, 712, 718, 723, 727, 741, 744, 749, 756, 769, 772, 775, 775, 776, 778, 780, 783, 794, 800, 803,
+				805, 810, 812, 812, 818, 822, 828, 830, 843, 853, 853, 857, 864, 868,
+			]],
+			[ "20", [
+				524, 550, 556, 560, 566, 571, 576, 589, 593, 603, 613, 621, 643, 655, 668, 668, 668, 676, 687, 691, 708, 710, 720, 731, 735, 742, 764, 772, 783, 797, 801, 810, 812, 815, 817, 832, 840, 843, 847, 851,
+				855, 857, 862, 872, 875, 885, 893, 896, 901, 906, 913, 918, 924, 928, 936, 947, 962, 966, 977, 979, 989, 995, 1008, 1016, 1022, 1043, 1047, 1055, 1065, 1078, 1083, 1093, 1094, 1096, 1100, 1105, 1109, 1121, 1129, 1133,
+				1138, 1145, 1152, 1161, 1167, 1172, 1177, 1180, 1193, 1206, 1207, 1212, 1224, 1233,
+			]],
+			[ "ilscore", [
+				557, 585, 604, 613, 632, 658, 697, 714, 743, 757, 777, 789, 797, 816, 835, 844, 858, 872, 876, 892, 914, 188, 97, 59, 44, 48, 52, 53, 60, 62, 67, 70, 71, 77, 78, 83, 83, 83, 86, 86,
+				88, 90, 91, 92, 94, 95, 98, 99, 99, 100, 104, 106, 106, 110, 111, 112, 113, 117, 118, 119, 119, 121, 121, 121, 122, 122, 123, 124, 125, 126, 126, 126, 126, 127, 129, 129, 129, 130, 130, 130,
+				130, 130, 130, 130, 132, 133, 135, 136, 138, 138, 141, 141, 141, 142, 142, 143, 143, 144, 144, 147, 149, 149, 150, 150, 150, 153, 154, 156, 158, 160, 164, 164, 164, 164, 164,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>
