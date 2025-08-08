@@ -1,5 +1,5 @@
 let INFINITE = 9999999;
-let NUM_JAMMERS = 13205;
+let NUM_JAMMERS = 13252;
 let JAM_INFO_LIST = [
 	{
 		is_majorjam: false,
@@ -784,5 +784,9 @@ let JAM_INFO_LIST = [
 	{
 		is_majorjam: false,
 		mj_id: 189,
+	},
+	{
+		is_majorjam: false,
+		mj_id: 190,
 	},
 ];
