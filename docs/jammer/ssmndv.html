@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>ssmndv&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="ssmndv&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/ssmndv.html" property="og:url">
+	<meta content="Rank by game in top 10: 1673&#10;Rank by game in top 20: 2446&#10;Rank by ilScore: 437&#10;&#10;4 games&#10;&bull; I will live | MJ 144: Nightmare | rank: 6 | ilscore: 60&#10;&bull; The only way to go is up | MJ 128: Health | rank: 25 | ilscore: 79&#10;&bull; Familiar | MJ 127: Cats | rank: 29 | ilscore: 74&#10;&bull; Circles lost in space | MJ 126: Lost | rank: 40 | ilscore: 49&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000191.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>ssmndv</h1>
+		<a href="https://ssmndv.itch.io">ssmndv.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 10</h3>
+		<span class="dot_10"></span>
+		<p>Rank: 1673</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 2446</p>
+		<div class="boxes">
+			<span>6</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 437</p>
+		<p>Total ilScore: 261</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://ssmndv.itch.io/i-will-live">I will live</a></td>
+				<td><span class="early">10h 52m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-144-nightmare">MJ 144: Nightmare</a></td>
+				<td>66</td>
+				<td>6</td>
+				<td>8</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td><a href="https://ssmndv.itch.io/the-only-way-to-go-is-up">The only way to go is up</a></td>
+				<td><span class="early">15h 18m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-128-health">MJ 128: Health</a></td>
+				<td>133</td>
+				<td>25</td>
+				<td>13</td>
+				<td>79</td>
+			</tr>
+			<tr>
+				<td><a href="https://ssmndv.itch.io/familiar">Familiar</a></td>
+				<td><span class="early">11h 17m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-127-cats">MJ 127: Cats</a></td>
+				<td>116</td>
+				<td>29</td>
+				<td>17</td>
+				<td>74</td>
+			</tr>
+			<tr>
+				<td><a href="https://ssmndv.itch.io/circles-lost-in-space">Circles lost in space</a></td>
+				<td><span class="early">9h 19m early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-126-lost">MJ 126: Lost</a></td>
+				<td>79</td>
+				<td>40</td>
+				<td>8</td>
+				<td>49</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+				1188, 1199, 1202, 1214, 1224, 1233, 1239, 1247, 1268, 1285, 1295, 1302, 1310, 1321, 1325, 1335, 1347, 1353, 1366, 1372, 1378, 1386, 1398, 1403, 1403, 1405, 1413, 1417, 1425, 1432, 1450, 1459, 1469, 1485, 1496, 1507, 1520, 1537, 1547, 1556,
+				1571, 1582, 1595, 1601, 1618, 1626, 1638, 1659, 1672,
+			]],
+			[ "20", [
+				1742, 1760, 1766, 1778, 1789, 1808, 1822, 1835, 1855, 1887, 1898, 1905, 1913, 1929, 1936, 1955, 1967, 1976, 2016, 2020, 2031, 2040, 2065, 2071, 2075, 2078, 2087, 2090, 2100, 2108, 2131, 2151, 2163, 2179, 2202, 2217, 2236, 2253, 2263, 2283,
+				2305, 2326, 2352, 2358, 2376, 2388, 2401, 2420, 2445,
+			]],
+			[ "ilscore", [
+				5766, 1259, 431, 436, 450, 451, 453, 463, 471, 478, 479, 480, 491, 491, 496, 497, 501, 503, 504, 294, 295, 297, 298, 298, 304, 308, 312, 315, 317, 321, 326, 332, 335, 335, 336, 344, 349, 357, 359, 361,
+				362, 374, 375, 377, 377, 379, 379, 379, 384, 384, 387, 391, 391, 394, 395, 400, 406, 409, 411, 412, 415, 418, 421, 423, 428, 432, 432, 436,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>
