@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" href="../image/icon/icon.png">
+	<title>Space Cow Code&#39;s jammer page</title>
+	<meta content="Unofficial Mini Jam Leaderboard" property="og:site_name">
+	<meta content="Space Cow Code&#39;s jammer page" property="og:title">
+	<meta content="https://triplecubes.github.io/uml/jammer/space-cow-code.html" property="og:url">
+	<meta content="Rank by game in top 20: 3485&#10;Rank by ilScore: 616&#10;&#10;4 games&#10;&bull; POSI CO | MJ 162: Heat | rank: 50 | ilscore: 73&#10;&bull; Blowing Over It | MJ 155: Wind | rank: 29 | ilscore: 67&#10;&bull; Deal | MJ 142: Fortune | rank: 16 | ilscore: 40&#10;&bull; Lunar | MJ 130: Lunar | rank: 188 | ilscore: 42&#10;" property="og:description">
+	<meta content="https://triplecubes.github.io/uml/image/embed/small.png" property="og:image">
+	<meta content="#ffa4a4" name="theme-color">
+
+	<link rel="stylesheet" href="../css/share.css">
+	<link rel="stylesheet" href="../css/jammer_page.css">
+</head>
+<body>
+	<div id="content">
+		<div id="nav">
+			<a href="../leaderboard/by-10-000000.html">Leaderboard</a>
+			<a href="../minijam/000191.html">Jam list</a>
+			<a href="../search/search.html">Jammer search</a>
+			<a href="../stats/stats.html">Stats</a>
+			<a href="https://github.com/TripleCubes/uml">Source code</a>
+		</div>
+
+		<h1>Space Cow Code</h1>
+		<a href="https://space-cow-code.itch.io">space-cow-code.itch.io</a>
+
+		<div id="graph"></div>
+		<div id="graph_explains">
+			<a href="https://github.com/TripleCubes/uml/blob/main/graph_explains.md">this graph doesn't show accurate history</a>
+		</div>
+
+		<h3>Rank by games in top 20</h3>
+		<span class="dot_20"></span>
+		<p>Rank: 3485</p>
+		<div class="boxes">
+			<span>16</span>
+			<span>1</span>
+		</div>
+
+		<h3>Rank by ilScore</h3>
+		<span class="dot_ilscore"></span>
+		<p>Rank: 616</p>
+		<p>Total ilScore: 222</p>
+
+		<h3 id="games_header">4 Games</h3>
+		<button id="sort_btn">Sorting by jam</button>
+		<table id="games_table">
+		<thead>
+			<tr>
+				<td>Title</td>
+				<td>Time</td>
+				<td>Teamed with</td>
+				<td title="MJ+: Major Jam">Jam</td>
+				<td title="Number of games in jam">Vs</td>
+				<td title="Rank">Rk</td>
+				<td title="Number of ratings">Rt</td>
+				<td title="ilscore = (25 * log10(num_of_games_in_jam+1)^2) * (score/5)">ilScr</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="https://space-cow-code.itch.io/posi-co">POSI CO</a></td>
+				<td><span class="early">23m 10s early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-162-heat">MJ 162: Heat</a></td>
+				<td>134</td>
+				<td>50</td>
+				<td>17</td>
+				<td>73</td>
+			</tr>
+			<tr>
+				<td><a href="https://space-cow-code.itch.io/deskfan">Blowing Over It</a></td>
+				<td><span class="early">1d 9h early</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-155-wind">MJ 155: Wind</a></td>
+				<td>110</td>
+				<td>29</td>
+				<td>31</td>
+				<td>67</td>
+			</tr>
+			<tr>
+				<td><a href="https://drdeadlock.itch.io/deal">Deal</a></td>
+				<td><span class="late">22m 43s late</span></td>
+				<td>
+					<a href="../jammer/drdeadlock.html">DrDeadlock</a>,
+					<a href="../jammer/rakunuki.html">Rakunuki</a>,
+					<a href="../jammer/difficultlogic.html">difficultlogic</a>,
+					<a href="../jammer/calsim.html">Calsim</a>
+				</td>
+				<td><a href="https://itch.io/jam/mini-jam-142-fortune">MJ 142: Fortune</a></td>
+				<td>40</td>
+				<td>16</td>
+				<td>14</td>
+				<td>40</td>
+			</tr>
+			<tr>
+				<td><a href="https://space-cow-code.itch.io/lunar">Lunar</a></td>
+				<td><span class="late">12h 4m late</span></td>
+				<td></td>
+				<td><a href="https://itch.io/jam/mini-jam-130-lunar">MJ 130: Lunar</a></td>
+				<td>217</td>
+				<td>188</td>
+				<td>2</td>
+				<td>42</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+	<script>
+		let ORDERING_LIST_LIST = [
+			[ "1", [
+			]],
+			[ "5", [
+			]],
+			[ "10", [
+			]],
+			[ "20", [
+				2365, 2386, 2410, 2433, 2453, 2469, 2490, 2508, 2520, 2538, 2567, 2599, 2621, 2641, 2662, 2682, 2702, 2717, 2734, 2756, 2796, 2810, 2825, 2838, 2863, 2877, 2882, 2905, 2926, 2948, 2968, 2985, 3016, 3036, 3060, 3089, 3113, 3139, 3163, 3193,
+				3211, 3230, 3258, 3277, 3303, 3328, 3360, 3380, 3397, 3424, 3449, 3472, 3484,
+			]],
+			[ "ilscore", [
+				6818, 6831, 6846, 6940, 7016, 7048, 7054, 7055, 7189, 7190, 7197, 7214, 7229, 3041, 3054, 3062, 3068, 3078, 3088, 3097, 3141, 3172, 3191, 3196, 3312, 3328, 1080, 1083, 1093, 1097, 1118, 1132, 1137, 503, 508, 512, 515, 527, 530, 533,
+				534, 534, 534, 535, 538, 540, 541, 547, 550, 550, 553, 559, 564, 566, 568, 573, 580, 585, 588, 594, 598, 605, 606, 611, 614, 615,
+			]],
+		];
+	</script>
+	<script src="../js/jammer_page/jam_info.js"></script>
+	<script src="../js/jammer_page/rank_graph.js"></script>
+	<script src="../js/jammer_page/sort_btn.js"></script>
+</body>
+</html>
